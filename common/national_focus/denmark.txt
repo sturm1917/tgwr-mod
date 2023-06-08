@@ -1,1 +1,226 @@
+focus_tree = {
+    id = danish_focus
+	  default = no
+	  country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = DEN
+		}
+	}
+	
+	
+	################
+	### POLITICS ###
+	################
+	
+	focus = {
+		id = DEN_danish_politics
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 10
+		y = 0
+		mutually_exclusive = {
+			focus = 
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	focus = {
+		id = DEN_continue_parliamentary_monarchy
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = DEN_danish_politics
+		prerequisite = {
+			focus = DEN_danish_politics
+		}
+		mutually_exclusive = {
+			focus = DEN_abolish_democracy
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05	
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+		}
+	}
+	
+	### SOCIAL DEMOCRACY ###
+	
+	focus = {
+		id = DEN_social_democracy
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = DEN_continue_parliamentary_monarchy
+		prerequisite = {
+			focus = DEN_continue_parliamentary_monarchy
+		}
+		mutually_exclusive = {
+			focus = DEN_a_liberal_government
+			focus = DEN_vote_for_the_conservatives
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+			    ideology = democratic
+				popularity = 0.1
+			}
+			add_stability = 0.05
+			add_country_leader_role = {
+				character = DEN_thorvald_stauning
+				promote_leader = yes
+				country_leader = {
+					ideology = democracy
+				}
+			}
+			set_party_name = { 
+				ideology = democratic
+				long_name = DEN_socialdemokratiet_long 
+				name = DEN_socialdemokratiet
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	### LIBERAL ###
+	
+	focus = {
+		id = DEN_a_liberal_government
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = DEN_continue_parliamentary_monarchy
+		prerequisite = {
+			focus = DEN_continue_parliamentary_monarchy
+		}
+		mutually_exclusive = {
+			focus = DEN_social_democracy
+			focus = DEN_vote_for_the_conservatives
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+			    ideology = democratic
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_country_leader_role = {
+				character = DEN_klaus_berntsen
+				promote_leader = yes
+				country_leader = {
+					ideology = democracy
+				}
+			}
+			set_party_name = { 
+				ideology = democratic
+				long_name = DEN_venstre_long 
+				name = DEN_venstre
+			}
+	    }
+		ai_will_do = {
+			factor = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+		}
+		
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	### CONSERVATIVE
+	
+	focus = {
+		id = DEN_vote_for_the_conservatives
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = DEN_continue_parliamentary_monarchy
+		prerequisite = {
+			focus = DEN_continue_parliamentary_monarchy
+		}
+		mutually_exclusive = {
+			focus = DEN_a_liberal_government
+			focus = DEN_social_democracy
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_popularity = {
+			    ideology = democratic
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_country_leader_role = {
+				character = DEN_no_name
+				promote_leader = yes
+				country_leader = {
+					ideology = democracy
+				}
+			}
+			set_party_name = { 
+				ideology = democratic
+				long_name = DEN_hojre_long 
+				name = DEN_hojre
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	focus = {
+		id = DEN_abolish_democracy
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = DEN_danish_politics
+		prerequisite = {
+			focus = DEN_danish_politics
+		}
+		mutually_exclusive = {
+			focus = DEN_continue_parliamentary_monarchy
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
 
+
+}
