@@ -51,7 +51,9 @@ country_event = {
 			transfer_troops = no
 		}
 		hidden_effect = {
-			SPR = { transfer_state = 290 transfer_state = 807}
+			SPR = {
+				country_event = { id = ww1_spain.52 }
+			}
 		}
 		news_event = ww1_morocco.4
 		activate_mission_tooltip = GER_misison_agadir_crisis

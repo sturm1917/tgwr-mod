@@ -1,0 +1,18 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_SPR_Thing"
+		texturefile = "gfx/interface/goals/SPR_Thing.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_llama_firearms"
+		texturefile = "gfx/interface/goals/SPR_llama_firearms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_license_vickers"
+		texturefile = "gfx/interface/goals/focus_true_vickers.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_victory"
+		texturefile = "gfx/interface/goals/focus_SPR_victory.png"
+	}
+}

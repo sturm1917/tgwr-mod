@@ -1,1 +1,163 @@
- 
+scripted_effect_new_spanish_prime_minister = {
+	hidden_effect = {
+		random_list = {
+			25 = {
+				modifier = {
+					factor = 0
+					has_idea = SPR_idea_prime_minister_alvaro
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = liberal_prime_minister
+				}
+				country_event = { 
+					id = ww1_spain.21 # Alvaro
+					days = 7
+				}
+			}
+			25 = {
+				modifier = {
+					factor = 0
+					has_idea = SPR_idea_prime_minister_dato
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = conservative_prime_minister
+				}
+				country_event = { 
+					id = ww1_spain.23 # Dato
+					days = 7
+				}
+			}
+			25 = {
+				modifier = {
+					factor = 0
+					has_idea = SPR_idea_prime_minister_prieto
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = liberal_prime_minister
+				}
+				country_event = { 
+					id = ww1_spain.32 # Prieto
+					days = 7
+				}
+			}
+			25 = {
+				modifier = {
+					factor = 0
+					has_idea = SPR_idea_prime_minister_Maura
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = conservative_prime_minister
+				}
+				country_event = { 
+					id = ww1_spain.34 # Maura
+					days = 7
+				}
+			}
+			25 = {
+				modifier = {
+					factor = 0
+					has_idea = SPR_idea_prime_minister_Manuel
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = conservative_prime_minister
+				}
+				country_event = { 
+					id = ww1_spain.37 # Manuel
+					days = 7
+				}
+			}
+			25 = {
+				modifier = {
+					factor = 0
+					has_idea = SPR_idea_prime_minister_sanchez
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = conservative_prime_minister
+				}
+				country_event = { 
+					id = ww1_spain.41 # Sanchez
+					days = 7
+				}
+			}
+			
+		}
+	}
+}
+
+scripted_effect_increase_in_sold_colonies = {
+	IF = {
+		limit = {
+			SPR = {
+				has_idea = SPR_idea_more_money_from_sold_colonies1
+			}
+		}
+		remove_ideas = SPR_idea_money_from_sold_colonies1
+		add_ideas = SPR_idea_more_money_from_sold_colonies2
+	}
+	IF = {
+		limit = {
+			SPR = {
+				has_idea = SPR_idea_more_money_from_sold_colonies2
+			}
+		}
+		remove_ideas = SPR_idea_money_from_sold_colonies1
+		remove_ideas = SPR_idea_more_money_from_sold_colonies2
+		add_ideas = SPR_idea_lots_money_from_sold_colonies3
+	}
+	IF = {
+		limit = {
+			SPR = {
+				has_idea = SPR_idea_lots_more_money_from_sold_colonies3
+			}
+		}
+		remove_ideas = SPR_idea_money_from_sold_colonies1
+		remove_ideas = SPR_idea_more_money_from_sold_colonies2
+		remove_ideas = SPR_idea_lots_more_money_from_sold_colonies3
+		add_ideas = SPR_idea_gorging_money_from_sold_colonies4
+	}
+	IF = {
+		limit = {
+			SPR = {
+				has_idea = SPR_idea_gorging_money_from_sold_colonies4
+			}
+		}
+		remove_ideas = SPR_idea_money_from_sold_colonies1
+		remove_ideas = SPR_idea_more_money_from_sold_colonies2
+		remove_ideas = SPR_idea_lots_more_money_from_sold_colonies3
+		remove_ideas = SPR_idea_gorging_money_from_sold_colonies4
+		add_ideas = SPR_idea_reaping_money_from_sold_colonies5
+	}
+	IF = {
+		limit = {
+			SPR = {
+				has_idea = SPR_idea_reaping_money_from_sold_colonies5
+			}
+		}
+		remove_ideas = SPR_idea_money_from_sold_colonies1
+		remove_ideas = SPR_idea_more_money_from_sold_colonies2
+		remove_ideas = SPR_idea_lots_more_money_from_sold_colonies3
+		remove_ideas = SPR_idea_gorging_money_from_sold_colonies4
+		remove_ideas = SPR_idea_reaping_money_from_sold_colonies5
+		add_ideas = SPR_idea_massive_money_from_sold_colonies6
+	}
+	IF = {
+		limit = {
+			SPR = {
+				has_idea = SPR_idea_massive_money_from_sold_colonies5
+			}
+		}
+		remove_ideas = SPR_idea_money_from_sold_colonies1
+		remove_ideas = SPR_idea_more_money_from_sold_colonies2
+		remove_ideas = SPR_idea_lots_more_money_from_sold_colonies3
+		remove_ideas = SPR_idea_gorging_money_from_sold_colonies4
+		remove_ideas = SPR_idea_reaping_money_from_sold_colonies5
+		remove_ideas = SPR_idea_massive_money_from_sold_colonies6
+		remove_ideas = SPR_idea_huge_money_from_sold_colonies7
+	}
+}

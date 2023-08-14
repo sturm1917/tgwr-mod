@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_prime_minister_jose"
+		texturefile = "gfx/interface/ideas/idea_prime_minister_jose.png"
+	}
+	spriteType = {
+		name = "GFX_idea_regional_autonomy_movements"
+		texturefile = "gfx/interface/ideas/idea_movement_for_regional_autonomy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_alvaro_de_figueroa"
+		texturefile = "gfx/interface/ideas/idea_alvaro_de_figueroa.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_dato"
+		texturefile = "gfx/interface/ideas/idea_prime_minister_dato.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_maura"
+		texturefile = "gfx/interface/ideas/idea_prime_minister_maura.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_manuel"
+		texturefile = "gfx/interface/ideas/idea_prime_minister_manuel.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_prieto"
+		texturefile = "gfx/interface/ideas/idea_prime_minister_prieto.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_sanchez"
+		texturefile = "gfx/interface/ideas/idea_prime_minister_sanchez.png"
+	}
+	spriteType = {
+		name = "GFX_idea_llama_firearms"
+		texturefile = "gfx/interface/ideas/idea_llama_firearms.png"
+	}
+}

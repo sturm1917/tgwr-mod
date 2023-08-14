@@ -25,6 +25,18 @@ ideas = {
 			traits = { artillery_manufacturer } 
 			picture = generic_artillery_manufacturer_2 
 		}
+		llama_firearms = { 
+			allowed = { original_tag = SPR } 
+			available = {
+				has_completed_focus = SPR_llama_firearms
+			}
+			research_bonus = { infantry_weapons = 0.15 } 
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+			traits = { infantry_equipment_manufacturer } 
+			picture = GFX_idea_llama_firearms
+		}
 	}
 	industrial_concern = {
 		designer = yes 
@@ -60,6 +72,328 @@ ideas = {
 				}
 				has_character = SPR_alfonso_xiii
 			}
+		}
+		SPR_idea_prime_minister_jose = {
+			picture = prime_minister_jose
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		SPR_idea_prime_minister_alvaro = {
+			picture = alvaro_de_figueroa
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+			available = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		SPR_idea_prime_minister_dato = {
+			picture = prime_minister_dato
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+			available = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.15
+			}
+		}
+		SPR_idea_prime_minister_prieto = {
+			picture = prime_minister_prieto
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+			available = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		SPR_idea_prime_minister_maura = {
+			picture = prime_minister_maura
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.15
+			}
+		}
+		SPR_idea_prime_minister_manuel = {
+			picture = prime_minister_manuel
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.15
+			}
+		}
+		SPR_idea_prime_minister_sanchez = {
+			picture = prime_minister_sanchez
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.15
+			}
+		}
+		SPR_idea_strong_catholicism = {
+			picture = MEX_church_power_5
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT {
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+					stability_factor = 0.05
+					research_speed_factor = -0.05
+				}
+		}
+		SPR_idea_mild_catholicism = {
+			picture = MEX_church_power_5
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_catholicism
+						has_government = communism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		SPR_idea_weak_catholicism = {
+			picture = MEX_church_power_5
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_catholicism
+						has_idea = SPR_idea_mild_catholicism
+						has_government = communism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = 0.05
+			}
+		}
+		SPR_idea_movements_for_regional_autonomy = {
+		picture = regional_autonomy_movements
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly_factor = -0.002
+			}
+		}
+		SPR_idea_protests_for_regional_autonomy = {
+		picture = regional_autonomy_movements
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly_factor = -0.001
+			}
+		}
+		SPR_idea_time_to_turn_around = {
+		picture = generic_monarchist_uprising
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+					stability_factor = 0.05
+					political_power_factor = 0.15
+				}
+		}
+		SPR_idea_espana_in_commision = {
+		picture = generic_monarchist_uprising
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				ai_focus_naval_factor = 0.25
+			}
+		}
+		SPR_idea_diverting_our_economy = {
+		picture = generic_foreign_capital
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		SPR_idea_developing_the_nation = {
+		picture = generic_foreign_capital
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		SPR_idea_licensing_artillery = { #german
+		picture = generic_artillery_regiments
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+					license_artillery_eq_production_speed_factor = 0.50
+					breakthrough_factor = 0.03
+					experience_loss_factor = -0.03
+					army_speed_factor = 0.03
+				}
+		}
+		SPR_idea_licensing_french_artillery = {
+		picture = generic_artillery_regiments
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+					license_artillery_eq_production_speed_factor = 0.50
+					army_artillery_defence_factor = 0.05
+					experience_gain_artillery_combat_factor = 0.05
+					max_planning = 0.03
+				}
+		}
+		SPR_idea_licensing_weaponry = { #english
+		picture = generic_war_preparation
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+					license_infantry_eq_production_speed_factor = 0.50
+					air_superiority_bonus_in_combat = 0.03
+					experience_gain_army_unit_factor = 0.03
+					terrain_penalty_reduction = 0.03
+				}
+		}
+		SPR_idea_licensing_french_weaponry = {
+		picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+					license_infantry_eq_production_speed_factor = 0.50
+					max_dig_in_factor = 0.03
+					acclimatization_hot_climate_gain_factor = 0.15
+					acclimatization_cold_climate_gain_factor = 0.15
+					army_morale_factor = 0.03
+				}
 		}
 	}
 }
