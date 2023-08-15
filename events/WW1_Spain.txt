@@ -136,6 +136,23 @@ country_event = {
 	}
 }
 
+#Spain sells its colonies
+country_event = {
+	id = ww1_spain.78
+	title = ww1_spain.78.t
+	desc = ww1_spain.78.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.78.a # sure...
+		country_event = { 
+			id = ww1_spain.71
+			days = 5
+		}
+	}
+}
+
 #Spain tries to sell its colonies eq.gn
 country_event = {
 	id = ww1_spain.71
@@ -1455,5 +1472,91 @@ country_event = {
 				communism = 8
 			}
 		}
+	}
+}
+
+#Spain tries to join the Entente
+country_event = {
+	id = ww1_spain.84
+	title = ww1_spain.84.t
+	desc = ww1_spain.84.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.84.a # yes
+		SPR = {
+			country_event = {
+				id = ww1_spain.86
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = ww1_spain.84.b # no
+		SPR = {
+			country_event = {
+				id = ww1_spain.85
+				days = 5
+			}
+		}
+	}
+}
+
+#Spain rejected from entente
+country_event = {
+	id = ww1_spain.85
+	title = ww1_spain.85.t
+	desc = ww1_spain.85.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.85.a
+	}
+}
+#Spain accepted into entente
+country_event = {
+	id = ww1_spain.86
+	title = ww1_spain.86.t
+	desc = ww1_spain.86.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.86.a
+		FRA = { add_to_faction = SPR }
+	}
+}
+
+# Spain negotiates territories overseas
+country_event = {
+	id = ww1_spain.87
+	title = ww1_spain.87.t
+	desc = ww1_spain.87.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.87.a # Pacific
+		FRA = { add_to_faction = SPR }
+	}
+	option = {
+		name = ww1_spain.87.a # Africa
+		FRA = { add_to_faction = SPR }
+	}
+}
+
+# Spain negotiates nearby colonies
+country_event = {
+	id = ww1_spain.88
+	title = ww1_spain.88.t
+	desc = ww1_spain.88.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.88.a
+		FRA = { add_to_faction = SPR }
 	}
 }

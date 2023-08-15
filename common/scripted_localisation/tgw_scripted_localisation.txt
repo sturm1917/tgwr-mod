@@ -295,3 +295,39 @@ defined_text = {
 	}
 }
 
+defined_text = {
+	name = SPR_scriptedloc_get_focus_name
+	text = {
+		trigger = {
+			original_tag = SPR
+			has_completed_focus = SPR_replace_the_conservatives
+		}
+		localization_key = SPR_scriptedloc_maurist_takeover
+	}
+	text = {
+		trigger = {
+			original_tag = SPR
+			NOT = { has_completed_focus = SPR_replace_the_conservatives }
+		}
+		localization_key = SPR_scriptedloc_remain_conservatives
+	}
+}
+
+defined_text = {
+	name = SPR_scriptedloc_get_focus_name_description
+	text = {
+		trigger = {
+			original_tag = SPR
+			has_completed_focus = SPR_replace_the_conservatives
+		}
+		localization_key = SPR_scriptedloc_maurist_takeover_description
+	}
+	text = {
+		trigger = {
+			original_tag = SPR
+			NOT = { has_completed_focus = SPR_replace_the_conservatives }
+		}
+		localization_key = SPR_scriptedloc_remain_conservatives_description
+	}
+}
+
