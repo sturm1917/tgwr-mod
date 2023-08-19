@@ -460,5 +460,53 @@ ideas = {
 				industrial_capacity_factory = 0.5
 			}
 		}
+		SPR_idea_autonomous_catalonia = { #SPR_idea_lesser_strikers_manifesto
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				democratic_acceptance = 85
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SPR_idea_lesser_strikers_manifesto = {
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.001
+				democratic_acceptance = 50
+				industrial_capacity_factory = -0.15
+			}
+		}
+		SPR_idea_strikers_manifesto = {
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.002
+				communism_acceptance = 85
+				industrial_capacity_factory = -0.3
+			}
+		}
+		SPR_idea_the_legal_manifesto = {
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				communism_acceptance = 25
+				industrial_capacity_factory = 0.05
+			}
+		}
 	}
 }

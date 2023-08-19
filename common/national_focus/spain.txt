@@ -2672,8 +2672,9 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.05	
+				popularity = 0.1	
 			}
+			add_ideas = { SPR_idea_strikers_manifesto }
 		}
 	}
 	focus = {
@@ -2696,22 +2697,12 @@ focus_tree = {
 			focus = SPR_proletariat_strikes
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05	
+			}
+			remove_idea = { SPR_idea_strikers_manifesto }
+			add_stability = -0.05
 		}
 	}
 	focus = {
@@ -2734,22 +2725,16 @@ focus_tree = {
 			focus = SPR_proletariat_strikes
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			remove_idea = { SPR_idea_strikers_manifesto }
+			add_ideas = { SPR_idea_lesser_strikers_manifesto }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -2772,22 +2757,8 @@ focus_tree = {
 			focus = SPR_adopt_furthur_social_reform
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = 0.05
+			add_ideas = SPR_idea_the_legal_manifesto
 		}
 	}
 	focus = {
