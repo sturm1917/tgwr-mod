@@ -209,6 +209,22 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
+		SPR_idea_catholic_nation = {
+			picture = MEX_church_power_5
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT {
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+					stability_factor = 0.1
+					research_speed_factor = -0.1
+				}
+		}
 		SPR_idea_strong_catholicism = {
 			picture = MEX_church_power_5
 			allowed = {
@@ -388,12 +404,61 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-					license_infantry_eq_production_speed_factor = 0.50
-					max_dig_in_factor = 0.03
-					acclimatization_hot_climate_gain_factor = 0.15
-					acclimatization_cold_climate_gain_factor = 0.15
-					army_morale_factor = 0.03
-				}
+				license_infantry_eq_production_speed_factor = 0.50
+				max_dig_in_factor = 0.03
+				acclimatization_hot_climate_gain_factor = 0.15
+				acclimatization_cold_climate_gain_factor = 0.15
+				army_morale_factor = 0.03
+			}
+		}
+		SPR_idea_head_of_the_bank_of_spain = {
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+		SPR_idea_modernization_program = {
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05 
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		SPR_idea_juntas_de_defensa = {
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_weekly = 0.001
+				fascism_acceptance = 85
+				experience_gain_army_unit = 0.5
+			}
+		}
+		SPR_idea_autonomous_catalonia = {
+		picture = 
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				democratic_acceptance = 85
+				industrial_capacity_factory = 0.5
+			}
 		}
 	}
 }

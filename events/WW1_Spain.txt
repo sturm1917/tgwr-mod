@@ -451,7 +451,7 @@ country_event = {
 	}
 }
 
-#Entente Objects but madder
+#Entente Objects
 country_event = {
 	id = ww1_spain.82
 	title = ww1_spain.82.t
@@ -1560,3 +1560,5 @@ country_event = {
 		FRA = { add_to_faction = SPR }
 	}
 }
+
+#set_global_flag = SPR_flag_juntas_operate

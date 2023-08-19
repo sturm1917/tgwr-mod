@@ -86,7 +86,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			SPR = { 
-				add_stability = 0.05
+				add_stability = -0.05
+				add_political_power = 50
 			}
 			
 			
@@ -142,7 +143,6 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			
 			SPR = {
 				swap_ideas = {
 				remove_idea = SPR_idea_movements_for_regional_autonomy
@@ -267,15 +267,24 @@ focus_tree = {
 				has_idea = SPR_idea_prime_minister_jose
 				has_global_flag = new_spanish_prime_minister_in_office
 			}
+			NOT = { has_completed_focus = SPR_push_for_more_catholicism }
 		}
 		completion_reward = {
-			SPR = {
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
-				remove_idea = SPR_idea_mild_catholicism
-				add_idea = SPR_idea_weak_catholicism
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
 				}
-				add_political_power = 25
 			}	
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			add_political_power = 25	
 		}
 	}
 	focus = {
@@ -773,7 +782,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = SPR_diverting_our_economy
-			add_stability = 5
+			add_stability = 0.05
 			41 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -1071,7 +1080,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_chauchat
-		icon = GFX_focus_vickers
+		icon = GFX_focus_SPR_license_vickers
 		cost = 10 #days
 		mutually_exclusive = { focus = SPR_the_vickers }
 		x = -7
@@ -1108,7 +1117,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_vickers
-		icon = GFX_focus_SPR_license_vickers
+		icon = GFX_focus_vickers
 		mutually_exclusive = { focus = SPR_the_chauchat }
 		cost = 10 #days
 		x = -9
@@ -1369,22 +1378,12 @@ focus_tree = {
 			focus = SPR_general_election
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			SPR = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			}
 		}
 	}
 	focus = {
@@ -1406,30 +1405,153 @@ focus_tree = {
 			focus = SPR_general_election
 		}
 		completion_reward = {
-			172 = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}	
+		}
+	}
+	focus = {
+		id = SPR_reform_the_bank_of_spain
+		icon = GFX_focus_POL_warsaw_main_station
+		cost = 10 #days
+		x = 0
+		y = 8
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_conservative_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_conservative_majority
+			focus = SPR_liberal_majority
+		}
+		completion_reward = {
+			IF = { 
+				limit = { has_global_flag = conservative_majority }
+				add_political_power = 25
+				add_stability = -0.05
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
+				add_ideas = { SPR_idea_head_of_the_bank_of_spain }
+			}
+			IF = { 
+				limit = { has_global_flag = liberal_majority }
+				add_political_power = 50
 				add_building_construction = {
-					type = industrial_complex
+					type = 	industrial_complex
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
-			}	
+				add_ideas = { SPR_idea_head_of_the_bank_of_spain }
+			}
+		}
+	}
+	focus = {
+		id = SPR_balance_king_and_prime_minister
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10 #days
+		x = -1
+		y = 9
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_conservative_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_reform_the_bank_of_spain
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_shorter_workday_legislation
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10 #days
+		x = 1
+		y = 9
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_conservative_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_reform_the_bank_of_spain
+		}
+		completion_reward = {
+			IF = { 
+				limit = { has_global_flag = conservative_majority }
+				add_stability = 0.05
+			}
+			IF = { 
+				limit = { has_global_flag = liberal_majority }
+				add_political_power = 25
+			}
+		}
+	}
+	focus = {
+		id = SPR_ensure_longlasting_policies
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		cost = 10 #days
+		x = 0
+		y = 10
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_conservative_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_balance_king_and_prime_minister
+		}
+		prerequisite {
+			focus = SPR_shorter_workday_legislation
+		}
+		completion_reward = {
+			IF = { 
+				limit = { has_global_flag = conservative_majority }
+				add_political_power = 100
+			}
+			IF = { 
+				limit = { has_global_flag = liberal_majority }
+				add_political_power = 25
+				add_stability = -0.05
+			}
+			custom_effect_tooltip = SPR_immediately_adopt_PM.tt
 		}
 	}
 	focus = {
 		id = SPR_profit_off_the_war
 		icon = GFX_focus_SWI_issue_war_bonds
 		cost = 10 #days
-		x = 4
-		y = 19
+		x = 12
+		y = 6
 		relative_position_id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_lean_entente }
 		ai_will_do = {
@@ -1458,9 +1580,9 @@ focus_tree = {
 		id = SPR_sell_weapons_to_germany
 		icon = GFX_focus_german_equipment
 		cost = 10 #days
-		x = 4
-		y = 21
-		relative_position_id = SPR_declare_a_republic
+		x = 0
+		y = 2
+		relative_position_id = SPR_profit_off_the_war
 		ai_will_do = {
 			factor = 10
 		}
@@ -1490,9 +1612,9 @@ focus_tree = {
 		id = SPR_sell_food_to_france
 		icon = GFX_FRA_ww1_The_wheat_of_the_victors_focus
 		cost = 10 #days
-		x = 5
-		y = 20
-		relative_position_id = SPR_declare_a_republic
+		x = 1
+		y = 1
+		relative_position_id = SPR_profit_off_the_war
 		ai_will_do = {
 			factor = 10
 		}
@@ -1511,9 +1633,9 @@ focus_tree = {
 		id = SPR_sell_weapons_to_england
 		icon = GFX_focus_generic_commonwealth_build_infantry
 		cost = 10 #days
-		x = 6
-		y = 21
-		relative_position_id = SPR_declare_a_republic
+		x = 2
+		y = 2
+		relative_position_id = SPR_profit_off_the_war
 		ai_will_do = {
 			factor = 10
 		}
@@ -1548,9 +1670,9 @@ focus_tree = {
 		id = SPR_lean_entente
 		icon = GFX_FRA_ww1_privatise_banks_focus
 		cost = 10 #days
-		x = 6
-		y = 19
-		relative_position_id = SPR_declare_a_republic
+		x = 2
+		y = 0
+		relative_position_id = SPR_profit_off_the_war
 		mutually_exclusive = { focus = SPR_profit_off_the_war }
 		ai_will_do = {
 			factor = 10
@@ -1596,14 +1718,58 @@ focus_tree = {
 			focus = SPR_forcefully_weaken_the_caudillos
 		}
 		completion_reward = {
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_strong_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_catholic_nation
+				}
+			}	
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_extensive_traditionalism_reforms
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10 #days
+		x = -2
+		y = 11
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_conservative_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_conservative_majority
+			focus = SPR_liberal_majority
+		}
+		completion_reward = {
 			IF = { 
 				limit = { has_global_flag = conservative_majority }
-				add_political_power = 100
+				add_political_power = 75
+				add_stability = 0.05
 			}
 			IF = { 
 				limit = { has_global_flag = liberal_majority }
 				add_political_power = 25
-				add_stability = -0.05
+				add_stability = -0.03
 			}
 		}
 	}
@@ -1627,14 +1793,35 @@ focus_tree = {
 			focus = SPR_liberal_majority
 		}
 		completion_reward = {
-			IF = { 
-				limit = { has_global_flag = conservative_majority }
-				add_political_power = 100
-			}
-			IF = { 
+			IF = {
 				limit = { has_global_flag = liberal_majority }
-				add_political_power = 25
-				add_stability = -0.05
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03	
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.05	
+				}
+				add_stability = -0.10
+				add_political_power = 50
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+			}
+			IF = {
+				limit = { has_global_flag = conservative_majority }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05	
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05	
+				}
+				add_stability = -0.03
+				add_political_power = 125
 			}
 		}
 	}
@@ -1658,15 +1845,29 @@ focus_tree = {
 			focus = SPR_liberal_majority
 		}
 		completion_reward = {
-			IF = { 
-				limit = { has_global_flag = conservative_majority }
-				add_political_power = 100
+			add_stability = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -900
+				producer = SPR
 			}
-			IF = { 
-				limit = { has_global_flag = liberal_majority }
-				add_political_power = 25
-				add_stability = -0.05
-			}	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1	
+			}
+			SPR = {
+				IF = {
+					limit = { has_idea = SPR_idea_protests_for_regional_autonomy }
+					remove_idea = SPR_idea_protests_for_regional_autonomy
+				}
+				IF = {
+					limit = { has_idea = SPR_idea_movements_for_regional_autonomy }
+					swap_ideas = {
+						remove_idea = SPR_idea_movements_for_regional_autonomy
+						add_idea = SPR_idea_protests_for_regional_autonomy
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -1689,15 +1890,29 @@ focus_tree = {
 			focus = SPR_conservative_majority
 		}
 		completion_reward = {
-			IF = { 
-				limit = { has_global_flag = conservative_majority }
-				add_political_power = 100
-			}
-			IF = { 
+			IF = {
 				limit = { has_global_flag = liberal_majority }
-				add_political_power = 25
+				add_stability = 0.05
+				add_political_power = -50
+			}
+			IF = {
+				limit = { has_global_flag = conservative_majority }
 				add_stability = -0.05
-			}	
+				add_political_power = -200
+			}
+			SPR = {
+				IF = {
+					limit = { has_idea = SPR_idea_protests_for_regional_autonomy }
+					remove_idea = SPR_idea_protests_for_regional_autonomy
+				}
+				IF = {
+					limit = { has_idea = SPR_idea_movements_for_regional_autonomy }
+					swap_ideas = {
+						remove_idea = SPR_idea_movements_for_regional_autonomy
+						add_idea = SPR_idea_protests_for_regional_autonomy
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -1722,6 +1937,123 @@ focus_tree = {
 			focus = SPR_religous_freedom
 		}
 		completion_reward = {
+			IF = {
+				limit = { has_global_flag = liberal_majority }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05	
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1	
+				}
+				add_stability = 0.05
+				add_political_power = -75
+			}
+			IF = {
+				limit = { has_global_flag = conservative_majority }
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.05	
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1	
+				}
+				add_stability = -0.1
+				add_political_power = -150
+			}
+		}
+	}
+	focus = {
+		id = SPR_continue_with_split_liberal_parties
+		mutually_exclusive = { focus = SPR_fuse_with_the_romanonist }
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10 #days
+		x = 5
+		y = 11
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_seperation_of_powers
+		}
+		completion_reward = {
+			IF = { 
+				limit = { has_global_flag = conservative_majority }
+				add_political_power = 35
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05	
+				}
+			}
+			IF = { 
+				limit = { has_global_flag = liberal_majority }
+				add_political_power = 25
+				add_stability = -0.05
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05	
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_fuse_with_the_romanonist
+		mutually_exclusive = { focus = SPR_continue_with_two_liberal_parties }
+		icon = GFX_goal_generic_national_unity
+		cost = 10 #days
+		x = 7
+		y = 11
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			always = no
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
+			NOT = {
+				has_completed_focus = SPR_modernization_program
+			}
+			NOT = {
+				has_completed_focus = SPR_fuse_with_the_romanonist
+			}
+		}
+		prerequisite {
+			focus = SPR_seperation_of_powers
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_reform_el_turno
+		mutually_exclusive = { focus = SPR_continue_with_two_liberal_parties }
+		icon = GFX_focus_eng_chiefs_of_staff_committee
+		cost = 10 #days
+		x = 6
+		y = 12
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_fuse_with_the_romanonist
+		}
+		completion_reward = {
 			IF = { 
 				limit = { has_global_flag = conservative_majority }
 				add_political_power = 100
@@ -1730,6 +2062,103 @@ focus_tree = {
 				limit = { has_global_flag = liberal_majority }
 				add_political_power = 25
 				add_stability = -0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_offer_more_seats_to_rural_areas
+		mutually_exclusive = { focus = SPR_continue_with_two_liberal_parties }
+		icon = GFX_focus_usa_union_representation_act
+		cost = 10 #days
+		x = 8
+		y = 12
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_fuse_with_the_romanonist
+		}
+		completion_reward = {
+			IF = { 
+				limit = { has_global_flag = conservative_majority }
+				add_political_power = 100
+			}
+			IF = { 
+				limit = { has_global_flag = liberal_majority }
+				add_political_power = 25
+				add_stability = -0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_become_the_social_liberals
+		mutually_exclusive = { focus = SPR_continue_with_two_liberal_parties }
+		icon = GFX_focus_spr_war_of_independence
+		cost = 10 #days
+		x = 7
+		y = 13
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_offer_more_seats_to_rural_areas
+		}
+		prerequisite {
+			focus = SPR_reform_el_turno
+		}
+		completion_reward = {
+			IF = { 
+				limit = { has_global_flag = conservative_majority }
+				add_political_power = 100
+			}
+			IF = { 
+				limit = { has_global_flag = liberal_majority }
+				add_political_power = 25
+				add_stability = -0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_extensive_legislative_reforms
+		icon = GFX_focus_mex_privatisation
+		cost = 10 #days
+		x = 2
+		y = 11
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_conservative_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_conservative_majority
+			focus = SPR_liberal_majority
+		}
+		completion_reward = {
+			IF = { 
+				limit = { has_global_flag = liberal_majority }
+				add_political_power = 75
+				add_stability = 0.05
+			}
+			IF = { 
+				limit = { has_global_flag = conservative_majority }
+				add_political_power = 25
+				add_stability = -0.03
 			}
 		}
 	}
@@ -1763,6 +2192,22 @@ focus_tree = {
 				add_political_power = 25
 				add_stability = -0.05
 			}
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				remove_idea = SPR_idea_mild_catholicism
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_catholic_nation }
+				remove_idea = SPR_idea_catholic_nation
+				add_idea = SPR_idea_mild_catholicism
+			}	
 		}
 	}
 	focus = {
@@ -1791,8 +2236,8 @@ focus_tree = {
 		id = SPR_increase_public_opinion_of_war
 		icon = GFX_focus_ITA_generic_fascist_workers
 		cost = 10 #days
-		x = 8
-		y = 6
+		x = 10
+		y = 9
 		relative_position_id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_profit_off_the_war }
 		mutually_exclusive = { focus = SPR_lean_entente }
@@ -1819,7 +2264,7 @@ focus_tree = {
 		icon = GFX_goal_FRA_fortress
 		cost = 10 #days
 		x = 9
-		y = 8
+		y = 15
 		relative_position_id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_profit_off_the_war }
 		mutually_exclusive = { focus = SPR_lean_entente }
@@ -1835,13 +2280,13 @@ focus_tree = {
 			}
 		}
 		prerequisite {
-			focus = SPR_liberal_majority
-		}
-		prerequisite {
 			focus = SPR_increase_public_opinion_of_war
 		}
 		prerequisite {
 			focus = SPR_improve_french_relations
+		}
+		prerequisite {
+			focus = SPR_become_the_social_liberals
 		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_cartegna_pact_tt
@@ -1856,8 +2301,8 @@ focus_tree = {
 		id = SPR_join_the_entente
 		icon = GFX_focus_consolidate_entente
 		cost = 10 #days
-		x = 9
-		y = 9
+		x = 10
+		y = 16
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -1880,11 +2325,38 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_the_three_great_colonizers
+		icon = GFX_focus_consolidate_entente
+		cost = 10 #days
+		x = 10
+		y = 19
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_completed_focus = SPR_continue_expansion 
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_join_the_entente
+		}
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = ww1_spain.84
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
 		id = SPR_negotiate_more_spanish_claims
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 10 #days
-		x = 9
-		y = 10
+		x = 11
+		y = 17
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -1921,8 +2393,8 @@ focus_tree = {
 		id = SPR_improve_french_relations
 		icon = GFX_focus_chi_reach_out_to_france
 		cost = 10 #days
-		x = 7
-		y = 7
+		x = 8
+		y = 9
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -1961,8 +2433,8 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_defeat_in_the_great_war }
 		icon = GFX_focus_SPR_victory
 		cost = 10 #days
-		x = 10
-		y = 17
+		x = 0
+		y = 20
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -1972,7 +2444,8 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite {
-			focus = SPR_join_the_entente
+			focus = SPR_the_three_great_colonizers
+			focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
 			172 = {
@@ -1997,8 +2470,8 @@ focus_tree = {
 		id = SPR_defeat_in_the_great_war
 		icon = GFX_focus_CZE_german_puppet
 		cost = 10 #days
-		x = 8
-		y = 17
+		x = -4
+		y = 20
 		relative_position_id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_victory_in_the_great_war }
 		ai_will_do = {
@@ -2009,7 +2482,8 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite {
-			focus = SPR_join_the_entente
+			focus = SPR_the_three_great_colonizers
+			focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
 			172 = {
@@ -2035,27 +2509,6 @@ focus_tree = {
 		icon = GFX_goal_continuous_non_factory_construct
 		cost = 10 #days
 		x = 0
-		y = 11
-		relative_position_id = SPR_declare_a_republic
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-		}
-		prerequisite {
-			focus = SPR_push_for_more_catholicism
-			focus = SPR_seperation_of_powers
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = SPR_military_juntas_operate_illegally
-		icon = GFX_focus_ITA_banda_carita
-		cost = 10 #days
-		x = -3
 		y = 12
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -2063,13 +2516,52 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = juntas_operate
+			has_global_flag = new_spanish_prime_minister_in_office
+			NOT = {
+				has_completed_focus = SPR_side_with_maurists
+			}
+			NOT = {
+				has_completed_focus = SPR_fuse_with_the_romanonist
+			}
+		}
+		prerequisite {
+			focus = SPR_extensive_traditionalism_reforms
+			focus = SPR_extensive_legislative_reforms
+			focus = SPR_push_for_more_catholicism
+			focus = SPR_seperation_of_powers
+		}
+		prerequisite {
+			focus = SPR_thing5
+		}
+		completion_reward = {
+			add_ideas = { SPR_idea_modernization_program }
+		}
+	}
+	focus = {
+		id = SPR_military_juntas_operate_illegally
+		icon = GFX_focus_ITA_banda_carita
+		cost = 2.9 #days
+		x = -3
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = SPR_flag_juntas_operate
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite {
 			focus = SPR_modernization_program
+			focus = SPR_abolish_el_turno
+			focus = SPR_reform_el_turno
 		}
-		completion_reward = {	
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05	
+			}
 		}
 	}
 	focus = {
@@ -2078,7 +2570,7 @@ focus_tree = {
 		icon = GFX_focus_POL_ban_nazi_party
 		cost = 10 #days
 		x = -4
-		y = 13
+		y = 15
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2092,22 +2584,26 @@ focus_tree = {
 			focus = SPR_military_juntas_operate_illegally
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2200
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -160
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -160
+				producer = SPR
+			}
 		}
 	}
 	focus = {
@@ -2116,7 +2612,7 @@ focus_tree = {
 		icon = GFX_focus_POL_beck_ribbentrop
 		cost = 10 #days
 		x = -2
-		y = 13
+		y = 15
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2130,30 +2626,35 @@ focus_tree = {
 			focus = SPR_military_juntas_operate_illegally
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1800
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 120
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 120
+				producer = SPR
+			}
+			add_ideas = { SPR_idea_juntas_de_defensa }
 		}
 	}
 	focus = {
 		id = SPR_proletariat_strikes
 		icon = GFX_focus_ITA_peasants_rise
-		cost = 10 #days
+		cost = 2.9 #days
 		x = 5
-		y = 12
+		y = 14
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2165,24 +2666,14 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_modernization_program
+			focus = SPR_abolish_el_turno
+			focus = SPR_reform_el_turno
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05	
+			}
 		}
 	}
 	focus = {
@@ -2191,7 +2682,7 @@ focus_tree = {
 		icon = GFX_focus_generic_suppress_socdems
 		cost = 10 #days
 		x = 4
-		y = 13
+		y = 15
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2229,7 +2720,7 @@ focus_tree = {
 		icon = GFX_focus_red_rose
 		cost = 10 #days
 		x = 6
-		y = 13
+		y = 15
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2267,7 +2758,7 @@ focus_tree = {
 		icon = GFX_focus_marmara_artillery
 		cost = 10 #days
 		x = 7
-		y = 15
+		y = 17
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2302,9 +2793,9 @@ focus_tree = {
 	focus = {
 		id = SPR_catalonia_demands_regional_autonomy
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10 #days
+		cost = 2.9 #days
 		x = 1
-		y = 12
+		y = 14
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2316,23 +2807,13 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_modernization_program
+			focus = SPR_abolish_el_turno
+			focus = SPR_reform_el_turno
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05	
 			}	
 		}
 	}
@@ -2342,7 +2823,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10 #days
 		x = 0
-		y = 13
+		y = 15
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2356,22 +2837,27 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
+			add_political_power = -125
+			add_stability = -0.1
+			add_ideas = { SPR_idea_autonomous_catalonia }
 			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+				add_dynamic_modifier = {
+					modifier = SPR_catalonian_autonomy
 				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			}
+			remove_state_core = 165
+			add_resistance = 80
+			add_compliance = 100
+			166 = {
+				add_dynamic_modifier = {
+					modifier = SPR_poor_migrating
+				}
+			}
+			167 = {
+				add_dynamic_modifier = {
+					modifier = SPR_poor_migrating
+				}
+			}
 		}
 	}
 	focus = {
@@ -2380,7 +2866,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		cost = 10 #days
 		x = 2
-		y = 13
+		y = 15
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2397,22 +2883,27 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = -75
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05	
+			}
+			add_stability = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -600
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -45
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -45
+				producer = SPR
+			}
 		}
 	}
 	focus = {
@@ -2420,7 +2911,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_lions_of_the_great_war
 		cost = 10 #days
 		x = -1
-		y = 14
+		y = 16
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2431,6 +2922,9 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_relegalize_the_juntas
+		}
+		prerequisite {
+			focus = SPR_allow_minor_regional_autonomy
 		}
 		completion_reward = {
 			172 = {
@@ -2453,10 +2947,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_failure_to_contain_the_three_headed_crisis
-		icon = GFX_focus_RAJ_lions_of_the_great_war
+		mutually_exclusive = { focus = SPR_success_in_containing_the_three_headed_crisis }
+		icon = GFX_focus_generic_conspiracy
 		cost = 10 #days
-		x = 5
-		y = 16
+		x = 0
+		y = 17
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2491,10 +2986,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_success_in_containing_the_three_headed_crisis
-		icon = GFX_focus_RAJ_lions_of_the_great_war
+		mutually_exclusive = { focus = SPR_failure_to_contain_the_three_headed_crisis }
+		icon = GFX_focus_generic_population_growth
 		cost = 10 #days
-		x = 3
-		y = 16
+		x = 2
+		y = 17
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2508,6 +3004,44 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_adopt_furthur_social_reform
+		}
+		completion_reward = {
+			172 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}	
+			165 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}	
+		}
+	}
+	focus = {
+		id = SPR_trust_in_the_peaceful_turn
+		mutually_exclusive = { focus = SPR_failure_to_contain_the_three_headed_crisis }
+		icon = GFX_focus_generic_population_growth
+		cost = 10 #days
+		x = 1
+		y = 18
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_success_in_containing_the_three_headed_crisis
+			focus = SPR_failure_to_contain_the_three_headed_crisis
 		}
 		completion_reward = {
 			172 = {
@@ -2531,9 +3065,10 @@ focus_tree = {
 	focus = {
 		id = SPR_military_coup
 		mutually_exclusive = { focus = SPR_the_government_survives }
+		mutually_exclusive = { focus = SPR_spain_reenters_the_world_stage }
 		icon = GFX_focus_generic_military_dictatorship
 		cost = 10 #days
-		x = 0
+		x = -5
 		y = 22
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -2544,11 +3079,8 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite {
-			focus = SPR_send_in_the_military
-			focus = SPR_forcefully_dissolve_the_assembly
-			focus = SPR_arrest_signatories_of_the_manifesto
+			focus = SPR_failure_to_contain_the_three_headed_crisis
 			focus = SPR_defeat_in_the_great_war
-			focus = SPR_carlist_defeat_in_the_great_war
 		}
 		completion_reward = {
 			172 = {
@@ -2572,9 +3104,10 @@ focus_tree = {
 	focus = {
 		id = SPR_the_government_survives
 		mutually_exclusive = { focus = SPR_military_coup }
+		mutually_exclusive = { focus = SPR_spain_reenters_the_world_stage }
 		icon = GFX_focus_generic_self_management
 		cost = 10 #days
-		x = 2
+		x = 5
 		y = 22
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -2585,10 +3118,7 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite {
-			focus = SPR_junta_and_catalonian_autonomy_incompatible
-		}
-		prerequisite {
-			focus = SPR_adopt_furthur_social_reform
+			focus = SPR_success_in_containing_the_three_headed_crisis
 		}
 		completion_reward = {
 			172 = {
@@ -2614,9 +3144,9 @@ focus_tree = {
 		id = SPR_deify_the_king_and_his_cabinet
 		icon = GFX_focus_SWI_dissolve_the_federal_council
 		cost = 10 #days
-		x = 9
-		y = 18
-		relative_position_id = SPR_declare_a_republic
+		x = -1
+		y = 1
+		relative_position_id = SPR_victory_in_the_great_war
 		ai_will_do = {
 			factor = 10
 		}
@@ -2650,9 +3180,9 @@ focus_tree = {
 		id = SPR_integrate_our_holdings
 		icon = GFX_focus_eagle
 		cost = 10 #days
-		x = 11
-		y = 18
-		relative_position_id = SPR_declare_a_republic
+		x = 1
+		y = 1
+		relative_position_id = SPR_victory_in_the_great_war
 		ai_will_do = {
 			factor = 10
 		}
@@ -2685,9 +3215,11 @@ focus_tree = {
 	focus = {
 		id = SPR_spain_reenters_the_world_stage
 		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		mutually_exclusive = { focus = SPR_military_coup }
+		mutually_exclusive = { focus = SPR_the_government_survives }
 		cost = 10 #days
-		x = 10
-		y = 21
+		x = 0
+		y = 22
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2725,9 +3257,78 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_the_carlist_empire
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		cost = 10 #days
+		x = -9
+		y = 23
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_take_revenge_on_austria
+			focus = SPR_join_the_central_powers
+		}
+		prerequisite {
+			focus = SPR_spain_reenters_the_world_stage
+		}
+		completion_reward = {
+			172 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}	
+			165 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}	
+		}
+	}
+	focus = {
 		id = SPR_side_with_maurists
 		mutually_exclusive = { focus = SPR_politically_crush_the_maurists }
-		icon = GFX_focus_eagle
+		icon = GFX_focus_conform_to_maura
+		cost = 10 #days
+		x = -7
+		y = 11
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			always = no
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			NOT = {
+				has_completed_focus = SPR_modernization_program
+			}
+			NOT = {
+				has_completed_focus = SPR_fuse_with_the_romanonist
+			}
+		}
+		prerequisite {
+			focus = SPR_push_for_more_catholicism
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_politically_crush_the_maurists
+		mutually_exclusive = { focus = SPR_side_with_maurists }
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		cost = 10 #days
 		x = -5
 		y = 11
@@ -2743,64 +3344,12 @@ focus_tree = {
 			focus = SPR_push_for_more_catholicism
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
-		}
-	}
-	focus = {
-		id = SPR_politically_crush_the_maurists
-		mutually_exclusive = { focus = SPR_side_with_maurists }
-		icon = GFX_focus_eagle
-		cost = 10 #days
-		x = -3
-		y = 11
-		relative_position_id = SPR_declare_a_republic
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-		}
-		prerequisite {
-			focus = SPR_push_for_more_catholicism
-		}
-		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = 0.05
 		}
 	}
 	focus = {
 		id = SPR_focus_on_social_reformation
-		icon = GFX_focus_por_workers_of_iberia
+		icon = GFX_focus_generic_monarchy_2
 		cost = 10 #days
 		x = -8
 		y = 12
@@ -2839,7 +3388,7 @@ focus_tree = {
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
 		cost = 10 #days
 		x = 2
-		y = 1
+		y = 0
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
 			factor = 10
@@ -2853,6 +3402,9 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_side_with_maurists
+		}
+		prerequisite {
+			focus = SPR_modernization_program
 		}
 		completion_reward = {
 			172 = {
@@ -3021,11 +3573,87 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_replace_the_conservatives
+		mutually_exclusive = { focus = SPR_fuse_with_the_carlists }
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10 #days
+		x = -3
+		y = 3
+		relative_position_id = SPR_focus_on_social_reformation
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_unite_the_maurists
+		}
+		completion_reward = {
+			172 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}	
+			165 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}	
+		}
+	}
+	focus = {
+		id = SPR_continue_el_turno
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 10 #days
+		x = -4
+		y = 4
+		relative_position_id = SPR_focus_on_social_reformation
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			NOT = {
+				has_completed_focus = SPR_abolish_el_turno
+			}
+		}
+		prerequisite {
+			focus = SPR_replace_the_conservatives
+		}
+		completion_reward = {
+			172 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}	
+			165 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}	
+		}
+	}
+	focus = {
 		id = SPR_fuse_with_the_carlists 
 		mutually_exclusive = { focus = SPR_fuse_with_the_carlists }
 		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
 		cost = 10 #days
-		x = 1
+		x = 0
 		y = 3
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3065,7 +3693,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_pick_jaime }
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		cost = 10 #days
-		x = 0
+		x = -1
 		y = 4
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3102,7 +3730,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_side_with_carlos }
 		icon = GFX_focus_generic_home_defense
 		cost = 10 #days
-		x = 2
+		x = 1
 		y = 4
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3135,86 +3763,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_replace_the_conservatives
-		mutually_exclusive = { focus = SPR_fuse_with_the_carlists }
-		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 10 #days
-		x = -2
-		y = 3
-		relative_position_id = SPR_focus_on_social_reformation
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-		}
-		prerequisite {
-			focus = SPR_unite_the_maurists
-		}
-		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
-		}
-	}
-	focus = {
-		id = SPR_continue_el_turno
-		icon = GFX_focus_hol_abandon_the_gold_standard
-		cost = 10 #days
-		x = -2
-		y = 4
-		relative_position_id = SPR_focus_on_social_reformation
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-			NOT = {
-				has_completed_focus = SPR_abolish_el_turno
-			}
-		}
-		prerequisite {
-			focus = SPR_replace_the_conservatives
-		}
-		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
-		}
-	}
-	focus = {
 		id = SPR_negotiate_jaimes_release
 		icon = GFX_focus_convention
 		cost = 10 #days
-		x = 3
+		x = 2
 		y = 5
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3248,9 +3800,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_dismantle_the_mellismo
-		icon = GFX_focus_generic_annex_country
+		icon = GFX_focus_generic_monarchy_1
 		cost = 10 #days
-		x = 4
+		x = 1
 		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3286,7 +3838,7 @@ focus_tree = {
 		id = SPR_take_revenge_on_austria
 		icon = GFX_focus_AUH_collapse
 		cost = 10 #days
-		x = 4
+		x = 1
 		y = 7
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3307,7 +3859,7 @@ focus_tree = {
 		id = SPR_legitimize_his_rule
 		icon = GFX_goal_generic_small_arms
 		cost = 10 #days
-		x = 1
+		x = 0
 		y = 5
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3347,7 +3899,7 @@ focus_tree = {
 		id = SPR_force_conform_the_mellismo
 		icon = GFX_focus_eng_special_air_service
 		cost = 10 #days
-		x = -1
+		x = -2
 		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3386,7 +3938,7 @@ focus_tree = {
 		id = SPR_secure_spanish_claims_in_france
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 10 #days
-		x = -3
+		x = -4
 		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3422,7 +3974,7 @@ focus_tree = {
 		id = SPR_join_the_central_powers
 		icon = GFX_focus_central_powers
 		cost = 10 #days
-		x = -2
+		x = -3
 		y = 7
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
@@ -3461,8 +4013,8 @@ focus_tree = {
 		id = SPR_encircle_the_french
 		icon = GFX_goal_generic_secret_weapon
 		cost = 10 #days
-		x = -1
-		y = 8
+		x = -4
+		y = 9
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
 			factor = 10
@@ -3473,80 +4025,6 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_join_the_central_powers
-		}
-		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
-		}
-	}
-	focus = {
-		id = SPR_carlist_defeat_in_the_great_war
-		mutually_exclusive = { focus = SPR_carlist_victory_in_the_great_war }
-		icon = GFX_focus_spa_eliminate_the_carlists
-		cost = 10 #days
-		x = 4
-		y = 9
-		relative_position_id = SPR_focus_on_social_reformation
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-		}
-		prerequisite {
-			focus = SPR_encircle_the_french
-		}
-		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
-		}
-	}
-	focus = {
-		id = SPR_carlist_victory_in_the_great_war
-		mutually_exclusive = { focus = SPR_carlist_defeat_in_the_great_war }
-		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
-		cost = 10 #days
-		x = 0
-		y = 9
-		relative_position_id = SPR_focus_on_social_reformation
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-		}
-		prerequisite {
-			focus = SPR_encircle_the_french
 		}
 		completion_reward = {
 			172 = {

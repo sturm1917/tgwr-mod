@@ -918,3 +918,37 @@ ALB_greek_minority = {
 	local_resources_factor = -0.5
 	local_factories = -0.5
 }
+SPR_catalonian_autonomy = {
+	icon = SPR_the_maximum_concession
+	enable = {
+		SPR = {
+			NOT = {
+				has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+			}
+		}
+	}
+	stability_factor = -0.01
+	weekly_manpower = 10000
+}
+SPR_poor_migrating = {
+	icon = SPR_the_maximum_concession
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = {
+			has_variable = var_name
+		}
+	}
+	controller = {
+		stability_factor = -0.01
+	}
+	weekly_manpower = -5000
+}
+SPR_carlist_state = {
+	icon = SPA_carlism
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = {
+			has_variable = var_name
+		}
+	}
+}

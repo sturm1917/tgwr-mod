@@ -15,4 +15,8 @@ spriteTypes = {
 		name = "GFX_focus_SPR_victory"
 		texturefile = "gfx/interface/goals/focus_SPR_victory.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_conform_to_maura"
+		texturefile = "gfx/interface/goals/focus_conform_to_maura.png"
+	}
 }
