@@ -1650,6 +1650,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.90.b # demand portugal hands over porto
+		ai_chance = { factor = 10 }
 		POR = {
 			country_event = {
 				id = ww1_spain.94
@@ -1671,9 +1672,10 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.93.a # hell no
+		ai_chance = { factor = 10 }
 		SPR = {
 			country_event = {
-				id = ww1_spain.95
+				id = ww1_spain.97
 				days = 5
 			}
 		}
@@ -1681,6 +1683,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.93.b # spain is worth more than portugal
+		ai_chance = { factor = 10 }
 		POR = {
 			country_event = {
 				id = ww1_spain.94
@@ -1691,7 +1694,7 @@ country_event = {
 	
 }
 
-# POR/Entente backs spainish claim
+# Entente backs claim to Porto
 country_event = {
 	id = ww1_spain.94
 	title = ww1_spain.94.t
@@ -1701,21 +1704,27 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = ww1_spain.94.a # we have no choice
+		name = ww1_spain.94.a
+		ai_chance = { factor = 10 }
 		SPR = {
-			country_event = { ww1_spain.95 }
+			country_event = { 
+				id = ww1_spain.95
+				days = 5
+			}
 			days = 5
 		}
 	}
-	
 	option = {
-		name = ww1_spain.94.b # threaten to leave entente
+		name = ww1_spain.94.b
+		ai_chance = { factor = 10 }
 		FRA = {
-			country_event = { ww1_spain.101 }
+			country_event = { 
+				id = ww1_spain.101 
+				days = 5
+			}
 			days = 5
 		}
 	}
-	
 }
 
 # Entente backs claim to Porto
@@ -1729,6 +1738,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.95.a
+		ai_chance = { factor = 10 }
 		SPR = {
 			add_state_claim = 180
 			add_state_core = 180
@@ -1749,6 +1759,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.98.a
+		ai_chance = { factor = 10 }
 		SPR = {
 			add_state_claim = 180
 			add_state_core = 180
@@ -1771,10 +1782,12 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.99.a # give up
+		ai_chance = { factor = 10 }
 	}
 	
 	option = {
 		name = ww1_spain.99.b # ask the british for a backing
+		ai_chance = { factor = 10 }
 		ENG = {
 			country_event = {
 				id = ww1_spain.93
@@ -1796,10 +1809,12 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.97.a # give up
+		ai_chance = { factor = 10 }
 	}
 	
 	option = {
 		name = ww1_spain.97.b # leave entente
+		ai_chance = { factor = 10 }
 		SPR = {
 			leave_faction = yes
 		}
@@ -1818,6 +1833,7 @@ country_event = {
 	
 	option = { #give up
 		name = ww1_spain.102.a
+		ai_chance = { factor = 10 }
 		SPR = {
 			option = {
 				name = ww1_spain.97.a # give up
@@ -1827,6 +1843,7 @@ country_event = {
 	
 	option = { #leave entente
 		name = ww1_spain.102.b
+		ai_chance = { factor = 10 }
 		SPR = {
 			leave_faction = yes
 		}
@@ -1845,17 +1862,23 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.101.a # I dont care
+		ai_chance = { factor = 10 }
 		ENG = {
-			country_event = { id = ww1_spain.99 }
-			days = 5
+			country_event = {
+				id = ww1_spain.99
+				days = 5
+			}
 		}
 	}
 	
 	option = {
 		name = ww1_spain.101.b # cannot let them join germany
+		ai_chance = { factor = 10 }
 		SPR = {
-			country_event = { id = ww1_spain.102 }
-			days = 5
+			country_event = {
+				id = ww1_spain.102 
+				days = 5
+			}
 		}
 	}
 	
@@ -1872,17 +1895,23 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.99.a # I dont care
+		ai_chance = { factor = 10 }
 		SPR = {
-			country_event = { id = ww1_spain.100 }
-			days = 5
+			country_event = { 
+				id = ww1_spain.100 
+				days = 5
+			}
 		}
 	}
 	
 	option = {
 		name = ww1_spain.99.b # cannot let them join germany
+		ai_chance = { factor = 10 }
 		SPR = {
-			country_event = { id = ww1_spain.102 }
-			days = 5
+			country_event = { 
+				id = ww1_spain.102 
+				days = 5
+			}
 		}
 	}
 	
@@ -1899,6 +1928,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.100.a
+		ai_chance = { factor = 10 }
 		SPR = {
 			create_wargoal = {
 				type = annex_wargoal_focus
