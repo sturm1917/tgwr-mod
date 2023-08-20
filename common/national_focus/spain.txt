@@ -3119,22 +3119,9 @@ focus_tree = {
 			focus = SPR_victory_in_the_great_war
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			SPR = {
+				add_state_core = 666
+			}
 		}
 	}
 	focus = {
@@ -3166,19 +3153,16 @@ focus_tree = {
 			172 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 5
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					type = arms_factory
+					level = 5
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
-			}	
+				add_extra_state_shared_building_slots = 10
+			}		
 		}
 	}
 	focus = {
@@ -3203,22 +3187,7 @@ focus_tree = {
 			focus = SPR_spain_reenters_the_world_stage
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = 0.25
 		}
 	}
 	focus = {
