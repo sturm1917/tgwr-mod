@@ -2436,22 +2436,7 @@ focus_tree = {
 			focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			custom_effect_tooltip = SPR_victory_in_TGW.tt
 		}
 	}
 	focus = {
@@ -2474,22 +2459,7 @@ focus_tree = {
 			focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			set_global_flag = looming_deadline
 		}
 	}
 	focus = {
@@ -3008,22 +2978,12 @@ focus_tree = {
 			focus = SPR_defeat_in_the_great_war
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			SPR = {
+				add_popularity = {
+				ideology = fascism
+				popularity = 0.15
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			}
 		}
 	}
 	focus = {
@@ -3046,22 +3006,8 @@ focus_tree = {
 			focus = SPR_success_in_containing_the_three_headed_crisis
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = -100
+			add_stability = -0.05
 		}
 	}
 	#Victory in the War
@@ -3083,22 +3029,13 @@ focus_tree = {
 			focus = SPR_victory_in_the_great_war
 		}
 		completion_reward = {
-			172 = {
+			41 = {
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					type = bunker
+					level = 10
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			}
 		}
 	}
 	focus = {
@@ -3118,9 +3055,41 @@ focus_tree = {
 		prerequisite {
 			focus = SPR_victory_in_the_great_war
 		}
-		completion_reward = {
-			SPR = {
-				add_state_core = 666
+		completion_reward = { #needs extra dev after carlist path
+			IF = { 
+				limit = { 
+					OR = {
+						has_global_flag = spain_negotiated_for_madeira
+						has_global_flag = spain_failed_negotiations
+					}
+				}
+			}
+			IF = { 
+				limit = { 
+					has_global_flag = spain_negotiated_for_porto
+					has_completed_focus = SPR_forget_about_our_colonies
+				}
+				SPR = {
+					add_state_core = 180 
+				}
+			}
+			IF = { 
+				limit = { 
+					has_global_flag = spain_negotiated_for_pacific
+					has_completed_focus = SPR_our_colonial_empire
+				}
+				SPR = {
+					add_state_core = 737
+				}
+			}
+			IF = { 
+				limit = { 
+					has_global_flag = spain_negotiated_for_kamerun
+					has_completed_focus = SPR_our_colonial_empire
+				}
+				SPR = {
+					add_state_core = 539
+				}
 			}
 		}
 	}

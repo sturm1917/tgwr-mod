@@ -1343,14 +1343,19 @@ country_event = {
 	desc = ww1_spain.2.d
 	picture = GFX_report_event_spain_civil_war_soldiers
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 13 }
+	mean_time_to_happen = {	days = 125 }
 	trigger = {
+		NOT = {
+			has_completed_focus = SPR_the_government_survives
+		}
 		tag = SPR
-		has_character = SPR_miguel_primo_de_rivera
-		has_country_flag = disaster_of_annual
 		is_subject = no
+		has_character = SPR_miguel_primo_de_rivera
 		has_government = neutrality
 		date > 1923.9.1
+		OR = {
+			has_country_flag = looming_deadline
+		}
 	}
 	option = {
 		name = ww1_spain.2.a
@@ -1387,6 +1392,7 @@ country_event = {
 			elections_allowed = no
 		}
 		add_stability = -0.10
+		complete_national_focus = SPR_military_coup
 	}
 }
 
@@ -1542,12 +1548,14 @@ country_event = {
 		SPR = {
 			add_state_claim = 737
 		}
+		set_global_flag = spain_negotiated_for_pacific
 	}
 	option = {
 		name = ww1_spain.87.a # Africa
 		SPR = {
 			add_state_claim = 539
 		}
+		set_global_flag = spain_negotiated_for_kamerun
 	}
 }
 
@@ -1741,7 +1749,6 @@ country_event = {
 		ai_chance = { factor = 10 }
 		SPR = {
 			add_state_claim = 180
-			add_state_core = 180
 			set_state_owner = 180
 		}
 	}
@@ -1793,30 +1800,6 @@ country_event = {
 				id = ww1_spain.93
 				days = 5
 			}
-		}
-	}
-	
-}
-
-# England doesn't back our claim to Porto
-country_event = {
-	id = ww1_spain.97
-	title = ww1_spain.97.t
-	desc = ww1_spain.97.d
-	picture = GFX_event_prime_minister_jose_killed
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = ww1_spain.97.a # give up
-		ai_chance = { factor = 10 }
-	}
-	
-	option = {
-		name = ww1_spain.97.b # leave entente
-		ai_chance = { factor = 10 }
-		SPR = {
-			leave_faction = yes
 		}
 	}
 	
@@ -1935,6 +1918,33 @@ country_event = {
 				target = ROOT
 			}
 		}
+		set_global_flag = spain_negotiated_for_porto
+	}
+	
+}
+
+# England doesn't back our claim to Porto
+country_event = {
+	id = ww1_spain.97
+	title = ww1_spain.97.t
+	desc = ww1_spain.97.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.97.a # give up
+		ai_chance = { factor = 10 }
+		set_global_flag = spain_failed_negotiations
+	}
+	
+	option = {
+		name = ww1_spain.97.b # leave entente
+		ai_chance = { factor = 10 }
+		SPR = {
+			leave_faction = yes
+		}
+		set_global_flag = spain_failed_negotiations
 	}
 	
 }
