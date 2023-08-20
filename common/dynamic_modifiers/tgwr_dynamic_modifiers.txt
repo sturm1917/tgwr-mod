@@ -932,10 +932,11 @@ SPR_catalonian_autonomy = {
 }
 SPR_poor_migrating = {
 	icon = SPR_the_maximum_concession
-	enable = { always = yes }
-	remove_trigger = {
-		NOT = {
-			has_variable = var_name
+	enable = {
+		SPR = {
+			NOT = {
+				has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+			}
 		}
 	}
 	controller = {
@@ -946,9 +947,4 @@ SPR_poor_migrating = {
 SPR_carlist_state = {
 	icon = SPA_carlism
 	enable = { always = yes }
-	remove_trigger = {
-		NOT = {
-			has_variable = var_name
-		}
-	}
 }

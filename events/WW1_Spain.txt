@@ -1539,11 +1539,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.87.a # Pacific
-		FRA = { add_to_faction = SPR }
+		SPR = {
+			add_state_claim = 737
+		}
 	}
 	option = {
 		name = ww1_spain.87.a # Africa
-		FRA = { add_to_faction = SPR }
+		SPR = {
+			add_state_claim = 539
+		}
 	}
 }
 
@@ -1555,10 +1559,354 @@ country_event = {
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = yes
 	is_triggered_only = yes
-	option = {
+	option = { #Porto
 		name = ww1_spain.88.a
-		FRA = { add_to_faction = SPR }
+		FRA = { 
+			country_event = {
+				id = ww1_spain.89
+				days = 5
+			}
+		}
+	}
+	option = { #Madeira
+		name = ww1_spain.88.b
+		SPR = {
+			add_state_claim = 697
+			add_state_core = 697
+		}
+		SPR = {
+			set_state_owner = 697
+		}
 	}
 }
 
-#set_global_flag = SPR_flag_juntas_operate
+# FRA/Spain asks for porto
+country_event = {
+	id = ww1_spain.89
+	title = ww1_spain.89.t
+	desc = ww1_spain.89.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { # let them have it
+		name = ww1_spain.89.a
+		POR = {
+			country_event = {
+				id = ww1_spain.91
+				days = 5
+			}
+		}
+	}
+	option = { # no...
+		name = ww1_spain.89.b
+		SPR = {
+			country_event = {
+				id = ww1_spain.99
+				days = 5
+			}
+		}
+	}
+}
+
+# POR/Spain asks for porto
+country_event = {
+	id = ww1_spain.91
+	title = ww1_spain.91.t
+	desc = ww1_spain.91.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.91.b # no
+		FRA = {
+			country_event = {
+				id = ww1_spain.90
+				days = 5
+			}
+		}
+	}
+	
+}
+
+# FRA/Portugal Refuses Porto
+country_event = {
+	id = ww1_spain.90
+	title = ww1_spain.90.t
+	desc = ww1_spain.90.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.90.a # send condolences to spain
+		SPR = {
+			country_event = {
+				id = ww1_spain.99
+				days = 5
+			}
+		}
+	}
+	
+	option = {
+		name = ww1_spain.90.b # demand portugal hands over porto
+		POR = {
+			country_event = {
+				id = ww1_spain.94
+				days = 5
+			}
+		}
+	}
+	
+}
+
+# ENG/Portugal Refuses Porto
+country_event = {
+	id = ww1_spain.93
+	title = ww1_spain.93.t
+	desc = ww1_spain.93.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.93.a # hell no
+		SPR = {
+			country_event = {
+				id = ww1_spain.95
+				days = 5
+			}
+		}
+	}
+	
+	option = {
+		name = ww1_spain.93.b # spain is worth more than portugal
+		POR = {
+			country_event = {
+				id = ww1_spain.94
+				days = 5
+			}
+		}
+	}
+	
+}
+
+# POR/Entente backs spainish claim
+country_event = {
+	id = ww1_spain.94
+	title = ww1_spain.94.t
+	desc = ww1_spain.94.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.94.a # we have no choice
+		SPR = {
+			country_event = { ww1_spain.95 }
+			days = 5
+		}
+	}
+	
+	option = {
+		name = ww1_spain.94.b # threaten to leave entente
+		FRA = {
+			country_event = { ww1_spain.101 }
+			days = 5
+		}
+	}
+	
+}
+
+# Entente backs claim to Porto
+country_event = {
+	id = ww1_spain.95
+	title = ww1_spain.95.t
+	desc = ww1_spain.95.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.95.a
+		SPR = {
+			add_state_claim = 180
+			add_state_core = 180
+			set_state_owner = 180
+		}
+	}
+	
+}
+
+# Entente backs claim to Porto
+country_event = {
+	id = ww1_spain.98
+	title = ww1_spain.98.t
+	desc = ww1_spain.98.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.98.a
+		SPR = {
+			add_state_claim = 180
+			add_state_core = 180
+		}
+		SPR = {
+			set_state_owner = 180
+		}
+	}
+	
+}
+
+# France doesn't back our claim to Porto
+country_event = {
+	id = ww1_spain.99
+	title = ww1_spain.99.t
+	desc = ww1_spain.99.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.99.a # give up
+	}
+	
+	option = {
+		name = ww1_spain.99.b # ask the british for a backing
+		ENG = {
+			country_event = {
+				id = ww1_spain.93
+				days = 5
+			}
+		}
+	}
+	
+}
+
+# England doesn't back our claim to Porto
+country_event = {
+	id = ww1_spain.97
+	title = ww1_spain.97.t
+	desc = ww1_spain.97.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.97.a # give up
+	}
+	
+	option = {
+		name = ww1_spain.97.b # leave entente
+		SPR = {
+			leave_faction = yes
+		}
+	}
+	
+}
+
+# Entente changes their mind
+country_event = {
+	id = ww1_spain.102
+	title = ww1_spain.102.t
+	desc = ww1_spain.102.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #give up
+		name = ww1_spain.102.a
+		SPR = {
+			option = {
+				name = ww1_spain.97.a # give up
+			}
+		}
+	}
+	
+	option = { #leave entente
+		name = ww1_spain.102.b
+		SPR = {
+			leave_faction = yes
+		}
+	}
+	
+}
+
+# FRA/Portugal threatens to leave
+country_event = {
+	id = ww1_spain.101
+	title = ww1_spain.101.t
+	desc = ww1_spain.101.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.101.a # I dont care
+		ENG = {
+			country_event = { id = ww1_spain.99 }
+			days = 5
+		}
+	}
+	
+	option = {
+		name = ww1_spain.101.b # cannot let them join germany
+		SPR = {
+			country_event = { id = ww1_spain.102 }
+			days = 5
+		}
+	}
+	
+}
+
+# ENG/Portugal threatens to leave
+country_event = {
+	id = ww1_spain.99
+	title = ww1_spain.99.t
+	desc = ww1_spain.99.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.99.a # I dont care
+		SPR = {
+			country_event = { id = ww1_spain.100 }
+			days = 5
+		}
+	}
+	
+	option = {
+		name = ww1_spain.99.b # cannot let them join germany
+		SPR = {
+			country_event = { id = ww1_spain.102 }
+			days = 5
+		}
+	}
+	
+}
+
+# Spain takes it by force
+country_event = {
+	id = ww1_spain.100
+	title = ww1_spain.100.t
+	desc = ww1_spain.100.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.100.a
+		SPR = {
+			create_wargoal = {
+				type = annex_wargoal_focus
+				target = ROOT
+			}
+		}
+	}
+	
+}
+
+# set_global_flag = SPR_flag_juntas_operate

@@ -2287,6 +2287,7 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_become_the_social_liberals
+			focus = SPR_continue_with_split_liberal_parties
 		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_cartegna_pact_tt
@@ -2409,22 +2410,9 @@ focus_tree = {
 			focus = SPR_continue_expansion
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_negotiate_more_spanish_claims.tt
-			IF = {
-				limit = { has_completed_focus = SPR_our_colonial_empire }
-				FRA = {
-					country_event = {
-						id = ww1_spain.87
-					}
-				}	
-			}
-			IF = {
-				limit = { has_completed_focus = SPR_forget_about_our_colonies }
-				FRA = {
-					country_event = {
-						id = ww1_spain.88
-					}
-				}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = CZE_trust_in_the_west
 			}
 		}
 	}
@@ -2756,7 +2744,8 @@ focus_tree = {
 		prerequisite {
 			focus = SPR_adopt_furthur_social_reform
 		}
-		completion_reward = {
+		completion_reward = { 
+			remove_idea = { SPR_idea_lesser_strikers_manifesto }
 			add_stability = 0.05
 			add_ideas = SPR_idea_the_legal_manifesto
 		}
@@ -2897,23 +2886,11 @@ focus_tree = {
 		prerequisite {
 			focus = SPR_allow_minor_regional_autonomy
 		}
-		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+		completion_reward = { #decisions note
+			add_stability = -0.05
+			remove_idea = SPR_idea_juntas_de_defensa
+			remove_idea = SPR_idea_autonomous_catalonia
+			#add decision: exploit juntas vs regionalist
 		}
 	}
 	focus = {
@@ -2937,22 +2914,8 @@ focus_tree = {
 			focus = SPR_arrest_signatories_of_the_manifesto
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = -125
+			add_idea = SPR_idea_risk_of_governmental_collapse
 		}
 	}
 	focus = {
@@ -2977,28 +2940,13 @@ focus_tree = {
 			focus = SPR_adopt_furthur_social_reform
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = 50
 		}
 	}
 	focus = {
 		id = SPR_trust_in_the_peaceful_turn
 		mutually_exclusive = { focus = SPR_failure_to_contain_the_three_headed_crisis }
-		icon = GFX_focus_generic_population_growth
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10 #days
 		x = 1
 		y = 18
@@ -3014,23 +2962,29 @@ focus_tree = {
 			focus = SPR_success_in_containing_the_three_headed_crisis
 			focus = SPR_failure_to_contain_the_three_headed_crisis
 		}
+		prerequisite {
+			focus = SPR_modernization_program
+		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			add_stability = -0.03
+			IF = {
+				limit = { has_completed_focus = SPR_failure_to_contain_the_three_headed_crisis }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05	
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			}
+			IF = {
+				limit = { has_completed_focus = SPR_failure_to_contain_the_three_headed_crisis }
+				add_popularity = {
+					ideology = communism
+					popularity = -0.05	
 				}
-				add_extra_state_shared_building_slots = 1
-			}	
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05	
+				}
+			}
 		}
 	}
 	focus = {
