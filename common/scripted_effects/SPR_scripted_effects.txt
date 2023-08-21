@@ -4,7 +4,7 @@ scripted_effect_new_spanish_prime_minister = {
 			25 = {
 				modifier = {
 					factor = 0
-					has_idea = SPR_idea_prime_minister_alvaro
+					has_global_flag = SPR_alvaro_leaves_office
 				}
 				modifier = {
 					factor = 0
@@ -18,11 +18,15 @@ scripted_effect_new_spanish_prime_minister = {
 			25 = {
 				modifier = {
 					factor = 0
-					has_idea = SPR_idea_prime_minister_dato
+					has_global_flag = SPR_dato_leaves_office
 				}
 				modifier = {
 					factor = 0
 					has_global_flag = conservative_prime_minister
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = dato_killed
 				}
 				country_event = { 
 					id = ww1_spain.23 # Dato
@@ -32,7 +36,7 @@ scripted_effect_new_spanish_prime_minister = {
 			25 = {
 				modifier = {
 					factor = 0
-					has_idea = SPR_idea_prime_minister_prieto
+					has_global_flag = SPR_prieto_leaves_office
 				}
 				modifier = {
 					factor = 0
@@ -46,7 +50,7 @@ scripted_effect_new_spanish_prime_minister = {
 			25 = {
 				modifier = {
 					factor = 0
-					has_idea = SPR_idea_prime_minister_Maura
+					has_global_flag = SPR_maura_leaves_office
 				}
 				modifier = {
 					factor = 0
@@ -60,7 +64,7 @@ scripted_effect_new_spanish_prime_minister = {
 			25 = {
 				modifier = {
 					factor = 0
-					has_idea = SPR_idea_prime_minister_Manuel
+					has_global_flag = manuel_leaves_office
 				}
 				modifier = {
 					factor = 0
@@ -74,7 +78,7 @@ scripted_effect_new_spanish_prime_minister = {
 			25 = {
 				modifier = {
 					factor = 0
-					has_idea = SPR_idea_prime_minister_sanchez
+					has_global_flag = sanchez_leaves_office
 				}
 				modifier = {
 					factor = 0

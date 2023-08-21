@@ -215,7 +215,7 @@ ideas = {
 				original_tag = SPR
 			}
 			available = {
-				NOT {
+				NOT = {
 					has_government = communism
 				}
 			}
@@ -231,7 +231,7 @@ ideas = {
 				original_tag = SPR
 			}
 			available = {
-				NOT {
+				NOT = {
 					has_government = communism
 				}
 			}
@@ -287,7 +287,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly_factor = -0.002
+				stability_weekly = -0.002
 			}
 		}
 		SPR_idea_protests_for_regional_autonomy = {
@@ -302,7 +302,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly_factor = -0.001
+				stability_weekly = =0.001
 			}
 		}
 		SPR_idea_time_to_turn_around = {
@@ -318,9 +318,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-					stability_factor = 0.05
-					political_power_factor = 0.15
-				}
+				stability_factor = 0.05
+				political_power_factor = 0.15
+			}
 		}
 		SPR_idea_espana_in_commision = {
 		picture = generic_monarchist_uprising
@@ -412,7 +412,7 @@ ideas = {
 			}
 		}
 		SPR_idea_head_of_the_bank_of_spain = {
-		picture = 
+		picture = neutrality_idea
 			allowed = {
 				original_tag = SPR
 			}
@@ -423,7 +423,7 @@ ideas = {
 			}
 		}
 		SPR_idea_modernization_program = {
-		picture = 
+		picture = soviet_german_friendship
 			allowed = {
 				original_tag = SPR
 			}
@@ -437,7 +437,7 @@ ideas = {
 			}
 		}
 		SPR_idea_juntas_de_defensa = {
-		picture = 
+		picture = tfv_can_conscription_crisis
 			allowed = {
 				original_tag = SPR
 			}
@@ -449,7 +449,7 @@ ideas = {
 			}
 		}
 		SPR_idea_autonomous_catalonia = {
-		picture = 
+		picture = FRA_matignon_agreements
 			allowed = {
 				original_tag = SPR
 			}
@@ -461,7 +461,7 @@ ideas = {
 			}
 		}
 		SPR_idea_lesser_strikers_manifesto = {
-		picture = 
+		picture = trotskyite_plot_purged
 			allowed = {
 				original_tag = SPR
 			}
@@ -469,11 +469,11 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.001
 				democratic_acceptance = 50
-				industrial_capacity_factory = -0.15
+				industrial_capacity_factory = -0.05
 			}
 		}
 		SPR_idea_strikers_manifesto = {
-		picture = 
+		picture = officers_purged
 			allowed = {
 				original_tag = SPR
 			}
@@ -481,11 +481,11 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.002
 				communism_acceptance = 85
-				industrial_capacity_factory = -0.3
+				industrial_capacity_factory = -0.25
 			}
 		}
 		SPR_idea_the_legal_manifesto = { #accepted manifesto SPR_idea_risk_of_governmental_collapse
-		picture = 
+		picture = ast_abandon_the_westminster_system_communism
 			allowed = {
 				original_tag = SPR
 			}
@@ -497,14 +497,13 @@ ideas = {
 			}
 		}
 		SPR_idea_risk_of_governmental_collapse = {
-		picture = 
+		picture = saf_history_of_segregation_2
 			allowed = {
 				original_tag = SPR
 			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
-				communism_acceptance = 75
 				communism_acceptance = 75
 				communism_drift = 0.05
 				fascism_drift = 0.05

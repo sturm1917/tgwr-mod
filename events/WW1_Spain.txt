@@ -47,30 +47,6 @@ country_event = {
 	}
 }
 
-#1914 General election results
-country_event = {
-	id = ww1_spain.25
-	title = ww1_spain.25.t
-	desc = ww1_spain.25.d
-	picture = GFX_report_event_liberal_victory
-	fire_only_once = yes
-	mean_time_to_happen = {	days = 5 }
-	trigger = {
-		original_tag = SPR
-		date > 1914.3.1
-	}
-	option = {
-		name = ww1_spain.25.a
-		ai_chance = { factor = 10 }
-		set_global_flag = conservative_majority
-	}
-	option = {
-		name = ww1_spain.26.a
-		ai_chance = { factor = 10 }
-		set_global_flag = liberal_majority
-	}
-}
-
 #Agadir Negotiations from France
 country_event = {
 	id = ww1_spain.52
@@ -91,6 +67,7 @@ country_event = {
 	}
 	option = {
 		name = ww1_spain.53.a
+		complete_national_focus = SPR_negotiate_with_france
 		ai_chance = { factor = 0 }
 		set_global_flag = Agadir_negotiations_failed
 	}
@@ -106,7 +83,7 @@ country_event = {
 	mean_time_to_happen = {	days = 5 }
 	trigger = {
 		SPR = {
-			has_completed_focus = { SPR_our_colonial_empire }
+			has_completed_focus = SPR_our_colonial_empire
 		}
 	}
 	option = {
@@ -126,7 +103,7 @@ country_event = {
 	mean_time_to_happen = {	days = 5 }
 	trigger = {
 		SPR = {
-			has_completed_focus = { SPR_forget_about_our_colonies }
+			has_completed_focus = SPR_forget_about_our_colonies
 		}
 	}
 	option = {
@@ -163,45 +140,51 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.71.a # fra
-		SPR = {
-			add_political_power = 50
-			add_stability = 0.05
-			add_ideas = SPR_idea_money_from_sold_colonies1
-		}
-		country_event = { 
-			id = ww1_spain.72
-			days = 5
-		}
-		FRA = {
-			set_state_owner = 297
+		hidden_effect = {
+			SPR = {
+				add_political_power = 50
+				add_stability = 0.05
+				add_ideas = SPR_idea_money_from_sold_colonies1
+			}
+			country_event = { 
+				id = ww1_spain.72
+				days = 5
+			}
+			FRA = {
+				set_state_owner = 297
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.71.b # eng
-		SPR = {
-			add_political_power = 75
-			add_ideas = SPR_idea_money_from_sold_colonies1
-		}
-		country_event = { 
-			id = ww1_spain.72
-			days = 5
-		}
-		ENG = {
-			set_state_owner = 297
+		hidden_effect = {
+			SPR = {
+				add_political_power = 75
+				add_ideas = SPR_idea_money_from_sold_colonies1
+			}
+			country_event = { 
+				id = ww1_spain.72
+				days = 5
+			}
+			ENG = {
+				set_state_owner = 297
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.71.c # ger
-		SPR = {
-			add_stability = -0.05
-			add_ideas = SPR_idea_more_money_from_sold_colonies2
-		}
-		country_event = { 
-			id = ww1_spain.72
-			days = 5
-		}
-		GER = {
-			set_state_owner = 297
+		hidden_effect = {
+			SPR = {
+				add_stability = -0.05
+				add_ideas = SPR_idea_more_money_from_sold_colonies2
+			}
+			country_event = { 
+				id = ww1_spain.72
+				days = 5
+			}
+			GER = {
+				set_state_owner = 297
+			}
 		}
 	}
 }
@@ -216,52 +199,58 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.72.a # ger
-		custom_effect_tooltip = click_me_lie
-		scripted_effect_increase_in_sold_colonies = yes
 		hidden_effect = {
+			custom_effect_tooltip = click_me_lie
 			scripted_effect_increase_in_sold_colonies = yes
-		}
-		country_event = {
-			id = ww1_spain.74
-			days = 15
-		}
-		hidden_effect = {
+			hidden_effect = {
+				scripted_effect_increase_in_sold_colonies = yes
+			}
 			country_event = {
-				id = ww1_spain.80 # Entente objects
-				days = 4
+				id = ww1_spain.74
+				days = 15
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.80 # Entente objects
+					days = 4
+				}
 			}
 		}
 	}
 	option = {
 		name = ww1_spain.72.b # eng
-		SPR = {
-			add_political_power = 50
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		country_event = { 
-			id = ww1_spain.74
-			days = 5
-		}
-		ENG = {
-			set_state_owner = 178
+		hidden_effect = {
+			SPR = {
+				add_political_power = 50
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			country_event = { 
+				id = ww1_spain.74
+				days = 5
+			}
+			ENG = {
+				set_state_owner = 178
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.72.c # keep
-		SPR = {
-			add_political_power = -15
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.81
-				days = 5
+			SPR = {
+				add_political_power = -15
 			}
-		}
-		country_event = {
-			id = ww1_spain.74
-			days = 15
+			scripted_effect_increase_in_sold_colonies = yes
+			
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.81
+					days = 5
+				}
+			}
+			country_event = {
+				id = ww1_spain.74
+				days = 15
+			}
 		}
 	}
 }
@@ -276,56 +265,61 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.74.a # fra
-		SPR = {
-			add_political_power = 50
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		country_event = { 
-			id = ww1_spain.73
-			days = 5
-		}
-		FRA = {
-			set_state_owner = 699
+		hidden_effect = {
+			SPR = {
+				add_political_power = 50
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			country_event = { 
+				id = ww1_spain.73
+				days = 5
+			}
+			FRA = {
+				set_state_owner = 699
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.74.b # eng
-		SPR = {
-			add_political_power = 50
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		country_event = { 
-			id = ww1_spain.73
-			days = 5
-		}
-		ENG = {
-			set_state_owner = 699
+		hidden_effect = {
+			SPR = {
+				add_political_power = 50
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			country_event = { 
+				id = ww1_spain.73
+				days = 5
+			}
+			ENG = {
+				set_state_owner = 699
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.74.c # ger
-		custom_effect_tooltip = click_me_lie.tt
-		country_event = { 
-			id = ww1_spain.73
-			days = 20
-		}
-		IF = {
-			limit = { has_global_flag = spain_sell_ger_1 }
-			country_event = {
-				id = ww1_spain.82
+		hidden_effect = {
+			country_event = { 
+				id = ww1_spain.73
+				days = 20
+			}
+			IF = {
+				limit = { has_global_flag = spain_sell_ger_1 }
+				country_event = {
+					id = ww1_spain.82
+					days = 5
+				}
+			}
+			IF = {
+				limit = { NOT = { has_global_flag = spain_sell_ger_1 } }
+				country_event = {
+					id = ww1_spain.80
+					days = 5
+				}
+			}
+			country_event = { 
+				id = ww1_spain.73
 				days = 5
 			}
-		}
-		IF = {
-			limit = { NOT = { has_global_flag = spain_sell_ger_1 } }
-			country_event = {
-				id = ww1_spain.80
-				days = 5
-			}
-		}
-		country_event = { 
-			id = ww1_spain.73
-			days = 5
 		}
 	}
 }
@@ -340,14 +334,16 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.73.a # fra
-		SPR = {
-			add_stability = 0.03
+		hidden_effect = {
+			SPR = {
+				add_stability = 0.03
+				scripted_effect_increase_in_sold_colonies = yes
+			}
+			FRA = {
+				set_state_owner = 783
+			}
 			scripted_effect_increase_in_sold_colonies = yes
 		}
-		FRA = {
-			set_state_owner = 783
-		}
-		scripted_effect_increase_in_sold_colonies = yes
 	}
 	option = {
 		name = ww1_spain.73.b # eng
@@ -362,8 +358,10 @@ country_event = {
 	}
 	option = {
 		name = ww1_spain.73.c # keep
-		SPR = {
-			add_political_power = -15
+		hidden_effect = {
+			SPR = {
+				add_political_power = -15
+			}
 		}
 	}
 }
@@ -377,45 +375,51 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = { # FRA
-		SPR = {
-			add_stability = 0.05
-		}
 		name = ww1_spain.80.a
-		scripted_effect_increase_in_sold_colonies = yes
-		ai_chance = { factor = 10 }
-		FRA = {
-			set_state_owner = 178
+		hidden_effect = {
+			SPR = {
+				add_stability = 0.05
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			ai_chance = { factor = 10 }
+			FRA = {
+				set_state_owner = 178
+			}
+			set_global_flag = spain_sell_ger_1
 		}
-		set_global_flag = spain_sell_ger_1
 	}
 	option = { # ENG
-		SPR = {
-			add_political_power = 50
-		}
 		name = ww1_spain.80.b
-		scripted_effect_increase_in_sold_colonies = yes
-		ai_chance = { factor = 10 }
-		ENG = {
-			set_state_owner = 178
+		hidden_effect = {
+			SPR = {
+				add_political_power = 50
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			ai_chance = { factor = 10 }
+			ENG = {
+				set_state_owner = 178
+			}
+			set_global_flag = spain_sell_ger_1
 		}
-		set_global_flag = spain_sell_ger_1
 	}
 	option = {
 		name = ww1_spain.80.c # keep
-		SPR = {
-			add_political_power = -25
+		hidden_effect = {
+			SPR = {
+				add_political_power = -25
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			
+			country_event = {
+				id = ww1_spain.81
+				days = 5
+			}
+			country_event = {
+				id = ww1_spain.74
+				days = 15
+			}
+			set_global_flag = spain_sell_ger_1
 		}
-		scripted_effect_increase_in_sold_colonies = yes
-		
-		country_event = {
-			id = ww1_spain.81
-			days = 5
-		}
-		country_event = {
-			id = ww1_spain.74
-			days = 15
-		}
-		set_global_flag = spain_sell_ger_1
 	}
 }
 
@@ -428,25 +432,29 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		SPR = {
-			add_stability = 0.05
-		}
 		name = ww1_spain.83.a
-		scripted_effect_increase_in_sold_colonies = yes
-		ai_chance = { factor = 10 }
-		FRA = {
-			set_state_owner = 699
+		hidden_effect = {
+			SPR = {
+				add_stability = 0.05
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			ai_chance = { factor = 10 }
+			FRA = {
+				set_state_owner = 699
+			}
 		}
 	}
 	option = {
+		name = ww1_spain.83.b
 		SPR = {
 			add_political_power = 50
 		}
-		name = ww1_spain.83.b
-		scripted_effect_increase_in_sold_colonies = yes
-		ai_chance = { factor = 10 }
-		ENG = {
-			set_state_owner = 699
+		hidden_effect = {
+			scripted_effect_increase_in_sold_colonies = yes
+			ai_chance = { factor = 10 }
+			ENG = {
+				set_state_owner = 699
+			}
 		}
 	}
 }
@@ -461,28 +469,32 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.82.a
-		add_opinion_modifier = {
-			target = FRA
-			modifier = HOI4TGW_Opinion_hostile_diplomatic_relations
-		}		
-		add_opinion_modifier = {
-			target = ENG
-			modifier = HOI4TGW_Opinion_hostile_diplomatic_relations
-		}
-		ai_chance = { factor = 10 }
-		country_event = {
-			id = ww1_spain.76
-			days = 10
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = HOI4TGW_Opinion_hostile_diplomatic_relations
+			}		
+			add_opinion_modifier = {
+				target = ENG
+				modifier = HOI4TGW_Opinion_hostile_diplomatic_relations
+			}
+			ai_chance = { factor = 10 }
+			country_event = {
+				id = ww1_spain.76
+				days = 10
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.82.b
-		add_stability = -0.10
-		add_political_power = -200
-		ai_chance = { factor = 10 }
-		country_event = {
-			id = ww1_spain.75
-			days = 10
+		hidden_effect = {
+			add_stability = -0.10
+			add_political_power = -200
+			ai_chance = { factor = 10 }
+			country_event = {
+				id = ww1_spain.75
+				days = 10
+			}
 		}
 	}
 }
@@ -497,22 +509,26 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.75.a # fra
-		SPR = {
-			add_political_power = 50
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		FRA = {
-			set_state_owner = 699
+		hidden_effect = {
+			SPR = {
+				add_political_power = 50
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			FRA = {
+				set_state_owner = 699
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.75.b # eng
-		SPR = {
-			add_political_power = 50
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		ENG = {
-			set_state_owner = 699
+		hidden_effect = {
+			SPR = {
+				add_political_power = 50
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			ENG = {
+				set_state_owner = 699
+			}
 		}
 	}
 }
@@ -527,22 +543,26 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.76.a # fra
-		SPR = {
-			add_political_power = 15
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		FRA = {
-			set_state_owner = 699
+		hidden_effect = {
+			SPR = {
+				add_political_power = 15
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			FRA = {
+				set_state_owner = 699
+			}
 		}
 	}
 	option = {
 		name = ww1_spain.76.b # eng
-		SPR = {
-			add_political_power = 15
-		}
-		scripted_effect_increase_in_sold_colonies = yes
-		ENG = {
-			set_state_owner = 699
+		hidden_effect = {
+			SPR = {
+				add_political_power = 15
+			}
+			scripted_effect_increase_in_sold_colonies = yes
+			ENG = {
+				set_state_owner = 699
+			}
 		}
 	}
 }
@@ -584,16 +604,22 @@ country_event = {
 		original_tag = SPR
 		date > 1912.10.25
 	}
-	
 	option = {
 		name = ww1_spain.6.a
 		add_stability = -0.05
 		remove_ideas = SPR_idea_prime_minister_jose
 		remove_ideas = SPR_idea_time_to_turn_around
 		ai_chance = { factor = 10 }
-		clr_global_flag = new_spanish_prime_minister
-		#Important\/
 		set_global_flag = jose_killed
+		#Important\/
+		hidden_effect = {
+			SPR = {
+				country_event = { 
+					id = ww1_spain.21 
+					days = 5
+				}
+			}
+		}
 	}
 }
 
@@ -604,20 +630,7 @@ country_event = {
 	desc = ww1_spain.21.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 10 }
-	trigger = {
-		tag = SPR
-		OR = {
-			has_global_flag = jose_killed
-			has_global_flag = dato_leaves_office
-		}
-		NOT = {
-			has_global_flag = alvaro_leaves_office
-		}
-		NOT = {
-			has_global_flag = currently_incumbent
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.21.a
@@ -631,10 +644,17 @@ country_event = {
 				uncomplete_children = yes
 				refund_political_power = no
 			}
-			clr_global_flag = new_spanish_prime_minister_in_office 
+			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
-		set_global_flag = new_spanish_prime_minister
-		set_global_flag = currently_incumbent
+		
+		#allow another PM
+		clr_global_flag = dato_leaves_office
+		clr_global_flag = maura_leaves_office
+		clr_global_flag = manuel_leaves_office
+		clr_global_flag = sanchez_leaves_office
+		clr_global_flag = conservative_prime_minister
+		
+		set_global_flag = new_spanish_prime_minister #for the new prime minister focuses
 		
 		hidden_effect = {
 			country_event = { 
@@ -658,14 +678,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.22.a
-		scripted_effect_new_spanish_prime_minister = yes
 		remove_ideas = SPR_idea_prime_minister_alvaro
 		ai_chance = { factor = 10 }
-		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = alvaro_leaves_office
-		set_global_flag = liberal_prime_minister
-		clr_global_flag = currently_incumbent
+		scripted_effect_new_spanish_prime_minister = yes
+		clr_global_flag = new_spanish_prime_minister
 	}
 }
 
@@ -676,25 +694,13 @@ country_event = {
 	desc = ww1_spain.23.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 10 }
-	trigger = {
-		original_tag = SPR
-		has_global_flag = alvaro_leaves_office
-		NOT = {
-			OR = {
-				has_global_flag = dato_leaves_office
-				set_global_flag = dato_killed
-			}
-		}
-		NOT = {
-			has_global_flag = currently_incumbent
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.23.a
 		add_political_power = 25
-		add_ideas = SPR_idea_prime_minister_alvaro
+		set_global_flag = conservative_prime_minister
+		add_ideas = SPR_idea_prime_minister_dato
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -702,11 +708,13 @@ country_event = {
 				uncomplete_children = yes
 				refund_political_power = no
 			}
-			clr_global_flag = new_spanish_prime_minister_in_office 
+			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
-		clr_global_flag = new_spanish_prime_minister_in_office 
-		set_global_flag = new_spanish_prime_minister
-		set_global_flag = currently_incumbent
+		
+		#allow another PM
+		clr_global_flag = alvaro_leaves_office
+		clr_global_flag = prieto_leaves_office
+		clr_global_flag = liberal_prime_minister # allow next pm to be liberal
 		
 		hidden_effect = {
 			country_event = { 
@@ -731,15 +739,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.47.a
+		set_global_flag = conservative_prime_minister
 		scripted_effect_new_spanish_prime_minister = yes
-		remove_ideas = SPR_idea_prime_minister_alvaro
+		remove_ideas = SPR_idea_prime_minister_dato
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = dato_leaves_office
-		clr_global_flag = alvaro_leaves_office
-		clr_global_flag = currently_incumbent
-		set_global_flag = conservative_prime_minister
 	}
 }
 
@@ -750,22 +756,13 @@ country_event = {
 	desc = ww1_spain.32.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 10 }
-	trigger = {
-		original_tag = SPR
-		date > 1917.11.1
-		NOT = {
-			has_global_flag = prieto_leaves_office
-		}
-		NOT = {
-			has_global_flag = currently_incumbent
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.32.a
-		remove_ideas = SPR_idea_prime_minister_alvaro
-		ai_chance = { factor = 10 }
+		add_political_power = 25
+		set_global_flag = liberal_prime_minister
+		add_ideas = SPR_idea_prime_minister_prieto
 		IF = {
 			limit = { has_global_flag = conservative_prime_minister }
 			uncomplete_national_focus = {
@@ -773,8 +770,16 @@ country_event = {
 				uncomplete_children = yes
 				refund_political_power = no
 			}
-			clr_global_flag = new_spanish_prime_minister_in_office 
+			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
+		
+		#allow another PM
+		clr_global_flag = dato_leaves_office
+		clr_global_flag = maura_leaves_office
+		clr_global_flag = manuel_leaves_office
+		clr_global_flag = sanchez_leaves_office
+		clr_global_flag = conservative_prime_minister # allow next pm to be liberal
+		
 		hidden_effect = {
 			country_event = { 
 				id = ww1_spain.22 
@@ -782,9 +787,8 @@ country_event = {
 				random_days = 180
 			}
 		}
-		clr_global_flag = new_spanish_prime_minister
-		#Important\/
-		set_global_flag = currently_incumbent
+		
+		ai_chance = { factor = 10 }
 	}
 }
 
@@ -795,25 +799,17 @@ country_event = {
 	desc = ww1_spain.33.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		original_tag = SPR
-		date > 1918.3.1
-		NOT = {
-			has_global_flag = prieto_leaves_office
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.33.a
+		set_global_flag = liberal_prime_minister
 		scripted_effect_new_spanish_prime_minister = yes
-		remove_ideas = SPR_idea_prime_minister_alvaro
+		remove_ideas = SPR_idea_prime_minister_prieto
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = prieto_leaves_office
-		set_global_flag = liberal_prime_minister
-		clr_global_flag = currently_incumbent
 	}
 }
 
@@ -824,23 +820,13 @@ country_event = {
 	desc = ww1_spain.34.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		original_tag = SPR
-		date > 1918.4.1
-		has_global_flag = prieto_leaves_office
-		NOT = {
-			has_global_flag = maura_leaves_office
-		}
-		NOT = {
-			has_global_flag = currently_incumbent
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.34.a
-		remove_ideas = SPR_idea_prime_minister_alvaro
-		ai_chance = { factor = 10 }
+		add_political_power = 25
+		set_global_flag = conservative_prime_minister
+		add_ideas = SPR_idea_prime_minister_maura
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -848,8 +834,14 @@ country_event = {
 				uncomplete_children = yes
 				refund_political_power = no
 			}
-			clr_global_flag = new_spanish_prime_minister_in_office 
+			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
+		
+		#allow another PM
+		clr_global_flag = alvaro_leaves_office
+		clr_global_flag = prieto_leaves_office
+		clr_global_flag = liberal_prime_minister # allow next pm to be liberal
+		
 		hidden_effect = {
 			country_event = { 
 				id = ww1_spain.22 
@@ -857,9 +849,9 @@ country_event = {
 				random_days = 180
 			}
 		}
-		clr_global_flag = new_spanish_prime_minister
+		
 		#Important\/
-		set_global_flag = currently_incumbent
+		ai_chance = { factor = 10 }
 	}
 }
 
@@ -870,22 +862,17 @@ country_event = {
 	desc = ww1_spain.35.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		original_tag = SPR
-		date > 1918.11.1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.35.a
+		set_global_flag = liberal_prime_minister
 		scripted_effect_new_spanish_prime_minister = yes
-		remove_ideas = SPR_idea_prime_minister_alvaro
+		remove_ideas = SPR_idea_prime_minister_maura
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = maura_leaves_office
-		clr_global_flag = currently_incumbent
-		set_global_flag = conservative_prime_minister
 	}
 }
 
@@ -896,20 +883,13 @@ country_event = {
 	desc = ww1_spain.37.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 20 }
-	trigger = {
-		original_tag = SPR
-		date > 1919.12.1
-		NOT = {
-			has_global_flag = manuel_leaves_office
-		}
-		NOT = {
-			has_global_flag = currently_incumbent
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.37.a
+		add_political_power = 25
+		set_global_flag = conservative_prime_minister
+		add_ideas = SPR_idea_prime_minister_manuel
 		hidden_effect = {
 			country_event = { 
 				id = ww1_spain.22 
@@ -917,7 +897,6 @@ country_event = {
 				random_days = 180
 			}
 		}
-		remove_ideas = SPR_idea_prime_minister_alvaro
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -925,12 +904,23 @@ country_event = {
 				uncomplete_children = yes
 				refund_political_power = no
 			}
-			clr_global_flag = new_spanish_prime_minister_in_office 
+			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
+		
+		#allow another PM
+		clr_global_flag = alvaro_leaves_office
+		clr_global_flag = prieto_leaves_office
+		clr_global_flag = liberal_prime_minister # allow next pm to be liberal
+		
+		hidden_effect = {
+			country_event = { 
+				id = ww1_spain.38 
+				days = 120 
+				random_days = 180
+			}
+		}
+		
 		ai_chance = { factor = 10 }
-		clr_global_flag = new_spanish_prime_minister
-		#Important\/
-		set_global_flag = currently_incumbent
 	}
 }
 
@@ -942,22 +932,17 @@ country_event = {
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
 	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		original_tag = SPR
-		date > 1920.5.1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.38.a
+		set_global_flag = liberal_prime_minister
 		scripted_effect_new_spanish_prime_minister = yes
-		remove_ideas = SPR_idea_prime_minister_alvaro
+		remove_ideas = SPR_idea_prime_minister_manuel
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = manuel_leaves_office
-		clr_global_flag = dato_leaves_office
-		clr_global_flag = currently_incumbent
-		set_global_flag = conservative_prime_minister
 	}
 }
 
@@ -972,6 +957,7 @@ country_event = {
 	trigger = {
 		original_tag = SPR
 		date > 1921.3.6
+		has_idea = SPR_idea_prime_minister_dato
 	}
 	option = {
 		name = ww1_spain.23.a
@@ -981,10 +967,12 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = dato_killed
-		set_global_flag = dato_leaves_office
-		clr_global_flag = manuel_leaves_office
-		clr_global_flag = currently_incumbent
-		set_global_flag = conservative_prime_minister
+		SPR = {
+			country_event = { 
+				id = ww1_spain.37 
+				days = 5
+			}
+		}
 	}
 }
 
@@ -995,27 +983,13 @@ country_event = {
 	desc = ww1_spain.41.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = no
-	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		original_tag = SPR
-		date > 1922.3.8
-		NOT = {
-			has_global_flag = sanchez_leaves_office
-		}
-		NOT = {
-			has_global_flag = currently_incumbent
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.41.a
-		hidden_effect = {
-			country_event = { 
-				id = ww1_spain.22 
-				days = 120 
-				random_days = 180
-			}
-		}
+		add_political_power = 25
+		set_global_flag = conservative_prime_minister
+		add_ideas = SPR_idea_prime_minister_sanchez
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -1023,13 +997,24 @@ country_event = {
 				uncomplete_children = yes
 				refund_political_power = no
 			}
-			clr_global_flag = new_spanish_prime_minister_in_office 
+			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
-		remove_ideas = SPR_idea_prime_minister_alvaro
-		ai_chance = { factor = 10 }
-		clr_global_flag = new_spanish_prime_minister
+		
+		#allow another PM
+		clr_global_flag = alvaro_leaves_office
+		clr_global_flag = prieto_leaves_office
+		clr_global_flag = liberal_prime_minister # allow next pm to be liberal
+		
+		hidden_effect = {
+			country_event = { 
+				id = ww1_spain.38 
+				days = 120 
+				random_days = 180
+			}
+		}
+		
 		#Important\/
-		set_global_flag = currently_incumbent
+		ai_chance = { factor = 10 }
 	}
 }
 
@@ -1049,15 +1034,13 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.42.a
+		set_global_flag = liberal_prime_minister
 		scripted_effect_new_spanish_prime_minister = yes
-		remove_ideas = SPR_idea_prime_minister_alvaro
+		remove_ideas = SPR_idea_prime_minister_sanchez
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = sanchez_leaves_office
-		clr_global_flag = prieto_leaves_office
-		clr_global_flag = currently_incumbent
-		set_global_flag = conservative_prime_minister
 	}
 }
 
@@ -1071,14 +1054,14 @@ country_event = {
 	mean_time_to_happen = {	days = 25 }
 	trigger = {
 		original_tag = SPR
-		has_completed_focus = SPR_three_headed_crisis
 	}
 	
 	option = {
 		name = ww1_spain.7.a
 		add_stability = -0.1
 		ai_chance = { factor = 10 }
-		set_global_flag = juntas_operate
+		set_global_flag = SPR_flag_juntas_operate
+		complete_national_focus = SPR_military_juntas_operate_illegally
 	}
 }
 
@@ -1092,7 +1075,7 @@ country_event = {
 	mean_time_to_happen = {	days = 25 }
 	trigger = {
 		original_tag = SPR
-		has_completed_focus = SPR_military_juntas_operate_illegally
+		has_global_flag = SPR_flag_juntas_operate
 	}
 	
 	option = {
@@ -1128,6 +1111,7 @@ country_event = {
 		add_stability = -0.1
 		ai_chance = { factor = 10 }
 		set_global_flag = proletariat_strikes
+		complete_national_focus = SPR_proletariat_strikes
 	}
 }
 
@@ -1169,7 +1153,6 @@ country_event = {
 	mean_time_to_happen = {	days = 25 }
 	trigger = {
 		original_tag = SPR
-		has_completed_focus = SPR_three_headed_crisis
 		date > 1914.1.1
 	}
 	
@@ -1180,6 +1163,29 @@ country_event = {
 		set_global_flag = catalonia_rises
 	}
 }
+
+#Catalan Bourgeoisie considers regional autonomy
+country_event = {
+	id = ww1_spain.1
+	title = ww1_spain.10.t
+	desc = ww1_spain.10.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 20 }
+	trigger = {
+		original_tag = SPR
+		has_global_flag = catalonia_rises
+		date > 1916.1.1
+	}
+	
+	option = {
+		name = ww1_spain.10.a
+		ai_chance = { factor = 10 }
+		set_global_flag = catalonia_was_refused
+		complete_national_focus = SPR_proletariat_strikes
+	}
+}
+
 #Catalan Bourgeoisie demand a convention with the government
 country_event = {
 	id = ww1_spain.9
@@ -1187,11 +1193,12 @@ country_event = {
 	desc = ww1_spain.9.d
 	picture = GFX_event_prime_minister_jose_killed
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 120 }
+	mean_time_to_happen = {	days = 100 }
 	trigger = {
 		original_tag = SPR
 		has_completed_focus = SPR_catalonia_demands_regional_autonomy
-		date > 1917.1.1
+		has_global_flag = catalonia_rises
+		date > 1916.3.1
 	}
 	
 	option = {
@@ -1200,10 +1207,9 @@ country_event = {
 		set_global_flag = catalonia_was_refused
 	}
 	option = {
-		name = ww1_spain.10.a
+		name = ww1_spain.9.b
 		ai_chance = { factor = 1 }
 		set_global_flag = catalonia_was_accepted
-		#make new nation/puppet of spain
 	}
 }
 
@@ -1217,9 +1223,9 @@ country_event = {
 	mean_time_to_happen = {	days = 25 }
 	trigger = {
 		original_tag = SPR
-		has_global_flag = catalonia_was_denied
+		has_global_flag = catalonia_was_refused
 		has_completed_focus = SPR_catalonia_demands_regional_autonomy
-		date > 1917.4.1
+		date > 1916.3.1
 	}
 	
 	option = {
@@ -1251,7 +1257,7 @@ country_event = {
 		original_tag = SPR
 		has_global_flag = catalonia_was_accepted
 		has_completed_focus = SPR_catalonia_demands_regional_autonomy
-		date > 1917.4.1
+		date > 1916.3.1
 	}
 	
 	option = {
@@ -1949,4 +1955,76 @@ country_event = {
 	
 }
 
-# set_global_flag = SPR_flag_juntas_operate
+# 1912 General Election
+country_event = {
+	id = ww1_spain.103
+	title = ww1_spain.103.t
+	desc = ww1_spain.103.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.103.a # Liberal
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_liberal_majority
+	}
+	
+	option = {
+		name = ww1_spain.103.b # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+	}
+	
+}
+
+# 1914 General Election
+country_event = {
+	id = ww1_spain.104
+	title = ww1_spain.104.t
+	desc = ww1_spain.104.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.104.a  # Liberal
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_liberal_majority
+	}
+	
+	option = {
+		name = ww1_spain.104.b  # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+	}
+	
+}
+
+# 1916 General Election
+country_event = {
+	id = ww1_spain.105
+	title = ww1_spain.105.t
+	desc = ww1_spain.105.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.105.a # Liberal
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_liberal_majority
+	}
+	
+	option = {
+		name = ww1_spain.105.b  # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+	}
+}
