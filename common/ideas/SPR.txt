@@ -73,6 +73,181 @@ ideas = {
 				has_character = SPR_alfonso_xiii
 			}
 		}
+		SPR_idea_money_from_sold_colonies1 = {
+			picture = chi_hyper_inflation
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.02
+				consumer_goods_factor = -0.015
+				production_factory_efficiency_gain_factor = 0.015
+				production_factory_max_efficiency_factor = 0.015
+				production_speed_buildings_factor = 0.015
+			}
+		}
+		SPR_idea_more_money_from_sold_colonies2 = {
+			picture = chi_hyper_inflation2
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.03
+				consumer_goods_factor = -0.03
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		SPR_idea_lots_more_money_from_sold_colonies3 = {
+			picture = chi_hyper_inflation3
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.04
+				production_factory_efficiency_gain_factor = 0.035
+				production_factory_max_efficiency_factor = 0.035
+				production_speed_buildings_factor = 0.04
+			}
+		}
+		SPR_idea_gorging_money_from_sold_colonies4 = {
+			picture = chi_hyper_inflation3
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.075
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SPR_idea_reaping_money_from_sold_colonies5 = {
+			picture = chi_hyper_inflation4
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.07
+				consumer_goods_factor = -0.07
+				production_factory_efficiency_gain_factor = 0.06
+				production_factory_max_efficiency_factor = 0.06
+				production_speed_buildings_factor = 0.07
+			}
+		}
+		SPR_idea_massive_money_from_sold_colonies6 = {
+			picture = chi_hyper_inflation5
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.075
+				production_factory_max_efficiency_factor = 0.075
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SPR_idea_huge_money_from_sold_colonies7 = {
+			picture = tur_balkan_central_bank_wealthy_greece
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.125
+				consumer_goods_factor = -0.125
+				production_factory_efficiency_gain_factor = 0.08
+				production_factory_max_efficiency_factor = 0.08
+				production_speed_buildings_factor = 0.125
+			}
+		}
 		SPR_idea_prime_minister_jose = {
 			picture = prime_minister_jose
 			allowed = {
@@ -92,6 +267,7 @@ ideas = {
 				political_power_factor = 0.05
 			}
 		}
+		
 		SPR_idea_prime_minister_alvaro = {
 			picture = alvaro_de_figueroa
 			allowed = {
@@ -112,6 +288,7 @@ ideas = {
 				political_power_factor = 0.05
 			}
 		}
+		
 		SPR_idea_prime_minister_dato = {
 			picture = prime_minister_dato
 			allowed = {
@@ -132,6 +309,7 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
+		
 		SPR_idea_prime_minister_prieto = {
 			picture = prime_minister_prieto
 			allowed = {
@@ -152,6 +330,7 @@ ideas = {
 				political_power_factor = 0.05
 			}
 		}
+		
 		SPR_idea_prime_minister_maura = {
 			picture = prime_minister_maura
 			allowed = {
@@ -171,6 +350,7 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
+		
 		SPR_idea_prime_minister_manuel = {
 			picture = prime_minister_manuel
 			allowed = {
@@ -190,6 +370,7 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
+		
 		SPR_idea_prime_minister_sanchez = {
 			picture = prime_minister_sanchez
 			allowed = {
@@ -209,6 +390,7 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
+		
 		SPR_idea_catholic_nation = {
 			picture = MEX_church_power_5
 			allowed = {
@@ -221,10 +403,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-					stability_factor = 0.1
-					research_speed_factor = -0.1
-				}
+				stability_factor = 0.1
+				research_speed_factor = -0.1
+			}
 		}
+		
 		SPR_idea_strong_catholicism = {
 			picture = MEX_church_power_5
 			allowed = {
@@ -234,12 +417,19 @@ ideas = {
 				NOT = {
 					has_government = communism
 				}
+				NOT = {
+					has_idea = SPR_idea_mild_catholicism
+					has_idea = SPR_idea_secular_state
+					has_idea = SPR_idea_freedom_of_religion
+					has_idea = SPR_idea_weak_catholicism
+					has_government = communism
+				}
 			}
 			removal_cost = -1
 			modifier = {
-					stability_factor = 0.05
-					research_speed_factor = -0.05
-				}
+				stability_factor = 0.1
+				research_speed_factor = -0.1
+			}
 		}
 		SPR_idea_mild_catholicism = {
 			picture = MEX_church_power_5
@@ -249,14 +439,19 @@ ideas = {
 				available = {
 					NOT = {
 						has_idea = SPR_idea_strong_catholicism
+						has_idea = SPR_idea_secular_state
+						has_idea = SPR_idea_freedom_of_religion
+						has_idea = SPR_idea_weak_catholicism
 						has_government = communism
 					}
 				}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = 0.05
+				stability_factor = 0.05
+				research_speed_factor = -0.05
 			}
 		}
+		
 		SPR_idea_weak_catholicism = {
 			picture = MEX_church_power_5
 				allowed = {
@@ -266,6 +461,28 @@ ideas = {
 					NOT = {
 						has_idea = SPR_idea_strong_catholicism
 						has_idea = SPR_idea_mild_catholicism
+						has_idea = SPR_idea_secular_state
+						has_idea = SPR_idea_freedom_of_religion
+						has_government = communism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		
+		SPR_idea_freedom_of_religion = {
+			picture = generic_democratic_drift_bonus
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_catholicism
+						has_idea = SPR_idea_mild_catholicism
+						has_idea = SPR_idea_weak_catholicism
+						has_idea = SPR_idea_secular_state
 						has_government = communism
 					}
 				}
@@ -275,6 +492,44 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+		
+		SPR_idea_secular_state = {
+			picture = generic_democratic_drift_bonus
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_catholicism
+						has_idea = SPR_idea_mild_catholicism
+						has_idea = SPR_idea_weak_catholicism
+						has_idea = SPR_idea_freedom_of_religion
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				IF = {
+					limit = { 
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+					}
+					research_speed_factor = -0.05
+				}
+				IF = {
+					limit = { 
+						OR = {
+							has_government = neutrality
+							has_government = democratic
+						}
+					}
+				}
+				research_speed_factor = 0.1
+			}
+		}
+		
 		SPR_idea_movements_for_regional_autonomy = {
 		picture = regional_autonomy_movements
 			allowed = {
@@ -290,21 +545,18 @@ ideas = {
 				stability_weekly = -0.002
 			}
 		}
+		
 		SPR_idea_protests_for_regional_autonomy = {
 		picture = regional_autonomy_movements
 			allowed = {
 				original_tag = SPR
 			}
-			available = {
-				NOT = {
-					has_government = fascism
-				}
-			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly = =0.001
+				stability_weekly = -0.001
 			}
 		}
+		
 		SPR_idea_time_to_turn_around = {
 		picture = generic_monarchist_uprising
 			allowed = {
@@ -323,7 +575,7 @@ ideas = {
 			}
 		}
 		SPR_idea_espana_in_commision = {
-		picture = generic_monarchist_uprising
+		picture = SOV_sevastopol_marine_plant
 			allowed = {
 				original_tag = SPR
 			}
@@ -341,7 +593,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.5
+				consumer_goods_factor = 0.15
 			}
 		}
 		SPR_idea_developing_the_nation = {
@@ -496,6 +748,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
+		
 		SPR_idea_risk_of_governmental_collapse = {
 		picture = saf_history_of_segregation_2
 			allowed = {

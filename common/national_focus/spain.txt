@@ -100,7 +100,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_declare_a_republic
-		has_idea = SPR_idea_prime_minister_jose
 		ai_will_do = {
 			factor = 100
 		}
@@ -109,6 +108,7 @@ focus_tree = {
 			focus = SPR_parliamentary_landslide
 		}
 		available = {
+			has_idea = SPR_idea_prime_minister_jose
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -145,8 +145,8 @@ focus_tree = {
 		completion_reward = {
 			SPR = {
 				swap_ideas = {
-				remove_idea = SPR_idea_movements_for_regional_autonomy
-				add_idea = SPR_idea_protests_for_regional_autonomy
+					remove_idea = SPR_idea_movements_for_regional_autonomy
+					add_idea = SPR_idea_protests_for_regional_autonomy
 				}
 			}
 		}
@@ -170,15 +170,37 @@ focus_tree = {
 			is_subject = no
 		}
 		completion_reward = {
-			SPR = {
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
-				remove_idea = SPR_idea_strong_catholicism
-				add_idea = SPR_idea_mild_catholicism
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
 				}
 			}
-
-			
-			
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_freedom_of_religion
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_catholic_nation }
+				remove_ideas = SPR_idea_catholic_nation
+				add_ideas = SPR_idea_strong_catholicism
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
+			}
 		}
 	}
 	focus = {
@@ -276,13 +298,30 @@ focus_tree = {
 					remove_idea = SPR_idea_strong_catholicism
 					add_idea = SPR_idea_mild_catholicism
 				}
-			}	
+			}
 			IF = {
 				limit = { has_idea = SPR_idea_mild_catholicism }
 				swap_ideas = {
 					remove_idea = SPR_idea_mild_catholicism
 					add_idea = SPR_idea_weak_catholicism
 				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_freedom_of_religion
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_catholic_nation }
+				remove_ideas = SPR_idea_catholic_nation
+				add_ideas = SPR_idea_strong_catholicism
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
 			}
 			add_political_power = 25	
 		}
@@ -395,6 +434,7 @@ focus_tree = {
 			SPR = {
 				add_political_power = 15
 			}	
+			scripted_effect_two_party_shenanigans = yes
 		}
 	}
 	focus = {
@@ -733,7 +773,10 @@ focus_tree = {
 			focus = SPR_develop_the_urban_centers
 		}
 		completion_reward = {
-			add_ideas = SPR_idea_diverting_our_economy
+			add_timed_idea = { 
+				idea = SPR_idea_diverting_our_economy 
+				days = 90
+			}
 			171 = {
 				add_building_construction = {
 					type = arms_factory
@@ -757,7 +800,7 @@ focus_tree = {
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
-			}	
+			}
 		}
 	}
 	focus = {
@@ -778,7 +821,10 @@ focus_tree = {
 			focus = SPR_industrialize_the_poorer_regions
 		}
 		completion_reward = {
-			add_ideas = SPR_diverting_our_economy
+			add_timed_idea = { 
+				idea = SPR_idea_diverting_our_economy 
+				days = 90
+			}
 			add_stability = 0.05
 			41 = {
 				add_building_construction = {
@@ -1230,15 +1276,7 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			247 = {
-				add_resistance = -10
-				add_compliance = 5
-			}
 			699 = {
-				add_resistance = -10
-				add_compliance = 5
-			}
-			178 = {
 				add_resistance = -10
 				add_compliance = 5
 			}
@@ -1429,7 +1467,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_global_flag = new_conservative_spanish_prime_minister_in_office
+			has_completed_focus = SPR_found_the_university_of_Murcia
 		}
 		prerequisite {
 			focus = SPR_conservative_majority
@@ -1476,7 +1514,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
 		prerequisite {
 			focus = SPR_reform_the_bank_of_spain
@@ -1505,7 +1542,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
 		prerequisite {
 			focus = SPR_reform_the_bank_of_spain
@@ -1534,7 +1570,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
 		prerequisite {
 			focus = SPR_balance_king_and_prime_minister
@@ -1543,6 +1578,7 @@ focus_tree = {
 			focus = SPR_shorter_workday_legislation
 		}
 		completion_reward = {
+			set_global_flag = longlasting_policies
 			IF = { 
 				limit = { has_global_flag = conservative_majority }
 				add_political_power = 100
@@ -1710,38 +1746,53 @@ focus_tree = {
 			focus = SPR_centralization
 		}
 		prerequisite {
-			focus = SPR_forcefully_weaken_the_caudillos
+			focus = SPR_extensive_traditionalism_reforms
 		}
 		completion_reward = {
-			IF = {
-				limit = { has_idea = SPR_idea_mild_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_mild_catholicism
-					add_idea = SPR_idea_strong_catholicism
-				}
-			}
 			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
 					remove_idea = SPR_idea_strong_catholicism
 					add_idea = SPR_idea_catholic_nation
 				}
-			}	
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_catholic_nation
+				}
+			}
 			IF = {
 				limit = { has_idea = SPR_idea_weak_catholicism }
 				swap_ideas = {
 					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_strong_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion}
+				swap_ideas = {
+					remove_idea = SPR_idea_freedom_of_religion
 					add_idea = SPR_idea_mild_catholicism
 				}
 			}
+			IF = {
+				limit = { has_idea = SPR_idea_secular_state }
+				swap_ideas = {
+					remove_idea = SPR_idea_secular_state
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+
 		}
 	}
 	focus = {
 		id = SPR_extensive_traditionalism_reforms
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 5 #days
-		x = -2
-		y = 11
+		x = -3
+		y = 9
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -1824,8 +1875,8 @@ focus_tree = {
 		id = SPR_forcefully_weaken_the_caudillos
 		icon = GFX_focus_generic_manpower
 		cost = 5 #days
-		x = -3
-		y = 9
+		x = -2
+		y = 11
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -1869,8 +1920,8 @@ focus_tree = {
 		id = SPR_lower_public_opinion_of_the_caudillos
 		icon = GFX_goal_generic_propaganda
 		cost = 5 #days
-		x = 3
-		y = 9
+		x = 2
+		y = 11
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -1926,7 +1977,7 @@ focus_tree = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite {
-			focus = SPR_lower_public_opinion_of_the_caudillos
+			focus = SPR_extensive_legislative_reforms
 		}
 		prerequisite {
 			focus = SPR_religous_freedom
@@ -2126,8 +2177,8 @@ focus_tree = {
 		id = SPR_extensive_legislative_reforms
 		icon = GFX_focus_mex_privatisation
 		cost = 5 #days
-		x = 2
-		y = 11
+		x = 3
+		y = 9
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2135,7 +2186,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_global_flag = new_conservative_spanish_prime_minister_in_office
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite {
 			focus = SPR_conservative_majority
@@ -2155,7 +2206,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_religous_freedom #These will all be removed when the conservatives come into power
+		id = SPR_religous_freedom
 		icon = GFX_focus_destroy_parliament
 		cost = 5 #days
 		x = 5
@@ -2193,11 +2244,17 @@ focus_tree = {
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_mild_catholicism }
-				remove_ideas = SPR_idea_mild_catholicism
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_freedom_of_religion
+				}
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_weak_catholicism }
-				remove_ideas = SPR_idea_weak_catholicism
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_secular_state
+				}
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_catholic_nation }
@@ -2446,6 +2503,7 @@ focus_tree = {
 			focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
+			custom_effect_tooltip = SPR_defeat_in_TGW.tt
 			set_global_flag = looming_deadline
 		}
 	}
@@ -2470,8 +2528,8 @@ focus_tree = {
 			}
 		}
 		prerequisite {
-			focus = SPR_extensive_traditionalism_reforms
-			focus = SPR_extensive_legislative_reforms
+			focus = SPR_forcefully_weaken_the_caudillos
+			focus = SPR_lower_public_opinion_of_the_caudillos
 			focus = SPR_push_for_more_catholicism
 			focus = SPR_seperation_of_powers
 		}
@@ -2530,6 +2588,7 @@ focus_tree = {
 			focus = SPR_military_juntas_operate_illegally
 		}
 		completion_reward = {
+			set_global_flag = SPR_flag_failure_in_three_headed_crisis
 			add_stability = 0.05
 			add_popularity = {
 				ideology = fascism
@@ -2642,6 +2701,7 @@ focus_tree = {
 			focus = SPR_proletariat_strikes
 		}
 		completion_reward = {
+			set_global_flag = SPR_flag_failure_in_three_headed_crisis
 			add_popularity = {
 				ideology = communism
 				popularity = -0.05	
@@ -2804,6 +2864,7 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
+			set_global_flag = SPR_flag_failure_in_three_headed_crisis
 			add_ideas = { SPR_idea_autonomous_catalonia }
 			add_political_power = -75
 			add_popularity = {
@@ -2841,6 +2902,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = SPR_flag_juntas_crush_catalonia
 		}
 		prerequisite = {
 			focus = SPR_relegalize_the_juntas
@@ -2868,11 +2930,14 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = SPR_flag_failure_in_three_headed_crisis
 		}
 		prerequisite {
 			focus = SPR_send_in_the_military
 			focus = SPR_forcefully_dissolve_the_assembly
 			focus = SPR_arrest_signatories_of_the_manifesto
+			focus = SPR_allow_minor_regional_autonomy
+			focus = SPR_relegalize_the_juntas
 		}
 		completion_reward = {
 			add_political_power = -125
