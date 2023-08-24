@@ -1066,6 +1066,11 @@ focus_tree = {
 			GER = {
 				has_tech = artillery1
 			}
+			SPR = {
+				NOT = {
+					has_war_with = GER
+				}
+			}
 		}
 		prerequisite = {
 			focus = SPR_research_and_development
@@ -1101,6 +1106,11 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 			FRA = {
 				has_tech = artillery1
+			}
+			SPR = {
+				NOT = {
+					has_war_with = FRA
+				}
 			}
 		}
 		prerequisite = {
@@ -1138,6 +1148,11 @@ focus_tree = {
 			FRA = {
 				has_tech = support_weapons3
 			}
+			SPR = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
 		}
 		prerequisite = {
 			focus = SPR_krupp_manufacturer
@@ -1174,6 +1189,11 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 			ENG = {
 				has_tech = support_weapons3
+			}
+			SPR = {
+				NOT = {
+					has_war_with = ENG
+				}
 			}
 		}
 		prerequisite = {
@@ -3118,6 +3138,11 @@ focus_tree = {
 						has_global_flag = spain_failed_negotiations
 					}
 				}
+				SPR = {
+					697 = {
+						add_compliance = 100
+					}
+				}
 			}
 			IF = { 
 				limit = { 
@@ -3134,7 +3159,9 @@ focus_tree = {
 					has_completed_focus = SPR_our_colonial_empire
 				}
 				SPR = {
-					add_state_core = 737
+					737 = {
+						add_compliance = 100
+					}
 				}
 			}
 			IF = { 
@@ -3143,7 +3170,9 @@ focus_tree = {
 					has_completed_focus = SPR_our_colonial_empire
 				}
 				SPR = {
-					add_state_core = 539
+					539 = {
+						add_compliance = 100
+					}
 				}
 			}
 		}
