@@ -4,6 +4,7 @@ set_research_slots = 3
 set_stability = 0.52
 set_convoys = 150
 set_global_flag = conservative_majority
+set_global_flag = new_liberal_spanish_prime_minister_in_office
 
 set_country_flag = Scramble_for_Africa
 

@@ -19,4 +19,8 @@ spriteTypes = {
 		name = "GFX_focus_conform_to_maura"
 		texturefile = "gfx/interface/goals/focus_conform_to_maura.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_spr_mission_to_the_soviet_union"
+		texturefile = "gfx/interface/goals/focus_spr_mission_to_the_soviet_union.dds"
+	}
 }

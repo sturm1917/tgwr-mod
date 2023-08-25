@@ -434,7 +434,6 @@ focus_tree = {
 			SPR = {
 				add_political_power = 15
 			}	
-			scripted_effect_two_party_shenanigans = yes
 		}
 	}
 	focus = {
@@ -457,6 +456,7 @@ focus_tree = {
 			SPR = {
 				add_stability = -0.10
 			}	
+			scripted_effect_two_party_shenanigans = yes
 		}
 	}
 	focus = {
@@ -1615,8 +1615,8 @@ focus_tree = {
 		id = SPR_profit_off_the_war
 		icon = GFX_focus_SWI_issue_war_bonds
 		cost = 5 #days
-		x = 12
-		y = 11
+		x = 13
+		y = 9
 		relative_position_id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_lean_entente }
 		ai_will_do = {
@@ -2164,7 +2164,8 @@ focus_tree = {
 		id = SPR_become_the_social_liberals
 		icon = GFX_focus_spr_war_of_independence
 		cost = 5 #days
-		x = 7
+		mutually_exclusive = { focus = SPR_convene_the_catalonian_parliament }
+		x = 8
 		y = 13
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -2191,6 +2192,187 @@ focus_tree = {
 				add_political_power = 25
 				add_stability = -0.05
 			}
+		}
+	}
+	focus = {
+		id = SPR_convene_the_catalonian_parliament
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 10
+		y = 13
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_offer_more_seats_to_rural_areas
+		}
+		prerequisite {
+			focus = SPR_reform_el_turno
+		}
+		completion_reward = {
+			complete_national_focus = SPR_catalonia_demands_regional_autonomy
+			complete_national_focus = SPR_allow_minor_regional_autonomy
+		}
+	}
+	focus = {
+		id = SPR_crush_the_juntas_de_defensa_movement
+		icon = GFX_focus_generic_manpower
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 11
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_convene_the_catalonian_parliament
+		}
+		completion_reward = {
+			complete_national_focus = SPR_military_juntas_operate_illegally
+			complete_national_focus = SPR_send_in_the_military
+		}
+	}
+	focus = {
+		id = SPR_government_takeover
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 13
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_crush_the_juntas_de_defensa_movement
+		}
+		completion_reward = {
+			complete_national_focus = SPR_proletariat_strikes
+			complete_national_focus = SPR_adopt_furthur_social_reform
+			complete_national_focus = SPR_outlaw_pistolerismo
+		}
+	}
+	focus = {
+		id = SPR_planned_economy
+		icon = GFX_focus_SOV_the_last_purge
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 14
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_government_takeover
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SPR_anarchism_society
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 16
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_government_takeover
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SPR_no_ethnic_leadership
+		icon = GFX_focus_SOV_support_spanish_poum
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 15
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_anarchism_society
+		}
+		prerequisite {
+			focus = SPR_planned_economy
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SPR_worlds_first_anarchy
+		icon = GFX_focus_soviet_congress
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 16
+		y = 18
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_no_ethnic_leadership
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SPR_alliance_with_the_ussr
+		icon = GFX_focus_spr_mission_to_the_soviet_union
+		cost = 5 #days
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
+		x = 17
+		y = 20
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = catalonia_rises
+		}
+		prerequisite {
+			focus = SPR_worlds_first_anarchy
+		}
+		completion_reward = {
 		}
 	}
 	focus = {
@@ -2494,6 +2676,30 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			OR = {
+				is_in_faction_with = GER
+				is_in_faction_with = FRA
+			}
+			IF = {
+				limit = { 
+					AND = {
+						SPR = {
+							is_in_faction_with = FRA
+						}
+						has_global_flag = france_accepts_GER_capitulation
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					AND = {
+						SPR = {
+							is_in_faction_with = GER
+						}
+						has_global_flag = germany_accepts_FRA_capitulation
+					}
+				}
+			}
 		}
 		prerequisite {
 			focus = SPR_the_three_great_colonizers
@@ -2517,6 +2723,30 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			OR = {
+				is_in_faction_with = GER
+				is_in_faction_with = FRA
+			}
+			IF = {
+				limit = { 
+					AND = {
+						SPR = {
+							is_in_faction_with = GER 
+						}
+						has_global_flag = france_accepts_GER_capitulation
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					AND = {
+						SPR = {
+							is_in_faction_with = FRA
+						}
+						has_global_flag = germany_accepts_FRA_capitulation
+					}
+				}
+			}
 		}
 		prerequisite {
 			focus = SPR_the_three_great_colonizers

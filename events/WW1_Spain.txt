@@ -1231,12 +1231,21 @@ country_event = {
 	option = {
 		name = ww1_spain.109.a
 		ai_chance = { factor = 10 }
-		set_global_flag = catalonia_was_refused
+		SPR = {
+			country_event = {
+				id = ww1_spain.11
+			}
+		}
 	}
+	
 	option = {
 		name = ww1_spain.109.b
 		ai_chance = { factor = 1 }
-		set_global_flag = catalonia_was_accepted
+		SPR = {
+			country_event = {
+				id = ww1_spain.14
+			}
+		}
 	}
 }
 
