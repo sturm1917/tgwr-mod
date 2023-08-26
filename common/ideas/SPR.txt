@@ -762,5 +762,18 @@ ideas = {
 				fascism_drift = 0.05
 			}
 		}
+		
+		SPR_idea_encircle_the_french = {
+		picture = saf_history_of_segregation_2
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				army_breakthrough_against_major_factor = 0.05
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
 	}
 }

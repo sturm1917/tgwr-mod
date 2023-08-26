@@ -3179,7 +3179,7 @@ focus_tree = {
 		icon = GFX_focus_generic_conspiracy
 		cost = 5 #days
 		x = 0
-		y = 17
+		y = 18
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -3207,7 +3207,7 @@ focus_tree = {
 		icon = GFX_focus_generic_population_growth
 		cost = 5 #days
 		x = 2
-		y = 17
+		y = 18
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -3231,7 +3231,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 5 #days
 		x = 1
-		y = 18
+		y = 19
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -3812,22 +3812,7 @@ focus_tree = {
 			focus = SPR_fuse_with_the_carlists 
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = -75	
 		}
 	}
 	focus = {
@@ -3849,30 +3834,58 @@ focus_tree = {
 			focus = SPR_fuse_with_the_carlists 
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = -0.05
 		}
 	}
 	focus = {
 		id = SPR_negotiate_jaimes_release
 		icon = GFX_focus_convention
 		cost = 10 #days
-		x = 2
+		x = 3
 		y = 5
+		relative_position_id = SPR_focus_on_social_reformation
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = jaime_iii_in_austria
+		}
+		prerequisite {
+			focus = SPR_pick_jaime
+		}
+		completion_reward = {
+			custom_effect_tooltip = release_jaime.tt
+		}
+	}
+	focus = {
+		id = SPR_general_jaime
+		icon = GFX_focus_convention
+		cost = 10 #days
+		x = 0
+		y = 6
+		relative_position_id = SPR_focus_on_social_reformation
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_crush_our_enemies
+		}
+		completion_reward = {
+			custom_effect_tooltip = jaime_becomes_a_general.tt
+		}
+	}
+	focus = {
+		id = SPR_dismantle_the_mellismo
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10 #days
+		x = 2
+		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {
 			factor = 10
@@ -3884,59 +3897,14 @@ focus_tree = {
 		prerequisite {
 			focus = SPR_pick_jaime
 		}
-		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
-		}
-	}
-	focus = {
-		id = SPR_dismantle_the_mellismo
-		icon = GFX_focus_generic_monarchy_1
-		cost = 10 #days
-		x = 1
-		y = 6
-		relative_position_id = SPR_focus_on_social_reformation
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-		}
 		prerequisite {
-			focus = SPR_negotiate_jaimes_release
+			focus = SPR_crush_our_enemies
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
 		}
 	}
 	focus = {
@@ -3961,8 +3929,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_legitimize_his_rule
-		icon = GFX_goal_generic_small_arms
+		id = SPR_crush_our_enemies
+		icon = GFX_focus_TUR_reform_the_balkan_pact
 		cost = 10 #days
 		x = 0
 		y = 5
@@ -3975,29 +3943,40 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite {
-			focus = SPR_side_with_carlos
-			focus = SPR_pick_jaime
-		}
-		prerequisite {
 			focus = SPR_fuse_with_the_carlists
 		}
+		prerequisite {
+			focus = SPR_pick_jaime
+			focus = SPR_side_with_carlos
+		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = -0.05
+			custom_effect_tooltip = spanish_civil_war.tt
+		}
+	}
+	focus = {
+		id = SPR_legitimize_his_rule
+		icon = GFX_goal_generic_small_arms
+		cost = 10 #days
+		x = -1
+		y = 7
+		relative_position_id = SPR_focus_on_social_reformation
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite {
+			focus = SPR_crush_our_enemies
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -4018,25 +3997,17 @@ focus_tree = {
 			focus = SPR_side_with_carlos
 		}
 		prerequisite {
-			focus = SPR_legitimize_his_rule
+			focus = SPR_crush_our_enemies
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -4057,22 +4028,7 @@ focus_tree = {
 			focus = SPR_side_with_carlos
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_state_claim = 31
 		}
 	}
 	focus = {
@@ -4096,22 +4052,12 @@ focus_tree = {
 			focus = SPR_secure_spanish_claims_in_france
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			GER = {
+				country_event = {
+					id = ww1_spain.115
+					days = 5
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			}
 		}
 	}
 	focus = {
@@ -4132,22 +4078,7 @@ focus_tree = {
 			focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_ideas = SPR_idea_encircle_the_french
 		}
 	}
 }

@@ -1602,6 +1602,63 @@ country_event = {
 	}
 }
 
+#Spain tries to join the CP
+country_event = {
+	id = ww1_spain.115
+	title = ww1_spain.115.t
+	desc = ww1_spain.115.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.115.a # yes
+		SPR = {
+			country_event = {
+				id = ww1_spain.116
+				days = 5
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = ww1_spain.115.b # no
+		SPR = {
+			country_event = {
+				id = ww1_spain.117
+				days = 5
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Spain accepted into CP
+country_event = {
+	id = ww1_spain.116
+	title = ww1_spain.116.t
+	desc = ww1_spain.116.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.116.a
+		GER = { add_to_faction = SPR }
+	}
+}
+
+#Spain refused into CP
+country_event = {
+	id = ww1_spain.117
+	title = ww1_spain.117.t
+	desc = ww1_spain.117.d
+	picture = GFX_event_prime_minister_jose_killed
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.117.a
+	}
+}
+
 #Spain tries to join the Entente
 country_event = {
 	id = ww1_spain.84
