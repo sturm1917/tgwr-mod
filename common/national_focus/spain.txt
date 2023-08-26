@@ -115,8 +115,8 @@ focus_tree = {
 		completion_reward = {
 			SPR = {
 				add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
+					ideology = neutrality
+					popularity = 0.05
 				}
 			}
 		}
@@ -149,6 +149,7 @@ focus_tree = {
 					add_idea = SPR_idea_protests_for_regional_autonomy
 				}
 			}
+			add_political_power = -50
 		}
 	}
 	focus = {
@@ -170,6 +171,7 @@ focus_tree = {
 			is_subject = no
 		}
 		completion_reward = {
+			add_political_power = -50
 			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
@@ -231,7 +233,7 @@ focus_tree = {
 					ideology = democratic
 					popularity = 0.05
 				}
-				add_political_power = 100	
+				add_political_power = -25	
 			}	
 		}
 	}
@@ -261,7 +263,7 @@ focus_tree = {
 					ideology = neutrality
 					popularity = 0.05
 				}
-				add_political_power = -50	
+				add_political_power = 50	
 				add_ideas = {
 					SPR_idea_time_to_turn_around
 				}
@@ -292,6 +294,7 @@ focus_tree = {
 			NOT = { has_completed_focus = SPR_push_for_more_catholicism }
 		}
 		completion_reward = {
+			add_political_power = -25
 			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
@@ -509,6 +512,7 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
+			add_political_power = -75
 			41 = {
 				add_building_construction = {
 				type = industrial_complex
@@ -544,6 +548,8 @@ focus_tree = {
 			focus = SPR_develop_the_nation
 		}
 		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -25
 			171 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -594,6 +600,7 @@ focus_tree = {
 			focus = SPR_develop_the_nation
 		}
 		completion_reward = {
+			add_stability = 0.03
 			custom_effect_tooltip = SPR_poor_regions_tt
 			every_owned_state = {
 				limit = { infastructure < 3 }
@@ -1496,7 +1503,7 @@ focus_tree = {
 		completion_reward = {
 			IF = { 
 				limit = { has_global_flag = conservative_majority }
-				add_political_power = 25
+				add_political_power = -25
 				add_stability = -0.05
 				41 = {
 					add_building_construction = {
@@ -3500,6 +3507,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_in_dev1.tt
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = -0.05
 		}
 	}
 	focus = {
@@ -3542,22 +3554,7 @@ focus_tree = {
 			focus = SPR_side_with_maurists
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = -75
 		}
 	}
 	focus = {
@@ -3584,26 +3581,14 @@ focus_tree = {
 			focus = SPR_modernization_program
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			custom_effect_tooltip = SPR_no_more_el_turno.tt
+			set_global_flag = SPR_flag_no_more_el_turno
+			add_political_power = -175
+			add_stability = -0.03
 		}
 	}
 	focus = {
-		id = SPR_ally_the_carlists
+		id = SPR_ally_the_carlists #add decision to get jaime III
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		cost = 10 #days
 		x = 2
@@ -3620,22 +3605,14 @@ focus_tree = {
 			focus = SPR_abolish_el_turno
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}			
 		}
 	}
 	focus = {
@@ -3656,22 +3633,8 @@ focus_tree = {
 			focus = SPR_focus_on_social_reformation
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = 35
+			add_stability = 0.03
 		}
 	}
 	focus = {
@@ -3692,21 +3655,40 @@ focus_tree = {
 			focus = SPR_focus_on_social_reformation
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_catholic_nation
 				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_strong_catholicism
 				}
-				add_extra_state_shared_building_slots = 1
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion}
+				swap_ideas = {
+					remove_idea = SPR_idea_freedom_of_religion
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_secular_state }
+				swap_ideas = {
+					remove_idea = SPR_idea_secular_state
+					add_idea = SPR_idea_freedom_of_religion
+				}
 			}	
 		}
 	}
@@ -3731,22 +3713,10 @@ focus_tree = {
 			focus = SPR_reformed_catholics
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -3763,27 +3733,15 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			NOT = {
+				has_completed_focus = SPR_abolish_el_turno
+			}
 		}
 		prerequisite {
 			focus = SPR_unite_the_maurists
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			custom_effect_tooltip = SPR_maura_in_el_turno.tt
 		}
 	}
 	focus = {
@@ -3807,22 +3765,7 @@ focus_tree = {
 			focus = SPR_replace_the_conservatives
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_political_power = 25
 		}
 	}
 	focus = {
@@ -3847,22 +3790,7 @@ focus_tree = {
 			focus = SPR_unite_the_maurists
 		}
 		completion_reward = {
-			172 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
-			165 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}	
+			add_stability = 0.05
 		}
 	}
 	focus = {

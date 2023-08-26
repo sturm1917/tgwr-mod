@@ -223,6 +223,7 @@
  SPR_offer_more_seats_to_rural_areas:0 "Increase Rural Parliamentary Seats"
  SPR_become_the_social_liberals:0 "Become the Liberals"
  SPR_victory_in_TGW.tt:0 "§8Will remove any risk of political collapse§W"
+ SPR_abolish_el_turno_desc:0 "We will finally abolish this horrid system, installing Maura as the new prime minister for the conservatives. This will unite the conservatives by bringing in the Maurists, a split party, back into the conservative block. Unfortunately, given Maura's unpopular position, many will see this is a struggle for power. As long as we secure the backing of more people then the parliament will not be able to stop Maura."
  
  
  #events and ideas and decisions and tooltips
@@ -443,3 +444,4 @@
  ww1_spain.41.a:0 "Alright"
  ww1_spain.42.t:0 "Sanchez leaves office"
  ww1_spain.42.a:0 "Okay"
+ SPR_no_more_el_turno.tt:0 "§8The Back and Fourth between Liberal and Conservatives will be Removed. With Maura as the new prime minister.§W"

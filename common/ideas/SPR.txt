@@ -427,8 +427,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
-				research_speed_factor = -0.1
+				stability_factor = 0.08
+				research_speed_factor = -0.08
 			}
 		}
 		SPR_idea_mild_catholicism = {
