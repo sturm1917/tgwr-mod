@@ -664,7 +664,7 @@ ideas = {
 			}
 		}
 		SPR_idea_head_of_the_bank_of_spain = {
-		picture = neutrality_idea
+		picture = generic_pp_unity_bonus
 			allowed = {
 				original_tag = SPR
 			}
@@ -760,6 +760,17 @@ ideas = {
 				communism_acceptance = 75
 				communism_drift = 0.05
 				fascism_drift = 0.05
+			}
+		}
+		
+		SPR_idea_divided_party = {
+		picture = generic_army_problems
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				civilian_factory_use = 2
 			}
 		}
 		

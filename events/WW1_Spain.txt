@@ -7,11 +7,7 @@ country_event = {
 	desc = ww1_spain.70.d
 	picture = GFX_report_event_usa_heavy_cruiser
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 60 }
-	trigger = {
-		original_tag = SPR
-		has_idea = SPR_idea_espana_in_commision
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.70.a
@@ -37,6 +33,7 @@ country_event = {
 	mean_time_to_happen = {	days = 15 }
 	trigger = {
 		original_tag = SPR
+		has_government = neutrality
 		date > 1910.6.21
 	}
 	
@@ -58,6 +55,7 @@ country_event = {
 	mean_time_to_happen = {	days = 5 }
 	trigger = {
 		original_tag = SPR
+		has_government = neutrality
 		date > 1911.1.1
 	}
 	option = {
@@ -624,6 +622,7 @@ country_event = {
 	mean_time_to_happen = {	days = 5 }
 	trigger = {
 		original_tag = SPR
+		has_government = neutrality
 		date > 1912.10.25
 	}
 	option = {
@@ -670,6 +669,7 @@ country_event = {
 			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
 		set_global_flag = new_liberal_spanish_prime_minister_in_office
+		clr_global_flag = new_conservative_spanish_prime_minister_in_office
 		#allow another PM
 		clr_global_flag = dato_leaves_office
 		clr_global_flag = maura_leaves_office
@@ -740,6 +740,7 @@ country_event = {
 			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
 		set_global_flag = new_conservative_spanish_prime_minister_in_office
+		clr_global_flag = new_liberal_spanish_prime_minister_in_office
 		#allow another PM
 		clr_global_flag = alvaro_leaves_office
 		clr_global_flag = prieto_leaves_office
@@ -807,6 +808,7 @@ country_event = {
 			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
 		set_global_flag = new_liberal_spanish_prime_minister_in_office
+		clr_global_flag = new_conservative_spanish_prime_minister_in_office
 		#allow another PM
 		clr_global_flag = dato_leaves_office
 		clr_global_flag = maura_leaves_office
@@ -877,6 +879,7 @@ country_event = {
 			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
 		set_global_flag = new_conservative_spanish_prime_minister_in_office
+		clr_global_flag = new_liberal_spanish_prime_minister_in_office
 		#allow another PM
 		clr_global_flag = alvaro_leaves_office
 		clr_global_flag = prieto_leaves_office
@@ -909,7 +912,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.35.a
-		set_global_flag = liberal_prime_minister
+		set_global_flag = conservative_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
@@ -944,6 +947,7 @@ country_event = {
 			}
 		}
 		set_global_flag = new_conservative_spanish_prime_minister_in_office
+		clr_global_flag = new_liberal_spanish_prime_minister_in_office
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -985,7 +989,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.38.a
-		set_global_flag = liberal_prime_minister
+		set_global_flag = conservative_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
@@ -1055,6 +1059,7 @@ country_event = {
 			clr_global_flag = new_spanish_prime_minister_in_office #for the new prime minister focuses
 		}
 		set_global_flag = new_conservative_spanish_prime_minister_in_office
+		clr_global_flag = new_liberal_spanish_prime_minister_in_office
 		#allow another PM
 		clr_global_flag = alvaro_leaves_office
 		clr_global_flag = prieto_leaves_office
@@ -1092,7 +1097,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.42.a
-		set_global_flag = liberal_prime_minister
+		set_global_flag = conservative_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
@@ -1112,11 +1117,14 @@ country_event = {
 	desc = ww1_spain.7.d
 	picture = GFX_report_event_generic_rally2
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 25 }
+	mean_time_to_happen = {	days = 15 }
 	trigger = {
 		original_tag = SPR
 		date > 1913.1.1
-		has_completed_focus = SPR_modernization_program
+		OR = {
+			has_completed_focus = SPR_modernization_program
+			has_completed_focus = SPR_abolish_el_turno
+		}
 	}
 	
 	option = {
@@ -1167,7 +1175,10 @@ country_event = {
 	trigger = {
 		original_tag = SPR
 		date > 1913.3.12
-		has_completed_focus = SPR_modernization_program
+		OR = {
+			has_completed_focus = SPR_modernization_program
+			has_completed_focus = SPR_abolish_el_turno
+		}
 	}
 	
 	option = {
@@ -1216,6 +1227,7 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = {	days = 25 }
 	trigger = {
+		has_government = neutrality
 		original_tag = SPR
 		date > 1911.1.1
 	}
@@ -1240,7 +1252,10 @@ country_event = {
 		original_tag = SPR
 		has_global_flag = catalonia_rises
 		date > 1913.7.1
-		has_completed_focus = SPR_modernization_program
+		OR = {
+			has_completed_focus = SPR_modernization_program
+			has_completed_focus = SPR_abolish_el_turno
+		}
 	}
 	
 	option = {
@@ -1263,7 +1278,10 @@ country_event = {
 		has_completed_focus = SPR_catalonia_demands_regional_autonomy
 		has_global_flag = catalonia_rises
 		date > 1913.10.1
-		has_completed_focus = SPR_modernization_program
+		OR = {
+			has_completed_focus = SPR_modernization_program
+			has_completed_focus = SPR_abolish_el_turno
+		}
 	}
 	
 	option = {
@@ -2218,6 +2236,153 @@ country_event = {
 			focus = SPR_liberal_majority
 			uncomplete_children = no
 			refund_political_power = no
+		}
+	}
+}
+
+# Jaime III Put in House Arrest in Austria
+country_event = {
+	id = ww1_spain.121
+	title = ww1_spain.121.t
+	desc = ww1_spain.121.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = { days = 15 }
+	trigger = {
+		date > 1916.1.1
+		NOT = {
+			SPR = {
+				has_completed_focus = SPR_general_jaime
+			}
+		}
+		country_exists = AUH
+	}
+	
+	option = {
+		name = ww1_spain.121.a
+		set_global_flag = jaime_iii_in_austria
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Spain asks Austria for Jaime III
+country_event = {
+	id = ww1_spain.122
+	title = ww1_spain.122.t
+	desc = ww1_spain.122.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # yes
+		name = ww1_spain.122.a
+		SPR = {
+			country_event = {
+				ww1_spain.123
+				days = 5
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = { # no
+		name = ww1_spain.122.b
+		SPR = {
+			country_event = {
+				ww1_spain.124
+				days = 5
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Spain gets Jaime back
+country_event = {
+	id = ww1_spain.123
+	title = ww1_spain.123.t
+	desc = ww1_spain.123.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.123.a
+		ai_chance = { factor = 10 }
+		clr_global_flag = jaime_iii_in_austria
+	}
+}
+
+# Spain is refused Jaime
+country_event = {
+	id = ww1_spain.124
+	title = ww1_spain.124.t
+	desc = ww1_spain.124.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #give up and pick carlos
+		name = ww1_spain.124.a
+		ai_chance = { factor = 10 }
+		uncomplete_national_focus = {
+			focus = SPR_pick_jaime
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		complete_national_focus = SPR_side_with_carlos
+	}
+	
+	option = { #buy him out
+		name = ww1_spain.124.b
+		ai_chance = { factor = 10 }
+		add_political_power = -200
+		add_stability = -0.05
+		clr_global_flag = jaime_iii_in_austria
+		promote_character = {
+			character = SPR_jaime_iii
+		}
+	}
+}
+
+# 4th Carlist War
+country_event = {
+	id = ww1_spain.125
+	title = ww1_spain.125.t
+	desc = ww1_spain.125.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.125.a
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			load_oob = "SPR_civil_war"
+		}
+	}
+}
+
+# End of the 4th Carlist War
+country_event = {
+	id = ww1_spain.126
+	title = ww1_spain.126.t
+	desc = ww1_spain.126.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = { days = 5 }
+	trigger = {
+		SPR = {
+			has_war = no
+			has_completed_focus = SPR_legitimize_his_rule
+		}
+	}
+	option = {
+		name = ww1_spain.126.a
+		ai_chance = { factor = 10 }
+		delete_unit_template_and_units = {
+			division_template = "Carlist Militia"
+			disband = no
 		}
 	}
 }

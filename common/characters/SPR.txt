@@ -649,4 +649,31 @@ characters={
 			}
 		}
 	}
+	SPR_jaime_iii={
+		name="SPR_jaime_iii"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/portrait_spa_jaime_iii.png"
+			}
+			army={
+				large="gfx/leaders/SPR/portrait_spa_jaime_iii.png"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+		}
+	}
+	
+	SPR_alfonso_carlos={
+		name="SPR_alfonso_carlos"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/portrait_spa_infante_alfonso_carlos.png"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+		}
+	}
+	
 }

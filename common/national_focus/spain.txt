@@ -1338,11 +1338,34 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SPR_espana_tooltip
 			set_global_flag = spain_wishes_to_continue_colonies
-			add_ideas = SPR_idea_espana_in_commision
 			add_equipment_to_stockpile = {
 				type = convoy
 				amount = 100
 				producer = SPR
+			}
+
+			set_technology = {
+				early_ship_hull_heavy = 1
+				basic_ship_hull_heavy = 1
+			}
+
+			ENG = {
+				create_equipment_variant = {
+					name = "España"
+					type = ship_hull_heavy_2
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_heavy_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_3
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+						fixed_ship_radar_slot = ship_radar_2
+						fixed_ship_engine_slot = heavy_ship_engine_3
+						fixed_ship_armor_slot = ship_armor_bb_2
+						front_1_custom_slot = ship_heavy_battery_2
+						mid_1_custom_slot = ship_anti_air_3
+						rear_1_custom_slot = ship_heavy_battery_3
+					}
+				}
 			}
 			SPR = {
 				create_equipment_variant = {
@@ -1362,8 +1385,10 @@ focus_tree = {
 					}
 				}
 			}
-			set_technology = {
-				basic_battleship = 1
+			add_ideas = SPR_idea_espana_in_commision
+			country_event = {
+				id = ww1_spain.70
+				days = 60
 			}
 		}
 	}
@@ -2687,24 +2712,18 @@ focus_tree = {
 				is_in_faction_with = GER
 				is_in_faction_with = FRA
 			}
-			IF = {
-				limit = { 
-					AND = {
-						SPR = {
-							is_in_faction_with = FRA
-						}
-						has_global_flag = france_accepts_GER_capitulation
+			OR = {
+				AND = {
+					SPR = {
+						is_in_faction_with = FRA
 					}
+					has_global_flag = france_accepts_GER_capitulation
 				}
-			}
-			IF = {
-				limit = { 
-					AND = {
-						SPR = {
-							is_in_faction_with = GER
-						}
-						has_global_flag = germany_accepts_FRA_capitulation
+				AND = {
+					SPR = {
+						is_in_faction_with = GER
 					}
+					has_global_flag = germany_accepts_FRA_capitulation
 				}
 			}
 		}
@@ -2728,30 +2747,25 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
+			has_global_flag = france_accepts_GER_capitulation
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 			OR = {
 				is_in_faction_with = GER
 				is_in_faction_with = FRA
 			}
-			IF = {
-				limit = { 
-					AND = {
-						SPR = {
-							is_in_faction_with = GER 
-						}
-						has_global_flag = france_accepts_GER_capitulation
+			OR = {
+				AND = {
+					SPR = {
+						is_in_faction_with = FRA
 					}
+					has_global_flag = france_accepts_GER_capitulation
 				}
-			}
-			IF = {
-				limit = { 
-					AND = {
-						SPR = {
-							is_in_faction_with = FRA
-						}
-						has_global_flag = germany_accepts_FRA_capitulation
+				AND = {
+					SPR = {
+						is_in_faction_with = GER
 					}
+					has_global_flag = germany_accepts_FRA_capitulation
 				}
 			}
 		}
@@ -2778,10 +2792,10 @@ focus_tree = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
-				has_completed_focus = SPR_side_with_maurists
+				has_completed_focus = SPR_abolish_el_turno
 			}
 			NOT = {
-				has_completed_focus = SPR_fuse_with_the_romanonist
+				has_completed_focus = SPR_reform_el_turno
 			}
 		}
 		prerequisite {
@@ -3492,7 +3506,6 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			always = no
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
@@ -3506,7 +3519,6 @@ focus_tree = {
 			focus = SPR_push_for_more_catholicism
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.05
@@ -3539,7 +3551,7 @@ focus_tree = {
 	focus = {
 		id = SPR_focus_on_social_reformation
 		icon = GFX_focus_generic_monarchy_2
-		cost = 10 #days
+		cost = 5 #days
 		x = -8
 		y = 12
 		relative_position_id = SPR_declare_a_republic
@@ -3560,7 +3572,7 @@ focus_tree = {
 	focus = {
 		id = SPR_abolish_el_turno
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
-		cost = 10 #days
+		cost = 5 #days
 		x = 2
 		y = 0
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3577,20 +3589,27 @@ focus_tree = {
 		prerequisite {
 			focus = SPR_side_with_maurists
 		}
-		prerequisite {
-			focus = SPR_modernization_program
-		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_no_more_el_turno.tt
 			set_global_flag = SPR_flag_no_more_el_turno
 			add_political_power = -175
 			add_stability = -0.03
+			hidden_effect = {
+				remove_ideas = SPR_idea_prime_minister_jose
+				remove_ideas = SPR_idea_prime_minister_alvaro
+				remove_ideas = SPR_idea_prime_minister_dato
+				remove_ideas = SPR_idea_prime_minister_prieto
+				remove_ideas = SPR_idea_prime_minister_maura
+				remove_ideas = SPR_idea_prime_minister_manuel
+				remove_ideas = SPR_idea_prime_minister_sanchez
+			}
+			add_ideas = SPR_idea_prime_minister_maura
 		}
 	}
 	focus = {
 		id = SPR_ally_the_carlists #add decision to get jaime III
 		icon = GFX_focus_spa_supremacy_of_the_communion
-		cost = 10 #days
+		cost = 5 #days
 		x = 2
 		y = 2
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3618,7 +3637,7 @@ focus_tree = {
 	focus = {
 		id = SPR_neo_and_liberal_conservatives
 		icon = GFX_focus_spr_maintain_the_republic
-		cost = 10 #days
+		cost = 5 #days
 		x = 0
 		y = 1
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3640,7 +3659,7 @@ focus_tree = {
 	focus = {
 		id = SPR_reformed_catholics
 		icon = GFX_focus_por_concordat
-		cost = 10 #days
+		cost = 5 #days
 		x = -2
 		y = 1
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3695,7 +3714,7 @@ focus_tree = {
 	focus = {
 		id = SPR_unite_the_maurists
 		icon = GFX_focus_generic_royal_wedding
-		cost = 10 #days
+		cost = 5 #days
 		x = -1
 		y = 2
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3723,7 +3742,7 @@ focus_tree = {
 		id = SPR_replace_the_conservatives
 		mutually_exclusive = { focus = SPR_fuse_with_the_carlists }
 		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 10 #days
+		cost = 5 #days
 		x = -3
 		y = 3
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3747,7 +3766,7 @@ focus_tree = {
 	focus = {
 		id = SPR_continue_el_turno
 		icon = GFX_focus_hol_abandon_the_gold_standard
-		cost = 10 #days
+		cost = 5 #days
 		x = -4
 		y = 4
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3772,7 +3791,7 @@ focus_tree = {
 		id = SPR_fuse_with_the_carlists 
 		mutually_exclusive = { focus = SPR_replace_the_conservatives }
 		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
-		cost = 10 #days
+		cost = 5 #days
 		x = 0
 		y = 3
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3791,13 +3810,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
+			set_party_name = {
+				ideology = fascism
+				long_name = SPR_carlist_coup_government
+				name = SPR_carlist_coup_government
+			}
+			hidden_effect = {
+				add_ideas = SPR_idea_divided_party
+				remove_ideas = SPR_idea_prime_minister_maura
+			}
 		}
 	}
 	focus = {
 		id = SPR_side_with_carlos
 		mutually_exclusive = { focus = SPR_pick_jaime }
 		icon = GFX_focus_mex_restore_the_army_of_christ
-		cost = 10 #days
+		cost = 5 #days
 		x = -1
 		y = 4
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3813,13 +3841,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = -75	
+			promote_character = {
+				character = SPR_alfonso_carlos
+			}
 		}
 	}
 	focus = {
 		id = SPR_pick_jaime
 		mutually_exclusive = { focus = SPR_side_with_carlos }
 		icon = GFX_focus_generic_home_defense
-		cost = 10 #days
+		cost = 5 #days
 		x = 1
 		y = 4
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3835,12 +3866,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = -0.05
+			IF = {
+				limit = { NOT = { has_global_flag = SPR_jaime_iii_in_austria } }
+				promote_character = {
+					character = SPR_jaime_iii
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_negotiate_jaimes_release
 		icon = GFX_focus_convention
-		cost = 10 #days
+		cost = 5 #days
 		x = 3
 		y = 5
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3854,15 +3891,22 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_pick_jaime
+			focus = SPR_side_with_carlos
 		}
 		completion_reward = {
 			custom_effect_tooltip = release_jaime.tt
+			AUH = {
+				country_event = {
+					id = ww1_spain.122
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_general_jaime
 		icon = GFX_focus_convention
-		cost = 10 #days
+		cost = 5 #days
 		x = 0
 		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3872,18 +3916,29 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			NOT = {
+				has_global_flag = jaime_iii_in_austria
+			}
 		}
 		prerequisite {
 			focus = SPR_crush_our_enemies
 		}
 		completion_reward = {
-			custom_effect_tooltip = jaime_becomes_a_general.tt
+			SPR_jaime_iii = {
+				add_field_marshal_role = {
+					skill = 3
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_dismantle_the_mellismo
 		icon = GFX_focus_generic_monarchy_1
-		cost = 10 #days
+		cost = 5 #days
 		x = 2
 		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3905,12 +3960,13 @@ focus_tree = {
 				ideology = fascism
 				popularity = -0.05
 			}
+			remove_ideas = SPR_idea_divided_party
 		}
 	}
 	focus = {
 		id = SPR_take_revenge_on_austria
 		icon = GFX_focus_AUH_collapse
-		cost = 10 #days
+		cost = 5 #days
 		x = 1
 		y = 7
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3931,7 +3987,7 @@ focus_tree = {
 	focus = {
 		id = SPR_crush_our_enemies
 		icon = GFX_focus_TUR_reform_the_balkan_pact
-		cost = 10 #days
+		cost = 5 #days
 		x = 0
 		y = 5
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3952,12 +4008,60 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			custom_effect_tooltip = spanish_civil_war.tt
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = neutrality
+				size = 0.5
+				army_ratio = 0.8
+				navy_ratio = 0
+				capital = 41
+				states = {
+					41 170 175 167 168 173 169 170
+				}
+				keep_political_party_members = yes
+				keep_all_characters = yes #remove alfonso...
+				keep_political_leader = no
+			}
+			hidden_effect = {
+				remove_ideas = SPR_idea_prime_minister_maura
+				add_ideas = SPR_idea_catholic_nation
+				add_ideas = SPR_idea_divided_party
+				IF = {
+					limit = { has_completed_focus = SPR_the_schneider_canon }
+					add_ideas = SPR_idea_licensing_french_artillery
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_krupp_manufacturer }
+					add_ideas = SPR_idea_licensing_artillery
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_the_vickers }
+					add_ideas = SPR_idea_licensing_weaponry
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_the_chauchat }
+					add_ideas = SPR_idea_licensing_french_weaponry
+				}
+			}
+			D01 = {
+				hidden_effect = {
+					remove_ideas = SPR_idea_prime_minister_maura
+				}
+			}
+			country_event = {
+				id = ww1_spain.125
+				days = 1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
 		}
 	}
 	focus = {
 		id = SPR_legitimize_his_rule
 		icon = GFX_goal_generic_small_arms
-		cost = 10 #days
+		cost = 5 #days
 		x = -1
 		y = 7
 		relative_position_id = SPR_focus_on_social_reformation
@@ -3977,12 +4081,42 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
+			IF = {
+				limit = { 
+					has_completed_focus = SPR_pick_jaime
+				} 
+				add_country_leader_role = {
+					character = SPR_jaime_iii
+					promote_leader = yes
+					country_leader = {
+						ideology = theocracy_ideology
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					has_completed_focus = SPR_side_with_carlos
+				} 
+				add_country_leader_role = {
+					character = SPR_alfonso_carlos
+					promote_leader = yes
+					country_leader = {
+						ideology = theocracy_ideology
+					}
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				long_name = SPR_carlist_theocracy
+				name = SPR_carlist_theocracy
+			}
 		}
 	}
 	focus = {
 		id = SPR_force_conform_the_mellismo
 		icon = GFX_focus_eng_special_air_service
-		cost = 10 #days
+		cost = 5 #days
 		x = -2
 		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
@@ -4008,12 +4142,13 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
+			remove_ideas = SPR_idea_divided_party
 		}
 	}
 	focus = {
 		id = SPR_secure_spanish_claims_in_france
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 10 #days
+		cost = 5 #days
 		x = -4
 		y = 6
 		relative_position_id = SPR_focus_on_social_reformation
@@ -4029,12 +4164,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_state_claim = 31
+			add_state_claim = 180
+			add_state_claim = 181
+			add_state_claim = 112
+			add_state_claim = 179
+			add_state_claim = 118
+			add_state_claim = 807
+			add_state_claim = 461
+			add_state_claim = 462
+			add_state_claim = 108
+			add_state_claim = 459
 		}
 	}
 	focus = {
 		id = SPR_join_the_central_powers
 		icon = GFX_focus_central_powers
-		cost = 10 #days
+		cost = 5 #days
 		x = -3
 		y = 7
 		relative_position_id = SPR_focus_on_social_reformation
@@ -4063,7 +4208,7 @@ focus_tree = {
 	focus = {
 		id = SPR_encircle_the_french
 		icon = GFX_goal_generic_secret_weapon
-		cost = 10 #days
+		cost = 5 #days
 		x = -4
 		y = 9
 		relative_position_id = SPR_focus_on_social_reformation

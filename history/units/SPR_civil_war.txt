@@ -1,0 +1,221 @@
+﻿###################################################################
+division_template = {
+	name = "Carlist Militia"
+	is_locked = yes
+	division_cap = 24
+	priority = 1
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 0 }
+	}
+}
+units = {
+
+	division= { 
+			name = "Carlist de Infantería"
+			location = 6907
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+		name = "2a Carlist de Infantería"
+		location = 9846
+		division_template = "Carlist Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+			name = "3a Carlist de Infantería"
+			location = 9800
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+			name = "4a Carlist de Infantería"
+			location = 3820 
+			division_template="Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+			name = "5a Carlist de Infantería"
+			location = 11806
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+			name = "6a Carlist de Infantería"
+			location = 3859
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+			name = "7a Carlist de Infantería"
+			location = 11766
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+			name = "8a Carlist de Infantería"
+			location = 813
+			division_template="Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	
+	division= { 
+			name = "9a Carlist de Infantería"
+			location = 948
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "10a Carlist de Infantería"
+			location = 7213
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "11a Carlist de Infantería"
+			location = 9812
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "12a Carlist de Infantería"
+			location = 871
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "13a Carlist de Infantería"
+			location = 798
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "14a Carlist de Infantería"
+			location = 3909
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "15a Carlist de Infantería"
+			location = 6966
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "16a Carlist de Infantería"
+			location = 6966
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "17a Carlist de Infantería"
+			location = 3909
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "18a Carlist de Infantería"
+			location = 798
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "19a Carlist de Infantería"
+			location = 871
+			division_template="Carlist Militia"
+			start_experience_factor=0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "20a Carlist de Infantería"
+			location = 9812
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "21a Carlist de Infantería"
+			location = 7213 
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "22a Carlist de Infantería"
+			location = 948
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "23a Carlist de Infantería"
+			location = 813
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+	
+	division= { 
+			name = "24a Carlist de Infantería"
+			location = 11766
+			division_template = "Carlist Militia"
+			start_experience_factor = 0.2
+			start_equipment_factor = 1
+	}
+}
