@@ -939,13 +939,6 @@ country_event = {
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
 		add_ideas = SPR_idea_prime_minister_manuel
-		hidden_effect = {
-			country_event = { 
-				id = ww1_spain.22 
-				days = 120 
-				random_days = 180
-			}
-		}
 		set_global_flag = new_conservative_spanish_prime_minister_in_office
 		clr_global_flag = new_liberal_spanish_prime_minister_in_office
 		IF = {

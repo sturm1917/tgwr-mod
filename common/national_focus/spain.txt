@@ -94,6 +94,184 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_turn_the_church_into_a_competitive_market
+		mutually_exclusive = { focus = SPR_empower_the_conservative_church }
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		cost = 5 #days
+		x = 39
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_1910_general_election
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = -0.05
+				add_political_power = 50
+			}
+			
+			
+		}
+	}
+	focus = {
+		id = SPR_empower_the_conservative_church
+		mutually_exclusive = { focus = SPR_turn_the_church_into_a_competitive_market }
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		cost = 5 #days
+		x = 37
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_1910_general_election
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = -0.05
+				add_political_power = 50
+			}
+			
+			
+		}
+	}
+	focus = {
+		id = SPR_appease_religous_conservatives
+		mutually_exclusive = { focus = SPR_propose_the_idea_of_atheism? }
+		mutually_exclusive = { focus = SPR_furthur_weaken_the_church }
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		cost = 5 #days
+		x = 36
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_empower_the_conservative_church
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = -0.05
+				add_political_power = 50
+			}
+			
+			
+		}
+	}
+	focus = {
+		id = SPR_propose_the_idea_of_atheism?
+		mutually_exclusive = { focus = SPR_furthur_weaken_the_church }
+		mutually_exclusive = { focus = SPR_appease_religous_conservatives }
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		cost = 5 #days
+		x = 42
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_turn_the_church_into_a_competitive_market
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = -0.05
+				add_political_power = 50
+			}
+			
+			
+		}
+	}
+	focus = {
+		id = SPR_deify_the_leader
+		mutually_exclusive = { focus = SPR_real_atheism }
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		cost = 5 #days
+		x = 43
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_propose_the_idea_of_atheism?
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = -0.05
+				add_political_power = 50
+			}
+		}
+	}
+	focus = {
+		id = SPR_real_atheism
+		mutually_exclusive = { focus = SPR_deify_the_leader }
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		cost = 5 #days
+		x = 41
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_propose_the_idea_of_atheism?
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = -0.05
+				add_political_power = 50
+			}
+		}
+	}
+	focus = {
 		id = SPR_electoral_reforms
 		icon = GFX_focus_generic_concessions
 		cost = 5 #days
@@ -272,16 +450,19 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_furthur_weaken_the_church
+		mutually_exclusive = { focus = SPR_propose_the_idea_of_atheism? }
+		mutually_exclusive = { focus = SPR_appease_religous_conservatives }
 		icon = GFX_focus_mex_triumph_over_the_cristeros
 		cost = 5 #days
-		x = -2
+		x = 23
 		y = 2
-		relative_position_id = SPR_electoral_reforms
+		relative_position_id = SPR_1910_general_election
 		ai_will_do = {
 			factor = 100
 		}
 		prerequisite {
-			focus = SPR_weaken_catholic_education
+			focus = SPR_turn_the_church_into_a_competitive_market
+			focus = SPR_empower_the_conservative_church
 		}
 		available = {
 			is_subject = no
