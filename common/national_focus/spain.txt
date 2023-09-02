@@ -96,7 +96,7 @@ focus_tree = {
 	focus = {
 		id = SPR_turn_the_church_into_a_competitive_market
 		mutually_exclusive = { focus = SPR_empower_the_conservative_church }
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 5 #days
 		x = 39
 		y = 2
@@ -126,7 +126,7 @@ focus_tree = {
 	focus = {
 		id = SPR_empower_the_conservative_church
 		mutually_exclusive = { focus = SPR_turn_the_church_into_a_competitive_market }
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_focus_rom_parties_end
 		cost = 5 #days
 		x = 37
 		y = 2
@@ -157,7 +157,7 @@ focus_tree = {
 		id = SPR_appease_religous_conservatives
 		mutually_exclusive = { focus = SPR_propose_the_idea_of_atheism? }
 		mutually_exclusive = { focus = SPR_furthur_weaken_the_church }
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_focus_up_joan_of_arc
 		cost = 5 #days
 		x = 36
 		y = 3
@@ -188,7 +188,7 @@ focus_tree = {
 		id = SPR_propose_the_idea_of_atheism?
 		mutually_exclusive = { focus = SPR_furthur_weaken_the_church }
 		mutually_exclusive = { focus = SPR_appease_religous_conservatives }
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 5 #days
 		x = 42
 		y = 3
@@ -218,7 +218,7 @@ focus_tree = {
 	focus = {
 		id = SPR_deify_the_leader
 		mutually_exclusive = { focus = SPR_real_atheism }
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_focus_rom_abdicate
 		cost = 5 #days
 		x = 43
 		y = 4
@@ -246,7 +246,7 @@ focus_tree = {
 	focus = {
 		id = SPR_real_atheism
 		mutually_exclusive = { focus = SPR_deify_the_leader }
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_focus_GRE_a_land_of_mountains
 		cost = 5 #days
 		x = 41
 		y = 4
