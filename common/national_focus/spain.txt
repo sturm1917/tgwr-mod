@@ -29,9 +29,7 @@ focus_tree = {
 			custom_effect_tooltip = SPR_changed_parliamentery_majority
 			SPR = { 
 				add_political_power = 75
-			}
-			
-			
+			}		
 		}
 	}
 	focus = {
@@ -1822,6 +1820,524 @@ focus_tree = {
 				add_stability = -0.05
 			}
 			custom_effect_tooltip = SPR_immediately_adopt_PM.tt
+		}
+	}
+	focus = {
+		id = SPR_the_spanish_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5 #days
+		x = 23
+		y = 7
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_lean_entente }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_appoint_admiral_miranda
+		icon = GFX_focus_SWI_issue_war_bonds
+		cost = 5 #days
+		x = 20
+		y = 8
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_fund_dr_gimeno }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_the_spanish_navy
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_foreign_admirals
+		icon = GFX_goal_generic_build_navy
+		cost = 5 #days
+		x = 19
+		y = 9
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_appoint_admiral_miranda
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_converse_with_the_superpowers
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5 #days
+		x = 21
+		y = 9
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_appoint_admiral_miranda
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_spanish_royal_fleet
+		icon = GFX_focus_chi_british_cooperation
+		cost = 5 #days
+		x = 18
+		y = 10
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_german_dreadnoughts }
+		mutually_exclusive = { focus = SPR_return_to_manchuria }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_all_of_the_admiralty
+			focus = SPR_foreign_admirals
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_return_to_manchuria
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 5 #days
+		x = 20
+		y = 10
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_spanish_royal_fleet }
+		mutually_exclusive = { focus = SPR_german_dreadnoughts }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_all_of_the_admiralty
+			focus = SPR_foreign_admirals
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_german_dreadnoughts
+		icon = GFX_focus_align_germany
+		cost = 5 #days
+		x = 22
+		y = 10
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_spanish_royal_fleet }
+		mutually_exclusive = { focus = SPR_return_to_manchuria }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_all_of_the_admiralty
+			focus = SPR_foreign_admirals
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_all_of_the_admiralty
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5 #days
+		x = 21
+		y = 9
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_fund_dr_gimeno }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_appoint_admiral_miranda
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_fund_dr_gimeno
+		icon = GFX_focus_SWI_issue_war_bonds
+		cost = 5 #days
+		x = 26
+		y = 8
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_appoint_admiral_miranda }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_the_spanish_navy
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_catching_up_technologically
+		icon = GFX_focus_research
+		cost = 5 #days
+		x = 27
+		y = 9
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_fund_dr_gimeno
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_research_ship_modules
+		icon = GFX_focus_otto_naval_train
+		cost = 5 #days
+		x = 25
+		y = 9
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_fund_dr_gimeno
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_destroyer_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5 #days
+		x = 26
+		y = 10
+		relative_position_id = SPR_declare_a_republic
+		mutually_exclusive = { focus = SPR_cruisers_and_dreadnoughts }
+		mutually_exclusive = { focus = SPR_look_to_the_future }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_research_ship_modules
+			focus = SPR_catching_up_technologically
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_look_to_the_future
+		icon = GFX_goal_generic_navy_carrier
+		cost = 5 #days
+		x = 28
+		y = 10
+		mutually_exclusive = { focus = SPR_destroyer_fleet }
+		mutually_exclusive = { focus = SPR_cruisers_and_dreadnoughts }
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_research_ship_modules
+			focus = SPR_catching_up_technologically
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_cruisers_and_dreadnoughts
+		icon = GFX_focus_battleship_investment
+		cost = 5 #days
+		x = 24
+		y = 10
+		mutually_exclusive = { focus = SPR_destroyer_fleet }
+		mutually_exclusive = { focus = SPR_look_to_the_future }
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_research_ship_modules
+			focus = SPR_catching_up_technologically
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_the_new_spanish_armada
+		icon = GFX_goal_CAN_fleet_doctrine
+		cost = 5 #days
+		x = 23
+		y = 11
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_spanish_royal_fleet
+			focus = SPR_return_to_manchuria
+			focus = SPR_german_dreadnoughts
+			focus = SPR_cruisers_and_dreadnoughts
+			focus = SPR_destroyer_fleet
+			focus = SPR_look_to_the_future
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_completed_focus = SPR_spain_reenters_the_world_stage
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SPR_the_spanish_airforce
+		icon = GFX_goal_generic_air_doctrine
+		cost = 5 #days
+		x = 20
+		y = 13
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_basic_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 5 #days
+		x = 1
+		y = 1
+		relative_position_id = SPR_the_spanish_airforce
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_the_spanish_airforce
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_close_air_support
+		icon = GFX_goal_generic_CAS
+		cost = 5 #days
+		x = 2
+		y = 2
+		relative_position_id = SPR_the_spanish_airforce
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_basic_fighters
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_recon_planes
+		icon = GFX_goal_generic_build_airforce
+		cost = 5 #days
+		x = 1
+		y = 3
+		relative_position_id = SPR_the_spanish_airforce
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_basic_fighters
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
+		}
+	}
+	focus = {
+		id = SPR_airship_fleet
+		icon = GFX_hoi4tgw_zeppelin
+		cost = 5 #days
+		x = -1
+		y = 1
+		relative_position_id = SPR_the_spanish_airforce
+		mutually_exclusive = { focus = SPR_basic_fighters }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_the_spanish_airforce
+		}
+		available = {
+			always = no
+			#is_subject = no
+			#has_global_flag = new_spanish_prime_minister_in_office
+			#GER = {
+			#	has_war_with = FRA
+			#}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_in_dev1.tt
 		}
 	}
 	focus = {
