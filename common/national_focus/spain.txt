@@ -2020,15 +2020,11 @@ focus_tree = {
 			focus = SPR_appoint_admiral_miranda
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			
 		}
 	}
 	focus = {
@@ -2046,15 +2042,11 @@ focus_tree = {
 			focus = SPR_the_spanish_navy
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			
 		}
 	}
 	focus = {
@@ -2071,15 +2063,11 @@ focus_tree = {
 			focus = SPR_fund_dr_gimeno
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -2104,7 +2092,11 @@ focus_tree = {
 			#}
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 4
+				category = ship_modules_tech
+			}
 		}
 	}
 	focus = {
@@ -2124,15 +2116,15 @@ focus_tree = {
 			focus = SPR_catching_up_technologically
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = dd_tech
+			}
 		}
 	}
 	focus = {
@@ -2152,15 +2144,15 @@ focus_tree = {
 			focus = SPR_catching_up_technologically
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = cv_tech
+			}
 		}
 	}
 	focus = {
@@ -2188,7 +2180,16 @@ focus_tree = {
 			#}
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
 		}
 	}
 	focus = {
@@ -2215,12 +2216,13 @@ focus_tree = {
 			has_completed_focus = SPR_spain_reenters_the_world_stage
 		}
 		completion_reward = {
+			add_ideas = { SPR_idea_spanish_armada }
 		}
 	}
 	focus = {
 		id = SPR_the_spanish_airforce
 		icon = GFX_goal_generic_air_doctrine
-		cost = 5 #days
+		cost = 2.9 #days
 		x = 20
 		y = 13
 		relative_position_id = SPR_declare_a_republic
@@ -2229,14 +2231,15 @@ focus_tree = {
 		}
 		available = {
 			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 	focus = {
@@ -2253,15 +2256,15 @@ focus_tree = {
 			focus = SPR_the_spanish_airforce
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
 		}
 	}
 	focus = {
@@ -2278,21 +2281,21 @@ focus_tree = {
 			focus = SPR_basic_fighters
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = cas_bomber
+			}
 		}
 	}
 	focus = {
-		id = SPR_recon_planes
+		id = SPR_recon
 		icon = GFX_goal_generic_build_airforce
-		cost = 5 #days
+		cost = 1.5 #days
 		x = 1
 		y = 3
 		relative_position_id = SPR_the_spanish_airforce
@@ -2303,15 +2306,20 @@ focus_tree = {
 			focus = SPR_basic_fighters
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 1
+				category = cat_scout_plane
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = recon_tech
+			}
 		}
 	}
 	focus = {
@@ -2329,15 +2337,15 @@ focus_tree = {
 			focus = SPR_the_spanish_airforce
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = airship
+			}
 		}
 	}
 	focus = {

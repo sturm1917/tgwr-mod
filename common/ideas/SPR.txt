@@ -73,15 +73,31 @@ ideas = {
 				has_character = SPR_alfonso_xiii
 			}
 		}
-		SPR_idea_money_from_sold_colonies1 = {
+		SPR_idea_spanish_armada = {
 			picture = chi_hyper_inflation
 			allowed = {
 				original_tag = SPR
 			}
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
+			available = {
+				SPR = {
+					has_navy_size = {
+						size > 4
+						type = capital_ship
+					}
 				}
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_unit_factor = 0.25
+				naval_accidents_chance = -0.75
+				naval_damage_factor = 0.15
+				naval_defense_factor = 0.15
+			}
+		}
+		SPR_idea_money_from_sold_colonies1 = {
+			picture = chi_hyper_inflation
+			allowed = {
+				original_tag = SPR
 			}
 			available = {
 				OR = {
@@ -102,11 +118,6 @@ ideas = {
 			picture = chi_hyper_inflation2
 			allowed = {
 				original_tag = SPR
-			}
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
 			}
 			available = {
 				OR = {
