@@ -33,6 +33,504 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_political_strategies
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		cost = 2.9 #days
+		x = 11
+		y = 2
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_1910_general_election
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = SPR_enforcing_his_majestys_rule
+		icon = GFX_focus_generic_monarchy_2
+		cost = 5 #days
+		x = 12
+		y = 3
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_political_strategies
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_freedom_from_a_hundred_years_of_suppression
+		icon = GFX_focus_POL_support_global_falangism
+		cost = 5 #days
+		x = 12
+		y = 4
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_enforcing_his_majestys_rule
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_ensure_the_church_keeps_quiet
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5 #days
+		x = 13
+		y = 6
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_freedom_from_a_hundred_years_of_suppression
+		}
+		prerequisite = {
+			focus = SPR_weaken_catholic_education
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_weaken_the_bourgeois
+		icon = GFX_focus_focus_fra_national_resistance_council
+		cost = 5 #days
+		x = 7
+		y = 3
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_political_strategies
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_centralization_of_industrial_powerhouses
+		mutually_exclusive = { focus = SPR_redistribute_the_wealth }
+		icon = GFX_focus_spa_the_spanish_miracle
+		cost = 5 #days
+		x = 10
+		y = 5
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_weaken_the_bourgeois
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_constitutional_reform
+		mutually_exclusive = { focus = SPR_crush_albista_faction }
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 5 #days
+		x = 9
+		y = 4
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_weaken_the_bourgeois
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_crush_albista_faction
+		mutually_exclusive = { focus = SPR_constitutional_reform }
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 5 #days
+		x = 7
+		y = 4
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_weaken_the_bourgeois
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_redistribute_the_wealth
+		mutually_exclusive = { focus = SPR_centralization_of_industrial_powerhouses }
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 5 #days
+		x = 6
+		y = 5
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_weaken_the_bourgeois
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_increase_wage_for_industrialized_places
+		icon = GFX_focus_YUG_ikarus
+		cost = 5 #days
+		x = 6
+		y = 6
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_redistribute_the_wealth
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_fuse_political_and_intellectual_spain
+		icon = GFX_goal_anschluss
+		cost = 5 #days
+		x = 6
+		y = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_increase_wage_for_industrialized_places
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_move_catalonian_wealth_to_heart_of_castillo
+		icon = GFX_focus_generic_rubber
+		cost = 5 #days
+		x = 4
+		y = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_increase_wage_for_industrialized_places
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_erase_bloody_week_from_history_books
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 5 #days
+		x = 10
+		y = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_centralization_of_industrial_powerhouses
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_imprison_free_speakers
+		icon = GFX_goal_demand_sudetenland
+		cost = 5 #days
+		x = 10
+		y = 8
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_erase_bloody_week_from_history_books
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_take_away_their_precious_luxuries
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5 #days
+		x = 11
+		y = 6
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_centralization_of_industrial_powerhouses
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_force_the_rich_back_to_working_class
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 5 #days
+		x = 12
+		y = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = SPR_take_away_their_precious_luxuries
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_changed_parliamentery_majority
+			SPR = { 
+				add_political_power = 75
+			}		
+		}
+	}
+	focus = {
+		id = SPR_furthur_weaken_the_church
+		mutually_exclusive = { focus = SPR_propose_the_idea_of_atheism? }
+		mutually_exclusive = { focus = SPR_appease_religous_conservatives }
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 5 #days
+		x = 15
+		y = 8
+		relative_position_id = SPR_1910_general_election
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite {
+			focus = SPR_turn_the_church_into_a_competitive_market
+			focus = SPR_empower_the_conservative_church
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			OR = {
+				has_idea = SPR_idea_prime_minister_alvaro
+				has_idea = SPR_idea_prime_minister_jose
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = { has_completed_focus = SPR_push_for_more_catholicism }
+		}
+		completion_reward = {
+			add_political_power = -25
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_freedom_of_religion
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_catholic_nation }
+				remove_ideas = SPR_idea_catholic_nation
+				add_ideas = SPR_idea_strong_catholicism
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
+			}
+			add_political_power = 25	
+		}
+	}
+	focus = {
 		id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_parliamentary_landslide }
 		icon = GFX_focus_spr_maintain_the_republic
@@ -92,12 +590,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_turn_the_church_into_a_competitive_market
-		mutually_exclusive = { focus = SPR_empower_the_conservative_church }
+		id = SPR_the_question_of_religion
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5 #days
-		x = 39
-		y = 2
+		x = 33
+		y = 7
 		ai_will_do = {
 			factor = 10
 		}
@@ -122,17 +619,47 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_empower_the_conservative_church
-		mutually_exclusive = { focus = SPR_turn_the_church_into_a_competitive_market }
-		icon = GFX_focus_rom_parties_end
+		id = SPR_turn_the_church_into_a_competitive_market
+		mutually_exclusive = { focus = SPR_empower_the_conservative_church }
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 5 #days
-		x = 37
-		y = 2
+		x = 31
+		y = 8
 		ai_will_do = {
 			factor = 10
 		}
 		prerequisite = {
-			focus = SPR_1910_general_election
+			focus = SPR_the_question_of_religion
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = -0.05
+				add_political_power = 50
+			}
+			
+			
+		}
+	}
+	focus = {
+		id = SPR_empower_the_conservative_church
+		mutually_exclusive = { focus = SPR_turn_the_church_into_a_competitive_market }
+		icon = GFX_focus_rom_parties_end
+		cost = 5 #days
+		x = 29
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_the_question_of_religion
 		}
 		available = {
 			SPR = {
@@ -157,8 +684,8 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_furthur_weaken_the_church }
 		icon = GFX_focus_up_joan_of_arc
 		cost = 5 #days
-		x = 36
-		y = 3
+		x = 27
+		y = 9
 		ai_will_do = {
 			factor = 10
 		}
@@ -188,8 +715,8 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_appease_religous_conservatives }
 		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 5 #days
-		x = 42
-		y = 3
+		x = 32
+		y = 9
 		ai_will_do = {
 			factor = 10
 		}
@@ -218,8 +745,8 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_real_atheism }
 		icon = GFX_focus_rom_abdicate
 		cost = 5 #days
-		x = 43
-		y = 4
+		x = 33
+		y = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -246,8 +773,8 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_deify_the_leader }
 		icon = GFX_focus_GRE_a_land_of_mountains
 		cost = 5 #days
-		x = 41
-		y = 4
+		x = 31
+		y = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -447,68 +974,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_furthur_weaken_the_church
-		mutually_exclusive = { focus = SPR_propose_the_idea_of_atheism? }
-		mutually_exclusive = { focus = SPR_appease_religous_conservatives }
-		icon = GFX_focus_mex_triumph_over_the_cristeros
-		cost = 5 #days
-		x = 23
-		y = 2
-		relative_position_id = SPR_1910_general_election
-		ai_will_do = {
-			factor = 100
-		}
-		prerequisite {
-			focus = SPR_turn_the_church_into_a_competitive_market
-			focus = SPR_empower_the_conservative_church
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-			OR = {
-				has_idea = SPR_idea_prime_minister_alvaro
-				has_idea = SPR_idea_prime_minister_jose
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
-			NOT = { has_completed_focus = SPR_push_for_more_catholicism }
-		}
-		completion_reward = {
-			add_political_power = -25
-			IF = {
-				limit = { has_idea = SPR_idea_strong_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_strong_catholicism
-					add_idea = SPR_idea_mild_catholicism
-				}
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_mild_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_mild_catholicism
-					add_idea = SPR_idea_weak_catholicism
-				}
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_weak_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_weak_catholicism
-					add_idea = SPR_idea_freedom_of_religion
-				}
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_catholic_nation }
-				remove_ideas = SPR_idea_catholic_nation
-				add_ideas = SPR_idea_strong_catholicism
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_freedom_of_religion }
-				remove_ideas = SPR_idea_freedom_of_religion
-				add_ideas = SPR_idea_secular_state
-			}
-			add_political_power = 25	
-		}
-	}
-	focus = {
 		id = SPR_negotiate_with_france
 		icon = GFX_focus_generic_africa_naval
 		cost = 2.9 #days
@@ -562,7 +1027,7 @@ focus_tree = {
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 1.5 #days
 		x = 3
-		y = 3
+		y = 1
 		ai_will_do = {
 			factor = 100
 		}
@@ -580,7 +1045,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		cost = 1.5 #days
 		x = 3
-		y = 4
+		y = 2
 		ai_will_do = {
 			factor = 100
 		}
@@ -1826,8 +2291,8 @@ focus_tree = {
 		id = SPR_the_spanish_navy
 		icon = GFX_goal_generic_navy_battleship
 		cost = 5 #days
-		x = 23
-		y = 7
+		x = 17
+		y = 9
 		relative_position_id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_lean_entente }
 		ai_will_do = {
@@ -1847,11 +2312,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_appoint_admiral_miranda
-		icon = GFX_focus_SWI_issue_war_bonds
-		cost = 5 #days
-		x = 20
-		y = 8
-		relative_position_id = SPR_declare_a_republic
+		icon = GFX_focus_SOV_purge_trotskyists
+		cost = 1.5 #days
+		x = -3
+		y = 1
+		relative_position_id = SPR_the_spanish_navy
 		mutually_exclusive = { focus = SPR_fund_dr_cornejo }
 		ai_will_do = {
 			factor = 10
@@ -1860,24 +2325,21 @@ focus_tree = {
 			focus = SPR_the_spanish_navy
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			add_political_power = 25
 		}
 	}
 	focus = {
 		id = SPR_converse_with_the_superpowers
 		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 5 #days
-		x = 19
-		y = 9
-		relative_position_id = SPR_declare_a_republic
+		x = -4
+		y = 2
+		relative_position_id = SPR_the_spanish_navy
 		ai_will_do = {
 			factor = 10
 		}
@@ -1885,24 +2347,24 @@ focus_tree = {
 			focus = SPR_appoint_admiral_miranda
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			custom_effect_tooltip = SPR_converse_with_naval_powers.tt
+			country_event = {
+				id = ww1_spain.127
+				days = 5
+			}
 		}
 	}
 	focus = {
 		id = SPR_spanish_royal_fleet
 		icon = GFX_focus_chi_british_cooperation
 		cost = 5 #days
-		x = 18
-		y = 10
-		relative_position_id = SPR_declare_a_republic
+		x = -5
+		y = 3
+		relative_position_id = SPR_the_spanish_navy
 		mutually_exclusive = { focus = SPR_german_dreadnoughts }
 		mutually_exclusive = { focus = SPR_return_to_manchuria }
 		ai_will_do = {
@@ -1910,27 +2372,119 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_all_of_the_admiralty
+		}
+		prerequisite = {
 			focus = SPR_converse_with_the_superpowers
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			ENG = {
+				has_tech = basic_ship_hull_heavy
+			}
+			SPR = {
+				NOT = {
+					has_war_with = ENG
+				}
+			}
+			has_political_power > 200
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			SPR = {
+				add_political_power = -200
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_dreadnoughts }
+					custom_effect_tooltip = spain_ships.1.eng.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_heavy_1
+							equipment_variant = "Indefatigable Class"
+							creator = ENG
+							name = "English Licensed Dreadnought"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Pathfinder Class"
+							creator = ENG
+							name = "English Licensed Light Cruiser"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Boadicea Class"
+							creator = ENG
+							name = "English Licensed Light Cruiser"
+						}
+					}
+				}
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_destroyers }
+					custom_effect_tooltip = spain_ships.2.eng.tt
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "C Class"
+							creator = ENG
+							name = "English Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "C Class"
+							creator = ENG
+							name = "English Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "C Class"
+							creator = ENG
+							name = "English Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "C Class"
+							creator = ENG
+							name = "English Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "C Class"
+							creator = ENG
+							name = "English Licensed Destroyer"
+						}
+					
+				}
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_cruisers }
+					custom_effect_tooltip = spain_ships.3.eng.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_heavy_2
+							equipment_variant = "Town Class"
+							creator = ENG
+							name = "English Licensed Heavy Cruiser"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_2
+							equipment_variant = "Town Class"
+							creator = ENG
+							name = "English Licensed Heavy Cruiser"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "C Class"
+							creator = ENG
+							name = "English Licensed Destroyer"
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_return_to_manchuria
 		icon = GFX_focus_chi_collaboration_with_the_japanese
 		cost = 5 #days
-		x = 20
-		y = 10
-		relative_position_id = SPR_declare_a_republic
+		x = -3
+		y = 3
+		relative_position_id = SPR_the_spanish_navy
 		mutually_exclusive = { focus = SPR_spanish_royal_fleet }
 		mutually_exclusive = { focus = SPR_german_dreadnoughts }
 		ai_will_do = {
@@ -1938,27 +2492,120 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_all_of_the_admiralty
+		}
+		prerequisite = {
 			focus = SPR_converse_with_the_superpowers
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			JAP = {
+				has_tech = basic_ship_hull_heavy
+			}
+			SPR = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			has_political_power > 200
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			SPR = {
+				add_political_power = -200
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_dreadnoughts }
+					custom_effect_tooltip = spain_ships.1.jaa.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_heavy_1
+							equipment_variant = "Kawachi Class"
+							creator = JAP
+							name = "Japanese Licensed Dreadnought"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Matsushima Class"
+							creator = JAP
+							name = "Japanese Licensed Light Cruiser"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Yodo Class"
+							creator = JAP
+							name = "Japanese Licensed Light Cruiser"
+						}
+					}
+				}
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_destroyers }
+					custom_effect_tooltip = spain_ships.2.jaa.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "Murakumo Class"
+							creator = JAP
+							name = "Japanese Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "Murakumo Class"
+							creator = JAP
+							name = "Japanese Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "Murakumo Class"
+							creator = JAP
+							name = "Japanese Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "Murakumo Class"
+							creator = JAP
+							name = "Japanese Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "Murakumo Class"
+							creator = JAP
+							name = "Japanese Licensed Destroyer"
+						}
+					}
+				}
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_cruisers }
+					custom_effect_tooltip = spain_ships.3.jaa.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_light_2
+							equipment_variant = "Murakumo Class"
+							creator = JAP
+							name = "Japanese Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Yakumo Class"
+							creator = JAP
+							name = "Japanese Licensed Heavy Cruiser"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Azuma Class"
+							creator = JAP
+							name = "Japanese Licensed Heavy Cruiser"
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_german_dreadnoughts
 		icon = GFX_focus_align_germany
 		cost = 5 #days
-		x = 22
-		y = 10
-		relative_position_id = SPR_declare_a_republic
+		x = -1
+		y = 3
+		relative_position_id = SPR_the_spanish_navy
 		mutually_exclusive = { focus = SPR_spanish_royal_fleet }
 		mutually_exclusive = { focus = SPR_return_to_manchuria }
 		ai_will_do = {
@@ -1966,22 +2613,120 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_all_of_the_admiralty
+		}
+		prerequisite = {
 			focus = SPR_converse_with_the_superpowers
 		}
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			GER = {
+				has_tech = basic_ship_hull_heavy
+			}
+			SPR = {
+				NOT = {
+					has_war_with = GER
+				}
+			}
+			has_political_power > 200
 		}
 		completion_reward = {
+			SPR = {
+				add_political_power = -200
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_dreadnoughts }
+					custom_effect_tooltip = spain_ships.1.ger.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_heavy_1
+							equipment_variant = "Moltke Class"
+							creator = GER
+							name = "German Licensed Dreadnought"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Kaiserin Augusta Class"
+							creator = GER
+							name = "German Licensed Cruiser"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Iltis Class"
+							creator = GER
+							name = "German Licensed Cruiser"
+						}
+					}
+				}
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_destroyers }
+					custom_effect_tooltip = spain_ships.2.ger.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_light_1
+							equipment_variant = "Torpedo Boat Hull C"
+							creator = GER
+							name = "German Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_1
+							equipment_variant = "Torpedo Boat Hull C"
+							creator = GER
+							name = "German Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_1
+							equipment_variant = "Torpedo Boat Hull C"
+							creator = GER
+							name = "German Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_1
+							equipment_variant = "Torpedo Boat Hull C"
+							creator = GER
+							name = "German Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_light_1
+							equipment_variant = "Torpedo Boat Hull C"
+							creator = GER
+							name = "German Licensed Destroyer"
+						}
+					}
+				}
+				IF = {
+					limit = { has_global_flag = SPR_flag_picked_cruisers }
+					custom_effect_tooltip = spain_ships.3.ger.tt
+					hidden_effect = {
+						create_ship = {
+							type = ship_hull_light_1
+							equipment_variant = "Torpedo Boat Hull C"
+							creator = GER
+							name = "German Licensed Destroyer"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Roon Class"
+							creator = GER
+							name = "German Licensed Heavy Cruiser"
+						}
+						create_ship = {
+							type = ship_hull_cruiser_1
+							equipment_variant = "Scharnhorst Class"
+							creator = GER
+							name = "German Licensed Heavy Cruiser"
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_all_of_the_admiralty
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 5 #days
-		x = 21
-		y = 9
-		relative_position_id = SPR_declare_a_republic
+		x = -2
+		y = 2
+		relative_position_id = SPR_the_spanish_navy
 		ai_will_do = {
 			factor = 10
 		}
@@ -1998,11 +2743,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_fund_dr_cornejo
-		icon = GFX_focus_SWI_issue_war_bonds
-		cost = 5 #days
-		x = 26
-		y = 8
-		relative_position_id = SPR_declare_a_republic
+		icon = GFX_focus_SOV_purge_zinovyevists
+		cost = 1.5 #days
+		x = 3
+		y = 1
+		relative_position_id = SPR_the_spanish_navy
 		mutually_exclusive = { focus = SPR_appoint_admiral_miranda }
 		ai_will_do = {
 			factor = 10
@@ -2015,16 +2760,16 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			
+			add_political_power = 25
 		}
 	}
 	focus = {
 		id = SPR_catching_up_technologically
 		icon = GFX_focus_research
 		cost = 5 #days
-		x = 27
-		y = 9
-		relative_position_id = SPR_declare_a_republic
+		x = 4
+		y = 2
+		relative_position_id = SPR_the_spanish_navy
 		ai_will_do = {
 			factor = 10
 		}
@@ -2043,9 +2788,9 @@ focus_tree = {
 		id = SPR_research_ship_modules
 		icon = GFX_focus_otto_naval_train
 		cost = 5 #days
-		x = 25
-		y = 9
-		relative_position_id = SPR_declare_a_republic
+		x = 2
+		y = 2
+		relative_position_id = SPR_the_spanish_navy
 		ai_will_do = {
 			factor = 10
 		}
@@ -2053,12 +2798,8 @@ focus_tree = {
 			focus = SPR_fund_dr_cornejo
 		}
 		available = {
-			always = no
-			#is_subject = no
-			#has_global_flag = new_spanish_prime_minister_in_office
-			#GER = {
-			#	has_war_with = FRA
-			#}
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -2072,9 +2813,9 @@ focus_tree = {
 		id = SPR_destroyer_fleet
 		icon = GFX_focus_generic_navy_battleship2
 		cost = 5 #days
-		x = 26
-		y = 10
-		relative_position_id = SPR_declare_a_republic
+		x = 3
+		y = 3
+		relative_position_id = SPR_the_spanish_navy
 		mutually_exclusive = { focus = SPR_cruisers_and_dreadnoughts }
 		mutually_exclusive = { focus = SPR_look_to_the_future }
 		ai_will_do = {
@@ -2100,11 +2841,11 @@ focus_tree = {
 		id = SPR_look_to_the_future
 		icon = GFX_goal_generic_navy_carrier
 		cost = 5 #days
-		x = 28
-		y = 10
+		x = 5
+		y = 3
 		mutually_exclusive = { focus = SPR_destroyer_fleet }
 		mutually_exclusive = { focus = SPR_cruisers_and_dreadnoughts }
-		relative_position_id = SPR_declare_a_republic
+		relative_position_id = SPR_the_spanish_navy
 		ai_will_do = {
 			factor = 10
 		}
@@ -2128,11 +2869,11 @@ focus_tree = {
 		id = SPR_cruisers_and_dreadnoughts
 		icon = GFX_focus_battleship_investment
 		cost = 5 #days
-		x = 24
-		y = 10
+		x = 1
+		y = 3
+		relative_position_id = SPR_the_spanish_navy
 		mutually_exclusive = { focus = SPR_destroyer_fleet }
 		mutually_exclusive = { focus = SPR_look_to_the_future }
-		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
 		}
@@ -2165,9 +2906,9 @@ focus_tree = {
 		id = SPR_the_new_spanish_armada
 		icon = GFX_goal_CAN_fleet_doctrine
 		cost = 5 #days
-		x = 23
-		y = 11
-		relative_position_id = SPR_declare_a_republic
+		x = 0
+		y = 4
+		relative_position_id = SPR_the_spanish_navy
 		ai_will_do = {
 			factor = 10
 		}
@@ -2193,7 +2934,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		cost = 2.9 #days
 		x = 20
-		y = 13
+		y = 16
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -2321,8 +3062,8 @@ focus_tree = {
 		id = SPR_profit_off_the_war
 		icon = GFX_focus_SWI_issue_war_bonds
 		cost = 5 #days
-		x = 13
-		y = 9
+		x = -13
+		y = 8
 		relative_position_id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_lean_entente }
 		ai_will_do = {

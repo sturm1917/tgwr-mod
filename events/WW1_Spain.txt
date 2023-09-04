@@ -2380,3 +2380,34 @@ country_event = {
 		}
 	}
 }
+
+# What kind of boats
+country_event = {
+	id = ww1_spain.127
+	title = ww1_spain.127.t
+	desc = ww1_spain.127.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = { days = 5 }
+	trigger = {
+		SPR = {
+			has_war = no
+			has_completed_focus = SPR_legitimize_his_rule
+		}
+	}
+	option = {
+		name = ww1_spain.127.a
+		ai_chance = { factor = 10 }
+		set_global_flag = SPR_flag_picked_destoryers
+	}
+	option = {
+		name = ww1_spain.127.b
+		ai_chance = { factor = 10 }
+		set_global_flag = SPR_flag_picked_dreadnoughts
+	}
+	option = {
+		name = ww1_spain.127.c
+		ai_chance = { factor = 10 }
+		set_global_flag = SPR_flag_picked_cruisers
+	}
+}

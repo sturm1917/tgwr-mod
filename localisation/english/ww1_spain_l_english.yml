@@ -465,4 +465,29 @@
  ww1_spain.41.a:0 "Alright"
  ww1_spain.42.t:0 "Sanchez leaves office"
  ww1_spain.42.a:0 "Okay"
+ ww1_spain.127.t:0 "Spain Chooses its Naval Future"
  SPR_no_more_el_turno.tt:0 "§8The Back and Fourth between Liberal and Conservatives will be Removed. With Maura as the new prime minister.§W"
+ SPR_converse_with_naval_powers.tt:0 "We will purchase an array of ships from one of the naval superpowers, whomever we negotiate with, we can choose to buy §Y1 battleship§W and §Y2 light cruisers§W, §Y5 destoyers§W, or §Y2 heavy cruisers§W and §Y1 destroyer§W"
+ 
+ #Buy Ships Cosmetics
+ spain_ships.1.ger.tt:0 "Create a §8Moltke Class§W ship from §8the German Empire§W                                                             Create a §8Ilthis Class§W ship by §8German Empire§W  Create a §8Kaiserin Augusta Class§W ship by §8German Empire§W"
+ 
+ spain_ships.2.ger.tt:0 "Create a §8Torpedo Boat Hull C§W ship from §8the German Empire§W                                                             Create a §8Torpedo Boat Hull C§W ship from §8the German Empire§W                                                                       Create a §8Torpedo Boat Hull C§W ship from §8the German Empire§W                                                               Create a §8Torpedo Boat Hull C§W ship from §8the German Empire§W                                                               Create a §8Torpedo Boat Hull C§W ship from §8the German Empire§W"
+ 
+ spain_ships.3.ger.tt:0 "Create a §8Torpedo Boat Hull C§W ship from §8the German Empire§W                                                             Create a §8Roon Class§W ship by §8the German Empire§W    Create a §8Scharnhorst Class§W ship by §8the German Empire§W"
+ 
+ spain_ships.1.jaa.tt:0 "Create a §8Kawachi Class§W ship from §8the Japanese Empire§W                                                             Create a §8Matsushima Class§W ship by §8the Japanese Empire§W                                                                       Create a §8Yodo Class§W ship by §8the Japanese Empire§W"
+ 
+ spain_ships.2.jaa.tt:0 "Create a §8Murakumo§W ship from §8the Japanese Empire§W                                                             Create a §8Murakumo§W ship from §8the Japanese Empire§W                                                                       Create a §8Murakumo§W ship from §8the Japanese Empire§W                                                               Create a §8Murakumo§W ship from §8the Japanese Empire§W                                                               Create a §8Murakumo§W ship from §8the Japanese Empire§W"
+ 
+ spain_ships.3.jaa.tt:0 "Create a §8Murakumo§W ship from §8the Japanese Empire§W                                                             Create a §8Yakumo Class§W ship by §8the Japanese Empire§W                                                                Create a §8Azuma Class§W ship by §8the Japanese Empire§W"
+ 
+ 
+ 
+ spain_ships.1.eng.tt:0 "Create a §8Indefatigable Class§W ship from §8the United Kingdom§W                                                         Create a §8Pathfinder Class§W ship by §8United Kingdom§W Create a §8Boadicea Class§W ship by §8United Kingdom§W"
+ 
+ spain_ships.2.eng.tt:0 "Create a §8Class C§W ship from §8the United Kingdom§W     Create a §8Class C§W ship from §8the United Kingdom§W      Create a §8Class C§W ship from §8the United Kingdom§W      Create a §8Class C§W ship from §8the United Kingdom§W    Create a §8Class C§W ship from §8the United Kingdom§W"
+ 
+ spain_ships.3.eng.tt:0 "Create a §8Town Class§W ship from §8the United Kingdom§W Create a §8Town Class§W ship from §8the United Kingdom§W Create a §8Class C§W ship from §8the United Kingdom§W"
+ 
+ 

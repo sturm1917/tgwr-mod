@@ -525,11 +525,11 @@ characters={
 			slot = navy_chief
 			idea_token = SPR_augusto_miranda
 			allowed  = {
-					original_tag  = SPR
-				}
-				traits  = {
-					navy_chief_commerce_raiding_1 
-				}
+				original_tag  = SPR
+			}
+			traits  = {
+				navy_chief_commerce_raiding_1 
+			}
 		}
 		name="SPR_augusto_miranda"
 		portraits={
@@ -543,11 +543,11 @@ characters={
 			slot = navy_chief
 			idea_token = SPR_honorio_cornejo
 			allowed  = {
-					original_tag  = SPR
-				}
-				traits  = {
-					navy_chief_decisive_battle_1 
-				}
+				original_tag  = SPR
+			}
+			traits  = {
+				navy_chief_decisive_battle_1 
+			}
 		}
 		name="SPR_honorio_cornejo"
 		portraits={
