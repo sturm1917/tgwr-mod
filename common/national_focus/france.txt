@@ -4593,6 +4593,38 @@ focus_tree = {
 	#	ARMY FOCUS
 	###################################################
 	focus = {
+		id = FRA_ww1_wadai_war_logistics
+		icon = GFX_focus_ITA_comandante_diavolo
+		available = {
+			has_war_with = CHA
+		}
+		bypass_if_unavailable = yes
+		completion_reward = {
+			660 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_ideas = FRA_wadai_war_effort
+		}
+		ai_will_do = {
+			factor = 600
+			modifier = {
+				date > 1914.1.1
+				factor = 100
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		
+		cost = 5
+		x = 10
+		y = 7
+	}
+
+	focus = {
 		id = FRA_ww1_revision_de_larmee_de_terre
 		icon = GFX_goal_generic_army_doctrines
 		available = {
@@ -4621,9 +4653,13 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		cost = 10
-		x = 10
-		y = 7
+		prerequisite = {
+			focus = FRA_ww1_wadai_war_logistics
+		}
+		relative_position_id = FRA_ww1_wadai_war_logistics
+		cost = 5
+		x = 0
+		y = 1
 	}
 	focus = {
 		id = FRA_ww1_fund_berthier
@@ -5080,26 +5116,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			if = {
-				limit  ={
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = FRA_ww1_mechanized_effort
-					uses = 1
-					bonus = 1
-					ahead_reduction = 1
-					category = armor
-				}
-				else = {
-					add_tech_bonus = {
-						name = FRA_ww1_mechanized_effort
-						uses = 1
-						bonus = 1
-						ahead_reduction = 1
-						technology = gwtank
-					}
-				}
+			add_tech_bonus = {
+				name = FRA_ww1_mechanized_effort
+				uses = 1
+				bonus = 1
+				ahead_reduction = 1
+				category = armor
 			} 
 			set_technology = {
 				tank_design = 1
@@ -5235,7 +5257,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 3
 						tank_nsb_armor_upgrade = 3
 					}
-					icon = "gfx/interface/technologies/armor/FRA/FRA_ww1_light_tank_1.dds"
+					icon = "gfx/interface/technologies/FRA/FRA_ww1_light_tank_1.png"
 				}
 			}
 			if = {
@@ -5261,7 +5283,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 3
 						tank_nsb_armor_upgrade = 3
 					}
-					icon = "gfx/interface/technologies/armor/FRA/FRA_ww1_light_tank_2.dds"
+					icon = "gfx/interface/technologies/FRA/FRA_ww1_light_tank_2.png"
 				}
 			} 
 			if = {
@@ -5284,7 +5306,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 3
 						tank_nsb_armor_upgrade = 3
 					}
-					icon = "gfx/interface/technologies/armor/FRA/FRA_ww1_light_tank_3.dds"
+					icon = "gfx/interface/technologies/FRA/FRA_ww1_light_tank_3.png"
 				}
 			}
 			division_template = {
@@ -5598,7 +5620,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_mobile_warfare_focus
-		icon = GFX_focus_bra_iron_marshal
+		icon = GFX_generic_cavalry
 		relative_position_id = FRA_ww1_revision_de_larmee_de_terre
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre
@@ -5780,8 +5802,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = FRA_ww1_french_air_force
-				technology = airship_bomber2
+				name = FRA_ww1_old_school
+				category = airship
 				uses = 1
 				bonus = 1
 				ahead_reduction = 1
@@ -5914,7 +5936,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = FRA_ww1_french_air_force
-				technology = early_bomber
+				technology = strategic_bomber1
 				technology = tactical_bomber1
 				uses = 1
 				bonus = 1
@@ -6481,7 +6503,7 @@ focus_tree = {
 		}
 		cost = 10
 		x = 10
-		y = 12
+		y = 13
 	}
 	focus = {
 		id = FRA_ww1_metropolitan_investments
@@ -7251,7 +7273,7 @@ focus_tree = {
 		}
 		cost = 10
 		x = 18
-		y = 16
+		y = 17
 	}
 	focus = {
 		id = FRA_ww1_decision_on_losers
@@ -7856,7 +7878,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 9
 						tank_nsb_armor_upgrade = 3
 					}
-					icon = "gfx/interface/technologies/armor/FRA/FRA_ww1_super_heavy_tank.dds"
+					icon = "gfx/interface/technologies/FRA/FRA_ww1_super_heavy_tank.png"
 				}
 				division_template = {
 					name = "Section d'attaque de forteresse"

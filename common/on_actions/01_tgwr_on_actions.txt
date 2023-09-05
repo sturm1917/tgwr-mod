@@ -4147,7 +4147,6 @@ on_actions = {
 						15 = { TUR = { set_country_flag = TUR_HURRIYET_VE_ITILAF } }
 						15 = { TUR = { set_country_flag = TUR_PROTECT_DEMOCRACY } }
 						15 = { TUR = { set_country_flag = TUR_VATAN_VE_HURRIYET_CEMIYETI } }
-						15 = { TUR = { set_country_flag = TUR_ENVERS_FEVER_DREAM } }
 						15 = { TUR = { set_country_flag = TUR_FORM_A_LEFTIST_PARLIAMENT } }
 					}
 				}
@@ -6248,6 +6247,55 @@ on_actions = {
 						original_tag = KEN
 					}
 					set_cosmetic_tag = KEN_colonial			
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_russia_a_monarchy = no
+						SIA = {
+							NOT = {
+								has_government = neutrality
+							}	
+						}	
+					}					
+				}
+				RUS = {
+					diplomatic_relation = {
+						country = SIA
+						relation = guarantee
+						active = no
+					}
+					remove_opinion_modifier = {
+						target = SIA
+						modifier = personal_friendship
+					}	
+				}
+				SIA = {
+					remove_opinion_modifier = {
+						target = RUS
+						modifier = personal_friendship
+					}					
+				}	
+			}
+			if = {
+				limit = {
+					is_russia_a_monarchy = yes
+					SIA = {
+						has_government = neutrality	
+					}
+				}
+				RUS = {
+					add_opinion_modifier = {
+						target = SIA
+						modifier = personal_friendship
+					}
+				}	
+				SIA = {
+					add_opinion_modifier = {
+						target = RUS
+						modifier = personal_friendship
+					}
 				}
 			}
 		}

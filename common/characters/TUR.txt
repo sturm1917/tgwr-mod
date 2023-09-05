@@ -46,7 +46,8 @@ characters = {
 			}
 			visible = {
 				not = {
-					has_country_flag = TUR_communist_purge 
+					hidden_trigger = { has_character_flag = TUR_in_libya }
+					has_country_flag = TUR_communist_purge
 					and = {
 						not = {
 							has_country_flag = TUR_national_movement_tag
@@ -70,8 +71,8 @@ characters = {
 			available = {
 				is_country_leader = no	
 				or = {
-					has_government = fascism 
-					has_government = neutrality 
+					has_government = fascism
+					has_government = neutrality
 				}
 				NOT = {
 					has_completed_focus = TUR_vatan_ve_hurriyet_cemiyeti
@@ -89,6 +90,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = { media_personality harsh_leader politically_connected trait_TUR_ittihadist_radical_sympathies aggressive_assaulter }
+			visible = { NOT = { hidden_trigger = { has_character_flag = TUR_in_libya } } }
 			skill = 1
 			attack_skill = 2
 			defense_skill = 2
@@ -98,11 +100,7 @@ characters = {
 		}
 		country_leader = {
 			ideology = ittihadism
-			traits = { turanist tur_hero_of_freedom }
-		}
-		country_leader = {
-			ideology = despotism
-			traits = { tur_hero_of_freedom_neutrality }
+			traits = { TUR_hero_of_freedom }
 		}
 	}
 	TUR_refik_nevzat = {
@@ -857,6 +855,10 @@ characters = {
 			}
 		}
 		country_leader = {
+			ideology = despotism
+			traits = { TUR_ruthless_revanchist_leader }
+		}
+		country_leader = {
 			ideology = ittihadism
 			traits = { TUR_ruthless_revanchist_leader }
 		}
@@ -879,9 +881,10 @@ characters = {
 			}
 			visible = {
 				not = {
-					has_country_flag = TUR_communist_purge 
-					has_country_flag = TUR_purge_ittihadists 
-					has_country_flag = had_ittihadist_government 
+					has_country_flag = TUR_communist_purge
+					has_country_flag = TUR_purge_ittihadists
+					has_country_flag = had_ittihadist_government
+					hidden_trigger = { has_character_flag = TUR_in_libya }
 				}
 			}
 			available = {
@@ -921,9 +924,10 @@ characters = {
 			}
 			visible = {
 				not = {
-					has_country_flag = TUR_communist_purge 
-					has_country_flag = TUR_purge_ittihadists 
-					has_country_flag = had_ittihadist_government 
+					has_country_flag = TUR_communist_purge
+					has_country_flag = TUR_purge_ittihadists
+					has_country_flag = had_ittihadist_government
+					hidden_trigger = { has_character_flag = TUR_in_libya }
 				}
 			}
 			ai_will_do = {
@@ -937,6 +941,9 @@ characters = {
 			}
 		}
 		corps_commander = {
+			visible = {
+				NOT = { hidden_trigger = { has_character_flag = TUR_in_libya } }
+			}
 			traits = { brilliant_strategist trait_cautious trait_TUR_ittihadist_sympathies }
 			skill = 3
 			attack_skill = 2
@@ -1100,12 +1107,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { brilliant_strategist trait_TUR_ittihadist_radical_sympathies }
+			traits = { inflexible_strategist desert_fox }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
 			planning_skill = 3
-			logistics_skill = 4
+			logistics_skill = 2
 			legacy_id = 90516
 		}
 	}
@@ -1701,11 +1708,12 @@ characters = {
 					pan_turkic_sociologist 
 				}
 				available = {
-					or = {
-						has_country_leader = {
-							character = TUR_mustafa_kemal
-							ruling_only = yes
-						}
+					OR = {
+						has_government = neutrality
+						has_government = fascism
+					}
+					NOT = {
+						has_completed_focus = TUR_legacy_of_the_4th_lancers
 					}
 				}
 				ai_will_do = {
@@ -1949,7 +1957,7 @@ characters = {
 				original_tag = TUR
 			}
 			visible = {
-				NIT = {
+				NOT = {
 					has_country_flag = TUR_purge_ittihadists 
 				}
 			}

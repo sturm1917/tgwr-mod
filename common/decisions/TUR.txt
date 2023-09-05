@@ -67,7 +67,7 @@ debug_decisions = {
 				value = 0.2
 			}
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = 0.2
 			}
 			add_power_balance_value = {
@@ -105,7 +105,7 @@ debug_decisions = {
 				value = -0.2
 			}
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = -0.2
 			}
 			add_power_balance_value = {
@@ -7502,7 +7502,7 @@ TUR_minority_decision = {
 			consumer_goods_factor = 0.03
 		}
 		visible = {
-			has_completed_focus = TUR_return_the_autonomy_for_serbia
+			has_completed_focus = TUR_autonomous_romanian_vilayets
 			controls_state = FROM
 			FROM = {
 				has_state_flag = TUR_romanian_state
@@ -11305,6 +11305,13 @@ TUR_minority_decision = {
 					}
 				}
 			}
+			modifier = {
+				add = 0
+				is_historical_focus_on = yes
+				FROM = {
+					state = 200
+				}
+			}
 		}
 	}
 	TUR_extermination_of_greeks = {
@@ -11345,7 +11352,7 @@ TUR_minority_decision = {
 			182
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			has_completed_focus = TUR_greek_deportations
 			controls_state = FROM
@@ -11628,7 +11635,7 @@ TUR_minority_decision = {
 			848
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			has_completed_focus = TUR_albanian_hunt
 			controls_state = FROM
@@ -11707,7 +11714,7 @@ TUR_minority_decision = {
 			821
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			has_completed_focus = TUR_martial_law_in_romania
 			controls_state = FROM
@@ -11776,7 +11783,7 @@ TUR_minority_decision = {
 			highlight_state_targets = { state = 352 }
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		cancel_trigger = {
 			NOT = { 352 = { is_controlled_by = ROOT } }
 		}
@@ -11860,7 +11867,7 @@ TUR_minority_decision = {
 			818
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			has_completed_focus = TUR_temporary_law_of_deportation
 			controls_state = FROM
@@ -12012,7 +12019,7 @@ TUR_minority_decision = {
 			highlight_state_targets = { state = 828 }
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		cancel_trigger = {
 			NOT = { 828 = { is_controlled_by = ROOT } }
 		}
@@ -12088,16 +12095,13 @@ TUR_minority_decision = {
 			828
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
-			has_completed_focus = TUR_an_alliance_with_the_kurds
+			has_completed_focus = TUR_temporary_law_of_deportation
 			controls_state = FROM
 			FROM = {
 				has_state_flag = TUR_assyrian_state
 				has_dynamic_modifier = { modifier = TUR_assyrian_minority }
-			}
-			NOT = {
-				has_completed_focus = TUR_an_alliance_with_the_kurds
 			}
 		}
 		complete_effect = {
@@ -12189,7 +12193,7 @@ TUR_minority_decision = {
 			421
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			OR = {
 				has_completed_focus = TUR_sedentarization_of_kurdish_tribes
@@ -12312,7 +12316,7 @@ TUR_minority_decision = {
 			421
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			has_completed_focus = TUR_forceful_assimilation_of_the_kurds
 			controls_state = FROM
@@ -12423,7 +12427,7 @@ TUR_minority_decision = {
 			233
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			has_completed_focus = TUR_cleanse_caucasus
 			controls_state = FROM
@@ -12583,7 +12587,7 @@ TUR_minority_decision = {
 			448
 		}
 		on_map_mode = map_only
-		days_remove = 70
+		days_remove = 30
 		visible = {
 			OR = {
 				has_completed_focus = TUR_expand_control_over_levant
@@ -12838,7 +12842,7 @@ TUR_minority_decision = {
 			419
 			421
 		}
-		days_remove = 70
+		days_remove = 30
 		on_map_mode = map_only
 		visible = {
 			has_completed_focus = TUR_exterminate_kurds
@@ -16020,7 +16024,7 @@ TUR_minority_decision = {
 			}
 		}
 		ai_will_do = {
-			base = 0
+			base = 50
 			modifier = {
 				add = 1000
 				is_historical_focus_on = yes
@@ -17731,7 +17735,13 @@ TUR_ittihadist_coup_decisions = {
 				}
 			}
 			custom_effect_tooltip = TUR_CUP_prepares_coup_mission_tooltip
-			unlock_national_focus = TUR_raid_on_sublime_porte
+			if = {
+				limit = {
+					has_completed_focus = TUR_savior_officer_coup
+				}
+				complete_national_focus = TUR_raid_on_sublime_porte
+			}
+			set_country_flag = TUR_raid_on_sublime_porte
 			every_unit_leader = {
 				limit = {
 					has_trait = trait_TUR_halaskar_zabitan_member
@@ -17770,7 +17780,13 @@ TUR_ittihadist_coup_decisions = {
 		}
 		timeout_effect = {
 			remove_mission = TUR_CUP_prepares_coup_mission
-			unlock_national_focus = TUR_avert_the_ittihadist_coup
+			if = {
+				limit = {
+					has_completed_focus = TUR_savior_officer_coup
+				}
+				complete_national_focus = TUR_avert_the_ittihadist_coup
+			}
+			set_country_flag = TUR_avert_the_ittihadist_coup
 			set_country_flag = TUR_CUP_coup_fails
 			add_stability = 0.05
 			add_political_power = 85
@@ -18066,11 +18082,11 @@ TUR_ittihadist_coup_decisions = {
 			add_stability = -0.05
 			add_days_mission_timeout = {
 				mission = TUR_CUP_prepares_coup_mission
-				days = 40
+				days = 5
 			}
 			add_days_mission_timeout = {
 				mission = TUR_CUP_coup_averted
-				days = 45
+				days = -20
 			}
 		}
 		ai_will_do = {
@@ -18603,7 +18619,7 @@ TUR_local_conscription = {
 		visible = {
 			OR = {
 				has_completed_focus = TUR_the_new_recruitment_law
-				has_completed_focus = TUR_increase_forced_conscription
+				#has_completed_focus = TUR_increase_forced_conscription
 			}
 		}
 		complete_effect = {
@@ -18904,7 +18920,8 @@ political_actions = {
 			original_tag = TUR
 		}
 		visible = {
-			has_completed_focus = TUR_when_the_wolf_howls
+			always = no
+			#has_completed_focus = TUR_when_the_wolf_howls
 			NOT = { has_war_with = AFG }
 		}
 		available = {
@@ -22167,7 +22184,7 @@ TUR_economy_decision = {
 						check_variable = {
 							var = TUR_berlin_baghdad_railway_variable
 							value = 9
-							compare = greater_than_or_equals
+							compare = greater_than
 						}
 						AND = {
 							NOT = {
@@ -25504,6 +25521,163 @@ TUR_reclaiming_ahd_i_milli = {
 }
 
 TUR_panturkism_decision = {
+	TUR_investment_in_turkic_country = {
+		icon = GFX_decision_generic_construction
+		allowed = { 
+			original_tag = TUR
+		}
+		visible = {
+			has_completed_focus = TUR_turkic_economic_aid
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_of = TUR
+				}
+			}
+		}
+		cost = 15
+		available = {
+			num_of_available_civilian_factories > 2
+		}
+		days_remove = 180
+		target_trigger = {
+			FROM = {
+				tag = AZR
+				tag = CRI
+				tag = KAZ
+				tag = BUK
+				tag = TRK
+				tag = KUM
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		complete_effect = {
+			FROM = {
+				add_ideas = TUR_ottoman_industrial_investment
+			}
+		}
+		remove_effect = {
+			FROM = {
+				remove_ideas = TUR_ottoman_industrial_investment
+			}
+		}
+	}
+	TUR_military_mission_to_turkic_country = {
+		icon = GFX_decision_generic_army_support
+		allowed = { 
+			original_tag = TUR
+		}
+		visible = {
+			has_completed_focus = TUR_military_mission_to_turkic_countries
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_of = TUR
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+		}
+		cost = 15
+		days_remove = 180
+		target_trigger = {
+			FROM = {
+				tag = AZR
+				tag = CRI
+				tag = KAZ
+				tag = BUK
+				tag = TRK
+				tag = KUM
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 50
+		}
+		complete_effect = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 500
+				target = FROM
+			}
+			FROM = {
+				add_ideas = TUR_ottoman_military_mission
+			}
+		}
+		remove_effect = {
+			FROM = {
+				remove_ideas = TUR_ottoman_military_mission
+			}
+		}
+	}
+	TUR_invite_turkic_member_to_faction = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		allowed = {
+			original_tag = TUR
+		}
+		visible = {
+			has_completed_focus = TUR_turkic_unity
+			FROM = {
+				is_subject = no
+				NOT = { has_country_flag = TUR_asked_us_to_join_turkic_unity }
+			}
+			is_faction_leader = yes
+		}
+		target_trigger = {
+			FROM = {
+				tag = AZR
+				tag = CRI
+				tag = KAZ
+				tag = BUK
+				tag = TRK
+				tag = KUM
+			}
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				add = -80
+				FROM = {
+					is_major = yes
+					has_war = yes
+				}
+			}
+			modifier = {
+				add = 50
+				FROM = {
+					is_major = no
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = FROM
+					value < 0
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				country_event = { id = ottoman.194 hours = 8 }
+				set_country_flag = {
+					flag = TUR_asked_us_to_join_turkic_unity
+					days = 180
+					value = 1
+				}
+			}
+		}
+	}
 	TUR_proclaim_turan = {
 		icon = generic_form_nation
 		allowed = {
@@ -25523,7 +25697,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 			NOT = { has_country_flag = TUR_formed_turan }
 		}
 
@@ -25560,7 +25734,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25600,7 +25774,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25637,7 +25811,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25671,7 +25845,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25702,7 +25876,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25734,7 +25908,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25771,7 +25945,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25807,7 +25981,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25842,7 +26016,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25879,7 +26053,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_hunnic_turan
+			always = no #has_completed_focus = TUR_hunnic_turan
 		}
 
 		complete_effect = {
@@ -25915,7 +26089,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_proclaim_turkic_unity
+			always = no #has_completed_focus = TUR_proclaim_turkic_unity
 		}
 
 		complete_effect = {
@@ -25952,7 +26126,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_unify_with_mongolians
+			always = no #has_completed_focus = TUR_unify_with_mongolians
 		}
 
 		complete_effect = {
@@ -25987,7 +26161,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_finno_turkic_unity
+			always = no #has_completed_focus = TUR_finno_turkic_unity
 		}
 
 		complete_effect = {
@@ -26026,7 +26200,7 @@ TUR_panturkism_decision = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_finno_turkic_unity
+			always = no #has_completed_focus = TUR_finno_turkic_unity
 		}
 
 		complete_effect = {
@@ -30078,7 +30252,7 @@ TUR_conservative_liberal_decisions = {
 		modifier = {
 			political_power_gain = 0.15
 			consumer_goods_factor = 0.05
-			power_balance_daily = -0.003
+			power_balance_daily = -0.002
 		}
 		ai_will_do = {
 			base = 0
@@ -30541,7 +30715,7 @@ TUR_inner_party_factionalism_decisions = {
 	}
 }
 
-TUR_national_coalition_decisions = {
+TUR_anti_imperialist_revanchist_struggle_decisions = {
 	TUR_regulations_on_the_economy = {
 		allowed = {
 			original_tag = TUR
@@ -30556,7 +30730,7 @@ TUR_national_coalition_decisions = {
 			consumer_goods_factor = -0.05
 			min_export = -0.15
 			production_speed_buildings_factor = -0.05
-			power_balance_daily = -0.003
+			power_balance_daily = -0.002
 		}
 		ai_will_do = {
 			factor = 0
@@ -30577,7 +30751,7 @@ TUR_national_coalition_decisions = {
 			min_export = 0.15
 			production_speed_industrial_complex_factor = 0.15
 			production_speed_arms_factory_factor = -0.15
-			power_balance_daily = 0.003
+			power_balance_daily = 0.002
 		}
 		ai_will_do = {
 			factor = 0
@@ -30601,7 +30775,7 @@ TUR_national_coalition_decisions = {
 				add_resistance = 10
 			}
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = -0.15
 			}
 		}
@@ -30632,7 +30806,7 @@ TUR_national_coalition_decisions = {
 				add_compliance = 15
 			}
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = 0.15
 			}
 		}
@@ -30666,7 +30840,7 @@ TUR_national_coalition_decisions = {
 				}
 			}
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = -0.05
 			}
 		}
@@ -30736,7 +30910,7 @@ TUR_national_coalition_decisions = {
 				}
 			}
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = 0.05
 			}
 		}
@@ -30760,7 +30934,7 @@ TUR_national_coalition_decisions = {
 		complete_effect = {
 			add_ideas = TUR_state_courts
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = -0.30
 			}
 		}
@@ -30781,7 +30955,7 @@ TUR_national_coalition_decisions = {
 		complete_effect = {
 			remove_ideas = TUR_state_courts
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = 0.30
 			}
 		}
@@ -30805,7 +30979,7 @@ TUR_national_coalition_decisions = {
 		complete_effect = {
 			add_ideas = TUR_independent_courts
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = 0.30
 			}
 		}
@@ -30826,7 +31000,7 @@ TUR_national_coalition_decisions = {
 		complete_effect = {
 			remove_ideas = TUR_independent_courts
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = -0.30
 			}
 		}
@@ -30847,7 +31021,7 @@ TUR_national_coalition_decisions = {
 				add_extra_state_shared_building_slots = 1
 			}
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = -0.15
 			}
 		}
@@ -30869,7 +31043,7 @@ TUR_national_coalition_decisions = {
 		complete_effect = {
 			add_stability = 0.02
 			add_power_balance_value = {
-				id = TUR_national_coalition
+				id = TUR_anti_imperialist_revanchist_struggle
 				value = 0.15
 			}
 		}
@@ -30895,7 +31069,7 @@ TUR_army_civilian_struggle_decisions = {
 			navy_experience = 15
 			add_power_balance_value = {
 				id = TUR_army_civilian_struggle
-				value = -0.15
+				value = -0.1
 			}
 		}
 		ai_will_do = {
@@ -30904,7 +31078,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range < TUR_army_civilian_struggle_army_medium_control
+					range > TUR_army_civilian_struggle_army_medium_control
 				}
 			}
 		}
@@ -30922,7 +31096,7 @@ TUR_army_civilian_struggle_decisions = {
 			add_stability = 0.05
 			add_power_balance_value = {
 				id = TUR_army_civilian_struggle
-				value = 0.15
+				value = 0.1
 			}
 		}
 		ai_will_do = {
@@ -30931,7 +31105,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range > TUR_army_civilian_struggle_army_high_control
+					range < TUR_army_civilian_struggle_army_high_control
 				}
 			}
 		}
@@ -30947,7 +31121,7 @@ TUR_army_civilian_struggle_decisions = {
 		modifier = {
 			army_org_factor = 0.1
 			supply_consumption_factor = -0.15
-			power_balance_daily = -0.003
+			power_balance_daily = -0.002
 		}
 		ai_will_do = {
 			base = 0
@@ -30955,7 +31129,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range < TUR_army_civilian_struggle_army_medium_control
+					range > TUR_army_civilian_struggle_army_medium_control
 				}
 			}
 		}
@@ -30970,7 +31144,7 @@ TUR_army_civilian_struggle_decisions = {
 		days_remove = 70
 		modifier = {
 			stability_weekly = 0.005
-			power_balance_daily = 0.003
+			power_balance_daily = 0.002
 		}
 		ai_will_do = {
 			base = 0
@@ -30978,7 +31152,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range > TUR_army_civilian_struggle_army_high_control
+					range < TUR_army_civilian_struggle_army_high_control
 				}
 			}
 		}
@@ -30996,7 +31170,7 @@ TUR_army_civilian_struggle_decisions = {
 			production_speed_industrial_complex_factor = -0.15
 			conversion_cost_civ_to_mil_factor = 0.15
 			conversion_cost_mil_to_civ_factor = -0.15
-			power_balance_daily = -0.003
+			power_balance_daily = -0.002
 		}
 		ai_will_do = {
 			base = 0
@@ -31004,7 +31178,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range < TUR_army_civilian_struggle_army_medium_control
+					range > TUR_army_civilian_struggle_army_medium_control
 				}
 			}
 		}
@@ -31022,7 +31196,7 @@ TUR_army_civilian_struggle_decisions = {
 			production_speed_industrial_complex_factor = 0.1
 			conversion_cost_civ_to_mil_factor = -0.15
 			conversion_cost_mil_to_civ_factor = 0.15
-			power_balance_daily = 0.003
+			power_balance_daily = 0.002
 		}
 		ai_will_do = {
 			base = 0
@@ -31030,7 +31204,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range > TUR_army_civilian_struggle_army_high_control
+					range < TUR_army_civilian_struggle_army_high_control
 				}
 			}
 		}
@@ -31056,7 +31230,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range < TUR_army_civilian_struggle_army_medium_control
+					range > TUR_army_civilian_struggle_army_medium_control
 				}
 			}
 		}
@@ -31082,7 +31256,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range > TUR_army_civilian_struggle_army_high_control
+					range < TUR_army_civilian_struggle_army_high_control
 				}
 			}
 		}
@@ -31115,7 +31289,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range < TUR_army_civilian_struggle_army_medium_control
+					range > TUR_army_civilian_struggle_army_medium_control
 				}
 			}
 		}
@@ -31146,7 +31320,7 @@ TUR_army_civilian_struggle_decisions = {
 				add = 100
 				is_power_balance_in_range = {
 					id = TUR_army_civilian_struggle
-					range > TUR_army_civilian_struggle_army_high_control
+					range < TUR_army_civilian_struggle_army_high_control
 				}
 			}
 		}
@@ -31166,7 +31340,7 @@ TUR_al_qahtaniya_factionalism_decisions = {
 			consumer_goods_factor = 0.05
 			production_speed_buildings_factor = 0.15
 			min_export = 0.15
-			power_balance_daily = 0.003
+			power_balance_daily = 0.002
 		}
 		ai_will_do = {
 			factor = 0
@@ -31184,7 +31358,7 @@ TUR_al_qahtaniya_factionalism_decisions = {
 			consumer_goods_factor = -0.03
 			production_speed_buildings_factor = -0.1
 			min_export = -0.1
-			power_balance_daily = -0.003
+			power_balance_daily = -0.002
 		}
 		ai_will_do = {
 			factor = 0
@@ -31404,7 +31578,7 @@ TUR_leftist_coalition_decisions = {
 			has_country_leader_with_trait = TUR_ittihadist_socialist
 		}
 		modifier = {
-			power_balance_daily = 0.003
+			power_balance_daily = 0.002
 		}
 		ai_will_do = {
 			factor = 0
@@ -31422,7 +31596,7 @@ TUR_leftist_coalition_decisions = {
 			has_country_leader_with_trait = TUR_just_socialist
 		}
 		modifier = {
-			power_balance_daily = -0.003
+			power_balance_daily = -0.002
 		}
 		ai_will_do = {
 			factor = 0
