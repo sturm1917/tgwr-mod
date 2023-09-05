@@ -551,6 +551,7 @@ ideas = {
 				NOT = {
 					has_government = communism
 				}
+			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.02
@@ -694,6 +695,11 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.003
@@ -705,6 +711,11 @@ ideas = {
 		picture = regional_autonomy_movements
 			allowed = {
 				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
 			}
 			removal_cost = -1
 			modifier = {
@@ -735,6 +746,11 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
@@ -746,6 +762,11 @@ ideas = {
 		picture = regional_autonomy_movements
 			allowed = {
 				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
 			}
 			removal_cost = -1
 			modifier = {

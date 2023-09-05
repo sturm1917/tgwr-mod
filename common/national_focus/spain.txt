@@ -1165,7 +1165,7 @@ focus_tree = {
 				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_weak_catholicism }
+				limit = { has_idea = SPR_idea_weak_catholicism } 
 				swap_ideas = {
 					remove_idea = SPR_idea_weak_catholicism
 					add_idea = SPR_idea_freedom_of_religion
