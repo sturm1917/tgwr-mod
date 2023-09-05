@@ -87,9 +87,11 @@ recruit_character = SPR_lucas_puente
 	add_ideas = {
 		neutrality_idea
 		limited_conscription
-		SPR_idea_movements_for_regional_autonomy
+		SPR_idea_plots_for_regional_autonomy
 		SPR_idea_strong_catholicism
 		SPR_idea_prime_minister_jose
+		SPR_idea_split_liberal_party
+		SPR_idea_fractured_conservative_party
 	}
 }
 1914.1.1 = {

@@ -248,6 +248,82 @@ scripted_effect_increase_in_sold_colonies = {
 	}
 }
 
+scripted_effect_drop_in_regional_demands = {
+	IF = {
+		limit = {
+			has_idea = SPR_idea_whispers_for_regional_autonomy
+		}
+		remove_idea = SPR_idea_whispers_for_regional_autonomy
+	}
+	IF = {
+		limit = {
+			has_idea = SPR_idea_protests_for_regional_autonomy
+		}
+		swap_ideas = {
+			remove_idea = SPR_idea_protests_for_regional_autonomy 
+			add_idea = SPR_idea_whispers_for_regional_autonomy 
+		}
+	}
+	IF = {
+		limit = {
+			has_idea = SPR_idea_movements_for_regional_autonomy
+		}
+		swap_ideas = {
+			remove_idea = SPR_idea_movements_for_regional_autonomy
+			add_idea = SPR_idea_protests_for_regional_autonomy
+		}
+	}
+	IF = {
+		limit = {
+			has_idea = SPR_idea_plots_for_regional_autonomy
+		}
+		swap_ideas = {
+			remove_idea = SPR_idea_plots_for_regional_autonomy 
+			add_idea = SPR_idea_movements_for_regional_autonomy 
+		}
+	}
+}
+
+scripted_effect_increase_in_regional_demands = {
+
+	IF = {
+		limit = {
+			has_idea = SPR_idea_plots_for_regional_autonomy
+		}
+		swap_ideas = {
+			remove_idea = SPR_idea_plots_for_regional_autonomy 
+			add_idea = SPR_idea_revolutionary_calls_for_regional_autonomy 
+		}
+	}
+	IF = {
+		limit = {
+			has_idea = SPR_idea_movements_for_regional_autonomy
+		}
+		swap_ideas = {
+			remove_idea = SPR_idea_movements_for_regional_autonomy 
+			add_idea = SPR_idea_plots_for_regional_autonomy 
+		}
+	}
+	IF = {
+		limit = {
+			has_idea = SPR_idea_protests_for_regional_autonomy
+		}
+		swap_ideas = {
+			remove_idea = SPR_idea_protests_for_regional_autonomy 
+			add_idea = SPR_idea_movements_for_regional_autonomy 
+		}
+	}
+	IF = {
+		limit = {
+			has_idea = SPR_idea_whispers_for_regional_autonomy 
+		}
+		swap_ideas = {
+			remove_idea = SPR_idea_whispers_for_regional_autonomy 
+			add_idea = SPR_idea_protests_for_regional_autonomy 
+		}
+	}
+}
+
 scripted_effect_two_party_shenanigans = {
 	IF = {
 		limit = {

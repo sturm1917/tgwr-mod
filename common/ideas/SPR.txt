@@ -537,25 +537,179 @@ ideas = {
 				}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.03
-				IF = {
-					limit = { 
-						OR = {
-							has_government = fascism
-							has_government = communism
-						}
-					}
-					research_speed_factor = -0.05
-				}
-				IF = {
-					limit = { 
-						OR = {
-							has_government = neutrality
-							has_government = democratic
-						}
-					}
-				}
+				stability_factor = -0.1
 				research_speed_factor = 0.1
+			}
+		}
+		
+		SPR_idea_muslims_in_spain = {
+			picture = raj_marginalized_muslim_community_happy
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.02
+				political_power_factor = 0.02
+				research_speed_factor = -0.02
+			}
+		}
+		
+		SPR_idea_protestant_secular_state = {
+			picture = generic_democratic_drift_bonus
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_protestantism
+						has_idea = SPR_idea_mild_protestantism
+						has_idea = SPR_idea_weak_protestantism
+						has_idea = SPR_idea_freedom_of_protestantism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.12
+			}
+		}
+		
+		SPR_idea_freedom_of_protestantism = {
+			picture = generic_democratic_drift_bonus
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_protestantism
+						has_idea = SPR_idea_mild_protestantism
+						has_idea = SPR_idea_weak_protestantism
+						has_idea = SPR_idea_protestant_secular_state
+						has_government = communism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.06
+				research_speed_factor = 0.09
+			}
+		}
+		
+		SPR_idea_weak_protestantism = {
+			picture = YUG_orthodox_church_support
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_protestantism
+						has_idea = SPR_idea_mild_protestantism
+						has_idea = SPR_idea_protestant_secular_state
+						has_idea = SPR_idea_freedom_of_protestantism
+						has_government = communism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.04
+				research_speed_factor = 0.06
+			}
+		}
+		
+		SPR_idea_mild_protestantism = {
+			picture = YUG_orthodox_church_support
+				allowed = {
+					original_tag = SPR
+				}
+				available = {
+					NOT = {
+						has_idea = SPR_idea_strong_protestantism
+						has_idea = SPR_idea_protestant_secular_state
+						has_idea = SPR_idea_freedom_of_protestantism
+						has_idea = SPR_idea_weak_protestantism
+						has_government = communism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		
+		SPR_idea_strong_protestantism = {
+			picture = YUG_orthodox_church_support
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					has_idea = SPR_idea_mild_protestantism
+					has_idea = SPR_idea_protestant_secular_state
+					has_idea = SPR_idea_freedom_of_protestantism
+					has_idea = SPR_idea_weak_protestantism
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				research_speed_factor = -0.04
+			}
+		}
+		
+		SPR_idea_protestant_nation = {
+			picture = YUG_orthodox_church_support
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					has_idea = SPR_idea_mild_protestantism
+					has_idea = SPR_idea_protestant_secular_state
+					has_idea = SPR_idea_freedom_of_protestantism
+					has_idea = SPR_idea_weak_protestantism
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.12
+				research_speed_factor = -0.08
+			}
+		}
+		
+		SPR_idea_revolutionary_calls_for_regional_autonomy = {
+		picture = regional_autonomy_movements
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.003
+				political_power_factor = -0.04
+			}
+		}
+		
+		SPR_idea_plots_for_regional_autonomy = {
+		picture = regional_autonomy_movements
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.002
+				political_power_factor = -0.04
 			}
 		}
 		
@@ -572,6 +726,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.002
+				political_power_factor = -0.02
 			}
 		}
 		
@@ -583,6 +738,30 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
+				political_power_factor = -0.02
+			}
+		}
+		
+		SPR_idea_whispers_for_regional_autonomy = {
+		picture = regional_autonomy_movements
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.001
+			}
+		}
+		
+		SPR_idea_krausism_and_scientists = {
+		picture = generic_research_bonus
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.03
+				political_power_factor = 0.03
 			}
 		}
 		
@@ -813,6 +992,89 @@ ideas = {
 				army_breakthrough_against_major_factor = 0.05
 				army_attack_factor = 0.05
 				army_speed_factor = 0.05
+			}
+		}
+		
+		SPR_idea_united_liberal_party = {
+		picture = HUN_hungarian_monarchy_democratic
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		SPR_idea_split_liberal_party = {
+		picture = usa_great_depression
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		SPR_idea_several_liberal_party = {
+		picture = usa_great_depression_2
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		SPR_idea_fractured_liberal_party = {
+		picture = usa_great_depression_3
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+		SPR_idea_united_conservative_party = {
+		picture = LIT_iron_wolf_bad_4
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				army_breakthrough_against_major_factor = 0.05
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		SPR_idea_split_conservative_party = {
+		picture = LIT_iron_wolf_bad_1
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		SPR_idea_several_conservative_party = {
+		picture = LIT_iron_wolf_bad_2
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		SPR_idea_fractured_conservative_party = {
+		picture = LIT_iron_wolf_bad_3
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
 			}
 		}
 	}
