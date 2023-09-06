@@ -1,3 +1,65 @@
+SPR_religious_policy_category = {
+	priority = 4
+	icon = GFX_decision_category_generic_monarchism
+	picture = GFX_decision_cat_picture_plot_against_boris
+	allowed = {
+		tag = SPR
+	}
+	visible = { 
+		always = yes
+	}
+}
+
+SPR_massive_strike_plans_category = {
+	priority = 6
+	icon = GFX_decision_category_SOV_permanent_revolution
+	picture = GFX_decision_cat_picture_1936_election
+	allowed = {
+		tag = SPR
+	}
+	visible = { 
+		always = yes 
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 rif_war_cat = {
 	icon = GFX_decision_category_border_conflicts
 	allowed = {

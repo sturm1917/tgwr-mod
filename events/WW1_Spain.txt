@@ -43,7 +43,7 @@ country_event = {
 		clr_global_flag = conservative_majority
 		country_event = {
 			id = ww1_spain.103
-			days = 750
+			days = 690
 		}
 		country_event = {
 			id = ww1_spain.133
@@ -642,7 +642,7 @@ country_event = {
 	trigger = {
 		original_tag = SPR
 		has_government = neutrality
-		date > 1912.10.25
+		date > 1911.11.25
 	}
 	option = {
 		name = ww1_spain.6.a
@@ -1183,15 +1183,7 @@ country_event = {
 	desc = ww1_spain.8.d
 	picture = GFX_report_event_gre_city_devastated
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 700 }
-	trigger = {
-		original_tag = SPR
-		date > 1913.3.12
-		OR = {
-			has_completed_focus = SPR_modernization_program
-			has_completed_focus = SPR_abolish_el_turno
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.8.a

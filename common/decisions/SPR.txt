@@ -1,3 +1,376 @@
+SPR_massive_strike_plans_category = {
+	SPR_general_strike_deadline = { # Timer Until massive strike
+		icon = GFX_decision_revolt
+		allowed = {
+			original_tag = SPR
+		}  
+		activation = {
+			NOT = { 
+				OR = { 
+					has_completed_focus = SPR_success_in_containing_the_three_headed_crisis
+				}
+			}
+		}
+		priority = 100
+		days_mission_timeout = 1000
+		fire_only_once = yes
+		is_good = no
+		
+		timeout_effect = {
+			set_global_flag = catalonian_revolution		
+			country_event = ww1_spain.8
+		}
+	}
+	
+	SPR_strikes_reform_one = { #Ease the workload
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = {
+			original_tag = SPR
+		} 
+		available = { 
+			NOT = { has_global_flag = catalonian_revolution }
+		}
+		visible = {
+			always = yes
+		}
+		cost = 75
+		days_re_enable = 50
+		days_remove = 100
+		modifier = {
+			industrial_capacity_factory = -0.1
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+			add_stability = 0.05
+		}
+		
+		priority = 10
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	SPR_strikes_reform_two = { #Spend more on People
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			always = yes
+		}	
+		visible = {
+			always = yes
+		}
+
+		cost = 0
+		days_re_enable = 50
+		days_remove = 100
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			add_stability = 0.05
+			add_political_power = -125
+		}
+		priority = 7
+	}
+	
+	SPR_strikes_reform_three = { #Divert towards Nationalism
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			always = yes
+		}	
+		visible = {
+			always = yes
+		}
+
+		cost = 25
+		days_re_enable = 50
+		days_remove = 100
+		modifier = {
+			political_power_factor = -0.15
+		}
+		remove_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+		priority = 7
+	}
+}
+
+SPR_religious_policy_category = {
+	
+	SPR_increase_catholicsm = { 
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = {
+			original_tag = SPR
+		} 
+		available = {
+			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
+		}	
+		visible = {
+			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
+		}
+		cost = 75
+		days_re_enable = 50
+		complete_effect  = {
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_catholic_nation
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_strong_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion}
+				swap_ideas = {
+					remove_idea = SPR_idea_freedom_of_religion
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_secular_state }
+				swap_ideas = {
+					remove_idea = SPR_idea_secular_state
+					add_idea = SPR_idea_freedom_of_religion
+				}
+			}
+		}
+		
+		priority = 10
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	SPR_decrease_catholicsm = {
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
+		}	
+		visible = {
+			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
+		}
+
+		cost = 75
+		days_re_enable = 50
+		complete_effect  = {
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_freedom_of_religion
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_catholic_nation }
+				remove_ideas = SPR_idea_catholic_nation
+				add_ideas = SPR_idea_strong_catholicism
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
+			}
+		}
+		
+		priority = 7
+	}
+	
+	SPR_increase_protestantism = { 
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			has_completed_focus = SPR_replace_the_dominant_christian_type
+		}	
+		visible = {
+			has_completed_focus = SPR_replace_the_dominant_christian_type
+		}
+
+		cost = 75
+		days_re_enable = 50
+		complete_effect  = {
+			IF = {
+				limit = { has_idea = SPR_idea_strong_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_protestantism
+					add_idea = SPR_idea_protestant_nation
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_protestantism
+					add_idea = SPR_idea_strong_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_protestantism
+					add_idea = SPR_idea_mild_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_protestantism}
+				swap_ideas = {
+					remove_idea = SPR_idea_freedom_of_protestantism
+					add_idea = SPR_idea_weak_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_protestant_secular_state }
+				swap_ideas = {
+					remove_idea = SPR_idea_protestant_secular_state
+					add_idea = SPR_idea_freedom_of_protestantism
+				}
+			}
+		}
+		
+		priority = 4
+	}
+	
+	SPR_decrease_protestantism = {
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			has_completed_focus = SPR_replace_the_dominant_christian_type
+		}	
+		visible = {
+			has_completed_focus = SPR_replace_the_dominant_christian_type
+		}
+
+		cost = 75
+		days_re_enable = 50
+		complete_effect  = {
+			IF = {
+				limit = { has_idea = SPR_idea_protestant_secular_state }
+				swap_ideas = {
+					remove_idea = SPR_idea_protestant_secular_state
+					add_idea = SPR_idea_weak_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_freedom_of_protestantism
+					add_idea = SPR_idea_weak_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_protestantism
+					add_idea = SPR_idea_mild_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_protestantism
+					add_idea = SPR_idea_strong_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_protestant_nation
+				}
+			}
+		}
+		
+		priority = 3
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 rif_war_cat = {
 	SPR_sue_for_peace_RIF = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -88,3 +461,4 @@ rif_war_cat = {
 		}
 	}
 }
+

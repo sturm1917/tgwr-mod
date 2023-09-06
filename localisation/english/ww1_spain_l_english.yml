@@ -364,7 +364,7 @@
  SPR_idea_modernization_program:0 "Spanish Modernization Program"
  SPR_idea_modernization_program_desc:0 "Proposed by Alvaro Figueroa, one of the members of the government, the modernization program hopes to make Spain more powerful and competent. While the Conservatives hope to execute this program differently, they agree with the Liberals on passing it. Hopefully this won't cause anything bad..."
  SPR_in_dev1.tt:0 "§RCurrently a Work in Progress§W"
- SPR_careful_of_religion.tt:0 "§OCareful Which Path you Pick, they will all have consequences depending on which government path you choose later on, but none of these choices will lock any paths from being available§W"
+ SPR_careful_of_religion.tt:0 "§OCareful Which Path you Pick, they will all have consequences depending on which government path you choose later on, and some of these choices will lock paths from being available§W"
  ww1_spain.70.t:0 "Espana Finished Construction"
  ww1_spain.70.d:0 "The Grand Battleship we commissioned for construction by the British Empire and the French Republic has finished construction. It's technological superiority or equality with other Naval Powers will give our navy an edge if gotten into a scrap."
  ww1_spain.70.a:0 "Excellent"
@@ -398,7 +398,7 @@
  ww1_spain.20.a:0 "Re-Legalize them by stopping Reforms"
  ww1_spain.8.t:0 "Massive Workers Strikes in Catalonia"
  ww1_spain.8.d:0 "As demonstrated by the Tragic Week of 1909, and the social crisis was faced with a workers movement. Socialists and anarchists fought against employers, with employers utilizing all manner of tactics, from scabs to pistolerismo. Socialists and anarchists employed peaceful tactics such as strikes, as well as direct actions which sometimes took the form of indiscriminate attacks, like the 1893 bombing of the Liceu in Barcelona."
- ww1_spain.8.a:0 "Disaster!"
+ ww1_spain.8.a:0 "It Begins..."
  ww1_spain.18.t:0 "Strikers Organize nationwide"
  ww1_spain.18.d:0 "Following the strikes in recent times, the workers movement in other parts of Spain was less developed, but saw the opportunity to exploit the weakness of the conflict between the industrial bourgeoisie and the government. The UGT, an established socialist union in Madrid and Basque Country, organized a revolutionary general strike in August 1917, which received the support of CNT, an anarchist union operating mainly in Catalonia. The two unions had been approaching unity, at least in their actions, since the strike in December 1916 and the so-called Zaragoza Pact. The agreement on a general strike was made in Madrid at the end of March 1917 by UGT members Julián Besteiro and Francisco Largo Caballero and CNT members Salvador Seguí and Ángel Pestaña, and included an extensive manifesto"
  ww1_spain.18.a:0 "Enough, Arrest any Leaders of This Movement and Crush it!"
@@ -486,6 +486,9 @@
  SPR_no_more_el_turno.tt:0 "§8The Back and Fourth between Liberal and Conservatives will be Removed. With Maura as the new prime minister.§W"
  SPR_converse_with_naval_powers.tt:0 "We will purchase an array of ships from one of the naval superpowers, whomever we negotiate with, we can choose to buy §Y1 battleship§W and §Y2 light cruisers§W, §Y5 destoyers§W, or §Y2 heavy cruisers§W and §Y1 destroyer§W"
  SPR_parliament_and_prime_minister.tt:0 "§WThis focus will recomplete itself every §82 years§W when there is a parliamentary election. While the parliament has influence, the real power lies in the hands of the §8Prime Minister and the King§W, with a §8liberal§W prime minister, you can only do §8liberal policies§W, and with a §8conservative§W prime minister, you can only do §8conservative policies§W. Depending on the wing of parliamentary majority you have, will determine the scale of the rewards to be reaped from focuses. For example, doing a conservative policy with a liberal parliament will reap less goods than if you had a conservative parliament§W"
+ SPR_religious_policy_category_desc:0 "Spain Religous Policy"
+ SPR_massive_strike_plans_category:0 "Massive Strike Coming"
+ SPR_massive_strike_plans_category_desc:0 "Massive Strike Coming"
  #Buy Ships Cosmetics
  spain_ships.1.ger.tt:0 "Create a §8Moltke Class§W ship from §8the German Empire§W                                                             Create a §8Ilthis Class§W ship by §8German Empire§W  Create a §8Kaiserin Augusta Class§W ship by §8German Empire§W"
  
