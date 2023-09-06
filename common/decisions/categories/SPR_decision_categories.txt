@@ -22,7 +22,17 @@ SPR_massive_strike_plans_category = {
 	}
 }
 
-
+SPR_el_turno_category = {
+	priority = 10
+	icon = GFX_decision_category_generic_democracy
+	picture = GFX_decision_cat_picture_SWI_federal_council
+	allowed = {
+		tag = SPR
+	}
+	visible = { 
+		always = yes 
+	}
+}
 
 
 

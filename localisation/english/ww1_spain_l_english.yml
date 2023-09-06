@@ -489,6 +489,14 @@
  SPR_religious_policy_category_desc:0 "Spain Religous Policy"
  SPR_massive_strike_plans_category:0 "Massive Strike Coming"
  SPR_massive_strike_plans_category_desc:0 "Massive Strike Coming"
+ SPR_liberal_reform_one:0 "Increase the Unity of the Liberal Party"
+ SPR_liberal_reform_two:0 "Pass Liberal Reforms (Completes Liberal Focuses after the next general election)"
+  SPR_conservative_reform_two_desc:0 "This will autocomplete one of the following 3 focuses if taken: Seperation of Powers, Religous Freedom, or Extensive Legislative Reforms"
+ SPR_conservative_reform_one:0 "Increase the Unity of the Conservative Party"
+ SPR_conservative_reform_two:0 "Pass Conservative Reforms (Completes Conservative Focuses after the next general election)"
+ SPR_conservative_reform_two_desc:0 "This will autocomplete one of the following 3 focuses if taken: Centralization, Push for More Catholicsm, or Extensive Traditionalist Reforms"
+ SPR_el_turno_category:0 "El Turno"
+ SPR_el_turno_category_desc:0 "Governmental Politics"
  #Buy Ships Cosmetics
  spain_ships.1.ger.tt:0 "Create a §8Moltke Class§W ship from §8the German Empire§W                                                             Create a §8Ilthis Class§W ship by §8German Empire§W  Create a §8Kaiserin Augusta Class§W ship by §8German Empire§W"
  

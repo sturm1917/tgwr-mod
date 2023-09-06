@@ -1,3 +1,190 @@
+SPR_el_turno_category = {
+
+	SPR_liberal_reform_one = { #Ease the workload
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = {
+			original_tag = SPR
+		} 
+		available = {
+			AND = {		
+				has_global_flag = new_liberal_spanish_prime_minister_in_office
+				NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
+			}
+		}
+		visible = {
+			always = yes
+		}
+		cost = 0
+		days_re_enable = 50
+		days_remove = 75
+		modifier = {
+			industrial_capacity_factory = -0.05
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+			country_event = ww1_spain.133
+			add_stability = 0.03
+		}
+		
+		priority = 10
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	SPR_liberal_reform_two = { #Spend more on People
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			AND = {		
+				has_global_flag = new_liberal_spanish_prime_minister_in_office
+				NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
+			}
+		}
+		visible = {
+			always = yes
+		}
+
+		cost = 0
+		days_re_enable = 50
+		days_remove = 100
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			add_stability = 0.05
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_liberal_majority
+						NOT = { has_completed_focus = SPR_seperation_of_powers }
+						NOT = { has_completed_focus = SPR_religious_freedom }
+						NOT = { has_completed_focus = SPR_extensive_legislative_reforms }
+					}
+				}
+				complete_national_focus = SPR_extensive_legislative_reforms
+			}
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_liberal_majority
+						NOT = { has_completed_focus = SPR_seperation_of_powers }
+						NOT = { has_completed_focus = SPR_religious_freedom }
+						has_completed_focus = SPR_extensive_legislative_reforms
+					}
+				}
+				complete_national_focus = SPR_religious_freedom
+			}
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_liberal_majority
+						NOT = { has_completed_focus = SPR_seperation_of_powers }
+						has_completed_focus = SPR_religious_freedom
+						has_completed_focus = SPR_extensive_legislative_reforms
+					}
+				}
+				complete_national_focus = SPR_seperation_of_powers
+			}
+		}
+		priority = 6
+	}
+	
+	SPR_conservative_reform_one = {
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			always = yes
+		}	
+		visible = {
+			always = yes
+		}
+
+		cost = 25
+		days_re_enable = 50
+		days_remove = 100
+		modifier = {
+			political_power_factor = -0.15
+		}
+		remove_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+			country_event = ww1_spain.131
+			add_stability = 0.03
+		}
+		priority = 7
+	}
+	SPR_conservative_reform_two = { #Divert towards Nationalism
+		icon = GFX_decision_generic_fundraising
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+			always = yes
+		}	
+		visible = {
+			always = yes
+		}
+
+		cost = 25
+		days_re_enable = 50
+		days_remove = 100
+		modifier = {
+			political_power_factor = -0.15
+		}
+		remove_effect = {
+			add_stability = 0.05
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_conservative_majority
+						NOT = { has_completed_focus = SPR_centralization }
+						NOT = { has_completed_focus = SPR_push_for_more_catholicsm }
+						NOT = { has_completed_focus = SPR_extensive_traditionalism_reforms }
+					}
+				}
+				complete_national_focus = SPR_extensive_traditionalism_reforms
+			}
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_conservative_majority
+						NOT = { has_completed_focus = SPR_centralization }
+						NOT = { has_completed_focus = SPR_push_for_more_catholicsm }
+						has_completed_focus = SPR_extensive_traditionalism_reforms
+					}
+				}
+				complete_national_focus = SPR_push_for_more_catholicsm
+			}
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_conservative_majority
+						NOT = { has_completed_focus = SPR_centralization }
+						has_completed_focus = SPR_push_for_more_catholicsm
+						has_completed_focus = SPR_extensive_traditionalism_reforms
+					}
+				}
+				complete_national_focus = SPR_centralization
+			}
+		}
+		priority = 6
+	}
+
 SPR_massive_strike_plans_category = {
 	SPR_general_strike_deadline = { # Timer Until massive strike
 		icon = GFX_decision_revolt
