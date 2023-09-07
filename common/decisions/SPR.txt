@@ -23,7 +23,7 @@ SPR_el_turno_category = {
 		remove_effect = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.3
+				popularity = 0.03
 			}
 			country_event = ww1_spain.133
 			add_stability = 0.03
@@ -124,7 +124,7 @@ SPR_el_turno_category = {
 			add_stability = 0.05
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.3
+				popularity = 0.03
 			}
 			country_event = ww1_spain.131
 			add_stability = 0.03
@@ -199,10 +199,16 @@ SPR_massive_strike_plans_category = {
 			original_tag = SPR
 		}  
 		activation = {
+			always = yes
 			NOT = { 
 				OR = { 
 					has_completed_focus = SPR_success_in_containing_the_three_headed_crisis
 				}
+			}
+		}
+		available = {
+			OR = { 
+				has_completed_focus = SPR_arrest_signatories_of_the_manifesto
 			}
 		}
 		priority = 100
@@ -236,11 +242,11 @@ SPR_massive_strike_plans_category = {
 		remove_effect = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.3
+				popularity = 0.03
 			}
 			add_popularity = {
 				ideology = communism
-				popularity = 0.3
+				popularity = 0.03
 			}
 			add_stability = 0.05
 		}
@@ -292,7 +298,7 @@ SPR_massive_strike_plans_category = {
 			always = yes
 		}
 
-		cost = 25
+		cost = 75
 		days_re_enable = 50
 		days_remove = 100
 		modifier = {
@@ -302,7 +308,7 @@ SPR_massive_strike_plans_category = {
 			add_stability = 0.05
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.3
+				popularity = 0.075
 			}
 		}
 		priority = 7
