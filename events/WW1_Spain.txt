@@ -660,6 +660,12 @@ country_event = {
 					days = 5
 				}
 			}
+
+			country_event = {
+				id = ww1_spain.132
+				days = 5
+			}
+			
 		}
 	}
 }
@@ -732,6 +738,12 @@ country_event = {
 			scripted_effect_new_spanish_prime_minister = yes
 		}
 		clr_global_flag = new_spanish_prime_minister
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.132
+				days = 5
+			}
+		}
 	}
 }
 
@@ -767,10 +779,17 @@ country_event = {
 		
 		hidden_effect = {
 			IF = {
+				limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 				country_event = { 
 					id = ww1_spain.47
 					days = 105
 					random_days = 140
+				}
+				hidden_effect = {
+					country_event = {
+						id = ww1_spain.130
+						days = 5
+					}
 				}
 			}
 		}
@@ -800,6 +819,10 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = dato_leaves_office
+		country_event = {
+			id = ww1_spain.131
+			days = 5
+		}
 	}
 }
 
@@ -871,6 +894,12 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = prieto_leaves_office
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.132
+				days = 5
+			}
+		}
 	}
 }
 
@@ -913,6 +942,12 @@ country_event = {
 					random_days = 140
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
+			}
 		}
 		
 		#Important\/
@@ -941,6 +976,12 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = maura_leaves_office
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.130
+				days = 5
+			}
+		}
 	}
 }
 
@@ -1011,6 +1052,10 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = manuel_leaves_office
+		country_event = {
+			id = ww1_spain.130
+			days = 5
+		}
 	}
 }
 
@@ -1042,6 +1087,12 @@ country_event = {
 					id = ww1_spain.37 
 					days = 5
 				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.130
+				days = 5
 			}
 		}
 	}
@@ -1119,6 +1170,12 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = sanchez_leaves_office
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.130
+				days = 5
+			}
+		}
 	}
 }
 
@@ -1145,6 +1202,16 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = SPR_flag_juntas_operate
 		complete_national_focus = SPR_military_juntas_operate_illegally
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.132
+				days = 5
+			}
+			country_event = {
+				id = ww1_spain.130
+				days = 5
+			}
+		}
 	}
 }
 
@@ -1191,6 +1258,16 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = proletariat_strikes
 		complete_national_focus = SPR_proletariat_strikes
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.132
+				days = 5
+			}
+			country_event = {
+				id = ww1_spain.130
+				days = 5
+			}
+		}
 	}
 }
 
@@ -1241,6 +1318,16 @@ country_event = {
 		add_stability = -0.01
 		ai_chance = { factor = 10 }
 		set_global_flag = catalonia_rises
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.132
+				days = 5
+			}
+			country_event = {
+				id = ww1_spain.130
+				days = 5
+			}
+		}
 	}
 }
 

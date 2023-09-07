@@ -1845,11 +1845,11 @@ focus_tree = {
 			}
 			hidden_effect = {
 				country_event = {
-					id = ww1_spain.133
+					id = ww1_spain.132
 					days = 5
 				}
 				country_event = {
-					id = ww1_spain.131
+					id = ww1_spain.130
 					days = 5
 				}
 			}
