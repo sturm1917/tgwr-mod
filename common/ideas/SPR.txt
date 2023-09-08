@@ -690,15 +690,28 @@ ideas = {
 			}
 		}
 		
+		SPR_idea_sunday_off = {
+			picture = hol_the_foundations_of_defense
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		
 		SPR_idea_revolutionary_calls_for_regional_autonomy = {
 		picture = regional_autonomy_movements
 			allowed = {
 				original_tag = SPR
 			}
 			available = {
-				NOT = {
-					has_government = fascism
-				}
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -713,9 +726,7 @@ ideas = {
 				original_tag = SPR
 			}
 			available = {
-				NOT = {
-					has_government = fascism
-				}
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -730,9 +741,7 @@ ideas = {
 				original_tag = SPR
 			}
 			available = {
-				NOT = {
-					has_government = fascism
-				}
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -747,9 +756,7 @@ ideas = {
 				original_tag = SPR
 			}
 			available = {
-				NOT = {
-					has_government = fascism
-				}
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -764,9 +771,7 @@ ideas = {
 				original_tag = SPR
 			}
 			available = {
-				NOT = {
-					has_government = fascism
-				}
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -792,10 +797,7 @@ ideas = {
 				original_tag = SPR
 			}
 			available = {
-				NOT = {
-					has_government = communism
-					has_government = fascism
-				}
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -1008,6 +1010,11 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				FRA = {
+					has_war_with = GER
+				}
+			}
 			removal_cost = -1
 			modifier = {
 				army_breakthrough_against_major_factor = 0.05
@@ -1021,6 +1028,9 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				always = yes
+			}
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.05
@@ -1031,6 +1041,9 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				always = yes
+			}
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.05
@@ -1040,6 +1053,9 @@ ideas = {
 		picture = usa_great_depression_2
 			allowed = {
 				original_tag = SPR
+			}
+			available = {
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -1061,6 +1077,9 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				always = yes
+			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.02
@@ -1072,6 +1091,9 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				always = yes
+			}
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.05
@@ -1081,6 +1103,9 @@ ideas = {
 		picture = LIT_iron_wolf_bad_2
 			allowed = {
 				original_tag = SPR
+			}
+			available = {
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -1092,9 +1117,55 @@ ideas = {
 			allowed = {
 				original_tag = SPR
 			}
+			available = {
+				always = yes
+			}
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.15
+			}
+		}
+		SPR_idea_planned_economy = {
+		picture = generic_communist_army
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.35
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.125
+			}
+		}
+		SPR_idea_anarchists = {
+		picture = nkvd_2
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_weekly_factor = -0.075
+			}
+		}
+		SPR_idea_no_usurpers = {
+		picture = generic_oppression
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_weekly_factor = 0.074
 			}
 		}
 	}

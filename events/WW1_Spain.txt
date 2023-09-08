@@ -41,26 +41,30 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = liberal_majority
 		clr_global_flag = conservative_majority
-		country_event = {
-			id = ww1_spain.103
-			days = 690
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.103
+				days = 525
+			}
+			country_event = {
+				id = ww1_spain.133
+				days = 2
+			}
+			set_global_flag = SPR_flag_liberal_landslide
 		}
-		country_event = {
-			id = ww1_spain.133
-			days = 2
-		}
-		set_global_flag = SPR_flag_liberal_landslide
 	}
 	option = {
 		name = ww1_spain.5.a
 		ai_chance = { factor = 10 }
 		set_global_flag = liberal_majority
 		clr_global_flag = conservative_majority
-		country_event = {
-			id = ww1_spain.103
-			days = 750
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.103
+				days = 750
+			}
+			set_global_flag = SPR_flag_liberal_small_victory
 		}
-		set_global_flag = SPR_flag_liberal_majority
 	}
 }
 
@@ -1381,6 +1385,7 @@ country_event = {
 		SPR = {
 			country_event = {
 				id = ww1_spain.11
+				days = 3
 			}
 		}
 	}
@@ -1454,7 +1459,7 @@ country_event = {
 	title = ww1_spain.110.t
 	desc = ww1_spain.110.d
 	picture = GFX_report_event_jap_imperial_family
-	fire_only_once = no
+	fire_only_once = yes
 	mean_time_to_happen = { days = 15 }
 	trigger = {
 		AND = {
@@ -1488,7 +1493,7 @@ country_event = {
 	title = ww1_spain.111.t
 	desc = ww1_spain.111.d
 	picture = GFX_report_event_spr_poum_militia
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = { #So... runnning this nation isn't as easy as you thought huh?
@@ -2229,6 +2234,13 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.103.a # Liberal
+		uncomplete_national_focus = {
+			focus = SPR_general_election
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		complete_national_focus = SPR_general_election
+			
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
@@ -2288,6 +2300,12 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.104.a  # Liberal
+		uncomplete_national_focus = {
+			focus = SPR_general_election
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		complete_national_focus = SPR_general_election
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
@@ -2360,6 +2378,12 @@ country_event = {
 			refund_political_power = no
 		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
 			country_event = {
 				id = ww1_spain.132
 				days = 3
@@ -2413,6 +2437,12 @@ country_event = {
 	option = {
 		name = ww1_spain.134.a # Liberal
 		ai_chance = { factor = 10 }
+		uncomplete_national_focus = {
+			focus = SPR_general_election
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		complete_national_focus = SPR_general_election
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
 		uncomplete_national_focus = {
@@ -2474,6 +2504,12 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.135.a # Liberal
+		uncomplete_national_focus = {
+			focus = SPR_general_election
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		complete_national_focus = SPR_general_election
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
@@ -2671,13 +2707,7 @@ country_event = {
 	desc = ww1_spain.127.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
-	mean_time_to_happen = { days = 5 }
-	trigger = {
-		SPR = {
-			has_war = no
-			has_completed_focus = SPR_legitimize_his_rule
-		}
-	}
+	is_triggered_only = yes
 	option = {
 		name = ww1_spain.127.a
 		ai_chance = { factor = 10 }
@@ -2921,5 +2951,116 @@ country_event = {
 				add_idea = SPR_idea_several_liberal_party
 			}
 		}
+	}
+}
+
+# Gov Removes Maura
+country_event = {
+	id = ww1_spain.134
+	title = ww1_spain.134.t
+	desc = ww1_spain.134.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.134.a
+		ai_chance = { factor = 10 }
+		remove_idea = SPR_idea_prime_minister_maura
+		country_event = {
+			id = ww1_spain.135
+			days = 150
+		}
+	}
+}
+
+# El Turno Restored
+country_event = {
+	id = ww1_spain.135
+	title = ww1_spain.135.t
+	desc = ww1_spain.135.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.135.a
+		ai_chance = { factor = 10 }
+		clr_global_flag = SPR_flag_no_more_el_turno
+		complete_national_focus = SPR_modernization_program
+		country_event = {
+			id = ww1_spain.37
+			days = 5
+		}
+	}
+}
+
+# Anarchos want to join Comintern
+country_event = {
+	id = ww1_spain.136
+	title = ww1_spain.136.t
+	desc = ww1_spain.136.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.136.a #no
+		ai_chance = { factor = 0 }
+		SPR = {
+			country_event = {
+				id = ww1_spain.137
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = ww1_spain.136.b #yes
+		ai_chance = { factor = 10 }
+		SPR = {
+			country_event = {
+				id = ww1_spain.138
+				days = 5
+			}
+		}
+	}
+}
+
+#Lenin Says No
+country_event = {
+	id = ww1_spain.137
+	title = ww1_spain.137.t
+	desc = ww1_spain.137.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.137.a
+		ai_chance = { factor = 10 }
+	}
+}
+
+#Lenin Says Yes
+country_event = {
+	id = ww1_spain.138
+	title = ww1_spain.138.t
+	desc = ww1_spain.138.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.138.a
+		ai_chance = { factor = 10 }
+		SOV = { add_to_faction = SPR }
+	}
+}
+
+#Abd el-Krim Starts the War
+country_event = {
+	id = ww1_spain.139
+	title = ww1_spain.139.t
+	desc = ww1_spain.139.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		
 	}
 }
