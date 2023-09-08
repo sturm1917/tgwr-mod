@@ -3057,10 +3057,11 @@ country_event = {
 	id = ww1_spain.139
 	title = ww1_spain.139.t
 	desc = ww1_spain.139.d
-	picture = GFX_report_event_generic_parliament
+	picture = GFX_report_event_degaulle_churchill
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
-		
+		name = ww1_spain.139.a
+		ai_chance = { factor = 10 }
 	}
 }
