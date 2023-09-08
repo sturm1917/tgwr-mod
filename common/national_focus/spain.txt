@@ -5167,7 +5167,7 @@ focus_tree = {
 			custom_effect_tooltip = SPR_negotiate_more_spanish_claims.tt
 			IF = {
 				limit = { has_completed_focus = SPR_our_colonial_empire }
-				FRA = {
+				SPR = {
 					country_event = {
 						id = ww1_spain.87
 					}
@@ -5175,7 +5175,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = { has_completed_focus = SPR_forget_about_our_colonies }
-				FRA = {
+				SPR = {
 					country_event = {
 						id = ww1_spain.88
 					}
@@ -6599,7 +6599,7 @@ focus_tree = {
 			focus = SPR_dismantle_the_mellismo
 		}
 		completion_reward = {
-			custom_effect_tooltip = autocomplete_cartegna_pact.tt
+			complete_national_focus = SPR_invoke_the_pact_of_cartegna
 		}
 	}
 	focus = {
