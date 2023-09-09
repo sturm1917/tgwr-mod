@@ -366,7 +366,7 @@ focus_tree = {
 	focus = {
 		id = SPR_increase_wage_for_industrialized_places
 		icon = GFX_focus_YUG_ikarus
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 6
 		y = 6
 		ai_will_do = {
@@ -387,7 +387,7 @@ focus_tree = {
 			SPR = { 
 				add_political_power = -75
 			}	
-			add_stability = 0.05
+			add_stability = -0.025
 			scripted_effect_drop_in_regional_demands = yes
 		}
 	}
@@ -413,7 +413,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = -50
-			add_stability = 0.05
+			add_stability = 0.025
 			add_tech_bonus = {
 				bonus = 0.1
 				uses = 2
@@ -509,8 +509,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			SPR = { 
-				add_stability = 0.05
-				add_political_power = 25
+				add_stability = -0.05
+				add_political_power = 50
 				add_popularity = {
 					ideology = neutrality
 					popularity = -0.05
@@ -752,7 +752,7 @@ focus_tree = {
 		completion_reward = {
 			SPR = { 
 				add_stability = -0.05
-				add_political_power = 50
+				add_political_power = 25
 			}
 			
 			
@@ -881,7 +881,6 @@ focus_tree = {
 					ideology = neutrality
 					popularity = 0.075
 				}
-				add_stability = 0.05
 				add_war_support = 0.05
 			}
 		}
@@ -2877,7 +2876,7 @@ focus_tree = {
 			SPR = {
 				add_popularity = {
 					ideology = neutrality
-					popularity = 0.05
+					popularity = 0.02
 				}
 			}
 			clr_global_flag = liberal_majority
@@ -2908,7 +2907,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.05
+				popularity = 0.02
 			}
 			clr_global_flag = conservative_majority
 			set_global_flag = liberal_majority

@@ -345,7 +345,9 @@ scripted_effect_increase_in_regional_demands = {
 scripted_effect_two_party_shenanigans = {
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
 			has_completed_focus = SPR_extensive_legislative_reforms
+			
 			NOT = {
 				OR = {
 					has_completed_focus = SPR_religous_freedom
@@ -368,6 +370,7 @@ scripted_effect_two_party_shenanigans = {
 	
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
 			has_completed_focus = SPR_religous_freedom	
 			NOT = {
 				OR = {
@@ -425,6 +428,7 @@ scripted_effect_two_party_shenanigans = {
 	}
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
 			AND = {
 				has_completed_focus = SPR_religous_freedom	
 				has_completed_focus = SPR_extensive_legislative_reforms
@@ -482,6 +486,7 @@ scripted_effect_two_party_shenanigans = {
 	}
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
 			has_completed_focus = SPR_seperation_of_powers
 		}
 		IF = {
@@ -498,6 +503,42 @@ scripted_effect_two_party_shenanigans = {
 	}
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
+			has_completed_focus = SPR_reinstate_relations_with_holy_see
+			NOT = { has_completed_focus = SPR_seperation_of_powers }
+		}
+		IF = {
+			limit = { NOT = { has_global_flag = longlasting_policies } }
+			IF = {
+				limit = { NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office } }
+				uncomplete_national_focus = {
+					focus = SPR_reinstate_relations_with_holy_see
+					uncomplete_children = no
+					refund_political_power = no
+				}
+			}
+		}
+	}
+	IF = {
+		limit = {
+			NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
+			has_completed_focus = SPR_civil_marriage_law
+		}
+		IF = {
+			limit = { NOT = { has_global_flag = longlasting_policies } }
+			IF = {
+				limit = { NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office } }
+				uncomplete_national_focus = {
+					focus = SPR_civil_marriage_law
+					uncomplete_children = no
+					refund_political_power = no
+				}
+			}
+		}
+	}
+	IF = {
+		limit = {
+			NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
 			has_completed_focus = SPR_extensive_traditionalism_reforms
 			NOT = {
 				OR = {
@@ -520,6 +561,7 @@ scripted_effect_two_party_shenanigans = {
 	}
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
 			has_completed_focus = SPR_centralization
 			NOT = {
 				OR = {
@@ -542,6 +584,7 @@ scripted_effect_two_party_shenanigans = {
 	}
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
 			AND = {
 				has_completed_focus = SPR_extensive_traditionalism_reforms
 				has_completed_focus = SPR_centralization
@@ -564,6 +607,54 @@ scripted_effect_two_party_shenanigans = {
 	}
 	IF = {
 		limit = {
+			NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
+			AND = {
+				has_completed_focus = SPR_appease_the_military_reformists
+			}
+			NOT = {
+				has_completed_focus = SPR_push_for_more_catholicism
+			}
+		}
+		IF = {
+			limit = { NOT = { has_global_flag = longlasting_policies } }
+			IF = {
+				limit = { NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office } }
+				uncomplete_national_focus = {
+					focus = SPR_appease_the_military_reformists
+					uncomplete_children = no
+					refund_political_power = no
+				}
+			}
+		}
+	}
+	IF = {
+		limit = {
+			NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
+			AND = {
+				has_completed_focus = SPR_law_of_sunday_rest
+			}
+			NOT = {
+				has_completed_focus = SPR_seperation_of_powers
+			}
+		}
+		IF = {
+			limit = { NOT = { has_global_flag = longlasting_policies } }
+			IF = {
+				limit = { NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office } }
+				uncomplete_national_focus = {
+					focus = SPR_law_of_sunday_rest
+					uncomplete_children = no
+					refund_political_power = no
+				}
+				hidden_effect = {
+					remove_ideas = SPR_idea_sunday_off
+				}
+			}
+		}
+	}
+	IF = {
+		limit = {
+			NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
 			has_completed_focus = SPR_push_for_more_catholicism
 		}
 		IF = {

@@ -2234,22 +2234,23 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.103.a # Liberal
-		uncomplete_national_focus = {
-			focus = SPR_general_election
-			uncomplete_children = no
-			refund_political_power = no
-		}
-		complete_national_focus = SPR_general_election
-			
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
-		uncomplete_national_focus = {
-			focus = SPR_conservative_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+		
+		
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
 			country_event = {
 				id = ww1_spain.132
 				days = 3
@@ -2266,12 +2267,18 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
-		uncomplete_national_focus = {
-			focus = SPR_liberal_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
 			country_event = {
 				id = ww1_spain.131
 				days = 3
@@ -2300,21 +2307,22 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.104.a  # Liberal
-		uncomplete_national_focus = {
-			focus = SPR_general_election
-			uncomplete_children = no
-			refund_political_power = no
-		}
-		complete_national_focus = SPR_general_election
 		ai_chance = { factor = 10 }
-		set_global_flag = next_general_election_has_occured
-		complete_national_focus = SPR_liberal_majority
-		uncomplete_national_focus = {
-			focus = SPR_conservative_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			
+			set_global_flag = next_general_election_has_occured
+			complete_national_focus = SPR_liberal_majority
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
 			country_event = {
 				id = ww1_spain.132
 				days = 3
@@ -2335,12 +2343,18 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
-		uncomplete_national_focus = {
-			focus = SPR_liberal_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
 			country_event = {
 				id = ww1_spain.133
 				days = 3
@@ -2372,12 +2386,12 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
-		uncomplete_national_focus = {
-			focus = SPR_conservative_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
 			uncomplete_national_focus = {
 				focus = SPR_general_election
 				uncomplete_children = no
@@ -2404,12 +2418,18 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
-		uncomplete_national_focus = {
-			focus = SPR_liberal_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
 			country_event = {
 				id = ww1_spain.133
 				days = 3
@@ -2437,20 +2457,23 @@ country_event = {
 	option = {
 		name = ww1_spain.134.a # Liberal
 		ai_chance = { factor = 10 }
-		uncomplete_national_focus = {
-			focus = SPR_general_election
-			uncomplete_children = no
-			refund_political_power = no
-		}
-		complete_national_focus = SPR_general_election
-		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
-		uncomplete_national_focus = {
-			focus = SPR_conservative_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			set_global_flag = next_general_election_has_occured
+			
+			
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+		
 			country_event = {
 				id = ww1_spain.132
 				days = 3
@@ -2471,12 +2494,18 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
-		uncomplete_national_focus = {
-			focus = SPR_liberal_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
 			country_event = {
 				id = ww1_spain.133
 				days = 3
@@ -2504,21 +2533,23 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.135.a # Liberal
-		uncomplete_national_focus = {
-			focus = SPR_general_election
-			uncomplete_children = no
-			refund_political_power = no
-		}
-		complete_national_focus = SPR_general_election
-		ai_chance = { factor = 10 }
-		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_liberal_majority
-		uncomplete_national_focus = {
-			focus = SPR_conservative_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
+		ai_chance = { factor = 10 }
 		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			set_global_flag = next_general_election_has_occured
+			
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+		
 			country_event = {
 				id = ww1_spain.132
 				days = 3
@@ -2535,12 +2566,19 @@ country_event = {
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
-		uncomplete_national_focus = {
-			focus = SPR_liberal_majority
-			uncomplete_children = no
-			refund_political_power = no
-		}
 		hidden_effect = {
+			
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
 			country_event = {
 				id = ww1_spain.133
 				days = 3

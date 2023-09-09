@@ -209,51 +209,6 @@ SPR_el_turno_category = {
 		}
 		remove_effect = {
 			add_stability = 0.05
-			if = {
-				limit = { 
-					AND = {
-						has_completed_focus = SPR_conservative_majority
-						NOT = { has_completed_focus = SPR_extensive_traditionalism_reforms }
-					}
-				}
-				complete_national_focus = SPR_extensive_traditionalism_reforms
-			}
-			
-			if = {
-				limit = { 
-					AND = {
-						has_completed_focus = SPR_conservative_majority
-						NOT = { has_completed_focus = SPR_centralization }
-						has_completed_focus = SPR_extensive_traditionalism_reforms
-					}
-				}
-				complete_national_focus = SPR_centralization
-			}
-			
-			if = {
-				limit = { 
-					AND = {
-						has_completed_focus = SPR_conservative_majority
-						has_completed_focus = SPR_centralization
-						has_completed_focus = SPR_extensive_traditionalism_reforms
-						NOT = { has_completed_focus = SPR_appease_the_military_reformists }
-					}
-				}
-				complete_national_focus = SPR_appease_the_military_reformists
-			}
-			
-			if = {
-				limit = { 
-					AND = {
-						has_completed_focus = SPR_conservative_majority
-						has_completed_focus = SPR_centralization
-						has_completed_focus = SPR_extensive_traditionalism_reforms
-						has_completed_focus = SPR_appease_the_military_reformists
-						NOT = { has_completed_focus = SPR_push_for_more_catholicism }
-					}
-				}
-				complete_national_focus = SPR_push_for_more_catholicism
-			}
 			
 			if = {
 				limit = { 
@@ -268,6 +223,54 @@ SPR_el_turno_category = {
 				}
 				complete_national_focus = SPR_law_of_sunday_rest
 			}
+			
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_conservative_majority
+						has_completed_focus = SPR_centralization
+						has_completed_focus = SPR_extensive_traditionalism_reforms
+						has_completed_focus = SPR_appease_the_military_reformists
+						NOT = { has_completed_focus = SPR_push_for_more_catholicism }
+					}
+				}
+				complete_national_focus = SPR_push_for_more_catholicism
+			}
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_conservative_majority
+						has_completed_focus = SPR_centralization
+						has_completed_focus = SPR_extensive_traditionalism_reforms
+						NOT = { has_completed_focus = SPR_appease_the_military_reformists }
+					}
+				}
+				complete_national_focus = SPR_appease_the_military_reformists
+			}
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_conservative_majority
+						NOT = { has_completed_focus = SPR_centralization }
+						has_completed_focus = SPR_extensive_traditionalism_reforms
+					}
+				}
+				complete_national_focus = SPR_centralization
+			}
+			
+			
+			
+			
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_conservative_majority
+						NOT = { has_completed_focus = SPR_extensive_traditionalism_reforms }
+					}
+				}
+				complete_national_focus = SPR_extensive_traditionalism_reforms
+			}
+			
 		}
 		priority = 6
 	}
@@ -293,7 +296,7 @@ SPR_massive_strike_plans_category = {
 			}
 		}
 		priority = 100
-		days_mission_timeout = 1000
+		days_mission_timeout = 1050
 		fire_only_once = yes
 		is_good = no
 		
@@ -314,7 +317,7 @@ SPR_massive_strike_plans_category = {
 		visible = {
 			always = yes
 		}
-		cost = 75
+		cost = 125
 		days_re_enable = 50
 		days_remove = 100
 		modifier = {
@@ -327,9 +330,19 @@ SPR_massive_strike_plans_category = {
 			}
 			add_popularity = {
 				ideology = communism
-				popularity = 0.03
+				popularity = 0.05
 			}
-			add_stability = 0.05
+			add_stability = 0.025
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
+			}
 		}
 		
 		priority = 10
@@ -358,16 +371,26 @@ SPR_massive_strike_plans_category = {
 		days_re_enable = 50
 		days_remove = 100
 		modifier = {
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.075
 		}
 		remove_effect = {
-			add_stability = 0.05
-			add_political_power = -125
+			add_stability = 0.025
+			add_political_power = -150
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
+			}
 		}
 		priority = 7
 	}
 	
-	SPR_strikes_reform_three = { #Divert towards Nationalism
+	SPR_strikes_reform_three = {
 		icon = GFX_decision_generic_fundraising
 		allowed = {
 			original_tag = SPR
@@ -379,17 +402,27 @@ SPR_massive_strike_plans_category = {
 			always = yes
 		}
 
-		cost = 75
+		cost = 125
 		days_re_enable = 50
 		days_remove = 100
 		modifier = {
-			political_power_factor = -0.15
+			political_power_factor = -0.25
 		}
 		remove_effect = {
-			add_stability = 0.05
+			add_stability = 0.025
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.075
+				popularity = 0.025
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
 			}
 		}
 		priority = 7

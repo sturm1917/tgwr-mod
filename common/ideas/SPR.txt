@@ -715,7 +715,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly = -0.003
+				stability_weekly = -0.004
 				political_power_factor = -0.04
 			}
 		}
@@ -730,7 +730,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly = -0.002
+				stability_weekly = -0.003
 				political_power_factor = -0.04
 			}
 		}
@@ -745,7 +745,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly = -0.002
+				stability_weekly = -0.003
 				political_power_factor = -0.02
 			}
 		}
@@ -760,7 +760,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly = -0.001
+				stability_weekly = -0.002
 				political_power_factor = -0.02
 			}
 		}
@@ -1070,6 +1070,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.15
+				stability_weekly_factor = -0.001
 			}
 		}
 		SPR_idea_united_conservative_party = {
@@ -1123,6 +1124,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.15
+				stability_weekly_factor = -0.001
 			}
 		}
 		SPR_idea_planned_economy = {
@@ -1178,7 +1180,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				conscription = -0.02
+				conscription = -0.005
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
 			}
 		}
 	}

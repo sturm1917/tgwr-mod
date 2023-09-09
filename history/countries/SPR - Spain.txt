@@ -1,7 +1,7 @@
 ﻿capital = 41
 
 set_research_slots = 2
-set_stability = 0.52
+set_stability = 0.30
 set_convoys = 150
 set_global_flag = conservative_majority
 set_global_flag = new_liberal_spanish_prime_minister_in_office
@@ -76,14 +76,14 @@ recruit_character = SPR_lucas_puente
 	set_politics = {
 		ruling_party = neutrality
 		last_election = "1910.3.8"
-		election_frequency = 48
+		election_frequency = 6
 		elections_allowed = yes
 	}
 	set_popularities = {
-		democratic = 25
-		fascism = 3
-		communism = 8
-		neutrality = 64
+		democratic = 39
+		fascism = 7
+		communism = 12
+		neutrality = 42
 	}
 
 	add_ideas = {
