@@ -458,7 +458,6 @@ focus_tree = {
 			focus = SPR_increase_wage_for_industrialized_places
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_changed_parliamentery_majority
 			165 = {
 				remove_building = {
 					type = infrastructure
@@ -514,7 +513,7 @@ focus_tree = {
 				add_political_power = 25
 				add_popularity = {
 					ideology = neutrality
-					popularity = -0.5
+					popularity = -0.05
 				}
 			}		
 		}
@@ -1521,7 +1520,7 @@ focus_tree = {
 			SPR = {
 				IF = {
 					limit = { has_idea = SPR_idea_whispers_for_regional_autonomy }
-					remove_idea = SPR_idea_whispers_for_regional_autonomy
+					remove_ideas = SPR_idea_whispers_for_regional_autonomy
 				}
 				IF = {
 					limit = { has_idea = SPR_idea_protests_for_regional_autonomy }
@@ -1867,14 +1866,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = -75
-			41 = {
-				add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}	
 			SPR = {
 				add_timed_idea = { 
 					idea = SPR_idea_developing_the_nation 
@@ -1905,8 +1896,10 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			has_completed_focus = SPR_sell_food_to_france 
+			has_completed_focus = SPR_sell_weapons_to_england
+			has_completed_focus = SPR_sell_weapons_to_germany
 		}
 		prerequisite = {
 			focus = SPR_develop_the_nation
@@ -1955,7 +1948,9 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = new_spanish_prime_minister_in_office
-			
+			has_completed_focus = SPR_sell_food_to_france 
+			has_completed_focus = SPR_sell_weapons_to_england
+			has_completed_focus = SPR_sell_weapons_to_germany
 		}
 		prerequisite = {
 			focus = SPR_develop_the_nation
@@ -2636,6 +2631,30 @@ focus_tree = {
 			show_ideas_tooltip = llama_firearms
 		}
 	}
+	
+	focus = {
+		id = SPR_reform_the_conscription
+		icon = GFX_focus_army_is_ready
+		cost = 2.9 #days
+		x = -8
+		y = 3
+		relative_position_id = SPR_develop_the_nation
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_the_chauchat
+			focus = SPR_the_vickers
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		completion_reward = {
+			remove_ideas = SPR_idea_terrible_conscription
+		}
+	}
+	
 	focus = {
 		id = SPR_hold_military_parades
 		icon = GFX_focus_SOV_mobilization_plan
@@ -2821,6 +2840,16 @@ focus_tree = {
 				id = ww1_spain.78
 				days = 10
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
@@ -2898,7 +2927,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_completed_focus = SPR_found_the_university_of_Murcia
 		}
 		prerequisite = {
 			focus = SPR_conservative_majority
@@ -3836,12 +3864,12 @@ focus_tree = {
 		completion_reward = {
 			send_equipment = {
 				equipment = infantry_equipment
-				amount = 4000
+				amount = 15000
 				target = FRA
 			}
 			send_equipment = {
 				equipment = artillery_equipment
-				amount = 150
+				amount = 1200
 				target = FRA
 			}
 			add_political_power = 75
@@ -3869,7 +3897,7 @@ focus_tree = {
 		completion_reward = {
 			send_equipment = {
 				equipment = support_equipment
-				amount = 300
+				amount = 1800
 				target = GER
 			}
 			add_political_power = 75
@@ -3898,12 +3926,12 @@ focus_tree = {
 		completion_reward = {
 			send_equipment = {
 				equipment = infantry_equipment
-				amount = 4000
+				amount = 15000
 				target = ENG
 			}
 			send_equipment = {
 				equipment = artillery_equipment
-				amount = 150
+				amount = 1200
 				target = ENG
 			}	
 			add_political_power = 75
@@ -4226,38 +4254,36 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.1	
 			}
-			SPR = {
-				IF = {
-					limit = { has_idea = SPR_idea_whispers_for_regional_autonomy }
-					remove_idea = SPR_idea_whispers_for_regional_autonomy
+			IF = {
+				limit = { has_idea = SPR_idea_whispers_for_regional_autonomy }
+				remove_ideas = SPR_idea_whispers_for_regional_autonomy
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_protests_for_regional_autonomy }
+				swap_ideas = {
+					remove_idea = SPR_idea_protests_for_regional_autonomy
+					add_idea = SPR_idea_whispers_for_regional_autonomy
 				}
-				IF = {
-					limit = { has_idea = SPR_idea_protests_for_regional_autonomy }
-					swap_ideas = {
-						remove_idea = SPR_idea_protests_for_regional_autonomy
-						add_idea = SPR_idea_whispers_for_regional_autonomy
-					}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_movements_for_regional_autonomy }
+				swap_ideas = {
+					remove_idea = SPR_idea_movements_for_regional_autonomy
+					add_idea = SPR_idea_protests_for_regional_autonomy
 				}
-				IF = {
-					limit = { has_idea = SPR_idea_movements_for_regional_autonomy }
-					swap_ideas = {
-						remove_idea = SPR_idea_movements_for_regional_autonomy
-						add_idea = SPR_idea_protests_for_regional_autonomy
-					}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_plots_for_regional_autonomy }
+				swap_ideas = {
+					remove_idea = SPR_idea_plots_for_regional_autonomy
+					add_idea = SPR_idea_movements_for_regional_autonomy
 				}
-				IF = {
-					limit = { has_idea = SPR_idea_plots_for_regional_autonomy }
-					swap_ideas = {
-						remove_idea = SPR_idea_plots_for_regional_autonomy
-						add_idea = SPR_idea_movements_for_regional_autonomy
-					}
-				}
-				IF = {
-					limit = { has_idea = SPR_idea_revolutionary_calls_for_regional_autonomy }
-					swap_ideas = {
-						remove_idea = SPR_idea_revolutionary_calls_for_regional_autonomy
-						add_idea = SPR_idea_plots_for_regional_autonomy 
-					}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_revolutionary_calls_for_regional_autonomy }
+				swap_ideas = {
+					remove_idea = SPR_idea_revolutionary_calls_for_regional_autonomy
+					add_idea = SPR_idea_plots_for_regional_autonomy 
 				}
 			}
 		}
@@ -4295,7 +4321,7 @@ focus_tree = {
 			SPR = {
 				IF = {
 					limit = { has_idea = SPR_idea_whispers_for_regional_autonomy }
-					remove_idea = SPR_idea_whispers_for_regional_autonomy
+					remove_ideas = SPR_idea_whispers_for_regional_autonomy
 				}
 				IF = {
 					limit = { has_idea = SPR_idea_protests_for_regional_autonomy }
@@ -4457,7 +4483,10 @@ focus_tree = {
 			focus = SPR_civil_marriage_law
 		}
 		completion_reward = {
-			custom_effect_tooltip = SPR_in_dev1.tt
+			country_event = {
+				id = ww1_spain.133
+				days = 3
+			}
 		}
 	}
 	focus = {
@@ -4485,6 +4514,7 @@ focus_tree = {
 			focus = SPR_fuse_with_the_romanonist
 		}
 		completion_reward = {
+			custom_effect_tooltip = reform_el_turno.tt
 			IF = { 
 				limit = { has_global_flag = conservative_majority }
 				add_political_power = 100
@@ -4549,14 +4579,25 @@ focus_tree = {
 			focus = SPR_reform_el_turno
 		}
 		completion_reward = {
-			IF = { 
-				limit = { has_global_flag = conservative_majority }
-				add_political_power = 100
+			add_ideas = SPR_alfonso_xiii
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.125
 			}
-			IF = { 
-				limit = { has_global_flag = liberal_majority }
-				add_political_power = 25
-				add_stability = -0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.125
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 24
+				long_name = SPR_democratic_spain
+				name = SPR_democratic_spain
+			}
+			set_political_party = {
+				ideology = democratic
+				popularity = 35
 			}
 		}
 	}
@@ -4938,19 +4979,18 @@ focus_tree = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite = {
-			focus = SPR_conservative_majority
-			focus = SPR_liberal_majority
+			focus = SPR_reinsate_relations_with_holy_see
 		}
 		completion_reward = {
 			IF = { 
 				limit = { has_global_flag = liberal_majority }
-				add_political_power = 75
-				add_stability = 0.05
+				add_political_power = 100
+				add_stability = 0.075
 			}
 			IF = { 
 				limit = { has_global_flag = conservative_majority }
-				add_political_power = 25
-				add_stability = -0.03
+				add_political_power = 50
+				add_stability = 0.03
 			}
 		}
 	}
@@ -5032,6 +5072,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_if_colonies_tt
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
@@ -5511,7 +5561,7 @@ focus_tree = {
 		continue_if_invalid = no
 		mutually_exclusive = { focus = SPR_arrest_signatories_of_the_manifesto }
 		icon = GFX_focus_red_rose
-		cost = 25 #days
+		cost = 14.4 #days
 		x = 6
 		y = 15
 		relative_position_id = SPR_declare_a_republic
@@ -5612,6 +5662,7 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
+			add_ideas = { SPR_idea_autonomous_catalonia }
 			add_political_power = -125
 			add_stability = -0.1
 			SPR = {
@@ -5662,7 +5713,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_global_flag = SPR_flag_failure_in_three_headed_crisis
-			add_ideas = { SPR_idea_autonomous_catalonia }
 			add_political_power = -75
 			add_popularity = {
 				ideology = fascism
@@ -5725,9 +5775,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-			has_global_flag = SPR_flag_failure_in_three_headed_crisis
+			always = no
 		}
 		prerequisite = {
 			focus = SPR_send_in_the_military
@@ -5753,8 +5801,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
+			always = no
 		}
 		prerequisite = {
 			focus = SPR_junta_and_catalonian_autonomy_incompatible
@@ -5983,15 +6030,15 @@ focus_tree = {
 			172 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 5
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 5
+					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 2
 			}		
 		}
 	}
@@ -6403,6 +6450,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 25
+			clr_global_flag = SPR_flag_no_more_el_turno
 		}
 	}
 	focus = {

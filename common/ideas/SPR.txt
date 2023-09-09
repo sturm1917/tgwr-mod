@@ -836,7 +836,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.05
 			}
 		}
@@ -1166,6 +1166,19 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.05
 				stability_weekly_factor = 0.074
+			}
+		}
+		SPR_idea_terrible_conscription = {
+		picture = chi_forced_conscription
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = -0.02
 			}
 		}
 	}

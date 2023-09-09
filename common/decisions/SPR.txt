@@ -2,18 +2,16 @@ SPR_el_turno_category = {
 	SPR_el_turno_abolished_timer = { # Timer Until el turno revolt
 		icon = GFX_decision_revolt
 		allowed = {
-			
-			OR = { 
-				has_completed_focus = SPR_fuse_with_the_carlists
-			}
+			always = yes
 		}  
 		activation = {
-
-			AND = {
-				original_tag = SPR
-				has_completed_focus = SPR_abolish_el_turno
+			has_completed_focus = SPR_abolish_el_turno
+		}
+		available = {
+			OR = {
+				has_completed_focus = SPR_fuse_with_the_carlists
+				has_completed_focus = SPR_replace_the_conservatives
 			}
-
 		}
 		priority = 100
 		days_mission_timeout = 365
@@ -76,14 +74,16 @@ SPR_el_turno_category = {
 				NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
 			}
 			
+			NOT = { has_completed_focus = SPR_continue_with_split_liberal_parties }
+			NOT = { has_completed_focus = SPR_fuse_with_the_romanonist }
 		}
 		visible = {
 			has_completed_focus = SPR_liberal_majority
 		}
 
-		cost = 50
-		days_re_enable = 15
-		days_remove = 15
+		cost = 65
+		days_re_enable = 25
+		days_remove = 5
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -93,12 +93,38 @@ SPR_el_turno_category = {
 				limit = { 
 					AND = {
 						has_completed_focus = SPR_liberal_majority
-						NOT = { has_completed_focus = SPR_extensive_legislative_reforms }
+						has_completed_focus = SPR_religous_freedom
+						has_completed_focus = SPR_extensive_legislative_reforms
+						has_completed_focus = SPR_reinsate_relations_with_holy_see
+						has_completed_focus = SPR_seperation_of_powers
+						NOT = { has_completed_focus = SPR_civil_marriage_law }
 					}
 				}
-				complete_national_focus = SPR_extensive_legislative_reforms
+				complete_national_focus = SPR_civil_marriage_law
 			}
-			
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_liberal_majority
+						has_completed_focus = SPR_religous_freedom
+						has_completed_focus = SPR_extensive_legislative_reforms
+						has_completed_focus = SPR_reinsate_relations_with_holy_see
+						NOT = { has_completed_focus = SPR_seperation_of_powers }
+					}
+				}
+				complete_national_focus = SPR_seperation_of_powers
+			}
+			if = {
+				limit = { 
+					AND = {
+						has_completed_focus = SPR_liberal_majority
+						has_completed_focus = SPR_religous_freedom
+						has_completed_focus = SPR_extensive_legislative_reforms
+						NOT = { has_completed_focus = SPR_reinsate_relations_with_holy_see }
+					}
+				}
+				complete_national_focus = SPR_reinsate_relations_with_holy_see
+			}
 			if = {
 				limit = { 
 					AND = {
@@ -107,46 +133,16 @@ SPR_el_turno_category = {
 						has_completed_focus = SPR_extensive_legislative_reforms
 					}
 				}
-				complete_national_focus = SPR_religious_freedom
+				complete_national_focus = SPR_religous_freedom
 			}
-			
 			if = {
 				limit = { 
 					AND = {
 						has_completed_focus = SPR_liberal_majority
-						has_completed_focus = SPR_religous_freedom
-						has_completed_focus = SPR_extensive_legislative_reforms
-						NOT = { has_completed_focus = SPR_reinstate_relations_with_holy_see }
+						NOT = { has_completed_focus = SPR_extensive_legislative_reforms }
 					}
 				}
-				complete_national_focus = SPR_reinstate_relations_with_holy_see
-			}
-			
-			if = {
-				limit = { 
-					AND = {
-						has_completed_focus = SPR_liberal_majority
-						has_completed_focus = SPR_religous_freedom
-						has_completed_focus = SPR_extensive_legislative_reforms
-						has_completed_focus = SPR_reinstate_relations_with_holy_see
-						NOT = { has_completed_focus = SPR_seperation_of_powers }
-					}
-				}
-				complete_national_focus = SPR_seperation_of_powers
-			}
-			
-			if = {
-				limit = { 
-					AND = {
-						has_completed_focus = SPR_liberal_majority
-						has_completed_focus = SPR_religous_freedom
-						has_completed_focus = SPR_extensive_legislative_reforms
-						has_completed_focus = SPR_reinstate_relations_with_holy_see
-						has_completed_focus = SPR_seperation_of_powers
-						NOT = { has_completed_focus = SPR_civil_marriage_law }
-					}
-				}
-				complete_national_focus = SPR_civil_marriage_law
+				complete_national_focus = SPR_extensive_legislative_reforms
 			}
 			
 		}
@@ -196,15 +192,18 @@ SPR_el_turno_category = {
 				has_global_flag = new_conservative_spanish_prime_minister_in_office
 				NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
 			}
-			
+			NOT = { has_completed_focus = SPR_side_with_maurists }
+			NOT = { has_completed_focus = SPR_politically_crush_the_maurists }
 		}	
 		visible = {
 			has_completed_focus = SPR_conservative_majority
+			
+			
 		}
 
 		cost = 65
-		days_re_enable = 15
-		days_remove = 35
+		days_re_enable = 25
+		days_remove = 5
 		modifier = {
 			political_power_factor = -0.15
 		}
@@ -237,10 +236,10 @@ SPR_el_turno_category = {
 						has_completed_focus = SPR_conservative_majority
 						has_completed_focus = SPR_centralization
 						has_completed_focus = SPR_extensive_traditionalism_reforms
-						NOT = { has_completed_focus = SPR_appease_the_military_reformers }
+						NOT = { has_completed_focus = SPR_appease_the_military_reformists }
 					}
 				}
-				complete_national_focus = SPR_appease_the_military_reformers
+				complete_national_focus = SPR_appease_the_military_reformists
 			}
 			
 			if = {
@@ -249,7 +248,7 @@ SPR_el_turno_category = {
 						has_completed_focus = SPR_conservative_majority
 						has_completed_focus = SPR_centralization
 						has_completed_focus = SPR_extensive_traditionalism_reforms
-						has_completed_focus = SPR_appease_the_military_reformers
+						has_completed_focus = SPR_appease_the_military_reformists
 						NOT = { has_completed_focus = SPR_push_for_more_catholicism }
 					}
 				}
@@ -262,7 +261,7 @@ SPR_el_turno_category = {
 						has_completed_focus = SPR_conservative_majority
 						has_completed_focus = SPR_centralization
 						has_completed_focus = SPR_extensive_traditionalism_reforms
-						has_completed_focus = SPR_appease_the_military_reformers
+						has_completed_focus = SPR_appease_the_military_reformists
 						has_completed_focus = SPR_push_for_more_catholicism
 						NOT = { has_completed_focus = SPR_law_of_sunday_rest }
 					}
@@ -290,7 +289,7 @@ SPR_massive_strike_plans_category = {
 		}
 		available = {
 			OR = { 
-				has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+				has_completed_focus = SPR_adopt_furthur_social_reform
 			}
 		}
 		priority = 100

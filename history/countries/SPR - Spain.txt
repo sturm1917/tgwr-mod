@@ -94,6 +94,7 @@ recruit_character = SPR_lucas_puente
 		SPR_idea_prime_minister_jose
 		SPR_idea_split_liberal_party
 		SPR_idea_fractured_conservative_party
+		SPR_idea_terrible_conscription
 	}
 }
 1914.1.1 = {

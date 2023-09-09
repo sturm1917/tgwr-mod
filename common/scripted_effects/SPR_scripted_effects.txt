@@ -8,7 +8,10 @@ scripted_effect_new_spanish_prime_minister = {
 				}
 				modifier = {
 					factor = 0
-					has_global_flag = liberal_prime_minister
+					AND = {
+						has_global_flag = liberal_prime_minister
+						NOT = { has_completed_focus = SPR_reform_el_turno }
+					}
 				}
 				country_event = { 
 					id = ww1_spain.21 # Alvaro
@@ -23,7 +26,10 @@ scripted_effect_new_spanish_prime_minister = {
 				}
 				modifier = {
 					factor = 0
-					has_global_flag = conservative_prime_minister
+					AND = {
+						has_global_flag = conservative_prime_minister
+						NOT = { has_completed_focus = SPR_reform_el_turno }
+					}
 				}
 				modifier = {
 					factor = 0
@@ -42,7 +48,10 @@ scripted_effect_new_spanish_prime_minister = {
 				}
 				modifier = {
 					factor = 0
-					has_global_flag = liberal_prime_minister
+					AND = {
+						has_global_flag = liberal_prime_minister
+						NOT = { has_completed_focus = SPR_reform_el_turno }
+					}
 				}
 				modifier = {
 					factor = 0
@@ -60,7 +69,10 @@ scripted_effect_new_spanish_prime_minister = {
 				}
 				modifier = {
 					factor = 0
-					has_global_flag = conservative_prime_minister
+					AND = {
+						has_global_flag = conservative_prime_minister
+						NOT = { has_completed_focus = SPR_reform_el_turno }
+					}
 				}
 				modifier = {
 					factor = 0
@@ -79,7 +91,10 @@ scripted_effect_new_spanish_prime_minister = {
 				}
 				modifier = {
 					factor = 0
-					has_global_flag = conservative_prime_minister
+					AND = {
+						has_global_flag = conservative_prime_minister
+						NOT = { has_completed_focus = SPR_reform_el_turno }
+					}
 				}
 				modifier = {
 					factor = 0
@@ -101,7 +116,10 @@ scripted_effect_new_spanish_prime_minister = {
 				}
 				modifier = {
 					factor = 0
-					has_global_flag = conservative_prime_minister
+					AND = {
+						has_global_flag = conservative_prime_minister
+						NOT = { has_completed_focus = SPR_reform_el_turno }
+					}
 				}
 				modifier = {
 					factor = 0
