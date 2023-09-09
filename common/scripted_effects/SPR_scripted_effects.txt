@@ -588,6 +588,7 @@ scripted_effect_two_party_shenanigans = {
 			AND = {
 				has_completed_focus = SPR_extensive_traditionalism_reforms
 				has_completed_focus = SPR_centralization
+				NOT = { has_completed_focus = SPR_appease_the_military_reformists }
 			}
 			NOT = {
 				has_completed_focus = SPR_seperation_of_powers
