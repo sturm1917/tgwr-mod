@@ -1,7 +1,7 @@
 ﻿capital = 41
 
 set_research_slots = 2
-set_stability = 0.30
+set_stability = 0.45
 set_convoys = 150
 set_global_flag = conservative_majority
 set_global_flag = new_liberal_spanish_prime_minister_in_office
@@ -13,6 +13,7 @@ recruit_character = SPR_niceto_alcalazamora
 recruit_character = SPR_pablo_iglesias
 recruit_character = SPR_juan_olazabal
 
+recruit_character = SPR_anarchists
 recruit_character = SPR_damasco_berenguer
 recruit_character = SPR_jaime_iii
 recruit_character = SPR_alfonso_carlos
@@ -89,6 +90,7 @@ recruit_character = SPR_lucas_puente
 	add_ideas = {
 		neutrality_idea
 		limited_conscription
+		limited_exports
 		SPR_idea_plots_for_regional_autonomy
 		SPR_idea_strong_catholicism
 		SPR_idea_prime_minister_jose

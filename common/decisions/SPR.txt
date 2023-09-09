@@ -78,11 +78,11 @@ SPR_el_turno_category = {
 			NOT = { has_completed_focus = SPR_fuse_with_the_romanonist }
 		}
 		visible = {
-			has_completed_focus = SPR_liberal_majority
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 
 		cost = 65
-		days_re_enable = 25
+		days_re_enable = 15
 		days_remove = 5
 		modifier = {
 			consumer_goods_factor = 0.05
@@ -92,7 +92,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_liberal_majority
+					
 						has_completed_focus = SPR_religous_freedom
 						has_completed_focus = SPR_extensive_legislative_reforms
 						has_completed_focus = SPR_reinsate_relations_with_holy_see
@@ -105,7 +105,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_liberal_majority
+					
 						has_completed_focus = SPR_religous_freedom
 						has_completed_focus = SPR_extensive_legislative_reforms
 						has_completed_focus = SPR_reinsate_relations_with_holy_see
@@ -117,7 +117,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_liberal_majority
+						
 						has_completed_focus = SPR_religous_freedom
 						has_completed_focus = SPR_extensive_legislative_reforms
 						NOT = { has_completed_focus = SPR_reinsate_relations_with_holy_see }
@@ -127,10 +127,17 @@ SPR_el_turno_category = {
 			}
 			if = {
 				limit = { 
-					AND = {
-						has_completed_focus = SPR_liberal_majority
-						NOT = { has_completed_focus = SPR_religous_freedom }
-						has_completed_focus = SPR_extensive_legislative_reforms
+					OR = {
+						AND = {
+							
+							NOT = { has_completed_focus = SPR_religous_freedom }
+							has_completed_focus = SPR_extensive_legislative_reforms
+						}
+						AND = {
+							NOT = { has_completed_focus = SPR_religous_freedom }
+							has_completed_focus = SPR_extensive_legislative_reforms
+							has_completed_focus = SPR_reinsate_relations_with_holy_see
+						}
 					}
 				}
 				complete_national_focus = SPR_religous_freedom
@@ -138,7 +145,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_liberal_majority
+						
 						NOT = { has_completed_focus = SPR_extensive_legislative_reforms }
 					}
 				}
@@ -196,13 +203,12 @@ SPR_el_turno_category = {
 			NOT = { has_completed_focus = SPR_politically_crush_the_maurists }
 		}	
 		visible = {
-			has_completed_focus = SPR_conservative_majority
-			
+			has_global_flag = new_conservative_spanish_prime_minister_in_office
 			
 		}
 
 		cost = 65
-		days_re_enable = 25
+		days_re_enable = 15
 		days_remove = 5
 		modifier = {
 			political_power_factor = -0.15
@@ -213,7 +219,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_conservative_majority
+						
 						has_completed_focus = SPR_centralization
 						has_completed_focus = SPR_extensive_traditionalism_reforms
 						has_completed_focus = SPR_appease_the_military_reformists
@@ -227,7 +233,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_conservative_majority
+					
 						has_completed_focus = SPR_centralization
 						has_completed_focus = SPR_extensive_traditionalism_reforms
 						has_completed_focus = SPR_appease_the_military_reformists
@@ -239,7 +245,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_conservative_majority
+				
 						has_completed_focus = SPR_centralization
 						has_completed_focus = SPR_extensive_traditionalism_reforms
 						NOT = { has_completed_focus = SPR_appease_the_military_reformists }
@@ -250,7 +256,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_conservative_majority
+					
 						NOT = { has_completed_focus = SPR_centralization }
 						has_completed_focus = SPR_extensive_traditionalism_reforms
 					}
@@ -264,7 +270,7 @@ SPR_el_turno_category = {
 			if = {
 				limit = { 
 					AND = {
-						has_completed_focus = SPR_conservative_majority
+						
 						NOT = { has_completed_focus = SPR_extensive_traditionalism_reforms }
 					}
 				}

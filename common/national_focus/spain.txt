@@ -79,9 +79,9 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.1
+				popularity = 0.075
 			}
-			add_political_power = -75
+			add_political_power = -25
 		}
 	}
 	focus = {
@@ -106,7 +106,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			add_political_power = -25
+			add_political_power = 100
+			army_experience = 25
 		}
 	}
 	focus = {
@@ -133,9 +134,8 @@ focus_tree = {
 			focus = SPR_weaken_catholic_education
 		}
 		completion_reward = {
-			add_stability = 0.05
 			SPR = { 
-				add_political_power = -75
+				add_political_power = -50
 			}	
 			country_event = {
 				id = ww1_spain.128
@@ -387,7 +387,7 @@ focus_tree = {
 			SPR = { 
 				add_political_power = -75
 			}	
-			add_stability = -0.025
+			add_stability = 0.075
 			scripted_effect_drop_in_regional_demands = yes
 		}
 	}
@@ -458,6 +458,7 @@ focus_tree = {
 			focus = SPR_increase_wage_for_industrialized_places
 		}
 		completion_reward = {
+			add_stability = 0.05
 			165 = {
 				remove_building = {
 					type = infrastructure
@@ -1374,7 +1375,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_propose_the_idea_of_atheism?
-		mutually_exclusive = { focus = SPR_welcome_other_religions }
 		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 2.9 #days
 		x = 38
@@ -1550,7 +1550,6 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = -50
 		}
 	}
 	focus = {
@@ -1572,7 +1571,6 @@ focus_tree = {
 			is_subject = no
 		}
 		completion_reward = {
-			add_political_power = -50
 			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
@@ -1730,7 +1728,7 @@ focus_tree = {
 	focus = {
 		id = SPR_the_new_prime_minister
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		cost = 1.5 #days
+		cost = 0.75 #days
 		x = 3
 		y = 1
 		ai_will_do = {
@@ -1748,7 +1746,7 @@ focus_tree = {
 	focus = {
 		id = SPR_begin_the_executive_transfer_of_power
 		icon = GFX_goal_generic_national_unity
-		cost = 1.5 #days
+		cost = 0.75 #days
 		x = 3
 		y = 2
 		ai_will_do = {
@@ -1769,7 +1767,7 @@ focus_tree = {
 	focus = {
 		id = SPR_inaugarate_the_prime_minister
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 1.5 #days
+		cost = 0.75 #days
 		x = -1
 		y = 2
 		relative_position_id = SPR_the_new_prime_minister
@@ -1791,7 +1789,7 @@ focus_tree = {
 	focus = {
 		id = SPR_adopt_the_ministers_policies
 		icon = GFX_focus_spa_save_the_alcazar
-		cost = 1.5 #days
+		cost = 0.75 #days
 		x = 1
 		y = 2
 		relative_position_id = SPR_the_new_prime_minister
@@ -1814,7 +1812,7 @@ focus_tree = {
 	focus = {
 		id = SPR_finish_the_transfer_of_power
 		icon = GFX_goal_continuous_increase_nu
-		cost = 1.5 #days
+		cost = 0.75 #days
 		x = 0
 		y = 3
 		relative_position_id = SPR_the_new_prime_minister
@@ -3018,7 +3016,7 @@ focus_tree = {
 	focus = {
 		id = SPR_ensure_longlasting_policies
 		icon = GFX_focus_ETH_re-convene_the_parliament
-		cost = 14.3 #days
+		cost = 7.2 #days
 		x = 0
 		y = 10
 		relative_position_id = SPR_declare_a_republic
@@ -4645,6 +4643,7 @@ focus_tree = {
 		completion_reward = {
 			complete_national_focus = SPR_military_juntas_operate_illegally
 			complete_national_focus = SPR_send_in_the_military
+			complete_national_focus = SPR_junta_and_catalonian_autonomy_incompatible
 			set_global_flag = SPR_flag_no_more_junta
 		}
 	}
@@ -4660,7 +4659,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_political_power = 200
+			has_political_power > 200
 		}
 		prerequisite = {
 			focus = SPR_convene_the_catalonian_parliament
@@ -4670,32 +4669,32 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
-				producer = GER
+				producer = SPR
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
-				producer = FRA
+				producer = SPR
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 10
-				producer = GER
+				producer = SPR
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 10
-				producer = FRA
+				producer = SPR
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 10
-				producer = GER
+				producer = SPR
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 10
-				producer = FRA
+				producer = SPR
 			}
 		}
 	}
@@ -4711,7 +4710,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_political_power = 200
+			has_political_power > 200
 		}
 		prerequisite = {
 			focus = SPR_the_reds_army
@@ -4766,7 +4765,11 @@ focus_tree = {
 			complete_national_focus = SPR_proletariat_strikes
 			complete_national_focus = SPR_adopt_furthur_social_reform
 			complete_national_focus = SPR_outlaw_pistolerismo
+			hidden_effect = {
+				complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
+			}
 			set_global_flag = SPR_flag_no_more_strikes
+			set_global_flag = SPR_flag_no_more_el_turno
 		}
 	}
 	focus = {
@@ -4858,8 +4861,18 @@ focus_tree = {
 				elections_allowed = no
 				long_name = SPR_spanish_cored_anarchy
 				name = SPR_spanish_cored_anarchy
+				
 			}
-			add_ideas = SPR_idea_no_usurpers
+			create_country_leader = {
+				name = SPR_anarchist_commune
+				desc = "SPR_anarchists_desc"
+				picture = GFX_portrait_spr_anarchist_commune
+				expire = "1999.1.1"
+				ideology = anarchist_communism
+				traits = {
+					anarcho_communist_council
+				}
+			}
 		}
 	}
 	focus = {

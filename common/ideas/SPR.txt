@@ -21,7 +21,7 @@ ideas = {
 		designer = yes 
 		esperanza_and_unceta = { 
 			allowed = { original_tag = SPR } 
-			research_bonus = { artillery = 0.10 } 
+			research_bonus = { artillery = 0.10 }
 			traits = { artillery_manufacturer } 
 			picture = generic_artillery_manufacturer_2 
 		}
@@ -304,8 +304,10 @@ ideas = {
 			}
 			allowed_civil_war = {
 				NOT = {
-					has_government = communism
-					has_government = fascism
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
 				}
 			}
 			available = {
@@ -325,8 +327,10 @@ ideas = {
 			}
 			allowed_civil_war = {
 				NOT = {
-					has_government = communism
-					has_government = fascism
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
 				}
 			}
 			available = {
@@ -346,8 +350,10 @@ ideas = {
 			}
 			allowed_civil_war = {
 				NOT = {
-					has_government = communism
-					has_government = fascism
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
 				}
 			}
 			available = {
@@ -1034,6 +1040,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.05
+				stability_weekly = 0.001
 			}
 		}
 		SPR_idea_split_liberal_party = {
@@ -1070,7 +1077,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.15
-				stability_weekly_factor = -0.001
+				stability_weekly = -0.001
 			}
 		}
 		SPR_idea_united_conservative_party = {
@@ -1083,8 +1090,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.02
 				political_power_factor = 0.1
+				stability_weekly = 0.001
 			}
 		}
 		SPR_idea_split_conservative_party = {
@@ -1124,7 +1131,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.15
-				stability_weekly_factor = -0.001
+				stability_weekly = -0.001
 			}
 		}
 		SPR_idea_planned_economy = {
@@ -1153,7 +1160,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.15
-				stability_weekly_factor = -0.075
+				stability_weekly = -0.075
 			}
 		}
 		SPR_idea_no_usurpers = {
@@ -1167,7 +1174,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.05
-				stability_weekly_factor = 0.074
+				stability_weekly = 0.075
 			}
 		}
 		SPR_idea_terrible_conscription = {

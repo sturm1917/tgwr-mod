@@ -2720,37 +2720,18 @@ country_event = {
 			remove_ideas = SPR_idea_freedom_of_religion
 			add_ideas = SPR_idea_catholic_nation
 			IF = {
-				limit = { has_idea = SPR_idea_muslims_in_spain }
+				limit = { has_completed_focus = SPR_the_muslims }
 				add_ideas = SPR_idea_muslims_in_spain
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_krausism_and_scientists }
+				limit = { has_completed_focus = SPR_fuse_political_and_intellectual_spain }
 				add_ideas = SPR_idea_krausism_and_scientists
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_sunday_off }
+				limit = { has_completed_focus = SPR_law_of_sunday_rest }
 				add_ideas = SPR_idea_sunday_off
 			}
-			IF = {
-				limit = { has_idea = SPR_whispers_for_regional_autonomy }
-				add_ideas = SPR_whispers_for_regional_autonomy
-			}
-			IF = {
-				limit = { has_idea = SPR_protests_for_regional_autonomy }
-				add_ideas = SPR_protests_for_regional_autonomy
-			}
-			IF = {
-				limit = { has_idea = SPR_movements_for_regional_autonomy }
-				add_ideas = SPR_movements_for_regional_autonomy
-			}
-			IF = {
-				limit = { has_idea = SPR_plots_for_regional_autonomy }
-				add_ideas = SPR_plots_for_regional_autonomy
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_revolutionary_calls_for_regional_autonomy }
-				add_ideas = SPR_idea_revolutionary_calls_for_regional_autonomy
-			}
+			add_ideas = SPR_whispers_for_regional_autonomy
 		}
 	}
 }
@@ -2790,7 +2771,7 @@ country_event = {
 	option = {
 		name = ww1_spain.127.a
 		ai_chance = { factor = 10 }
-		set_global_flag = SPR_flag_picked_destoryers
+		set_global_flag = SPR_flag_picked_destroyers
 	}
 	option = {
 		name = ww1_spain.127.b
@@ -3047,7 +3028,7 @@ country_event = {
 	option = {
 		name = ww1_spain.134.a
 		ai_chance = { factor = 10 }
-		remove_idea = SPR_idea_prime_minister_maura
+		remove_ideas = SPR_idea_prime_minister_maura
 		country_event = {
 			id = ww1_spain.135
 			days = 150
