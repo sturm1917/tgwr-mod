@@ -504,7 +504,8 @@
  ww1_spain.130.t:0 "Conservatives Fracture"
  ww1_spain.132.t:0 "Liberals Fracture"
  ww1_spain.131.t:0 "Conservatives Unite"
- 
+ SPR_exploit_their_incompatibility.tt:0 "Unlocks Decision Category §YExploit the Two Crisis§W"
+ SPR_regional_autonomy_vs_junta:0 "Exploit the Two Crisis"
  reform_el_turno.tt:0 "§8The system will be changed. It no longer has to switch between Conservative and Liberal§W"
  
  

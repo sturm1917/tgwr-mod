@@ -1192,5 +1192,19 @@ ideas = {
 				army_defence_factor = -0.15
 			}
 		}
+		SPR_idea_civil_marriage = {
+		picture = chi_forced_conscription
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.1
+			}
+		}
 	}
 }

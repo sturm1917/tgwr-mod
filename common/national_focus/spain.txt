@@ -35,7 +35,7 @@ focus_tree = {
 	focus = {
 		id = SPR_political_strategies
 		icon = GFX_focus_SWI_neutrality_on_the_move
-		cost = 2.9 #days
+		cost = 1.5 #days
 		x = 11
 		y = 2
 		ai_will_do = {
@@ -54,6 +54,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 25
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -755,8 +765,14 @@ focus_tree = {
 				add_stability = -0.05
 				add_political_power = 25
 			}
-			
-			
+			country_event = {
+				id = ww1_spain.133
+				days = 3
+			}
+			country_event = {
+				id = ww1_spain.131
+				days = 3
+			}
 		}
 	}
 	focus = {
@@ -1634,6 +1650,16 @@ focus_tree = {
 				}
 				add_political_power = -25	
 			}	
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -4904,6 +4930,32 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_anarchy_is_for_all
+		icon = GFX_focus_ETH_callout_to_the_world
+		cost = 5 #days
+		x = 15
+		y = 19
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			RUS = {
+				has_civil_war = yes
+			}
+		}
+		prerequisite = {
+			focus = SPR_worlds_first_anarchy
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.125
+			}
+		}
+	}
+	focus = {
 		id = SPR_extensive_legislative_reforms
 		icon = GFX_focus_mex_privatisation
 		cost = 5 #days
@@ -4957,7 +5009,7 @@ focus_tree = {
 		completion_reward = {
 			IF = { 
 				limit = { has_global_flag = liberal_majority }
-				add_political_power = 50
+				add_political_power = 75
 				add_stability = -0.05
 				country_event = {
 					id = ww1_spain.133
@@ -4973,6 +5025,7 @@ focus_tree = {
 					days = 3
 				}
 			}
+			
 		}
 	}
 	focus = {
@@ -5004,6 +5057,7 @@ focus_tree = {
 				add_political_power = 50
 				add_stability = 0.03
 			}
+			add_ideas = SPR_idea_civil_marriage
 		}
 	}
 	focus = {
@@ -5427,7 +5481,7 @@ focus_tree = {
 		id = SPR_send_in_the_military
 		mutually_exclusive = { focus = SPR_relegalize_the_juntas }
 		icon = GFX_focus_POL_ban_nazi_party
-		cost = 8 #days
+		cost = 5 #days
 		x = -4
 		y = 15
 		relative_position_id = SPR_declare_a_republic
@@ -5443,7 +5497,7 @@ focus_tree = {
 			focus = SPR_military_juntas_operate_illegally
 		}
 		completion_reward = {
-			set_global_flag = SPR_flag_failure_in_three_headed_crisis
+			set_global_flag = SPR_flag_junta_failure_in_three
 			add_stability = 0.05
 			add_popularity = {
 				ideology = fascism
@@ -5467,10 +5521,97 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_keep_arms_away_from_vigilantes
+		mutually_exclusive = { focus = SPR_relegalize_the_juntas }
+		icon = GFX_focus_generic_air_defense
+		cost = 2.9 #days
+		x = -3
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = military_tears_down_juntas
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_relegalize_the_juntas
+			focus = SPR_send_in_the_military
+		}
+		completion_reward = {
+			add_political_power = -75
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_stability = -0.03
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1200
+				producer = SPR
+			}
+		}
+	}
+	focus = {
+		id = SPR_continue_skilled_promotion
+		mutually_exclusive = { focus = SPR_relegalize_the_juntas }
+		icon = GFX_focus_POL_sanation_right
+		cost = 2.9 #days
+		x = -3
+		y = 18
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = military_tears_down_juntas
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_keep_arms_away_from_vigilantes
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_war_support = 0.03
+		}
+	}
+	focus = {
+		id = SPR_censor_this_from_the_news
+		mutually_exclusive = { focus = SPR_relegalize_the_juntas }
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 1.5 #days
+		x = -2
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = military_tears_down_juntas
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_keep_arms_away_from_vigilantes
+		}
+		completion_reward = {
+			add_political_power = -25
+			
+			add_stability = 0.03
+		}
+	}
+	focus = {
 		id = SPR_relegalize_the_juntas
 		mutually_exclusive = { focus = SPR_send_in_the_military }
 		icon = GFX_focus_POL_beck_ribbentrop
-		cost = 8 #days
+		cost = 5 #days
 		x = -2
 		y = 15
 		relative_position_id = SPR_declare_a_republic
@@ -5558,13 +5699,186 @@ focus_tree = {
 			focus = SPR_proletariat_strikes
 		}
 		completion_reward = {
-			set_global_flag = SPR_flag_failure_in_three_headed_crisis
+			set_global_flag = SPR_flag_strikes_failure_in_three
 			add_popularity = {
 				ideology = communism
 				popularity = -0.05	
 			}
 			remove_ideas = { SPR_idea_strikers_manifesto }
 			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SPR_crackdown_on_urban_regions
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 2.9 #days
+		x = 4
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_arrest_signatories_of_the_manifesto
+		}
+		completion_reward = {
+			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_political_power = -75
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_threaten_another_bloody_week
+		mutually_exclusive = { focus = SPR_reconcile_for_past_strikes }
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		cost = 2.9 #days
+		x = 3
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_crackdown_on_urban_regions
+		}
+		completion_reward = {
+			
+			add_popularity = {
+				ideology = communism
+				popularity = -0.025
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.025
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SPR_reconcile_for_past_strikes
+		mutually_exclusive = { focus = SPR_threaten_another_bloody_week }
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		icon = GFX_focus_SWI_embrace_rote_drei
+		cost = 2.9 #days
+		x = 5
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_crackdown_on_urban_regions
+			focus = SPR_adopt_furthur_social_reform
+		}
+		completion_reward = {
+			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05	
+			}
+			
+			add_stability = 0.05
+			add_political_power = -25
+		}
+	}
+	focus = {
+		id = SPR_strengthen_the_punishment
+		mutually_exclusive = { focus = SPR_rights_and_insurance_legislation }
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		icon = GFX_focus_generic_monarchy_1
+		cost = 2.9 #days
+		x = 4
+		y = 18
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_reconcile_for_past_strikes
+			focus = SPR_threaten_another_bloody_week
+		}
+		completion_reward = {
+			
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05	
+			}
+			add_political_power = 75
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SPR_rights_and_insurance_legislation
+		mutually_exclusive = { focus = SPR_strengthen_the_punishment }
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		icon = GFX_focus_generic_women_in_military
+		cost = 2.9 #days
+		x = 6
+		y = 18
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_adopt_furthur_social_reform
+		}
+		completion_reward = {
+			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_political_power = -75
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -5600,6 +5914,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_political_power = -100
+			set_global_flag = SPR_success_in_proletariat_strikes
 		}
 	}
 	focus = {
@@ -5724,7 +6039,7 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
-			set_global_flag = SPR_flag_failure_in_three_headed_crisis
+			set_global_flag = SPR_flag_catalonia_failure_in_three
 			add_political_power = -75
 			add_popularity = {
 				ideology = fascism
@@ -5751,7 +6066,7 @@ focus_tree = {
 	focus = {
 		id = SPR_junta_and_catalonian_autonomy_incompatible
 		icon = GFX_focus_RAJ_lions_of_the_great_war
-		cost = 8 #days
+		cost = 2.9 #days
 		x = -1
 		y = 16
 		relative_position_id = SPR_declare_a_republic
@@ -5770,9 +6085,10 @@ focus_tree = {
 			focus = SPR_allow_minor_regional_autonomy
 		}
 		completion_reward = { #decisions note/add decision: exploit juntas vs regionalist
-			add_stability = -0.05
-			remove_ideas = SPR_idea_juntas_de_defensa
-			remove_ideas = SPR_idea_autonomous_catalonia
+			custom_effect_tooltip = SPR_exploit_their_incompatibility.tt
+			hidden_effect = {
+				add_political_power = 75
+			}
 		}
 	}
 	focus = {

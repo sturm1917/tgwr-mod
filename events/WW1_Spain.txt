@@ -3136,9 +3136,52 @@ country_event = {
 	desc = ww1_spain.140.d
 	picture = GFX_report_event_generic_factory
 	fire_only_once = no
-	mean_time_to_happen = { days = 150 }
+	mean_time_to_happen = { days = 50 }
 	trigger = {
-		has_completed_focus = SPR_forcefully_dissolve_the_assembly
+		AND = {
+			NOT = {
+				AND = {
+					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+					has_completed_focus = SPR_adopt_furthur_social_reform
+				}
+			}
+			OR = {
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+				}
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_allow_minor_regional_autonomy
+					has_completed_focus = SPR_send_in_the_military
+				}
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_send_in_the_military
+				}
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_relegalize_the_juntas
+				}
+				AND = {
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_relegalize_the_juntas
+				}
+				AND = {
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_send_in_the_military
+				}
+				AND = {
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					has_completed_focus = SPR_allow_minor_regional_autonomy
+					has_completed_focus = SPR_send_in_the_military
+				}
+			}
+		}
 	}
 	option = {
 		name = ww1_spain.140.a
