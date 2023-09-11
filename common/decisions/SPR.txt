@@ -726,7 +726,7 @@ SPR_religious_policy_category = {
 				limit = { has_idea = SPR_idea_mild_protestantism }
 				swap_ideas = {
 					remove_idea = SPR_idea_mild_protestantism
-					add_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_strong_protestantism
 				}
 			}
 			IF = {
@@ -788,7 +788,7 @@ SPR_religious_policy_category = {
 				limit = { has_idea = SPR_idea_weak_protestantism }
 				swap_ideas = {
 					remove_idea = SPR_idea_weak_protestantism
-					add_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_mild_protestantism
 				}
 			}
 			IF = {
@@ -799,9 +799,9 @@ SPR_religious_policy_category = {
 				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_strong_catholicism }
+				limit = { has_idea = SPR_idea_strong_protestantism }
 				swap_ideas = {
-					remove_idea = SPR_idea_strong_catholicism
+					remove_idea = SPR_idea_strong_protestantism
 					add_idea = SPR_idea_protestant_nation
 				}
 			}
