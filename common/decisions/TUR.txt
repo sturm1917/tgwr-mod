@@ -697,6 +697,7 @@ TUR_minority_decision = {
 						state = 356
 						state = 854
 						state = 340
+						state = 911
 						state = 830
 						state = 49
 						state = 346
@@ -1968,6 +1969,7 @@ TUR_minority_decision = {
 						state = 356
 						state = 854
 						state = 340
+						state = 911
 						state = 830
 						state = 49
 						state = 346
@@ -2043,6 +2045,7 @@ TUR_minority_decision = {
 						state = 356
 						state = 854
 						state = 340
+						state = 911
 						state = 830
 						state = 49
 						state = 346
@@ -6928,6 +6931,7 @@ TUR_minority_decision = {
 						state = 356
 						state = 854
 						state = 340
+						state = 911
 						state = 830
 						state = 49
 						state = 346
@@ -8627,21 +8631,63 @@ TUR_minority_decision = {
 			}
 		}
 		available = {
-			country_exists = GRE
-			GRE = {
-				any_owned_state = {
+			OR = {
+				AND = {
+					country_exists = GRE
+					GRE = {
+						any_owned_state = {
+							is_core_of = GRE
+						}
+					}
+				}
+				any_state = {
+					NOT = {
+						is_owned_by = TUR
+						is_controlled_by = TUR
+					}
 					is_core_of = GRE
 				}
 			}
 		}
 		complete_effect = {
-			set_temp_variable = {
-				TUR_target_state_manpower = state_population
+			FROM = {
+				set_temp_variable = {
+					TUR.TUR_target_state_manpower = state_population
+				}
+				divide_temp_variable = {
+					TUR.TUR_target_state_manpower = -5
+				}
+				add_manpower = var:TUR.TUR_target_state_manpower
+				if = {
+					limit = {
+						country_exists = SER
+					}
+					random_state = {
+						limit = {
+							is_owned_and_controlled_by = GRE
+							is_core_of = GRE
+							has_state_flag = TUR_greek_state_legacy
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							NOT = { is_owned_by = TUR }
+							NOT = { is_controlled_by = TUR }
+							is_core_of = GRE
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
 			}
-			divide_temp_variable = {
-				TUR_target_state_manpower = -5
-			}
-			add_manpower = var:TUR_target_state_manpower
 		}
 		remove_effect = {
 			FROM = {
@@ -8655,18 +8701,41 @@ TUR_minority_decision = {
 					}
 					add_core_of = TUR
 				}
+				if = {
+					limit = {
+						is_core_of = GRE
+						OR = {
+							state = 342
+							state = 824
+							state = 339
+							state = 825
+							state = 861
+							state = 790
+							state = 899
+							state = 164
+							state = 900
+							state = 182
+							state = 183
+							state = 347
+							state = 341
+							state = 860
+						}
+					}
+					remove_core_of = GRE
+					set_state_flag = TUR_no_longer_greek_core_tt
+				}
+				if = {
+					limit = {
+						is_core_of = PON
+						OR = {
+							state = 355
+							state = 354
+						}
+					}
+					remove_core_of = PON
+					set_state_flag = TUR_no_longer_pontus_core_tt
+				}
 				set_state_flag = TUR_unintended_consequence_failed_greek_infrastructure
-			}
-			random_state = {
-				limit = {
-					is_owned_by = GRE
-					is_controlled_by = GRE
-					is_core_of = GRE
-				}
-				divide_temp_variable = {
-					TUR_target_state_manpower = -1
-				}
-				add_manpower = var:TUR_target_state_manpower
 			}
 			hidden_effect = {
 				if = {
@@ -8724,7 +8793,7 @@ TUR_minority_decision = {
 		on_map_mode = map_only
 		days_remove = 45
 		visible = {
-			has_completed_focus = TUR_integration_of_rumelian_greek
+			has_completed_focus = TUR_integration_of_rumelian_greeks
 			controls_state = FROM
 			FROM = {
 				has_state_flag = TUR_greek_state
@@ -8995,21 +9064,63 @@ TUR_minority_decision = {
 			}
 		}
 		available = {
-			country_exists = BUL
-			BUL = {
-				any_owned_state = {
+			OR = {
+				AND = {
+					country_exists = BUL
+					BUL = {
+						any_owned_state = {
+							is_core_of = BUL
+						}
+					}
+				}
+				any_state = {
+					NOT = {
+						is_owned_by = TUR
+						is_controlled_by = TUR
+					}
 					is_core_of = BUL
 				}
 			}
 		}
 		complete_effect = {
-			set_temp_variable = {
-				TUR_target_state_manpower = state_population
+			FROM = {
+				set_temp_variable = {
+					TUR.TUR_target_state_manpower = state_population
+				}
+				divide_temp_variable = {
+					TUR.TUR_target_state_manpower = -5
+				}
+				add_manpower = var:TUR.TUR_target_state_manpower
+				if = {
+					limit = {
+						country_exists = SER
+					}
+					random_state = {
+						limit = {
+							is_owned_and_controlled_by = BUL
+							is_core_of = BUL
+							has_state_flag = TUR_southslav_state_legacy
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							NOT = { is_owned_by = TUR }
+							NOT = { is_controlled_by = TUR }
+							is_core_of = BUL
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
 			}
-			divide_temp_variable = {
-				TUR_target_state_manpower = -5
-			}
-			add_manpower = var:TUR_target_state_manpower
 		}
 		remove_effect = {
 			FROM = {
@@ -9023,18 +9134,21 @@ TUR_minority_decision = {
 					}
 					add_core_of = TUR
 				}
+				if = {
+					limit = {
+						is_core_of = BUL
+						OR = {
+							state = 849
+							state = 756
+							state = 200
+							state = 451
+							state = 757
+						}
+					}
+					remove_core_of = BUL
+					set_state_flag = TUR_no_longer_bulgaria_core_tt
+				}
 				set_state_flag = TUR_unintended_consequence_mass_looting_on_bulgarian_properties
-			}
-			random_state = {
-				limit = {
-					is_owned_by = BUL
-					is_controlled_by = BUL
-					is_core_of = BUL
-				}
-				divide_temp_variable = {
-					TUR_target_state_manpower = -1
-				}
-				add_manpower = var:TUR_target_state_manpower
 			}
 			hidden_effect = {
 				if = {
@@ -9242,31 +9356,87 @@ TUR_minority_decision = {
 		available = {
 			OR = {
 				AND = {
-					country_exists = SER
-					SER = {
-						any_owned_state = {
-							is_core_of = SER
+					OR = {
+						AND = {
+							country_exists = SER
+							SER = {
+								any_owned_state = {
+									is_core_of = SER
+								}
+							}
+						}
+						AND = {
+							country_exists = MNT
+							MNT = {
+								any_owned_state = {
+									is_core_of = MNT
+								}
+							}
 						}
 					}
 				}
-				AND = {
-					country_exists = MNT
-					MNT = {
-						any_owned_state = {
-							is_core_of = MNT
-						}
+				any_state = {
+					NOT = {
+						is_owned_by = TUR
+						is_controlled_by = TUR
+					}
+					OR = {
+						is_core_of = SER
+						is_core_of = MNT
 					}
 				}
 			}
 		}
 		complete_effect = {
-			set_temp_variable = {
-				TUR_target_state_manpower = state_population
+			FROM = {
+				set_temp_variable = {
+					TUR.TUR_target_state_manpower = state_population
+				}
+				divide_temp_variable = {
+					TUR.TUR_target_state_manpower = -5
+				}
+				add_manpower = var:TUR.TUR_target_state_manpower
+				if = {
+					limit = {
+						country_exists = SER
+					}
+					random_state = {
+						limit = {
+							OR = {
+								AND = {
+									is_owned_and_controlled_by = SER
+									is_core_of = SER
+								}
+								AND = {
+									is_owned_and_controlled_by = MNT
+									is_core_of = MNT
+								}
+							}
+							has_state_flag = TUR_southslav_state_legacy
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							NOT = { is_owned_by = TUR }
+							NOT = { is_controlled_by = TUR }
+							OR = {
+								is_core_of = SER
+								is_core_of = MNT
+							}
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
 			}
-			divide_temp_variable = {
-				TUR_target_state_manpower = -5
-			}
-			add_manpower = var:TUR_target_state_manpower
 		}
 		remove_effect = {
 			FROM = {
@@ -9281,26 +9451,6 @@ TUR_minority_decision = {
 					add_core_of = TUR
 				}
 				set_state_flag = TUR_unintended_consequence_violence_in_serbia
-			}
-			random_state = {
-				limit = {
-					OR = {
-						AND = {
-							is_owned_by = SER
-							is_controlled_by = SER
-							is_core_of = SER
-						}
-						AND = {
-							is_owned_by = MNT
-							is_controlled_by = MNT
-							is_core_of = MNT
-						}
-					}
-				}
-				divide_temp_variable = {
-					TUR_target_state_manpower = -1
-				}
-				add_manpower = var:TUR_target_state_manpower
 			}
 			hidden_effect = {
 				if = {
@@ -9643,21 +9793,63 @@ TUR_minority_decision = {
 			}
 		}
 		available = {
-			country_exists = ROM
-			ROM = {
-				any_owned_state = {
+			OR = {
+				AND = {
+					country_exists = ROM
+					ROM = {
+						any_owned_state = {
+							is_core_of = ROM
+						}
+					}
+				}
+				any_state = {
+					NOT = {
+						is_owned_by = TUR
+						is_controlled_by = TUR
+					}
 					is_core_of = ROM
 				}
 			}
 		}
 		complete_effect = {
-			set_temp_variable = {
-				TUR_target_state_manpower = state_population
+			FROM = {
+				set_temp_variable = {
+					TUR.TUR_target_state_manpower = state_population
+				}
+				divide_temp_variable = {
+					TUR.TUR_target_state_manpower = -5
+				}
+				add_manpower = var:TUR.TUR_target_state_manpower
+				if = {
+					limit = {
+						country_exists = ROM
+					}
+					random_state = {
+						limit = {
+							is_owned_and_controlled_by = ROM
+							is_core_of = ROM
+							has_state_flag = TUR_romanian_state_legacy
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							NOT = { is_owned_by = TUR }
+							NOT = { is_controlled_by = TUR }
+							is_core_of = ROM
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
 			}
-			divide_temp_variable = {
-				TUR_target_state_manpower = -5
-			}
-			add_manpower = var:TUR_target_state_manpower
 		}
 		remove_effect = {
 			FROM = {
@@ -9672,17 +9864,6 @@ TUR_minority_decision = {
 					add_core_of = TUR
 				}
 				set_state_flag = TUR_unintended_consequence_deportation_of_romanians
-			}
-			random_state = {
-				limit = {
-					is_owned_by = ROM
-					is_controlled_by = ROM
-					is_core_of = ROM
-				}
-				divide_temp_variable = {
-					TUR_target_state_manpower = -1
-				}
-				add_manpower = var:TUR_target_state_manpower
 			}
 			hidden_effect = {
 				if = {
@@ -9867,21 +10048,63 @@ TUR_minority_decision = {
 			}
 		}
 		available = {
-			country_exists = ARM
-			ARM = {
-				any_owned_state = {
+			OR = {
+				AND = {
+					country_exists = ARM
+					ARM = {
+						any_owned_state = {
+							is_core_of = ARM
+						}
+					}
+				}
+				any_state = {
+					NOT = {
+						is_owned_by = TUR
+						is_controlled_by = TUR
+					}
 					is_core_of = ARM
 				}
 			}
 		}
 		complete_effect = {
-			set_temp_variable = {
-				TUR_target_state_manpower = state_population
+			FROM = {
+				set_temp_variable = {
+					TUR.TUR_target_state_manpower = state_population
+				}
+				divide_temp_variable = {
+					TUR.TUR_target_state_manpower = -5
+				}
+				add_manpower = var:TUR.TUR_target_state_manpower
+				if = {
+					limit = {
+						country_exists = ARM
+					}
+					random_state = {
+						limit = {
+							is_owned_and_controlled_by = ARM
+							is_core_of = ARM
+							has_state_flag = TUR_armenian_state_legacy
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							NOT = { is_owned_by = TUR }
+							NOT = { is_controlled_by = TUR }
+							is_core_of = ARM
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
 			}
-			divide_temp_variable = {
-				TUR_target_state_manpower = -5
-			}
-			add_manpower = var:TUR_target_state_manpower
 		}
 		remove_effect = {
 			FROM = {
@@ -9895,18 +10118,22 @@ TUR_minority_decision = {
 					}
 					add_core_of = TUR
 				}
+				if = {
+					limit = {
+						is_core_of = ARM
+						OR = {
+							state = 349
+							state = 348
+							state = 353
+							state = 352
+							state = 806
+							state = 816
+						}
+					}
+					remove_core_of = ARM
+					set_state_flag = TUR_no_longer_armenia_core_tt
+				}
 				set_state_flag = TUR_unintended_consequence_relocate_armenians_to_east
-			}
-			random_state = {
-				limit = {
-					is_owned_by = ARM
-					is_controlled_by = ARM
-					is_core_of = ARM
-				}
-				divide_temp_variable = {
-					TUR_target_state_manpower = -1
-				}
-				add_manpower = var:TUR_target_state_manpower
 			}
 			hidden_effect = {
 				if = {
@@ -10132,21 +10359,63 @@ TUR_minority_decision = {
 			}
 		}
 		available = {
-			country_exists = ARM
-			ARM = {
-				any_owned_state = {
+			OR = {
+				AND = {
+					country_exists = ARM
+					ARM = {
+						any_owned_state = {
+							is_core_of = ARM
+						}
+					}
+				}
+				any_state = {
+					NOT = {
+						is_owned_by = TUR
+						is_controlled_by = TUR
+					}
 					is_core_of = ARM
 				}
 			}
 		}
 		complete_effect = {
-			set_temp_variable = {
-				TUR_target_state_manpower = state_population
+			FROM = {
+				set_temp_variable = {
+					TUR.TUR_target_state_manpower = state_population
+				}
+				divide_temp_variable = {
+					TUR.TUR_target_state_manpower = -5
+				}
+				add_manpower = var:TUR.TUR_target_state_manpower
+				if = {
+					limit = {
+						country_exists = ARM
+					}
+					random_state = {
+						limit = {
+							is_owned_and_controlled_by = ARM
+							is_core_of = ARM
+							has_state_flag = TUR_armenian_state_legacy
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							NOT = { is_owned_by = TUR }
+							NOT = { is_controlled_by = TUR }
+							is_core_of = ARM
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
 			}
-			divide_temp_variable = {
-				TUR_target_state_manpower = -5
-			}
-			add_manpower = var:TUR_target_state_manpower
 		}
 		remove_effect = {
 			FROM = {
@@ -10160,18 +10429,15 @@ TUR_minority_decision = {
 					}
 					add_core_of = TUR
 				}
+				if = {
+					limit = {
+						is_core_of = ASY
+						state = 828
+					}
+					remove_core_of = ASY
+					set_state_flag = TUR_no_longer_assyria_core_tt
+				}
 				set_state_flag = TUR_unintended_consequence_relocate_armenians_to_east
-			}
-			random_state = {
-				limit = {
-					is_owned_by = ARM
-					is_controlled_by = ARM
-					is_core_of = ARM
-				}
-				divide_temp_variable = {
-					TUR_target_state_manpower = -1
-				}
-				add_manpower = var:TUR_target_state_manpower
 			}
 			hidden_effect = {
 				if = {
@@ -10311,21 +10577,63 @@ TUR_minority_decision = {
 			}
 		}
 		available = {
-			country_exists = GEO
-			GEO = {
-				any_owned_state = {
+			OR = {
+				AND = {
+					country_exists = GEO
+					GEO = {
+						any_owned_state = {
+							is_core_of = GEO
+						}
+					}
+				}
+				any_state = {
+					NOT = {
+						is_owned_by = TUR
+						is_controlled_by = TUR
+					}
 					is_core_of = GEO
 				}
 			}
 		}
 		complete_effect = {
-			set_temp_variable = {
-				TUR_target_state_manpower = state_population
+			FROM = {
+				set_temp_variable = {
+					TUR.TUR_target_state_manpower = state_population
+				}
+				divide_temp_variable = {
+					TUR.TUR_target_state_manpower = -5
+				}
+				add_manpower = var:TUR.TUR_target_state_manpower
+				if = {
+					limit = {
+						country_exists = GEO
+					}
+					random_state = {
+						limit = {
+							is_owned_and_controlled_by = GEO
+							is_core_of = GEO
+							has_state_flag = TUR_georgian_state_legacy
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							NOT = { is_owned_by = TUR }
+							NOT = { is_controlled_by = TUR }
+							is_core_of = GEO
+						}
+						divide_temp_variable = {
+							TUR.TUR_target_state_manpower = -1
+						}
+						add_manpower = var:TUR.TUR_target_state_manpower
+					}
+				}
 			}
-			divide_temp_variable = {
-				TUR_target_state_manpower = -5
-			}
-			add_manpower = var:TUR_target_state_manpower
 		}
 		remove_effect = {
 			FROM = {
@@ -10339,18 +10647,15 @@ TUR_minority_decision = {
 					}
 					add_core_of = TUR
 				}
+				if = {
+					limit = {
+						is_core_of = GEO
+						state = 855
+					}
+					remove_core_of = GEO
+					set_state_flag = TUR_no_longer_georgia_core_tt
+				}
 				set_state_flag = TUR_unintended_consequence_georgians_to_georgia
-			}
-			random_state = {
-				limit = {
-					is_owned_by = GEO
-					is_controlled_by = GEO
-					is_core_of = GEO
-				}
-				divide_temp_variable = {
-					TUR_target_state_manpower = -1
-				}
-				add_manpower = var:TUR_target_state_manpower
 			}
 			hidden_effect = {
 				if = {
@@ -12905,6 +13210,7 @@ TUR_minority_decision = {
 		targets = {
 			854
 			340
+			911
 			356
 			49
 			830
@@ -13727,6 +14033,7 @@ TUR_minority_decision = {
 			356
 			854
 			340
+			911
 		}
 		days_remove = 35
 		on_map_mode = map_only
@@ -13752,6 +14059,7 @@ TUR_minority_decision = {
 							state = 356
 							state = 854
 							state = 340
+							state = 911
 						}
 					}
 					add_core_of = TUR
@@ -18146,16 +18454,17 @@ TUR_literacy_campaigns_in_states = {
 		state_target = yes
 		targets = {
 			339
-			825
+			854
 			49
 			347
+			756
 			677
 			554
 			291
 			345
 		}
 		on_map_mode = map_and_decisions_view
-		days_remove = 30
+		days_remove = 50
 		visible = {
 			OR = {
 				has_completed_focus = TUR_literacy_campaigns
@@ -18172,6 +18481,16 @@ TUR_literacy_campaigns_in_states = {
 					has_idea = TUR_crippling_illiteracy3
 					has_idea = TUR_crippling_illiteracy4
 					has_idea = TUR_crippling_illiteracy5
+					has_idea = TUR_encouraged_education_1
+					has_idea = TUR_encouraged_education_2
+					has_idea = TUR_encouraged_education_3
+					has_idea = TUR_encouraged_education_4
+					has_idea = TUR_encouraged_education_5
+					has_idea = TUR_encouraged_education_6
+					has_idea = TUR_encouraged_education_7
+					has_idea = TUR_encouraged_education_8
+					has_idea = TUR_encouraged_education_9
+					has_idea = TUR_encouraged_education_10
 				}
 			}
 		}
@@ -18596,6 +18915,7 @@ TUR_local_conscription = {
 			356
 			854
 			340
+			911
 			830
 			49
 			346
@@ -24936,6 +25256,7 @@ TUR_war_of_independence_support_OTT = {
 			346
 			830
 			340
+			911
 			854
 			350
 			828
