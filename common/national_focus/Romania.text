@@ -238,9 +238,27 @@ country = {
 		}
 	}
 	focus = {
-		id = ROM_Prepare_to_Rig_the_Elections
+		id = ROM_form_a_new_gov
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
+		x = 4
+		y = 1
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_Prepare_to_Rig_the_Elections
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_form_a_new_gov }
 		mutually_exclusive = { focus = ROM_form_right_wing_paramilitaries focus = ROM_secure_free_elections }
 		x = 4
 		y = 2
