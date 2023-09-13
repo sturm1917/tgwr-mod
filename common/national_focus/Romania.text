@@ -1,5 +1,5 @@
 	focus_tree = {
-	id =ROM_ ROM_custom_focus
+	id = ROM_custom_focus
 	default = no
 country = {
 		factor = 0	
