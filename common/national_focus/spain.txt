@@ -53,7 +53,7 @@ focus_tree = {
 			focus = SPR_1910_general_election
 		}
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
 			hidden_effect = {
 				country_event = {
 					id = ww1_spain.133
@@ -89,9 +89,9 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.075
+				popularity = 0.05
 			}
-			add_political_power = -25
+			add_political_power = -35
 		}
 	}
 	focus = {
@@ -117,7 +117,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 100
-			army_experience = 25
+			army_experience = 35
 		}
 	}
 	focus = {
@@ -184,7 +184,7 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.03
+				popularity = 0.025
 			}
 			SPR = { 
 				add_political_power = 75
@@ -341,7 +341,7 @@ focus_tree = {
 		completion_reward = {
 			SPR = { 
 				add_political_power = -25
-				add_stability = 0.03
+				add_stability = 0.035
 			}		
 			172 = {
 				remove_building = {
@@ -397,7 +397,7 @@ focus_tree = {
 			SPR = { 
 				add_political_power = -75
 			}	
-			add_stability = 0.075
+			add_stability = 0.08
 			scripted_effect_drop_in_regional_demands = yes
 		}
 	}
@@ -423,14 +423,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = -50
-			add_stability = 0.025
+			add_stability = 0.03
 			add_tech_bonus = {
 				bonus = 0.1
 				uses = 2
 				category = industry
 			}
 			add_tech_bonus = {
-				bonus = 0.15
+				bonus = 0.125
 				uses = 1
 				category = electronics
 			}
@@ -520,11 +520,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			SPR = { 
-				add_stability = -0.05
+				add_stability = -0.03
 				add_political_power = 50
 				add_popularity = {
 					ideology = neutrality
-					popularity = -0.05
+					popularity = -0.03
 				}
 			}		
 		}
