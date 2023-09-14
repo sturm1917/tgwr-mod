@@ -31,7 +31,7 @@ tags={
 	"Events"
 	"Technologies"
 }
-name="The Great War Redux1"
+name="The Great War Redux"
 version="0.10.21"
 supported_version="1.12.*"
-remote_file_id="1946557393"
+remote_file_id="1946557392"

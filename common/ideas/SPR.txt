@@ -90,8 +90,8 @@ ideas = {
 			modifier = {
 				experience_gain_navy_unit_factor = 0.25
 				naval_accidents_chance = -0.75
-				naval_damage_factor = 0.15
-				naval_defense_factor = 0.15
+				naval_damage_factor = 0.1
+				naval_defense_factor = 0.1
 			}
 		}
 		SPR_idea_naval_admirals = {
