@@ -311,6 +311,25 @@ country = {
 			factor = 5
 		}
 	}
+ focus = {
+		id = ROM_party_of_theifs
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_Prepare_to_Rig_the_Elections }
+		x = 10
+		y = 3
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+
+		available = {
+			
+		}		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_supress_left_wing_protesters
 		icon = GFX_focus_rom_preserve_romania
@@ -747,6 +766,42 @@ country = {
 		prerequisite = { focus = ROM_reconcile_with_the_left focus = ROM_our_duty_to_the_people }
 		x = 2
 		y = 1
+		relative_position_id =  ROM_our_duty_to_the_people
+		cost = 5
+		available = {
+			
+		}		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+ focus = {
+		id = ROM_tackle_the_defict
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_our_duty_to_the_people }
+		x = 4
+		y = 1
+		relative_position_id =  ROM_our_duty_to_the_people
+		cost = 5
+		available = {
+			
+		}		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+ focus = {
+		id = ROM_tax_cuts_for_poor
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_expand_access_to_primary_education }
+		x = 2
+		y = 2
 		relative_position_id =  ROM_our_duty_to_the_people
 		cost = 5
 		available = {
