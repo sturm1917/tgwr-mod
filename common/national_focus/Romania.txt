@@ -8,6 +8,353 @@ country = {
 			tag = ROM
 		}
 	}
+ focus = {
+		id = ROM_our_place_in_the_world
+		icon = GFX_focus_rom_preserve_romania
+		x = 10
+		y = 15
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_prepare_the_economy
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_our_place_in_the_world } 
+		x = 0
+		y = 3
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_ambitions_up_north
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_our_place_in_the_world } 
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_seize_moldova
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_ambitions_up_north } 
+	    mutually_exclusive = {focus = ROM_the_moldovan_concession focus = ROM_demand_moldova}	
+		x = -2
+		y = 2
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_moldovan_concession
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_ambitions_up_north } 
+	    mutually_exclusive = {focus = ROM_seize_moldova focus = ROM_demand_moldova}	
+		x = -4
+		y = 2
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_demand_moldova
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_ambitions_up_north }
+        mutually_exclusive = {focus = ROM_seize_moldova focus = ROM_the_moldovan_concession}	
+		x = -6
+		y = 2
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_continue_central_powers_cooporation
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_ambitions_up_north }
+		x = -8
+		y = 2
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_german_military_mission
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_continue_central_powers_cooporation }
+		x = -8
+		y = 3
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_german_companies
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_continue_central_powers_cooporation }
+		x = -10
+		y = 3
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_join_cp
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_german_companies }
+		prerequisite = {focus = ROM_german_military_mission }
+		x = -9
+		y = 4
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_german_planning
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_join_cp }
+		x = -10
+		y = 5
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_claims_in_ukraine
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_join_cp }
+		x = -8
+		y = 5
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_ambitions_west
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_our_place_in_the_world } 
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_demand_transylvania
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_ambitions_west } 
+		mutually_exclusive = { focus = ROM_the_Bukovina_compromise }
+		x = 2
+		y = 2
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+		focus = {
+		id = ROM_the_Bukovina_compromise
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_ambitions_west } 
+		mutually_exclusive = { focus = ROM_demand_moldova }
+		x = 4
+		y = 2
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_russian_nap
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_ambitions_west } 
+		x = 6
+		y = 2
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_secure_our_safety
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_russian_nap } 
+		x = 6
+		y = 3
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_british_italian_banks
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_russian_nap } 
+		x = 8
+		y = 3
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_join_entente
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {focus = ROM_british_italian_banks } 
+		prerequisite = {focus = ROM_secure_our_safety } 
+		x = 7
+		y = 4
+		cost = 5
+		relative_position_id = ROM_our_place_in_the_world
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_King_Carls_Reign
 		icon = GFX_focus_rom_preserve_romania
@@ -849,3 +1196,4 @@ country = {
 			factor = 5
 		}
 	}
+ 
