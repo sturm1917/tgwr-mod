@@ -34,6 +34,18 @@
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -52,7 +64,8 @@
 		prerequisite = { focus = BUL_modernize_bulgaria }
 		mutually_exclusive = { focus = BUL_industrialize_the_country }
 		completion_reward = { 
-
+				custom_effect_tooltip = BUL_slower_industrial_expansion
+				add_ideas = BUL_idea_agrarian_economy
 		}
 	}
 	focus = {
@@ -63,7 +76,13 @@
 		y = 1
 		prerequisite = { focus = BUL_prioritize_the_farmers }
 		completion_reward = { 
-
+			212 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -74,7 +93,13 @@
 		y = 1
 		prerequisite = { focus = BUL_prioritize_the_farmers }
 		completion_reward = { 
-
+			211 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -85,7 +110,13 @@
 		y = 1
 		prerequisite = { focus = BUL_prioritize_the_farmers }
 		completion_reward = { 
-
+			77 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -98,7 +129,13 @@
 		prerequisite = { focus = BUL_civ_industry_in_south }
 		prerequisite = { focus = BUL_varnanian_civ_industry }
 		completion_reward = { 
-
+			48 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -173,7 +210,13 @@
 		y = 2
 		prerequisite = { focus = BUL_modernize_bulgaria }
 		completion_reward = { 
-
+			48 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
