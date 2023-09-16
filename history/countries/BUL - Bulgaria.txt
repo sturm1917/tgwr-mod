@@ -92,6 +92,10 @@ recruit_character = BUL_mikhail_madzharov
 	}
 
 	activate_advisor = BUL_aleksandar_malinov
+	set_can_be_fired_in_advisor_role = {
+		character = BUL_aleksandar_malinov
+		value = no
+	}
 }	
 1914.1.1 = {
 	set_politics = {
