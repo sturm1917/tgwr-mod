@@ -174,7 +174,7 @@
 		icon = GFX_focus_generic_industry_1
 		cost = 5
 		relative_position_id = BUL_varnanian_civ_industry
-		x = 0
+		x = 1
 		y = 2
 		prerequisite = { focus = BUL_civ_industry_dobrudja }
 		prerequisite = { focus = BUL_civ_industry_in_south }
@@ -265,7 +265,7 @@
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		relative_position_id = BUL_varna_arms_industry
-		x = 0
+		x = -1
 		y = 2
 		prerequisite = { focus = BUL_southern_militarization }
 		prerequisite = { focus = BUL_varna_arms_industry }
@@ -401,7 +401,7 @@
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 4
 		relative_position_id = BUL_biggest_railway_on_balkans
-		x = -2
+		x = -1
 		y = 1
 		prerequisite = { focus = BUL_biggest_railway_on_balkans }
 		completion_reward = { 
@@ -426,7 +426,7 @@
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 4
 		relative_position_id = BUL_biggest_railway_on_balkans
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BUL_biggest_railway_on_balkans }
 		completion_reward = { 
@@ -466,7 +466,7 @@
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5	
 		relative_position_id = BUL_sofia_university
-		x = -4
+		x = -3
 		y = 0
 		prerequisite = { 
 			focus = BUL_rhodopes_military_expansion
@@ -483,7 +483,7 @@
 		icon = GFX_goal_generic_production2
 		cost = 5	
 		relative_position_id = BUL_sofia_university
-		x = 4
+		x = 3
 		y = 0
 		prerequisite = { 
 			focus = BUL_rhodopes_military_expansion
@@ -556,7 +556,7 @@
 		icon = GFX_focus_industry_steel
 		cost = 4
 		relative_position_id = BUL_southern_urbanization
-		x = 3
+		x = 2
 		y = 1
 		prerequisite = { focus = BUL_southern_urbanization }
 		prerequisite = { 
@@ -602,7 +602,7 @@
 		icon = GFX_goal_generic_trade
 		cost = 4
 		relative_position_id = BUL_southern_urbanization
-		x = -3
+		x = -2
 		y = 1
 		prerequisite = { focus = BUL_southern_urbanization }
 		prerequisite = { 
