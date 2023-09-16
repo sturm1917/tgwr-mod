@@ -27,3 +27,13 @@ BUL_weapon_order = {
 	visible_when_empty = yes
 	priority = 100
 }
+
+BUL_change_constitution_decision = {
+	allowed = {
+		tag = BUL
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = BUL_change_constitution
+	}
+}

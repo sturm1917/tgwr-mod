@@ -2138,6 +2138,7 @@
 
 
  bulgaria_focus:0 "Bulgarian Focus Tree"
+ BUL_change_constitution:0 "Change The Constitution"
  BUL_modernize_bulgaria:0 "Modernize Bulgaria"
  BUL_prioritize_the_farmers:0 "Prioritize The Farmers"
  BUL_civ_industry_dobrudja:0 "Civlian Industry In Dobrudja"
@@ -2148,7 +2149,7 @@
  BUL_southern_militarization:0 "Southern Militarization"
  BUL_varna_arms_industry:0 "Varnas Arms Industry"
  BUL_arm_dobrudja_farmers:0 "Arm Dobrudjas Farmers"
- BUL_only_soldiers_in_sofia:0 "Only Soldiers In Sofia"
+ BUL_only_soldiers_in_west:0 "Only Soldiers In The West"
  BUL_urbanization_capital:0 "Urbanization Of The Capital"
  BUL_urbanize_dobrudja:0 "Urbanize Dobrudja"
  BUL_urbanize_coast:0 "Urbanize The Coast"

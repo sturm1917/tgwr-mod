@@ -6,7 +6,7 @@ set_stability = 0.66
 set_war_support = 0.75
 set_convoys = 5
 add_manpower = 150000
-
+set_cosmetic_tag = BUL_principality
 recruit_character = BUL_ferdinand_i
 recruit_character = BUL_grand_national_assembly
 recruit_character = BUL_aleksandar_tsankov

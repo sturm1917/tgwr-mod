@@ -8,11 +8,44 @@
 		}
 	}
 	continuous_focus_position = {
-		x = 2390
-		y = 1575
+		x = 3390
+		y = 2075
 	}
 	#initial_show_position = { focus = BUL_new_balkan_power }
 	default = no
+		##########
+	#Political Tree
+	##########
+	focus = {
+		id = BUL_change_constitution
+		icon = GFX_focus_BUL_the_third_bulgarian_empire
+		cost = 1
+		x = 2
+		y = 1
+		available = {
+			date > 1911.6.5
+		}
+		completion_reward = {
+			#a decision to rename bulgaria
+		}
+	}
+
+	focus = {
+		id = sex
+		cost = 1
+		relative_position_id = BUL_change_constitution
+		x = 0
+		y = 2
+		available = {
+			has_global_flag = BUL_flag_is_tsardom
+		}
+		completion_reward = {
+
+		}
+	}
+
+
+
 	##############
 	# Economic tree
 	##############
@@ -20,7 +53,7 @@
 		id = BUL_modernize_bulgaria
 		icon = GFX_goal_generic_construction
 		cost = 5
-		x = 10
+		x = 25
 		y = 1
 		completion_reward = { 
 			48 = {
@@ -142,6 +175,13 @@
 					instant_build = yes
 				}
 			}
+			912 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -197,7 +237,7 @@
 		}
 	}
 	focus = {
-		id = BUL_only_soldiers_in_sofia
+		id = BUL_only_soldiers_in_west
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		relative_position_id = BUL_varna_arms_industry
@@ -207,7 +247,20 @@
 		prerequisite = { focus = BUL_varna_arms_industry }
 		prerequisite = { focus = BUL_arm_dobrudja_farmers }
 		completion_reward = { 
-
+			48 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			912 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -424,11 +477,11 @@
 		id = BUL_some_agrarian_industry
 		icon = GFX_focus_manage_industries
 		cost = 4
-		relative_position_id = BUL_only_soldiers_in_sofia
+		relative_position_id = BUL_only_soldiers_in_west
 		x = 1
 		y = 1
 		prerequisite = { focus = BUL_southern_urbanization }
-		prerequisite = { focus = BUL_only_soldiers_in_sofia }
+		prerequisite = { focus = BUL_only_soldiers_in_west }
 		completion_reward = { 
 
 		}
@@ -484,7 +537,7 @@
 		prerequisite = { focus = BUL_southern_urbanization }
 		prerequisite = { 
 			focus = BUL_capital_civ_industry
-			focus = BUL_only_soldiers_in_sofia
+			focus = BUL_only_soldiers_in_west
 		}
 		completion_reward = { 
 			48 = {
@@ -530,7 +583,7 @@
 		prerequisite = { focus = BUL_southern_urbanization }
 		prerequisite = { 
 			focus = BUL_capital_civ_industry
-			focus = BUL_only_soldiers_in_sofia
+			focus = BUL_only_soldiers_in_west
 		}
 		completion_reward = { 
 
@@ -548,4 +601,8 @@
 
 		}
 	}
+
+
+
+
 }

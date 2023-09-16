@@ -400,6 +400,12 @@
  FRA_send_janin_to_russia:0 "Allied mission in Russia"
 
 
+ BUL_change_constitution_decision:0 "Change The Constitution"
+ BUL_rename_bulgaria:0 "Get The Name Of Our Ancestors Back!"
+ BUL_rename_bulgaria_desc:0 "We must no longer suffer under the name, that categorizes us as a mere puppet of [TUR.getName]. We must show our independence to the world, and the first step  is to become a tsardom like the old days."
+ BUL_flag_is_tsardom:0 "We have declared ourselves a §YTsardom§!"
+
+
 BUL_AUH_could_support_us:0 "§Y[AUH.getName]§! will receive a proposition of economic and military cooperation, making them able to support our claims."
 BUL_weapon_order:0 "Worldwide Arms Market"
 BUL_order_guns_from_france:0 "Order Guns From France"

@@ -728,6 +728,20 @@ BUL_weapon_order = {
 
 }
 
+BUL_change_constitution_decision = {
+	BUL_rename_bulgaria = {
+        available = {
+            is_subject = no
+        }fire_only_once = yes
+        cost = 0
+        complete_effect = {
+            add_stability = 0.15 #Whatever stability you want
+            drop_cosmetic_tag = yes
+			set_global_flag = BUL_flag_is_tsardom
+        }
+	}
+}
+
 AUH_investment_in_BUL = {
 	BUL_tighten_private_companies_control = {
 		icon = generic_civil_support

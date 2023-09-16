@@ -194,6 +194,10 @@ GRE_TUR = {
 	color = rgb { 90 115 108 }
 	color_ui = rgb { 90 115 108 }
 }
+BUL_principality = {
+    color = rgb { 66  113  69 }
+    color_ui = rgb { 66  113  69 }
+}
 BUL_TUR = {
 	color = rgb { 70 102 71 }
 	color_ui = rgb { 70 102 71 }
