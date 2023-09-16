@@ -1,0 +1,1511 @@
+focus_tree = {
+	id = norway_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NOR
+		}
+	}
+	default = no
+	focus = {
+		id = NOR_faraway_lands
+		icon = GFX_focus_GRE_a_land_of_mountains
+		cost = 5
+		x = 19
+		y = 1
+		completion_reward = {
+			add_political_power = 75
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_the_eastern_threat
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		cost = 5
+		x = 19
+		y = 2
+		completion_reward = {
+			add_war_support = 0.05
+		}
+		prerequisite = {
+			focus = NOR_faraway_lands
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_garrison_nord_norge
+		icon = GFX_focus_SOV_restore_cossack_units
+		cost = 5
+		x = 19
+		y = 3
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.03
+		}
+		prerequisite = {
+			focus = NOR_the_eastern_threat
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_the_english_sea
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 2.9
+		x = 21
+		y = 2
+		completion_reward = {
+			add_political_power = 25
+		}
+		prerequisite = {
+			focus = NOR_faraway_lands
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_grand_coast_guard
+		icon = GFX_focus_YUG_banovina_of_croatia
+		cost = 5
+		x = 21
+		y = 3
+		completion_reward = {
+			add_political_power = -75
+			add_stability = 0.05
+		}
+		prerequisite = {
+			focus = NOR_faraway_lands
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_oppurtunity_in_a_revolution #help finnish independence
+		icon = GFX_focus_EST_national_pride_in_finland
+		cost = 5
+		x = 19
+		y = 4
+		completion_reward = {
+			add_political_power = 25
+		}
+		prerequisite = {
+			focus = NOR_garrison_nord_norge
+		}
+		prerequisite = {
+			focus = NOR_grand_coast_guard
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_the_north
+		icon = GFX_focus_LIT_new_kind_of_iron_wolf
+		cost = 2.9
+		x = 24
+		y = 2
+		completion_reward = {
+			add_political_power = 100
+		}
+		prerequisite = {
+			focus = NOR_faraway_lands
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_seabases_on_our_coast
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		cost = 5
+		x = 24
+		y = 3
+		completion_reward = {
+			add_political_power = 100
+		}
+		prerequisite = {
+			focus = NOR_faraway_lands
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_purchase_iceland
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 5
+		x = 24
+		y = 4
+		completion_reward = {
+			add_political_power = -250
+			set_state_owner = 100
+		}
+		prerequisite = {
+			focus = NOR_seabases_on_our_coast
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_purchase_greenland
+		icon = GFX_focus_ITA_workers_unions
+		cost = 5
+		x = 22
+		y = 4
+		completion_reward = {
+			add_political_power = 100
+			set_state_owner = 101
+		}
+		prerequisite = {
+			focus = NOR_seabases_on_our_coast
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = NOR_consult_the_storting
+		icon = GFX_focus_POL_sanation_right
+		cost = 5
+		x = 7
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = NOR_the_peoples_legislation
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 5 #days
+		x = 3
+		y = 1
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_consult_the_storting
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_universal_suffrage_for_women
+		icon = GFX_focus_generic_women_in_military
+		cost = 5 #days
+		x = 4
+		y = 2
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_peoples_legislation
+		}
+		completion_reward = {
+			add_stability = -0.025
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = NOR_centralize_to_the_prime_minister
+		icon = GFX_focus_hol_united_netherlands
+		mutually_exclusive = { focus = NOR_barne_ministry }
+		cost = 5 #days
+		x = 9
+		y = 2
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_peoples_legislation
+		}
+		completion_reward = {
+			add_stability = -0.03
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = NOR_incorporate_the_generals
+		icon = GFX_focus_generic_military_mission
+		cost = 5 #days
+		x = 9
+		y = 3
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_peoples_legislation
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+		}
+	}
+	focus = {
+		id = NOR_militarist_turn
+		icon = GFX_focus_prc_infiltration
+		mutually_exclusive = { focus = NOR_the_educated_shall_administer }
+		cost = 5 #days
+		x = 11
+		y = 5
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_incorporate_the_generals
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = NOR_hire_collective_thinkers
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5 #days
+		x = 15
+		y = 6
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_militarist_turn
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = NOR_the_radicals_of_other_lands
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		cost = 5 #days
+		x = 15
+		y = 8
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_hire_collective_thinkers
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = NOR_1917_party_crisis
+		icon = GFX_focus_SOV_support_spanish_poum
+		cost = 5 #days
+		x = 14
+		y = 9
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_radicals_of_other_lands
+		}
+		completion_reward = {
+			-add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = NOR_government_takeover
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		cost = 5 #days
+		x = 14
+		y = 10
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_radicals_of_other_lands
+		}
+		prerequisite = {
+			focus = NOR_labour
+		}
+		completion_reward = {
+			add_stability = -0.03
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = NOR_democratic_socialism
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		mutually_exclusive = { focus = NOR_militarist_union }
+		cost = 5 #days
+		x = 13
+		y = 11
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_government_takeover
+		}
+		prerequisite = {
+			focus = NOR_labour
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = NOR_militarist_union
+		icon = GFX_focus_rom_royal_dictatorship
+		mutually_exclusive = { focus = NOR_democratic_socialism }
+		cost = 5 #days
+		x = 15
+		y = 11
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_government_takeover
+		}
+		prerequisite = {
+			focus = NOR_labour
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = NOR_protect_the_navy
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5 #days
+		x = 8
+		y = 4
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_incorporate_the_generals
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = NOR_the_educated_shall_administer
+		icon = GFX_focus_POL_complete_april_constitution
+		mutually_exclusive = { focus = NOR_militarist_turn }
+		cost = 5 #days
+		x = 9
+		y = 5
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_incorporate_the_generals
+		}
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+	focus = {
+		id = NOR_barne_ministry
+		icon = GFX_focus_generic_land_reclamation
+		mutually_exclusive = { focus = NOR_centralize_to_the_prime_minister }
+		cost = 5 #days
+		x = 6
+		y = 2
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_peoples_legislation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_landbruks_ministry
+		icon = GFX_focus_ETH_adopt_the_lira
+		cost = 5 #days
+		x = 7
+		y = 3
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_barne_ministry
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_worlds_earliest_healthcare
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 5 #days
+		x = 6
+		y = 4
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_peoples_legislation
+		}
+		prerequisite = {
+			focus = NOR_universal_suffrage_for_women
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_fornyings_and_helse
+		icon = GFX_focus_rom_parties_end
+		cost = 5 #days
+		x = 7
+		y = 5
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_worlds_earliest_healthcare
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_the_norwegian_cabinet
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5 #days
+		x = 8
+		y = 7
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_fornyings_and_helse
+			focus = NOR_the_educated_shall_administer
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_five_years_independent
+		icon = GFX_focus_rom_abdicate
+		cost = 5 #days
+		x = 0
+		y = 1
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_consult_the_storting
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_swedish_negotiation
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = NOR_swedish_belligerants }
+		cost = 5 #days
+		x = 1
+		y = 2
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_five_years_independent
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_swedish_belligerants
+		icon = GFX_focus_generic_attack_sweden
+		mutually_exclusive = { focus = NOR_swedish_negotiation }
+		cost = 5 #days
+		x = -1
+		y = 2
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_five_years_independent
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_restore_brotherhood_connections
+		icon = GFX_goal_generic_national_unity
+		cost = 5 #days
+		x = 1
+		y = 3
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_swedish_negotiation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_mutual_dependence
+		icon = GFX_goal_anschluss
+		cost = 5 #days
+		x = 2
+		y = 4
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_restore_brotherhood_connections
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_danish_negotiation
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 5 #days
+		x = 0
+		y = 4
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_restore_brotherhood_connections
+			focus = NOR_less_trade_with_sweden
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_strengthen_the_border
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 5 #days
+		x = -2
+		y = 4
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_restore_brotherhood_connections
+			focus = NOR_less_trade_with_sweden
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_less_trade_with_sweden
+		icon = GFX_focus_generic_refit_civilian_ships
+		cost = 5 #days
+		x = -1
+		y = 3
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_swedish_belligerants
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_king_haakon
+		mutually_exclusive = { focus = NOR_invite_king_christian_x }
+		mutually_exclusive = { focus = NOR_king_of_sweden }
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 5 #days
+		x = -3
+		y = 5
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_strengthen_the_border
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_invite_king_christian_x
+		mutually_exclusive = { focus = NOR_king_haakon }
+		mutually_exclusive = { focus = NOR_king_of_sweden }
+		icon = GFX_focus_hun_elect_a_king
+		cost = 5 #days
+		x = 0
+		y = 5
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_strengthen_the_border
+			focus = NOR_mutual_dependence
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_king_of_sweden #gustaf 6
+		mutually_exclusive = { focus = NOR_king_haakon }
+		mutually_exclusive = { focus = NOR_invite_king_christian_x }
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5 #days
+		x = 3
+		y = 5
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_mutual_dependence
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_foreign_assistance
+		icon = GFX_focus_POL_support_global_falangism
+		mutually_exclusive = { focus = NOR_our_job_alone }
+		cost = 5 #days
+		x = -1
+		y = 6
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_invite_king_christian_x
+			focus = NOR_king_haakon
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_our_job_alone
+		icon = GFX_focus_POL_end_the_regency
+		mutually_exclusive = { focus = NOR_foreign_assistance }
+		cost = 5 #days
+		x = -3
+		y = 6
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_invite_king_christian_x
+			focus = NOR_king_haakon
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_memories_of_the_glorious_past
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		mutually_exclusive = { focus = NOR_simple_allies }
+		cost = 5 #days
+		x = 1
+		y = 6
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_invite_king_christian_x
+			focus = NOR_king_of_sweden
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_simple_allies
+		icon = GFX_focus_ETH_peacekeeping_forces
+		mutually_exclusive = { focus = NOR_memories_of_the_glorious_past }
+		cost = 5 #days
+		x = 3
+		y = 6
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_invite_king_christian_x
+			focus = NOR_king_of_sweden
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_proposition_of_defense_and_isolation
+		mutually_exclusive = { focus = NOR_the_great_war }
+		icon = GFX_goal_generic_defence
+		cost = 5 #days
+		x = 2
+		y = 7
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_simple_allies
+			focus = NOR_memories_of_the_glorious_past
+			focus = NOR_foreign_assistance
+			focus = NOR_our_job_alone
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_conservatives
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5 #days
+		x = 3
+		y = 8
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_completed_focus = NOR_labour
+			}
+			NOT = {
+				has_completed_focus = NOR_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_the_norwegian_cabinet
+		}
+		prerequisite = {
+			focus = NOR_proposition_of_defense_and_isolation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_envigorate_the_king
+		icon = GFX_focus_generic_home_defense
+		cost = 5 #days
+		x = 3
+		y = 9
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_completed_focus = NOR_labour
+			}
+			NOT = {
+				has_completed_focus = NOR_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_proposition_of_defense_and_isolation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_traditional_bills_and_rights
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5 #days
+		x = 5
+		y = 9
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_completed_focus = NOR_labour
+			}
+			NOT = {
+				has_completed_focus = NOR_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_conservatives
+		}
+		prerequisite = {
+			focus = NOR_free_minded_liberals
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_viking_nature
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5 #days
+		x = 4
+		y = 10
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_completed_focus = NOR_labour
+			}
+			NOT = {
+				has_completed_focus = NOR_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_envigorate_the_king
+		}
+		prerequisite = {
+			focus = NOR_traditional_bills_and_rights
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_the_workers_come_to_norway
+		icon = GFX_goal_generic_soviet_construction
+		cost = 5 #days
+		x = 12
+		y = 9
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_completed_focus = NOR_labour
+			}
+			NOT = {
+				has_completed_focus = NOR_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_labour
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_grants_and_subsidies
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5 #days
+		x = 10
+		y = 9
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_completed_focus = NOR_labour
+			}
+			NOT = {
+				has_completed_focus = NOR_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_labour
+		}
+		prerequisite = {
+			focus = NOR_liberals
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_the_center_of_modernization
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5 #days
+		x = 11
+		y = 10
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_completed_focus = NOR_labour
+			}
+			NOT = {
+				has_completed_focus = NOR_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_grants_and_subsidies
+		}
+		prerequisite = {
+			focus = NOR_the_workers_come_to_norway
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_free_minded_liberals
+		icon = GFX_focus_focus_fra_national_resistance_council
+		mutually_exclusive = { focus = NOR_liberals }
+		cost = 5 #days
+		x = 6
+		y = 8
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = { 
+				has_completed_focus = NOR_labour
+			}
+		}
+		prerequisite = {
+			focus = NOR_proposition_of_defense_and_isolation
+		}
+		prerequisite = {
+			focus = NOR_the_norwegian_cabinet
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_liberals
+		mutually_exclusive = { focus = NOR_free_minded_liberals }
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		cost = 5 #days
+		x = 9
+		y = 8
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = { 
+				has_completed_focus = NOR_conservatives
+			}
+		}
+		prerequisite = {
+			focus = NOR_the_norwegian_cabinet
+		}
+		prerequisite = {
+			focus = NOR_proposition_of_defense_and_isolation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_labour
+		icon = GFX_focus_generic_socialist_science
+		cost = 5 #days
+		x = 12
+		y = 8
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			NOT = { 
+				has_completed_focus = NOR_conservatives
+			}
+			NOT = { 
+				has_completed_focus = NOR_free_minded_liberals
+			}
+		}
+		prerequisite = {
+			focus = NOR_the_norwegian_cabinet
+		}
+		prerequisite = {
+			focus = NOR_proposition_of_defense_and_isolation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_the_great_war
+		icon = GFX_focus_ITA_banda_carita
+		mutually_exclusive = { focus = NOR_proposition_of_defense_and_isolation }
+		cost = 5 #days
+		x = -2
+		y = 7
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_simple_allies
+			focus = NOR_memories_of_the_glorious_past
+			focus = NOR_foreign_assistance
+			focus = NOR_our_job_alone
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_the_tonnage_agreement
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5 #days
+		x = 0
+		y = 8
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_proposition_of_defense_and_isolation
+			focus = NOR_the_great_war
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_join_the_blockade
+		icon = GFX_focus_ITA_new_horizons
+		cost = 5 #days
+		x = 0
+		y = 9
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_proposition_of_defense_and_isolation
+			focus = NOR_the_great_war
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_entente_drill
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 5 #days
+		x = -1
+		y = 10
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_great_war
+		}
+		prerequisite = {
+			focus = NOR_join_the_blockade
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_memories_of_empire
+		icon = GFX_focus_POL_plan_west
+		cost = 5 #days
+		x = -3
+		y = 8
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_great_war
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_propose_the_union
+		icon = GFX_focus_generic_scandinavia_flags
+		cost = 5 #days
+		x = -3
+		y = 10
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_the_great_war
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_restore_sweden_norway
+		icon = GFX_focus_AST_squander_bug
+		cost = 5 #days
+		x = -2
+		y = 11
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_propose_the_union
+		}
+		prerequisite = {
+			focus = NOR_entente_drill
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NOR_national_development
+		icon = GFX_focus_generic_industry_1
+		cost = 5 #days
+		x = -3
+		y = 1
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_consult_the_storting
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NOR_build_the_norsk_gjaerde_og_metaldukfabrik
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5 #days
+		x = -4
+		y = 2
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_national_development
+		}
+		completion_reward = {
+			110 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_norway_tech
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 5 #days
+		x = -4
+		y = 4
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_build_the_norsk_gjaerde_og_metaldukfabrik
+		}
+		completion_reward = {
+			110 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_kirkenes_bjornevatn_line
+		icon = GFX_focus_SOV_south_manchuria_railway
+		cost = 5 #days
+		x = -5
+		y = 3
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_build_the_norsk_gjaerde_og_metaldukfabrik
+		}
+		completion_reward = {
+			110 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_solor_line
+		icon = GFX_focus_generic_railroad
+		cost = 5 #days
+		x = -5
+		y = 5
+		relative_position_id = NOR_consult_the_storting
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = NOR_kirkenes_bjornevatn_line
+		}
+		completion_reward = {
+			110 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

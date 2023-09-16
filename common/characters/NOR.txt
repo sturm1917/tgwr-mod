@@ -1,4 +1,31 @@
 characters={
+	NOR_wollert_konow={
+		name="NOR_wollert_konow"
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_wollert_konow
+			allowed  = {
+				original_tag  = NOR
+			}
+			traits  = {
+				agricultural_capitalist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+			civilian={
+				large="gfx/leaders/NOR/NOR_woll_konow.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+		}
+	}
 	NOR_gunnar_knudsen={
 		name="NOR_gunnar_knudsen"
 		advisor={
@@ -41,7 +68,7 @@ characters={
 				army_chief_defensive_2 
 			}
 			ai_will_do  = {
-				factor  = 1.000
+				factor  = 0.000
 			}
 		}
 		portraits={
