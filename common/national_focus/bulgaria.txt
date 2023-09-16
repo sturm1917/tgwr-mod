@@ -22,6 +22,9 @@
 		cost = 5
 		x = 9
 		y = 0
+		completion_reward = {
+
+		}
 	}
 	focus = {
 		id = BUL_befriend_VMORO

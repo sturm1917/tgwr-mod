@@ -104,6 +104,7 @@ recruit_character = BUL_mikhail_madzharov
 		election_frequency = 60
 		elections_allowed = yes
 	}
+	drop_cosmetic_tag = BUL_principality
 
 	add_political_power = 1198
 	add_command_power = 100
