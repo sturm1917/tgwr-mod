@@ -628,5 +628,98 @@
 
 
 
+	#########
+	#Army Tree
+	#########
+	focus = {
+		id = BUL_mobilize_country
+		cost = 4
+		x = 40
+		y = 0
+		available = {
 
+		}
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = BUL_local_weapon_prod
+		cost = 4
+		relative_position_id = BUL_mobilize_country
+		x = -2
+		y = 1
+		prerequisite = { focus = BUL_mobilize_country }
+		mutually_exclusive = { focus = BUL_foreign_weapons }
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BUL_increase_mil_funding
+		cost = 4
+		relative_position_id = BUL_local_weapon_prod
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_local_weapon_prod }
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
+
+	focus = {
+		id = BUL_foreign_weapons
+		cost = 4
+		relative_position_id = BUL_mobilize_country
+		x = 2
+		y = 1
+		mutually_exclusive = { focus = BUL_local_weapon_prod }
+		prerequisite = { focus = BUL_mobilize_country }
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BUL_aquire_funds
+		cost = 4
+		relative_position_id = BUL_foreign_weapons
+		x = 0
+		y = 1
+		mutually_exclusive = { focus = BUL_trade_resources }
+		prerequisite = { focus = BUL_foreign_weapons }
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BUL_trade_resources
+		cost = 4
+		relative_position_id = BUL_foreign_weapons
+		x = 2
+		y = 1
+		mutually_exclusive = { focus = BUL_aquire_funds }
+		prerequisite = { focus = BUL_foreign_weapons }
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
 }
