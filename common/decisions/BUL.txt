@@ -180,6 +180,16 @@ BUL_change_constitution_decision = {
 			set_global_flag = BUL_flag_is_tsardom
 		}
 	}
+	BUL_change_flag = {
+		available = {
+			is_subject = no
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = BUL_ferdinand
+		}
+	}
 }
 
 political_actions = {

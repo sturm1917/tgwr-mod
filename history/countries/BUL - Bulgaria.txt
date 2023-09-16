@@ -90,6 +90,8 @@ recruit_character = BUL_mikhail_madzharov
 		basic_train = 1
         
 	}
+
+	activate_advisor = BUL_aleksandar_malinov
 }	
 1914.1.1 = {
 	set_politics = {
@@ -144,6 +146,9 @@ recruit_character = BUL_mikhail_madzharov
 		low_economic_mobilisation
 		BUL_idea_first_national_catastrophe_2
 	}
+	
+	activate_advisor = BUL_ivan_evstratiev_geshov
+	remove_ideas = BUL_aleksandar_malinov
 	
 }
 

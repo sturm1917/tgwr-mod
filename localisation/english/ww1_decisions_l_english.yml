@@ -403,6 +403,7 @@
  BUL_change_constitution_decision:0 "Change The Constitution"
  BUL_rename_bulgaria:0 "Get The Name Of Our Ancestors Back!"
  BUL_rename_bulgaria_desc:0 "We must no longer suffer under the name, that categorizes us as a mere puppet of [TUR.getName]. We must show our independence to the world, and the first step  is to become a tsardom like the old days."
+ BUL_change_flag:0 "Accept Ferdinands Proposal!"
  BUL_flag_is_tsardom:0 "We have declared ourselves a §YTsardom§!"
 
 

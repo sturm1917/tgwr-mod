@@ -709,7 +709,6 @@ characters = {
 			slot = political_advisor
 			idea_token = BUL_aleksandar_malinov
 			available = {
-				has_government = democratic
 			}
 			allowed = {
 				original_tag = BUL

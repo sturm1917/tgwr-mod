@@ -250,7 +250,7 @@
 	}
 	focus = {
 		id = BUL_arm_dobrudja_farmers
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_agrarian_profit
 		cost = 4
 		relative_position_id = BUL_industrialize_the_country
 		x = 4
