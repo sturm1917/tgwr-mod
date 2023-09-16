@@ -2135,7 +2135,6 @@
  BUL_the_macedonian_question:0 "The Macedonian Question"
  BUL_lone_liberator:0 "Lone Liberator"
  BUL_buy_weapons:0 "Liberty Guns Act"
- BUL_seek_rapprochement_with_auh:0 "Rapprochement With [AUH.getName]"
 
 
  bulgaria_focus:0 "Bulgarian Focus Tree"
@@ -2151,10 +2150,17 @@
  BUL_arm_dobrudja_farmers:0 "Arm Dobrudjas Farmers"
  BUL_only_soldiers_in_sofia:0 "Only Soldiers In Sofia"
  BUL_urbanization_capital:0 "Urbanization Of The Capital"
- BUL_dobrudjanian_urbanization:0 "Dobrudjanian Urbanization"
+ BUL_urbanize_dobrudja:0 "Urbanize Dobrudja"
  BUL_urbanize_coast:0 "Urbanize The Coast"
  BUL_southern_urbanization:0 "Southern Urbanization"
  BUL_focus_on_the_bdz:0 "Focus On The BDZ"
+ BUL_expand_in_new_territories:0 "Expand In The New Territories"
+ BUL_create_more_railways:0 "Create More Railways"
+ BUL_biggest_railway_on_balkans:0 "The Biggest Railway On The Balkans"
+ BUL_rumelia_agrarian_expansion:0 "Rumelian Agrarian Expansion"
+ BUL_rumelia_military_expansion:0 "Rumelian Military Expansion"
+ BUL_rhodopes_agrarian_expansion:0 "Agrarian Expansion In The Rhodopes"
+ BUL_rhodopes_military_expansion:0 "Rhodopian Military Expansion"
  BUL_industrialize_agrarian_economy:0 "Industrialize Agrarian Economy"
  BUL_mobilize_farmers:0 "Mobilize The Farmers"
  BUL_utilize_free_space:0 "Utilize Free Space"
@@ -2163,6 +2169,10 @@
  BUL_vidin_oil_extraction:0 "Vidins Oil Extraction"
  BUL_some_agrarian_industry:0 "Some Agrarian Industry"
  BUL_civ_industry_in_heart:0 "Civilian Industry In The Heart Of Bulgaria"
+ BUL_resource_export:0 "Resource Export"
+ BUL_partly_industrialized_economy:0 "Partly-Industrialized Economy"
+ BUL_sofia_university:0 "Increase Funding Of Sofia University"
+ 
 
  soviet_focus:0 "Soviet Russian Focus Tree"
  SOV_decree_on_peace:0 "Decree On Peace"

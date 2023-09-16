@@ -18,6 +18,7 @@
 	##############
 	focus = {
 		id = BUL_modernize_bulgaria
+		icon = GFX_goal_generic_construction
 		cost = 5
 		x = 10
 		y = 1
@@ -57,7 +58,8 @@
 	}
 	focus = {
 		id = BUL_prioritize_the_farmers
-		cost = 5
+		icon = GFX_focus_agrarian_profit
+		cost = 3
 		relative_position_id = BUL_modernize_bulgaria
 		x = -2
 		y = 1
@@ -70,7 +72,8 @@
 	}
 	focus = {
 		id = BUL_civ_industry_in_south
-		cost = 5
+		icon = GFX_focus_generic_industry_1
+		cost = 4
 		relative_position_id = BUL_prioritize_the_farmers
 		x = 0
 		y = 1
@@ -87,7 +90,8 @@
 	}
 	focus = {
 		id = BUL_varnanian_civ_industry
-		cost = 5
+		icon = GFX_focus_generic_industry_1
+		cost = 4
 		relative_position_id = BUL_prioritize_the_farmers
 		x = -2
 		y = 1
@@ -104,7 +108,8 @@
 	}
 	focus = {
 		id = BUL_civ_industry_dobrudja
-		cost = 5
+		icon = GFX_focus_generic_industry_1
+		cost = 4
 		relative_position_id = BUL_prioritize_the_farmers
 		x = -4
 		y = 1
@@ -121,6 +126,7 @@
 	}
 	focus = {
 		id = BUL_capital_civ_industry
+		icon = GFX_focus_generic_industry_1
 		cost = 5
 		relative_position_id = BUL_varnanian_civ_industry
 		x = 0
@@ -143,7 +149,8 @@
 
 	focus = {
 		id = BUL_industrialize_the_country
-		cost = 5
+		icon = GFX_focus_industry_profit
+		cost = 3
 		relative_position_id = BUL_modernize_bulgaria
 		x = 2
 		y = 1
@@ -155,7 +162,8 @@
 	}
 	focus = {
 		id = BUL_southern_militarization
-		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 4
 		relative_position_id = BUL_industrialize_the_country
 		x = 0
 		y = 1
@@ -166,7 +174,8 @@
 	}
 	focus = {
 		id = BUL_varna_arms_industry
-		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 4
 		relative_position_id = BUL_industrialize_the_country
 		x = 2
 		y = 1
@@ -177,7 +186,8 @@
 	}
 	focus = {
 		id = BUL_arm_dobrudja_farmers
-		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 4
 		relative_position_id = BUL_industrialize_the_country
 		x = 4
 		y = 1
@@ -188,6 +198,7 @@
 	}
 	focus = {
 		id = BUL_only_soldiers_in_sofia
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		relative_position_id = BUL_varna_arms_industry
 		x = 0
@@ -204,7 +215,8 @@
 
 	focus = {
 		id = BUL_urbanization_capital
-		cost = 5
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 6
 		relative_position_id = BUL_modernize_bulgaria
 		x = 0
 		y = 2
@@ -220,8 +232,9 @@
 		}
 	}
 	focus = {
-		id = BUL_dobrudjanian_urbanization
-		cost = 5
+		id = BUL_urbanize_dobrudja
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 4
 		relative_position_id = BUL_urbanization_capital
 		x = -1
 		y = 1
@@ -232,7 +245,8 @@
 	}
 	focus = {
 		id = BUL_urbanize_coast
-		cost = 5
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 4
 		relative_position_id = BUL_urbanization_capital
 		x = 1
 		y = 1
@@ -243,11 +257,12 @@
 	}
 	focus = {
 		id = BUL_southern_urbanization
-		cost = 5	
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 4
 		relative_position_id = BUL_urbanization_capital
 		x = 0
 		y = 2
-		prerequisite = { focus = BUL_dobrudjanian_urbanization }
+		prerequisite = { focus = BUL_urbanize_dobrudja }
 		prerequisite = { focus = BUL_urbanize_coast }
 		completion_reward = { 
 
@@ -256,11 +271,148 @@
 
 	focus = {
 		id = BUL_focus_on_the_bdz
-		cost = 5	
+		icon = GFX_focus_generic_train
+		cost = 3
 		relative_position_id = BUL_southern_urbanization
 		x = 0
 		y = 2
 		prerequisite = { focus = BUL_southern_urbanization }
+		completion_reward = { 
+
+		}
+	}
+	focus = {
+		id = BUL_expand_in_new_territories
+		icon = GFX_focus_train_railroads
+		cost = 5	
+		relative_position_id = BUL_focus_on_the_bdz
+		x = -1
+		y = 1
+		prerequisite = { focus = BUL_focus_on_the_bdz }
+		completion_reward = { 
+
+		}
+	}
+	focus = {
+		id = BUL_create_more_railways
+		icon = GFX_focus_train_railroads
+		cost = 5	
+		relative_position_id = BUL_focus_on_the_bdz
+		x = 1
+		y = 1
+		prerequisite = { focus = BUL_focus_on_the_bdz }
+		completion_reward = { 
+
+		}
+	}
+	focus = {
+		id = BUL_biggest_railway_on_balkans
+		icon = GFX_focus_train_railroads
+		cost = 4
+		relative_position_id = BUL_focus_on_the_bdz
+		x = 0
+		y = 2
+		prerequisite = { focus = BUL_expand_in_new_territories }
+		prerequisite = { focus = BUL_create_more_railways }
+		completion_reward = { 
+
+		}
+	}
+
+	focus = {
+		id = BUL_rumelia_agrarian_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 4
+		relative_position_id = BUL_biggest_railway_on_balkans
+		x = -2
+		y = 1
+		prerequisite = { focus = BUL_biggest_railway_on_balkans }
+		completion_reward = { 
+
+		}
+	}
+	focus = {
+		id = BUL_rumelia_military_expansion
+		icon = GFX_goal_generic_construct_military
+		cost = 4
+		relative_position_id = BUL_rumelia_agrarian_expansion
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_rumelia_agrarian_expansion }
+		completion_reward = { 
+
+		}
+	}
+
+	focus = {
+		id = BUL_rhodopes_agrarian_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 4
+		relative_position_id = BUL_biggest_railway_on_balkans
+		x = 2
+		y = 1
+		prerequisite = { focus = BUL_biggest_railway_on_balkans }
+		completion_reward = { 
+
+		}
+	}
+	focus = {
+		id = BUL_rhodopes_military_expansion
+		icon = GFX_goal_generic_construct_military
+		cost = 4
+		relative_position_id = BUL_rhodopes_agrarian_expansion
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_rhodopes_agrarian_expansion }
+		completion_reward = { 
+
+		}
+	}
+
+
+	focus = {
+		id = BUL_sofia_university
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 4
+		relative_position_id = BUL_biggest_railway_on_balkans
+		x = 0
+		y = 3
+		prerequisite = { focus = BUL_rhodopes_military_expansion }
+		prerequisite = { focus = BUL_rumelia_military_expansion }
+		completion_reward = { 
+
+		}
+	}
+
+	focus = {
+		id = BUL_resource_export
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5	
+		relative_position_id = BUL_sofia_university
+		x = -4
+		y = 0
+		prerequisite = { 
+			focus = BUL_rhodopes_military_expansion
+			focus = BUL_rumelia_military_expansion
+		 }
+		prerequisite = { focus = BUL_balance_industry_w_bulgaria }
+		completion_reward = { 
+
+		}
+	}
+
+	focus = {
+		id = BUL_partly_industrialized_economy
+		icon = GFX_goal_generic_production2
+		cost = 5	
+		relative_position_id = BUL_sofia_university
+		x = 4
+		y = 0
+		prerequisite = { 
+			focus = BUL_rhodopes_military_expansion
+			focus = BUL_rumelia_military_expansion
+		 }
+		prerequisite = { focus = BUL_vidin_oil_extraction }
 		completion_reward = { 
 
 		}
@@ -270,7 +422,8 @@
 
 	focus = {
 		id = BUL_some_agrarian_industry
-		cost = 5	
+		icon = GFX_focus_manage_industries
+		cost = 4
 		relative_position_id = BUL_only_soldiers_in_sofia
 		x = 1
 		y = 1
@@ -282,7 +435,8 @@
 	}
 	focus = {
 		id = BUL_civ_industry_in_heart
-		cost = 5	
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 4
 		relative_position_id = BUL_some_agrarian_industry
 		x = 0
 		y = 1
@@ -295,7 +449,8 @@
 
 	focus = {
 		id = BUL_industrialize_agrarian_economy
-		cost = 5	
+		icon = GFX_focus_generic_military_academy
+		cost = 4
 		relative_position_id = BUL_capital_civ_industry
 		x = -1
 		y = 1
@@ -307,7 +462,8 @@
 	}
 	focus = {
 		id = BUL_mobilize_farmers
-		cost = 5	
+		icon = GFX_focus_generic_military_academy
+		cost = 4
 		relative_position_id = BUL_industrialize_agrarian_economy
 		x = 0
 		y = 1
@@ -320,7 +476,8 @@
 
 	focus = {
 		id = BUL_steel_deposits_sofia
-		cost = 5	
+		icon = GFX_focus_industry_steel
+		cost = 4
 		relative_position_id = BUL_southern_urbanization
 		x = 3
 		y = 1
@@ -330,18 +487,34 @@
 			focus = BUL_only_soldiers_in_sofia
 		}
 		completion_reward = { 
-
+			48 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
 		id = BUL_vidin_oil_extraction
-		cost = 5	
+		icon = GFX_goal_generic_oil_refinery
+		cost = 4
 		relative_position_id = BUL_steel_deposits_sofia
 		x = 0
 		y = 1
 		prerequisite = { focus = BUL_steel_deposits_sofia }
 		completion_reward = { 
-
+			912 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
 		}
 	}
 
@@ -349,7 +522,8 @@
 
 	focus = {
 		id = BUL_utilize_free_space
-		cost = 5	
+		icon = GFX_goal_generic_trade
+		cost = 4
 		relative_position_id = BUL_southern_urbanization
 		x = -3
 		y = 1
@@ -364,7 +538,8 @@
 	}
 	focus = {
 		id = BUL_balance_industry_w_bulgaria
-		cost = 5	
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 4
 		relative_position_id = BUL_utilize_free_space
 		x = 0
 		y = 1
