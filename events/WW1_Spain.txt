@@ -652,10 +652,11 @@ country_event = {
 		name = ww1_spain.6.a
 		ai_chance = { factor = 10 }
 		add_stability = -0.05
-		remove_ideas = SPR_idea_prime_minister_jose
+		deactivate_advisor = SPR_jose_pm
 		remove_ideas = SPR_idea_time_to_turn_around
 		ai_chance = { factor = 10 }
 		set_global_flag = jose_killed
+		clr_global_flag = SPR_flag_jose_pm
 		#Important\/
 		hidden_effect = {
 			SPR = {
@@ -685,9 +686,10 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.21.a
+		set_global_flag = alvaro_advisor_chosen
 		set_global_flag = liberal_prime_minister
 		add_political_power = 25
-		add_ideas = SPR_idea_prime_minister_alvaro
+		activate_advisor = SPR_alvaro_de_figueroa
 		IF = {
 			limit = { has_global_flag = conservative_prime_minister }
 			uncomplete_national_focus = {
@@ -733,7 +735,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.22.a
-		remove_ideas = SPR_idea_prime_minister_alvaro
+		clr_global_flag = alvaro_advisor_chosen
+		deactivate_advisor = SPR_alvaro_de_figueroa
 		ai_chance = { factor = 10 }
 		#Important\/
 		set_global_flag = alvaro_leaves_office
@@ -762,9 +765,10 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.23.a
+		set_global_flag = dato_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
-		add_ideas = SPR_idea_prime_minister_dato
+		activate_advisor = SPR_eduardo_dato_pm
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -813,12 +817,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.47.a
+		clr_global_flag = dato_advisor_chosen
 		set_global_flag = conservative_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		remove_ideas = SPR_idea_prime_minister_dato
+		deactivate_advisor = SPR_eduardo_dato_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -841,9 +846,10 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.32.a
+		set_global_flag = prieto_advisor_chosen
 		add_political_power = 25
 		set_global_flag = liberal_prime_minister
-		add_ideas = SPR_idea_prime_minister_prieto
+		activate_advisor = SPR_prieto_pm
 		IF = {
 			limit = { has_global_flag = conservative_prime_minister }
 			uncomplete_national_focus = {
@@ -888,12 +894,13 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.33.a
+		clr_global_flag = prieto_advisor_chosen
 		set_global_flag = liberal_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		remove_ideas = SPR_idea_prime_minister_prieto
+		deactivate_advisor = SPR_prieto_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -918,9 +925,10 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.34.a
+		set_global_flag = maura_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
-		add_ideas = SPR_idea_prime_minister_maura
+		activate_advisor = SPR_maura
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -970,12 +978,13 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.35.a
+		clr_global_flag = maura_advisor_chosen
 		set_global_flag = conservative_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		remove_ideas = SPR_idea_prime_minister_maura
+		deactivate_advisor = SPR_maura
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -1000,9 +1009,10 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.37.a
+		set_global_flag = manuel_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
-		add_ideas = SPR_idea_prime_minister_manuel
+		activate_advisor = SPR_manuel_pm
 		set_global_flag = new_conservative_spanish_prime_minister_in_office
 		clr_global_flag = new_liberal_spanish_prime_minister_in_office
 		IF = {
@@ -1046,12 +1056,13 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.38.a
+		clr_global_flag = manuel_advisor_chosen
 		set_global_flag = conservative_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		remove_ideas = SPR_idea_prime_minister_manuel
+		deactivate_advisor = SPR_manuel_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -1078,8 +1089,9 @@ country_event = {
 	}
 	option = {
 		name = ww1_spain.24.a
+		clr_global_flag = dato_advisor_chosen
 		add_stability = -0.05
-		remove_ideas = SPR_idea_prime_minister_dato
+		deactivate_advisor = SPR_eduardo_dato_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -1113,9 +1125,10 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.41.a
+		set_global_flag = sanchez_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
-		add_ideas = SPR_idea_prime_minister_sanchez
+		activate_advisor = SPR_sanchez_pm
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
 			uncomplete_national_focus = {
@@ -1164,12 +1177,13 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.42.a
+		clr_global_flag = sanchez_advisor_chosen
 		set_global_flag = conservative_prime_minister
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		remove_ideas = SPR_idea_prime_minister_sanchez
+		deactivate_advisor = SPR_sanchez_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/

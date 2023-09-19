@@ -5,6 +5,7 @@ set_stability = 0.45
 set_convoys = 150
 set_global_flag = conservative_majority
 set_global_flag = new_liberal_spanish_prime_minister_in_office
+set_global_flag = SPR_flag_jose_pm
 
 set_country_flag = Scramble_for_Africa
 
@@ -13,6 +14,13 @@ recruit_character = SPR_niceto_alcalazamora
 recruit_character = SPR_pablo_iglesias
 recruit_character = SPR_juan_olazabal
 
+recruit_character = SPR_jose_pm
+recruit_character = SPR_alvaro_de_figueroa
+recruit_character = SPR_eduardo_dato
+recruit_character = SPR_prieto_pm
+recruit_character = SPR_maura
+recruit_character = SPR_manuel_pm
+recruit_character = SPR_sanchez_pm
 recruit_character = SPR_anarchists
 recruit_character = SPR_damasco_berenguer
 recruit_character = SPR_jaime_iii
@@ -36,7 +44,6 @@ recruit_character = SPR_angel_aznar
 recruit_character = SPR_alberto_bayo
 recruit_character = SPR_joaquin_ruiz
 recruit_character = SPR_manuel_de_florez
-recruit_character = SPR_alvaro_de_figueroa
 recruit_character = SPR_luis_aizpuru
 recruit_character = SPR_mariano_ordonez
 recruit_character = SPR_santiago_alba
@@ -93,11 +100,12 @@ recruit_character = SPR_lucas_puente
 		limited_exports
 		SPR_idea_plots_for_regional_autonomy
 		SPR_idea_strong_catholicism
-		SPR_idea_prime_minister_jose
 		SPR_idea_split_liberal_party
 		SPR_idea_fractured_conservative_party
 		SPR_idea_terrible_conscription
 	}
+	
+	activate_advisor = SPR_jose_pm
 }
 1914.1.1 = {
 	set_politics = {

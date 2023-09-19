@@ -1,5 +1,34 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_prime_minister_jose_advisor"
+		texturefile = "gfx/interface/ideas/idea_advisor_prime_minister_jose.png"
+	}
+	spriteType = {
+		name = "GFX_idea_alvaro_de_figueroa_advisor"
+		texturefile = "gfx/interface/ideas/idea_advisor_alvaro_de_figueroa.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_dato_advisor"
+		texturefile = "gfx/interface/ideas/idea_advisor_prime_minister_dato.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_maura_advisor"
+		texturefile = "gfx/interface/ideas/idea_advisor_prime_minister_maura.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_manuel_advisor"
+		texturefile = "gfx/interface/ideas/idea_advisor_prime_minister_manuel.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_prieto_advisor"
+		texturefile = "gfx/interface/ideas/idea_advisor_prime_minister_prieto.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prime_minister_sanchez_advisor"
+		texturefile = "gfx/interface/ideas/idea_advisor_prime_minister_sanchez.png"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_prime_minister_jose"
 		texturefile = "gfx/interface/ideas/idea_prime_minister_jose.png"
 	}
