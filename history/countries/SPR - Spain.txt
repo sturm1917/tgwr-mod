@@ -16,7 +16,7 @@ recruit_character = SPR_juan_olazabal
 
 recruit_character = SPR_jose_pm
 recruit_character = SPR_alvaro_de_figueroa
-recruit_character = SPR_eduardo_dato
+recruit_character = SPR_eduardo_dato_pm
 recruit_character = SPR_prieto_pm
 recruit_character = SPR_maura
 recruit_character = SPR_manuel_pm
