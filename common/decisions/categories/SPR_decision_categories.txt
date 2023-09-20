@@ -42,7 +42,7 @@ SPR_regional_autonomy_vs_junta = {
 		tag = SPR
 	}
 	visible = { 
-		has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+		has_global_flag = SPR_flag_juntas_crush_catalonia_decisions
 	}
 }
 

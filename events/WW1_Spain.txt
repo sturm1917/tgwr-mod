@@ -1513,7 +1513,26 @@ country_event = {
 	option = { #So... runnning this nation isn't as easy as you thought huh?
 		name = ww1_spain.111.a
 		ai_chance = { factor = 10 }
-		set_global_flag = SPR_flag_juntas_crush_catalonia
+		set_global_flag = SPR_flag_juntas_crush_catalonia_decisions
+	}
+}
+
+#Coexistence Catalonia
+country_event = {
+	id = ww1_spain.112
+	title = ww1_spain.112.t
+	desc = ww1_spain.112.d
+	picture = GFX_report_event_spr_poum_militia
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.112.a
+		ai_chance = { factor = 10 }
+		swap_ideas = {
+			remove_idea = SPR_idea_autonomous_catalonia
+			add_idea = SPR_idea_coexistence_with_catalonia
+		}
 	}
 }
 
@@ -3149,7 +3168,7 @@ country_event = {
 	title = ww1_spain.140.t
 	desc = ww1_spain.140.d
 	picture = GFX_report_event_generic_factory
-	fire_only_once = no
+	fire_only_once = yes
 	mean_time_to_happen = { days = 50 }
 	trigger = {
 		AND = {
@@ -3210,7 +3229,7 @@ country_event = {
 	title = ww1_spain.141.t
 	desc = ww1_spain.141.d
 	picture = GFX_report_event_SWI_assembly_hall
-	fire_only_once = no
+	fire_only_once = yes
 	mean_time_to_happen = { days = 5 }
 	trigger = {
 		AND = {
@@ -3222,5 +3241,46 @@ country_event = {
 		name = ww1_spain.141.a
 		ai_chance = { factor = 10 }
 		complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
+	}
+}
+
+#The People or the Politics
+country_event = {
+	id = ww1_spain.142
+	title = ww1_spain.142.t
+	desc = ww1_spain.142.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #People
+		name = ww1_spain.142.b
+		ai_chance = { factor = 10 }
+		complete_national_focus = SPR_the_peoples_wellbeing
+	}
+	option = { #Politics
+		name = ww1_spain.142.a
+		ai_chance = { factor = 10 }
+		complete_national_focus = SPR_political_strategies
+	}
+}
+
+#Instructions and Flavor
+country_event = {
+	id = ww1_spain.143
+	title = ww1_spain.143.t
+	desc = ww1_spain.143.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	mean_time_to_happen = { days = 5 }
+	trigger = {
+		original_tag = SPR
+	}
+	option = {
+		name = ww1_spain.143.a
+		ai_chance = { factor = 10 }
+	}
+	option = {
+		name = ww1_spain.143.b
+		ai_chance = { factor = 10 }
 	}
 }

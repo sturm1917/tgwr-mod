@@ -1,11 +1,12 @@
 SPR_regional_autonomy_vs_junta = {
 	SPR_drag_the_skirmish = { #Ease the workload
+		fire_only_once = yes
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = {
 			original_tag = SPR
 		} 
 		available = { 
-			NOT = { has_global_flag = catalonian_revolution }
+			always = yes
 		}
 		visible = {
 			always = yes
@@ -29,7 +30,7 @@ SPR_regional_autonomy_vs_junta = {
 		
 		priority = 10
 		ai_will_do = {
-			base = 0
+			base = 5
 			modifier = {
 				add = 10
 				is_historical_focus_on = no
@@ -39,6 +40,7 @@ SPR_regional_autonomy_vs_junta = {
 	
 	SPR_grant_more_rights_to_catalonia = { #Spend more on People
 		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
 		allowed = {
 			original_tag = SPR
 		}
@@ -70,6 +72,7 @@ SPR_regional_autonomy_vs_junta = {
 	
 	SPR_steal_weapons_from_junta = {
 		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
 		allowed = {
 			original_tag = SPR
 		}
@@ -97,6 +100,7 @@ SPR_regional_autonomy_vs_junta = {
 	}
 	SPR_destroy_them_both = {
 		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
 		allowed = {
 			original_tag = SPR
 		}
@@ -233,7 +237,7 @@ SPR_el_turno_category = {
 		}
 
 		cost = 65
-		days_re_enable = 15
+		days_re_enable = 65
 		days_remove = 5
 		modifier = {
 			consumer_goods_factor = 0.05
@@ -359,7 +363,7 @@ SPR_el_turno_category = {
 		}
 
 		cost = 65
-		days_re_enable = 15
+		days_re_enable = 65
 		days_remove = 5
 		modifier = {
 			political_power_factor = -0.15

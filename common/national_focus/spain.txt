@@ -35,7 +35,7 @@ focus_tree = {
 	focus = {
 		id = SPR_political_strategies
 		icon = GFX_focus_SWI_neutrality_on_the_move
-		cost = 1.5 #days
+		cost = 12.9 #days
 		x = 11
 		y = 2
 		ai_will_do = {
@@ -701,8 +701,12 @@ focus_tree = {
 			SPR = { 
 				add_stability = 0.05
 			}
-			
-			
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.142
+					days = 10
+				}
+			}
 		}
 	}
 	focus = {
@@ -737,13 +741,17 @@ focus_tree = {
 					id = ww1_spain.131
 					days = 3
 				}
+				country_event = {
+					id = ww1_spain.142
+					days = 10
+				}
 			}
 		}
 	}
 	focus = {
 		id = SPR_the_peoples_wellbeing
 		icon = GFX_goal_generic_neutrality_focus 
-		cost = 2.9 #days
+		cost = 12.9 #days
 		x = 23
 		y = 2
 		ai_will_do = {
@@ -765,13 +773,15 @@ focus_tree = {
 				add_stability = -0.05
 				add_political_power = 25
 			}
-			country_event = {
-				id = ww1_spain.133
-				days = 3
-			}
-			country_event = {
-				id = ww1_spain.131
-				days = 3
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
 			}
 		}
 	}
