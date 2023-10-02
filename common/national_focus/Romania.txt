@@ -677,6 +677,44 @@ country = {
 			factor = 5
 		}
 	}
+focus = {
+		id = ROM_resign
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_Prepare_to_Rig_the_Elections }
+		x = 10
+		y = 5
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+
+		available = {
+			
+		}		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+focus = {
+		id = ROM_a_man_of_culture_and_literature 
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_resign }
+		x = 10
+		y = 6
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+
+		available = {
+			
+		}		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_supress_left_wing_protesters
 		icon = GFX_focus_rom_preserve_romania
