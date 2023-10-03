@@ -349,8 +349,6 @@
  GRE_TUR_neutrality_subject_DEF:0 "the Principality of Greece"
  GRE_TUR_autonomy_integrated_puppet:0 "Yunan Vilayet"
  GRE_TUR_autonomy_integrated_puppet_DEF:0 "the Yunan Vilayet"
- BUL_principality:0 "Principality of Bulgaria"
- BUL_principality_DEF:0 "the Principality of Bulgaria"
  BUL_TUR_neutrality_subject:0 "Principality of Bulgaria"
  BUL_TUR_neutrality_subject_DEF:0 "the Principality of Bulgaria"
  BUL_TUR_autonomy_integrated_puppet:0 "Bulgar Vilayet"
