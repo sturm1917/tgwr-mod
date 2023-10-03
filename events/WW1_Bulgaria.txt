@@ -105,7 +105,6 @@ country_event = {
 		name = ww1_bulgaria.3.a
 		add_war_support = 0.1
 		set_country_flag = join_balkan_league_sad
-		set_country_flag = join_balkan_league
 		ai_chance = {
 			factor = 100
 		}

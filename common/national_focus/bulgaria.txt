@@ -11,7 +11,7 @@
 		x = 3390
 		y = 2075
 	}
-	initial_show_position = { focus = BUL_malinov_in_power }
+	initial_show_position = { focus = BUL_balgarya_za_sebe_si }
 	default = no
 		##########
 	#Political Tree
@@ -65,7 +65,7 @@
 	}
 
 	focus = {
-		id = BUL_balkan_pact
+		id = BUL_balkan_league
 		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = BUL_approach_serbia
@@ -75,6 +75,9 @@
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "BUL_tt_serbia_accepts"
+				BUL = {
+					has_country_flag = join_balkan_league
+				}
 			}
 		}
 	}
@@ -90,6 +93,9 @@
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "BUL_tt_serbia_refuses"
+				BUL = {
+					has_country_flag = join_balkan_league_sad
+				}
 			}
 		}
 	}
