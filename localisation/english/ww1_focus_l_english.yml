@@ -2138,6 +2138,8 @@
 
 
  bulgaria_focus:0 "Bulgarian Focus Tree"
+ BUL_tt_serbia_refuses:0 "[SER.getName] §Rrefuses!§!"
+ BUL_tt_serbia_accepts:0 "[SER.getName] §Gaccepts!§!"
  BUL_change_constitution:0 "Change The Constitution"
  BUL_modernize_bulgaria:0 "Modernize Bulgaria"
  BUL_prioritize_the_farmers:0 "Prioritize The Farmers"

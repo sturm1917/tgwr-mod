@@ -11,14 +11,14 @@
 		x = 3390
 		y = 2075
 	}
-	#initial_show_position = { focus = BUL_new_balkan_power }
+	initial_show_position = { focus = BUL_malinov_in_power }
 	default = no
 		##########
 	#Political Tree
 	##########
 	focus = {
-		id = BUL_malinov_presidency
-		icon = GFX_goal_generic_political_power
+		id = BUL_balgarya_za_sebe_si
+		icon = GFX_goal_unknown
 		cost = 5
 		x = 9
 		y = 0
@@ -27,39 +27,71 @@
 		}
 	}
 	focus = {
-		id = BUL_befriend_VMORO
-		icon = GFX_goal_generic_political_power
-		cost = 5
-		relative_position_id = BUL_malinov_presidency
-		x = 1
-		y = 1
-	}
-	focus = {
-		id = BUL_russian_betrayal
+		id = BUL_failed_ambitions
 		icon = GFX_goal_unknown
-		cost = 4
-		relative_position_id = BUL_malinov_presidency
-		y = 1
+		cost = 5
+		relative_position_id = BUL_balgarya_za_sebe_si
 		x = -1
-	}
-	focus = {
-		id = BUL_malinov_resignation
-		icon = GFX_goal_unknown
-		cost = 4
-		relative_position_id = BUL_russian_betrayal
 		y = 1
-		x = 1
-
+		prerequisite = { focus = BUL_balgarya_za_sebe_si }
 	}
-
 	focus = {
-		id = BUL_Gesov_presidency
-		icon = GFX_goal_generic_political_power
+		id = BUL_support_VMORO_ambitions
+		icon = GFX_goal_unknown
 		cost = 5
-		relative_position_id = BUL_malinov_resignation
+		relative_position_id = BUL_balgarya_za_sebe_si
+		x = 1
+		y = 1
+		prerequisite = { focus = BUL_balgarya_za_sebe_si }
+	}
+	focus = {
+		id = BUL_Vth_grand_national_assembly
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_balgarya_za_sebe_si
+		x = 0
+		y = 3
+		prerequisite = { focus = BUL_failed_ambitions }
+		prerequisite = { focus = BUL_support_VMORO_ambitions }
+	}
+	focus = {
+		id = BUL_approach_serbia
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_Vth_grand_national_assembly
 		x = 0
 		y = 1
-		
+		prerequisite = { focus = BUL_Vth_grand_national_assembly }
+	}
+
+	focus = {
+		id = BUL_balkan_pact
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_approach_serbia
+		x = -2
+		y = 1
+		prerequisite = { focus = BUL_approach_serbia }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "BUL_tt_serbia_accepts"
+			}
+		}
+	}
+
+	focus = {
+		id = BUL_lone_liberator
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_approach_serbia
+		x = 2
+		y = 1
+		prerequisite = { focus = BUL_approach_serbia }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "BUL_tt_serbia_refuses"
+			}
+		}
 	}
 	##############
 	# Economic tree
