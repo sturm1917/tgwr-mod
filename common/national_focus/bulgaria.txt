@@ -18,7 +18,7 @@
 	##########
 	focus = {
 		id = BUL_balgarya_za_sebe_si
-		icon = GFX_goal_unknown
+		icon = GFX_focus_bul_balgarya_za_sebe_si
 		cost = 5
 		x = 9
 		y = 0
@@ -28,7 +28,6 @@
 	}
 	focus = {
 		id = BUL_failed_ambitions
-		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = BUL_balgarya_za_sebe_si
 		x = -1
@@ -84,7 +83,7 @@
 
 	focus = {
 		id = BUL_lone_liberator
-		icon = GFX_goal_unknown
+		icon = GFX_focus_bul_lone_liberator
 		cost = 5
 		relative_position_id = BUL_approach_serbia
 		x = 2

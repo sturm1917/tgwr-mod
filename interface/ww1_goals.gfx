@@ -365,6 +365,10 @@ spriteTypes = {
 	}
 	#Bulgaria
 	SpriteType = {
+		name = "GFX_focus_bul_balgarya_za_sebe_si"
+		texturefile = "gfx/interface/goals/focus_bul_balgarya_za_sebe_si.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_generic_voting"
 		texturefile = "gfx/interface/goals/focus_generic_voting.png"
 	}
