@@ -7,6 +7,10 @@ focus_tree = {
 			tag = SPR
 		}
 	}
+	continuous_focus_position = {
+		x = 4000
+		y = 3000
+	}
 	default = no
 	focus = {
 		id = SPR_1910_general_election
@@ -29,7 +33,13 @@ focus_tree = {
 			custom_effect_tooltip = SPR_changed_parliamentery_majority
 			SPR = { 
 				add_political_power = 75
-			}	
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.142
+					days = 10
+				}
+			}			
 		}
 	}
 	focus = {
@@ -69,7 +79,7 @@ focus_tree = {
 	focus = {
 		id = SPR_enforcing_his_majestys_rule
 		icon = GFX_focus_generic_monarchy_2
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 12
 		y = 3
 		ai_will_do = {
@@ -97,7 +107,7 @@ focus_tree = {
 	focus = {
 		id = SPR_freedom_from_a_hundred_years_of_suppression
 		icon = GFX_focus_generic_secret_service_agency
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 12
 		y = 4
 		ai_will_do = {
@@ -123,7 +133,7 @@ focus_tree = {
 	focus = {
 		id = SPR_ensure_the_church_keeps_quiet
 		icon = GFX_focus_generic_monarchy_1
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 13
 		y = 6
 		ai_will_do = {
@@ -156,7 +166,7 @@ focus_tree = {
 	focus = {
 		id = SPR_weaken_the_bourgeois
 		icon = GFX_focus_focus_fra_national_resistance_council
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 7
 		y = 3
 		ai_will_do = {
@@ -195,7 +205,7 @@ focus_tree = {
 		id = SPR_centralization_of_industrial_powerhouses
 		mutually_exclusive = { focus = SPR_redistribute_the_wealth }
 		icon = GFX_focus_spa_the_spanish_miracle
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 10
 		y = 5
 		ai_will_do = {
@@ -321,7 +331,7 @@ focus_tree = {
 		id = SPR_redistribute_the_wealth
 		mutually_exclusive = { focus = SPR_centralization_of_industrial_powerhouses }
 		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 6
 		y = 5
 		ai_will_do = {
@@ -701,12 +711,6 @@ focus_tree = {
 			SPR = { 
 				add_stability = 0.05
 			}
-			hidden_effect = {
-				country_event = {
-					id = ww1_spain.142
-					days = 10
-				}
-			}
 		}
 	}
 	focus = {
@@ -740,10 +744,6 @@ focus_tree = {
 				country_event = {
 					id = ww1_spain.131
 					days = 3
-				}
-				country_event = {
-					id = ww1_spain.142
-					days = 10
 				}
 			}
 		}
@@ -1930,9 +1930,18 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_completed_focus = SPR_sell_food_to_france 
-			has_completed_focus = SPR_sell_weapons_to_england
-			has_completed_focus = SPR_sell_weapons_to_germany
+			OR = {
+				AND = {
+					has_completed_focus = SPR_sell_food_to_france 
+					has_completed_focus = SPR_sell_weapons_to_england
+					has_completed_focus = SPR_sell_weapons_to_germany
+				}
+				AND = {
+					has_completed_focus = SPR_sell_food_to_france 
+					has_completed_focus = SPR_sell_weapons_to_england
+					has_completed_focus = SPR_lean_entente
+				}
+			}
 		}
 		prerequisite = {
 			focus = SPR_develop_the_nation
@@ -1981,9 +1990,18 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = new_spanish_prime_minister_in_office
-			has_completed_focus = SPR_sell_food_to_france 
-			has_completed_focus = SPR_sell_weapons_to_england
-			has_completed_focus = SPR_sell_weapons_to_germany
+			OR = {
+				AND = {
+					has_completed_focus = SPR_sell_food_to_france 
+					has_completed_focus = SPR_sell_weapons_to_england
+					has_completed_focus = SPR_sell_weapons_to_germany
+				}
+				AND = {
+					has_completed_focus = SPR_sell_food_to_france 
+					has_completed_focus = SPR_sell_weapons_to_england
+					has_completed_focus = SPR_lean_entente
+				}
+			}
 		}
 		prerequisite = {
 			focus = SPR_develop_the_nation
@@ -2539,7 +2557,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_chauchat
-		icon = GFX_focus_SPR_license_vickers
+		icon = GFX_focus_french_chauchat
 		cost = 2.9 #days
 		mutually_exclusive = { focus = SPR_the_vickers }
 		x = -7
@@ -2580,7 +2598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_vickers
-		icon = GFX_focus_vickers
+		icon = GFX_focus_english_vickers
 		mutually_exclusive = { focus = SPR_the_chauchat }
 		cost = 2.9 #days
 		x = -9
@@ -6605,8 +6623,15 @@ focus_tree = {
 				remove_ideas = SPR_idea_prime_minister_maura
 				remove_ideas = SPR_idea_prime_minister_manuel
 				remove_ideas = SPR_idea_prime_minister_sanchez
+				deactivate_advisor = SPR_alvaro_de_figueroa
+				deactivate_advisor = SPR_eduardo_dato_pm
+				deactivate_advisor = SPR_prieto_pm
+				deactivate_advisor = SPR_manuel_pm
+				deactivate_advisor = SPR_eduardo_dato_pm
+				deactivate_advisor = SPR_sanchez_pm
 			}
-			add_ideas = SPR_idea_prime_minister_maura
+			activate_advisor = SPR_maura
+			clr_global_flag = SPR_flag_maura_truly_in_office
 		}
 	}
 	focus = {
@@ -7047,11 +7072,6 @@ focus_tree = {
 					add_ideas = SPR_idea_licensing_french_weaponry
 				}
 			}
-			D01 = {
-				hidden_effect = {
-					remove_ideas = SPR_idea_prime_minister_maura
-				}
-			}
 			country_event = {
 				id = ww1_spain.125
 				days = 1
@@ -7093,7 +7113,7 @@ focus_tree = {
 					character = SPR_jaime_iii
 					promote_leader = yes
 					country_leader = {
-						ideology = theocracy_ideology
+						ideology = authoritarian_democracy
 					}
 				}
 			}

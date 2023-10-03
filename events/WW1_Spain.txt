@@ -961,7 +961,7 @@ country_event = {
 				}
 			}
 		}
-		
+		set_global_flag = SPR_flag_maura_truly_in_office
 		#Important\/
 		ai_chance = { factor = 10 }
 	}
@@ -974,7 +974,10 @@ country_event = {
 	desc = ww1_spain.35.d
 	picture = GFX_report_event_canada_treaty
 	fire_only_once = no
-	is_triggered_only = yes
+	mean_time_to_happen = { days = 120 }
+	trigger = {
+		has_global_flag = SPR_flag_maura_truly_in_office
+	}
 	
 	option = {
 		name = ww1_spain.35.a
@@ -995,6 +998,7 @@ country_event = {
 				days = 5
 			}
 		}
+		clr_global_flag = SPR_flag_maura_truly_in_office
 	}
 }
 
@@ -2646,6 +2650,46 @@ country_event = {
 		name = ww1_spain.121.a
 		set_global_flag = jaime_iii_in_austria
 		ai_chance = { factor = 10 }
+		IF = {
+			limit = {
+				AND = {
+					has_country_leader = {
+						character = SPR_jaime_iii
+						ruling_only = yes
+					}
+					has_government = neutrality
+				}
+			}
+			retire_country_leader = yes
+			promote_character = {
+				character = SPR_alfonso_carlos
+				ideology = authoritarian_democracy
+			}
+		}
+		IF = {
+			limit = {
+				AND = {
+					has_country_leader = {
+						character = SPR_jaime_iii
+						ruling_only = yes
+					}
+					has_government = fascism
+				}
+			}
+			retire_country_leader = yes
+			promote_character = {
+				character = SPR_alfonso_carlos
+				ideology = fundamentalism
+			}
+		}
+		IF = {
+			limit = {
+				has_completed_focus = SPR_general_jaime
+			}
+			SPR_jaime_iii = {
+				remove_unit_leader = yes
+			}
+		}
 	}
 }
 
@@ -2694,6 +2738,48 @@ country_event = {
 		name = ww1_spain.123.a
 		ai_chance = { factor = 10 }
 		clr_global_flag = jaime_iii_in_austria
+		IF = {
+			limit = {
+				AND = {
+					has_country_leader = {
+						character = SPR_alfonso_carlos
+						ruling_only = yes
+					}
+					has_government = neutrality
+				}
+			}
+			retire_country_leader = yes
+			promote_character = {
+				character = SPR_jaime_iii
+				ideology = authoritarian_democracy
+			}
+		}
+		IF = {
+			limit = {
+				AND = {
+					has_country_leader = {
+						character = SPR_juan_olazabal
+						ruling_only = yes
+					}
+					has_government = fascism
+				}
+			}
+			retire_country_leader = yes
+			promote_character = {
+				character = SPR_jaime_iii
+				ideology = fundamentalism
+			}
+		}
+		
+		SPR_jaime_iii = {
+			add_field_marshal_role = {
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
 	}
 }
 
@@ -2725,6 +2811,16 @@ country_event = {
 		clr_global_flag = jaime_iii_in_austria
 		promote_character = {
 			character = SPR_jaime_iii
+		}
+		SPR_jaime_iii = {
+			add_field_marshal_role = {
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id = 666666
+			}
 		}
 	}
 }
@@ -3282,5 +3378,40 @@ country_event = {
 	option = {
 		name = ww1_spain.143.b
 		ai_chance = { factor = 10 }
+	}
+}
+
+#Unstable Nation
+country_event = {
+	id = ww1_spain.144
+	title = ww1_spain.144.t
+	desc = ww1_spain.144.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = no
+	mean_time_to_happen = { days = 100 }
+	trigger = {
+		AND = {
+			original_tag = SPR
+			NOT = {
+				OR = {
+					has_completed_focus = SPR_reform_el_turno
+					has_completed_focus = SPR_abolish_el_turno
+				}
+			}
+		}
+	}
+	option = {
+		name = ww1_spain.144.a
+		ai_chance = { factor = 10 }
+		add_stability = -0.03
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.132
+				days = 50
+			}
+			country_event = {
+				id = ww1_spain.130
+				days = 50
+			}
 	}
 }
