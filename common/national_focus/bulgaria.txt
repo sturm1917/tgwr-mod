@@ -53,6 +53,9 @@
 		y = 3
 		prerequisite = { focus = BUL_failed_ambitions }
 		prerequisite = { focus = BUL_support_VMORO_ambitions }
+		completion_reward = {
+			country_event = ww1_bulgaria.4
+		}
 	}
 	focus = {
 		id = BUL_approach_serbia
