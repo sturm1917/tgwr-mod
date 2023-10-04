@@ -1206,6 +1206,21 @@ ideas = {
 				army_defence_factor = -0.15
 			}
 		}
+		SPR_idea_terrible_conscription_lesser = {
+		picture = chi_forced_conscription
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = -0.003
+				army_attack_factor = -0.075
+				army_defence_factor = -0.075
+			}
+		}
 		SPR_idea_civil_marriage = {
 		picture = chi_forced_conscription
 			allowed = {

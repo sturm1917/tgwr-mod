@@ -2557,7 +2557,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_chauchat
-		icon = GFX_focus_french_chauchat
+		icon = GFX_focus_SPR_license_vickers
 		cost = 2.9 #days
 		mutually_exclusive = { focus = SPR_the_vickers }
 		x = -7
@@ -2598,7 +2598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_vickers
-		icon = GFX_focus_english_vickers
+		icon = GFX_focus_vickers
 		mutually_exclusive = { focus = SPR_the_chauchat }
 		cost = 2.9 #days
 		x = -9
@@ -2702,7 +2702,21 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			remove_ideas = SPR_idea_terrible_conscription
+			IF = {
+				limit = {
+					has_idea = SPR_idea_terrible_conscription_lesser
+				}
+				remove_ideas = SPR_idea_terrible_conscription_lesser
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_terrible_conscription
+				}
+				swap_ideas = {
+					remove_idea = SPR_idea_terrible_conscription
+					add_idea = SPR_idea_terrible_conscription_lesser
+				}
+			}
 		}
 	}
 	
@@ -5561,7 +5575,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5595,26 +5608,34 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
 			focus = SPR_keep_arms_away_from_vigilantes
 		}
 		completion_reward = {
-			add_political_power = -25
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
+			IF = {
+				limit = {
+					has_idea = SPR_idea_terrible_conscription_lesser
+				}
+				remove_ideas = SPR_idea_terrible_conscription_lesser
 			}
-			add_war_support = 0.03
+			IF = {
+				limit = {
+					has_idea = SPR_idea_terrible_conscription
+				}
+				swap_ideas = {
+					remove_idea = SPR_idea_terrible_conscription
+					add_idea = SPR_idea_terrible_conscription_lesser
+				}
+			}
 		}
 	}
 	focus = {
-		id = SPR_censor_this_from_the_news
+		id = SPR_transform_the_junta_camps
 		mutually_exclusive = { focus = SPR_relegalize_the_juntas }
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 1.5 #days
+		cost = 5 #days
 		x = -2
 		y = 17
 		relative_position_id = SPR_declare_a_republic
@@ -5623,15 +5644,41 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
 			focus = SPR_keep_arms_away_from_vigilantes
 		}
 		completion_reward = {
-			add_political_power = -25
-			
+			add_political_power = -75
+			41 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			169 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			167 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			165 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			add_stability = 0.03
 		}
 	}
@@ -5750,7 +5797,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5785,7 +5831,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5828,7 +5873,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5861,7 +5905,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5893,7 +5936,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
