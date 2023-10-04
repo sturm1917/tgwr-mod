@@ -111,27 +111,39 @@ country_event = {
 	}
 }
 
-# DEMAND MACEDONIA
+# MALINOV'S RESIGNATION
 ###################
-#country_event = {
-#	id = ww1_bulgaria.4 
-#	title = ww1_bulgaria.4.t
-#	desc = ww1_bulgaria.4.d
-#	picture = GFX_report_event_military_planning
-#	
-#	fire_only_once = yes
-#	trigger = {
-#		has_global_flag = kis_firstbalkanwar_victory
-#	}
-#	
-#	option={
-#		name = ww1_bulgaria.4.a
-#		leave_faction = yes
-#		
-#		set_country_flag = leave_balkan_league
-#		ai_chance = { factor = 100 }
-#	}
-#}
+country_event = {
+	id = ww1_bulgaria.4 
+	title = ww1_bulgaria.4.t
+	desc = ww1_bulgaria.4.d
+	picture = GFX_report_event_military_planning
+	
+	fire_only_once = yes
+	trigger = {
+		date = 1911.3.16
+	}
+	
+	option={
+		name = ww1_bulgaria.4.a
+		
+		remove_advisor_role = {
+			character = BUL_aleksandar_malinov
+		}
+		activate_advisor = BUL_ivan_evstratiev_geshov
+		set_can_be_fired_in_advisor_role = {
+			character = BUL_ivan_evstratiev_geshov
+			value = no
+		}
+		activate_advisor = BUL_stoyan_danev
+		set_can_be_fired_in_advisor_role = {
+			character = BUL_stoyan_danev
+			value = no
+		}
+		set_country_flag = leave_balkan_league
+		ai_chance = { factor = 100 }
+	}
+}
 # START BALKAN LEAGUE FORMING WITHOUT SERBIA
 #############################
 country_event = {

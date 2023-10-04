@@ -2138,8 +2138,18 @@
 
 
  bulgaria_focus:0 "Bulgarian Focus Tree"
+ BUL_balgarya_za_sebe_si:0 "Balgarya Za Sebe Si"
+ BUL_failed_ambitions:0 "Failed Ambitions"
+ BUL_support_VMORO_ambitions:0 "Support VMORO Ambitions"
+ BUL_Vth_grand_national_assembly:0 "Fifth Grand National Assembly"
+ BUL_approach_serbia:0 "Approach Serbia"
+ BUL_balkan_league:0 "The Balkan League"
+ BUL_alone_against_ottomans:0 "Alone Against The Ottomans"
+
  BUL_tt_serbia_refuses:0 "[SER.getName] §Rrefuses!§!"
  BUL_tt_serbia_accepts:0 "[SER.getName] §Gaccepts!§!"
+
+
  BUL_change_constitution:0 "Change The Constitution"
  BUL_modernize_bulgaria:0 "Modernize Bulgaria"
  BUL_prioritize_the_farmers:0 "Prioritize The Farmers"

@@ -28,6 +28,7 @@
 	}
 	focus = {
 		id = BUL_failed_ambitions
+		icon = GFX_focus_bul_failed_ambitions
 		cost = 5
 		relative_position_id = BUL_balgarya_za_sebe_si
 		x = -1
@@ -82,7 +83,7 @@
 	}
 
 	focus = {
-		id = BUL_lone_liberator
+		id = BUL_alone_against_ottomans
 		icon = GFX_focus_bul_lone_liberator
 		cost = 5
 		relative_position_id = BUL_approach_serbia
