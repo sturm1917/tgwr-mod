@@ -102,6 +102,34 @@
 			}
 		}
 	}
+	focus = {
+		id = BUL_prepare_for_war
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_alone_against_ottomans
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_alone_against_ottomans }
+	}
+	focus = {
+		id = BUL_anti-ottoman_crusade
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_prepare_for_war
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_prepare_for_war }
+	}
+	focus = {
+		id = BUL_march_to_tzarigrad
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_anti-ottoman_crusade
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_anti-ottoman_crusade }
+	}
+
 	##############
 	# Economic tree
 	##############
