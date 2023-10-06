@@ -36,8 +36,8 @@
 		prerequisite = { focus = BUL_balgarya_za_sebe_si }
 	}
 	focus = {
-		id = BUL_support_VMORO_ambitions
-		icon = GFX_goal_unknown
+		id = BUL_VMORO
+		icon = GFX_idea_GRE_macedonian_struggle
 		cost = 5
 		relative_position_id = BUL_balgarya_za_sebe_si
 		x = 1
@@ -52,29 +52,35 @@
 		x = 0
 		y = 3
 		prerequisite = { focus = BUL_failed_ambitions }
-		prerequisite = { focus = BUL_support_VMORO_ambitions }
+		prerequisite = { focus = BUL_VMORO }
 		completion_reward = {
 			country_event = ww1_bulgaria.4
 		}
 	}
 	focus = {
-		id = BUL_approach_serbia
-		icon = GFX_goal_unknown
+		id = BUL_reapproach_serbia
+		icon = GFX_focus_deal_with_serbia
 		cost = 5
 		relative_position_id = BUL_Vth_grand_national_assembly
 		x = 0
 		y = 1
 		prerequisite = { focus = BUL_Vth_grand_national_assembly }
+		completion_reward = {
+			SER = {
+				country_event = ww1_bulgaria.5
+			}
+		}
 	}
 
 	focus = {
 		id = BUL_balkan_league
-		icon = GFX_goal_unknown
+		icon = GFX_focus_balkan_league_formation
 		cost = 5
-		relative_position_id = BUL_approach_serbia
+		relative_position_id = BUL_reapproach_serbia
 		x = -2
 		y = 1
-		prerequisite = { focus = BUL_approach_serbia }
+		prerequisite = { focus = BUL_reapproach_serbia }
+		mutually_exclusive = { focus = BUL_alone_against_ottomans }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "BUL_tt_serbia_accepts"
@@ -83,16 +89,46 @@
 				}
 			}
 		}
+		completion_reward = {
+			create_faction = balkan_league
+			SER = {
+				add_to_faction = BUL
+			}
+		}
+	}
+
+	focus = {
+		id = BUL_approach_greece
+		icon = GFX_focus_deal_with_greece
+		cost = 5
+		relative_position_id = BUL_balkan_league
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_balkan_league }
+		available = {
+		}
+	}
+	focus = {
+		id = BUL_the_macedonian_question
+		icon = GFX_focus_macedonian_question
+		cost = 5
+		relative_position_id = BUL_balkan_league
+		x = 0
+		y = 2
+		prerequisite = { focus = BUL_approach_greece }
+		available = {
+		}
 	}
 
 	focus = {
 		id = BUL_alone_against_ottomans
 		icon = GFX_focus_bul_lone_liberator
 		cost = 5
-		relative_position_id = BUL_approach_serbia
+		relative_position_id = BUL_reapproach_serbia
 		x = 2
 		y = 1
-		prerequisite = { focus = BUL_approach_serbia }
+		prerequisite = { focus = BUL_reapproach_serbia }
+		mutually_exclusive = { focus = BUL_balkan_league }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "BUL_tt_serbia_refuses"
@@ -112,8 +148,8 @@
 		prerequisite = { focus = BUL_alone_against_ottomans }
 	}
 	focus = {
-		id = BUL_anti-ottoman_crusade
-		icon = GFX_goal_unknown
+		id = BUL_anti_ottoman_crusade
+		icon = GFX_idea_ottoman_balkan_defend
 		cost = 5
 		relative_position_id = BUL_prepare_for_war
 		x = 0
@@ -124,10 +160,10 @@
 		id = BUL_march_to_tzarigrad
 		icon = GFX_goal_unknown
 		cost = 5
-		relative_position_id = BUL_anti-ottoman_crusade
+		relative_position_id = BUL_anti_ottoman_crusade
 		x = 0
 		y = 1
-		prerequisite = { focus = BUL_anti-ottoman_crusade }
+		prerequisite = { focus = BUL_anti_ottoman_crusade }
 	}
 
 	##############

@@ -2132,18 +2132,23 @@
  AST_disestablish_the_cmf_desc:0 ""
 
  BUL_alliance_with_serbia:0 "Alliance with Serbia"
- BUL_the_macedonian_question:0 "The Macedonian Question"
  BUL_buy_weapons:0 "Liberty Guns Act"
 
 
  bulgaria_focus:0 "Bulgarian Focus Tree"
  BUL_balgarya_za_sebe_si:0 "Balgarya Za Sebe Si"
  BUL_failed_ambitions:0 "Failed Ambitions"
- BUL_support_VMORO_ambitions:0 "Support VMORO Ambitions"
+ BUL_VMORO:0 "VMORO"
  BUL_Vth_grand_national_assembly:0 "The Silver Constitution"
- BUL_approach_serbia:0 "Reapproach Serbia"
+ BUL_reapproach_serbia:0 "Reapproach Serbia"
  BUL_balkan_league:0 "The Balkan League"
+ BUL_invite_montenegro:0 "Invite Montenegro"
+ BUL_approach_greece:0 "Approach Greece"
+ BUL_the_macedonian_question:0 "The Macedonian Question"
  BUL_alone_against_ottomans:0 "Alone Against The Ottomans"
+ BUL_prepare_for_war:0 "Prepare For War"
+ BUL_anti_ottoman_crusade:0 "Anti-Ottoman Crusade"
+ BUL_march_to_tzarigrad:0 "March To Tzarigrad" 
 
  BUL_tt_serbia_refuses:0 "[SER.getName] §Rrefuses!§!"
  BUL_tt_serbia_accepts:0 "[SER.getName] §Gaccepts!§!"
