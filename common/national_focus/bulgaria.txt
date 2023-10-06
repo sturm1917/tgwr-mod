@@ -91,9 +91,7 @@
 		}
 		completion_reward = {
 			create_faction = balkan_league
-			SER = {
-				add_to_faction = BUL
-			}
+				add_to_faction = SER
 		}
 	}
 
