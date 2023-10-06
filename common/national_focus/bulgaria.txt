@@ -37,7 +37,7 @@
 	}
 	focus = {
 		id = BUL_VMORO
-		icon = GFX_idea_GRE_macedonian_struggle
+		icon = GFX_focus_macedonian_front
 		cost = 5
 		relative_position_id = BUL_balgarya_za_sebe_si
 		x = 1
@@ -57,29 +57,15 @@
 			country_event = ww1_bulgaria.4
 		}
 	}
-	focus = {
-		id = BUL_reapproach_serbia
-		icon = GFX_focus_deal_with_serbia
-		cost = 5
-		relative_position_id = BUL_Vth_grand_national_assembly
-		x = 0
-		y = 1
-		prerequisite = { focus = BUL_Vth_grand_national_assembly }
-		completion_reward = {
-			SER = {
-				country_event = ww1_bulgaria.5
-			}
-		}
-	}
 
 	focus = {
 		id = BUL_balkan_league
-		icon = GFX_focus_balkan_league_formation
+		icon = GFX_focus_ser_bul_cooperation
 		cost = 5
-		relative_position_id = BUL_reapproach_serbia
+		relative_position_id = BUL_Vth_grand_national_assembly
 		x = -2
 		y = 1
-		prerequisite = { focus = BUL_reapproach_serbia }
+		prerequisite = { focus = BUL_Vth_grand_national_assembly }
 		mutually_exclusive = { focus = BUL_alone_against_ottomans }
 		available = {
 			custom_trigger_tooltip = {
@@ -106,26 +92,15 @@
 		available = {
 		}
 	}
-	focus = {
-		id = BUL_the_macedonian_question
-		icon = GFX_focus_macedonian_question
-		cost = 5
-		relative_position_id = BUL_balkan_league
-		x = 0
-		y = 2
-		prerequisite = { focus = BUL_approach_greece }
-		available = {
-		}
-	}
 
 	focus = {
 		id = BUL_alone_against_ottomans
 		icon = GFX_focus_bul_lone_liberator
 		cost = 5
-		relative_position_id = BUL_reapproach_serbia
+		relative_position_id = BUL_Vth_grand_national_assembly
 		x = 2
 		y = 1
-		prerequisite = { focus = BUL_reapproach_serbia }
+		prerequisite = { focus = BUL_Vth_grand_national_assembly }
 		mutually_exclusive = { focus = BUL_balkan_league }
 		available = {
 			custom_trigger_tooltip = {
@@ -147,7 +122,7 @@
 	}
 	focus = {
 		id = BUL_anti_ottoman_crusade
-		icon = GFX_idea_ottoman_balkan_defend
+		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = BUL_prepare_for_war
 		x = 0
@@ -155,7 +130,7 @@
 		prerequisite = { focus = BUL_prepare_for_war }
 	}
 	focus = {
-		id = BUL_march_to_tzarigrad
+		id = BUL_march_to_tsarigrad
 		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = BUL_anti_ottoman_crusade

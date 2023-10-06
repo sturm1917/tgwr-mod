@@ -2148,7 +2148,7 @@
  BUL_alone_against_ottomans:0 "Alone Against The Ottomans"
  BUL_prepare_for_war:0 "Prepare For War"
  BUL_anti_ottoman_crusade:0 "Anti-Ottoman Crusade"
- BUL_march_to_tzarigrad:0 "March To Tzarigrad" 
+ BUL_march_to_tsarigrad:0 "March To Tsarigrad" 
 
  BUL_tt_serbia_refuses:0 "[SER.getName] §Rrefuses!§!"
  BUL_tt_serbia_accepts:0 "[SER.getName] §Gaccepts!§!"
