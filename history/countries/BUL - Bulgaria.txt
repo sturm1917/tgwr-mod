@@ -61,7 +61,8 @@ recruit_character = BUL_mikhail_madzharov
 		neutrality = 52
 	}
 	add_ideas = {
-		limited_conscription
+		BUL_idea_national_assembly
+		BUL_idea_minority_government
 	}
 
 	set_technology = {

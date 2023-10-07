@@ -1,5 +1,17 @@
 ideas={
 	country = {
+		BUL_idea_minority_government = {
+			picture = bul_second_national_catastrophe
+			modifier = {
+				political_power_gain = -0.25
+			}
+		}
+		BUL_idea_national_assembly = {
+			picture = bul_second_national_catastrophe
+			modifier = {
+				political_power_gain = -0.05
+			}
+		}
 		BUL_idea_lozengradska_operacija = {
 		    picture = bul_bulgarian_irredentism
 			modifier = {

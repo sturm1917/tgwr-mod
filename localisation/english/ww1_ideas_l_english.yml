@@ -1610,6 +1610,8 @@ socialism_banned:0 "Socialism Banned"
  
  #BULGARIA
  sofia_artillery_arsenal:0 "Sofia Artillery Arsenal"
+ BUL_idea_minority_government:0 "Minority Government"
+ BUL_idea_minority_government_desc:0 "The Bulgarian Government must show its power to the prince and the people, otherwise it will always stay in the shadow if him."
  BUL_idea_national_assembly:0 "National Assembly"
  BUL_idea_national_assembly_desc:0 "The Bulgarian State will be governed independently in accordance with a Constitution elaborated by a legislature elected by the people."
  BUL_idea_national_assembly_2:0 "National Assembly"
