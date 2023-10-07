@@ -17,7 +17,7 @@ focus_tree = {
 		icon = GFX_focus_stabilize_democracy
 		cost = 5 #days
 		x = 15
-		y = 1
+		y = 0
 		ai_will_do = {
 			factor = 100
 		}
@@ -47,7 +47,7 @@ focus_tree = {
 		icon = GFX_focus_SWI_neutrality_on_the_move
 		cost = 12.9 #days
 		x = 11
-		y = 2
+		y = 1
 		ai_will_do = {
 			factor = 100
 		}
@@ -149,9 +149,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_freedom_from_a_hundred_years_of_suppression
-		}
-		prerequisite = {
-			focus = SPR_weaken_catholic_education
 		}
 		completion_reward = {
 			SPR = { 
@@ -630,9 +627,9 @@ focus_tree = {
 		id = SPR_furthur_weaken_the_church
 		icon = GFX_focus_mex_triumph_over_the_cristeros
 		cost = 2.9 #days
-		x = 18
-		y = 8
-		relative_position_id = SPR_1910_general_election
+		x = 0
+		y = 2
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 100
 		}
@@ -753,7 +750,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus 
 		cost = 12.9 #days
 		x = 23
-		y = 2
+		y = 1
 		ai_will_do = {
 			factor = 10
 		}
@@ -789,8 +786,8 @@ focus_tree = {
 		id = SPR_the_question_of_religion
 		icon = GFX_focus_TUR_the_sun_language_theory
 		cost = 2.9 #days
-		x = 33
-		y = 7
+		x = 26
+		y = 2
 		ai_will_do = {
 			factor = 10
 		}
@@ -818,8 +815,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_remain_catholic }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5 #days
-		x = 35
-		y = 8
+		x = 2
+		y = 1
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -858,8 +856,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_turn_the_church_into_a_competitive_market }
 		icon = GFX_focus_generic_catholic_dominion
 		cost = 5 #days
-		x = 28
-		y = 8
+		x = -5
+		y = 1
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -886,8 +885,9 @@ focus_tree = {
 		id = SPR_king_country_and_god
 		icon = GFX_focus_ETH_the-italo_ethiopian_empire
 		cost = 5 #days
-		x = 27
-		y = 9
+		x = -6
+		y = 2
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -916,8 +916,9 @@ focus_tree = {
 		id = SPR_permanent_catholicsm
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		cost = 2.9 #days
-		x = 27
-		y = 11
+		x = -6
+		y = 4
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -974,8 +975,9 @@ focus_tree = {
 		id = SPR_guarantee_the_pope
 		icon = GFX_focus_generic_pope
 		cost = 2.9 #days
-		x = 28
-		y = 10
+		x = -5
+		y = 3
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1000,8 +1002,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_remain_catholic }
 		icon = GFX_focus_rom_parties_end
 		cost = 2.9 #days
-		x = 31
-		y = 8
+		x = -2
+		y = 1
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1055,8 +1058,9 @@ focus_tree = {
 		id = SPR_appease_religous_conservatives
 		icon = GFX_focus_up_joan_of_arc
 		cost = 2.9 #days
-		x = 30
-		y = 9
+		x = -3
+		y = 2
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1089,8 +1093,9 @@ focus_tree = {
 		id = SPR_force_incompatibility
 		icon = GFX_focus_EST_fight_the_vaps
 		cost = 2.9 #days
-		x = 30
-		y = 10
+		x = -3
+		y = 3
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1119,8 +1124,9 @@ focus_tree = {
 		id = SPR_replace_the_dominant_christian_type
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 5 #days
-		x = 32
-		y = 10
+		x = -1
+		y = 3
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1154,8 +1160,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_all_owe_loyalty_to_the_king }
 		icon = GFX_focus_ger_HRE_estate
 		cost = 2.9 #days
-		x = 31
-		y = 11
+		x = -2
+		y = 4
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1188,8 +1195,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_propose_the_idea_of_atheism? }
 		icon = GFX_goal_tripartite_pact
 		cost = 2.9 #days
-		x = 36
-		y = 9
+		x = 3
+		y = 2
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1278,8 +1286,9 @@ focus_tree = {
 		id = SPR_the_muslims
 		icon = GFX_focus_sunni_catholic_friendship
 		cost = 2.9 #days
-		x = 36
-		y = 10
+		x = 3
+		y = 3
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1303,8 +1312,9 @@ focus_tree = {
 		id = SPR_the_orthodoxy
 		icon = GFX_focus_orthodox_church
 		cost = 2.9 #days
-		x = 34
-		y = 10
+		x = 1
+		y = 3
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1365,8 +1375,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_god_then_the_majesty }
 		icon = GFX_focus_rom_abdicate
 		cost = 2.9 #days
-		x = 35
-		y = 11
+		x = 2
+		y = 4
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1403,8 +1414,9 @@ focus_tree = {
 		id = SPR_propose_the_idea_of_atheism?
 		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 2.9 #days
-		x = 38
-		y = 10
+		x = 5
+		y = 3
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1434,8 +1446,9 @@ focus_tree = {
 		id = SPR_real_atheism
 		icon = GFX_focus_GRE_a_land_of_mountains
 		cost = 2.9 #days
-		x = 38
-		y = 11
+		x = 5
+		y = 4
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1469,8 +1482,9 @@ focus_tree = {
 		id = SPR_spains_religious_policy
 		icon = GFX_goal_generic_propaganda
 		cost = 2.9 #days
-		x = 32
-		y = 12
+		x = -1
+		y = 5
+		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
 			factor = 10
 		}
@@ -1533,9 +1547,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_adopt_more_democratic
 			focus = SPR_electoral_reforms
-		}
-		prerequisite = {
-			focus = SPR_hold_military_parades
 		}
 		available = {
 			is_subject = no
@@ -1885,17 +1896,14 @@ focus_tree = {
 		id = SPR_develop_the_nation
 		icon = GFX_focus_generic_industry_1
 		cost = 2.9 #days
-		x = 30
-		y = 3
+		x = 38
+		y = 9
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
-		}
-		prerequisite = {
-			focus = SPR_the_peoples_wellbeing
 		}
 		completion_reward = {
 			add_political_power = -75
@@ -2557,7 +2565,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_chauchat
-		icon = GFX_focus_SPR_license_vickers
+		icon = GFX_focus_french_chauchat
 		cost = 2.9 #days
 		mutually_exclusive = { focus = SPR_the_vickers }
 		x = -7
@@ -2598,7 +2606,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_the_vickers
-		icon = GFX_focus_vickers
+		icon = GFX_focus_english_vickers
 		mutually_exclusive = { focus = SPR_the_chauchat }
 		cost = 2.9 #days
 		x = -9
@@ -2702,21 +2710,7 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			IF = {
-				limit = {
-					has_idea = SPR_idea_terrible_conscription_lesser
-				}
-				remove_ideas = SPR_idea_terrible_conscription_lesser
-			}
-			IF = {
-				limit = {
-					has_idea = SPR_idea_terrible_conscription
-				}
-				swap_ideas = {
-					remove_idea = SPR_idea_terrible_conscription
-					add_idea = SPR_idea_terrible_conscription_lesser
-				}
-			}
+			remove_ideas = SPR_idea_terrible_conscription
 		}
 	}
 	
@@ -2745,9 +2739,9 @@ focus_tree = {
 		id = SPR_consolidate_colonial_humiliations
 		icon = GFX_focus_spr_anarchism_knows_no_borders
 		cost = 5 #days
-		x = -12
-		y = 2
-		relative_position_id = SPR_develop_the_nation
+		x = 3
+		y = 3
+		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
 		}
@@ -2781,9 +2775,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_forget_about_our_colonies }
 		icon = GFX_goal_generic_occupy_states_coastal
 		cost = 10 #days
-		x = -13
-		y = 4
-		relative_position_id = SPR_develop_the_nation
+		x = 2
+		y = 5
+		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
 		}
@@ -2860,9 +2854,9 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_our_colonial_empire }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5 #days
-		x = -11
-		y = 4
-		relative_position_id = SPR_develop_the_nation
+		x = 4
+		y = 5
+		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
 		}
@@ -2887,9 +2881,9 @@ focus_tree = {
 		id = SPR_sell_our_distant_colonies
 		icon = GFX_focus_ITA_devaluate_the_lire
 		cost = 8 #days
-		x = -9
-		y = 5
-		relative_position_id = SPR_develop_the_nation
+		x = 3
+		y = 1
+		relative_position_id = SPR_forget_about_our_colonies
 		ai_will_do = {
 			factor = 10
 		}
@@ -3119,8 +3113,8 @@ focus_tree = {
 		id = SPR_the_spanish_navy
 		icon = GFX_goal_generic_navy_battleship
 		cost = 2.9 #days
-		x = 20
-		y = 11
+		x = 23
+		y = 12
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -3761,7 +3755,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		cost = 2.9 #days
 		x = 20
-		y = 16
+		y = 17
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -5575,6 +5569,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5608,34 +5603,26 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
 			focus = SPR_keep_arms_away_from_vigilantes
 		}
 		completion_reward = {
-			IF = {
-				limit = {
-					has_idea = SPR_idea_terrible_conscription_lesser
-				}
-				remove_ideas = SPR_idea_terrible_conscription_lesser
+			add_political_power = -25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
 			}
-			IF = {
-				limit = {
-					has_idea = SPR_idea_terrible_conscription
-				}
-				swap_ideas = {
-					remove_idea = SPR_idea_terrible_conscription
-					add_idea = SPR_idea_terrible_conscription_lesser
-				}
-			}
+			add_war_support = 0.03
 		}
 	}
 	focus = {
-		id = SPR_transform_the_junta_camps
+		id = SPR_censor_this_from_the_news
 		mutually_exclusive = { focus = SPR_relegalize_the_juntas }
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 5 #days
+		cost = 1.5 #days
 		x = -2
 		y = 17
 		relative_position_id = SPR_declare_a_republic
@@ -5644,41 +5631,15 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
 			focus = SPR_keep_arms_away_from_vigilantes
 		}
 		completion_reward = {
-			add_political_power = -75
-			41 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			169 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			167 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			165 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_political_power = -25
+			
 			add_stability = 0.03
 		}
 	}
@@ -5797,6 +5758,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5831,6 +5793,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5873,6 +5836,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5905,6 +5869,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5936,6 +5901,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
