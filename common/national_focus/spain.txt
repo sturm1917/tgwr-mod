@@ -1896,7 +1896,7 @@ focus_tree = {
 		id = SPR_develop_the_nation
 		icon = GFX_focus_generic_industry_1
 		cost = 2.9 #days
-		x = 38
+		x = 41
 		y = 9
 		ai_will_do = {
 			factor = 10
@@ -4714,7 +4714,7 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		cost = 5 #days
 		x = 13
-		y = 14
+		y = 20
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -4724,7 +4724,7 @@ focus_tree = {
 			has_political_power > 200
 		}
 		prerequisite = {
-			focus = SPR_convene_the_catalonian_parliament
+			focus = SPR_alliance_with_the_ussr
 		}
 		completion_reward = {
 			add_political_power = -200
@@ -4764,8 +4764,8 @@ focus_tree = {
 		id = SPR_the_reds_industry
 		icon = GFX_goal_generic_soviet_construction
 		cost = 5 #days
-		x = 14
-		y = 15
+		x = 11
+		y = 20
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -4775,7 +4775,7 @@ focus_tree = {
 			has_political_power > 200
 		}
 		prerequisite = {
-			focus = SPR_the_reds_army
+			focus = SPR_alliance_with_the_ussr
 		}
 		completion_reward = {
 			add_political_power = -200
@@ -4808,10 +4808,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_government_takeover
+		id = SPR_government_topple
+		mutually_exclusive = { focus = SPR_government_takeover }
 		icon = GFX_focus_por_workers_of_iberia
 		cost = 5 #days
-		x = 12
+		x = 11
 		y = 15
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -4835,10 +4836,95 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_government_takeover
+		mutually_exclusive = { focus = SPR_government_topple }
+		icon = GFX_goal_support_communism
+		cost = 5 #days
+		x = 13
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = SPR_crush_the_juntas_de_defensa_movement
+		}
+		completion_reward = {
+			complete_national_focus = SPR_proletariat_strikes
+			complete_national_focus = SPR_adopt_furthur_social_reform
+			complete_national_focus = SPR_outlaw_pistolerismo
+			hidden_effect = {
+				complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
+			}
+			set_global_flag = SPR_flag_no_more_strikes
+			set_global_flag = SPR_flag_no_more_el_turno
+		}
+	}
+	focus = {
+		id = SPR_worldwide_communism
+		mutually_exclusive = { focus = SPR_government_topple }
+		icon = GFX_goal_support_communism
+		cost = 2.9 #days
+		x = 13
+		y = 18
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = SPR_marxist_thought
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.125
+			}
+		}
+	}
+	focus = {
+		id = SPR_marxist_thought
+		mutually_exclusive = { focus = SPR_government_topple }
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 5 #days
+		x = 13
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = SPR_government_takeover
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+				long_name = SPR_spanish_commune
+				name = SPR_spanish_commune
+				
+			}
+			
+		}
+	}
+	focus = {
 		id = SPR_planned_economy
 		icon = GFX_focus_SOV_the_last_purge
 		cost = 5 #days
-		x = 14
+		x = 12
 		y = 16
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -4848,6 +4934,7 @@ focus_tree = {
 			is_subject = no
 		}
 		prerequisite = {
+			focus = SPR_government_topple
 			focus = SPR_government_takeover
 		}
 		completion_reward = {
@@ -4858,7 +4945,7 @@ focus_tree = {
 		id = SPR_anarchism_society
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 5 #days
-		x = 16
+		x = 10
 		y = 16
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -4868,7 +4955,7 @@ focus_tree = {
 			is_subject = no
 		}
 		prerequisite = {
-			focus = SPR_government_takeover
+			focus = SPR_government_topple
 		}
 		completion_reward = {
 			add_ideas = SPR_idea_anarchists
@@ -4878,7 +4965,7 @@ focus_tree = {
 		id = SPR_no_ethnic_leadership
 		icon = GFX_focus_SOV_support_spanish_poum
 		cost = 5 #days
-		x = 15
+		x = 11
 		y = 17
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -4905,7 +4992,7 @@ focus_tree = {
 		id = SPR_worlds_first_anarchy
 		icon = GFX_focus_soviet_congress
 		cost = 5 #days
-		x = 16
+		x = 11
 		y = 18
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -4941,8 +5028,8 @@ focus_tree = {
 		id = SPR_alliance_with_the_ussr
 		icon = GFX_focus_spr_mission_to_the_soviet_union
 		cost = 5 #days
-		x = 17
-		y = 20
+		x = 12
+		y = 19
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
@@ -4955,6 +5042,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_worlds_first_anarchy
+			focus = SPR_marxist_thought
 		}
 		completion_reward = {
 			SOV = {
@@ -4968,8 +5056,8 @@ focus_tree = {
 	focus = {
 		id = SPR_anarchy_is_for_all
 		icon = GFX_focus_ETH_callout_to_the_world
-		cost = 5 #days
-		x = 15
+		cost = 2.9 #days
+		x = 10
 		y = 19
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -5249,7 +5337,7 @@ focus_tree = {
 		id = SPR_join_the_entente
 		icon = GFX_focus_consolidate_entente
 		cost = 5 #days
-		x = 10
+		x = 8
 		y = 16
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -5276,7 +5364,7 @@ focus_tree = {
 		id = SPR_the_three_great_colonizers
 		icon = GFX_focus_consolidate_entente
 		cost = 5 #days
-		x = 10
+		x = 8
 		y = 19
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -5301,7 +5389,7 @@ focus_tree = {
 		id = SPR_negotiate_more_spanish_claims
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5 #days
-		x = 11
+		x = 9
 		y = 17
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
