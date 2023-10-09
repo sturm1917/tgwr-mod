@@ -1559,8 +1559,8 @@ country_event = {
 		}
 		OR = {
 			has_country_flag = great_war_loser
-			has_stability < 0.1
-			democratic > 0.5
+			has_stability < 0.03
+			democratic > 0.75
 			AND = {
 				date > 1931.4.1
 				NOT = {

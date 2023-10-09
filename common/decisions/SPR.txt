@@ -478,8 +478,8 @@ SPR_massive_strike_plans_category = {
 		visible = {
 			always = yes
 		}
-		cost = 125
-		days_re_enable = 50
+		cost = 25
+		days_re_enable = 75
 		days_remove = 100
 		modifier = {
 			industrial_capacity_factory = -0.1
@@ -536,7 +536,7 @@ SPR_massive_strike_plans_category = {
 		}
 		remove_effect = {
 			add_stability = 0.025
-			add_political_power = -150
+			add_political_power = -50
 			hidden_effect = {
 				country_event = {
 					id = ww1_spain.132
@@ -563,8 +563,8 @@ SPR_massive_strike_plans_category = {
 			always = yes
 		}
 
-		cost = 125
-		days_re_enable = 50
+		cost = 25
+		days_re_enable = 75
 		days_remove = 100
 		modifier = {
 			political_power_factor = -0.25
