@@ -14,7 +14,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_dreyfus_exoneration
-		icon = GFX_FRA_ww1_dreyfus_exoneration_focus
+		icon = GFX_focus_FRA_dreyfus_exoneration
 		completion_reward = {
 			add_political_power = 120
 			country_event = ww1_france.40
@@ -29,6 +29,50 @@ focus_tree = {
 		cost = 10
 		x = 18
 		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_memories_of_the_commune
+			}
+		}
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_the_social_democrat_compromise
+			}
+		}
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_save_the_republic
+			}
+		}
+		offset = {
+			x = 14
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
 	###############################################################
 	# SAVE THE REPUBLIC - DEMOCRATIC PATH
@@ -37,6 +81,21 @@ focus_tree = {
 		id = FRA_ww1_save_the_republic
 		icon = GFX_focus_chi_reach_out_to_france_2
 		relative_position_id = FRA_ww1_dreyfus_exoneration
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_ww1_memories_of_the_commune
+					has_completed_focus = FRA_ww1_the_social_democrat_compromise
+					has_completed_focus = FRA_ww1_form_the_proudhon_circle
+				}
+			}
+		}
 		prerequisite = {
 			focus = FRA_ww1_dreyfus_exoneration
 		}
@@ -50,6 +109,15 @@ focus_tree = {
 			add_war_support = -0.1
 			custom_effect_tooltip = FRA_join_democrats_socialists_2
 			custom_effect_tooltip = FRA_get_democrats_socialists_seats
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -77,6 +145,11 @@ focus_tree = {
 				custom_trigger_tooltip = {
 					tooltip = FRA_150_seats
 				}
+			}
+		}
+		bypass = {
+			NOT = {
+				has_idea = FRA_ww1_agricultural_sector_strike
 			}
 		}
 		completion_reward = {
@@ -337,6 +410,17 @@ focus_tree = {
 		cost = 5
 		x = 2
 		y = 1
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_form_the_regiments_alpins
@@ -536,6 +620,17 @@ focus_tree = {
 		cost = 10
 		x = 8
 		y = 1
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_greece_friend
@@ -607,6 +702,17 @@ focus_tree = {
 		cost = 5
 		x = 10
 		y = 1
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_allied_bases
@@ -668,7 +774,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_ww1_support_serbia
-		icon = GFX_focus_AUH_serbian_protectorate
+		icon = GFX_focus_deal_with_serbia
 		relative_position_id = FRA_ww1_save_the_republic
 		prerequisite = {
 			focus = FRA_ww1_save_the_republic
@@ -721,6 +827,17 @@ focus_tree = {
 		cost = 5
 		x = 4
 		y = 1
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_serbian_exiled_force
@@ -831,6 +948,21 @@ focus_tree = {
 		id = FRA_ww1_memories_of_the_commune
 		icon = GFX_goal_FRA_Memories_of_the_Commune_focus
 		relative_position_id = FRA_ww1_dreyfus_exoneration
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_ww1_save_the_republic
+					has_completed_focus = FRA_ww1_the_social_democrat_compromise
+					has_completed_focus = FRA_ww1_form_the_proudhon_circle
+				}
+			}
+		}
 		prerequisite = {
 			focus = FRA_ww1_dreyfus_exoneration
 		}
@@ -871,6 +1003,15 @@ focus_tree = {
 				democrat_alliance_percent = seatNumbers
 			}
 			reload_parliament_gui = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -879,12 +1020,23 @@ focus_tree = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 		cost = 10
-		x = -20
+		x = -22
 		y = 1
+		offset = {
+			x = 22
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_memories_of_the_commune
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_form_the_popular_labor_service
-		icon = GFX_goal_FRA_expanded_duty
+		icon = GFX_goal_FRA_form_the_popular_labour_service
 		relative_position_id = FRA_ww1_memories_of_the_commune
 		prerequisite = {
 			focus = FRA_ww1_memories_of_the_commune
@@ -904,7 +1056,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_extend_the_duty
-		icon = GFX_FRA_ww1_extend_the_duty_focus
+		icon = GFX_focus_FRA_expand_factory_duty
 		relative_position_id = FRA_ww1_form_the_popular_labor_service
 		prerequisite = {
 			focus = FRA_ww1_form_the_popular_labor_service
@@ -959,7 +1111,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_support_the_suffragettes
-		icon = GFX_goal_FRA_support_the_suffragettes_focus
+		icon = GFX_focus_generic_female_rights
 		relative_position_id = FRA_ww1_memories_of_the_commune
 		prerequisite = {
 			focus = FRA_ww1_memories_of_the_commune
@@ -983,7 +1135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_affiliation_with_the_CGT
-		icon = GFX_FRA_ww1_affiliation_with_the_CGT_focus
+		icon = GFX_focus_FRA_affiliation_with_CGT
 		relative_position_id = FRA_ww1_support_the_suffragettes
 		prerequisite = {
 			focus = FRA_ww1_support_the_suffragettes
@@ -1004,7 +1156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_labor_reform
-		icon = GFX_FRA_ww1_labor_reform_focus
+		icon = GFX_goal_workers_rights
 		relative_position_id = FRA_ww1_affiliation_with_the_CGT
 		prerequisite = {
 			focus = FRA_ww1_affiliation_with_the_CGT
@@ -1027,7 +1179,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_ally_the_republican_alliance
-		icon = GFX_FRA_ww1_ally_the_republican_alliance_focus
+		icon = GFX_focus_FRA_ally_republicans
 		relative_position_id = FRA_ww1_memories_of_the_commune
 		prerequisite = {
 			focus = FRA_ww1_memories_of_the_commune
@@ -1074,7 +1226,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_socialist_mentality
-		icon = GFX_FRA_ww1_socialist_mentality_focus
+		icon = GFX_focus_socialist_worker
 		relative_position_id = FRA_ww1_ally_the_republican_alliance
 		prerequisite = {
 			focus = FRA_ww1_ally_the_republican_alliance
@@ -1212,7 +1364,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_socialist_reality
-		icon = GFX_focus_FRA_socialist_reality
+		icon = GFX_focus_red_flag
 		relative_position_id = FRA_ww1_mention_de_censure
 		prerequisite = {
 			focus = FRA_ww1_mention_de_censure
@@ -1298,7 +1450,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_collectivisation
-		icon = GFX_focus_prc_agrarian_socialism
+		icon = GFX_focus_radical_engine
 		relative_position_id = FRA_ww1_mention_de_censure
 		prerequisite = {
 			focus = FRA_ww1_mention_de_censure
@@ -1382,7 +1534,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_over_influence_europe
-		icon = GFX_focus_spr_anarchism_knows_no_borders
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		relative_position_id = FRA_ww1_collectivisation
 		prerequisite = {
 			focus = FRA_ww1_collectivisation
@@ -1521,8 +1673,23 @@ focus_tree = {
 	###############################################################
 	focus = {
 		id = FRA_ww1_the_social_democrat_compromise
-		icon = GFX_FRA_ww1_the_social_democrat_compromise_focus
+		icon = GFX_focus_FRA_the_social_democratic_compromise
 		relative_position_id = FRA_ww1_dreyfus_exoneration
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_ww1_memories_of_the_commune
+					has_completed_focus = FRA_ww1_save_the_republic
+					has_completed_focus = FRA_ww1_form_the_proudhon_circle
+				}
+			}
+		}
 		prerequisite = {
 			focus = FRA_ww1_dreyfus_exoneration
 		}
@@ -1535,6 +1702,15 @@ focus_tree = {
 			add_stability = -0.05
 			custom_effect_tooltip = FRA_join_democrats_socialists
 			custom_effect_tooltip = FRA_get_democrats_socialists_seats
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -1543,8 +1719,19 @@ focus_tree = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 		cost = 10
-		x = -10
+		x = -12
 		y = 1
+		offset = {
+			x = 12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_the_social_democrat_compromise
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_protect_european_minorities
@@ -1557,10 +1744,10 @@ focus_tree = {
 		available = {
 			ROOT = {
 				check_variable = {
-					democrat_alliance > 350
+					democrat_alliance > 300
 				}
 				custom_trigger_tooltip = {
-					tooltip = FRA_350_seats
+					tooltip = FRA_300_seats
 				}
 				has_war = no
 				is_subject = no
@@ -1667,7 +1854,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		cost = 5
-		x = 2
+		x = 3
 		y = 1
 	}
 	focus = {
@@ -1721,12 +1908,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
 	}
 	focus = {
 		id = FRA_ww1_protector_of_the_weakests
-		icon = GFX_FRA_ww1_protector_of_the_weakests_focus
+		icon = GFX_focus_FRA_protector_of_the_weakests
 		relative_position_id = FRA_ww1_british_friendship
 		prerequisite = {
 			focus = FRA_ww1_british_friendship
@@ -1750,6 +1937,44 @@ focus_tree = {
 		}
 		cost = 10
 		x = 0
+		y = 1
+	}
+	focus = {
+		id = FRA_ww1_bulgarian_alliance
+		icon = GFX_focus_BUL_promote_bulgarian_nationalism
+		relative_position_id = FRA_ww1_protect_european_minorities
+		prerequisite = {
+			focus = FRA_ww1_protect_european_minorities
+		}
+		available = {
+			is_subject = no
+			any_country = {
+				is_major = yes
+				has_war_with = ROOT
+			}
+			NOT = {
+				has_war_with = BUL
+			}
+			BUL = {
+				is_in_faction = no
+			}
+		}
+		completion_reward = {
+			BUL = {
+				country_event = {
+					id = ww1_france.258
+					days = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 45
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		cost = 5
+		x = 1
 		y = 1
 	}
 	focus = {
@@ -1788,6 +2013,17 @@ focus_tree = {
 		cost = 10
 		x = -6
 		y = 1
+		offset = {
+			x = 22
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_memories_of_the_commune
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_colonial_volunteers
@@ -1827,10 +2063,21 @@ focus_tree = {
 		cost = 10
 		x = -4
 		y = 1
+		offset = {
+			x = 22
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_memories_of_the_commune
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_arms_export
-		icon = GFX_FRA_ww1_arms_export_focus
+		icon = GFX_focus_FRA_arms_export
 		relative_position_id = FRA_ww1_colonial_volunteers
 		prerequisite = {
 			focus = FRA_ww1_colonial_volunteers
@@ -1963,7 +2210,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_improve_the_railways
-		icon = GFX_focus_FRA_improve_railways
+		icon = GFX_focus_Generic_Develop_Rail_Network
 		relative_position_id = FRA_ww1_social_investments
 		prerequisite = {
 			focus = FRA_ww1_social_investments
@@ -2181,7 +2428,7 @@ focus_tree = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 		cost = 10
-		x = 4
+		x = 6
 		y = 1
 	}
 	focus = {
@@ -2238,7 +2485,7 @@ focus_tree = {
 			FOCUS_FILTER_HISTORICAL
 		}
 		cost = 10
-		x = 6
+		x = 8
 		y = 1
 	}
 	focus = {
@@ -2652,6 +2899,21 @@ focus_tree = {
 		id = FRA_ww1_form_the_proudhon_circle
 		icon = GFX_focus_FRA_form_the_proudhon_circle
 		relative_position_id = FRA_ww1_dreyfus_exoneration
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_ww1_memories_of_the_commune
+					has_completed_focus = FRA_ww1_the_social_democrat_compromise
+					has_completed_focus = FRA_ww1_save_the_republic
+				}
+			}
+		}
 		prerequisite = {
 			focus = FRA_ww1_dreyfus_exoneration
 		}
@@ -2694,6 +2956,15 @@ focus_tree = {
 				democrat_alliance_percent = seatNumbers
 			}
 			reload_parliament_gui = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -2704,6 +2975,17 @@ focus_tree = {
 		cost = 10
 		x = 16
 		y = 1
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_support_monarchists
@@ -2892,7 +3174,7 @@ focus_tree = {
 				add_ai_strategy = {
 					type = alliance
 					id = ROOT
-					value = 100
+					value = 150
 				}
 				remove_ideas = neutrality_idea
 				country_event = {
@@ -2996,7 +3278,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 	}
@@ -3098,7 +3380,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_withdraw_the_law_of_1905
-		icon = GFX_goal_FRA_catholic_relations
+		icon = GFX_goal_generic_deal_with_catholic
 		relative_position_id = FRA_ww1_force_the_issue
 		prerequisite = {
 			focus = FRA_ww1_force_the_issue
@@ -3317,7 +3599,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_renember_1812
-		icon = GFX_goal_FRA_monarchism4
+		icon = GFX_goal_FRA_action_francaise
 		relative_position_id = FRA_ww1_support_napoleon_V
 		prerequisite = {
 			focus = FRA_ww1_support_napoleon_V
@@ -3456,7 +3738,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 	}
@@ -3856,7 +4138,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_expand_army_budget
-		icon = GFX_FRA_ww1_expand_army_budget_focus
+		icon = GFX_focus_FRA_expand_army_budget
 		relative_position_id = FRA_ww1_revive_national_spirit
 		prerequisite = {
 			focus = FRA_ww1_revive_national_spirit
@@ -4243,7 +4525,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_manipulate_the_mass
-		icon = GFX_FRA_ww1_protector_of_the_weakests_focus
+		icon = GFX_focus_FRA_protector_of_the_weakests
 		relative_position_id = FRA_ww1_authoritarian_coup
 		prerequisite = {
 			focus = FRA_ww1_authoritarian_coup
@@ -4622,8 +4904,66 @@ focus_tree = {
 		cost = 5
 		x = 10
 		y = 7
+		offset = {
+			x = 0
+			y = -7
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
-
+	focus = {
+		id = FRA_ww1_picardie_manoeuvers
+		icon = GFX_goal_FRA_picardie_manoeuvers_training
+		available = {
+			NOT = {
+				has_idea = idea_army_restrictions
+				has_idea = FRA_land_army_restrictions
+				has_idea = FRA_naval_army_restrictions
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = ww1_france.262
+				days = 2
+			}
+			effect_tooltip = {
+				army_experience = 15
+				air_experience = 15
+				add_doctrine_cost_reduction = {
+					name = FRA_ww1_picardie_manoeuvers
+					category = air_doctrine
+					cost_reduction = 0.25
+				}
+				add_doctrine_cost_reduction = {
+					name = FRA_ww1_picardie_manoeuvers
+					category = land_doctrine
+					cost_reduction = 0.25
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				date > 1910.6.6
+				factor = 1000
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = FRA_ww1_wadai_war_logistics
+		}
+		relative_position_id = FRA_ww1_wadai_war_logistics
+		cost = 5
+		x = 1
+		y = 1
+	}
 	focus = {
 		id = FRA_ww1_revision_de_larmee_de_terre
 		icon = GFX_goal_generic_army_doctrines
@@ -4658,7 +4998,7 @@ focus_tree = {
 		}
 		relative_position_id = FRA_ww1_wadai_war_logistics
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
 	}
 	focus = {
@@ -4667,6 +5007,9 @@ focus_tree = {
 		relative_position_id = FRA_ww1_revision_de_larmee_de_terre
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre
+		}
+		prerequisite = {
+			focus = FRA_ww1_picardie_manoeuvers
 		}
 		available = {
 			NOT = {
@@ -4715,6 +5058,9 @@ focus_tree = {
 		relative_position_id = FRA_ww1_revision_de_larmee_de_terre
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre
+		}
+		prerequisite = {
+			focus = FRA_ww1_picardie_manoeuvers
 		}
 		available = {
 			NOT = {
@@ -4812,6 +5158,9 @@ focus_tree = {
 		relative_position_id = FRA_ww1_revision_de_larmee_de_terre
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre
+		}
+		prerequisite = {
+			focus = FRA_ww1_picardie_manoeuvers
 		}
 		available = {
 			date > 1914.1.1
@@ -4911,6 +5260,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre
 		}
+		prerequisite = {
+			focus = FRA_ww1_picardie_manoeuvers
+		}
 		available = {
 			NOT = {
 				has_idea = idea_army_restrictions
@@ -4984,6 +5336,9 @@ focus_tree = {
 		relative_position_id = FRA_ww1_revision_de_larmee_de_terre
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre
+		}
+		prerequisite = {
+			focus = FRA_ww1_picardie_manoeuvers
 		}
 		available = {
 			has_war_with_major = yes
@@ -5375,7 +5730,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_break_the_german_lines
-		icon = GFX_FRA_ww1_break_the_german_lines_focus
+		icon = GFX_focus_FRA_break_the_german_lines
 		relative_position_id = FRA_ww1_mechanized_effort
 		prerequisite = {
 			focus = FRA_ww1_mechanized_effort
@@ -5432,7 +5787,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_char2c
-		icon = GFX_FRA_ww1_char2c_focus
+		icon = GFX_focus_FRA_char2c
 		relative_position_id = FRA_ww1_break_the_german_lines
 		prerequisite = {
 			focus = FRA_ww1_break_the_german_lines
@@ -5495,6 +5850,9 @@ focus_tree = {
 		relative_position_id = FRA_ww1_revision_de_larmee_de_terre
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre
+		}
+		prerequisite = {
+			focus = FRA_ww1_picardie_manoeuvers
 		}
 		available = {
 			has_idea = FRA_memories_of_1870
@@ -5782,10 +6140,24 @@ focus_tree = {
 		cost = 5
 		x = 22
 		y = 7
+		offset = {
+			x = 0
+			y = -7
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = FRA_ww1_memories_of_the_commune
+					has_completed_focus = FRA_ww1_the_social_democrat_compromise
+				}
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_old_school
-		icon = GFX_hoi4tgw_zeppelin
+		icon = GFX_focus_zeppelin
 		relative_position_id = FRA_ww1_french_air_force
 		prerequisite = {
 			focus = FRA_ww1_french_air_force
@@ -5853,6 +6225,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_ww1_old_school
 		}
+		bypass = {
+			has_tech = airship_bomber3
+		}
 		available = {
 			NOT = {
 				has_idea = idea_army_restrictions
@@ -5862,8 +6237,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = FRA_ww1_french_air_force
-				category = cat_strategic_bomber
+				name = FRA_ww1_zeppelin_focus
+				technology = airship_bomber
+				technology = airship_bomber2
+				technology = airship_bomber3
 				uses = 2
 				bonus = 1
 			}
@@ -6065,6 +6442,20 @@ focus_tree = {
 		cost = 5
 		x = 22
 		y = 11
+		offset = {
+			x = 0
+			y = -7
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = FRA_ww1_memories_of_the_commune
+					has_completed_focus = FRA_ww1_the_social_democrat_compromise
+				}
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_doctrine_effort
@@ -6496,6 +6887,9 @@ focus_tree = {
 				uses = 2
 				bonus = 1
 			}
+			set_country_flag = has_invested_in_sea
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = SEA
 		}
 		ai_will_do = {
 			factor = 1
@@ -6587,6 +6981,17 @@ focus_tree = {
 		cost = 10
 		x = 10
 		y = 13
+		offset = {
+			x = 0
+			y = -7
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_ww1_form_the_proudhon_circle
+			}
+		}
 	}
 	focus = {
 		id = FRA_ww1_metropolitan_investments
@@ -7241,9 +7646,20 @@ focus_tree = {
 				type = train_equipment_1
 				amount = 50
 			}
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = sncf
 			set_country_flag = has_invested_in_sncf
+			if = {
+				limit = {
+					has_idea = administration_des_chemins_de_fer
+				}
+				swap_ideas = {
+					remove_idea = administration_des_chemins_de_fer
+					add_idea = SNCF
+				}
+				else = {
+					custom_effect_tooltip = available_industrial_concern
+					show_ideas_tooltip = sncf
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -7590,6 +8006,47 @@ focus_tree = {
 		x = -2
 		y = 1
 	}
+
+	focus = {
+		id = FRA_ww1_allied_mission_in_poland
+		icon = GFX_focus_POL_complete_april_constitution
+		relative_position_id = FRA_ww1_continental_affairs
+		available = {
+			POL = {
+				has_war = yes
+				NOT = {
+					has_war_with = FRA
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_ww1_continental_affairs
+		}
+		completion_reward = {
+			POL = {
+				country_event = {
+					id = ww1_france.253
+					days = 2
+				}
+			}
+			POL = {
+				custom_effect_tooltip = needs_approval
+				effect_tooltip = {
+					add_ideas = POL_french_advisors
+					FRA = {
+						army_experience = 10
+						add_political_power = 25
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 10
+		x = 5
+		y = 1
+	}
 	
 	focus = {
 		id = FRA_ww1_rhineland_fate
@@ -7791,14 +8248,10 @@ focus_tree = {
 				add_extra_state_shared_building_slots = -2
 			}
 			custom_effect_tooltip = FRA_remove_factories_sup_0
-			swap_ideas = {
-				add_idea = idea_farm_crisis_2
-				remove_idea = idea_farm_crisis
-				add_days = 720
-			}
+			remove_ideas = idea_farm_crisis
 		}
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		cost = 10
 		x = -7
@@ -7924,7 +8377,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_ww1_char_2c_propagandist_production
-		icon = GFX_FRA_ww1_char2c_focus
+		icon = GFX_focus_FRA_char2c
 		relative_position_id = FRA_ww1_redirect_industry_to_agriculture
 		prerequisite = {
 			focus = FRA_ww1_redirect_industry_to_agriculture
@@ -8075,6 +8528,54 @@ focus_tree = {
 		y = 1
 	}
 
+	focus = {
+		id = FRA_ww1_brigades_blindees
+		icon = GFX_focus_generic_tankette
+		relative_position_id = FRA_ww1_b1_project
+		prerequisite = {
+			focus = FRA_ww1_b1_project
+		}
+		completion_reward = {
+			division_template = {
+				name = "Brigade blindée"
+				regiments = {
+					light_armor = {
+						x = 0
+						y = 0
+					}
+					light_armor = {
+						x = 0
+						y = 1
+					}
+					light_armor = {
+						x = 1
+						y = 0
+					}
+					light_armor = {
+						x = 1
+						y = 1
+					}
+				}
+			}
+			16 = {
+				custom_effect_tooltip = create_a_tank_unit_in_from
+				hidden_effect = {
+					create_unit = {
+						division = "name = \"5ème brigade de chars légers\" division_template = \"Brigade blindée\" start_equipment_factor = 0.6"
+						owner = ROOT
+					}
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 10
+		x = 0
+		y = 1
+	}
+
 	###############################################################
 	# DEFEATED FRANCE
 	###############################################################
@@ -8186,7 +8687,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_ww1_privatise_banks
-		icon = GFX_FRA_ww1_privatise_banks_focus
+		icon = GFX_focus_generic_banking
 		relative_position_id = FRA_ww1_deal_with_the_germans
 		completion_reward = {
 			add_political_power = -75
@@ -8205,7 +8706,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_ww1_The_wheat_of_the_victors
-		icon = GFX_FRA_ww1_The_wheat_of_the_victors_focus
+		icon = GFX_focus_generic_wheat
 		relative_position_id = FRA_ww1_deal_with_the_germans
 		available = {
 			has_war = no

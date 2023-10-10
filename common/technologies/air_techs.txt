@@ -66,10 +66,10 @@ technologies = {
 			air_equipment
 		}		
 		ai_will_do = {
-			factor = 1
+			base = 0
 			modifier = {
 				tag = GER
-				factor = 200
+				add = 200
 			}
 		}
 	}
@@ -136,30 +136,10 @@ technologies = {
 			air_equipment
 		}		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 50
-					type = fighter
-				}
-				factor = 2
-			}
-			modifier = {
-				factor = 3
-				has_deployed_air_force_size = {
-					size > 50
-					type = fighter
-				}
-				is_major = yes
-			}
+			base = 0
 			modifier = {
 				tag = GER
-				has_war = yes
-				factor = 15
-			}
-			modifier = {
-				date < 1916.1.1
-				factor = 0
+				add = 200
 			}
 		}
 	}
@@ -217,18 +197,10 @@ technologies = {
 			air_equipment
 		}		
 		ai_will_do = {
-			factor = 1
-			
+			base = 0
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 50
-					type = fighter
-				}
-				factor = 2
+				tag = GER
+				add = 200
 			}
 		}
 	}
@@ -276,59 +248,6 @@ technologies = {
 			modifier = {
 				date > 1913.1.1
 				factor = 30
-			}
-		}
-	}
-	synchronizer = {
-		path = {
-			leads_to_tech = fighter1
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = seaplane1
-			research_cost_coeff = 1
-		}
-		on_research_complete = {		
-			custom_effect_tooltip = allow_fighter_and_seaplane_techs
-		}
-		research_cost = 0.75
-		start_year = 1914
-		folder = {
-			name = air_techs_folder
-			position = { x = 4 y = @1914 }
-		}
-
-
-		categories = {
-			air_equipment
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				factor = 4
-				original_tag = GER
-			}
-			modifier = {
-				is_major = yes
-				factor = 10
-			}
-			modifier = {
-				date > 1915.1.1
-				factor = 15
-			}
-			modifier = {
-				date > 1916.1.1
-				factor = 30
-			}
-			modifier = {
-				has_war = yes
-				is_major = yes
-				factor = 25
 			}
 		}
 	}
@@ -426,6 +345,61 @@ technologies = {
 			}
 		}
 	}
+	synchronizer = {
+		path = {
+			leads_to_tech = fighter1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = seaplane1
+			research_cost_coeff = 1
+		}
+		on_research_complete = {		
+			custom_effect_tooltip = allow_fighter_and_seaplane_techs
+		}
+		research_cost = 0.75
+		start_year = 1914
+		folder = {
+			name = air_techs_folder
+			position = { x = 4 y = @1914 }
+		}
+
+
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_guns
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 1.5
+			}
+			modifier = {
+				factor = 4
+				original_tag = GER
+			}
+			modifier = {
+				is_major = yes
+				factor = 10
+			}
+			modifier = {
+				date > 1915.1.1
+				factor = 15
+			}
+			modifier = {
+				date > 1916.1.1
+				factor = 30
+			}
+			modifier = {
+				has_war = yes
+				is_major = yes
+				factor = 25
+			}
+		}
+	}
 	
 	aerial_bombs = {
 		path = {
@@ -449,6 +423,8 @@ technologies = {
 
 		categories = {
 			air_equipment
+			plane_modules_tech
+			cat_air_bombs
 		}
 
 		ai_will_do = {
@@ -532,7 +508,7 @@ technologies = {
 			fighter_equipment_2
 		}
 		path = {
-			leads_to_tech = cas1
+			leads_to_tech = CAS1
 			research_cost_coeff = 1
 		}
 		path = {
@@ -889,12 +865,8 @@ technologies = {
 				factor = 0
 			}
 			modifier = {
-				tag = ITA
-				factor = 200
-			}
-			modifier = {
-				tag = RUS
-				factor = 200
+				tag = AUH
+				factor = 0
 			}
 		}
 	}
@@ -987,6 +959,22 @@ technologies = {
 				factor = 5
 				tag = USA
 			}
+			modifier = {
+				factor = 5
+				tag = GER
+			}
+			modifier = {
+				tag = AUH
+				factor = 200
+			}
+			modifier = {
+				tag = ITA
+				factor = 200
+			}
+			modifier = {
+				tag = RUS
+				factor = 200
+			}
 		}
 	}
 		
@@ -1019,6 +1007,22 @@ technologies = {
 				factor = 5
 				tag = USA
 			}
+			modifier = {
+				factor = 5
+				tag = GER
+			}
+			modifier = {
+				tag = ITA
+				factor = 200
+			}
+			modifier = {
+				tag = RUS
+				factor = 200
+			}
+			modifier = {
+				factor = 0
+				date < 1916.1.1
+			}
 		}
 	}
 	
@@ -1046,6 +1050,22 @@ technologies = {
 			modifier = {
 				factor = 5
 				tag = USA
+			}
+			modifier = {
+				factor = 5
+				tag = GER
+			}
+			modifier = {
+				tag = ITA
+				factor = 200
+			}
+			modifier = {
+				tag = RUS
+				factor = 200
+			}
+			modifier = {
+				factor = 0
+				date < 1918.1.1
 			}
 		}
 	}

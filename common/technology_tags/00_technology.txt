@@ -58,6 +58,7 @@ technology_categories = {
 	marine_tech
 	construction_tech
 	excavation_tech
+	fortification_tech
 	submarine_doctrine
 	air_equipment
 	cat_mobile_warfare
@@ -117,16 +118,11 @@ technology_folders = {
 	armour_folder = {
 		ledger = army
 		available = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
+			always = no
 		}
 	}
 	nsb_armour_folder = {
 		ledger = army
-		available = {
-			has_dlc = "No Step Back"
-		}
 	}
 	artillery_folder = {
 		ledger = army
