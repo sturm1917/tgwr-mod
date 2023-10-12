@@ -48,9 +48,9 @@ technologies = {
 		}
 		
 		categories = {
-			armor
 			motorized_equipment
-			cat_light_armor
+			armor
+			cat_armored_cars
 		}
 	}
 
@@ -81,9 +81,9 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
 			motorized_equipment
-			cat_light_armor
+			armor
+			cat_armored_cars
 		}
 	}
 
@@ -109,9 +109,9 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
 			motorized_equipment
-			cat_light_armor
+			armor
+			cat_armored_cars
 		}
 	}
 
@@ -133,9 +133,9 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
 			motorized_equipment
-			cat_light_armor
+			armor
+			cat_armored_cars
 		}
 	}
 	
@@ -148,7 +148,7 @@ technologies = {
 		}
 		
 		enable_subunits = {
-			light_tank
+			light_armor
 			light_tank_recon
 		}
 

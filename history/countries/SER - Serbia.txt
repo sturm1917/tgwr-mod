@@ -38,6 +38,7 @@ recruit_character = SER_kosta_stojanovic
 recruit_character = SER_velizar_jankovic
 recruit_character = SER_vojislav_veljkovic
 recruit_character = SER_ljubomir_jovanovic_patak
+recruit_character = SER_bozidar_terzic
 ##black hand guys
 recruit_character = SER_dragutin_dimitrijevic_apis ##big boss
 recruit_character = SER_vojislav_tankosic_silja ## second big boss
@@ -252,6 +253,7 @@ add_opinion_modifier = {
 		SER_idea_new_trade_law
 		SER_idea_old_radical_governement
 		SER_idea_black_hand
+		SER_idea_interim_government
 	}
 	remove_ideas = {
 		SER_idea_pig_war

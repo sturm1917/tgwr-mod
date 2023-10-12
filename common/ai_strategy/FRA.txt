@@ -50,6 +50,13 @@ FRA_unit_production = {
 		id = cavalry
 		value = 5
 	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armored_car
+		value = 3
+	}
+
 	ai_strategy = {
 		type = role_ratio
 		id = armor
@@ -186,7 +193,7 @@ FRA_stockpile_more_early_game_and_war = {
 
 	enable = {
 		OR = { 
-			date < 1912.1.1
+			date < 1911.1.1
 			has_equipment = {
 				infantry_equipment < 1000
 			}
@@ -248,6 +255,7 @@ FRA_area_priority_if_ww1 = {
 		original_tag = FRA
 		has_war_with = GER
 	}
+	abort_when_not_enabled = yes
 
 
 	ai_strategy = {
@@ -313,6 +321,7 @@ FRA_area_priority = {
 	enable = {
 		original_tag = FRA
 	}
+	abort = { always = no }
 
 	ai_strategy = {
 		type = area_priority
@@ -970,7 +979,7 @@ FRA_ignore_africa = {
 		NOT = {
 			any_other_country = {
 				OR = {
-					tag = CHAD
+					tag = CHA
 					is_puppet = no 
 				}
 				has_war_with = ROOT
@@ -1241,7 +1250,7 @@ FRA_defense_of_salonika_for_macedonian_invasion = {
 	allowed = {
 		OR = {
 			tag = FRA
-			is_in_faction_with = FRA
+			tag = ENG
 		}
 	}
 	enable = {
@@ -1250,37 +1259,26 @@ FRA_defense_of_salonika_for_macedonian_invasion = {
 			is_in_faction_with = FRA
 		}
 		is_major = yes
-		capital_scope = {
-			is_on_continent = europe
-		}
-		NOT = {		##backoff fucking punks !
-			tag = RUS
-			tag = BEL
-			tag = JAP
-		}
 		345 = {
 			is_controlled_by_ROOT_or_ally = yes
 		}
 	}
 	abort_when_not_enabled = yes
+
 	ai_strategy = {
-		type = put_unit_buffers
-		
-		order_id = 100
-		
-		states = {
-			345
-			731
-		}
-		ratio = 0.1
-		area = europe
-		subtract_fronts_from_need = no
-		subtract_invasions_from_need = no
+		type = front_unit_request
+
+		state = 345
+		state = 731
+
+		value = 50
 	}
 	ai_strategy = {
 		type = front_unit_request
-		tag = BUL
-		value = 10
+		country_trigger = {
+			tag = THE
+		}
+		value = 25
 		area = europe
 	}
 }

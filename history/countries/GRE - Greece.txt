@@ -1,5 +1,5 @@
 ﻿capital = 898
-oob = "GRE_1910"
+
 
 set_research_slots = 3
 set_stability = 0.6
@@ -13,7 +13,6 @@ recruit_character = GRE_spiridon_lambros
 recruit_character = GRE_nikolaos_zorbas
 recruit_character = GRE_platon_drakoulis
 recruit_character = GRE_avraam_benaroya
-recruit_character = GRE_dimitrios_rallis
 recruit_character = GRE_andreas_michalakopoulos
 recruit_character = GRE_constantine_i
 recruit_character = GRE_panagiotis_danglis
@@ -33,7 +32,6 @@ recruit_character = GRE_paulos_gyparis
 recruit_character = GRE_ionas_dragoumis
 recruit_character = GRE_nikolaos_plastiras
 recruit_character = GRE_theodoros_pangalos
-recruit_character = GRE_emmanouil_manousogiannakis
 recruit_character = GRE_pavlos_kountouriotis
 recruit_character = GRE_dimitrios_kamperos
 recruit_character = GRE_michail_moutousis
@@ -50,23 +48,16 @@ recruit_character = GRE_leonidas_paraskevopoulos
 recruit_character = GRE_emmanouil_zymvrakakis
 recruit_character = GRE_georgios_hatzianestis
 recruit_character = GRE_georgios_kondylis
-recruit_character = GRE_konstantinos_mazarakis
 recruit_character = GRE_anastasios_papoulas
 recruit_character = GRE_prince_andreas
-recruit_character = GRE_aristotelis_vlahopoulos
-recruit_character = GRE_nikolaos_vlahopoulos
+recruit_character = GRE_dimitrios_rallis
 recruit_character = GRE_victor_dousmanis
 recruit_character = GRE_konstantinos_kallaris
 recruit_character = GRE_mark_kerr
 recruit_character = GRE_germanos_karavaggelis
 recruit_character = GRE_konstantinos_moschopoulos
-recruit_character = GRE_stefanos_yennadis
 recruit_character = GRE_anastasios_charalambis
-recruit_character = GRE_nikolaos_christodoulou
 recruit_character = GRE_nikolaos_trikoupis
-recruit_character = GRE_napoleon_sotilis
-recruit_character = GRE_ksenofon_stratigos
-recruit_character = GRE_periklis_argiropoulos
 recruit_character = GRE_sofoklis_dousmanis
 recruit_character = GRE_alexandros_hatzikyriakos
 recruit_character = GRE_georgios_kakoulidis
@@ -80,8 +71,7 @@ recruit_character = GRE_epameinondas_zymvrakakis
 
 
 1910.1.1 = {
-     
-	set_country_flag = dont_trigger_political_event
+	oob = "GRE_1910"
 	set_rule = {
 		can_join_factions = no
 	}
@@ -103,13 +93,13 @@ recruit_character = GRE_epameinondas_zymvrakakis
 		value = 150
 	}
 	add_dynamic_modifier = {
-		modifier = GRE_IFC
+		modifier = GRE_IFC_dynamic_modifier
 	}
 	add_dynamic_modifier = {
-		modifier = GRE_recent_military_leauge_coup_var
+		modifier = GRE_political_turmoil_dynamic_modifier
 	}
 	add_dynamic_modifier = {
-		modifier = GRE_agrarian_society_var
+		modifier = GRE_agrarian_society_dynamic_modifier
 	}
 	set_variable = {
 		var = GRE_efficiency_cap_var
@@ -128,15 +118,15 @@ recruit_character = GRE_epameinondas_zymvrakakis
 		value = -0.15
 	}
 	set_variable = {
-		var = military_construction_speed_var
+		var = GRE_military_construction_speed_var
 		value = -0.75
 	}
-	add_ideas = GRE_debt_to_the_ifc
 	
 	set_technology = {
 		#infantry
 		infantry_weapons = 1
 		infantry_weapons1 = 1
+		tech_mountaineers = 1
 		
 		#support
 		tech_support = 1
@@ -154,11 +144,6 @@ recruit_character = GRE_epameinondas_zymvrakakis
 		electrical_engineering = 1
 		mechanical_engineering = 1
 		basic_train = 1
-        
-		aircraft_engine = 1
-                  
-		#air
-		scout_plane = 1 
 	}
 	
 	add_equipment_to_stockpile = {
@@ -166,10 +151,15 @@ recruit_character = GRE_epameinondas_zymvrakakis
 		amount = 100
 		producer = GRE
     }
+	add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 100
+		producer = GRE
+    }
 	
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_0
-		amount = 6000
+		amount = 3000
 		producer = GRE
     }
 
@@ -188,12 +178,10 @@ recruit_character = GRE_epameinondas_zymvrakakis
 
 	add_ideas = {
 		limited_conscription
-		gre_agrarian_society
 		gre_the_megali_idea
 		gre_shadow_of_97
 		GRE_idea_george_i
 		gre_victors_of_the_macedonian_struggle
-		gre_recent_military_league_coup
 		GRE_idea_george_i
 	}
 	
@@ -208,6 +196,7 @@ recruit_character = GRE_epameinondas_zymvrakakis
 		}
 		else = {
 			puppet = CRE
+			CRE = { add_ideas = unilateral_union }
 		}
 	}
 	
@@ -397,15 +386,18 @@ recruit_character = GRE_epameinondas_zymvrakakis
 			obsolete = yes
 		}
 	}
-
-	country_event = { id =  ww1_greece.25 days = 100 }
-	country_event = { id =  ww1_greece.26 days = 156 }
-	#country_event = { id =  ww1_greece.32 days = 693 }
+	if = {
+		limit = {
+			has_start_date < 1914.1.1
+		}
+		country_event = { id =  ww1_greece.25 days = 100 }
+		country_event = { id =  ww1_greece.26 days = 156 }
+	}
+    country_event = { id = ww1_developer_note.5 days = 1}
 }
 
 1914.1.1 = {
-
-	set_country_flag = dont_trigger_political_event
+	oob = "GRE_1914"
 	set_rule = {
 		can_join_factions = no
 	}
@@ -420,35 +412,82 @@ recruit_character = GRE_epameinondas_zymvrakakis
 	add_political_power = 1198
 	add_command_power = 100
 	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = ww1_trenchwarfare
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = ww1_newnavalcanons_1
-	complete_national_focus = industrial_effort
-	complete_national_focus = infrastructure_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	complete_national_focus = political_effort
+	
+	#industrial tree
+	unlock_national_focus = GRE_state_of_the_currency
+	unlock_national_focus = GRE_support_monopolies
+	unlock_national_focus = GRE_finalize_railway_network
+	unlock_national_focus = GRE_negociation_to_ifc
+	complete_national_focus = GRE_manage_debts
+
+	#venizelos tree
+	complete_national_focus = GRE_dragoumis_resignation
+	complete_national_focus = GRE_appoint_venizelos
+	complete_national_focus = GRE_promote_national_unity
+	complete_national_focus = GRE_dissolve_the_parliament
+	complete_national_focus = GRE_appeal_to_the_people
+	complete_national_focus = GRE_boycott_the_old_parties
+	complete_national_focus = GRE_alienate_the_opposition
+	complete_national_focus = GRE_promise_modest_reforms
+	complete_national_focus = GRE_convene_a_revisionary_assembly
+	complete_national_focus = GRE_strengthen_the_party
+	unlock_national_focus = GRE_declare_new_elections
+	complete_national_focus = GRE_1911_constitution
+	complete_national_focus = GRE_reform_the_status_of_property
+	complete_national_focus = GRE_labor_legislation
+	complete_national_focus = GRE_separation_of_powers
+
+	#political tree
+	complete_national_focus = GRE_treaty_of_athens
+	complete_national_focus = GRE_consolidate_new_territories
+	unlock_national_focus = GRE_unite_with_crete
+	unlock_national_focus = GRE_florence_protocol
+	unlock_national_focus = GRE_protocol_of_corfu
+	unlock_national_focus = GRE_construct_new_forts
+	
+	#military tree
+	complete_national_focus = GRE_reorganize_the_armed_forces
+	complete_national_focus = GRE_continue_army_reforms
+	unlock_national_focus = GRE_invite_french_attache
+	unlock_national_focus = GRE_thessaly_maneuvers
+	complete_national_focus = GRE_reorganize_the_staff_service
+	complete_national_focus = GRE_create_a_recruitment_plan
+	complete_national_focus = GRE_organize_logistic_support_services
+	complete_national_focus = GRE_create_the_reserve_officer_corps
+	complete_national_focus = GRE_finance_epk
+	complete_national_focus = GRE_prepare_for_the_balkan_confict
+	#naval tree
+	complete_national_focus = GRE_naval_expansion
+	unlock_national_focus = GRE_invite_british_naval_mission
+	complete_national_focus = GRE_aegean_exercises
+	complete_national_focus = GRE_reorganize_the_navy_ministry
+	complete_national_focus = GRE_adopt_british_naval_organization
+	complete_national_focus = GRE_reform_naval_training
+	complete_national_focus = GRE_buy_ships
+	complete_national_focus = GRE_expand_ionian_ports
+	#air tree
+	complete_national_focus = GRE_form_the_hellenic_aviation_service
+	complete_national_focus = GRE_purchase_scout_planes
 
 	annex_country = {
 		target = CRE
 		transfer_troops = yes
 	}
+	CRE = { drop_cosmetic_tag = yes }
 
 	retire_character = GRE_george_i
+	retire_character = GRE_konstantinos_sapountzakis
 	GRE_constantine_i = {
 		set_character_name = GRE_constantine_i
 		promote_character = semi_constitutional_monarchy
 	}
-	remove_ideas = GRE_idea_george_i
-	add_ideas = GRE_idea_constantine
 	promote_character = GRE_eleftherios_venizelos
 	add_war_support = 0.1
 	set_country_flag = join_balkan_league
 	set_country_flag = join_antibulgarian_league
+	clr_country_flag = GRE_work_legislation
+	clr_country_flag = GRE_bureaucracy_legislation
+	clr_country_flag = GRE_land_reforms
 	ROOT = {
 		add_opinion_modifier = {
 			target = SER
@@ -469,5 +508,58 @@ recruit_character = GRE_epameinondas_zymvrakakis
 		target = TUR
 		modifier = HOI4TGW_Opinion_hostile_relations_post_balkan_war
 	}
+	set_global_flag = gre_federacion
+	promote_character = GRE_avraam_benaroya
+	set_party_name = { 
+		ideology = communism
+		long_name = GRE_federacion_party_long
+		name = GRE_federacion_party
+	}
+	set_country_flag = gre_federacion_kicked
+	country_event = { id = ww1_developer_note.5 days = 1}
+	set_global_flag = greece_george_i_assassinated
+	set_country_flag = GRE_1910_elections
+	set_country_flag = epirus_free
+	set_country_flag = alexandros_schinas_died
+	set_country_flag = greco_serbian_alliance
+	set_country_flag = Sapountzakis_retires
+	set_country_flag = certan_ministers_in
+	remove_ideas = GRE_idea_george_i
+	add_ideas = {
+		GRE_idea_constantine
+		GRE_agricultural_education_idea
+	}	
+	add_timed_idea = {
+		idea = gre_french_military_mission
+		days = 50
+	}
+	add_timed_idea = {
+		idea = gre_british_naval_mission
+		days = 300
+	}
+	add_to_variable = {
+		var = GRE_efficiency_cap_var
+		value = 0.09
+	}
+	add_to_variable = {
+		var = GRE_efficiency_growth_var
+		value = 0.09
+	}
+	add_to_variable = {
+		var = GRE_construction_speed_var
+		value = 0.06
+	}
+	add_to_variable = {
+		var = GRE_factory_output_var
+		value = 0.11
+	}
+	add_to_variable = {
+		var = GRE_stability_var
+		value = 0.04
+	}
+	add_to_variable = {
+		var = GRE_pp_var
+		value = 0.06
+	}
+	GRE_update_political_turmoil_dynamic_modifier = yes
 }
-
