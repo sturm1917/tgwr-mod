@@ -236,31 +236,12 @@
 		}
 	}
 	focus = {
-		id = BUL_civ_industry_dobrudja
-		icon = GFX_focus_generic_industry_1
-		cost = 4
-		relative_position_id = BUL_prioritize_the_farmers
-		x = -4
-		y = 1
-		prerequisite = { focus = BUL_prioritize_the_farmers }
-		completion_reward = { 
-			77 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
 		id = BUL_capital_civ_industry
 		icon = GFX_focus_generic_industry_1
 		cost = 5
 		relative_position_id = BUL_varnanian_civ_industry
 		x = 1
 		y = 2
-		prerequisite = { focus = BUL_civ_industry_dobrudja }
 		prerequisite = { focus = BUL_civ_industry_in_south }
 		prerequisite = { focus = BUL_varnanian_civ_industry }
 		completion_reward = { 
@@ -297,29 +278,11 @@
 		}
 	}
 	focus = {
-		id = BUL_southern_militarization
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 4
-		relative_position_id = BUL_industrialize_the_country
-		x = 0
-		y = 1
-		prerequisite = { focus = BUL_industrialize_the_country }
-		completion_reward = { 
-			212 = {
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
 		id = BUL_varna_arms_industry
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 4
 		relative_position_id = BUL_industrialize_the_country
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = { focus = BUL_industrialize_the_country }
 		completion_reward = { 
@@ -337,7 +300,7 @@
 		icon = GFX_focus_agrarian_profit
 		cost = 4
 		relative_position_id = BUL_industrialize_the_country
-		x = 4
+		x = 2
 		y = 1
 		prerequisite = { focus = BUL_industrialize_the_country }
 		completion_reward = { 
@@ -349,9 +312,8 @@
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		relative_position_id = BUL_varna_arms_industry
-		x = -1
+		x = 1
 		y = 2
-		prerequisite = { focus = BUL_southern_militarization }
 		prerequisite = { focus = BUL_varna_arms_industry }
 		prerequisite = { focus = BUL_arm_dobrudja_farmers }
 		completion_reward = { 
@@ -481,25 +443,13 @@
 	}
 
 	focus = {
-		id = BUL_rumelia_agrarian_expansion
-		icon = GFX_goal_generic_construct_civ_factory
+		id = BUL_rumelia_military_expansion
+		icon = GFX_goal_generic_construct_military
 		cost = 4
 		relative_position_id = BUL_biggest_railway_on_balkans
 		x = -1
 		y = 1
 		prerequisite = { focus = BUL_biggest_railway_on_balkans }
-		completion_reward = { 
-
-		}
-	}
-	focus = {
-		id = BUL_rumelia_military_expansion
-		icon = GFX_goal_generic_construct_military
-		cost = 4
-		relative_position_id = BUL_rumelia_agrarian_expansion
-		x = 0
-		y = 1
-		prerequisite = { focus = BUL_rumelia_agrarian_expansion }
 		completion_reward = { 
 
 		}
@@ -517,18 +467,6 @@
 
 		}
 	}
-	focus = {
-		id = BUL_rhodopes_military_expansion
-		icon = GFX_goal_generic_construct_military
-		cost = 4
-		relative_position_id = BUL_rhodopes_agrarian_expansion
-		x = 0
-		y = 1
-		prerequisite = { focus = BUL_rhodopes_agrarian_expansion }
-		completion_reward = { 
-
-		}
-	}
 
 
 	focus = {
@@ -537,8 +475,8 @@
 		cost = 4
 		relative_position_id = BUL_biggest_railway_on_balkans
 		x = 0
-		y = 3
-		prerequisite = { focus = BUL_rhodopes_military_expansion }
+		y = 2
+		prerequisite = { focus = BUL_rhodopes_agrarian_expansion }
 		prerequisite = { focus = BUL_rumelia_military_expansion }
 		completion_reward = { 
 
@@ -553,7 +491,7 @@
 		x = -3
 		y = 0
 		prerequisite = { 
-			focus = BUL_rhodopes_military_expansion
+			focus = BUL_rhodopes_agrarian_expansion
 			focus = BUL_rumelia_military_expansion
 		 }
 		prerequisite = { focus = BUL_balance_industry_w_bulgaria }
@@ -570,7 +508,7 @@
 		x = 3
 		y = 0
 		prerequisite = { 
-			focus = BUL_rhodopes_military_expansion
+			focus = BUL_rhodopes_agrarian_expansion
 			focus = BUL_rumelia_military_expansion
 		 }
 		prerequisite = { focus = BUL_vidin_oil_extraction }
@@ -594,18 +532,6 @@
 
 		}
 	}
-	focus = {
-		id = BUL_civ_industry_in_heart
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 4
-		relative_position_id = BUL_some_agrarian_industry
-		x = 0
-		y = 1
-		prerequisite = { focus = BUL_some_agrarian_industry }
-		completion_reward = { 
-
-		}
-	}
 
 
 	focus = {
@@ -617,18 +543,6 @@
 		y = 1
 		prerequisite = { focus = BUL_southern_urbanization }
 		prerequisite = { focus = BUL_capital_civ_industry }
-		completion_reward = { 
-
-		}
-	}
-	focus = {
-		id = BUL_mobilize_farmers
-		icon = GFX_focus_generic_military_academy
-		cost = 4
-		relative_position_id = BUL_industrialize_agrarian_economy
-		x = 0
-		y = 1
-		prerequisite = { focus = BUL_industrialize_agrarian_economy }
 		completion_reward = { 
 
 		}
