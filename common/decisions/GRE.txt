@@ -347,18 +347,30 @@ GRE_battle_of_epirus = {
 			OR = {
 				tag = GRE
 				tag = ITA
-				tag = BUL
 				tag = AUH
 			}
 		}
+		visible = {
+			OR = {
+				tag = GRE
+				has_country_flag = AUH_ITA_BUL_reaction_to_GRE_occupation_of_nothern_epirus
+				has_country_flag = ROOT_against_GRE_occupation_of_northern_epirus
+			}	
+		}
 		activation = {
 			AUH = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_country_flag = great_war_loser
+				}
 				has_country_flag = AUH_ITA_BUL_reaction_to_GRE_occupation_of_nothern_epirus
 			}
 			NOT = {
-				GRE = {
-					has_country_flag = epirus_has_been_freed
-				}
+				has_global_flag = epirus_has_been_freed
+			}
+			803 = {
+				is_owned_and_controlled_by = GRE
 			}
 		}
 		selectable_mission = yes
@@ -369,6 +381,10 @@ GRE_battle_of_epirus = {
 					has_country_flag = ROOT_against_GRE_occupation_of_northern_epirus
 					is_subject = no
 					has_war = no
+					is_subject = no
+					NOT = {
+						has_country_flag = great_war_loser
+					}
 				}
 				declare_war_on = {
 					target = GRE
@@ -378,9 +394,6 @@ GRE_battle_of_epirus = {
 		}
 		complete_effect = {
 			set_global_flag = epirus_has_been_freed
-			GRE = {
-				set_country_flag = epirus_has_been_freed
-			}
 			hidden_effect = {
 				EPR = {
 					transfer_state = 803
@@ -403,10 +416,17 @@ GRE_battle_of_epirus = {
 			}
 		}
 		available = {
-			has_completed_focus = GRE_florence_protocol
-			803 = {
-				is_owned_and_controlled_by = GRE
+			if = {
+				limit = {
+					tag = GRE
+				}
+				has_completed_focus = GRE_florence_protocol
+				owns_state = 803
+				else = {
+					always = no
+				}	
 			}
+			
 		}
 		ai_will_do = {
 			factor = 15
@@ -3542,7 +3562,7 @@ GRE_territorial_allegeance = {
 		icon = GFX_decision_generic_political_discourse
 		allowed = { original_tag = GRE }
 		visible = {
-			has_country_flag = GRE_fight_epistratoi
+			has_completed_focus = GRE_crackdown_on_the_epistratoi
 			OR = {
 				has_idea = gre_epistratoi
 				has_idea = gre_epistratoi2
@@ -3984,7 +4004,7 @@ GRE_territorial_allegeance = {
 					transfer_state = 345
 					set_capital = {
 						state = 345
-					}
+					}					
 					add_political_power = 300
 					set_country_flag = GRE_national_defense_flag
 					set_cosmetic_tag = GRE_national_defense
@@ -4077,6 +4097,17 @@ GRE_territorial_allegeance = {
 						}
 						add_core_of = PREV
 						set_state_owner_to = PREV
+						if = {
+							limit = {
+								is_core_of = TUR
+								OR = {
+									state = 731
+									state = 345
+									state = 184
+								}
+							}
+							remove_core_of = TUR
+						}
 					}
 					every_owned_state = {
 						limit = {
@@ -4738,18 +4769,20 @@ GRE_minorities_management = {
         days_remove = 56
         cost = 25
 		state_target = yes
-		target_array = owns_state
+		target_array = owned_states
         target_trigger = {
             FROM = {
 				is_owned_by = ROOT
-                NOT = {
-					is_core_of = ROOT 
-					has_dynamic_modifier = { modifier = GRE_reinforced_local_administration scope = GRE }
+				NOT = {
+					is_core_of = ROOT
+				}			
+                NOT = {			
+					has_dynamic_modifier = { modifier = GRE_reinforced_local_administration }
 				}
             }
         }
 		on_map_mode = map_only
-        remove_effect = { FROM = { add_dynamic_modifier = { modifier = GRE_reinforced_local_administration scope = GRE } } }
+        remove_effect = { FROM = { add_dynamic_modifier = { modifier = GRE_reinforced_local_administration } } }
     }
 	GRE_core_claims = {
 		name = GRE_core_claims_sp
@@ -4769,14 +4802,14 @@ GRE_minorities_management = {
 		days_remove = 105
 		cost = 50
 		state_target = yes
-		target_array = owns_state
+		target_array = owned_states
 		target_trigger = {
 			FROM = {
 				is_owned_by = ROOT
 				is_claimed_by = ROOT
 				NOT = {
 					is_core_of = ROOT
-				}
+				}	
 			}
 		}
 		on_map_mode = map_only
@@ -4793,7 +4826,19 @@ GRE_minorities_management = {
 						}
 					}
 					remove_core_of = TUR
-				}	
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = GRE_integration_efforts }					
+					}
+					remove_dynamic_modifier = { modifier = GRE_integration_efforts }
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = GRE_reinforced_local_administration }					
+					}
+					remove_dynamic_modifier = { modifier = GRE_reinforced_local_administration }
+				}
 			}
 		}
 		ai_will_do = {
@@ -5413,7 +5458,7 @@ GRE_road_to_ankara = {
 			base = 0
 			modifier = {
 				add = 1000
-				surrender_progress > 0.15
+				surrender_progress > 0.60
 			}
 			modifier = {
 				add = 1000
@@ -5476,7 +5521,7 @@ GRE_road_to_ankara = {
 			base = 0
 			modifier = {
 				add = 1000
-				surrender_progress > 0.15
+				surrender_progress > 0.80
 			}
 			modifier = {
 				add = 1000
@@ -5514,7 +5559,7 @@ GRE_road_to_ankara = {
 			base = 0
 			modifier = {
 				add = 1000
-				surrender_progress > 0.15
+				surrender_progress > 0.80
 			}
 			modifier = {
 				add = 1000
@@ -5551,7 +5596,7 @@ GRE_road_to_ankara = {
 			base = 0
 			modifier = {
 				add = 1000
-				surrender_progress > 0.35
+				surrender_progress > 0.60
 			}
 			modifier = {
 				add = 1000
