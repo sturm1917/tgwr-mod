@@ -148,13 +148,11 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
                 BUL_idea_national_assembly
-				BUL_idea_minority_government
 			}
 			focuses = {
-				BUL_bulgarian_revanchism
-				BUL_thieving_allies
-				BUL_balkan_hegemon
-				
+				BUL_failed_ambitions
+				BUL_balkan_league
+				BUL_focus_on_the_bdz
 			}
 		}
 

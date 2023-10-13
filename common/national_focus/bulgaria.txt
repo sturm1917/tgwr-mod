@@ -22,6 +22,14 @@
 		cost = 5
 		x = 9
 		y = 0
+		available = {
+			BUL_aleksandar_malinov = {
+				is_political_advisor = yes
+			}
+		}
+		completion_reward = {
+			add_stability = -0.02
+		}
 	}
 	focus = {
 		id = BUL_Vth_grand_national_assembly
@@ -29,13 +37,10 @@
 		cost = 5
 		relative_position_id = BUL_failed_ambitions
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = BUL_failed_ambitions }
 		completion_reward = {
 			country_event = ww1_bulgaria.4
-			remove_ideas = {
-				BUL_idea_minority_government
-			}
 		}
 	}
 
@@ -44,7 +49,7 @@
 		icon = GFX_focus_deal_with_serbia
 		cost = 5
 		relative_position_id = BUL_Vth_grand_national_assembly
-		x = -2
+		x = -3
 		y = 1
 		prerequisite = { focus = BUL_Vth_grand_national_assembly }
 		mutually_exclusive = { focus = BUL_alone_against_ottomans }
@@ -59,10 +64,10 @@
 		id = BUL_balkan_league
 		icon = GFX_focus_ser_bul_cooperation
 		cost = 5
-		relative_position_id = BUL_Vth_grand_national_assembly
-		x = -2
-		y = 2
-		prerequisite = { focus = BUL_Vth_grand_national_assembly }
+		relative_position_id = BUL_reapproach_serbia
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_reapproach_serbia }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "BUL_tt_serbia_accepts"
@@ -82,37 +87,46 @@
 		icon = GFX_focus_deal_with_greece
 		cost = 5
 		relative_position_id = BUL_balkan_league
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = BUL_balkan_league }
 		available = {
 		}
 	}
-	
+
 	focus = {
-		id = BUL_prepare_for_war
-		icon = GFX_goal_unknown
+		id = BUL_the_macedonian_question
+		icon = GFX_focus_macedonian_question
 		cost = 5
-		relative_position_id = BUL_approach_greece
-		x = 0
+		relative_position_id = BUL_balkan_league
+		x = -1
 		y = 1
-		prerequisite = { focus = BUL_approach_greece }
+		prerequisite = { focus = BUL_balkan_league }
+		available = {
+
+		}
+		completion_reward = {
+			country_event = ww1_balkan.13
+		}
 	}
+	
 	focus = {
 		id = BUL_anti_ottoman_crusade
 		icon = GFX_goal_unknown
 		cost = 5
-		relative_position_id = BUL_prepare_for_war
-		x = 0
-		y = 1
-		prerequisite = { focus = BUL_prepare_for_war }
+		relative_position_id = BUL_approach_greece
+		x = -1
+		y = 2
+		prerequisite = { focus = BUL_approach_greece }
+		prerequisite = { focus = BUL_the_macedonian_question }
 	}
+
 	focus = {
 		id = BUL_march_to_tsarigrad
 		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = BUL_anti_ottoman_crusade
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = BUL_anti_ottoman_crusade }
 	}
@@ -122,7 +136,7 @@
 		icon = GFX_focus_bul_lone_liberator
 		cost = 5
 		relative_position_id = BUL_Vth_grand_national_assembly
-		x = 2
+		x = 3
 		y = 1
 		prerequisite = { focus = BUL_Vth_grand_national_assembly }
 		mutually_exclusive = { focus = BUL_reapproach_serbia }

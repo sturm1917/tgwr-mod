@@ -62,7 +62,6 @@ recruit_character = BUL_mikhail_madzharov
 	}
 	add_ideas = {
 		BUL_idea_national_assembly
-		BUL_idea_minority_government
 	}
 
 	set_technology = {
