@@ -532,7 +532,7 @@
  
  #Flavor Event at Beggining
  ww1_spain.143.t:0 "Spain in 1910"
- ww1_spain.143.d:0 "In the early years of Europe's colonial era, Spain was one of the superpowers with France and Britain. Now, with a humiliating century of loss, and an arse-kicking from the Americans, Spain is in quite the precarious position. Now, we deal with three massive political parties, all illegal, who have formed in the face of our un-stable and unsatisfactory election system. There are the military Juntas, who are obsessed with national unity, at the same time there is the Catalonian party, who wish for regional autonomy from the Spanish Government. And there is the ever lasting fight against the proletariat as always, who whisper about a massive planned general strike in a matter of a few years.                                                                                                                                                                                                                                           As for our government, there are the two leading parties, Liberals and Conservatives. One side is heavily Pro-Entente, favouring religious freedom, and legislation. The other side, the conservatives, are made up of Carlists remnant from the carlist wars of the 19th century, and have fractured into many different parties recently. Not that political parties in Spain fracturing have been anything new, with this government system in Spain, the Liberal and Conservative Parties seldom remain their two parties, and often break into several different kinds of liberal or conservatives. This instability has been brewed by how our Prime Minister is inaugurated. Via a system known as El Turno. Where one Liberal Prime Minister, steps up and serves one term. Then, to appease both sides. A Conservative Prime Minister then Must be put in right after the Liberal, and so on and so on.                                                                                                                                                                                 There is also General Elections for the parliament. While this parliament has power, it is much less influential than the Prime Minister and the King. As a result, Liberal-Based Focuses in the Focus - Tree can only be done with a Liberal Prime Minister, and same for Conservative. What the majority in parliament hold simply affects how much benefits Spain will reap from completing focuses, for example if Spain is to do a liberal focus, it will only give 100 percent of its effects if Spain has a liberal majority in parliament, with a conservative parliament, Spain will reap less benefits. However, the parliament has no say in which focuses can be completed. Only the Prime Minister has this kind of Power."
+ ww1_spain.143.d:0 "In the early years of Europe's colonial era, Spain was one of the superpowers with France and Britain. Now, with a humiliating century of loss, and an arse-kicking from the Americans, Spain is in quite the precarious position. Now, we deal with three massive political parties, all illegal, who have formed in the face of our un-stable and unsatisfactory election system. There are the military Juntas, who are obsessed with national unity, at the same time there is the Catalonian party, who wish for regional autonomy from the Spanish Government. And there is the ever lasting fight against the proletariat as always, who whisper about a massive planned general strike in a matter of a few years."                                                                                                                                                                                                                                          As for our government, there are the two leading parties, Liberals and Conservatives. One side is heavily Pro-Entente, favouring religious freedom, and legislation. The other side, the conservatives, are made up of Carlists remnant from the carlist wars of the 19th century, and have fractured into many different parties recently. Not that political parties in Spain fracturing have been anything new, with this government system in Spain, the Liberal and Conservative Parties seldom remain their two parties, and often break into several different kinds of liberal or conservatives. This instability has been brewed by how our Prime Minister is inaugurated. Via a system known as El Turno. Where one Liberal Prime Minister, steps up and serves one term. Then, to appease both sides. A Conservative Prime Minister then Must be put in right after the Liberal, and so on and so on.                                                                                                                                                                                 There is also General Elections for the parliament. While this parliament has power, it is much less influential than the Prime Minister and the King. As a result, Liberal-Based Focuses in the Focus - Tree can only be done with a Liberal Prime Minister, and same for Conservative. What the majority in parliament hold simply affects how much benefits Spain will reap from completing focuses, for example if Spain is to do a liberal focus, it will only give 100 percent of its effects if Spain has a liberal majority in parliament, with a conservative parliament, Spain will reap less benefits. However, the parliament has no say in which focuses can be completed. Only the Prime Minister has this kind of Power."
  ww1_spain.143.a:0 "Very Well..."
  ww1_spain.143.b:0 "I am not Reading all that"
  
@@ -544,7 +544,7 @@
  SPR_massive_strike_plans_category_desc:0 "Massive Strike Coming"
  SPR_liberal_reform_one:0 "Increase the Unity of the Liberal Party"
  SPR_liberal_reform_two:0 "Pass Liberal Reforms (Completes Liberal Focuses after the next general election)"
-  SPR_conservative_reform_two_desc:0 "This will autocomplete one of the following 3 focuses if taken: Seperation of Powers, Religous Freedom, or Extensive Legislative Reforms"
+ SPR_conservative_reform_two_desc:0 "This will autocomplete one of the following 3 focuses if taken: Seperation of Powers, Religous Freedom, or Extensive Legislative Reforms"
  SPR_conservative_reform_one:0 "Increase the Unity of the Conservative Party"
  SPR_conservative_reform_two:0 "Pass Conservative Reforms (Completes Conservative Focuses after the next general election)"
  SPR_conservative_reform_two_desc:0 "This will autocomplete one of the following 3 focuses if taken: Centralization, Push for More Catholicsm, or Extensive Traditionalist Reforms"
@@ -565,11 +565,13 @@
  SPR_decrease_catholicsm:0 "Weaken the Catholic Church"
  SPR_increase_protestantism:0 "Empower the Protestants"
  SPR_decrease_protestantism:0 "Weaken the Protestant Church"
+ 
  SPR_idea_revolutionary_calls_for_regional_autonomy:0 "Revolutionary Action"
  SPR_idea_plots_for_regional_autonomy:0 "Plots for Regional Autonomy"	
  SPR_idea_movements_for_regional_autonomy "Movements for Regional Autonomy"
  SPR_idea_protests_for_regional_autonomy "Protests for Regional Autonomy"
  SPR_idea_whispers_for_regional_autonomy "Whispers for Regional Autonomy"
+ 
  SPR_idea_spanish_armada:0 "20th Century Spanish Armada"
  SPR_idea_naval_admirals:0 "Grand Admirals"
  SPR_idea_money_from_sold_colonies1:0 "Cash from Sold Colonies"
@@ -597,10 +599,9 @@
  SPR_idea_split_conservative_party:0 "Split Conservative Party"
  SPR_idea_several_conservative_party:0 "Several Conservative Parties"
  SPR_idea_fractured_conservative_party:0 "Fractured Conservative Party"
- SPR_idea_planned_economy:0 "Planned Economy"
- SPR_idea_anarchists:0 "Anarchism"
- SPR_idea_no_usurpers:0 "No Usurpers to the Anarchist Throne"
  SPR_idea_civil_marriage:0 "Civil Marriage Law"
+ SPR_ensure_the_church_keeps_quiet:0 "Loyalty of the Church?"
+ SPR_ensure_the_church_keeps_quiet_desc:0 "For years, the church has condemned the reign of our great leader. They refuse to stop, and we should gauge their position and intentions. Perhaps silence them..."
  
  #...
  ww1_spain.139.t:0 "The Rif War"
