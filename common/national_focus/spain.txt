@@ -4622,6 +4622,7 @@ focus_tree = {
 	focus = {
 		id = SPR_become_the_social_liberals
 		icon = GFX_focus_spr_war_of_independence
+		mutually_exclusive = { focus = SPR_change_brings_reform }
 		cost = 5 #days
 		x = 8
 		y = 13
@@ -4665,7 +4666,8 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_change_brings_reform
-		icon = GFX_focus_ITA_guardia_nazionale_repubblicana
+		icon = GFX_focus_agrarian_socialism
+		mutually_exclusive = { focus = SPR_become_the_social_liberals }
 		cost = 2.9 #days
 		x = 10
 		y = 13
@@ -4691,9 +4693,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_unite_under_one_liberal_party
-		icon = GFX_focus_generic_industrialists
+		icon = GFX_focus_ITA_guardia_nazionale_repubblicana
 		cost = 2.9 #days
-		x = 10
+		x = 11
 		y = 14
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
@@ -4705,7 +4707,6 @@ focus_tree = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite = {
-			focus = SPR_become_the_social_liberals
 			focus = SPR_change_brings_reform
 		}
 		completion_reward = {
@@ -4714,8 +4715,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_skeleton1
-		icon = GFX_focus_generic_industrialists
+		id = SPR_provisional_government
+		icon = GFX_focus_generic_communist_industry
 		cost = 2.9 #days
 		x = 11
 		y = 15
@@ -4736,8 +4737,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_skeleton2
-		icon = GFX_focus_generic_industrialists
+		id = SPR_appoint_pablo_iglesias
+		icon = GFX_focus_ITA_communist_leadership
 		cost = 2.9 #days
 		x = 13
 		y = 15
@@ -4758,9 +4759,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_skeleton3
-		icon = GFX_focus_generic_industrialists
-		mutually_exclusive = { focus = SPR_skeleton4 }
+		id = SPR_destroy_the_old_order
+		icon = GFX_focus_ITA_moschettieri_del_duce
+		mutually_exclusive = { focus = SPR_merge_with_old_governors }
 		cost = 2.9 #days
 		x = 10
 		y = 16
@@ -4781,9 +4782,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_skeleton4
-		icon = GFX_focus_generic_industrialists
-		mutually_exclusive = { focus = SPR_skeleton3 }
+		id = SPR_merge_with_old_governors
+		icon = GFX_focus_POL_complete_april_constitution
+		mutually_exclusive = { focus = SPR_destroy_the_old_order }
 		cost = 2.9 #days
 		x = 12
 		y = 16
@@ -4797,19 +4798,18 @@ focus_tree = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite = {
-			focus = SPR_skeleton1
+			focus = SPR_appoint_pablo_iglesias
 		}
 		prerequisite = {
-			focus = SPR_skeleton2
+			focus = SPR_provisional_government
 		}
 		completion_reward = {
 
 		}
 	}
 	focus = {
-		id = SPR_skeleton5
-		icon = GFX_focus_generic_industrialists
-		mutually_exclusive = { focus = SPR_skeleton6 }
+		id = SPR_president_melquiades
+		icon = GFX_focus_POL_consolidate_sanation_government
 		cost = 2.9 #days
 		x = 13
 		y = 17
@@ -4823,16 +4823,15 @@ focus_tree = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite = {
-			focus = SPR_skeleton2
+			focus = SPR_appoint_pablo_iglesias
 		}
 		completion_reward = {
 
 		}
 	}
 	focus = {
-		id = SPR_skeleton6
-		icon = GFX_focus_generic_industrialists
-		mutually_exclusive = { focus = SPR_skeleton5 }
+		id = SPR_empathize_with_catalonia
+		icon = GFX_focus_SOV_support_spanish_poum
 		cost = 2.9 #days
 		x = 11
 		y = 17
@@ -4846,16 +4845,16 @@ focus_tree = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite = {
-			focus = SPR_skeleton3
-			focus = SPR_skeleton4
+			focus = SPR_destroy_the_old_order
+			focus = SPR_merge_with_old_governors
 		}
 		completion_reward = {
 
 		}
 	}
 	focus = {
-		id = SPR_skeleton_7
-		icon = GFX_focus_generic_industrialists
+		id = SPR_el_liberal
+		icon = GFX_focus_FIN_a_new_course_for_kokoomus
 		cost = 2.9 #days
 		x = 11
 		y = 18
@@ -4869,8 +4868,10 @@ focus_tree = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
 		prerequisite = {
-			focus = SPR_skeleton6
-			focus = SPR_skeleton5
+			focus = SPR_empathize_with_catalonia
+		}
+		prerequisite = {
+			focus = SPR_president_melquiades
 		}
 		completion_reward = {
 
@@ -5115,7 +5116,7 @@ focus_tree = {
 		}
 		prerequisite {
 			focus = SPR_become_the_social_liberals
-			focus = SPR_continue_with_split_liberal_parties
+			focus = SPR_change_brings_reform
 		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_cartegna_pact_tt
@@ -5145,7 +5146,7 @@ focus_tree = {
 			focus = SPR_the_three_great_colonizers
 		}
 		prerequisite = {
-			focus = SPR_skeleton_7
+			focus = SPR_el_liberal
 		}
 		completion_reward = {
 			FRA = {
@@ -5154,6 +5155,27 @@ focus_tree = {
 					days = 5
 				}
 			}
+		}
+	}
+	focus = {
+		id = SPR_wall_in_the_kaiser
+		icon = GFX_focus_GER_Kaiser_Asshole_Chained
+		cost = 5 #days
+		x = 9
+		y = 21
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_completed_focus = SPR_continue_expansion 
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_join_the_entente
+		}
+		completion_reward = {
 		}
 	}
 	focus = {
@@ -5442,7 +5464,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_keep_arms_away_from_vigilantes
-		icon = GFX_focus_generic_air_defense
+		icon = GFX_focus_NOR_broken_gun_policies
 		cost = 2.9 #days
 		x = -3
 		y = 16
@@ -5799,7 +5821,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_adopt_furthur_social_reform
+		id = SPR_adopt_furthur_social_reform #set a time limit
 		cancel_if_invalid = no
 		continue_if_invalid = no
 		mutually_exclusive = { focus = SPR_arrest_signatories_of_the_manifesto }
