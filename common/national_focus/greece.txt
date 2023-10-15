@@ -2087,6 +2087,7 @@ focus = {
 	search_filters = {
 		FOCUS_FILTER_HISTORICAL
 		FOCUS_FILTER_POLITICAL
+		FOCUS_FILTER_POLITICAL_CHARACTER
 	}
 }
 focus = {
@@ -3114,7 +3115,7 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = GRE_florence_protocol_desc
+			custom_effect_tooltip = GRE_florence_protocol_tt
 			unlock_decision_tooltip = GRE_leave_northern_epirus_mission
 		}
 		ai_will_do = {
@@ -4375,7 +4376,7 @@ focus = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = gre_we_shall_not_perish
-				days = 60
+				days = 120
 			}
 		}
 		ai_will_do = {
@@ -4547,25 +4548,17 @@ focus = {
 				country_event = ww1_greece.100
 			}
 			hidden_effect = {
-				every_other_country = {
-					limit = {
-						original_tag = GRE
-						GRE_has_royalist_government = yes
-					}
-					country_event = {
-						id = ww1_greece.101
-						days = 20
-					}
+				country_event = {
+					id = ww1_greece.125
+					days = 5
 				}
 				country_event = {
 					id = ww1_greece.101
-					days = 20
-				}
+					days = 10
+				}			
 			}
 			custom_effect_tooltip = escape_line
-			
 			add_ideas = gre_royalist_port_blocked2
-
 		}
 	}
 	focus = {
