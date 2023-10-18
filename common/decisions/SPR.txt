@@ -17,7 +17,7 @@ SPR_failure_to_contain_crisis = {
 			}
         }
 		priority = 100
-		days_mission_timeout = 365 #Placeholder make this change
+		days_mission_timeout = 500 #Placeholder make this change
 		fire_only_once = yes
 		is_good = no
 		

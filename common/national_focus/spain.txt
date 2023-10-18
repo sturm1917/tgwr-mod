@@ -2801,6 +2801,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_the_chauchat
 			focus = SPR_the_vickers
+			focus = SPR_purchase_weaponry
 		}
 		available = {
 			is_subject = no
@@ -5353,6 +5354,7 @@ focus_tree = {
 			focus = SPR_join_the_entente
 		}
 		completion_reward = {
+			add_ideas = SPR_idea_wall_in_the_kaiser
 		}
 	}
 	focus = {

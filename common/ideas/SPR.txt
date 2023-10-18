@@ -1067,6 +1067,25 @@ ideas = {
 			}
 		}
 		
+		SPR_idea_wall_in_the_kaiser = {
+		picture = saf_history_of_segregation_2
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				FRA = {
+					has_war_with = GER
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_breakthrough_against_major_factor = 0.05
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		
+		
 		SPR_idea_encircle_the_french = {
 		picture = saf_history_of_segregation_2
 			allowed = {
@@ -1264,7 +1283,7 @@ ideas = {
 			}
 		}
 		SPR_idea_civil_marriage = {
-		picture = chi_forced_conscription
+		picture = ROM_king_carol_ii_hedonist
 			allowed = {
 				original_tag = SPR
 			}
