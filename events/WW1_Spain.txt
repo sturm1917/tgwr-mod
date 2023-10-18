@@ -653,6 +653,7 @@ country_event = {
 		ai_chance = { factor = 10 }
 		add_stability = -0.05
 		deactivate_advisor = SPR_jose_pm
+		promote_character = SPR_melquiades_alvarez
 		remove_ideas = SPR_idea_time_to_turn_around
 		ai_chance = { factor = 10 }
 		set_global_flag = jose_killed
@@ -690,6 +691,7 @@ country_event = {
 		set_global_flag = liberal_prime_minister
 		add_political_power = 25
 		activate_advisor = SPR_alvaro_de_figueroa
+		promote_character = SPR_alvaro_de_figueroa
 		IF = {
 			limit = { has_global_flag = conservative_prime_minister }
 			uncomplete_national_focus = {
@@ -737,6 +739,7 @@ country_event = {
 		name = ww1_spain.22.a
 		clr_global_flag = alvaro_advisor_chosen
 		deactivate_advisor = SPR_alvaro_de_figueroa
+		promote_character = SPR_melquiades_alvarez
 		ai_chance = { factor = 10 }
 		#Important\/
 		set_global_flag = alvaro_leaves_office
@@ -768,6 +771,7 @@ country_event = {
 		set_global_flag = dato_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
+		promote_character = SPR_eduardo_dato_pm
 		activate_advisor = SPR_eduardo_dato_pm
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
@@ -819,11 +823,12 @@ country_event = {
 		name = ww1_spain.47.a
 		clr_global_flag = dato_advisor_chosen
 		set_global_flag = conservative_prime_minister
+		promote_character = SPR_melquiades_alvarez
+		deactivate_advisor = SPR_eduardo_dato_pm
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		deactivate_advisor = SPR_eduardo_dato_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -849,6 +854,7 @@ country_event = {
 		set_global_flag = prieto_advisor_chosen
 		add_political_power = 25
 		set_global_flag = liberal_prime_minister
+		promote_character = SPR_prieto_pm
 		activate_advisor = SPR_prieto_pm
 		IF = {
 			limit = { has_global_flag = conservative_prime_minister }
@@ -870,7 +876,11 @@ country_event = {
 		
 		hidden_effect = {
 			IF = {
-				limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
+				limit = { 
+					NOT = { 
+						has_global_flag = SPR_flag_no_more_el_turno 
+					}
+				}
 				country_event = { 
 					id = ww1_spain.33
 					days = 105
@@ -896,11 +906,12 @@ country_event = {
 		name = ww1_spain.33.a
 		clr_global_flag = prieto_advisor_chosen
 		set_global_flag = liberal_prime_minister
+		promote_character = SPR_melquiades_alvarez
+		deactivate_advisor = SPR_prieto_pm
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		deactivate_advisor = SPR_prieto_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -928,6 +939,7 @@ country_event = {
 		set_global_flag = maura_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
+		promote_character = SPR_maura
 		activate_advisor = SPR_maura
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
@@ -983,11 +995,12 @@ country_event = {
 		name = ww1_spain.35.a
 		clr_global_flag = maura_advisor_chosen
 		set_global_flag = conservative_prime_minister
+		promote_character = SPR_melquiades_alvarez
+		deactivate_advisor = SPR_maura
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		deactivate_advisor = SPR_maura
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -1016,6 +1029,7 @@ country_event = {
 		set_global_flag = manuel_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
+		promote_character = SPR_manuel_pm
 		activate_advisor = SPR_manuel_pm
 		set_global_flag = new_conservative_spanish_prime_minister_in_office
 		clr_global_flag = new_liberal_spanish_prime_minister_in_office
@@ -1060,17 +1074,18 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.38.a
-		clr_global_flag = manuel_advisor_chosen
-		set_global_flag = conservative_prime_minister
+		clr_global_flag = manuel_advisor_chosen #Scripted El turno Effect
+		set_global_flag = conservative_prime_minister #Scripted El turno Effect
+		promote_character = SPR_melquiades_alvarez
+		deactivate_advisor = SPR_manuel_pm 
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		deactivate_advisor = SPR_manuel_pm
 		ai_chance = { factor = 10 }
-		clr_global_flag = new_spanish_prime_minister
+		clr_global_flag = new_spanish_prime_minister 
 		#Important\/
-		set_global_flag = manuel_leaves_office
+		set_global_flag = manuel_leaves_office #Scripted El turno Effect
 		country_event = {
 			id = ww1_spain.130
 			days = 5
@@ -1095,6 +1110,7 @@ country_event = {
 		name = ww1_spain.24.a
 		clr_global_flag = dato_advisor_chosen
 		add_stability = -0.05
+		promote_character = SPR_melquiades_alvarez
 		deactivate_advisor = SPR_eduardo_dato_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
@@ -1132,6 +1148,7 @@ country_event = {
 		set_global_flag = sanchez_advisor_chosen
 		add_political_power = 25
 		set_global_flag = conservative_prime_minister
+		promote_character = SPR_sanchez_pm
 		activate_advisor = SPR_sanchez_pm
 		IF = {
 			limit = { has_global_flag = liberal_prime_minister }
@@ -1183,11 +1200,12 @@ country_event = {
 		name = ww1_spain.42.a
 		clr_global_flag = sanchez_advisor_chosen
 		set_global_flag = conservative_prime_minister
+		promote_character = SPR_melquiades_alvarez
+		deactivate_advisor = SPR_sanchez_pm
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
 		}
-		deactivate_advisor = SPR_sanchez_pm
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
@@ -1550,17 +1568,15 @@ country_event = {
 	mean_time_to_happen = {	days = 30 }
 	trigger = {
 		original_tag = SPR
-		OR = {
-			has_government = neutrality
-			AND = {
-				has_government = fascism
-				has_cosmetic_tag = SPR_neutrality
-			}
+		NOT = {
+			has_government = democratic
+		}
+		NOT = {
+			has_completed_focus = SPR_military_coup
 		}
 		OR = {
 			has_country_flag = great_war_loser
-			has_stability < 0.03
-			democratic > 0.75
+			democratic > 0.99
 			AND = {
 				date > 1931.4.1
 				NOT = {
@@ -1615,18 +1631,19 @@ country_event = {
 	desc = ww1_spain.2.d
 	picture = GFX_report_event_spain_civil_war_soldiers
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 125 }
+	mean_time_to_happen = {	days = 60 }
 	trigger = {
+		has_completed_focus = SPR_military_coup
 		NOT = {
 			has_completed_focus = SPR_the_government_survives
 		}
 		tag = SPR
 		is_subject = no
 		has_character = SPR_miguel_primo_de_rivera
-		has_government = neutrality
-		date > 1923.9.1
 		OR = {
-			has_country_flag = looming_deadline
+			has_government = neutrality
+			has_government = democratic
+			has_government = communism
 		}
 	}
 	option = {
@@ -1665,6 +1682,7 @@ country_event = {
 		}
 		add_stability = -0.10
 		complete_national_focus = SPR_military_coup
+		complete_national_focus = SPR_failure_to_contain_the_three_headed_crisis
 	}
 }
 
@@ -3018,6 +3036,10 @@ country_event = {
 		name = ww1_spain.130.a
 		ai_chance = { factor = 10 }
 		IF = {
+			limit = { has_idea = SPR_idea_fractured_conservative_party }
+			add_political_power = -25
+		}
+		IF = {
 			limit = { has_idea = SPR_idea_several_conservative_party }
 			swap_ideas = {
 				remove_idea = SPR_idea_several_conservative_party
@@ -3052,6 +3074,10 @@ country_event = {
 	option = {
 		name = ww1_spain.131.a
 		ai_chance = { factor = 10 }
+		IF = {
+			limit = { has_idea = SPR_idea_united_conservative_party }
+			add_stability = 0.03
+		}
 		IF = {
 			limit = { has_idea = SPR_idea_split_conservative_party }
 			swap_ideas = {
@@ -3088,6 +3114,10 @@ country_event = {
 		name = ww1_spain.132.a
 		ai_chance = { factor = 10 }
 		IF = {
+			limit = { has_idea = SPR_idea_fractured_liberal_party }
+			add_political_power = -25
+		}
+		IF = {
 			limit = { has_idea = SPR_idea_several_liberal_party }
 			swap_ideas = {
 				remove_idea = SPR_idea_several_liberal_party
@@ -3122,6 +3152,10 @@ country_event = {
 	option = {
 		name = ww1_spain.133.a
 		ai_chance = { factor = 10 }
+		IF = {
+			limit = { has_idea = SPR_idea_united_liberal_party }
+			add_stability = 0.03
+		}
 		IF = {
 			limit = { has_idea = SPR_idea_split_liberal_party }
 			swap_ideas = {
@@ -3258,88 +3292,6 @@ country_event = {
 	}
 }
 
-#Three Headed Crisis Failure
-country_event = {
-	id = ww1_spain.140
-	title = ww1_spain.140.t
-	desc = ww1_spain.140.d
-	picture = GFX_report_event_generic_factory
-	fire_only_once = yes
-	mean_time_to_happen = { days = 50 }
-	trigger = {
-		AND = {
-			NOT = {
-				AND = {
-					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
-					has_completed_focus = SPR_adopt_furthur_social_reform
-				}
-			}
-			OR = {
-				AND = {
-					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
-					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
-				}
-				AND = {
-					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
-					has_completed_focus = SPR_allow_minor_regional_autonomy
-					has_completed_focus = SPR_send_in_the_military
-				}
-				AND = {
-					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
-					has_completed_focus = SPR_forcefully_dissolve_the_assembly
-					has_completed_focus = SPR_send_in_the_military
-				}
-				AND = {
-					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
-					has_completed_focus = SPR_forcefully_dissolve_the_assembly
-					has_completed_focus = SPR_relegalize_the_juntas
-				}
-				AND = {
-					has_completed_focus = SPR_adopt_furthur_social_reform
-					has_completed_focus = SPR_forcefully_dissolve_the_assembly
-					has_completed_focus = SPR_relegalize_the_juntas
-				}
-				AND = {
-					has_completed_focus = SPR_adopt_furthur_social_reform
-					has_completed_focus = SPR_forcefully_dissolve_the_assembly
-					has_completed_focus = SPR_send_in_the_military
-				}
-				AND = {
-					has_completed_focus = SPR_adopt_furthur_social_reform
-					has_completed_focus = SPR_allow_minor_regional_autonomy
-					has_completed_focus = SPR_send_in_the_military
-				}
-			}
-		}
-	}
-	option = {
-		name = ww1_spain.140.a
-		ai_chance = { factor = 10 }
-		complete_national_focus = SPR_failure_to_contain_the_three_headed_crisis
-	}
-}
-
-#Three Headed Crisis Success
-country_event = {
-	id = ww1_spain.141
-	title = ww1_spain.141.t
-	desc = ww1_spain.141.d
-	picture = GFX_report_event_SWI_assembly_hall
-	fire_only_once = yes
-	mean_time_to_happen = { days = 5 }
-	trigger = {
-		AND = {
-			has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
-			has_completed_focus = SPR_adopt_furthur_social_reform
-		}
-	}
-	option = {
-		name = ww1_spain.141.a
-		ai_chance = { factor = 10 }
-		complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
-	}
-}
-
 #The People or the Politics
 country_event = {
 	id = ww1_spain.142
@@ -3388,7 +3340,7 @@ country_event = {
 	desc = ww1_spain.144.d
 	picture = GFX_report_event_liberal_victory
 	fire_only_once = no
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 180 }
 	trigger = {
 		AND = {
 			original_tag = SPR
@@ -3413,5 +3365,199 @@ country_event = {
 				id = ww1_spain.130
 				days = 50
 			}
+		}
+	}
+}
+
+#Three Headed Crisis Failure
+country_event = {
+	id = ww1_spain.140
+	title = ww1_spain.140.t
+	desc = ww1_spain.140.d
+	picture = GFX_report_event_generic_factory
+	fire_only_once = yes
+	mean_time_to_happen = { days = 50 }
+	trigger = {
+		AND = {
+			has_completed_focus = SPR_gauge_our_position
+			
+			AND = { #Life
+				has_completed_focus = SPR_continue_skilled_promotion
+				OR = {
+					has_completed_focus = SPR_strengthen_the_punishment
+					has_completed_focus = SPR_rights_and_insurance_legislation
+				}
+				has_completed_focus = SPR_outlaw_pistolerismo
+			} 
+			
+			OR = {
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+				}
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_allow_minor_regional_autonomy
+					has_completed_focus = SPR_send_in_the_military
+				}
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_send_in_the_military
+				}
+				AND = {
+					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_relegalize_the_juntas
+				}
+				AND = {
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_relegalize_the_juntas
+				}
+				AND = {
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					has_completed_focus = SPR_forcefully_dissolve_the_assembly
+					has_completed_focus = SPR_send_in_the_military
+				}
+				AND = {
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					has_completed_focus = SPR_allow_minor_regional_autonomy
+					has_completed_focus = SPR_send_in_the_military
+				}
+			}
+		}
+	}
+	option = {
+		name = ww1_spain.140.a
+		ai_chance = { factor = 10 }
+		complete_national_focus = SPR_failure_to_contain_the_three_headed_crisis
+		complete_national_focus = SPR_gauge_our_position
+	}
+}
+
+#Three Headed Crisis Success
+country_event = {
+	id = ww1_spain.141
+	title = ww1_spain.141.t
+	desc = ww1_spain.141.d
+	picture = GFX_report_event_SWI_assembly_hall
+	fire_only_once = yes
+	mean_time_to_happen = { days = 5 }
+	trigger = {
+		has_completed_focus = SPR_gauge_our_position
+		AND = {
+			has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+			has_completed_focus = SPR_adopt_furthur_social_reform
+			
+			has_completed_focus = SPR_continue_skilled_promotion
+			OR = {
+				has_completed_focus = SPR_strengthen_the_punishment
+				has_completed_focus = SPR_rights_and_insurance_legislation
+			}
+			has_completed_focus = SPR_outlaw_pistolerismo
+		}
+	}
+	option = {
+		name = ww1_spain.141.a
+		ai_chance = { factor = 10 }
+		complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
+		complete_national_focus = SPR_gauge_our_position
+	}
+}
+
+#Gauge Our Position
+country_event = {
+	id = ww1_spain.145
+	title = ww1_spain.145.t
+	desc = ww1_spain.145.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		AND = {
+			AND = { #Life
+				has_completed_focus = SPR_continue_skilled_promotion
+				OR = {
+					has_completed_focus = SPR_strengthen_the_punishment
+					has_completed_focus = SPR_rights_and_insurance_legislation
+				}
+				has_completed_focus = SPR_outlaw_pistolerismo
+			} 
+			OR = {
+				AND = {
+					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					has_completed_focus = SPR_continue_skilled_promotion
+					OR = {
+						has_completed_focus = SPR_strengthen_the_punishment
+						has_completed_focus = SPR_rights_and_insurance_legislation
+					}
+					has_completed_focus = SPR_outlaw_pistolerismo
+				}
+				OR = {
+					AND = {
+						has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+						has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+					}
+					AND = {
+						has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+						has_completed_focus = SPR_allow_minor_regional_autonomy
+						has_completed_focus = SPR_send_in_the_military
+					}
+					AND = {
+						has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+						has_completed_focus = SPR_forcefully_dissolve_the_assembly
+						has_completed_focus = SPR_send_in_the_military
+					}
+					AND = {
+						has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+						has_completed_focus = SPR_forcefully_dissolve_the_assembly
+						has_completed_focus = SPR_relegalize_the_juntas
+					}
+					AND = {
+						has_completed_focus = SPR_adopt_furthur_social_reform
+						has_completed_focus = SPR_forcefully_dissolve_the_assembly
+						has_completed_focus = SPR_relegalize_the_juntas
+					}
+					AND = {
+						has_completed_focus = SPR_adopt_furthur_social_reform
+						has_completed_focus = SPR_forcefully_dissolve_the_assembly
+						has_completed_focus = SPR_send_in_the_military
+					}
+					AND = {
+						has_completed_focus = SPR_adopt_furthur_social_reform
+						has_completed_focus = SPR_allow_minor_regional_autonomy
+						has_completed_focus = SPR_send_in_the_military
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ww1_spain.145.a
+		ai_chance = { factor = 10 }
+		set_global_flag = SPR_flag_gauge_our_position
+	}
+}
+
+#Hidden Focus Bug Fix
+country_event = {
+	id = ww1_spain.146
+	title = ww1_spain.146.t
+	desc = ww1_spain.146.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		has_global_flag = SPR_visible_focuses_rule_THC
+	}
+	option = {
+		name = ww1_spain.146.a
+		ai_chance = { factor = 10 }
+		mark_focus_tree_layout_dirty = yes
+		clr_global_flag = SPR_visible_focuses_rule_THC
+		#set_global_flag = SPR_visible_focuses_rule_THC
 	}
 }

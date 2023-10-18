@@ -1687,7 +1687,7 @@ focus_tree = {
 	focus = {
 		id = SPR_continue_the_reforms
 		icon = GFX_focus_generic_improve_the_administration
-		cost = 2.9 #days
+		cost = 8 #days
 		x = 1
 		y = 2
 		relative_position_id = SPR_electoral_reforms
@@ -1716,7 +1716,7 @@ focus_tree = {
 					ideology = neutrality
 					popularity = 0.05
 				}
-				add_political_power = 50	
+				add_political_power = 150	
 				add_ideas = {
 					SPR_idea_time_to_turn_around
 				}
@@ -1914,16 +1914,6 @@ focus_tree = {
 					days = 150
 				}
 			}
-			hidden_effect = {
-				country_event = {
-					id = ww1_spain.132
-					days = 5
-				}
-				country_event = {
-					id = ww1_spain.130
-					days = 5
-				}
-			}
 		}
 	}
 	focus = {
@@ -1980,7 +1970,7 @@ focus_tree = {
 					days = 5
 				}
 				country_event = {
-					id = ww1_spain.130
+					id = ww1_spain.131
 					days = 5
 				}
 			}
@@ -2756,11 +2746,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = {
-					id = ww1_spain.132
-					days = 5
-				}
-				country_event = {
-					id = ww1_spain.130
+					id = ww1_spain.131
 					days = 5
 				}
 			}
@@ -2899,11 +2885,11 @@ focus_tree = {
 			}
 			hidden_effect = {
 				country_event = {
-					id = ww1_spain.132
+					id = ww1_spain.130
 					days = 5
 				}
 				country_event = {
-					id = ww1_spain.130
+					id = ww1_spain.133
 					days = 5
 				}
 			}
@@ -4665,10 +4651,32 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_change_brings_reform
+		id = SPR_rerun_el_turno
+		icon = GFX_focus_spr_war_of_independence
+		cost = 2.9 #days
+		x = 8
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_liberal_spanish_prime_minister_in_office
+		}
+		prerequisite = {
+			focus = SPR_become_the_social_liberals
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SPR_change_brings_reform #Make 100-200 day long mission that if times out, this focus completes
 		icon = GFX_focus_agrarian_socialism
 		mutually_exclusive = { focus = SPR_become_the_social_liberals }
-		cost = 2.9 #days
+		cost = 5 #days
 		x = 10
 		y = 13
 		relative_position_id = SPR_declare_a_republic
@@ -4688,7 +4696,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = -0.05
-			add_political_power = 25
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			set_global_flag = SPR_flag_no_more_el_turno
+			hidden_effect = {
+				deactivate_advisor = SPR_alvaro_de_figueroa
+				deactivate_advisor = SPR_eduardo_dato_pm
+				deactivate_advisor = SPR_prieto_pm
+				deactivate_advisor = SPR_maura
+				deactivate_advisor = SPR_manuel_pm 
+				deactivate_advisor = SPR_sanchez_pm
+			}
 		}
 	}
 	focus = {
@@ -4733,7 +4753,16 @@ focus_tree = {
 			focus = SPR_unite_under_one_liberal_party
 		}
 		completion_reward = {
-
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				long_name = SPR_el_liberal_provisional
+				name = SPR_el_liberal_provisional
+			}
+			promote_character = {
+				character = SPR_pablo_iglesias
+				ideology = oligarchism
+			}
 		}
 	}
 	focus = {
@@ -4755,7 +4784,9 @@ focus_tree = {
 			focus = SPR_unite_under_one_liberal_party
 		}
 		completion_reward = {
-
+			custom_effect_tooltip = SPR_pablo_becomes_secratary.tt
+			#add_ideas = SPR_idea_pablo_iglesias
+			set_global_flag = SPR_flag_pablo_appointed
 		}
 	}
 	focus = {
@@ -4778,7 +4809,11 @@ focus_tree = {
 			focus = SPR_unite_under_one_liberal_party
 		}
 		completion_reward = {
-
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
 		}
 	}
 	focus = {
@@ -4804,7 +4839,15 @@ focus_tree = {
 			focus = SPR_provisional_government
 		}
 		completion_reward = {
-
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -4826,7 +4869,10 @@ focus_tree = {
 			focus = SPR_appoint_pablo_iglesias
 		}
 		completion_reward = {
-
+			promote_character = {
+				character = SPR_melquiades_alvarez
+				ideology = socialism
+			}
 		}
 	}
 	focus = {
@@ -4849,7 +4895,11 @@ focus_tree = {
 			focus = SPR_merge_with_old_governors
 		}
 		completion_reward = {
-
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -4874,7 +4924,16 @@ focus_tree = {
 			focus = SPR_president_melquiades
 		}
 		completion_reward = {
-
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+				long_name = SPR_el_liberal
+				name = SPR_el_liberal
+			}
+			set_political_party = {
+				ideology = democratic
+				popularity = 60
+			}
 		}
 	}
 	focus = {
@@ -5114,10 +5173,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_improve_french_relations
 		}
-		prerequisite {
-			focus = SPR_become_the_social_liberals
-			focus = SPR_change_brings_reform
-		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_cartegna_pact_tt
 			hidden_effect = {
@@ -5144,8 +5199,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_the_three_great_colonizers
-		}
-		prerequisite = {
 			focus = SPR_el_liberal
 		}
 		completion_reward = {
@@ -5320,7 +5373,6 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			has_global_flag = france_accepts_GER_capitulation
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 			OR = {
@@ -5401,6 +5453,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		available = {
 			is_subject = no
 			has_global_flag = SPR_flag_juntas_operate
@@ -5427,6 +5484,11 @@ focus_tree = {
 		x = -4
 		y = 15
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5439,7 +5501,7 @@ focus_tree = {
 			focus = SPR_military_juntas_operate_illegally
 		}
 		completion_reward = {
-			set_global_flag = SPR_flag_junta_failure_in_three
+			set_global_flag = SPR_flag_junta_failure_in_three #Decisions if Fail
 			add_stability = 0.05
 			add_popularity = {
 				ideology = fascism
@@ -5469,6 +5531,11 @@ focus_tree = {
 		x = -3
 		y = 16
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5502,6 +5569,11 @@ focus_tree = {
 		x = -3
 		y = 18
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5529,6 +5601,11 @@ focus_tree = {
 		x = -2
 		y = 17
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5554,6 +5631,11 @@ focus_tree = {
 		x = -2
 		y = 15
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5586,6 +5668,7 @@ focus_tree = {
 				amount = 120
 				producer = SPR
 			}
+			set_global_flag = SPR_flag_junta_success_in_three #Decisions if Fail
 		}
 	}
 	focus = {
@@ -5595,6 +5678,11 @@ focus_tree = {
 		x = 5
 		y = 14
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5626,6 +5714,11 @@ focus_tree = {
 		x = 4
 		y = 15
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5638,7 +5731,7 @@ focus_tree = {
 			focus = SPR_proletariat_strikes
 		}
 		completion_reward = {
-			set_global_flag = SPR_flag_strikes_failure_in_three
+			set_global_flag = SPR_flag_strikes_failure_in_three #Decisions if Fail
 			add_popularity = {
 				ideology = communism
 				popularity = -0.05	
@@ -5656,6 +5749,11 @@ focus_tree = {
 		x = 4
 		y = 16
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5691,6 +5789,11 @@ focus_tree = {
 		x = 3
 		y = 17
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5734,6 +5837,11 @@ focus_tree = {
 		x = 5
 		y = 17
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5767,6 +5875,11 @@ focus_tree = {
 		x = 4
 		y = 18
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5799,6 +5912,11 @@ focus_tree = {
 		x = 6
 		y = 18
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5830,6 +5948,11 @@ focus_tree = {
 		x = 6
 		y = 15
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5853,7 +5976,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_political_power = -100
-			set_global_flag = SPR_success_in_proletariat_strikes
+			set_global_flag = SPR_flag_strikes_success_in_three #Decisions if Fail
 		}
 	}
 	focus = {
@@ -5863,6 +5986,11 @@ focus_tree = {
 		x = 7
 		y = 17
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5888,6 +6016,11 @@ focus_tree = {
 		x = 1
 		y = 14
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5916,6 +6049,11 @@ focus_tree = {
 		x = 0
 		y = 15
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5934,6 +6072,7 @@ focus_tree = {
 			SPR = {
 				remove_state_core = 165
 			}
+			set_global_flag = SPR_flag_assembly_success_in_three #Decisions if Fail
 		}
 	}
 	focus = {
@@ -5944,6 +6083,11 @@ focus_tree = {
 		x = 2
 		y = 15
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -5959,7 +6103,7 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
-			set_global_flag = SPR_flag_catalonia_failure_in_three
+			set_global_flag = SPR_flag_assembly_failure_in_three #Decisions if Fail
 			add_political_power = -75
 			add_popularity = {
 				ideology = fascism
@@ -5990,6 +6134,11 @@ focus_tree = {
 		x = -1
 		y = 16
 		relative_position_id = SPR_declare_a_republic
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -6012,6 +6161,33 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SPR_gauge_our_position
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		cost = 1.5 #days
+		x = 1
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			NOT = {
+				has_global_flag = SPR_visible_focuses_rule_THC
+			}
+		}
+		prerequisite = {
+			focus = SPR_send_in_the_military
+			focus = SPR_adopt_furthur_social_reform
+			focus = SPR_junta_and_catalonian_autonomy_incompatible
+		}
+		available = {
+			has_global_flag = SPR_flag_gauge_our_position #make decisions
+		}
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
 		id = SPR_failure_to_contain_the_three_headed_crisis
 		mutually_exclusive = { focus = SPR_success_in_containing_the_three_headed_crisis }
 		icon = GFX_focus_generic_conspiracy
@@ -6022,21 +6198,1181 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		allow_branch = {
+			always = yes
+		}
 		available = {
-			always = no
+			has_completed_focus = SPR_continue_skilled_promotion
+			OR = {
+				has_completed_focus = SPR_strengthen_the_punishment
+				has_completed_focus = SPR_rights_and_insurance_legislation
+			}
+			has_completed_focus = SPR_outlaw_pistolerismo
 		}
-		prerequisite = {
-			focus = SPR_send_in_the_military
-			focus = SPR_forcefully_dissolve_the_assembly
-			focus = SPR_arrest_signatories_of_the_manifesto
-			focus = SPR_allow_minor_regional_autonomy
-			focus = SPR_relegalize_the_juntas
-		}
+		#prerequisite = {
+		#	focus = SPR_gauge_our_position
+		#}
 		completion_reward = {
 			add_political_power = -125
 			add_ideas = SPR_idea_risk_of_governmental_collapse
+			set_global_flag = SPR_visible_focuses_rule_THC
+			custom_effect_tooltip = SPR_failure_to_contain_the_three_headed_crisis.tt
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
 		}
 	}
+	#Hidden
+	focus = {
+		id = SPR_curbing_the_crisis
+		icon = GFX_focus_generic_field_hostpital
+		cost = 5 #days
+		x = 1
+		y = 13
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			has_completed_focus = SPR_continue_skilled_promotion
+			OR = {
+				has_completed_focus = SPR_strengthen_the_punishment
+				has_completed_focus = SPR_rights_and_insurance_legislation
+			}
+			has_completed_focus = SPR_outlaw_pistolerismo
+		}
+		prerequisite = {
+			focus = SPR_modernization_program
+			focus = SPR_abolish_el_turno
+			focus = SPR_reform_el_turno
+		}
+		completion_reward = {
+			add_political_power = 150
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_idea = SPR_flag_junta_success_in_three
+					}
+					complete_national_focus = SPR_powerful_juntas
+				}
+				IF = {
+					limit = {
+						has_idea = SPR_flag_junta_failure_in_three
+					}
+					complete_national_focus = SPR_destroyed_juntas
+				}
+				IF = {
+					limit = {
+						has_idea = SPR_flag_assembly_failure_in_three
+					}
+					complete_national_focus = SPR_a_destoryed_assembly
+				}
+				IF = {
+					limit = {
+						has_idea = SPR_flag_assembly_success_in_three
+					}
+					complete_national_focus = SPR_rebellious_scum
+				}
+				IF = {
+					limit = {
+						has_idea = SPR_flag_strikes_failure_in_three
+					}
+					complete_national_focus = SPR_unsatisfied_populace
+				}
+				IF = {
+					limit = {
+						has_idea = SPR_flag_strikes_success_in_three
+					}
+					complete_national_focus = SPR_unsatisfied_politicians
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_destroyed_juntas
+		icon = GFX_focus_NORDIC_dem_capstone_navy
+		mutually_exclusive = { focus = SPR_powerful_juntas }
+		cost = 1.5 #days
+		x = -2
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			has_global_flag = SPR_flag_junta_failure_in_three #Decisions if Fail
+		}
+		prerequisite = {
+			focus = SPR_curbing_the_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_cede_the_vizcaya_factory
+		icon = GFX_focus_NORDIC_dem_civilian
+		cost = 8 #days
+		x = -2
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_destroyed_juntas
+		}
+		prerequisite = {
+			focus = SPR_expand_consumer_goods
+		}
+		completion_reward = {
+			172 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_expand_consumer_goods
+		icon = GFX_focus_NORDIC_dem_capstone_civilian
+		cost = 5 #days
+		x = -1
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_destroyed_juntas
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SPR_idea_expanded_consumer_goods
+				days = 720
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 150
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 200
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_powerful_juntas
+		icon = GFX_focus_NORDIC_dem_army
+		mutually_exclusive = { focus = SPR_destroyed_juntas }
+		cost = 1.5 #days
+		x = -4
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			has_global_flag = SPR_flag_junta_success_in_three #Decisions if Fail
+		}
+		prerequisite = {
+			focus = SPR_curbing_the_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_rally_our_military
+		icon = GFX_focus_NORDIC_dem_institution_2
+		mutually_exclusive = { focus = SPR_grant_the_juntas_a_political_party }
+		cost = 8 #days
+		x = -3
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_powerful_juntas
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.075
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 250
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 250
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_grant_the_juntas_a_political_party
+		icon = GFX_focus_NORDIC_dem_institution_1
+		mutually_exclusive = { focus = SPR_rally_our_military }
+		cost = 8 #days
+		x = -5
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_powerful_juntas
+		}
+		completion_reward = {
+			add_political_power = -75
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 175
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_peacefully_order_a_disband
+		icon = GFX_focus_NORDIC_dem_form_alliance
+		cost = 8 #days
+		x = -4
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_rally_our_military
+			focus = SPR_grant_the_juntas_a_political_party
+		}
+		completion_reward = {
+			add_stability = 0.1
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_government_authority_overhaul
+		icon = GFX_focus_NORDIC_mon_selector_airforce
+		cost = 8 #days
+		x = 1
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_a_destoryed_assembly
+			focus = SPR_rebellious_scum
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -100
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 225
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_a_destoryed_assembly
+		icon = GFX_focus_NORDIC_mon_capstone_army
+		mutually_exclusive = { focus = SPR_rebellious_scum }
+		cost = 1.5 #days
+		x = 0
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			has_global_flag = SPR_flag_assembly_failure_in_three
+		}
+		prerequisite = {
+			focus = SPR_curbing_the_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_appoint_catalonians_in_government
+		icon = GFX_focus_NORDIC_mon_institution_2
+		cost = 5 #days
+		x = 0
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_government_authority_overhaul
+		}
+		prerequisite = {
+			focus = SPR_a_destoryed_assembly
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.075
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 100
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 225
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 225
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_rebellious_scum
+		icon = GFX_focus_NORDIC_mon_selector_army
+		mutually_exclusive = { focus = SPR_an_unconveined_assembly }
+		cost = 1.5 #days
+		x = 2
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			has_global_flag = SPR_flag_assembly_success_in_three
+		}
+		prerequisite = {
+			focus = SPR_curbing_the_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_keep_them_centralized
+		icon = GFX_focus_NORDIC_mon_institution_1
+		cost = 5 #days
+		x = 2
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_rebellious_scum
+		}
+		prerequisite = {
+			focus = SPR_government_authority_overhaul
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 175
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 200
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_unsatisfied_populace
+		icon = GFX_focus_NORDIC_com_selector_army
+		mutually_exclusive = { focus = SPR_unsatisfied_politicians }
+		cost = 1.5 #days
+		x = 4
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			has_global_flag = SPR_flag_strikes_failure_in_three #Decisions if Fail
+		}
+		prerequisite = {
+			focus = SPR_curbing_the_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_emergency_concessions
+		icon = GFX_focus_NORDIC_com_capstone_materiel
+		cost = 8 #days
+		x = 4
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_unsatisfied_populace
+		}
+		prerequisite = {
+			focus = SPR_guarantee_the_right_to_housing
+		}
+		completion_reward = {
+			add_political_power = -150
+			add_stability = 0.05
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 125
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 250
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 250
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_guarantee_the_right_to_housing
+		icon = GFX_focus_NORDIC_com_form_alliance
+		cost = 5 #days
+		x = 3
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_unsatisfied_populace
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_unsatisfied_politicians
+		icon = GFX_focus_NORDIC_com_institution_2
+		mutually_exclusive = { focus = SPR_unsatisfied_populace }
+		cost = 1.5 #days
+		x = 6
+		y = 14
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			has_global_flag = SPR_flag_strikes_success_in_three_in_three #Decisions if Fail
+		}
+		prerequisite = {
+			focus = SPR_curbing_the_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_massive_government_lobbying
+		icon = GFX_focus_NORDIC_com_institution_1
+		mutually_exclusive = { focus = SPR_1 }
+		cost = 8 #days
+		x = 5
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_unsatisfied_politicians
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.075
+			}
+			add_stability = 0.05
+			add_political_power = -75
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 150
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 250
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 250
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_concede_civilian_factory
+		icon = GFX_focus_NORDIC_com_selector_civilian
+		mutually_exclusive = { focus = SPR_massive_government_lobbying }
+		cost = 8 #days
+		x = 7
+		y = 15
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_unsatisfied_politicians
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			
+			41 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 325
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 325
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_educational_reform
+		icon = GFX_focus_NORDIC_com_capstone_research
+		mutually_exclusive = { focus = SPR_massive_government_lobbying }
+		cost = 5 #days
+		x = 6
+		y = 16
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_concede_civilian_factory
+			focus = SPR_massive_government_lobbying
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_tech_bonus = {
+				bonus = 0.4
+				uses = 3
+				category = industry
+				category = electronics
+			}
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 300
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_the_people_are_happy
+		icon = GFX_focus_radical_engine
+		cost = 8 #days
+		x = 5
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_educational_reform
+			focus = SPR_emergency_concessions
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_the_assembly_is_history
+		icon = GFX_focus_generic_scales_replacement
+		cost = 8 #days
+		x = 1
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_appoint_catalonians_in_government
+			focus = SPR_keep_them_centralized
+		}
+		completion_reward = {
+			add_political_power = 100
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_the_juntas_are_obediant
+		icon = GFX_focus_split_helmet
+		cost = 8 #days
+		x = -3
+		y = 17
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_visible_focuses_rule_THC
+		}
+		available = {
+			NOT = {
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = {
+				has_idea = SPR_idea_government_disorganized
+			}
+		}
+		prerequisite = {
+			focus = SPR_cede_the_vizcaya_factory
+			focus = SPR_peacefully_order_a_disband
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_stability = 0.05
+			IF = {
+				limit = { has_active_mission = SPR_terrible_deadline }
+				add_days_mission_timeout = {
+					mission = SPR_terrible_deadline
+					days = 200
+				}
+			}
+		}
+	}
+	#Unhidden
 	focus = {
 		id = SPR_success_in_containing_the_three_headed_crisis
 		mutually_exclusive = { focus = SPR_failure_to_contain_the_three_headed_crisis }
@@ -6048,17 +7384,36 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		allow_branch = {
+			always = yes
+		}
 		available = {
-			always = no
+			has_completed_focus = SPR_continue_skilled_promotion
+			OR = {
+				has_completed_focus = SPR_strengthen_the_punishment
+				has_completed_focus = SPR_rights_and_insurance_legislation
+			}
+			has_completed_focus = SPR_outlaw_pistolerismo
+			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
-			focus = SPR_junta_and_catalonian_autonomy_incompatible
-		}
-		prerequisite = {
-			focus = SPR_adopt_furthur_social_reform
-		}
+			focus = SPR_gauge_our_position
+		} 
 		completion_reward = {
 			add_political_power = 50
+			custom_effect_tooltip = SPR_failure_to_contain_the_three_headed_crisis.tt
+			IF = {
+				limit = { 
+					OR = {
+						has_country_leader = {
+							character = SPR_alfonso_xiii
+							ruling_only = yes
+						}
+						has_idea = SPR_alfonso_xiii
+					}
+				}
+				complete_national_focus = SPR_trust_in_the_peaceful_turn
+			}
 		}
 	}
 	focus = {
@@ -6072,20 +7427,28 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
-		prerequisite = {
-			focus = SPR_success_in_containing_the_three_headed_crisis
-			focus = SPR_failure_to_contain_the_three_headed_crisis
+		allow_branch = {
+			always = yes
 		}
 		prerequisite = {
-			focus = SPR_modernization_program
+			focus = SPR_failure_to_contain_the_three_headed_crisis
+			focus = SPR_success_in_containing_the_three_headed_crisis
+		}
+		prerequisite = {
+			focus = SPR_the_juntas_are_obediant
+		}
+		prerequisite = {
+			focus = SPR_the_assembly_is_history
+		}
+		prerequisite = {
+			focus = SPR_the_people_are_happy
 		}
 		completion_reward = {
 			add_stability = -0.03
 			IF = {
-				limit = { has_completed_focus = SPR_failure_to_contain_the_three_headed_crisis }
+				limit = { has_completed_focus = SPR_success_in_containing_the_three_headed_crisis }
 				add_popularity = {
 					ideology = neutrality
 					popularity = 0.05	
@@ -6119,6 +7482,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = SPR_flag_terrible_deadline
 		}
 		prerequisite = {
 			focus = SPR_failure_to_contain_the_three_headed_crisis
@@ -6148,9 +7512,14 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = SPR_flag_curbed_the_crisis
 		}
 		prerequisite = {
 			focus = SPR_success_in_containing_the_three_headed_crisis
+			focus = SPR_failure_to_contain_the_three_headed_crisis
+		}
+		prerequisite = {
+			focus = SPR_trust_in_the_peaceful_turn
 		}
 		completion_reward = {
 			add_political_power = -100
@@ -6799,7 +8168,7 @@ focus_tree = {
 		id = SPR_negotiate_jaimes_release
 		icon = GFX_focus_convention
 		cost = 5 #days
-		x = 3
+		x = -3
 		y = 5
 		relative_position_id = SPR_focus_on_social_reformation
 		ai_will_do = {

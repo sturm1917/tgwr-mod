@@ -54,6 +54,21 @@ ideas = {
 		}
 	}
 	country = {
+		SPR_idea_government_disorganized = {
+			picture = SOV_scientist_defect
+			allowed = {
+				original_tag = SPR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
 		SPR_alfonso_xiii = {
 			allowed = {
 				original_tag = SPR
@@ -110,6 +125,33 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				navy_advisor_cost_factor = -0.75
+			}
+		}
+		SPR_idea_pablo_iglesias = {
+			picture = chi_hyper_inflation
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.03
+				political_power_factor = 0.05
+			}
+		}
+		SPR_idea_expanded_consumer_goods = {
+			picture = chi_hyper_inflation
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.15
 			}
 		}
 		SPR_idea_money_from_sold_colonies1 = {

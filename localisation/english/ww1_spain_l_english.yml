@@ -655,10 +655,14 @@
  SPR_basic_fighters:0 "Basic Fighters"
  SPR_recon:0 "Modern Recon Planes"
  SPR_close_air_support:0 "Bombers and Airstrikes"
+ SPR_pablo_becomes_secratary.tt:0 "§8Pablo Iglesias will become a political advisor when the provisional government is finished, and a new government is installed.§W"
+ SPR_failure_to_contain_the_three_headed_crisis.tt:0 "§8This focus (or its mutually exclusive counterpart) is inevitable. It will only auto-complete if you complete every national focus you can regarding the Three Headed Crisis§W"
+ 
  #...
  ww1_spain.139.t:0 "The Rif War"
  ww1_spain.139.a:0 "I don't feel like coding anymorrrrrrrrrre"
  ww1_spain.139.d:0 "Welcome to the hangout lounge... Thanks for playing Spain."
+ 
  #Buy Ships Cosmetics
  spain_ships.1.ger.tt:0 "Create a §8Moltke Class§W ship from §8the German Empire§W                                                             Create a §8Ilthis Class§W ship by §8German Empire§W  Create a §8Kaiserin Augusta Class§W ship by §8German Empire§W"
  

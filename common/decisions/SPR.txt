@@ -1,3 +1,368 @@
+SPR_failure_to_contain_crisis = {
+	SPR_terrible_deadline = {
+		icon = GFX_decision_revolt
+		allowed = {
+			original_tag = SPR
+		}
+		activation = {
+			has_completed_focus = SPR_failure_to_contain_the_three_headed_crisis
+		}
+		available = {	
+			has_completed_focus = SPR_defeat_in_the_great_war
+		}
+		cancel_trigger = {
+			OR = {
+				has_completed_focus = SPR_the_government_survives
+				has_completed_focus = SPR_ensure_riveras_loyalty
+			}
+        }
+		priority = 100
+		days_mission_timeout = 365 #Placeholder make this change
+		fire_only_once = yes
+		is_good = no
+		
+		timeout_effect = {
+			set_global_flag = SPR_flag_terrible_deadline #makes sure confused player cant select it randomly
+			country_event = {
+				id = ww1_spain.2
+			}
+		}
+	}	
+	SPR_THC_reform_1 = { #Junta1
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = no
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			has_idea = SPR_idea_government_disorganized
+		}
+		cost = 25
+		days_re_enable = 15
+		days_remove = 5
+		modifier = {
+			political_power_factor = -0.03
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.075
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -675
+			}
+		}
+		remove_effect = {
+			add_stability = 0.03
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = -50
+				}
+			}
+		}
+		priority = 7
+	}
+	SPR_THC_reform_2 = { #Junta2
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 50
+		modifier = {
+			political_power_factor = -0.03
+		}
+		complete_effect = {
+			add_stability = -0.05
+			add_days_mission_timeout = {
+				mission = SPR_terrible_deadline
+				days = 50
+			}
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 150
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 150
+				}
+			}
+		}
+		priority = 7
+	}
+	SPR_THC_reform_3 = { #Cat3
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 50
+		days_remove = 75
+		modifier = {
+			political_power_factor = -0.03
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+		remove_effect = {
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = -50
+				}
+			}
+		}
+		priority = 7
+	}
+	SPR_THC_reform_4 = { #Cat4
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 75
+		modifier = {
+			political_power_factor = -0.03
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.025
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.025
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.025
+			}
+			add_days_mission_timeout = {
+				mission = SPR_terrible_deadline
+				days = 50
+			}
+		}
+		remove_effect = {
+			add_stability = -0.075
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 150
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 150
+				}
+			}
+		}
+		priority = 7
+	}
+	SPR_THC_reform_5 = { #Comm5
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 50
+		days_remove = 75
+		modifier = {
+			political_power_factor = -0.03
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.075
+			}
+		}
+		remove_effect = {
+			add_stability = 0.025
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = -100
+				}
+			}
+		}
+		priority = 7
+	}
+	SPR_THC_reform_6 = { #Comm6
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 75
+		modifier = {
+			political_power_factor = -0.03
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_days_mission_timeout = {
+				mission = SPR_terrible_deadline
+				days = 50
+			}
+		}
+		remove_effect = {
+			add_stability = -0.05
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 150
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 150
+				}
+			}
+		}
+		priority = 7
+	}
+	SPR_THC_reform_7 = { #Lower Time of Shambles
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 25
+		days_remove = 25
+		modifier = {
+			political_power_factor = -0.25
+		}
+		complete_effect = {
+			add_stability = -0.03
+		}
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = SPR_terrible_deadline
+				days = 50
+			}
+		}
+		priority = 7
+	}
+	SPR_final_reform = { #Has completed new focuses
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = yes
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			AND = {
+				has_completed_focus = SPR_the_juntas_are_obediant
+				has_completed_focus = SPR_the_assembly_is_history
+				has_completed_focus = SPR_the_people_are_happy
+			}
+		}
+		cost = 100
+		days_remove = 25
+		modifier = {
+			political_power_factor = -0.25
+		}
+		remove_effect = {
+			remove_ideas = SPR_idea_risk_of_governmental_collapse
+			complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
+		}
+		priority = 7
+	}
+}
 SPR_regional_autonomy_vs_junta = {
 	SPR_drag_the_skirmish = { #Ease the workload
 		fire_only_once = yes
@@ -165,9 +530,9 @@ SPR_el_turno_category = {
 		}
 		cost = 35
 		days_re_enable = 120
-		days_remove = 70
+		days_remove = 105
 		modifier = {
-			stability_weekly = 0.001
+			stability_weekly = 0.003
 		}
 		remove_effect = {
 			add_popularity = {
@@ -445,16 +810,9 @@ SPR_massive_strike_plans_category = {
 		}  
 		activation = {
 			always = yes
-			NOT = { 
-				OR = { 
-					has_completed_focus = SPR_success_in_containing_the_three_headed_crisis
-				}
-			}
 		}
 		available = {
-			OR = { 
-				has_completed_focus = SPR_adopt_furthur_social_reform
-			}
+			always = no
 		}
 		priority = 100
 		days_mission_timeout = 1050
@@ -496,11 +854,11 @@ SPR_massive_strike_plans_category = {
 			add_stability = 0.025
 			hidden_effect = {
 				country_event = {
-					id = ww1_spain.132
+					id = ww1_spain.133
 					days = 5
 				}
 				country_event = {
-					id = ww1_spain.130
+					id = ww1_spain.131
 					days = 5
 				}
 			}
@@ -540,11 +898,11 @@ SPR_massive_strike_plans_category = {
 			hidden_effect = {
 				country_event = {
 					id = ww1_spain.132
-					days = 5
+					days = 25
 				}
 				country_event = {
 					id = ww1_spain.130
-					days = 5
+					days = 25
 				}
 			}
 		}
@@ -574,16 +932,6 @@ SPR_massive_strike_plans_category = {
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.025
-			}
-			hidden_effect = {
-				country_event = {
-					id = ww1_spain.132
-					days = 5
-				}
-				country_event = {
-					id = ww1_spain.130
-					days = 5
-				}
 			}
 		}
 		priority = 7
