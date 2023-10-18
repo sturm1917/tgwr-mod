@@ -1229,7 +1229,7 @@ country_event = {
 	mean_time_to_happen = {	days = 15 }
 	trigger = {
 		original_tag = SPR
-		date > 1913.1.1
+		date > 1914.1.1
 		OR = {
 			has_completed_focus = SPR_modernization_program
 			has_completed_focus = SPR_abolish_el_turno
@@ -1358,7 +1358,6 @@ country_event = {
 		name = ww1_spain.9.a
 		add_stability = -0.01
 		ai_chance = { factor = 10 }
-		set_global_flag = catalonia_rises
 		hidden_effect = {
 			country_event = {
 				id = ww1_spain.132
@@ -1382,8 +1381,7 @@ country_event = {
 	mean_time_to_happen = {	days = 20 }
 	trigger = {
 		original_tag = SPR
-		has_global_flag = catalonia_rises
-		date > 1913.2.1
+		date > 1914.2.1
 		OR = {
 			has_completed_focus = SPR_modernization_program
 			has_completed_focus = SPR_abolish_el_turno
@@ -1394,6 +1392,7 @@ country_event = {
 	option = {
 		name = ww1_spain.10.a
 		ai_chance = { factor = 10 }
+		set_global_flag = catalonia_rises
 		complete_national_focus = SPR_catalonia_demands_regional_autonomy
 	}
 }
@@ -1410,7 +1409,7 @@ country_event = {
 		original_tag = SPR
 		has_completed_focus = SPR_catalonia_demands_regional_autonomy
 		has_global_flag = catalonia_rises
-		date > 1913.3.1
+		date > 1914.3.1
 		OR = {
 			has_completed_focus = SPR_modernization_program
 			has_completed_focus = SPR_abolish_el_turno

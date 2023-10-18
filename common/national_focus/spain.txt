@@ -1549,7 +1549,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_deify_the_dictator
-		icon = GFX_focus_GRE_a_land_of_mountains
+		icon = GFX_focus_generic_limited_social_mobilization
 		mutually_exclusive = { focus = SPR_real_atheism }
 		cost = 2.9 #days
 		x = 4
@@ -1599,6 +1599,7 @@ focus_tree = {
 			focus = SPR_god_then_the_majesty
 			focus = SPR_all_owe_loyalty_to_the_king
 			focus = SPR_real_atheism
+			focus = SPR_deify_the_dictator
 		}
 		available = {
 			SPR = {
@@ -4381,6 +4382,7 @@ focus_tree = {
 	focus = {
 		id = SPR_forcefully_weaken_the_caudillos
 		icon = GFX_focus_generic_manpower
+		mutually_exclusive = { focus = SPR_lower_public_opinion_of_the_caudillos }
 		cost = 5 #days
 		x = -2
 		y = 11
@@ -4444,6 +4446,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_lower_public_opinion_of_the_caudillos
+		mutually_exclusive = { focus = SPR_forcefully_weaken_the_caudillos }
 		icon = GFX_goal_generic_propaganda
 		cost = 5 #days
 		x = 2
@@ -5662,7 +5665,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5700,7 +5702,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5732,7 +5733,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5880,7 +5880,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5920,7 +5919,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5968,7 +5966,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6006,7 +6003,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6043,7 +6039,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6117,7 +6112,6 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_global_flag = caved_into_the_strikers
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6156,6 +6150,13 @@ focus_tree = {
 			focus = SPR_reform_el_turno
 		}
 		completion_reward = {
+			remove_ideas = {
+				SPR_idea_protests_for_regional_autonomy
+				SPR_idea_movements_for_regional_autonomy
+				SPR_idea_plots_for_regional_autonomy
+				SPR_idea_revolutionary_calls_for_regional_autonomy
+				SPR_idea_whispers_for_regional_autonomy
+			}
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05	
@@ -6300,6 +6301,7 @@ focus_tree = {
 			focus = SPR_send_in_the_military
 			focus = SPR_adopt_furthur_social_reform
 			focus = SPR_junta_and_catalonian_autonomy_incompatible
+			focus = SPR_forcefully_dissolve_the_assembly
 		}
 		available = {
 			has_global_flag = SPR_flag_gauge_our_position #make decisions
@@ -6327,6 +6329,15 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_gauge_our_position
+		}
+		prerequisite = {
+			focus = SPR_the_assembly_is_history
+		}
+		prerequisite = {
+			focus = SPR_the_people_are_happy
+		}
+		prerequisite = {
+			focus = SPR_the_juntas_are_obediant
 		}
 		completion_reward = {
 			add_political_power = -125
@@ -7477,6 +7488,15 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_gauge_our_position
 		} 
+		prerequisite = {
+			focus = SPR_the_assembly_is_history
+		}
+		prerequisite = {
+			focus = SPR_the_people_are_happy
+		}
+		prerequisite = {
+			focus = SPR_the_juntas_are_obediant
+		}
 		completion_reward = {
 			add_political_power = 50
 			custom_effect_tooltip = SPR_failure_to_contain_the_three_headed_crisis.tt

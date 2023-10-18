@@ -830,7 +830,7 @@ SPR_massive_strike_plans_category = {
 			always = no
 		}
 		priority = 100
-		days_mission_timeout = 1050
+		days_mission_timeout = 1250
 		fire_only_once = yes
 		is_good = no
 		
