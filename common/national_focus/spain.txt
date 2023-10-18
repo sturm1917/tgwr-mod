@@ -4678,6 +4678,18 @@ focus_tree = {
 				add_political_power = 25
 				add_stability = -0.05
 			}
+			hidden_effect = {
+				remove_ideas = {
+					SPR_idea_united_liberal_party
+					SPR_idea_split_liberal_party
+					SPR_idea_several_liberal_party
+					SPR_idea_fractured_liberal_party
+					SPR_idea_united_conservative_party
+					SPR_idea_split_conservative_party
+					SPR_idea_several_conservative_party
+					SPR_idea_fractured_conservative_party
+				}
+			}
 		}
 	}
 	focus = {
@@ -4792,7 +4804,10 @@ focus_tree = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
-			has_completed_focus = SPR_adopt_furthur_social_reform
+			OR = {
+				has_completed_focus = SPR_adopt_furthur_social_reform
+				has_completed_focus = SPR_arrest_signatories_of_the_manifesto
+			}
 		}
 		prerequisite = {
 			focus = SPR_offer_more_seats_to_rural_areas
@@ -6308,12 +6323,7 @@ focus_tree = {
 			always = yes
 		}
 		available = {
-			has_completed_focus = SPR_continue_skilled_promotion
-			OR = {
-				has_completed_focus = SPR_strengthen_the_punishment
-				has_completed_focus = SPR_rights_and_insurance_legislation
-			}
-			has_completed_focus = SPR_outlaw_pistolerismo
+			always = no
 		}
 		prerequisite = {
 			focus = SPR_gauge_our_position
@@ -7462,13 +7472,7 @@ focus_tree = {
 			always = yes
 		}
 		available = {
-			has_completed_focus = SPR_continue_skilled_promotion
-			OR = {
-				has_completed_focus = SPR_strengthen_the_punishment
-				has_completed_focus = SPR_rights_and_insurance_legislation
-			}
-			has_completed_focus = SPR_outlaw_pistolerismo
-			has_global_flag = new_spanish_prime_minister_in_office
+			always = no
 		}
 		prerequisite = {
 			focus = SPR_gauge_our_position
@@ -7964,6 +7968,16 @@ focus_tree = {
 				deactivate_advisor = SPR_manuel_pm
 				deactivate_advisor = SPR_eduardo_dato_pm
 				deactivate_advisor = SPR_sanchez_pm
+				remove_ideas = {
+					SPR_idea_united_liberal_party
+					SPR_idea_split_liberal_party
+					SPR_idea_several_liberal_party
+					SPR_idea_fractured_liberal_party
+					SPR_idea_united_conservative_party
+					SPR_idea_split_conservative_party
+					SPR_idea_several_conservative_party
+					SPR_idea_fractured_conservative_party
+				}
 			}
 			activate_advisor = SPR_maura
 			clr_global_flag = SPR_flag_maura_truly_in_office

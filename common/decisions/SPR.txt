@@ -489,6 +489,7 @@ SPR_regional_autonomy_vs_junta = {
 			add_stability = 0.05
 			remove_ideas = SPR_idea_juntas_de_defensa
 			remove_ideas = SPR_idea_autonomous_catalonia
+			set_global_flag = SPR_flag_juntas_crush_catalonia
 		}
 		priority = 7
 	}
@@ -555,7 +556,14 @@ SPR_el_turno_category = {
 			NOT = { has_idea = SPR_idea_united_liberal_party }
 		}
 		visible = {
-			always = yes
+			OR = {
+				NOT = {
+					has_completed_focus = SPR_abolish_el_turno
+				}
+				NOT = {
+					has_completed_focus = SPR_reform_el_turno
+				}
+			}
 		}
 		cost = 50
 		days_re_enable = 50
@@ -689,7 +697,14 @@ SPR_el_turno_category = {
 			NOT = { has_idea = SPR_idea_united_conservative_party }
 		}	
 		visible = {
-			always = yes
+			OR = {
+				NOT = {
+					has_completed_focus = SPR_abolish_el_turno
+				}
+				NOT = {
+					has_completed_focus = SPR_reform_el_turno
+				}
+			}
 		}
 
 		cost = 50
