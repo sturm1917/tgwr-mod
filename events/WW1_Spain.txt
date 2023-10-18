@@ -1233,6 +1233,7 @@ country_event = {
 		OR = {
 			has_completed_focus = SPR_modernization_program
 			has_completed_focus = SPR_abolish_el_turno
+			has_completed_focus = SPR_reform_el_turno
 		}
 	}
 	
@@ -1386,6 +1387,7 @@ country_event = {
 		OR = {
 			has_completed_focus = SPR_modernization_program
 			has_completed_focus = SPR_abolish_el_turno
+			has_completed_focus = SPR_reform_el_turno
 		}
 	}
 	
@@ -1412,6 +1414,7 @@ country_event = {
 		OR = {
 			has_completed_focus = SPR_modernization_program
 			has_completed_focus = SPR_abolish_el_turno
+			has_completed_focus = SPR_reform_el_turno
 		}
 	}
 	
@@ -1576,7 +1579,7 @@ country_event = {
 		}
 		OR = {
 			has_country_flag = great_war_loser
-			democratic > 0.99
+			democratic > 0.8
 			AND = {
 				date > 1931.4.1
 				NOT = {
@@ -3379,7 +3382,6 @@ country_event = {
 	mean_time_to_happen = { days = 50 }
 	trigger = {
 		AND = {
-			has_completed_focus = SPR_gauge_our_position
 			
 			AND = { #Life
 				has_completed_focus = SPR_continue_skilled_promotion
@@ -3387,7 +3389,6 @@ country_event = {
 					has_completed_focus = SPR_strengthen_the_punishment
 					has_completed_focus = SPR_rights_and_insurance_legislation
 				}
-				has_completed_focus = SPR_outlaw_pistolerismo
 			} 
 			
 			OR = {
@@ -3445,7 +3446,6 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = { days = 5 }
 	trigger = {
-		has_completed_focus = SPR_gauge_our_position
 		AND = {
 			has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
 			has_completed_focus = SPR_adopt_furthur_social_reform
@@ -3455,7 +3455,6 @@ country_event = {
 				has_completed_focus = SPR_strengthen_the_punishment
 				has_completed_focus = SPR_rights_and_insurance_legislation
 			}
-			has_completed_focus = SPR_outlaw_pistolerismo
 		}
 	}
 	option = {
@@ -3482,7 +3481,6 @@ country_event = {
 					has_completed_focus = SPR_strengthen_the_punishment
 					has_completed_focus = SPR_rights_and_insurance_legislation
 				}
-				has_completed_focus = SPR_outlaw_pistolerismo
 			} 
 			OR = {
 				AND = {
@@ -3557,7 +3555,7 @@ country_event = {
 		name = ww1_spain.146.a
 		ai_chance = { factor = 10 }
 		mark_focus_tree_layout_dirty = yes
-		clr_global_flag = SPR_visible_focuses_rule_THC
-		#set_global_flag = SPR_visible_focuses_rule_THC
+		#clr_global_flag = SPR_visible_focuses_rule_THC
+		set_global_flag = SPR_visible_focuses_rule_THC
 	}
 }

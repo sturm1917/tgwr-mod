@@ -102,6 +102,16 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_political_power = -35
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 15
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
@@ -250,6 +260,16 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
@@ -378,6 +398,16 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 15
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
@@ -444,11 +474,11 @@ focus_tree = {
 			add_ideas = SPR_idea_krausism_and_scientists
 			hidden_effect = {
 				country_event = {
-					id = ww1_spain.132
+					id = ww1_spain.133
 					days = 5
 				}
 				country_event = {
-					id = ww1_spain.130
+					id = ww1_spain.131
 					days = 5
 				}
 			}
@@ -592,7 +622,7 @@ focus_tree = {
 				}
 				country_event = {
 					id = ww1_spain.130
-					days = 5
+					days = 15
 				}
 			}
 			add_political_power = 150
@@ -910,6 +940,16 @@ focus_tree = {
 				}
 				add_war_support = 0.05
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
@@ -1085,7 +1125,16 @@ focus_tree = {
 					popularity = 0.03
 				}
 			}
-			
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
+			}
 			
 		}
 	}
@@ -1188,11 +1237,20 @@ focus_tree = {
 				}
 				add_stability = -0.1
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_welcome_other_religions
-		mutually_exclusive = { focus = SPR_propose_the_idea_of_atheism }
 		icon = GFX_goal_tripartite_pact
 		cost = 2.9 #days
 		x = 3
@@ -1408,12 +1466,21 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.1
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
 		id = SPR_propose_the_idea_of_atheism
 		icon = GFX_goal_molotov_ribbentrop_pact
-		mutually_exclusive = { focus = SPR_welcome_other_religions }
 		cost = 2.9 #days
 		x = 5
 		y = 3
@@ -1446,8 +1513,9 @@ focus_tree = {
 	focus = {
 		id = SPR_real_atheism
 		icon = GFX_focus_GRE_a_land_of_mountains
+		mutually_exclusive = { focus = SPR_deify_the_dictator }
 		cost = 2.9 #days
-		x = 5
+		x = 6
 		y = 4
 		relative_position_id = SPR_the_question_of_religion
 		ai_will_do = {
@@ -1475,6 +1543,43 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_deify_the_dictator
+		icon = GFX_focus_GRE_a_land_of_mountains
+		mutually_exclusive = { focus = SPR_real_atheism }
+		cost = 2.9 #days
+		x = 4
+		y = 4
+		relative_position_id = SPR_the_question_of_religion
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_propose_the_idea_of_atheism
+		}
+		available = {
+			SPR = {
+				has_government = neutrality
+			}
+			has_global_flag = new_spanish_prime_minister_in_office
+			is_subject = no
+			has_war = no
+		}
+		completion_reward = {
+			SPR = { 
+				add_stability = 0.05
+				add_political_power = -50
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
 				popularity = 0.05
 			}
 		}
@@ -4652,7 +4757,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_rerun_el_turno
-		icon = GFX_focus_spr_war_of_independence
+		icon = GFX_focus_prc_infiltration
 		cost = 2.9 #days
 		x = 8
 		y = 14
@@ -4687,6 +4792,7 @@ focus_tree = {
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
+			has_completed_focus = SPR_adopt_furthur_social_reform
 		}
 		prerequisite = {
 			focus = SPR_offer_more_seats_to_rural_areas
@@ -6209,9 +6315,9 @@ focus_tree = {
 			}
 			has_completed_focus = SPR_outlaw_pistolerismo
 		}
-		#prerequisite = {
-		#	focus = SPR_gauge_our_position
-		#}
+		prerequisite = {
+			focus = SPR_gauge_our_position
+		}
 		completion_reward = {
 			add_political_power = -125
 			add_ideas = SPR_idea_risk_of_governmental_collapse
@@ -6225,6 +6331,7 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.15
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	#Hidden
@@ -6247,7 +6354,6 @@ focus_tree = {
 				has_completed_focus = SPR_strengthen_the_punishment
 				has_completed_focus = SPR_rights_and_insurance_legislation
 			}
-			has_completed_focus = SPR_outlaw_pistolerismo
 		}
 		prerequisite = {
 			focus = SPR_modernization_program
@@ -6337,9 +6443,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6400,9 +6504,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6486,9 +6588,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6545,9 +6645,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6605,9 +6703,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6661,9 +6757,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6749,9 +6843,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6838,9 +6930,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6931,9 +7021,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -6990,9 +7078,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -7076,9 +7162,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -7137,9 +7221,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -7204,9 +7286,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -7270,9 +7350,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -7310,9 +7388,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}
@@ -7346,9 +7422,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			NOT = {
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
+			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_idea = SPR_idea_government_disorganized
 			}

@@ -125,7 +125,7 @@ characters={
 		name="SPR_melquiades_alvarez"
 		portraits={
 			civilian={
-				large="gfx/leaders/SPR/portrait_SPR_melquiades"
+				large="gfx/leaders/SPR/portrait_SPR_melquiades.png"
 			}
 		}
 		country_leader={
