@@ -2412,7 +2412,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_SPR_idea_ignacio_hidalgo"
-		texturefile = "gfx/interface/ideas/SPR/idea_ignacio_hidalgo.png"
+		texturefile = "gfx/interface/ideas/idea_ignacio_hidalgo.png"
 	}
 	#Ukraine
 	spriteType = {
