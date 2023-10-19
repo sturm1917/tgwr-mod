@@ -26,7 +26,6 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
 			has_war = no
 		}
 		completion_reward = {
@@ -56,7 +55,6 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
 			has_war = no
 		}
 		prerequisite = {
@@ -90,7 +88,6 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
 			has_war = no
 		}
 		prerequisite = {
@@ -128,7 +125,6 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
 			has_war = no
 		}
 		prerequisite = {
@@ -154,7 +150,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			 
 			has_war = no
 		}
 		prerequisite = {
@@ -194,7 +190,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			 
 			has_war = no
 		}
 		prerequisite = {
@@ -233,7 +229,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			 
 			has_war = no
 		}
 		prerequisite = {
@@ -297,7 +293,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			 
 			has_war = no
 		}
 		prerequisite = {
@@ -333,7 +329,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -369,7 +365,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -434,7 +430,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -462,7 +458,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -508,7 +504,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -565,7 +561,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -606,7 +602,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -634,7 +630,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -669,7 +665,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		prerequisite = {
@@ -705,18 +701,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			IF = {
-				limit = { has_idea = SPR_idea_strong_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_strong_catholicism
-					add_idea = SPR_idea_mild_catholicism
-				}
+				limit = { has_idea = SPR_idea_secular_state }
+				add_stability = 0.05
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_mild_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_mild_catholicism
-					add_idea = SPR_idea_weak_catholicism
-				}
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_weak_catholicism }
@@ -726,14 +717,26 @@ focus_tree = {
 				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_catholic_nation }
-				remove_ideas = SPR_idea_catholic_nation
-				add_ideas = SPR_idea_strong_catholicism
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_freedom_of_religion }
-				remove_ideas = SPR_idea_freedom_of_religion
-				add_ideas = SPR_idea_secular_state
+				limit = { has_idea = SPR_idea_catholic_nation }
+				swap_ideas = {
+					remove_ideas = SPR_idea_catholic_nation
+					add_ideas = SPR_idea_strong_catholicism
+				}
 			}
 			add_political_power = 25	
 		}
@@ -757,7 +760,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -785,7 +788,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -818,7 +821,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -855,7 +858,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -885,7 +888,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -926,7 +929,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -964,7 +967,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1005,7 +1008,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1064,7 +1067,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1091,7 +1094,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1158,7 +1161,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1201,7 +1204,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1233,7 +1236,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1271,7 +1274,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1312,7 +1315,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1403,7 +1406,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1429,7 +1432,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1495,7 +1498,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1541,7 +1544,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1574,7 +1577,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1611,7 +1614,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1651,7 +1654,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			has_war = no
 		}
 		completion_reward = {
@@ -1673,7 +1676,7 @@ focus_tree = {
 			focus = SPR_parliamentary_landslide
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -1700,7 +1703,7 @@ focus_tree = {
 			focus = SPR_electoral_reforms
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -1756,22 +1759,17 @@ focus_tree = {
 			}
 		available = {
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 		}
 		completion_reward = {
 			IF = {
-				limit = { has_idea = SPR_idea_strong_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_strong_catholicism
-					add_idea = SPR_idea_mild_catholicism
-				}
+				limit = { has_idea = SPR_idea_secular_state }
+				add_stability = 0.05
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_mild_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_mild_catholicism
-					add_idea = SPR_idea_weak_catholicism
-				}
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_weak_catholicism }
@@ -1781,14 +1779,26 @@ focus_tree = {
 				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_catholic_nation }
-				remove_ideas = SPR_idea_catholic_nation
-				add_ideas = SPR_idea_strong_catholicism
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_freedom_of_religion }
-				remove_ideas = SPR_idea_freedom_of_religion
-				add_ideas = SPR_idea_secular_state
+				limit = { has_idea = SPR_idea_catholic_nation }
+				swap_ideas = {
+					remove_ideas = SPR_idea_catholic_nation
+					add_ideas = SPR_idea_strong_catholicism
+				}
 			}
 		}
 	}
@@ -1807,7 +1817,7 @@ focus_tree = {
 			focus = SPR_parliamentary_landslide
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -1851,7 +1861,7 @@ focus_tree = {
 			focus = SPR_curb_the_independent_bosses
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -1887,7 +1897,7 @@ focus_tree = {
 			focus = SPR_continue_the_reforms
 		}
 		available = {
-			is_subject = no
+			
 		}
 		completion_reward = {
 			SPR = {
@@ -1920,7 +1930,7 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = new_spanish_prime_minister_in_office
-			is_subject = no
+			
 			NOT = {
 				has_idea = SPR_idea_prime_minister_jose
 			}
@@ -1943,7 +1953,7 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			is_subject = no
+			
 		}
 		completion_reward = {
 			SPR = {
@@ -1964,7 +1974,7 @@ focus_tree = {
 			focus = SPR_the_new_prime_minister
 		}
 		available = {
-			is_subject = no
+			
 		}
 		completion_reward = {
 			SPR = {
@@ -1986,7 +1996,7 @@ focus_tree = {
 			focus = SPR_begin_the_executive_transfer_of_power
 		}
 		available = {
-			is_subject = no
+			
 		}
 		completion_reward = {
 			SPR = {
@@ -2008,7 +2018,7 @@ focus_tree = {
 			focus = SPR_begin_the_executive_transfer_of_power
 		}
 		available = {
-			is_subject = no
+			
 		}
 		completion_reward = {
 			SPR = {
@@ -2044,7 +2054,7 @@ focus_tree = {
 			focus = SPR_inaugarate_the_prime_minister
 		}
 		available = {
-			is_subject = no
+			
 		}
 		completion_reward = {
 			SPR = {
@@ -2073,7 +2083,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -2230,7 +2240,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2258,7 +2268,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2316,7 +2326,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2341,7 +2351,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2368,7 +2378,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2393,7 +2403,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2425,7 +2435,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2437,13 +2447,13 @@ focus_tree = {
 				days = 160
 			}
 			add_stability = 0.05
-			41 = {
+		176 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 			}		
 		}
 	}
@@ -2458,7 +2468,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2498,7 +2508,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2523,7 +2533,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2552,7 +2562,7 @@ focus_tree = {
 			focus = SPR_modernize_the_military
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -2575,7 +2585,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2625,7 +2635,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2656,7 +2666,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			GER = {
 				has_tech = artillery1
@@ -2696,7 +2706,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			FRA = {
 				has_tech = artillery1
@@ -2736,7 +2746,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			FRA = {
 				has_tech = support_weapons3
@@ -2777,7 +2787,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			ENG = {
 				has_tech = support_weapons3
@@ -2817,7 +2827,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -2843,7 +2853,7 @@ focus_tree = {
 			focus = SPR_hold_military_parades
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -2868,7 +2878,7 @@ focus_tree = {
 			focus = SPR_purchase_weaponry
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -2890,7 +2900,7 @@ focus_tree = {
 			focus = SPR_modernize_the_military
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -2908,7 +2918,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -2943,7 +2953,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = Agadir_negotiations_succeeded
 		}
@@ -3019,7 +3029,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = Agadir_negotiations_failed
 		}
@@ -3043,7 +3053,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -3077,7 +3087,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = conservative_majority
 			NOT = {
@@ -3109,7 +3119,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = liberal_majority
 			NOT = {
@@ -3139,7 +3149,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -3185,7 +3195,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -3213,7 +3223,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -3241,7 +3251,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -3275,7 +3285,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3301,7 +3311,7 @@ focus_tree = {
 			focus = SPR_the_spanish_navy
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			
 		}
@@ -3323,7 +3333,7 @@ focus_tree = {
 			focus = SPR_appoint_admiral_miranda
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3353,7 +3363,7 @@ focus_tree = {
 			focus = SPR_converse_with_the_superpowers
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			ENG = {
 				has_tech = basic_ship_hull_heavy
@@ -3473,7 +3483,7 @@ focus_tree = {
 			focus = SPR_converse_with_the_superpowers
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			JAP = {
 				has_tech = basic_ship_hull_heavy
@@ -3594,7 +3604,7 @@ focus_tree = {
 			focus = SPR_converse_with_the_superpowers
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			GER = {
 				has_tech = basic_ship_hull_heavy
@@ -3710,7 +3720,7 @@ focus_tree = {
 			focus = SPR_appoint_admiral_miranda
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3732,7 +3742,7 @@ focus_tree = {
 			focus = SPR_the_spanish_navy
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3753,7 +3763,7 @@ focus_tree = {
 			focus = SPR_fund_dr_cornejo
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3774,7 +3784,7 @@ focus_tree = {
 			focus = SPR_fund_dr_cornejo
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3802,7 +3812,7 @@ focus_tree = {
 			focus = SPR_catching_up_technologically
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3830,7 +3840,7 @@ focus_tree = {
 			focus = SPR_catching_up_technologically
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3859,7 +3869,7 @@ focus_tree = {
 		}
 		available = {
 			always = no
-			#is_subject = no
+			#
 			#has_global_flag = new_spanish_prime_minister_in_office
 			#GER = {
 			#	has_war_with = FRA
@@ -3897,7 +3907,7 @@ focus_tree = {
 			focus = SPR_look_to_the_future
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_completed_focus = SPR_spain_reenters_the_world_stage
 		}
@@ -3917,7 +3927,7 @@ focus_tree = {
 		}
 		available = {
 			always = no
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3942,7 +3952,7 @@ focus_tree = {
 			focus = SPR_the_spanish_airforce
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3967,7 +3977,7 @@ focus_tree = {
 			focus = SPR_basic_fighters
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -3992,7 +4002,7 @@ focus_tree = {
 			focus = SPR_basic_fighters
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -4022,7 +4032,7 @@ focus_tree = {
 			focus = SPR_the_spanish_airforce
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -4051,7 +4061,7 @@ focus_tree = {
 			GER = {
 				has_war_with = FRA
 			}
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -4069,7 +4079,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -4082,15 +4092,15 @@ focus_tree = {
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 15000
-				target = FRA
+				target = GER
 			}
 			send_equipment = {
 				equipment = artillery_equipment
 				amount = 1200
-				target = FRA
+				target = GER
 			}
 			add_political_power = 75
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 	focus = {
@@ -4104,7 +4114,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -4115,11 +4125,10 @@ focus_tree = {
 			send_equipment = {
 				equipment = support_equipment
 				amount = 1800
-				target = GER
+				target = FRA
 			}
 			add_political_power = 75
 			add_stability = -0.01
-			add_offsite_building = { type = industrial_complex level = 2 }
 		}
 	}
 	focus = {
@@ -4133,7 +4142,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -4152,7 +4161,7 @@ focus_tree = {
 				target = ENG
 			}	
 			add_political_power = 75
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 	focus = {
@@ -4173,7 +4182,7 @@ focus_tree = {
 			GER = {
 				has_war_with = FRA
 			}
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -4194,7 +4203,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
@@ -4289,7 +4298,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
@@ -4321,7 +4330,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
@@ -4373,7 +4382,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
@@ -4407,7 +4416,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
@@ -4456,7 +4465,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_conservative_spanish_prime_minister_in_office
 		}
@@ -4521,7 +4530,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4587,7 +4596,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4638,7 +4647,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4680,14 +4689,8 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			OR = {
-				has_completed_focus = SPR_god_then_the_majesty
-				AND = {
-					has_completed_focus = SPR_real_atheism
-					has_completed_focus = SPR_all_owe_loyalty_to_the_king
-				}
-			}
-			is_subject = no
+			
+			has_completed_focus = SPR_spains_religious_policy
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 			NOT = {
@@ -4704,6 +4707,12 @@ focus_tree = {
 			focus = SPR_civil_marriage_law
 		}
 		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = SPR_permanent_catholicsm
+				}
+				add_political_power = -75
+			}
 			hidden_effect = {
 				country_event = {
 					id = ww1_spain.133
@@ -4726,7 +4735,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 			OR = {
@@ -4761,7 +4770,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4792,7 +4801,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4803,6 +4812,9 @@ focus_tree = {
 			focus = SPR_reform_el_turno
 		}
 		completion_reward = {
+			SPR = {
+				set_cosmetic_tag = SPR_social_liberals
+			}
 			add_ideas = SPR_alfonso_xiii
 			add_popularity = {
 				ideology = democratic
@@ -4859,7 +4871,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4892,7 +4904,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 			OR = {
@@ -4934,7 +4946,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4957,7 +4969,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -4988,7 +5000,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5013,7 +5025,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5040,7 +5052,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5073,7 +5085,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5098,7 +5110,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5135,7 +5147,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5146,6 +5158,9 @@ focus_tree = {
 			focus = SPR_president_melquiades
 		}
 		completion_reward = {
+			SPR = {
+				set_cosmetic_tag = SPR_el_liberal
+			}
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = no
@@ -5169,7 +5184,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5201,7 +5216,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5242,7 +5257,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
 		}
@@ -5274,7 +5289,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_completed_focus = SPR_furthur_weaken_the_church
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
@@ -5332,7 +5347,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5364,7 +5379,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5386,7 +5401,7 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = SPR_continue_expansion 
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			FRA = {
 				has_defensive_war_with = GER
@@ -5416,7 +5431,7 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = SPR_continue_expansion 
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5444,7 +5459,7 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = SPR_continue_expansion 
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5466,7 +5481,7 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = SPR_continue_expansion 
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5491,7 +5506,7 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = SPR_continue_expansion 
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5529,7 +5544,7 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = SPR_continue_expansion 
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5555,7 +5570,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			OR = {
 				is_in_faction_with = GER
@@ -5596,7 +5611,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			OR = {
 				is_in_faction_with = GER
@@ -5640,7 +5655,7 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = SPR_spains_religious_policy
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_completed_focus = SPR_abolish_el_turno
@@ -5648,6 +5663,7 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = SPR_reform_el_turno
 			}
+			has_completed_focus = SPR_spains_religious_policy
 		}
 		prerequisite = {
 			focus = SPR_forcefully_weaken_the_caudillos
@@ -5682,7 +5698,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = SPR_flag_juntas_operate
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -5716,7 +5732,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = military_tears_down_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -5773,7 +5789,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5810,7 +5826,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5841,7 +5857,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -5870,7 +5886,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = allowed_juntas
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -5927,7 +5943,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = proletariat_strikes
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -5963,7 +5979,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = arrest_leaders_of_the_strike
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -6008,7 +6024,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6047,7 +6063,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6094,7 +6110,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6131,7 +6147,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6167,7 +6183,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6202,7 +6218,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = caved_into_the_strikers
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -6250,7 +6266,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -6289,7 +6305,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = catalonia_rises
 		}
@@ -6299,13 +6315,16 @@ focus_tree = {
 			focus = SPR_reform_el_turno
 		}
 		completion_reward = {
-			remove_ideas = {
-				SPR_idea_protests_for_regional_autonomy
-				SPR_idea_movements_for_regional_autonomy
-				SPR_idea_plots_for_regional_autonomy
-				SPR_idea_revolutionary_calls_for_regional_autonomy
-				SPR_idea_whispers_for_regional_autonomy
+			hidden_effect = {
+				remove_ideas = {
+					SPR_idea_protests_for_regional_autonomy
+					SPR_idea_movements_for_regional_autonomy
+					SPR_idea_plots_for_regional_autonomy
+					SPR_idea_revolutionary_calls_for_regional_autonomy
+					SPR_idea_whispers_for_regional_autonomy
+				}
 			}
+			add_ideas = { SPR_idea_catalonian_assembly }
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05	
@@ -6329,7 +6348,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = regional_autonomy_accepted
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -6337,6 +6356,7 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
+			remove_ideas = { SPR_idea_catalonian_assembly }
 			add_ideas = { SPR_idea_autonomous_catalonia }
 			add_political_power = -25
 			add_stability = -0.1
@@ -6373,7 +6393,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			OR = {
 				has_global_flag = regional_autonomy_refused
@@ -6384,6 +6404,7 @@ focus_tree = {
 			focus = SPR_catalonia_demands_regional_autonomy
 		}
 		completion_reward = {
+			remove_ideas = { SPR_idea_catalonian_assembly }
 			set_global_flag = SPR_flag_assembly_failure_in_three #Decisions if Fail
 			add_political_power = 75
 			add_popularity = {
@@ -6434,7 +6455,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = SPR_flag_juntas_crush_catalonia
 		}
@@ -7767,7 +7788,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = SPR_flag_terrible_deadline
 		}
@@ -7797,7 +7818,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = SPR_flag_curbed_the_crisis
 		}
@@ -7835,7 +7856,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -7862,7 +7883,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -7928,7 +7949,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -7969,7 +7990,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_completed_focus = SPR_our_colonial_empire
 		}
@@ -7995,7 +8016,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8026,7 +8047,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8052,15 +8073,14 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
-			has_completed_focus = SPR_permanent_catholicsm
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_completed_focus = SPR_modernization_program
 			}
 			NOT = {
-				has_completed_focus = SPR_fuse_with_the_romanonist
+				has_completed_focus = SPR_reform_el_turno
 			}
+			has_completed_focus = SPR_spains_religious_policy
 		}
 		prerequisite = {
 			focus = SPR_push_for_more_catholicism
@@ -8069,11 +8089,30 @@ focus_tree = {
 			focus = SPR_law_of_sunday_rest
 		}
 		completion_reward = {
+			IF = {
+				limit = {
+					OR = {
+						has_completed_focus = SPR_god_then_the_majesty
+						has_completed_focus = SPR_all_owe_loyalty_to_the_king
+						has_completed_focus = SPR_real_atheism
+					}
+				}
+				add_political_power = -75
+				add_stability = -0.1
+			}
+			IF = {
+				limit = {
+					OR = {
+						has_completed_focus = SPR_deify_the_dictator
+						has_completed_focus = SPR_permanent_catholicsm
+					}
+				}
+				add_stability = -0.05
+			}
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-			add_stability = -0.05
 		}
 	}
 	focus = {
@@ -8088,7 +8127,6 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8112,7 +8150,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8145,7 +8183,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8169,7 +8207,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_completed_focus = SPR_continue_el_turno
@@ -8224,7 +8262,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8253,7 +8291,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8275,7 +8313,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8330,7 +8368,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8358,7 +8396,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_completed_focus = SPR_abolish_el_turno
@@ -8382,7 +8420,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_completed_focus = SPR_abolish_el_turno
@@ -8408,7 +8446,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8442,7 +8480,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8467,7 +8505,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8494,7 +8532,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			has_global_flag = jaime_iii_in_austria
 		}
@@ -8523,7 +8561,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_global_flag = jaime_iii_in_austria
@@ -8555,7 +8593,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8583,7 +8621,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8604,7 +8642,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8630,6 +8668,9 @@ focus_tree = {
 				keep_political_party_members = yes
 				keep_all_characters = yes #remove alfonso...
 				keep_political_leader = yes
+			}
+			SPR = {
+				set_cosmetic_tag = SPR_carlists
 			}
 			hidden_effect = {
 				remove_ideas = SPR_idea_prime_minister_maura
@@ -8673,7 +8714,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8728,7 +8769,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8760,7 +8801,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8791,7 +8832,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
+			
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
@@ -8820,7 +8861,6 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {

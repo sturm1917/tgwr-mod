@@ -14,6 +14,7 @@ recruit_character = SPR_jose_pm
 recruit_character = SPR_roberto_castrovido
 recruit_character = SPR_juan_olazabal
 
+recruit_character = SPR_niceto_alcalazamora
 recruit_character = SPR_melquiades_alvarez
 recruit_character = SPR_pablo_iglesias
 recruit_character = SPR_jose_pm

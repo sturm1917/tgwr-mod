@@ -754,6 +754,39 @@ ideas = {
 			}
 		}
 		
+		SPR_idea_catalonian_assembly = {
+			picture = hol_the_foundations_of_defense
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.002
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.05
+				min_export = -0.5
+				production_speed_buildings_factor = -0.35
+			}
+		}
+		
+		SPR_idea_autonomous_catalonia = {
+		picture = FRA_matignon_agreements
+			allowed = {
+				original_tag = SPR
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.001
+				democratic_acceptance = 85
+				industrial_capacity_factory = -0.05
+				min_export = -0.85
+				production_speed_buildings_factor = -0.35
+			}
+		}
+		
 		SPR_idea_revolutionary_calls_for_regional_autonomy = {
 		picture = regional_autonomy_movements
 			allowed = {
@@ -766,6 +799,8 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.004
 				political_power_factor = -0.04
+				min_export = -0.8
+				production_speed_buildings_factor = -0.4
 			}
 		}
 		
@@ -781,6 +816,8 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.003
 				political_power_factor = -0.04
+				min_export = -0.65
+				production_speed_buildings_factor = -0.3
 			}
 		}
 		
@@ -796,6 +833,8 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.003
 				political_power_factor = -0.02
+				min_export = -0.65
+				production_speed_buildings_factor = -0.25
 			}
 		}
 		
@@ -811,6 +850,8 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.002
 				political_power_factor = -0.02
+				min_export = -0.65
+				production_speed_buildings_factor = -0.2
 			}
 		}
 		
@@ -825,6 +866,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
+				min_export = -0.5
+				production_speed_buildings_factor = -0.15
 			}
 		}
 		
@@ -978,18 +1021,6 @@ ideas = {
 				war_support_weekly = -0.001
 				fascism_acceptance = 85
 				experience_gain_army_unit = -0.5
-			}
-		}
-		SPR_idea_autonomous_catalonia = {
-		picture = FRA_matignon_agreements
-			allowed = {
-				original_tag = SPR
-			}
-			removal_cost = -1
-			modifier = {
-				stability_weekly = -0.001
-				democratic_acceptance = 85
-				industrial_capacity_factory = -0.05
 			}
 		}
 		SPR_idea_coexistence_with_catalonia = {

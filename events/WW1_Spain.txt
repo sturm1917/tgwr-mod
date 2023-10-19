@@ -1573,8 +1573,7 @@ country_event = {
 			has_completed_focus = SPR_military_coup
 		}
 		OR = {
-			has_country_flag = great_war_loser
-			democratic > 0.8
+			democratic > 0.85
 			AND = {
 				date > 1931.4.1
 				NOT = {
@@ -1598,6 +1597,10 @@ country_event = {
 			last_election = "1918.11.11"
 			election_frequency = 60 
 			elections_allowed = yes
+		}
+		set_global_flag = SPR_flag_no_more_el_turno
+		promote_character = {
+			character = SPR_niceto_alcalazamora
 		}
 		hidden_effect = {
 			set_popularities = {

@@ -1070,3 +1070,17 @@ ECU_civil_war_neutrality = {
 	color = rgb { 255 161 97 }
 	color_ui = rgb { 239 169 74 }
 }
+SPR_carlists = {
+	color = rgb { 235 102 0 }
+	color_ui = rgb { 242 109 0 }
+}
+
+SPR_social_liberals = {
+	color = rgb { 235 235 25 }
+	color_ui = rgb { 241 241 32 }
+}
+
+SPR_el_liberal = {
+	color = rgb { 170 0 232 }
+	color_ui = rgb { 179 0 240 }
+}
