@@ -23,4 +23,12 @@ spriteTypes = {
 		name = "GFX_focus_spr_mission_to_the_soviet_union"
 		texturefile = "gfx/interface/goals/focus_spr_mission_to_the_soviet_union.dds"
 	}
+	SpriteType = {
+		name = "GFX_SPN_jaime_iii_icon"
+		texturefile = "gfx/interface/goals/SPN_jaime_iii_icon.png"
+	}
+	SpriteType = {
+		name = "GFX_SPN_alfonso_carlos_icon"
+		texturefile = "gfx/interface/goals/SPN_alfonso_carlos_icon.png"
+	}
 }

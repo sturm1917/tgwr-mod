@@ -8224,7 +8224,7 @@ focus_tree = {
 	focus = {
 		id = SPR_side_with_carlos
 		mutually_exclusive = { focus = SPR_pick_jaime }
-		icon = GFX_focus_mex_restore_the_army_of_christ
+		icon = GFX_SPN_alfonso_carlos_icon
 		cost = 2.9 #days
 		x = -1
 		y = 4
@@ -8249,7 +8249,7 @@ focus_tree = {
 	focus = {
 		id = SPR_pick_jaime
 		mutually_exclusive = { focus = SPR_side_with_carlos }
-		icon = GFX_focus_generic_home_defense
+		icon = GFX_SPN_jaime_iii_icon
 		cost = 2.9 #days
 		x = 1
 		y = 4
