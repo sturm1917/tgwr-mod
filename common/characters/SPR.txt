@@ -298,7 +298,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_navy_1.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+				large="gfx/leaders/SPR/SPR_juan_bautista.png"
 			}
 		}
 		navy_leader={
@@ -967,11 +967,11 @@ characters={
 			slot = air_chief
 			idea_token = SPR_ignacio_hidalgo
 			allowed  = {
-					original_tag  = SPR
-				}
-				traits  = {
-					air_chief_reform_3 
-				}
+				original_tag = SPR
+			}
+			traits  = {
+				air_chief_reform_2 
+			}
 		}
 	}
 	
