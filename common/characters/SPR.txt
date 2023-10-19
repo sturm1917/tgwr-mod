@@ -39,6 +39,9 @@ characters={
 			army={
 				large="gfx/leaders/SPR/SPR_miguel_primo_de_rivera.png"
 			}
+			civilian={
+				large="gfx/leaders/SPR/SPR_miguel_primo_de_rivera.png"
+			}
 		}
 		corps_commander={
 			skill=3
@@ -301,9 +304,9 @@ characters={
 		navy_leader={
 			traits={ blockade_runner }
 			skill=2
-			attack_skill=1
+			attack_skill=2
 			defense_skill=1
-			maneuvering_skill=1
+			maneuvering_skill=2
 			coordination_skill=1
 			legacy_id=86042
 		}
@@ -520,6 +523,9 @@ characters={
 			ideology=libertarianism
 		}
 		portraits={
+			civilian={
+				large="gfx/leaders/SPR/SPR_alvaro_figueroa.png"
+			}
 			army={
 				small="GFX_idea_alvaro_de_figueroa_advisor"
 			}
@@ -548,6 +554,9 @@ characters={
 			ideology=conservatism
 		}
 		portraits={
+			civilian={
+				large="gfx/leaders/SPR/SPR_eduardo_dato.png"
+			}
 			army={
 				small="GFX_idea_prime_minister_dato_advisor"
 			}
@@ -573,6 +582,9 @@ characters={
 			ideology=social_liberalism
 		}
 		portraits={
+			civilian={
+				large="gfx/leaders/SPR/SPR_prieto.png"
+			}
 			army={
 				small="GFX_idea_prime_minister_prieto_advisor"
 			}
@@ -601,6 +613,9 @@ characters={
 			army={
 				small="GFX_idea_prime_minister_maura_advisor"
 			}
+			civilian={
+				large="gfx/leaders/SPR/SPR_maura.png"
+			}
 		}
 	}
 	SPR_manuel_pm = {
@@ -626,6 +641,9 @@ characters={
 			army={
 				small="GFX_idea_prime_minister_manuel_advisor"
 			}
+			civilian={
+				large="gfx/leaders/SPR/SPR_manuel_allendasalazar.png"
+			}
 		}
 	}
 	SPR_sanchez_pm = {
@@ -648,6 +666,9 @@ characters={
 			ideology=conservatism
 		}
 		portraits={
+			civilian={
+				large="gfx/leaders/SPR/SPR_jose_sanchez.png"
+			}
 			army={
 				small="GFX_idea_prime_minister_sanchez_advisor"
 			}
@@ -883,5 +904,173 @@ characters={
 			legacy_id=86999
 		}
 	}
+	
+	SPR_antonio_aranda={
+		name="SPR_antonio_aranda"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_antonio_aranda.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	SPR_don_carlos={
+		name="SPR_don_carlos"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_don_carlos.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	SPR_emilio_mola={
+		name="SPR_emilio_mola"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_emilio_mola.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	SPR_ignacio_hidalgo={
+		name="SPR_ignacio_hidalgo"
+		portraits={
+			army={
+				small="GFX_SPR_idea_ignacio_hidalgo"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = SPR_ignacio_hidalgo
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					air_chief_reform_3 
+				}
+		}
+	}
+	
+	SPR_jose_aranguren={
+		name="SPR_jose_aranguren"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_jose_aranguren.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	SPR_juan_picasso={
+		name="SPR_juan_picasso"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_juan_picasso.png"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	SPR_manuel_fernandez={
+		name="SPR_manuel_fernandez"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_manuel_fernandez.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	SPR_mariano_gomez_zamalloa={
+		name="SPR_mariano_gomez_zamalloa"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_mariano_gomez_zamalloa.png"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	SPR_ramon_acha={
+		name="SPR_ramon_acha"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_ramon_acha.png"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	SPR_sanjurjo_y_scanell={
+		name="SPR_sanjurjo_y_scanell"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/SPR_sanjurjo_y_scanell.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	
 	
 }
