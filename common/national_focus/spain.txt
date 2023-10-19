@@ -1673,7 +1673,6 @@ focus_tree = {
 			focus = SPR_parliamentary_landslide
 		}
 		available = {
-			has_idea = SPR_idea_prime_minister_jose
 			is_subject = no
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
@@ -4681,7 +4680,6 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			always = no
 			OR = {
 				has_completed_focus = SPR_god_then_the_majesty
 				AND = {
@@ -4749,18 +4747,6 @@ focus_tree = {
 				limit = { has_global_flag = liberal_majority }
 				add_political_power = 25
 				add_stability = -0.05
-			}
-			hidden_effect = {
-				remove_ideas = {
-					SPR_idea_united_liberal_party
-					SPR_idea_split_liberal_party
-					SPR_idea_several_liberal_party
-					SPR_idea_fractured_liberal_party
-					SPR_idea_united_conservative_party
-					SPR_idea_split_conservative_party
-					SPR_idea_several_conservative_party
-					SPR_idea_fractured_conservative_party
-				}
 			}
 		}
 	}
@@ -4838,6 +4824,19 @@ focus_tree = {
 				popularity = 35
 			}
 			hidden_effect = {
+				remove_ideas = SPR_idea_prime_minister_jose
+				remove_ideas = SPR_idea_prime_minister_alvaro
+				remove_ideas = SPR_idea_prime_minister_dato
+				remove_ideas = SPR_idea_prime_minister_prieto
+				remove_ideas = SPR_idea_prime_minister_maura
+				remove_ideas = SPR_idea_prime_minister_manuel
+				remove_ideas = SPR_idea_prime_minister_sanchez
+				deactivate_advisor = SPR_alvaro_de_figueroa
+				deactivate_advisor = SPR_eduardo_dato_pm
+				deactivate_advisor = SPR_prieto_pm
+				deactivate_advisor = SPR_manuel_pm
+				deactivate_advisor = SPR_eduardo_dato_pm
+				deactivate_advisor = SPR_sanchez_pm
 				country_event = {
 					id = ww1_spain.133
 					days = 13

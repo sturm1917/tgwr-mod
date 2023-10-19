@@ -742,7 +742,8 @@ country_event = {
 		promote_character = SPR_melquiades_alvarez
 		ai_chance = { factor = 10 }
 		#Important\/
-		set_global_flag = alvaro_leaves_office
+		set_global_flag = SPR_alvaro_leaves_office
+		
 		IF = {
 			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 			scripted_effect_new_spanish_prime_minister = yes
@@ -1189,12 +1190,7 @@ country_event = {
 	desc = ww1_spain.42.d
 	picture = GFX_report_event_canada_treaty
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		original_tag = SPR
-		date > 1922.12.7
-		has_global_flag = maura_takes_office
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.42.a
@@ -2859,8 +2855,9 @@ country_event = {
 		ai_chance = { factor = 10 }
 		hidden_effect = {
 			load_oob = "SPR_civil_war"
-		}
-		hidden_effect = {
+			
+			
+			
 			remove_ideas = SPR_idea_catholic_nation
 			remove_ideas = SPR_idea_strong_catholicism
 			remove_ideas = SPR_idea_mild_catholicism
@@ -2881,6 +2878,7 @@ country_event = {
 				add_ideas = SPR_idea_sunday_off
 			}
 			add_ideas = SPR_whispers_for_regional_autonomy
+			set_global_flag = SPR_carlist_war_started
 		}
 	}
 }
@@ -2894,9 +2892,10 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = { days = 5 }
 	trigger = {
-		SPR = {
+		AND = {
 			has_war = no
-			has_completed_focus = SPR_legitimize_his_rule
+			original_tag = SPR
+			has_global_flag = SPR_carlist_war_started
 		}
 	}
 	option = {
