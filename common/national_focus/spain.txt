@@ -168,6 +168,16 @@ focus_tree = {
 				id = ww1_spain.128
 				days = 5
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -475,7 +485,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = {
 					id = ww1_spain.133
-					days = 5
+					days = 15
 				}
 				country_event = {
 					id = ww1_spain.131
@@ -533,6 +543,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 13
+				}
+			}
 		}
 	}
 	focus = {
@@ -564,6 +580,16 @@ focus_tree = {
 					popularity = -0.03
 				}
 			}		
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -870,7 +896,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = {
 					id = ww1_spain.132
-					days = 5
+					days = 15
 				}
 				country_event = {
 					id = ww1_spain.130
@@ -907,7 +933,16 @@ focus_tree = {
 			SPR = { 
 				add_stability = 0.05
 			}
-			
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
 			
 		}
 	}
@@ -1091,6 +1126,16 @@ focus_tree = {
 				limit = { has_idea = SPR_idea_freedom_of_religion }
 				remove_ideas = SPR_idea_freedom_of_religion
 				add_ideas = SPR_idea_secular_state
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
 			}
 		}
 	}
@@ -1849,6 +1894,16 @@ focus_tree = {
 			SPR = {
 				add_political_power = 25
 			}	
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -1961,6 +2016,16 @@ focus_tree = {
 				add_stability = -0.10
 			}	
 			scripted_effect_two_party_shenanigans = yes
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.132
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -4474,7 +4539,7 @@ focus_tree = {
 			IF = {
 				limit = { has_global_flag = conservative_majority }
 				add_stability = -0.05
-				add_political_power = -200
+				add_political_power = -20
 			}
 			SPR = {
 				IF = {
@@ -4641,10 +4706,13 @@ focus_tree = {
 			focus = SPR_civil_marriage_law
 		}
 		completion_reward = {
-			country_event = {
-				id = ww1_spain.133
-				days = 3
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 3
+				}
 			}
+			add_political_power = 150
 		}
 	}
 	focus = {
@@ -4769,6 +4837,16 @@ focus_tree = {
 				ideology = democratic
 				popularity = 35
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -4791,6 +4869,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -5023,6 +5111,16 @@ focus_tree = {
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 5
+				}
 			}
 			add_stability = 0.05
 		}
@@ -5648,6 +5746,16 @@ focus_tree = {
 				amount = -160
 				producer = SPR
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -5791,6 +5899,16 @@ focus_tree = {
 				amount = 120
 				producer = SPR
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 			set_global_flag = SPR_flag_junta_success_in_three #Decisions if Fail
 		}
 	}
@@ -5861,6 +5979,16 @@ focus_tree = {
 			}
 			remove_ideas = { SPR_idea_strikers_manifesto }
 			add_stability = -0.05
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -6093,8 +6221,18 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-			add_political_power = -100
+			add_political_power = 25
 			set_global_flag = SPR_flag_strikes_success_in_three #Decisions if Fail
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -6124,6 +6262,16 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = -100
 			add_ideas = SPR_idea_the_legal_manifesto
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 23
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 13
+				}
+			}
 		}
 	}
 	focus = {
@@ -6191,12 +6339,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = { SPR_idea_autonomous_catalonia }
-			add_political_power = -125
+			add_political_power = -25
 			add_stability = -0.1
 			SPR = {
 				remove_state_core = 165
 			}
 			set_global_flag = SPR_flag_assembly_success_in_three #Decisions if Fail
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -6228,7 +6386,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_global_flag = SPR_flag_assembly_failure_in_three #Decisions if Fail
-			add_political_power = -75
+			add_political_power = 75
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05	
@@ -6248,6 +6406,16 @@ focus_tree = {
 				type = support_equipment
 				amount = -45
 				producer = SPR
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
 			}
 		}
 	}
@@ -6281,6 +6449,16 @@ focus_tree = {
 			custom_effect_tooltip = SPR_exploit_their_incompatibility.tt
 			hidden_effect = {
 				add_political_power = 75
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
 			}
 		}
 	}
@@ -7565,6 +7743,16 @@ focus_tree = {
 					popularity = -0.05	
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -7624,6 +7812,16 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -100
 			add_stability = -0.05
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	#Victory in the War
@@ -7806,6 +8004,16 @@ focus_tree = {
 		}
 		completion_reward = {	
 			add_stability = 0.05
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -7945,7 +8153,8 @@ focus_tree = {
 			focus = SPR_side_with_maurists
 		}
 		completion_reward = {
-			add_political_power = -75
+			add_political_power = -50
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -8023,6 +8232,7 @@ focus_tree = {
 			focus = SPR_abolish_el_turno
 		}
 		completion_reward = {
+			add_political_power = 100
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.05

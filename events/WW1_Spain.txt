@@ -1246,7 +1246,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ww1_spain.132
-				days = 5
+				days = 15
 			}
 			country_event = {
 				id = ww1_spain.130
@@ -1302,11 +1302,11 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ww1_spain.132
-				days = 5
+				days = 50
 			}
 			country_event = {
 				id = ww1_spain.130
-				days = 5
+				days = 80
 			}
 		}
 	}
@@ -1361,11 +1361,11 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ww1_spain.132
-				days = 5
+				days = 125
 			}
 			country_event = {
 				id = ww1_spain.130
-				days = 5
+				days = 150
 			}
 		}
 	}
