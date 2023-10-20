@@ -979,14 +979,11 @@ country_event = {
 					random_days = 140
 				}
 			}
-			hidden_effect = {
-				country_event = {
-					id = ww1_spain.132
-					days = 5
-				}
+			country_event = {
+				id = ww1_spain.132
+				days = 5
 			}
 		}
-		set_global_flag = SPR_flag_maura_truly_in_office
 		#Important\/
 		ai_chance = { factor = 10 }
 	}
@@ -999,10 +996,7 @@ country_event = {
 	desc = ww1_spain.35.d
 	picture = GFX_report_event_canada_treaty
 	fire_only_once = no
-	mean_time_to_happen = { days = 120 }
-	trigger = {
-		has_global_flag = SPR_flag_maura_truly_in_office
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = ww1_spain.35.a
