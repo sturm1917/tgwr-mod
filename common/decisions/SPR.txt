@@ -533,7 +533,7 @@ SPR_el_turno_category = {
 		days_re_enable = 75
 		days_remove = 105
 		modifier = {
-			stability_weekly = 0.001
+			stability_weekly = 0.002
 		}
 		remove_effect = {
 			add_popularity = {
@@ -565,9 +565,9 @@ SPR_el_turno_category = {
 				}
 			}
 		}
-		cost = 50
-		days_re_enable = 50
-		days_remove = 75
+		cost = 35
+		days_re_enable = 25
+		days_remove = 50
 		modifier = {
 			industrial_capacity_factory = -0.05
 		}
@@ -706,9 +706,9 @@ SPR_el_turno_category = {
 			}
 		}
 
-		cost = 50
-		days_re_enable = 50
-		days_remove = 100
+		cost = 35
+		days_re_enable = 25
+		days_remove = 50
 		modifier = {
 			political_power_factor = -0.15
 		}

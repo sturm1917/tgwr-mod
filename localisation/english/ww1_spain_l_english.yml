@@ -608,6 +608,7 @@
  SPR_idea_risk_of_governmental_collapse:0 "Risk of Governmental Collapse"
  SPR_idea_developing_the_nation:0 "Developing the Nation"
  SPR_idea_government_disorganized:0 "Disorganized Government"
+ SPR_idea_riveras_absolute_control:0 "Rivera's Five Year Plan"
  SPR_terrible_deadline:0 "A Bitter Deadline..."
  SPR_final_reform:0 "Final Reform"
  SPR_THC_reform_1:0 "Unpopularize the Juntas"
@@ -717,6 +718,11 @@
  SPR_educational_reform:0 "Educational Reform"
  SPR_the_people_are_happy:0 "The People are Happy"
  SPR_gauge_our_position:0 "Gauge our Position"
+ 
+ 
+ 
+ 
+ 
  #...
  ww1_spain.139.t:0 "The Rif War"
  ww1_spain.139.a:0 "I don't feel like coding anymorrrrrrrrrre"
@@ -742,7 +748,7 @@
  spain_ships.2.eng.tt:0 "Create a §8Class C§W ship from §8the United Kingdom§W     Create a §8Class C§W ship from §8the United Kingdom§W      Create a §8Class C§W ship from §8the United Kingdom§W      Create a §8Class C§W ship from §8the United Kingdom§W    Create a §8Class C§W ship from §8the United Kingdom§W"
  
  spain_ships.3.eng.tt:0 "Create a §8Town Class§W ship from §8the United Kingdom§W Create a §8Town Class§W ship from §8the United Kingdom§W Create a §8Class C§W ship from §8the United Kingdom§W"
- 
+ spain_puppets_portugal.tt:0 "§8If we win the Great War, Portugal will become our puppet upon completion of the corresponding Focus§W"
  
 #Generals and Admirals
  SPR_the_people_are_happy:0 "The People are Happy"

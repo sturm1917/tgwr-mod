@@ -717,8 +717,8 @@ country_event = {
 				limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 				country_event = { 
 					id = ww1_spain.22 
-					days = 105
-					random_days = 140
+					days = 95
+					random_days = 120
 				}
 			}
 		}
@@ -799,8 +799,8 @@ country_event = {
 				limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 				country_event = { 
 					id = ww1_spain.47
-					days = 105
-					random_days = 140
+					days = 95
+					random_days = 130
 				}
 				hidden_effect = {
 					country_event = {
@@ -892,8 +892,8 @@ country_event = {
 				}
 				country_event = { 
 					id = ww1_spain.33
-					days = 105
-					random_days = 140
+					days = 95
+					random_days = 120
 				}
 			}
 		}
@@ -975,8 +975,8 @@ country_event = {
 				limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 				country_event = { 
 					id = ww1_spain.35
-					days = 105
-					random_days = 140
+					days = 95
+					random_days = 120
 				}
 			}
 			country_event = {
@@ -1064,8 +1064,8 @@ country_event = {
 				limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 				country_event = { 
 					id = ww1_spain.38 
-					days = 105
-					random_days = 140
+					days = 95
+					random_days = 120
 				}
 			}
 		}
@@ -1186,8 +1186,8 @@ country_event = {
 				limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
 				country_event = { 
 					id = ww1_spain.42
-					days = 105
-					random_days = 140
+					days = 90
+					random_days = 120
 				}
 			}
 		}
@@ -1598,36 +1598,37 @@ country_event = {
 	desc = ww1_spain.1.d
 	picture = GFX_report_event_german_reichstag_gathering	
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		OR = {
-			has_global_flag = SPR_flag_rivera_leaves_office
-			AND = {
-				original_tag = SPR
-				NOT = {
-					has_government = democratic
-				}
-				NOT = {
-					has_completed_focus = SPR_military_coup
-				}
-				OR = {
-					democratic > 0.85
-					AND = {
-						date > 1931.4.1
-						NOT = {
-							has_country_leader = {
-								character = SPR_miguel_primo_de_rivera
-								ruling_only = yes
-							}
-						}
-					}
-				}
-				NOT = {
-					has_completed_focus = SPR_the_government_survives
-				}
-			}
-		}
-	}	
+	#mean_time_to_happen = {	days = 30 }
+	#trigger = {
+	#	OR = {
+	#		has_global_flag = SPR_flag_rivera_leaves_office
+	#		AND = {
+	#			original_tag = SPR
+	#			NOT = {
+	#				has_government = democratic
+	#			}
+	#			NOT = {
+	#				has_completed_focus = SPR_military_coup
+	#			}
+	#			OR = {
+	#				democratic > 0.85
+	#				AND = {
+	#					date > 1931.4.1
+	#					NOT = {
+	#						has_country_leader = {
+	#							character = SPR_miguel_primo_de_rivera
+	#							ruling_only = yes
+	#						}
+	#					}
+	#				}
+	#			}
+	#			NOT = {
+	#				has_completed_focus = SPR_the_government_survives
+	#			}
+	#		}
+	#	}
+	#}	
+	is_triggered_only = yes
 	option = {
 		name = ww1_spain.1.a
 		set_global_flag = spanish_republic
@@ -1672,7 +1673,7 @@ country_event = {
 	desc = ww1_spain.2.d
 	picture = GFX_report_event_spain_civil_war_soldiers
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 60 }
+	mean_time_to_happen = {	days = 3 }
 	trigger = {
 		has_completed_focus = SPR_military_coup
 		NOT = {
@@ -1737,16 +1738,8 @@ country_event = {
 	desc = ww1_spain.3.d
 	picture = GFX_report_event_spain_civil_war_soldiers
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 30 }
-	trigger = {
-		tag = SPR
-		has_country_leader = {
-			character = SPR_miguel_primo_de_rivera
-			ruling_only = yes
-		}
-		has_idea = SPR_alfonso_xiii
-		date > 1925.12.1
-	}
+	is_triggered_only = yes
+	
 	option = {
 		name = ww1_spain.3.a
 		SPR_miguel_primo_de_rivera = {
@@ -1777,18 +1770,8 @@ country_event = {
 	desc = ww1_spain.4.d
 	picture = GFX_report_event_spain_civil_war_soldiers
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 28 }
-	trigger = {
-		tag = SPR
-		has_country_leader = {
-			character = SPR_miguel_primo_de_rivera
-			ruling_only = yes
-		}
-		OR = {
-			date > 1930.1.1
-			has_country_flag = great_depression_spreads
-		}
-	}
+	is_triggered_only = yes
+	
 	option = {
 		name = ww1_spain.4.a
 		retire_character = SPR_miguel_primo_de_rivera
@@ -3601,5 +3584,66 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 		#clr_global_flag = SPR_visible_focuses_rule_THC
 		set_global_flag = SPR_visible_focuses_rule_THC
+	}
+}
+
+#Will Rivera Resign
+country_event = {
+	id = ww1_spain.148
+	title = ww1_spain.148.t
+	desc = ww1_spain.148.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.148.a
+		ai_chance = { factor = 2 }
+		complete_national_focus = SPR_rivera_resigns
+		set_global_flag = SPR_flag_rivera_resigns
+	}
+	option = {
+		name = ww1_spain.148.b
+		ai_chance = { factor = 98 }
+		complete_national_focus = SPR_rivera_stays
+		set_global_flag = SPR_flag_rivera_stays
+	}
+}
+
+#Rivera Resigns in 1927
+country_event = {
+	id = ww1_spain.149
+	title = ww1_spain.149.t
+	desc = ww1_spain.149.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	mean_time_to_happen = { days = 30 }
+	trigger = {
+		has_global_flag = SPR_flag_rivera_will_resign_in_1927
+		date > 1927.3.1
+	}
+	option = {
+		name = ww1_spain.149.a
+		ai_chance = { factor = 2 }
+		retire_character = SPR_miguel_primo_de_rivera
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_stability = -0.05
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_party_name = {
+				ideology = fascism
+				long_name = SPR_fascism_party
+				name = SPR_fascism_party
+			}
+			set_popularities = {
+				democratic = 43
+				neutrality = 39
+				fascism = 10
+				communism = 8
+			}
+			set_global_flag = SPR_flag_rivera_leaves_office
+		}
 	}
 }
