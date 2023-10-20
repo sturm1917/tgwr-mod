@@ -8236,6 +8236,7 @@ focus_tree = {
 				deactivate_advisor = SPR_manuel_pm
 				deactivate_advisor = SPR_eduardo_dato_pm
 				deactivate_advisor = SPR_sanchez_pm
+				deactivate_advisor = SPR_maura
 				remove_ideas = {
 					SPR_idea_united_liberal_party
 					SPR_idea_split_liberal_party
@@ -8248,7 +8249,6 @@ focus_tree = {
 				}
 			}
 			activate_advisor = SPR_maura
-			clr_global_flag = SPR_flag_maura_truly_in_office
 		}
 	}
 	focus = {
