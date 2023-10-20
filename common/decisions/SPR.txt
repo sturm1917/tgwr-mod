@@ -538,7 +538,7 @@ SPR_el_turno_category = {
 		remove_effect = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.01
+				popularity = 0.02
 			}
 		}
 	}
@@ -616,7 +616,6 @@ SPR_el_turno_category = {
 			consumer_goods_factor = 0.05
 		}
 		remove_effect = {
-			add_stability = 0.05
 			if = {
 				limit = { 
 					AND = {
@@ -749,7 +748,6 @@ SPR_el_turno_category = {
 			political_power_factor = -0.15
 		}
 		remove_effect = {
-			add_stability = 0.05
 			
 			if = {
 				limit = { 
@@ -1031,11 +1029,17 @@ SPR_religious_policy_category = {
 		cost = 75
 		days_re_enable = 50
 		complete_effect  = {
+
 			IF = {
-				limit = { has_idea = SPR_idea_strong_catholicism }
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
 				swap_ideas = {
-					remove_idea = SPR_idea_strong_catholicism
-					add_idea = SPR_idea_mild_catholicism
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_freedom_of_religion
 				}
 			}
 			IF = {
@@ -1046,21 +1050,16 @@ SPR_religious_policy_category = {
 				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_weak_catholicism }
+				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
-					remove_idea = SPR_idea_weak_catholicism
-					add_idea = SPR_idea_freedom_of_religion
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
 				}
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_catholic_nation }
 				remove_ideas = SPR_idea_catholic_nation
 				add_ideas = SPR_idea_strong_catholicism
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_freedom_of_religion }
-				remove_ideas = SPR_idea_freedom_of_religion
-				add_ideas = SPR_idea_secular_state
 			}
 		}
 		

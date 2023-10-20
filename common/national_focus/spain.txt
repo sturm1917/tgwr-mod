@@ -723,7 +723,6 @@ focus_tree = {
 					add_idea = SPR_idea_weak_catholicism
 				}
 			}
-			
 			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
@@ -734,8 +733,8 @@ focus_tree = {
 			IF = {
 				limit = { has_idea = SPR_idea_catholic_nation }
 				swap_ideas = {
-					remove_ideas = SPR_idea_catholic_nation
-					add_ideas = SPR_idea_strong_catholicism
+					remove_idea = SPR_idea_catholic_nation
+					add_idea = SPR_idea_strong_catholicism
 				}
 			}
 			add_political_power = 25	
@@ -1796,8 +1795,8 @@ focus_tree = {
 			IF = {
 				limit = { has_idea = SPR_idea_catholic_nation }
 				swap_ideas = {
-					remove_ideas = SPR_idea_catholic_nation
-					add_ideas = SPR_idea_strong_catholicism
+					remove_idea = SPR_idea_catholic_nation
+					add_idea = SPR_idea_strong_catholicism
 				}
 			}
 		}
@@ -5309,6 +5308,13 @@ focus_tree = {
 				add_stability = -0.05
 			}
 			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_freedom_of_religion
+				}
+			}
+			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
 					remove_idea = SPR_idea_strong_catholicism
@@ -5323,16 +5329,11 @@ focus_tree = {
 				}
 			}
 			IF = {
-				limit = { has_idea = SPR_idea_weak_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_weak_catholicism
-					add_idea = SPR_idea_secular_state
-				}
-			}
-			IF = {
 				limit = { has_idea = SPR_idea_catholic_nation }
-				remove_ideas = SPR_idea_catholic_nation
-				add_ideas = SPR_idea_mild_catholicism
+				swap_ideas = {
+					remove_idea = SPR_idea_catholic_nation
+					add_idea = SPR_idea_mild_catholicism
+				}
 			}	
 		}
 	}

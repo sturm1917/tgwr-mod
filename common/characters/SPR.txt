@@ -955,27 +955,6 @@ characters={
 			logistics_skill=1
 		}
 	}
-	SPR_ignacio_hidalgo={
-		advisor={
-			slot = air_chief
-			idea_token = SPR_ignacio_hidalgo
-			available  = {
-				original_tag = SPR
-			}
-			traits  = {
-				air_chief_reform_2 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		name="SPR_ignacio_hidalgo"
-		portraits={
-			army={
-				small="GFX_SPR_idea_ignacio_hidalgo"
-			}
-		}
-	}
 	
 	SPR_jose_aranguren={
 		name="SPR_jose_aranguren"
