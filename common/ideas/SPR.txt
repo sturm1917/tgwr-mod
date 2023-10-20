@@ -1296,6 +1296,7 @@ ideas = {
 				conscription = -0.005
 				army_attack_factor = -0.15
 				army_defence_factor = -0.15
+				stability_weekly = -0.001
 			}
 		}
 		SPR_idea_terrible_conscription_lesser = {

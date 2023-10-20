@@ -529,11 +529,11 @@ SPR_el_turno_category = {
 		visible = {
 			always = yes
 		}
-		cost = 35
-		days_re_enable = 120
+		cost = 30
+		days_re_enable = 75
 		days_remove = 105
 		modifier = {
-			stability_weekly = 0.003
+			stability_weekly = 0.001
 		}
 		remove_effect = {
 			add_popularity = {

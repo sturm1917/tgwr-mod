@@ -745,7 +745,11 @@ country_event = {
 		set_global_flag = SPR_alvaro_leaves_office
 		
 		IF = {
-			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
+			limit = { 
+				NOT = { 
+					has_global_flag = SPR_flag_no_more_el_turno 
+				}
+			}
 			scripted_effect_new_spanish_prime_minister = yes
 		}
 		clr_global_flag = new_spanish_prime_minister
@@ -827,7 +831,11 @@ country_event = {
 		promote_character = SPR_melquiades_alvarez
 		deactivate_advisor = SPR_eduardo_dato_pm
 		IF = {
-			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
+			limit = { 
+				NOT = { 
+					has_global_flag = SPR_flag_no_more_el_turno 
+				}
+			}
 			scripted_effect_new_spanish_prime_minister = yes
 		}
 		ai_chance = { factor = 10 }
@@ -905,18 +913,22 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.33.a
-		clr_global_flag = prieto_advisor_chosen
+		clr_global_flag = prieto_advisor_chosen #Ensure not two PMs in office at once
 		set_global_flag = liberal_prime_minister
 		promote_character = SPR_melquiades_alvarez
 		deactivate_advisor = SPR_prieto_pm
 		IF = {
-			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
+			limit = { 
+				NOT = { 
+					has_global_flag = SPR_flag_no_more_el_turno 
+				}
+			}
 			scripted_effect_new_spanish_prime_minister = yes
 		}
 		ai_chance = { factor = 10 }
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
-		set_global_flag = prieto_leaves_office
+		set_global_flag = prieto_leaves_office #Ensure Same PM doesnt come in twice after leaving
 		hidden_effect = {
 			country_event = {
 				id = ww1_spain.132
@@ -999,7 +1011,11 @@ country_event = {
 		promote_character = SPR_melquiades_alvarez
 		deactivate_advisor = SPR_maura
 		IF = {
-			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
+			limit = { 
+				NOT = { 
+					has_global_flag = SPR_flag_no_more_el_turno 
+				}
+			}
 			scripted_effect_new_spanish_prime_minister = yes
 		}
 		ai_chance = { factor = 10 }
@@ -1080,7 +1096,11 @@ country_event = {
 		promote_character = SPR_melquiades_alvarez
 		deactivate_advisor = SPR_manuel_pm 
 		IF = {
-			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
+			limit = { 
+				NOT = { 
+					has_global_flag = SPR_flag_no_more_el_turno 
+				}
+			}
 			scripted_effect_new_spanish_prime_minister = yes
 		}
 		ai_chance = { factor = 10 }
@@ -1199,7 +1219,11 @@ country_event = {
 		promote_character = SPR_melquiades_alvarez
 		deactivate_advisor = SPR_sanchez_pm
 		IF = {
-			limit = { NOT = { has_global_flag = SPR_flag_no_more_el_turno } }
+			limit = { 
+				NOT = { 
+					has_global_flag = SPR_flag_no_more_el_turno 
+				}
+			}
 			scripted_effect_new_spanish_prime_minister = yes
 		}
 		ai_chance = { factor = 10 }
