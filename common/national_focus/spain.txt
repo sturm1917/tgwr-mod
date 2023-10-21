@@ -8661,7 +8661,7 @@ focus_tree = {
 			factor = 10
 		}
 		allow_branch = {
-			has_global_flag = SPR_flag_rifs_rebellion_GER
+			has_global_flag = SPR_flag_rifs_rebellion
 		}
 		prerequisite = {
 			focus = SPR_we_stand_alone

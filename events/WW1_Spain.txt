@@ -4164,7 +4164,8 @@ country_event = {
 		name = ww1_spain.146.a
 		ai_chance = { factor = 10 }
 		mark_focus_tree_layout_dirty = yes
-		set_global_flag = SPR_flag_rifs_rebellion_GER
+		#set_global_flag = SPR_flag_rifs_rebellion_GER
+		clr_global_flag = SPR_flag_rifs_rebellion_GER
 		#clr_global_flag = SPR_visible_focuses_rule_THC
 		#set_global_flag = SPR_visible_focuses_rule_THC
 	}
