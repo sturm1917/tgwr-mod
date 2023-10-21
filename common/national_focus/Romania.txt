@@ -86,7 +86,7 @@ country = {
 	focus = {
 		id = ROM_reduce_the_kings_influence
 		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_continue_democratization }
+		prerequisite = { focus =  ROM_continue_democratization focus = ROM_the_new_constitution}
 		x = -3
 		y = 6
 		relative_position_id = ROM_bratianus_resign
@@ -418,7 +418,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_the_return_of_bratianus }
 		x = -1
-		y = 3
+		y = 4
 		relative_position_id = ROM_a_man_of_culture_and_literature
 		cost = 5
 		available = {
@@ -639,6 +639,61 @@ country = {
 		}
 	}
 	focus = {
+		id = ROM_a_reformed_constitutional_regime
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_compromise_with_the_PNL focus = ROM_reduce_the_influence_of_religion }
+		mutually_exclusive = { focus = ROM_depose_the_king }
+		x = -7
+		y = 9
+		relative_position_id = ROM_bratianus_resign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_political_unity
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_a_reformed_constitutional_regime }
+		x = -7
+		y = 11
+		relative_position_id = ROM_bratianus_resign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_accept_some_liberal_demands
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_compromise_with_the_PNL  }
+		x = -6
+		y = 10
+		relative_position_id = ROM_bratianus_resign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
 		id = ROM_promote_romanian_nationalism
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_form_a_new_government }
@@ -662,9 +717,708 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
 		mutually_exclusive = { focus = ROM_bratianus_resign }
-		x = -2
+		x = -8
 		y = 2
 		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_expand_political_rights
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_triumph_of_reform }
+		mutually_exclusive = { focus = ROM_lurk_in_the_shadows}
+		x = -1
+		y = 1
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_work_with_PC_liberals
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_triumph_of_reform }
+		x = 1
+		y = 1
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_lurk_in_the_shadows
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_triumph_of_reform }
+		mutually_exclusive = { focus = ROM_expand_political_rights }
+		x = -3
+		y = 1
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_form_paramilitary_groups
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_lurk_in_the_shadows }
+		x = -4
+		y = 1
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_political_revolution
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_form_paramilitary_groups }
+		x = -5
+		y = 2
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_intimidation_tactics
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_form_paramilitary_groups }
+		x = -3
+		y = 2
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_nationalist_democratic_victory
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_intimidation_tactics }
+		prerequisite = { focus =  ROM_political_revolution }
+		x = -4
+		y = 3
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_nationalist_democratic_victory
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_intimidation_tactics }
+		prerequisite = { focus =  ROM_political_revolution }
+		x = -4
+		y = 3
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_begin_the_crackdown
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_nationalist_democratic_victory }
+		x = -4
+		y = 5
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_crush_left_wing_protesters
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_begin_the_crackdown }
+		x = -8
+		y = 6
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_invite_conservatives_to_the_coalition
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_begin_the_crackdown }
+		mutually_exclusive = { focus = ROM_arrest_carp }
+		x = -2
+		y = 6
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_arrest_carp
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_begin_the_crackdown }
+		mutually_exclusive = { focus = ROM_invite_conservatives_to_the_coalition }
+		x = 0
+		y = 6
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_appoint_right_wing_ministers
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_begin_the_crackdown }
+		x = -4
+		y = 6
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_corporatism
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_appoint_right_wing_ministers }
+		mutually_exclusive = { focus = ROM_fight_the_elites }
+		x = -4
+		y = 7
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_fight_the_elites
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_appoint_right_wing_ministers }
+		mutually_exclusive = { focus = ROM_corporatism }
+		x = -6
+		y = 7
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_path_to_greater_romania
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_corporatism focus = ROM_fight_the_elites }
+		x = -5
+		y = 9
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_mobilize_the_economy
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_path_to_greater_romania }
+		x = -7
+		y = 10
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_introduce_a_draft
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_mobilize_the_economy }
+		x = -7
+		y = 11
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_war_propaganda
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_path_to_greater_romania }
+		x = -5
+		y = 10
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_prepare_to_light_a_fuse
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_war_propaganda }
+		x = -3
+		y = 11
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_transylvanian_revolution
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_prepare_to_light_a_fuse }
+		mutually_exclusive = { focus = ROM_bessarabian_revolution }
+		x = -3
+		y = 12
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_bessarabian_revolution
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_prepare_to_light_a_fuse }
+		mutually_exclusive = { focus = ROM_transylvanian_revolution }
+		x = -1
+		y = 12
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_demand_bulgarian_alignment
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_war_propaganda }
+		x = -5
+		y = 11
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_ultimatum_to_greece
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_demand_bulgarian_alignment }
+		x = -5
+		y = 13
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_tramcar_society
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_crush_left_wing_protesters }
+		x = -8
+		y = 7
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_ban_the_pnl
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_tramcar_society }
+		x = -8
+		y = 8
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_align_agrarian_groups
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_expand_political_rights focus = ROM_work_with_PC_liberals }
+		mutually_exclusive = { focus = ROM_reach_out_to_industrialists }
+		x = 2
+		y = 3
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_agrarian_protectionism
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_align_agrarian_groups }
+		x = 2
+		y = 4
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_increase_public_spending
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_align_agrarian_groups }
+		x = 3
+		y = 5
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_reach_out_to_industrialists
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_expand_political_rights focus = ROM_work_with_PC_liberals }
+		mutually_exclusive = { focus = ROM_align_agrarian_groups }
+		x = -2
+		y = 3
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_new_constitution
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_align_agrarian_groups focus = ROM_reach_out_to_industrialists }
+		x = 0
+		y = 4
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_liberalize_our_trade_policy
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_reach_out_to_industrialists }
+		x = -2
+		y = 4
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_concessions_to_unions
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_liberalize_our_trade_policy }
+		mutually_exclusive = { focus = ROM_invite_foreign_capital }
+		x = -4
+		y = 5
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_invite_foreign_capital 
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_liberalize_our_trade_policy }
+		mutually_exclusive = { focus = ROM_concessions_to_unions }
+		x = -2
+		y = 5
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_reduce_the_influence_of_religion
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_the_new_constitution }
+		x = 0
+		y = 6
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_depose_the_king
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_reduce_the_influence_of_religion focus = ROM_begin_the_crackdown }
+		mutually_exclusive = { focus = ROM_a_reformed_constitutional_regime }
+		x = -1
+		y = 9
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_root_out_monarchists
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_depose_the_king }
+		x = -1
+		y = 10
+		relative_position_id = ROM_triumph_of_reform
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_new_romanian_spirit
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_depose_the_king }
+		x = -3
+		y = 10
+		relative_position_id = ROM_triumph_of_reform
 		cost = 5
 		available = {
 			
