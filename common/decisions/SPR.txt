@@ -23,9 +23,6 @@ SPR_failure_to_contain_crisis = {
 		
 		timeout_effect = {
 			set_global_flag = SPR_flag_terrible_deadline #makes sure confused player cant select it randomly
-			country_event = {
-				id = ww1_spain.2
-			}
 		}
 	}	
 	SPR_THC_reform_1 = { #Junta1
@@ -1178,6 +1175,28 @@ SPR_religious_policy_category = {
 }
 
 
+SPR_rif_war_category = {
+	SPR_defeat_the_rifs = {
+		icon = GFX_decision_revolt
+		allowed = {
+			original_tag = SPR
+		}
+		activation = {
+			has_completed_focus = SPR_handling_the_rifs
+		}
+		cancel_trigger = {
+			has_completed_focus = SPR_abd_el_krim_negotiates
+        }
+		priority = 100
+		days_mission_timeout = 480 #Placeholder make this change
+		fire_only_once = yes
+		is_good = no
+		
+		timeout_effect = {
+			complete_national_focus = SPR_humiliating_defeat
+		}
+	}	
+}
 
 
 

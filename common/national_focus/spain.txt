@@ -1298,7 +1298,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_welcome_other_religions
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_TUR_reform_millet_system
 		cost = 2.9 #days
 		x = 3
 		y = 2
@@ -8347,36 +8347,574 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_crush_the_rifs
-		icon = GFX_goal_generic_attack_allies
+		id = SPR_exploit_the_rif
+		icon = GFX_focus_generic_annex_country
 		cost = 10 #days
-		x = 1
+		x = -3
 		y = 23
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
-			
-			has_global_flag = new_spanish_prime_minister_in_office
-			has_completed_focus = SPR_our_colonial_empire
+			OR = {
+				has_completed_focus = SPR_our_colonial_empire
+				has_completed_focus = SPR_forget_about_our_colonies
+			}
 		}
 		prerequisite = {
-
-			focus = SPR_spain_reenters_the_world_stage
+			focus = SPR_military_coup
 		}
 		completion_reward = {
-			country_event = {
-				id = ww1_spain.139
-				days = 3
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.139
+					days = 25
+				}
 			}
+			IF = {
+				limit = { has_completed_focus = SPR_our_colonial_empire }
+				add_resource = {
+					type = steel
+					amount = 8
+					state = 290
+				}
+			}
+			IF = {
+				limit = { has_completed_focus = SPR_forget_about_our_colonies }
+				add_resource = {
+					type = steel
+					amount = 2
+					state = 743
+				}
+			}
+			add_timed_idea = {
+				idea = SPR_idea_wealth_of_the_rifs
+				days = 185
+			}
+		}
+	}
+	focus = {
+		id = SPR_crush_the_rifs
+		icon = GFX_focus_generic_steel
+		cost = 10 #days
+		x = 3
+		y = 23
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_the_government_survives
+			focus = SPR_spain_reenters_the_world_stage
+		}
+		available = {
+			OR = {
+				has_completed_focus = SPR_our_colonial_empire
+				has_completed_focus = SPR_forget_about_our_colonies
+			}
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_completed_focus = SPR_our_colonial_empire }
+				add_resource = {
+					type = steel
+					amount = 8
+					state = 290
+				}
+			}
+			IF = {
+				limit = { has_completed_focus = SPR_forget_about_our_colonies }
+				add_resource = {
+					type = steel
+					amount = 2
+					state = 743
+				}
+			}
+			add_timed_idea = {
+				idea = SPR_idea_wealth_of_the_rifs
+				days = 185
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_spain.139
+					days = 25
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_handling_the_rifs
+		icon = GFX_focus_army_purge
+		cost = 2.9 #days
+		x = 14
+		y = 20
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		completion_reward = {
+			add_political_power = 75
+			custom_effect_tooltip = SPR_unlock_rif_war.tt
+		}
+	}
+	focus = {
+		id = SPR_we_stand_alone
+		mutually_exclusive = { focus = SPR_the_lyon_of_verdun }
+		icon = GFX_focus_otto_uniform
+		cost = 5 #days
+		x = 13
+		y = 21
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_handling_the_rifs
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		available = {
+			has_global_flag = SPR_flag_france_refuses_to_join
+		}
+		completion_reward = {
+			SPR = {
+				add_ideas = SPR_idea_collaboration_against_the_rifs
+			}
+		}
+	}
+	focus = {
+		id = SPR_the_lyon_of_verdun
+		mutually_exclusive = { focus = SPR_we_stand_alone }
+		icon = GFX_focus_focus_fra_down_marianne
+		cost = 5 #days
+		x = 15
+		y = 21
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		prerequisite = {
+			focus = SPR_handling_the_rifs
+		}
+		available = {
+			has_global_flag = SPR_flag_france_joins_the_war
+		}
+		completion_reward = {
+			add_stability = 0.05
+			FRA = {
+				add_ideas = SPR_idea_collaboration_against_the_rifs
+			}
+			SPR = {
+				add_ideas = SPR_idea_collaboration_against_the_rifs
+			}
+		}
+	}
+	focus = {
+		id = SPR_prepare_the_landing
+		icon = GFX_focus_SWE_Vasa_II
+		cost = 5 #days
+		x = 14
+		y = 22
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		prerequisite = {
+			focus = SPR_the_lyon_of_verdun
+		}
+		prerequisite = {
+			focus = SPR_we_stand_alone
+		}
+		completion_reward = {
+			add_ideas = SPR_idea_land_against_the_rifs
+		}
+	}
+	focus = {
+		id = SPR_abd_el_krim_negotiates
+		mutually_exclusive = { focus = SPR_humiliating_defeat }
+		icon = GFX_focus_hoi4tgw_gasmask
+		cost = 5 #days
+		x = 14
+		y = 23
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		prerequisite = {
+			focus = SPR_prepare_the_landing
+		}
+		available = {
+			OR = {
+				SPR = {
+					controls_province = 7215
+				}
+				FRA = {
+					controls_province = 7215
+				}
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SPR_relaunch_the_offensive
+		mutually_exclusive = { focus = SPR_demand_a_peace_from_the_french }
+		icon = GFX_focus_ITA_topple_amhara_rulers
+		cost = 10 #days
+		x = 13
+		y = 24
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		prerequisite = {
+			focus = SPR_abd_el_krim_negotiates
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = SPR_demand_a_peace_from_the_french
+		mutually_exclusive = { focus = SPR_relaunch_the_offensive }
+		icon = GFX_focus_dreadnought
+		cost = 10 #days
+		x = 15
+		y = 24
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		prerequisite = {
+			focus = SPR_abd_el_krim_negotiates
+		}
+		available = {
+			has_global_flag = SPR_flag_rif_negotiations
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = SPR_re_integrate_the_rif
+		icon = GFX_focus_NOR_approach_kretsen
+		cost = 5 #days
+		x = 14
+		y = 25
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion
+		}
+		prerequisite = {
+			focus = SPR_demand_a_peace_from_the_french
+		}
+		prerequisite = {
+			focus = SPR_relaunch_the_offensive
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			290 = {
+				add_compliance = 15
+			}
+		}
+	}
+	focus = {
+		id = SPR_humiliating_defeat
+		mutually_exclusive = { focus = SPR_abd_el_krim_negotiates }
+		icon = GFX_goal_generic_attack_allies
+		cost = 5 #days
+		x = 12
+		y = 23
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_we_stand_alone
+		}
+		prerequisite = {
+			focus = SPR_prepare_the_landing
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = -0.05
+			
+		}
+	}
+	focus = {
+		id = SPR_handling_the_rifs_GER
+		icon = GFX_focus_army_purge
+		cost = 2.9 #days
+		x = -9
+		y = 21
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		completion_reward = {
+			add_political_power = 75
+			custom_effect_tooltip = SPR_unlock_rif_war.tt
+		}
+	}
+	focus = {
+		id = SPR_we_stand_alone_GER
+		mutually_exclusive = { focus = SPR_the_lyon_of_verdun }
+		icon = GFX_focus_otto_uniform
+		cost = 5 #days
+		x = -11
+		y = 22
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = SPR_handling_the_rifs_GER
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		available = {
+			has_global_flag = SPR_flag_france_refuses_to_join
+		}
+		completion_reward = {
+			SPR = {
+				add_ideas = SPR_idea_collaboration_against_the_rifs
+			}
+		}
+	}
+	focus = {
+		id = SPR_hindenburg_and_ludendhorff
+		mutually_exclusive = { focus = SPR_we_stand_alone }
+		icon = GFX_focus_focus_fra_down_marianne
+		cost = 5 #days
+		x = -9
+		y = 22
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_handling_the_rifs_GER
+		}
+		available = {
+			has_global_flag = SPR_flag_france_joins_the_war
+		}
+		completion_reward = {
+			add_stability = 0.05
+			FRA = {
+				add_ideas = SPR_idea_collaboration_against_the_rifs
+			}
+			SPR = {
+				add_ideas = SPR_idea_collaboration_against_the_rifs
+			}
+		}
+	}
+	focus = {
+		id = SPR_prepare_the_landing_GER
+		icon = GFX_focus_SWE_Vasa_II
+		cost = 5 #days
+		x = -11
+		y = 23
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_hindenburg_and_ludendhorff
+		}
+		prerequisite = {
+			focus = SPR_we_stand_alone_GER
+		}
+		completion_reward = {
+			add_ideas = SPR_idea_land_against_the_rifs
+		}
+	}
+	focus = {
+		id = SPR_abd_el_krim_negotiates_GER
+		mutually_exclusive = { focus = SPR_humiliating_defeat_GER }
+		icon = GFX_focus_hoi4tgw_gasmask
+		cost = 5 #days
+		x = -11
+		y = 24
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_prepare_the_landing_GER
+		}
+		available = {
+			OR = {
+				SPR = {
+					controls_province = 7215
+				}
+				FRA = {
+					controls_province = 7215
+				}
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SPR_relaunch_the_offensive_GER
+		mutually_exclusive = { focus = SPR_demand_a_peace_from_the_french_GER }
+		icon = GFX_focus_ITA_topple_amhara_rulers
+		cost = 10 #days
+		x = -12
+		y = 25
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_abd_el_krim_negotiates_GER
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = SPR_demand_a_peace_from_the_germans
+		mutually_exclusive = { focus = SPR_relaunch_the_offensive_GER }
+		icon = GFX_focus_dreadnought
+		cost = 10 #days
+		x = -10
+		y = 25
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_abd_el_krim_negotiates_GER
+		}
+		available = {
+			has_global_flag = SPR_flag_rif_negotiations
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = SPR_re_integrate_the_rif_GER
+		icon = GFX_focus_NOR_approach_kretsen
+		cost = 5 #days
+		x = -11
+		y = 26
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_demand_a_peace_from_the_germans
+		}
+		prerequisite = {
+			focus = SPR_relaunch_the_offensive_GER
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			290 = {
+				add_compliance = 15
+			}
+		}
+	}
+	focus = {
+		id = SPR_humiliating_defeat_GER
+		mutually_exclusive = { focus = SPR_abd_el_krim_negotiates_GER }
+		icon = GFX_goal_generic_attack_allies
+		cost = 5 #days
+		x = -13
+		y = 24
+		relative_position_id = SPR_declare_a_republic
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = SPR_flag_rifs_rebellion_GER
+		}
+		prerequisite = {
+			focus = SPR_we_stand_alone_GER
+		}
+		prerequisite = {
+			focus = SPR_prepare_the_landing_GER
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = -0.05
 		}
 	}
 	focus = {
 		id = SPR_ensure_riveras_loyalty
 		icon = GFX_goal_generic_major_alliance
 		cost = 10 #days
-		x = -1
+		x = 0
 		y = 23
 		relative_position_id = SPR_declare_a_republic
 		ai_will_do = {

@@ -107,6 +107,7 @@ country_event = {
 		SPR = {
 			has_completed_focus = SPR_our_colonial_empire
 		}
+		original_tag = SPR
 	}
 	option = {
 		name = ww1_spain.54.a
@@ -127,6 +128,7 @@ country_event = {
 		SPR = {
 			has_completed_focus = SPR_forget_about_our_colonies
 		}
+		original_tag = SPR
 	}
 	option = {
 		name = ww1_spain.55.a
@@ -1204,10 +1206,8 @@ country_event = {
 	picture = GFX_report_event_liberal_victory
 	fire_only_once = yes
 	hidden = yes
-	mean_time_to_happen = { days = 1 }
-	trigger = {
-		has_global_flag = SPR_visible_focuses_rule_THC
-	}
+	is_triggered_only = yes
+	
 	option = {
 		name = ww1_spain.147.a
 		ai_chance = { factor = 10 }
@@ -1535,6 +1535,7 @@ country_event = {
 			has_completed_focus = SPR_allow_minor_regional_autonomy
 			has_completed_focus = SPR_relegalize_the_juntas
 		}
+		original_tag = SPR
 	}
 	option = {
 		name = ww1_spain.110.a #Gladly
@@ -1675,17 +1676,24 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = {	days = 3 }
 	trigger = {
-		has_completed_focus = SPR_military_coup
-		NOT = {
-			has_completed_focus = SPR_the_government_survives
-		}
-		tag = SPR
-		is_subject = no
-		has_character = SPR_miguel_primo_de_rivera
+		original_tag = SPR
 		OR = {
-			has_government = neutrality
-			has_government = democratic
-			has_government = communism
+			has_completed_focus = SPR_defeat_in_the_great_war
+			has_completed_focus = SPR_humiliating_defeat
+			AND = {
+				has_global_flag = SPR_flag_terrible_deadline
+				NOT = {
+					has_completed_focus = SPR_the_government_survives
+				}
+				tag = SPR
+				is_subject = no
+				has_character = SPR_miguel_primo_de_rivera
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+					has_government = communism
+				}
+			}
 		}
 	}
 	option = {
@@ -2689,6 +2697,7 @@ country_event = {
 			}
 		}
 		country_exists = AUH
+		original_tag = SPR
 	}
 	
 	option = {
@@ -3008,6 +3017,7 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = { days = 135 }
 	trigger = {
+		original_tag = SPR
 		has_global_flag = SPR_flag_picked_the_censorship
 	}
 	option = {
@@ -3308,20 +3318,6 @@ country_event = {
 	}
 }
 
-#Abd el-Krim Starts the War
-country_event = {
-	id = ww1_spain.139
-	title = ww1_spain.139.t
-	desc = ww1_spain.139.d
-	picture = GFX_report_event_degaulle_churchill
-	fire_only_once = no
-	is_triggered_only = yes
-	option = {
-		name = ww1_spain.139.a
-		ai_chance = { factor = 10 }
-	}
-}
-
 #The People or the Politics
 country_event = {
 	id = ww1_spain.142
@@ -3408,6 +3404,7 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = { days = 50 }
 	trigger = {
+		original_tag = SPR
 		AND = {
 			
 			AND = { #Life
@@ -3473,6 +3470,7 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = { days = 5 }
 	trigger = {
+		original_tag = SPR
 		AND = {
 			has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
 			has_completed_focus = SPR_adopt_furthur_social_reform
@@ -3501,6 +3499,7 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = { days = 1 }
 	trigger = {
+		original_tag = SPR
 		AND = {
 			AND = { #Life
 				has_completed_focus = SPR_continue_skilled_promotion
@@ -3566,27 +3565,6 @@ country_event = {
 	}
 }
 
-#Hidden Focus Bug Fix
-country_event = {
-	id = ww1_spain.146
-	title = ww1_spain.146.t
-	desc = ww1_spain.146.d
-	picture = GFX_report_event_liberal_victory
-	fire_only_once = yes
-	hidden = yes
-	mean_time_to_happen = { days = 1 }
-	trigger = {
-		has_global_flag = SPR_visible_focuses_rule_THC
-	}
-	option = {
-		name = ww1_spain.146.a
-		ai_chance = { factor = 10 }
-		mark_focus_tree_layout_dirty = yes
-		#clr_global_flag = SPR_visible_focuses_rule_THC
-		set_global_flag = SPR_visible_focuses_rule_THC
-	}
-}
-
 #Will Rivera Resign
 country_event = {
 	id = ww1_spain.148
@@ -3618,6 +3596,7 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = { days = 30 }
 	trigger = {
+		original_tag = SPR
 		has_global_flag = SPR_flag_rivera_will_resign_in_1927
 		date > 1927.3.1
 	}
@@ -3645,5 +3624,548 @@ country_event = {
 			}
 			set_global_flag = SPR_flag_rivera_leaves_office
 		}
+	}
+}
+
+#Rifs unsatisfied with Steel policies
+country_event = {
+	id = ww1_spain.139
+	title = ww1_spain.139.t
+	desc = ww1_spain.139.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.139.a
+		ai_chance = { factor = 10 }
+		290 = {
+			add_resistance = 60
+		}
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.150
+				days = 75
+			}
+		}
+	}
+}
+#Abd el-Krim begins Guerilla Assaults
+country_event = {
+	id = ww1_spain.150
+	title = ww1_spain.150.t
+	desc = ww1_spain.150.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.150.a
+		ai_chance = { factor = 10 }
+		RIF = {
+			transfer_state = 290
+		}
+		290 = {
+			add_core_of = RIF
+		}
+		set_global_flag = SPR_flag_rifs_rebellion
+		mark_focus_tree_layout_dirty = yes
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 290
+				num_provinces = 2
+				on_win = ww1_spain.152
+				on_lose = ww1_spain.153
+				on_cancel = ww1_spain.154
+				modifier = 0.1
+				dig_in_factor = 0
+				terrain_factor = 0
+			}	
+			defender = {
+				state = 249
+				num_provinces = 2
+				on_win = ww1_spain.152
+				on_lose = ww1_spain.153
+				on_cancel = ww1_spain.154
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ww1_spain.151
+				days = 35
+			}
+		}
+	}
+}
+#Abd el-Krim Starts the War
+country_event = {
+	id = ww1_spain.151
+	title = ww1_spain.151.t
+	desc = ww1_spain.151.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.151.a
+		ai_chance = { factor = 10 }
+		cancel_border_war = {
+			dont_fire_events = yes
+			defender = 249
+			attacker = 290
+		}
+		declare_war_on = {
+			target = SPR
+			type = topple_government
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					FRA = {
+						NOT = {
+							has_global_flag = great_war_loser
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.155
+					days = 25
+				}
+			}
+			IF = {
+				limit = {
+					GER = {
+						NOT = {
+							has_global_flag = great_war_loser
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.161
+					days = 25
+				}
+			}
+		}
+		RIF = {
+			add_ideas = SPR_idea_death_before_surrender
+		}
+	}
+}
+
+#Won Rifs Border
+country_event = {
+	id = ww1_spain.152
+	title = ww1_spain.152.t
+	desc = ww1_spain.152.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.152.a
+		ai_chance = { factor = 10 }
+
+	}
+}
+#Loss Rifs Border
+country_event = {
+	id = ww1_spain.153
+	title = ww1_spain.153.t
+	desc = ww1_spain.153.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.153.a
+		ai_chance = { factor = 10 }
+
+	}
+}
+#Draw Rifs Border
+country_event = {
+	id = ww1_spain.154
+	title = ww1_spain.154.t
+	desc = ww1_spain.154.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.154.a
+		ai_chance = { factor = 10 }
+
+	}
+}
+
+#Rifs Surprise Attack France
+country_event = {
+	id = ww1_spain.155
+	title = ww1_spain.155.t
+	desc = ww1_spain.155.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.155.a
+		ai_chance = { factor = 10 }
+		FRA = {
+			country_event = {
+				id = ww1_spain.156
+				days = 3
+			}
+		}
+		RIF = {
+			transfer_state = 108
+		}
+		108 = {
+			add_core_of = RIF
+		}
+		459 = {
+			add_manpower = -3250
+		}
+		461 = {
+			add_manpower = -3250
+		}
+	}
+}
+
+#Rifs Surprise Attack France FRA
+country_event = {
+	id = ww1_spain.156
+	title = ww1_spain.156.t
+	desc = ww1_spain.156.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.156.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		set_global_flag = SPR_flag_france_refuses_to_join
+		459 = {
+			add_manpower = -3250
+		}
+		461 = {
+			add_manpower = -3250
+		}
+	}
+	option = {
+		name = ww1_spain.156.b
+		ai_chance = { factor = 150 }
+		FRA = {
+			declare_war_on = RIF
+		}
+		SPR = {
+			country_event = ww1_spain.157
+		}
+		set_global_flag = SPR_flag_france_joins_the_war
+		459 = {
+			add_manpower = -3250
+		}
+		461 = {
+			add_manpower = -3250
+		}
+	}
+}
+
+#SPR France Joins the War
+country_event = {
+	id = ww1_spain.157
+	title = ww1_spain.157.t
+	desc = ww1_spain.157.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.157.a
+		ai_chance = { factor = 2 }
+		add_stability = 0.05
+		complete_national_focus = SPR_the_lyon_of_verdun
+		add_days_mission_timeout = {
+			mission = SPR_defeat_the_rifs
+			days = 2600
+		}
+	}
+}
+
+#Abd el Krim demands Negotiations
+country_event = {
+	id = ww1_spain.158
+	title = ww1_spain.158.t
+	desc = ww1_spain.158.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	mean_time_to_happen = { days = 7 }
+	trigger = {
+		original_tag = SPR
+		SPR = {
+			controls_province = 7215
+		}
+		FRA = {
+			controls_province = 7215
+		}
+	}
+	option = {
+		name = ww1_spain.158.a
+		ai_chance = { factor = 2 }
+		add_stability = 0.05
+		complete_national_focus = SPR_relaunch_the_offensive
+		set_global_flag = SPR_flag_rif_negotiations
+	}
+	option = {
+		name = ww1_spain.158.a
+		ai_chance = { factor = 2 }
+		add_stability = 0.05
+		complete_national_focus = SPR_demand_a_peace_from_the_french
+		set_global_flag = SPR_flag_rif_negotiations
+		country_event = {
+			id = ww1_spain.160
+			days = 5
+		}
+	}
+}
+
+#Continued War
+country_event = {
+	id = ww1_spain.159
+	title = ww1_spain.159.t
+	desc = ww1_spain.159.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = { days = 30 }
+	trigger = {
+		RIF = {
+			has_capitulated = yes
+		}
+		original_tag = SPR
+	}
+	
+	option = {
+		name = ww1_spain.159.a
+		ai_chance = { factor = 10 }
+		290 = {
+			transfer_state_to = SPR
+		}
+		108 = {
+			transfer_state_to = FRA
+		}
+		461 = {
+			transfer_state_to = FRA
+		}
+	}
+}
+
+#Victory in War
+country_event = {
+	id = ww1_spain.160
+	title = ww1_spain.160.t
+	desc = ww1_spain.160.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.160.a
+		ai_chance = { factor = 10 }
+		290 = {
+			transfer_state_to = SPR
+		}
+		108 = {
+			transfer_state_to = FRA
+		}
+		461 = {
+			transfer_state_to = FRA
+		}
+	}
+}
+
+
+#Rifs Surprise Attack Germany
+country_event = {
+	id = ww1_spain.161
+	title = ww1_spain.161.t
+	desc = ww1_spain.161.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.161.a
+		ai_chance = { factor = 10 }
+		GER = {
+			country_event = {
+				id = ww1_spain.162
+				days = 3
+			}
+		}
+		RIF = {
+			transfer_state = 108
+		}
+		108 = {
+			add_core_of = RIF
+		}
+		459 = {
+			add_manpower = -3250
+		}
+		461 = {
+			add_manpower = -3250
+		}
+	}
+}
+
+#Rifs Surprise Attack Germany GER
+country_event = {
+	id = ww1_spain.162
+	title = ww1_spain.162.t
+	desc = ww1_spain.162.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.162.b
+		ai_chance = { factor = 150 }
+		FRA = {
+			declare_war_on = RIF
+		}
+		SPR = {
+			country_event = ww1_spain.157
+		}
+		set_global_flag = SPR_flag_germany_joins_the_war
+		459 = {
+			add_manpower = -3250
+		}
+		461 = {
+			add_manpower = -3250
+		}
+	}
+}
+
+#SPR Germany Joins the War
+country_event = {
+	id = ww1_spain.163
+	title = ww1_spain.163.t
+	desc = ww1_spain.163.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ww1_spain.163.a
+		ai_chance = { factor = 2 }
+		add_stability = 0.05
+		complete_national_focus = SPR_hindenburg_and_ludendhorff
+		add_days_mission_timeout = {
+			mission = SPR_defeat_the_rifs
+			days = 2600
+		}
+	}
+}
+
+#Abd el Krim demands Negotiations
+country_event = {
+	id = ww1_spain.164
+	title = ww1_spain.164.t
+	desc = ww1_spain.164.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = no
+	mean_time_to_happen = { days = 7 }
+	trigger = {
+		original_tag = SPR
+		SPR = {
+			controls_province = 7215
+		}
+		GER = {
+			controls_province = 7215
+		}
+	}
+	option = {
+		name = ww1_spain.164.a
+		ai_chance = { factor = 2 }
+		add_stability = 0.05
+		complete_national_focus = SPR_relaunch_the_offensive
+		set_global_flag = SPR_flag_rif_negotiations
+	}
+	option = {
+		name = ww1_spain.164.b
+		ai_chance = { factor = 2 }
+		add_stability = 0.05
+		complete_national_focus = SPR_demand_a_peace_from_the_germans
+		set_global_flag = SPR_flag_rif_negotiations
+		country_event = {
+			id = ww1_spain.166
+			days = 5
+		}
+	}
+}
+
+#Continued War
+country_event = {
+	id = ww1_spain.165
+	title = ww1_spain.165.t
+	desc = ww1_spain.165.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = { days = 30 }
+	trigger = {
+		original_tag = SPR
+		RIF = {
+			has_capitulated = yes
+		}
+	}
+	
+	option = {
+		name = ww1_spain.165.a
+		ai_chance = { factor = 10 }
+		290 = {
+			transfer_state_to = SPR
+		}
+		108 = {
+			transfer_state_to = GER
+		}
+		461 = {
+			transfer_state_to = GER
+		}
+	}
+}
+
+#Victory in War
+country_event = {
+	id = ww1_spain.166
+	title = ww1_spain.166.t
+	desc = ww1_spain.166.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.166.a
+		ai_chance = { factor = 10 }
+		290 = {
+			transfer_state_to = SPR
+		}
+		108 = {
+			transfer_state_to = GER
+		}
+		461 = {
+			transfer_state_to = GER
+		}
+	}
+}
+
+#Hidden Focus Bug Fix
+country_event = {
+	id = ww1_spain.146
+	title = ww1_spain.146.t
+	desc = ww1_spain.146.d
+	picture = GFX_report_event_liberal_victory
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.146.a
+		ai_chance = { factor = 10 }
+		mark_focus_tree_layout_dirty = yes
+		set_global_flag = SPR_flag_rifs_rebellion_GER
+		#clr_global_flag = SPR_visible_focuses_rule_THC
+		#set_global_flag = SPR_visible_focuses_rule_THC
 	}
 }
