@@ -42,13 +42,21 @@ country_event = {
 		set_global_flag = liberal_majority
 		clr_global_flag = conservative_majority
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.103
-				days = 525
-			}
-			country_event = {
-				id = ww1_spain.133
-				days = 2
+			IF = {
+					limit = {
+						OR = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+				country_event = {
+					id = ww1_spain.133
+					days = 2
+				}
 			}
 			set_global_flag = SPR_flag_liberal_landslide
 		}
@@ -59,10 +67,6 @@ country_event = {
 		set_global_flag = liberal_majority
 		clr_global_flag = conservative_majority
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.103
-				days = 750
-			}
 			set_global_flag = SPR_flag_liberal_small_victory
 		}
 	}
@@ -756,9 +760,21 @@ country_event = {
 		}
 		clr_global_flag = new_spanish_prime_minister
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.132
-				days = 5
+			IF = {
+					limit = {
+						OR = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
 			}
 		}
 	}
@@ -805,9 +821,21 @@ country_event = {
 					random_days = 130
 				}
 				hidden_effect = {
-					country_event = {
-						id = ww1_spain.130
-						days = 5
+					IF = {
+						limit = {
+							OR = {
+								NOT = {
+									has_completed_focus = SPR_abolish_el_turno
+								}
+								NOT = {
+									has_completed_focus = SPR_change_brings_reform
+								}
+							}
+						}
+						country_event = {
+							id = ww1_spain.130
+							days = 5
+						}
 					}
 				}
 			}
@@ -844,9 +872,21 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister
 		#Important\/
 		set_global_flag = dato_leaves_office
-		country_event = {
-			id = ww1_spain.131
-			days = 5
+		IF = {
+			limit = {
+				OR = {
+					NOT = {
+						has_completed_focus = SPR_abolish_el_turno
+					}
+					NOT = {
+						has_completed_focus = SPR_change_brings_reform
+					}
+				}
+			}
+			country_event = {
+				id = ww1_spain.131
+				days = 5
+			}
 		}
 	}
 }
@@ -932,9 +972,21 @@ country_event = {
 		#Important\/
 		set_global_flag = prieto_leaves_office #Ensure Same PM doesnt come in twice after leaving
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.132
-				days = 5
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
 			}
 		}
 	}
@@ -981,9 +1033,21 @@ country_event = {
 					random_days = 120
 				}
 			}
-			country_event = {
-				id = ww1_spain.132
-				days = 5
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 5
+				}
 			}
 		}
 		#Important\/
@@ -1019,9 +1083,21 @@ country_event = {
 		#Important\/
 		set_global_flag = maura_leaves_office
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.130
-				days = 5
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
 			}
 		}
 		clr_global_flag = SPR_flag_maura_truly_in_office
@@ -1103,9 +1179,21 @@ country_event = {
 		clr_global_flag = new_spanish_prime_minister 
 		#Important\/
 		set_global_flag = manuel_leaves_office #Scripted El turno Effect
-		country_event = {
-			id = ww1_spain.130
-			days = 5
+		IF = {
+			limit = {
+				OR = {
+					NOT = {
+						has_completed_focus = SPR_abolish_el_turno
+					}
+					NOT = {
+						has_completed_focus = SPR_change_brings_reform
+					}
+				}
+			}
+			country_event = {
+				id = ww1_spain.130
+				days = 5
+			}
 		}
 	}
 }
@@ -1143,9 +1231,21 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.130
-				days = 5
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
 			}
 		}
 	}
@@ -1242,9 +1342,21 @@ country_event = {
 		#Important\/
 		set_global_flag = sanchez_leaves_office
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.130
-				days = 5
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
 			}
 		}
 	}
@@ -1275,13 +1387,25 @@ country_event = {
 		set_global_flag = SPR_flag_juntas_operate
 		complete_national_focus = SPR_military_juntas_operate_illegally
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.132
-				days = 15
-			}
-			country_event = {
-				id = ww1_spain.130
-				days = 5
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 15
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 5
+				}
 			}
 		}
 	}
@@ -1331,13 +1455,25 @@ country_event = {
 		set_global_flag = proletariat_strikes
 		complete_national_focus = SPR_proletariat_strikes
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.132
-				days = 50
-			}
-			country_event = {
-				id = ww1_spain.130
-				days = 80
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 50
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 80
+				}
 			}
 		}
 	}
@@ -1390,13 +1526,25 @@ country_event = {
 		add_stability = -0.01
 		ai_chance = { factor = 10 }
 		hidden_effect = {
-			country_event = {
-				id = ww1_spain.132
-				days = 125
-			}
-			country_event = {
-				id = ww1_spain.130
-				days = 150
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 125
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 150
+				}
 			}
 		}
 	}
@@ -2320,7 +2468,12 @@ country_event = {
 	desc = ww1_spain.103.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
-	is_triggered_only = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1912.6.21
+	}
 	
 	option = {
 		name = ww1_spain.103.a # Liberal
@@ -2344,10 +2497,6 @@ country_event = {
 			country_event = {
 				id = ww1_spain.132
 				days = 3
-			}
-			country_event = {
-				id = ww1_spain.104
-				days = 720
 			}
 		}
 	}
@@ -2377,10 +2526,6 @@ country_event = {
 				id = ww1_spain.133
 				days = 3
 			}
-			country_event = {
-				id = ww1_spain.104
-				days = 720
-			}
 		}
 	}
 	
@@ -2393,7 +2538,12 @@ country_event = {
 	desc = ww1_spain.104.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
-	is_triggered_only = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1914.6.21
+	}
 	
 	option = {
 		name = ww1_spain.104.a  # Liberal
@@ -2413,13 +2563,21 @@ country_event = {
 				uncomplete_children = no
 				refund_political_power = no
 			}
-			country_event = {
-				id = ww1_spain.132
-				days = 3
-			}
-			country_event = {
-				id = ww1_spain.105
-				days = 720
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
 			}
 			country_event = {
 				id = ww1_spain.130
@@ -2445,13 +2603,21 @@ country_event = {
 				refund_political_power = no
 			}
 			complete_national_focus = SPR_general_election
-			country_event = {
-				id = ww1_spain.133
-				days = 3
-			}
-			country_event = {
-				id = ww1_spain.105
-				days = 720
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 3
+				}
 			}
 			country_event = {
 				id = ww1_spain.131
@@ -2469,7 +2635,12 @@ country_event = {
 	desc = ww1_spain.105.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
-	is_triggered_only = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1916.6.21
+	}
 	
 	option = {
 		name = ww1_spain.105.a # Liberal
@@ -2488,17 +2659,25 @@ country_event = {
 				refund_political_power = no
 			}
 			complete_national_focus = SPR_general_election
-			country_event = {
-				id = ww1_spain.132
-				days = 3
-			}
-			country_event = {
-				id = ww1_spain.134
-				days = 720
-			}
-			country_event = {
-				id = ww1_spain.130
-				days = 3
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
 			}
 		}
 	}
@@ -2520,18 +2699,27 @@ country_event = {
 				refund_political_power = no
 			}
 			complete_national_focus = SPR_general_election
-			country_event = {
-				id = ww1_spain.133
-				days = 3
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
 			}
-			country_event = {
-				id = ww1_spain.134
-				days = 720
-			}
-			country_event = {
-				id = ww1_spain.131
-				days = 3
-			}
+			
 		}
 	}
 }
@@ -2543,7 +2731,12 @@ country_event = {
 	desc = ww1_spain.134.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
-	is_triggered_only = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1918.6.21
+	}
 	option = {
 		name = ww1_spain.134.a # Liberal
 		ai_chance = { factor = 10 }
@@ -2563,18 +2756,26 @@ country_event = {
 				uncomplete_children = no
 				refund_political_power = no
 			}
-		
-			country_event = {
-				id = ww1_spain.132
-				days = 3
-			}
-			country_event = {
-				id = ww1_spain.135
-				days = 720
-			}
-			country_event = {
-				id = ww1_spain.130
-				days = 3
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
 			}
 		}
 	}
@@ -2596,17 +2797,26 @@ country_event = {
 				refund_political_power = no
 			}
 			complete_national_focus = SPR_general_election
-			country_event = {
-				id = ww1_spain.133
-				days = 3
-			}
-			country_event = {
-				id = ww1_spain.135
-				days = 720
-			}
-			country_event = {
-				id = ww1_spain.131
-				days = 3
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 3
+				}
+				
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
 			}
 		}
 	}
@@ -2619,7 +2829,12 @@ country_event = {
 	desc = ww1_spain.135.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
-	is_triggered_only = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1920.6.21
+	}
 	
 	option = {
 		name = ww1_spain.135.a # Liberal
@@ -2639,20 +2854,456 @@ country_event = {
 				uncomplete_children = no
 				refund_political_power = no
 			}
-		
-			country_event = {
-				id = ww1_spain.132
-				days = 3
-			}
-			country_event = {
-				id = ww1_spain.130
-				days = 3
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
 			}
 		}
 	}
 	
 	option = {
 		name = ww1_spain.135.b  # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+		hidden_effect = {
+			
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			country_event = {
+				id = ww1_spain.133
+				days = 3
+			}
+			country_event = {
+				id = ww1_spain.131
+				days = 3
+			}
+		}
+	}
+}
+
+# 1922 General Election
+country_event = {
+	id = ww1_spain.168
+	title = ww1_spain.168.t
+	desc = ww1_spain.168.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1922.6.21
+	}
+	
+	option = {
+		name = ww1_spain.168.a # Liberal
+		complete_national_focus = SPR_liberal_majority
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			set_global_flag = next_general_election_has_occured
+			
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ww1_spain.168.b  # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+		hidden_effect = {
+			
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			country_event = {
+				id = ww1_spain.133
+				days = 3
+			}
+			country_event = {
+				id = ww1_spain.131
+				days = 3
+			}
+		}
+	}
+}
+
+# 1924 General Election
+country_event = {
+	id = ww1_spain.169
+	title = ww1_spain.169.t
+	desc = ww1_spain.169.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1924.6.21
+	}
+	
+	option = {
+		name = ww1_spain.169.a # Liberal
+		complete_national_focus = SPR_liberal_majority
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			set_global_flag = next_general_election_has_occured
+			
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ww1_spain.169.b  # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+		hidden_effect = {
+			
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			country_event = {
+				id = ww1_spain.133
+				days = 3
+			}
+			country_event = {
+				id = ww1_spain.131
+				days = 3
+			}
+		}
+	}
+}
+
+# 1926 General Election
+country_event = {
+	id = ww1_spain.170
+	title = ww1_spain.170.t
+	desc = ww1_spain.170.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1926.6.21
+	}
+	
+	option = {
+		name = ww1_spain.170.a # Liberal
+		complete_national_focus = SPR_liberal_majority
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			set_global_flag = next_general_election_has_occured
+			
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ww1_spain.170.b  # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+		hidden_effect = {
+			
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			country_event = {
+				id = ww1_spain.133
+				days = 3
+			}
+			country_event = {
+				id = ww1_spain.131
+				days = 3
+			}
+		}
+	}
+}
+
+# 1928 General Election
+country_event = {
+	id = ww1_spain.171
+	title = ww1_spain.171.t
+	desc = ww1_spain.171.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1928.6.21
+	}
+	
+	option = {
+		name = ww1_spain.171.a # Liberal
+		complete_national_focus = SPR_liberal_majority
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			set_global_flag = next_general_election_has_occured
+			
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ww1_spain.171.b  # Conservative
+		ai_chance = { factor = 10 }
+		set_global_flag = next_general_election_has_occured
+		complete_national_focus = SPR_conservative_majority
+		hidden_effect = {
+			
+			uncomplete_national_focus = {
+				focus = SPR_liberal_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			country_event = {
+				id = ww1_spain.133
+				days = 3
+			}
+			country_event = {
+				id = ww1_spain.131
+				days = 3
+			}
+		}
+	}
+}
+
+# 1930 General Election
+country_event = {
+	id = ww1_spain.172
+	title = ww1_spain.172.t
+	desc = ww1_spain.172.d
+	picture = GFX_report_event_generic_parliament
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		original_tag = SPR
+		has_government = neutrality
+		date > 1930.6.21
+	}
+	
+	option = {
+		name = ww1_spain.172.a # Liberal
+		complete_national_focus = SPR_liberal_majority
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SPR_general_election
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = SPR_general_election
+			set_global_flag = next_general_election_has_occured
+			
+			uncomplete_national_focus = {
+				focus = SPR_conservative_majority
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			IF = {
+				limit = {
+					OR = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.132
+					days = 3
+				}
+				country_event = {
+					id = ww1_spain.130
+					days = 3
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ww1_spain.172.b  # Conservative
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
@@ -2902,7 +3553,32 @@ country_event = {
 			remove_ideas = SPR_idea_weak_catholicism
 			remove_ideas = SPR_idea_secular_state
 			remove_ideas = SPR_idea_freedom_of_religion
-			add_ideas = SPR_idea_catholic_nation
+			
+			remove_ideas = SPR_idea_protestant_nation
+			remove_ideas = SPR_idea_strong_protestantism
+			remove_ideas = SPR_idea_mild_protestantism
+			remove_ideas = SPR_idea_weak_protestantism
+			remove_ideas = SPR_idea_freedom_of_protestantism
+			remove_ideas = SPR_idea_protestant_secular_state
+			IF = {
+				limit = {
+					has_completed_focus = SPR_remain_catholic
+				}
+				add_ideas = SPR_idea_catholic_nation
+			}
+			IF = {
+				limit = {
+					has_completed_focus = SPR_empower_protestant_church
+				}
+				add_ideas = SPR_idea_protestant_nation
+			}
+			IF = {
+				limit = {
+					has_completed_focus = SPR_turn_the_church_into_a_competitive_market
+				}
+				add_ideas = SPR_idea_protestant_nation
+				add_ideas = SPR_idea_catholic_nation
+			}
 			IF = {
 				limit = { has_completed_focus = SPR_the_muslims }
 				add_ideas = SPR_idea_muslims_in_spain
@@ -3406,7 +4082,6 @@ country_event = {
 	trigger = {
 		original_tag = SPR
 		AND = {
-			
 			AND = { #Life
 				has_completed_focus = SPR_continue_skilled_promotion
 				OR = {
@@ -3416,6 +4091,16 @@ country_event = {
 			} 
 			
 			OR = {
+				AND = {
+					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+					has_completed_focus = SPR_adopt_furthur_social_reform
+					
+					has_completed_focus = SPR_continue_skilled_promotion
+					OR = {
+						has_completed_focus = SPR_strengthen_the_punishment
+						has_completed_focus = SPR_rights_and_insurance_legislation
+					}
+				}
 				AND = {
 					has_completed_focus = SPR_arrest_signatories_of_the_manifesto
 					has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
@@ -3462,33 +4147,33 @@ country_event = {
 }
 
 #Three Headed Crisis Success
-country_event = {
-	id = ww1_spain.141
-	title = ww1_spain.141.t
-	desc = ww1_spain.141.d
-	picture = GFX_report_event_SWI_assembly_hall
-	fire_only_once = yes
-	mean_time_to_happen = { days = 5 }
-	trigger = {
-		original_tag = SPR
-		AND = {
-			has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
-			has_completed_focus = SPR_adopt_furthur_social_reform
-			
-			has_completed_focus = SPR_continue_skilled_promotion
-			OR = {
-				has_completed_focus = SPR_strengthen_the_punishment
-				has_completed_focus = SPR_rights_and_insurance_legislation
-			}
-		}
-	}
-	option = {
-		name = ww1_spain.141.a
-		ai_chance = { factor = 10 }
-		complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
-		complete_national_focus = SPR_gauge_our_position
-	}
-}
+#country_event = {
+#	id = ww1_spain.141
+#	title = ww1_spain.141.t
+#	desc = ww1_spain.141.d
+#	picture = GFX_report_event_SWI_assembly_hall
+#	fire_only_once = yes
+#	mean_time_to_happen = { days = 5 }
+#	trigger = {
+#		original_tag = SPR
+#		AND = {
+#			has_completed_focus = SPR_junta_and_catalonian_autonomy_incompatible
+#			has_completed_focus = SPR_adopt_furthur_social_reform
+#			
+#			has_completed_focus = SPR_continue_skilled_promotion
+#			OR = {
+#				has_completed_focus = SPR_strengthen_the_punishment
+#				has_completed_focus = SPR_rights_and_insurance_legislation
+#			}
+#		}
+#	}
+#	option = {
+#		name = ww1_spain.141.a
+#		ai_chance = { factor = 10 }
+#		complete_national_focus = SPR_success_in_containing_the_three_headed_crisis
+#		complete_national_focus = SPR_gauge_our_position
+#	}
+#}
 
 #Gauge Our Position
 country_event = {

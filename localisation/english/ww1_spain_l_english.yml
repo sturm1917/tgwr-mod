@@ -588,6 +588,8 @@
  SPR_religious_policy_category_desc:0 "Spain Religous Policy"
  SPR_massive_strike_plans_category:0 "Massive Strike Coming"
  SPR_massive_strike_plans_category_desc:0 "Massive Strike Coming"
+ SPR_failure_to_contain_crisis:0 "The Three Headed Crisis"
+ SPR_failure_to_contain_crisis_desc:0 "§RIf Proto-Fascist Popularity goes above 60%, a Civil War will likely begin...§W"
  SPR_liberal_reform_one:0 "Increase the Unity of the Liberal Party"
  SPR_liberal_reform_two:0 "Pass Liberal Reforms (Completes Liberal Focuses after the next general election)"
  SPR_conservative_reform_two_desc:0 "This will autocomplete one of the following 3 focuses if taken: Seperation of Powers, Religous Freedom, or Extensive Legislative Reforms"
@@ -662,6 +664,19 @@
  SPR_THC_reform_5:0 "Government Subsidies"
  SPR_THC_reform_6:0 "Guarantee Police Protection for Protests"
  SPR_THC_reform_7:0 "Buy Time from Rivera"
+ 
+ 125daysofdisorganized.tt:0 "§8Remove 125 Days of Disorganized Government§W"
+ 100daysofdisorganized.tt:0 "§8Remove 100 Days of Disorganized Government§W"
+ 75daysofdisorganized.tt:0 "§8Remove 75 Days of Disorganized Government§W"
+ 50daysofdisorganized.tt:0 "§8Remove 50 Days of Disorganized Government§W"
+ add125daysofdisorganized.tt:0 "§8Add 125 Days of Disorganized Government§W"
+ add100daysofdisorganized.tt:0 "§8Add 100 Days of Disorganized Government§W"
+ add75daysofdisorganized.tt:0 "§8Add 75 Days of Disorganized Government§W"
+ add50daysofdisorganized.tt:0 "§8Add 50 Days of Disorganized Government§W"
+ 
+ SPR_social_liberals:0 "Constitutional Monarchy of Spain"
+ SPR_el_liberal:0 "Social Republic of Spain"
+ SPR_carlists:0 "Carlist Spain"
  
  SPR_ensure_the_church_keeps_quiet:0 "Loyalty of the Church?"
  SPR_ensure_the_church_keeps_quiet_desc:0 "For years, the church has condemned the reign of our great leader. They refuse to stop, and we should gauge their position and intentions. Perhaps silence them..."

@@ -46,30 +46,32 @@ SPR_failure_to_contain_crisis = {
 		complete_effect = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.075
+				popularity = -0.05
 			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -675
-			}
-		}
-		remove_effect = {
-			add_stability = 0.03
+			
 			IF = {
 				limit = {
 					has_idea = SPR_idea_government_disorganized
 				}
 				modify_timed_idea = {
 					idea = SPR_idea_government_disorganized
-					days = -50
+					days = -100
 				}
+			}
+			custom_effect_tooltip = 100daysofdisorganized.tt
+		}
+		remove_effect = {
+			add_stability = 0.03
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -675
 			}
 		}
 		priority = 7
 	}
 	SPR_THC_reform_2 = { #Junta2
 		icon = GFX_decision_generic_fundraising
-		fire_only_once = yes
+		fire_only_once = no
 		allowed = {
 			original_tag = SPR
 		}	
@@ -85,16 +87,10 @@ SPR_failure_to_contain_crisis = {
 			political_power_factor = -0.03
 		}
 		complete_effect = {
-			add_stability = -0.05
+
 			add_days_mission_timeout = {
 				mission = SPR_terrible_deadline
 				days = 50
-			}
-		}
-		remove_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
 			}
 			IF = {
 				limit = {
@@ -102,9 +98,10 @@ SPR_failure_to_contain_crisis = {
 				}
 				modify_timed_idea = {
 					idea = SPR_idea_government_disorganized
-					days = 150
+					days = 75
 				}
 			}
+			custom_effect_tooltip = add75daysofdisorganized.tt
 			IF = {
 				limit = {
 					NOT = {
@@ -113,15 +110,23 @@ SPR_failure_to_contain_crisis = {
 				}
 				add_timed_idea = {
 					idea = SPR_idea_government_disorganized
-					days = 150
+					days = 75
 				}
 			}
+			custom_effect_tooltip = add75daysofdisorganized.tt
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_stability = -0.05
 		}
 		priority = 7
 	}
 	SPR_THC_reform_3 = { #Cat3
 		icon = GFX_decision_generic_fundraising
-		fire_only_once = yes
+		fire_only_once = no
 		allowed = {
 			original_tag = SPR
 		}	
@@ -131,33 +136,36 @@ SPR_failure_to_contain_crisis = {
 		available = {
 			always = yes
 		}
-		cost = 50
-		days_remove = 75
+		cost = 40
+		days_remove = 50
 		modifier = {
 			political_power_factor = -0.03
 		}
 		complete_effect = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.05
-			}
-		}
-		remove_effect = {
+			
 			IF = {
 				limit = {
 					has_idea = SPR_idea_government_disorganized
 				}
 				modify_timed_idea = {
 					idea = SPR_idea_government_disorganized
-					days = -50
+					days = -75
 				}
+			}
+			custom_effect_tooltip = 75daysofdisorganized.tt
+			
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
 			}
 		}
 		priority = 7
 	}
 	SPR_THC_reform_4 = { #Cat4
 		icon = GFX_decision_generic_fundraising
-		fire_only_once = yes
+		fire_only_once = no
 		allowed = {
 			original_tag = SPR
 		}	
@@ -168,38 +176,24 @@ SPR_failure_to_contain_crisis = {
 			always = yes
 		}
 		cost = 0
-		days_remove = 75
+		days_remove = 50
 		modifier = {
 			political_power_factor = -0.03
 		}
 		complete_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.025
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.025
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = -0.025
-			}
 			add_days_mission_timeout = {
 				mission = SPR_terrible_deadline
 				days = 50
 			}
-		}
-		remove_effect = {
-			add_stability = -0.075
 			IF = {
 				limit = {
 					has_idea = SPR_idea_government_disorganized
 				}
 				modify_timed_idea = {
 					idea = SPR_idea_government_disorganized
-					days = 150
+					days = 50
 				}
+				custom_effect_tooltip = add50daysofdisorganized.tt
 			}
 			IF = {
 				limit = {
@@ -209,104 +203,31 @@ SPR_failure_to_contain_crisis = {
 				}
 				add_timed_idea = {
 					idea = SPR_idea_government_disorganized
-					days = 150
+					days = 50
 				}
+				custom_effect_tooltip = add50daysofdisorganized.tt
+			}
+		}
+		remove_effect = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.025
 			}
 		}
 		priority = 7
 	}
 	SPR_THC_reform_5 = { #Comm5
 		icon = GFX_decision_generic_fundraising
-		fire_only_once = yes
-		allowed = {
-			original_tag = SPR
-		}	
-		visible = {
-			always = yes
-		}
-		available = {
-			always = yes
-		}
-		cost = 50
-		days_remove = 75
-		modifier = {
-			political_power_factor = -0.03
-		}
-		complete_effect = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.075
-			}
-		}
-		remove_effect = {
-			add_stability = 0.025
-			IF = {
-				limit = {
-					has_idea = SPR_idea_government_disorganized
-				}
-				modify_timed_idea = {
-					idea = SPR_idea_government_disorganized
-					days = -100
-				}
-			}
-		}
-		priority = 7
-	}
-	SPR_THC_reform_6 = { #Comm6
-		icon = GFX_decision_generic_fundraising
-		fire_only_once = yes
-		allowed = {
-			original_tag = SPR
-		}	
-		visible = {
-			always = yes
-		}
-		available = {
-			always = yes
-		}
-		cost = 0
-		days_remove = 75
-		modifier = {
-			political_power_factor = -0.03
-		}
-		complete_effect = {
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
-			}
-			add_days_mission_timeout = {
-				mission = SPR_terrible_deadline
-				days = 50
-			}
-		}
-		remove_effect = {
-			add_stability = -0.05
-			IF = {
-				limit = {
-					has_idea = SPR_idea_government_disorganized
-				}
-				modify_timed_idea = {
-					idea = SPR_idea_government_disorganized
-					days = 150
-				}
-			}
-			IF = {
-				limit = {
-					NOT = {
-						has_idea = SPR_idea_government_disorganized
-					}
-				}
-				add_timed_idea = {
-					idea = SPR_idea_government_disorganized
-					days = 150
-				}
-			}
-		}
-		priority = 7
-	}
-	SPR_THC_reform_7 = { #Lower Time of Shambles
-		icon = GFX_decision_generic_fundraising
-		fire_only_once = yes
+		fire_only_once = no
 		allowed = {
 			original_tag = SPR
 		}	
@@ -317,18 +238,115 @@ SPR_failure_to_contain_crisis = {
 			always = yes
 		}
 		cost = 25
-		days_remove = 25
+		days_remove = 50
 		modifier = {
-			political_power_factor = -0.25
+			political_power_factor = -0.03
 		}
 		complete_effect = {
-			add_stability = -0.03
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = -125
+				}
+				custom_effect_tooltip = 125daysofdisorganized.tt
+			}
+		}
+		remove_effect = {
+			add_stability = 0.025
+			add_political_power = 15
+		}
+		priority = 7
+	}
+	SPR_THC_reform_6 = { #Comm6
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = no
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 50
+		modifier = {
+			political_power_factor = -0.03
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			IF = {
+				limit = {
+					has_idea = SPR_idea_government_disorganized
+				}
+				modify_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 100
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = SPR_idea_government_disorganized
+					}
+				}
+				add_timed_idea = {
+					idea = SPR_idea_government_disorganized
+					days = 100
+				}
+			}
+			custom_effect_tooltip = add100daysofdisorganized.tt
 		}
 		remove_effect = {
 			add_days_mission_timeout = {
 				mission = SPR_terrible_deadline
 				days = 50
 			}
+			add_stability = -0.05
+		}
+		priority = 7
+	}
+	SPR_THC_reform_7 = { #Buy Rivera Time
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = no
+		allowed = {
+			original_tag = SPR
+		}	
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 30
+		days_remove = 25
+		modifier = {
+			political_power_factor = -0.25
+		}
+		complete_effect = {
+			add_stability = -0.03
+			add_days_mission_timeout = {
+				mission = SPR_terrible_deadline
+				days = 50
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+		}
+		remove_effect = {
+			add_political_power = 25
 		}
 		priority = 7
 	}
@@ -548,9 +566,19 @@ SPR_el_turno_category = {
 		available = {
 			AND = {		
 				has_global_flag = liberal_majority
-				NOT = { has_global_flag = conservative_majority }
+				NOT = { 
+					has_global_flag = conservative_majority 
+				}
 			}
-			NOT = { has_idea = SPR_idea_united_liberal_party }
+			NOT = { 
+				has_idea = SPR_idea_united_liberal_party 
+			}
+			NOT = { 
+				has_completed_focus = SPR_abolish_el_turno
+			}
+			NOT = { 
+				has_completed_focus = SPR_change_brings_reform
+			}
 		}
 		visible = {
 			OR = {
@@ -597,9 +625,12 @@ SPR_el_turno_category = {
 				has_global_flag = new_liberal_spanish_prime_minister_in_office
 				NOT = { has_global_flag = new_conservative_spanish_prime_minister_in_office }
 			}
-			
-			NOT = { has_completed_focus = SPR_continue_with_split_liberal_parties }
-			NOT = { has_completed_focus = SPR_fuse_with_the_romanonist }
+			NOT = { 
+				has_completed_focus = SPR_abolish_el_turno
+			}
+			NOT = { 
+				has_completed_focus = SPR_change_brings_reform
+			}
 		}
 		visible = {
 			has_global_flag = new_liberal_spanish_prime_minister_in_office
@@ -690,7 +721,15 @@ SPR_el_turno_category = {
 				has_global_flag = conservative_majority
 				NOT = { has_global_flag = liberal_majority }
 			}
-			NOT = { has_idea = SPR_idea_united_conservative_party }
+			NOT = { 
+				has_idea = SPR_idea_united_conservative_party 
+			}
+			NOT = { 
+				has_completed_focus = SPR_abolish_el_turno
+			}
+			NOT = { 
+				has_completed_focus = SPR_change_brings_reform
+			}
 		}	
 		visible = {
 			OR = {
@@ -730,8 +769,12 @@ SPR_el_turno_category = {
 				has_global_flag = new_conservative_spanish_prime_minister_in_office
 				NOT = { has_global_flag = new_liberal_spanish_prime_minister_in_office }
 			}
-			NOT = { has_completed_focus = SPR_side_with_maurists }
-			NOT = { has_completed_focus = SPR_politically_crush_the_maurists }
+			NOT = { 
+				has_completed_focus = SPR_abolish_el_turno
+			}
+			NOT = { 
+				has_completed_focus = SPR_change_brings_reform
+			}
 		}	
 		visible = {
 			has_global_flag = new_conservative_spanish_prime_minister_in_office
@@ -957,6 +1000,13 @@ SPR_religious_policy_category = {
 		} 
 		available = {
 			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
+			OR = {
+				has_idea = SPR_idea_catholic_nation
+				has_idea = SPR_idea_strong_catholicism
+				has_idea = SPR_idea_mild_catholicism
+				has_idea = SPR_idea_weak_catholicism
+				has_idea = SPR_idea_catholic_nation
+			}
 		}	
 		visible = {
 			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
@@ -1018,6 +1068,13 @@ SPR_religious_policy_category = {
 		}
 		available = {
 			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
+			OR = {
+				has_idea = SPR_idea_catholic_nation
+				has_idea = SPR_idea_strong_catholicism
+				has_idea = SPR_idea_mild_catholicism
+				has_idea = SPR_idea_weak_catholicism
+				has_idea = SPR_idea_catholic_nation
+			}
 		}	
 		visible = {
 			NOT = { has_completed_focus = SPR_replace_the_dominant_christian_type }
@@ -1070,6 +1127,13 @@ SPR_religious_policy_category = {
 		}
 		available = {
 			has_completed_focus = SPR_replace_the_dominant_christian_type
+			OR = {
+				has_idea = SPR_idea_protestant_nation
+				has_idea = SPR_idea_strong_protestantism
+				has_idea = SPR_idea_mild_protestantism
+				has_idea = SPR_idea_weak_protestantism
+				has_idea = SPR_idea_protestant_nation
+			}
 		}	
 		visible = {
 			has_completed_focus = SPR_replace_the_dominant_christian_type
@@ -1125,6 +1189,13 @@ SPR_religious_policy_category = {
 		}
 		available = {
 			has_completed_focus = SPR_replace_the_dominant_christian_type
+			OR = {
+				has_idea = SPR_idea_protestant_nation
+				has_idea = SPR_idea_strong_protestantism
+				has_idea = SPR_idea_mild_protestantism
+				has_idea = SPR_idea_weak_protestantism
+				has_idea = SPR_idea_protestant_nation
+			}
 		}	
 		visible = {
 			has_completed_focus = SPR_replace_the_dominant_christian_type

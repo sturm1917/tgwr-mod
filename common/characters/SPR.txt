@@ -443,7 +443,7 @@ characters={
 					original_tag  = SPR
 				}
 				traits  = {
-					popular_figurehead 
+					staunch_monarchist
 				}
 		}
 		name="SPR_joaquin_ruiz"

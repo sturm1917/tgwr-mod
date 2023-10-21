@@ -1081,6 +1081,6 @@ SPR_social_liberals = {
 }
 
 SPR_el_liberal = {
-	color = rgb { 170 0 232 }
-	color_ui = rgb { 179 0 240 }
+	color = rgb { 120 0 242 }
+	color_ui = rgb { 129 0 248 }
 }
