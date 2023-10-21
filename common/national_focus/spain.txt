@@ -9621,6 +9621,15 @@ focus_tree = {
 			promote_character = {
 				character = SPR_alfonso_carlos
 			}
+			SPR_alfonso_carlos = {
+				add_field_marshal_role = {
+					skill = 2
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 3
+				}
+			}
 		}
 	}
 	focus = {
