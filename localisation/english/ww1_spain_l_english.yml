@@ -401,7 +401,7 @@
  SPR_idea_modernization_program:0 "Spanish Modernization Program"
  SPR_idea_modernization_program_desc:0 "Proposed by Alvaro Figueroa, one of the members of the government, the modernization program hopes to make Spain more powerful and competent. While the Conservatives hope to execute this program differently, they agree with the Liberals on passing it. Hopefully this won't cause anything bad..."
  SPR_in_dev1.tt:0 "§RCurrently a Work in Progress§W"
- SPR_careful_of_religion.tt:0 "§OCareful Which Path you Pick, they will all have consequences depending on which government path you choose later on, and some of these choices will lock paths from being available§W"
+ SPR_careful_of_religion.tt:0 "§OCareful Which Path you Pick, they will all have consequences depending on which government path you choose later on, but none of them will lock any paths from being available.§W"
  ww1_spain.70.t:0 "Espana Finished Construction"
  ww1_spain.70.d:0 "The Grand Battleship we commissioned for construction by the British Empire and the French Republic has finished construction. It's technological superiority or equality with other Naval Powers will give our navy an edge if gotten into a scrap."
  ww1_spain.70.a:0 "Excellent"
@@ -575,12 +575,16 @@
  ww1_spain.164.t:0 "Abd El-Krim negotiates for a possible Peace?"
  ww1_spain.164.a:0 "Negotiations Break Down, Destroy Them"
  ww1_spain.164.b:0 "Ask the Germans follow in our Peace"
+ ww1_spain.167.t:0 "Catalonia Draws Plans for Independence!"
+ ww1_spain.167.a:0 "An Outrage!"
+ 
  
  #Flavor Event at Beggining
  ww1_spain.143.t:0 "Spain in 1910"
  ww1_spain.143.d:0 "In the early years of Europe's colonial era, Spain was one of the superpowers with France and Britain. Now, with a humiliating century of loss, and an arse-kicking from the Americans, Spain is in quite the precarious position. Now, we deal with three massive political parties, all illegal, who have formed in the face of our un-stable and unsatisfactory election system. There are the military Juntas, who are obsessed with national unity, at the same time there is the Catalonian party, who wish for regional autonomy from the Spanish Government. And there is the ever lasting fight against the proletariat as always, who whisper about a massive planned general strike in a matter of a few years."                                                                                                                                                                                                                                          As for our government, there are the two leading parties, Liberals and Conservatives. One side is heavily Pro-Entente, favouring religious freedom, and legislation. The other side, the conservatives, are made up of Carlists remnant from the carlist wars of the 19th century, and have fractured into many different parties recently. Not that political parties in Spain fracturing have been anything new, with this government system in Spain, the Liberal and Conservative Parties seldom remain their two parties, and often break into several different kinds of liberal or conservatives. This instability has been brewed by how our Prime Minister is inaugurated. Via a system known as El Turno. Where one Liberal Prime Minister, steps up and serves one term. Then, to appease both sides. A Conservative Prime Minister then Must be put in right after the Liberal, and so on and so on.                                                                                                                                                                                 There is also General Elections for the parliament. While this parliament has power, it is much less influential than the Prime Minister and the King. As a result, Liberal-Based Focuses in the Focus - Tree can only be done with a Liberal Prime Minister, and same for Conservative. What the majority in parliament hold simply affects how much benefits Spain will reap from completing focuses, for example if Spain is to do a liberal focus, it will only give 100 percent of its effects if Spain has a liberal majority in parliament, with a conservative parliament, Spain will reap less benefits. However, the parliament has no say in which focuses can be completed. Only the Prime Minister has this kind of Power."
  ww1_spain.143.a:0 "Very Well..."
  ww1_spain.143.b:0 "I am not Reading all that"
+ 
  
  SPR_no_more_el_turno.tt:0 "§8The Back and Fourth between Liberal and Conservatives will be Removed. With Maura as the new prime minister. If we do not complete the focus Fuse with the Carlists by the end of one year, the government will forcibly remove Maura§W"
  SPR_converse_with_naval_powers.tt:0 "We will purchase an array of ships from one of the naval superpowers, whomever we negotiate with, we can choose to buy §Y1 battleship§W and §Y2 light cruisers§W, §Y5 destoyers§W, or §Y2 heavy cruisers§W and §Y1 destroyer§W"
@@ -597,7 +601,7 @@
  SPR_conservative_reform_two:0 "Pass Conservative Reforms (Completes Conservative Focuses after the next general election)"
  SPR_conservative_reform_two_desc:0 "This will autocomplete one of the following 3 focuses if taken: Centralization, Push for More Catholicsm, or Extensive Traditionalist Reforms"
  SPR_el_turno_category:0 "El Turno"
- SPR_el_turno_category_desc:0 "Governmental Politics"
+ SPR_el_turno_category_desc:0 "Governmental Politics regarding Spain. For 30 years, Spain has been under the rule of the Bourbon king, Alfonso XIII, and his governmental system is known as El Turno, or the Peaceful Turn. Where there are only two main political parties, and there must be one Liberal and then One Conservative Prime Minister. Given this system, there are always a multitude of prime ministers to choose from for both parties, and they always split the Conservative and Liberal parties. How shall we keep these issues in check?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        §RIf Base Stability Drops Below 3%, the government will likely collapse.§W"
  ww1_spain.133.t:0 "Liberals Unite"
  ww1_spain.130.t:0 "Conservatives Fracture"
  ww1_spain.132.t:0 "Liberals Fracture"
@@ -778,14 +782,30 @@
  SPR_the_people_are_happy:0 "The People are Happy"
  SPR_gauge_our_position:0 "Gauge our Position"
  SPR_unlock_rif_war.tt:0 "Unlock Rif War Decisions"
- 
- 
+ SPR_handling_the_rifs_GER:0 "Handling the Rifs"
+ SPR_handling_the_rifs:0 "Handling the Rifs"
+ SPR_we_stand_alone_GER:0 "We Stand Alone"
+ SPR_prepare_the_landing_GER:0 "Prepare the Landing"
+ SPR_humiliating_defeat_GER:0 "Humiliating Defeat"
+ SPR_abd_el_krim_negotiates_GER:0 "Abd El-Krim Requests Negotiations"
+ SPR_relaunch_the_offensive_GER:0 "Re-Launch the Offensive"
+ SPR_demand_a_peace_from_the_germans:0 "Demand a Peace from the Germans"
+ SPR_re_integrate_the_rif_GER:0 "Re-Integrate the Rif"
+ SPR_we_stand_alone:0 "We Stand Alone"
+ SPR_prepare_the_landing:0 "Prepare the Landing"
+ SPR_humiliating_defeat:0 "Humiliating Defeat"
+ SPR_abd_el_krim_negotiates:0 "Abd El-Krim Requests Negotiations"
+ SPR_relaunch_the_offensive:0 "Re-Launch the Offensive"
+ SPR_demand_a_peace_from_the_french:0 "Demand a Peace from the French"
+ SPR_re_integrate_the_rif:0 "Re-Integrate the Rif"
+ SPR_the_lyon_of_verdun:0 "The Lyon of Verdun"
+ SPR_hindenburg_and_ludendhorff:0 "Hindenburg and Ludendorff"
+ SPR_industrialize_the_carlist_movement:0 "Large Scale Carlist Corporatism"
  
  
  #...
  ww1_spain.139.t:0 "Rifs unsatisfied with Steel policies"
- ww1_spain.139.a:0 "I don't feel like coding anymorrrrrrrrrre"
- ww1_spain.139.d:0 "Welcome to the hangout lounge... Thanks for playing Spain."
+ ww1_spain.139.a:0 "I don't care..."
  
  #Buy Ships Cosmetics
  spain_ships.1.ger.tt:0 "Create a §8Moltke Class§W ship from §8the German Empire§W                                                             Create a §8Ilthis Class§W ship by §8German Empire§W  Create a §8Kaiserin Augusta Class§W ship by §8German Empire§W"

@@ -65,7 +65,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -76,7 +76,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 3
+						days = 13
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -114,7 +114,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -191,7 +191,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -205,7 +205,7 @@ focus_tree = {
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.130
+						id = ww1_spain.131
 						days = 3
 					}
 				}
@@ -244,6 +244,26 @@ focus_tree = {
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.025
+			}
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
 			}
 			SPR = { 
 				add_political_power = 75
@@ -303,13 +323,25 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 			hidden_effect = {
-				country_event = {
-					id = ww1_spain.133
-					days = 5
-				}
-				country_event = {
-					id = ww1_spain.131
-					days = 5
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 15
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 5
+					}
 				}
 			}
 		}
@@ -344,9 +376,21 @@ focus_tree = {
 				add_political_power = -25
 			}	
 			add_stability = 0.05
-			country_event = {
-				id = ww1_spain.133
-				days = 5
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
 			}
 		}
 	}
@@ -380,9 +424,21 @@ focus_tree = {
 				add_political_power = 25
 			}	
 			add_stability = -0.05
-			country_event = {
-				id = ww1_spain.133
-				days = 5
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 5
+				}
 			}
 		}
 	}
@@ -443,7 +499,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -490,6 +546,26 @@ focus_tree = {
 			}	
 			add_stability = 0.08
 			scripted_effect_drop_in_regional_demands = yes
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -529,7 +605,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -602,7 +678,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -651,7 +727,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -724,7 +800,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -894,7 +970,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -939,7 +1015,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -985,6 +1061,26 @@ focus_tree = {
 			SPR = { 
 				add_political_power = 50
 			}	
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -1018,7 +1114,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -1070,7 +1166,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -1124,7 +1220,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -1288,7 +1384,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -1343,7 +1439,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -1354,7 +1450,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 5
+						days = 15
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -1460,14 +1556,14 @@ focus_tree = {
 			SPR = { 
 				add_popularity = {
 					ideology = neutrality
-					popularity = 0.125
+					popularity = 0.1
 				}
 				add_stability = -0.1
 			}
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -1478,7 +1574,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 5
+						days = 15
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -1605,6 +1701,26 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_ideas = SPR_idea_muslims_in_spain
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -1707,12 +1823,12 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.05
 			}
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -1723,7 +1839,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 5
+						days = 15
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -1800,6 +1916,26 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -1866,6 +2002,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -1891,7 +2047,27 @@ focus_tree = {
 			SPR = {
 				add_popularity = {
 					ideology = neutrality
-					popularity = 0.05
+					popularity = -0.05
+				}
+			}
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 57
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 78
 				}
 			}
 		}
@@ -2008,6 +2184,26 @@ focus_tree = {
 					add_idea = SPR_idea_strong_catholicism
 				}
 			}
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -2043,7 +2239,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -2054,7 +2250,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 3
+						days = 13
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -2088,7 +2284,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -2138,7 +2334,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -2185,6 +2381,26 @@ focus_tree = {
 			SPR = {
 				add_political_power = 25
 			}	
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -2272,7 +2488,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -2350,6 +2566,28 @@ focus_tree = {
 					days = 150
 				}
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -2394,7 +2632,7 @@ focus_tree = {
 			}	 
 			165 = {
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -2403,7 +2641,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -2414,7 +2652,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.132
-						days = 5
+						days = 15
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -2457,6 +2695,26 @@ focus_tree = {
 			add_stability = 0.03
 			custom_effect_tooltip = SPR_poor_regions_tt
 			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
 				every_owned_state = {
 					add_building_construction = {
 						type = infrastructure
@@ -2580,6 +2838,26 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
 			}
 		}
 	}
@@ -2633,6 +2911,26 @@ focus_tree = {
 				ahead_reduction = 1
 			}	
 			add_political_power = 50
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -2715,7 +3013,7 @@ focus_tree = {
 				days = 160
 			}
 			add_stability = 0.05
-		176 = {
+			176 = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2839,6 +3137,26 @@ focus_tree = {
 				category = infantry_weapons
 				ahead_reduction = 1.5
 			}
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -2890,6 +3208,26 @@ focus_tree = {
 				amount = 100
 				producer = FRA
 			}
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -2920,6 +3258,26 @@ focus_tree = {
 				category = excavation_tech
 				ahead_reduction = 1.5
 			}	
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_completed_focus = SPR_abolish_el_turno
+						}
+						NOT = {
+							has_completed_focus = SPR_change_brings_reform
+						}
+					}
+				}
+				country_event = {
+					id = ww1_spain.133
+					days = 13
+				}
+				country_event = {
+					id = ww1_spain.131
+					days = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -3104,7 +3462,28 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
-			
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3125,8 +3504,9 @@ focus_tree = {
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = llama_firearms
+			#custom_effect_tooltip = available_designer
+			#show_ideas_tooltip = llama_firearms
+			add_ideas = SPR_idea_llama_firearms
 		}
 	}
 	
@@ -3151,6 +3531,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = SPR_idea_terrible_conscription
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	
@@ -3196,7 +3598,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -3207,7 +3609,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.131
-						days = 5
+						days = 15
 					}
 				}
 			}
@@ -3295,6 +3697,28 @@ focus_tree = {
 				id = ww1_spain.70
 				days = 60
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3347,7 +3771,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -3358,7 +3782,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.130
-						days = 5
+						days = 15
 					}
 					country_event = {
 						id = ww1_spain.133
@@ -3398,6 +3822,28 @@ focus_tree = {
 			}
 			clr_global_flag = liberal_majority
 			set_global_flag = conservative_majority
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 45
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 35
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3428,6 +3874,28 @@ focus_tree = {
 			}
 			clr_global_flag = conservative_majority
 			set_global_flag = liberal_majority
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 45
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 35
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3477,7 +3945,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -3588,7 +4056,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -3629,6 +4097,28 @@ focus_tree = {
 				cost_reduction = 0.75
 				uses = 1
 				category = naval_doctrine
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
 			}
 		}
 	}
@@ -3717,25 +4207,23 @@ focus_tree = {
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_dreadnoughts }
 					custom_effect_tooltip = spain_ships.1.eng.tt
-					hidden_effect = {
-						create_ship = {
-							type = ship_hull_heavy_1
-							equipment_variant = "Indefatigable Class"
-							creator = ENG
-							name = "English Licensed Dreadnought"
-						}
-						create_ship = {
-							type = ship_hull_cruiser_1
-							equipment_variant = "Pathfinder Class"
-							creator = ENG
-							name = "English Licensed Light Cruiser"
-						}
-						create_ship = {
-							type = ship_hull_cruiser_1
-							equipment_variant = "Boadicea Class"
-							creator = ENG
-							name = "English Licensed Light Cruiser"
-						}
+					create_ship = {
+						type = ship_hull_heavy_1
+						equipment_variant = "Indefatigable Class"
+						creator = ENG
+						name = "English Licensed Dreadnought"
+					}
+					create_ship = {
+						type = ship_hull_cruiser_1
+						equipment_variant = "Pathfinder Class"
+						creator = ENG
+						name = "English Licensed Light Cruiser"
+					}
+					create_ship = {
+						type = ship_hull_cruiser_1
+						equipment_variant = "Boadicea Class"
+						creator = ENG
+						name = "English Licensed Light Cruiser"
 					}
 				}
 				IF = {
@@ -3776,25 +4264,23 @@ focus_tree = {
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_cruisers }
 					custom_effect_tooltip = spain_ships.3.eng.tt
-					hidden_effect = {
-						create_ship = {
-							type = ship_hull_heavy_2
-							equipment_variant = "Town Class"
-							creator = ENG
-							name = "English Licensed Heavy Cruiser"
-						}
-						create_ship = {
-							type = ship_hull_cruiser_2
-							equipment_variant = "Town Class"
-							creator = ENG
-							name = "English Licensed Heavy Cruiser"
-						}
-						create_ship = {
-							type = ship_hull_cruiser_1
-							equipment_variant = "C Class"
-							creator = ENG
-							name = "English Licensed Destroyer"
-						}
+					create_ship = {
+						type = ship_hull_heavy_2
+						equipment_variant = "Town Class"
+						creator = ENG
+						name = "English Licensed Heavy Cruiser"
+					}
+					create_ship = {
+						type = ship_hull_cruiser_2
+						equipment_variant = "Town Class"
+						creator = ENG
+						name = "English Licensed Heavy Cruiser"
+					}
+					create_ship = {
+						type = ship_hull_cruiser_1
+						equipment_variant = "C Class"
+						creator = ENG
+						name = "English Licensed Destroyer"
 					}
 				}
 			}
@@ -3837,7 +4323,6 @@ focus_tree = {
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_dreadnoughts }
 					custom_effect_tooltip = spain_ships.1.jaa.tt
-					hidden_effect = {
 						create_ship = {
 							type = ship_hull_heavy_1
 							equipment_variant = "Kawachi Class"
@@ -3856,12 +4341,12 @@ focus_tree = {
 							creator = JAP
 							name = "Japanese Licensed Light Cruiser"
 						}
-					}
+					
 				}
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_destroyers }
 					custom_effect_tooltip = spain_ships.2.jaa.tt
-					hidden_effect = {
+
 						create_ship = {
 							type = ship_hull_light_2
 							equipment_variant = "Murakumo Class"
@@ -3892,12 +4377,11 @@ focus_tree = {
 							creator = JAP
 							name = "Japanese Licensed Destroyer"
 						}
-					}
+					
 				}
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_cruisers }
 					custom_effect_tooltip = spain_ships.3.jaa.tt
-					hidden_effect = {
 						create_ship = {
 							type = ship_hull_light_2
 							equipment_variant = "Murakumo Class"
@@ -3916,7 +4400,7 @@ focus_tree = {
 							creator = JAP
 							name = "Japanese Licensed Heavy Cruiser"
 						}
-					}
+					
 				}
 			}
 		}
@@ -3958,7 +4442,7 @@ focus_tree = {
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_dreadnoughts }
 					custom_effect_tooltip = spain_ships.1.ger.tt
-					hidden_effect = {
+
 						create_ship = {
 							type = ship_hull_heavy_1
 							equipment_variant = "Moltke Class"
@@ -3977,12 +4461,12 @@ focus_tree = {
 							creator = GER
 							name = "German Licensed Cruiser"
 						}
-					}
+					
 				}
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_destroyers }
 					custom_effect_tooltip = spain_ships.2.ger.tt
-					hidden_effect = {
+
 						create_ship = {
 							type = ship_hull_light_1
 							equipment_variant = "Torpedo Boat Hull C"
@@ -4013,12 +4497,12 @@ focus_tree = {
 							creator = GER
 							name = "German Licensed Destroyer"
 						}
-					}
+					
 				}
 				IF = {
 					limit = { has_global_flag = SPR_flag_picked_cruisers }
 					custom_effect_tooltip = spain_ships.3.ger.tt
-					hidden_effect = {
+
 						create_ship = {
 							type = ship_hull_light_1
 							equipment_variant = "Torpedo Boat Hull C"
@@ -4037,7 +4521,7 @@ focus_tree = {
 							creator = GER
 							name = "German Licensed Heavy Cruiser"
 						}
-					}
+					
 				}
 			}
 		}
@@ -4061,6 +4545,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = SPR_idea_naval_admirals
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -4104,6 +4610,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_research_slot = 1
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -4249,6 +4777,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = { SPR_idea_spanish_armada }
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -4296,6 +4846,28 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = light_fighter
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
 			}
 		}
 	}
@@ -4351,6 +4923,28 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = recon_tech
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
 			}
 		}
 	}
@@ -4436,7 +5030,7 @@ focus_tree = {
 				target = GER
 			}
 			add_political_power = 75
-			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
 		}
 	}
 	focus = {
@@ -4551,6 +5145,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.075
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.132
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
@@ -4970,6 +5586,28 @@ focus_tree = {
 				add_stability = 0.05
 				add_political_power = 100
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -5015,7 +5653,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5026,7 +5664,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 3
+						days = 13
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -5074,7 +5712,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5127,7 +5765,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5240,7 +5878,7 @@ focus_tree = {
 				deactivate_advisor = SPR_sanchez_pm
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5284,7 +5922,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5539,7 +6177,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5550,7 +6188,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 5
+						days = 15
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -5628,6 +6266,28 @@ focus_tree = {
 				add_political_power = 25
 				add_stability = -0.03
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -5656,7 +6316,7 @@ focus_tree = {
 				add_stability = -0.05
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5677,7 +6337,7 @@ focus_tree = {
 				add_stability = 0.03
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5807,10 +6467,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_if_colonies_tt
+			167 = {
+				remove_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+			167 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -5821,7 +6494,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.132
-						days = 5
+						days = 15
 					}
 					country_event = {
 						id = ww1_spain.130
@@ -5955,6 +6628,28 @@ focus_tree = {
 				target = ENG
 				modifier = CZE_trust_in_the_west
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -6044,6 +6739,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SPR_victory_in_TGW.tt
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -6108,6 +6825,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = { SPR_idea_modernization_program }
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -6192,7 +6931,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6282,7 +7021,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6379,7 +7118,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6471,7 +7210,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6649,7 +7388,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6660,7 +7399,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = ww1_spain.133
-						days = 3
+						days = 13
 					}
 					country_event = {
 						id = ww1_spain.131
@@ -6701,7 +7440,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6770,7 +7509,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6821,7 +7560,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6920,7 +7659,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -6995,7 +7734,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -7050,7 +7789,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -8356,7 +9095,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -8610,7 +9349,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -8941,21 +9680,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				IF = {
-					limit = {
-						OR = {
-							NOT = {
-								has_completed_focus = SPR_abolish_el_turno
-							}
-							NOT = {
-								has_completed_focus = SPR_change_brings_reform
-							}
-						}
-					}
-					country_event = {
-						id = ww1_spain.139
-						days = 25
-					}
+				country_event = {
+					id = ww1_spain.139
+					days = 25
 				}
 			}
 			IF = {
@@ -9022,21 +9749,9 @@ focus_tree = {
 				days = 185
 			}
 			hidden_effect = {
-				IF = {
-					limit = {
-						OR = {
-							NOT = {
-								has_completed_focus = SPR_abolish_el_turno
-							}
-							NOT = {
-								has_completed_focus = SPR_change_brings_reform
-							}
-						}
-					}
-					country_event = {
-						id = ww1_spain.139
-						days = 25
-					}
+				country_event = {
+					id = ww1_spain.139
+					days = 25
 				}
 			}
 		}
@@ -9245,6 +9960,28 @@ focus_tree = {
 			290 = {
 				add_compliance = 15
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -9322,7 +10059,7 @@ focus_tree = {
 	focus = {
 		id = SPR_hindenburg_and_ludendhorff
 		mutually_exclusive = { focus = SPR_we_stand_alone }
-		icon = GFX_focus_focus_fra_down_marianne
+		icon = GFX_focus_GER_navy
 		cost = 5 #days
 		x = -9
 		y = 22
@@ -9341,7 +10078,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			FRA = {
+			GER = {
 				add_ideas = SPR_idea_collaboration_against_the_rifs
 			}
 			SPR = {
@@ -9530,7 +10267,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -9834,7 +10571,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -9876,7 +10613,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -9931,7 +10668,7 @@ focus_tree = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						OR = {
+						AND = {
 							NOT = {
 								has_completed_focus = SPR_abolish_el_turno
 							}
@@ -9983,12 +10720,10 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			
 			has_global_flag = new_spanish_prime_minister_in_office
 			NOT = {
 				has_completed_focus = SPR_continue_el_turno
 			}
-			has_idea = SPR_idea_catholic_nation
 		}
 		prerequisite = {
 			focus = SPR_side_with_maurists
@@ -10105,6 +10840,64 @@ focus_tree = {
 			focus = SPR_focus_on_social_reformation
 		}
 		completion_reward = {
+			IF = {
+				limit = { has_idea = SPR_idea_strong_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_protestantism
+					add_idea = SPR_idea_protestant_nation
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_protestantism
+					add_idea = SPR_idea_protestant_nation
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_protestantism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_protestantism
+					add_idea = SPR_idea_strong_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_protestantism}
+				swap_ideas = {
+					remove_idea = SPR_idea_freedom_of_protestantism
+					add_idea = SPR_idea_mild_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_protestant_secular_state }
+				swap_ideas = {
+					remove_idea = SPR_idea_protestant_secular_state
+					add_idea = SPR_idea_weak_protestantism
+				}
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						AND = {
+							NOT = {
+								has_completed_focus = SPR_abolish_el_turno
+							}
+							NOT = {
+								has_completed_focus = SPR_change_brings_reform
+							}
+						}
+					}
+					country_event = {
+						id = ww1_spain.133
+						days = 13
+					}
+					country_event = {
+						id = ww1_spain.131
+						days = 3
+					}
+				}
+			}
+			add_stability = 0.05
 			IF = {
 				limit = { has_idea = SPR_idea_strong_catholicism }
 				swap_ideas = {
@@ -10463,40 +11256,7 @@ focus_tree = {
 				keep_all_characters = yes #remove alfonso...
 				keep_political_leader = yes
 			}
-			hidden_effect = {
-				set_cosmetic_tag = SPR_carlists
-			}
-			hidden_effect = {
-				remove_ideas = SPR_idea_prime_minister_maura
-				add_ideas = SPR_idea_catholic_nation
-				add_ideas = SPR_idea_divided_party
-				IF = {
-					limit = {
-						NOT = {
-							has_completed_focus = SPR_reform_the_conscription
-						}
-						add_ideas = SPR_idea_terrible_conscription
-					}
-				}
-					
-				IF = {
-					limit = { has_completed_focus = SPR_the_schneider_canon }
-					add_ideas = SPR_idea_licensing_french_artillery
-				}
-				IF = {
-					limit = { has_completed_focus = SPR_krupp_manufacturer }
-					add_ideas = SPR_idea_licensing_artillery
-				}
-				IF = {
-					limit = { has_completed_focus = SPR_the_vickers }
-					add_ideas = SPR_idea_licensing_weaponry
-				}
-				IF = {
-					limit = { has_completed_focus = SPR_the_chauchat }
-					add_ideas = SPR_idea_licensing_french_weaponry
-				}
-			}
-			add_ideas = SPR_idea_outdated_allegiances
+			set_cosmetic_tag = SPR_carlists
 			country_event = {
 				id = ww1_spain.125
 				days = 1

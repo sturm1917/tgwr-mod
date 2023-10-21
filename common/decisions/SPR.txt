@@ -545,7 +545,7 @@ SPR_el_turno_category = {
 			always = yes
 		}
 		cost = 30
-		days_re_enable = 75
+		days_re_enable = 60
 		days_remove = 105
 		modifier = {
 			stability_weekly = 0.002
@@ -590,9 +590,9 @@ SPR_el_turno_category = {
 				}
 			}
 		}
-		cost = 35
-		days_re_enable = 25
-		days_remove = 50
+		cost = 25
+		days_re_enable = 10
+		days_remove = 25
 		modifier = {
 			industrial_capacity_factory = -0.05
 		}
@@ -742,9 +742,9 @@ SPR_el_turno_category = {
 			}
 		}
 
-		cost = 35
+		cost = 25
 		days_re_enable = 25
-		days_remove = 50
+		days_remove = 25
 		modifier = {
 			political_power_factor = -0.15
 		}

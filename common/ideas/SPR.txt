@@ -865,8 +865,9 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.004
 				political_power_factor = -0.04
-				min_export = -0.8
+				min_export = -0.5
 				production_speed_buildings_factor = -0.4
+				democratic_drift = 0.1
 			}
 		}
 		
@@ -882,8 +883,9 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.003
 				political_power_factor = -0.04
-				min_export = -0.65
+				min_export = -0.3
 				production_speed_buildings_factor = -0.3
+				democratic_drift = 0.08
 			}
 		}
 		
@@ -899,8 +901,9 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.003
 				political_power_factor = -0.02
-				min_export = -0.65
+				min_export = -0.25
 				production_speed_buildings_factor = -0.25
+				democratic_drift = 0.08
 			}
 		}
 		
@@ -916,8 +919,9 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.002
 				political_power_factor = -0.02
-				min_export = -0.65
+				min_export = -0.15
 				production_speed_buildings_factor = -0.2
+				democratic_drift = 0.06
 			}
 		}
 		
@@ -932,8 +936,9 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
-				min_export = -0.5
+				min_export = -0.15
 				production_speed_buildings_factor = -0.15
+				democratic_drift = 0.04
 			}
 		}
 		
@@ -1360,7 +1365,23 @@ ideas = {
 				conscription = -0.005
 				army_attack_factor = -0.15
 				army_defence_factor = -0.15
-				stability_weekly = -0.001
+				stability_weekly = 0.001
+			}
+		}
+		SPR_idea_llama_firearms = {
+		picture = chi_forced_conscription
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+			research_bonus = {
+				infantry_weapons = 0.15
 			}
 		}
 		SPR_idea_terrible_conscription_lesser = {
