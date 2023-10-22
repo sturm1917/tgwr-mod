@@ -47,6 +47,10 @@
   SE_balkan_fed_T:0 "The Balkans Unite"
   SE_balkan_fed_D:0 "\n\"There are seven and a half million South Slavs who, as a result of the victories in the Balkans, have grown bolder than ever in demanding their political rights."\n-Leon Trotsky"
   SE_balkan_fed_A:0 "Zíto i Enótita!"
+   
+  SE_carlist_civil_war_T:0 "Fourth Carlist War"
+  SE_carlist_civil_war_D:0 "\n"The tyrants believed they won the situation... But there were still people with hope, who did not accept such a great betrayal... Our king performed noble deeds, that is why the virgin's triumph granted him freedom, justice and honor. The faith of our fathers resurfaced again."\n -Carlist Folk Song"
+  SE_carlist_civil_war_A:0 "Dios, patria y rey!"
 
 
   #Britain
@@ -164,3 +168,4 @@
  SE_gre_byzantium:0 "Kotsari"
  SE_greeko_turkish_war:0 "Emvatirio Smirnis"
  SE_balkan_fed:0 "Septemberists"
+ SE_carlist_civil_war:0 "Marcha de Oriamendi"

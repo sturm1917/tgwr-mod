@@ -3691,6 +3691,19 @@ country_event = {
 			limit = { has_completed_focus = SPR_law_of_sunday_rest }
 			add_ideas = SPR_idea_sunday_off
 		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+				play_song = "SE_carlist_civil_war"
+				set_country_flag = SE_carlist_civil_war
+			}
+		}
 	}
 }
 

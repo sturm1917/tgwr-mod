@@ -139,4 +139,9 @@ music = {
 	file = "SE_balkan_fed.ogg"
 	volume = 1
 }
+music = {
+	name = "SE_carlist_civil_war"
+	file = "SE_carlist_civil_war.ogg"
+	volume = 1
+}
 
