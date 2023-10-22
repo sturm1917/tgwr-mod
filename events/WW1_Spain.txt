@@ -3602,6 +3602,35 @@ country_event = {
 	}
 }
 
+# 4th Carlist War News
+news_event = {
+	id = ww1_spain.180
+	title = ww1_spain.180.t
+	desc = ww1_spain.180.d
+	picture = GFX_news_event_generic_army
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = ww1_spain.180.a
+		ai_chance = { factor = 10 }
+
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+				play_song = "SE_carlist_civil_war"
+				set_country_flag = SE_carlist_civil_war
+			}
+		}
+	}
+}
 # 4th Carlist War
 country_event = {
 	id = ww1_spain.125
@@ -3614,7 +3643,7 @@ country_event = {
 	option = {
 		name = ww1_spain.125.a
 		ai_chance = { factor = 10 }
-
+		news_event = id = ww1_spain.180
 		load_oob = "SPR_civil_war"
 		set_global_flag = SPR_carlist_war_started
 		set_cosmetic_tag = SPR_carlists
@@ -3690,19 +3719,6 @@ country_event = {
 		IF = {
 			limit = { has_completed_focus = SPR_law_of_sunday_rest }
 			add_ideas = SPR_idea_sunday_off
-		}
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = rule_superevent
-					option = DEFAULT
-				}
-				is_ai = no
-			}
-			hidden_effect = {
-				play_song = "SE_carlist_civil_war"
-				set_country_flag = SE_carlist_civil_war
-			}
 		}
 	}
 }
@@ -5061,5 +5077,22 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+#Test
+country_event = {
+	id = ww1_spain.1999
+	title = ww1_spain.1999.t
+	desc = ww1_spain.1999.d
+	picture = GFX_report_event_generic_conference
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = ww1_spain.1999.a
+		add_stability = -0.05
+		ai_chance = { factor = 10 }
+		play_song = "el_abanderado_de_la_tradicion"
 	}
 }

@@ -437,3 +437,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "el_abanderado_de_la_tradicion"
+	chance = {
+		modifier = {
+			factor = 0.1
+		}	
+	}
+}

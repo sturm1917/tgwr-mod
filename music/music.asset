@@ -220,3 +220,9 @@ music = {
 	file = "symphony_funebre_et_triomphale.ogg"
 	volume = 0.65
 }
+
+music = {
+	name = "el_abanderado_de_la_tradicion"
+	file = "el_abanderado_de_la_tradicion.ogg"
+	volume = 0.65
+}

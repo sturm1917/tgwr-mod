@@ -11291,6 +11291,7 @@ focus_tree = {
 			focus = SPR_crush_our_enemies
 		}
 		completion_reward = {
+			play_song = "el_abanderado_de_la_tradicion"
 			set_cosmetic_tag = SPR_carlists
 			add_stability = 0.05
 			add_popularity = {

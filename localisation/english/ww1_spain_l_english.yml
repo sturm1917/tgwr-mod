@@ -806,6 +806,9 @@
  #...
  ww1_spain.139.t:0 "Rifs unsatisfied with Steel policies"
  ww1_spain.139.a:0 "I don't care..."
+ ww1_spain.180.t:0 "4th Carlist War"
+ ww1_spain.180.a:0 "The Return of the King!"
+ ww1_spain.180.d:0 "The Carlist King has rallied his supporters, and is now launching the Re-Conquista of Spain!"
  
  #Buy Ships Cosmetics
  spain_ships.1.ger.tt:0 "Create a §8Moltke Class§W ship from §8the German Empire§W                                                             Create a §8Ilthis Class§W ship by §8German Empire§W  Create a §8Kaiserin Augusta Class§W ship by §8German Empire§W"
@@ -832,3 +835,6 @@
 #Generals and Admirals
  SPR_the_people_are_happy:0 "The People are Happy"
  SPR_gauge_our_position:0 "Gauge our Position"
+ 
+ #Song
+ el_abanderado_de_la_tradicion:0 "El Abanderado de La Tradición"
