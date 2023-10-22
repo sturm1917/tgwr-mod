@@ -847,71 +847,7 @@ focus_tree = {
 			scripted_effect_drop_in_regional_demands = yes	
 		}
 	}
-	focus = {
-		id = SPR_furthur_weaken_the_church
-		icon = GFX_focus_mex_triumph_over_the_cristeros
-		cost = 2.9 #days
-		x = -2
-		y = 1
-		relative_position_id = SPR_turn_the_church_into_a_competitive_market
-		ai_will_do = {
-			factor = 100
-		}
-		prerequisite {
-			focus = SPR_turn_the_church_into_a_competitive_market
-			focus = SPR_empower_protestant_church
-		}
-		available = {
-			is_subject = no
-			has_global_flag = new_spanish_prime_minister_in_office
-			OR = {
-				has_idea = SPR_idea_prime_minister_alvaro
-				has_idea = SPR_idea_prime_minister_jose
-				has_global_flag = new_spanish_prime_minister_in_office
-			}
-			NOT = { has_completed_focus = SPR_push_for_more_catholicism }
-		}
-		completion_reward = {
-			IF = {
-				limit = { has_idea = SPR_idea_secular_state }
-				add_stability = 0.075
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_freedom_of_religion }
-				remove_ideas = SPR_idea_freedom_of_religion
-				add_ideas = SPR_idea_secular_state
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_weak_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_weak_catholicism
-					add_idea = SPR_idea_freedom_of_religion
-				}
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_mild_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_mild_catholicism
-					add_idea = SPR_idea_weak_catholicism
-				}
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_strong_catholicism }
-				swap_ideas = {
-					remove_idea = SPR_idea_strong_catholicism
-					add_idea = SPR_idea_mild_catholicism
-				}
-			}
-			IF = {
-				limit = { has_idea = SPR_idea_catholic_nation }
-				swap_ideas = {
-					remove_idea = SPR_idea_catholic_nation
-					add_idea = SPR_idea_strong_catholicism
-				}
-			}
-			add_political_power = 25	
-		}
-	}
+	
 	focus = {
 		id = SPR_declare_a_republic
 		mutually_exclusive = { focus = SPR_parliamentary_landslide }
@@ -1081,6 +1017,71 @@ focus_tree = {
 					days = 3
 				}
 			}
+		}
+	}
+	focus = {
+		id = SPR_furthur_weaken_the_church
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 2.9 #days
+		x = 0
+		y = 2
+		relative_position_id = SPR_the_question_of_religion
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite {
+			focus = SPR_turn_the_church_into_a_competitive_market
+			focus = SPR_empower_protestant_church
+		}
+		available = {
+			is_subject = no
+			has_global_flag = new_spanish_prime_minister_in_office
+			OR = {
+				has_idea = SPR_idea_prime_minister_alvaro
+				has_idea = SPR_idea_prime_minister_jose
+				has_global_flag = new_spanish_prime_minister_in_office
+			}
+			NOT = { has_completed_focus = SPR_push_for_more_catholicism }
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_idea = SPR_idea_secular_state }
+				add_stability = 0.075
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_freedom_of_religion }
+				remove_ideas = SPR_idea_freedom_of_religion
+				add_ideas = SPR_idea_secular_state
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_weak_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_weak_catholicism
+					add_idea = SPR_idea_freedom_of_religion
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_mild_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_mild_catholicism
+					add_idea = SPR_idea_weak_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_strong_catholicism }
+				swap_ideas = {
+					remove_idea = SPR_idea_strong_catholicism
+					add_idea = SPR_idea_mild_catholicism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_catholic_nation }
+				swap_ideas = {
+					remove_idea = SPR_idea_catholic_nation
+					add_idea = SPR_idea_strong_catholicism
+				}
+			}
+			add_political_power = 25	
 		}
 	}
 	focus = {
@@ -8441,7 +8442,7 @@ focus_tree = {
 	focus = {
 		id = SPR_rebellious_scum
 		icon = GFX_focus_NORDIC_mon_selector_army
-		mutually_exclusive = { focus = SPR_an_unconveined_assembly }
+		mutually_exclusive = { focus = SPR_a_destoryed_assembly }
 		cost = 1.5 #days
 		x = 2
 		y = 14
@@ -8699,7 +8700,7 @@ focus_tree = {
 	focus = {
 		id = SPR_massive_government_lobbying
 		icon = GFX_focus_NORDIC_com_institution_1
-		mutually_exclusive = { focus = SPR_1 }
+		mutually_exclusive = { focus = SPR_concede_civilian_factory }
 		cost = 8 #days
 		x = 5
 		y = 15
@@ -8823,7 +8824,6 @@ focus_tree = {
 	focus = {
 		id = SPR_educational_reform
 		icon = GFX_focus_NORDIC_com_capstone_research
-		mutually_exclusive = { focus = SPR_massive_government_lobbying }
 		cost = 5 #days
 		x = 6
 		y = 16
@@ -9411,7 +9411,7 @@ focus_tree = {
 			focus = SPR_the_government_survives
 		}
 		completion_reward = {
-			dd_popularity = {
+			add_popularity = {
 				ideology = neutrality
 				popularity = 0.5
 			}
@@ -10032,7 +10032,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_we_stand_alone_GER
-		mutually_exclusive = { focus = SPR_the_lyon_of_verdun }
+		mutually_exclusive = { focus = SPR_hindenburg_and_ludendhorff }
 		icon = GFX_focus_otto_uniform
 		cost = 5 #days
 		x = -11
@@ -10058,7 +10058,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_hindenburg_and_ludendhorff
-		mutually_exclusive = { focus = SPR_we_stand_alone }
+		mutually_exclusive = { focus = SPR_we_stand_alone_GER }
 		icon = GFX_focus_GER_navy
 		cost = 5 #days
 		x = -9
@@ -10143,7 +10143,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_relaunch_the_offensive_GER
-		mutually_exclusive = { focus = SPR_demand_a_peace_from_the_french_GER }
+		mutually_exclusive = { focus = SPR_demand_a_peace_from_the_germans }
 		icon = GFX_focus_ITA_topple_amhara_rulers
 		cost = 10 #days
 		x = -12
@@ -11237,7 +11237,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SPR_pick_jaime
-			focus = SPR_side_with_carlos
+			focus = SPR_side_with_carlos 
 		}
 		completion_reward = {
 			add_stability = -0.05
@@ -11265,6 +11265,82 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.125
 			}
+			hidden_effect = {
+				set_cosmetic_tag = SPR_carlists
+				remove_ideas = SPR_idea_catholic_nation
+				remove_ideas = SPR_idea_strong_catholicism
+				remove_ideas = SPR_idea_mild_catholicism
+				remove_ideas = SPR_idea_weak_catholicism
+				remove_ideas = SPR_idea_secular_state
+				remove_ideas = SPR_idea_freedom_of_religion
+				
+				remove_ideas = SPR_idea_protestant_nation
+				remove_ideas = SPR_idea_strong_protestantism
+				remove_ideas = SPR_idea_mild_protestantism
+				remove_ideas = SPR_idea_weak_protestantism
+				remove_ideas = SPR_idea_freedom_of_protestantism
+				remove_ideas = SPR_idea_protestant_secular_state
+			
+				deactivate_advisor = SPR_maura
+				add_ideas = { SPR_idea_divided_party }
+				add_ideas = { SPR_idea_outdated_allegiances }
+				IF = {
+					limit = {
+						NOT = {
+							has_completed_focus = SPR_reform_the_conscription
+						}
+					}
+					add_ideas = { SPR_idea_terrible_conscription }
+				}
+						
+				IF = {
+					limit = { has_completed_focus = SPR_the_schneider_canon }
+					add_ideas = { SPR_idea_licensing_french_artillery }
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_krupp_manufacturer }
+					add_ideas = { SPR_idea_licensing_artillery }
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_the_vickers }
+					add_ideas = { SPR_idea_licensing_weaponry }
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_the_chauchat }
+					add_ideas = { SPR_idea_licensing_french_weaponry }
+				}
+				IF = {
+					limit = {
+						has_completed_focus = SPR_remain_catholic
+					}
+					add_ideas = SPR_idea_catholic_nation
+				}
+				IF = {
+					limit = {
+						has_completed_focus = SPR_empower_protestant_church
+					}
+					add_ideas = SPR_idea_protestant_nation
+				}
+				IF = {
+					limit = {
+						has_completed_focus = SPR_turn_the_church_into_a_competitive_market
+					}
+					add_ideas = SPR_idea_protestant_nation
+					add_ideas = SPR_idea_catholic_nation
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_the_muslims }
+					add_ideas = SPR_idea_muslims_in_spain
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_fuse_political_and_intellectual_spain }
+					add_ideas = SPR_idea_krausism_and_scientists
+				}
+				IF = {
+					limit = { has_completed_focus = SPR_law_of_sunday_rest }
+					add_ideas = SPR_idea_sunday_off
+				}
+			} 
 		}
 	}
 	focus = {

@@ -1588,7 +1588,6 @@ country_event = {
 	trigger = {
 		original_tag = SPR
 		has_completed_focus = SPR_catalonia_demands_regional_autonomy
-		has_global_flag = catalonia_rises
 		date > 1914.3.1
 		OR = {
 			has_completed_focus = SPR_modernization_program
@@ -2727,9 +2726,9 @@ country_event = {
 
 # 1918 General Election
 country_event = {
-	id = ww1_spain.134
-	title = ww1_spain.134.t
-	desc = ww1_spain.134.d
+	id = ww1_spain.172
+	title = ww1_spain.172.t
+	desc = ww1_spain.172.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
 	mean_time_to_happen = {	days = 15 }
@@ -2739,7 +2738,7 @@ country_event = {
 		date > 1918.6.21
 	}
 	option = {
-		name = ww1_spain.134.a # Liberal
+		name = ww1_spain.172.a # Liberal
 		ai_chance = { factor = 10 }
 		complete_national_focus = SPR_liberal_majority
 		hidden_effect = {
@@ -2782,7 +2781,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ww1_spain.134.b  # Conservative
+		name = ww1_spain.172.b  # Conservative
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
@@ -2825,9 +2824,9 @@ country_event = {
 
 # 1920 General Election
 country_event = {
-	id = ww1_spain.135
-	title = ww1_spain.135.t
-	desc = ww1_spain.135.d
+	id = ww1_spain.170
+	title = ww1_spain.170.t
+	desc = ww1_spain.170.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
 	mean_time_to_happen = {	days = 15 }
@@ -2838,7 +2837,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ww1_spain.135.a # Liberal
+		name = ww1_spain.170.a # Liberal
 		complete_national_focus = SPR_liberal_majority
 		ai_chance = { factor = 10 }
 		hidden_effect = {
@@ -2879,7 +2878,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ww1_spain.135.b  # Conservative
+		name = ww1_spain.170.b  # Conservative
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
@@ -3116,9 +3115,9 @@ country_event = {
 
 # 1926 General Election
 country_event = {
-	id = ww1_spain.170
-	title = ww1_spain.170.t
-	desc = ww1_spain.170.d
+	id = ww1_spain.176
+	title = ww1_spain.176.t
+	desc = ww1_spain.176.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
 	mean_time_to_happen = {	days = 15 }
@@ -3129,7 +3128,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ww1_spain.170.a # Liberal
+		name = ww1_spain.176.a # Liberal
 		complete_national_focus = SPR_liberal_majority
 		ai_chance = { factor = 10 }
 		hidden_effect = {
@@ -3170,7 +3169,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ww1_spain.170.b  # Conservative
+		name = ww1_spain.176.b  # Conservative
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
@@ -3310,9 +3309,9 @@ country_event = {
 
 # 1930 General Election
 country_event = {
-	id = ww1_spain.172
-	title = ww1_spain.172.t
-	desc = ww1_spain.172.d
+	id = ww1_spain.177
+	title = ww1_spain.177.t
+	desc = ww1_spain.177.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = yes
 	mean_time_to_happen = {	days = 15 }
@@ -3323,7 +3322,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ww1_spain.172.a # Liberal
+		name = ww1_spain.177.a # Liberal
 		complete_national_focus = SPR_liberal_majority
 		ai_chance = { factor = 10 }
 		hidden_effect = {
@@ -3364,7 +3363,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ww1_spain.172.b  # Conservative
+		name = ww1_spain.177.b  # Conservative
 		ai_chance = { factor = 10 }
 		set_global_flag = next_general_election_has_occured
 		complete_national_focus = SPR_conservative_majority
@@ -3615,89 +3614,9 @@ country_event = {
 	option = {
 		name = ww1_spain.125.a
 		ai_chance = { factor = 10 }
-		hidden_effect = {
-			load_oob = "SPR_civil_war"
-			
-			set_cosmetic_tag = SPR_carlists
-			hidden_effect = {
-				remove_ideas = SPR_idea_prime_minister_maura
-				deactivate_advisor = SPR_maura
-				add_ideas = SPR_idea_divided_party
-				IF = {
-					limit = {
-						NOT = {
-							has_completed_focus = SPR_reform_the_conscription
-						}
-						add_ideas = SPR_idea_terrible_conscription
-					}
-				}
-					
-				IF = {
-					limit = { has_completed_focus = SPR_the_schneider_canon }
-					add_ideas = SPR_idea_licensing_french_artillery
-				}
-				IF = {
-					limit = { has_completed_focus = SPR_krupp_manufacturer }
-					add_ideas = SPR_idea_licensing_artillery
-				}
-				IF = {
-					limit = { has_completed_focus = SPR_the_vickers }
-					add_ideas = SPR_idea_licensing_weaponry
-				}
-				IF = {
-					limit = { has_completed_focus = SPR_the_chauchat }
-					add_ideas = SPR_idea_licensing_french_weaponry
-				}
-			}
-			add_ideas = SPR_idea_outdated_allegiances
-			
-			remove_ideas = SPR_idea_catholic_nation
-			remove_ideas = SPR_idea_strong_catholicism
-			remove_ideas = SPR_idea_mild_catholicism
-			remove_ideas = SPR_idea_weak_catholicism
-			remove_ideas = SPR_idea_secular_state
-			remove_ideas = SPR_idea_freedom_of_religion
-			
-			remove_ideas = SPR_idea_protestant_nation
-			remove_ideas = SPR_idea_strong_protestantism
-			remove_ideas = SPR_idea_mild_protestantism
-			remove_ideas = SPR_idea_weak_protestantism
-			remove_ideas = SPR_idea_freedom_of_protestantism
-			remove_ideas = SPR_idea_protestant_secular_state
-			IF = {
-				limit = {
-					has_completed_focus = SPR_remain_catholic
-				}
-				add_ideas = SPR_idea_catholic_nation
-			}
-			IF = {
-				limit = {
-					has_completed_focus = SPR_empower_protestant_church
-				}
-				add_ideas = SPR_idea_protestant_nation
-			}
-			IF = {
-				limit = {
-					has_completed_focus = SPR_turn_the_church_into_a_competitive_market
-				}
-				add_ideas = SPR_idea_protestant_nation
-				add_ideas = SPR_idea_catholic_nation
-			}
-			IF = {
-				limit = { has_completed_focus = SPR_the_muslims }
-				add_ideas = SPR_idea_muslims_in_spain
-			}
-			IF = {
-				limit = { has_completed_focus = SPR_fuse_political_and_intellectual_spain }
-				add_ideas = SPR_idea_krausism_and_scientists
-			}
-			IF = {
-				limit = { has_completed_focus = SPR_law_of_sunday_rest }
-				add_ideas = SPR_idea_sunday_off
-			}
-			add_ideas = SPR_whispers_for_regional_autonomy
-			set_global_flag = SPR_carlist_war_started
-		}
+
+		load_oob = "SPR_civil_war"
+		set_global_flag = SPR_carlist_war_started
 	}
 }
 
@@ -4013,7 +3932,7 @@ country_event = {
 		ai_chance = { factor = 10 }
 		remove_ideas = SPR_idea_prime_minister_maura
 		country_event = {
-			id = ww1_spain.135
+			id = ww1_spain.175
 			days = 150
 		}
 	}
@@ -4021,14 +3940,14 @@ country_event = {
 
 # El Turno Restored
 country_event = {
-	id = ww1_spain.135
-	title = ww1_spain.135.t
-	desc = ww1_spain.135.d
+	id = ww1_spain.175
+	title = ww1_spain.175.t
+	desc = ww1_spain.175.d
 	picture = GFX_report_event_generic_parliament
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
-		name = ww1_spain.135.a
+		name = ww1_spain.175.a
 		ai_chance = { factor = 10 }
 		clr_global_flag = SPR_flag_no_more_el_turno
 		complete_national_focus = SPR_modernization_program
@@ -4686,7 +4605,10 @@ country_event = {
 		name = ww1_spain.156.b
 		ai_chance = { factor = 150 }
 		FRA = {
-			declare_war_on = RIF
+			declare_war_on = {
+				target = RIF
+				type = topple_government
+			}
 		}
 		SPR = {
 			country_event = ww1_spain.157
@@ -4859,8 +4781,11 @@ country_event = {
 		name = ww1_spain.162.b
 		ai_chance = { factor = 150 }
 		FRA = {
-			declare_war_on = RIF
-		}
+			declare_war_on = {
+				target = RIF
+				type = topple_government
+			}
+		} 
 		SPR = {
 			country_event = ww1_spain.157
 		}
@@ -5024,7 +4949,7 @@ country_event = {
 			has_completed_focus = SPR_side_with_maurists
 			has_completed_focus = SPR_politically_crush_the_maurists
 			has_completed_focus = SPR_continue_with_split_liberal_parties
-			has_completed_focus = SPR_fuse_with_the_romanonists
+			has_completed_focus = SPR_fuse_with_the_romanonist
 		}
 	}
 	

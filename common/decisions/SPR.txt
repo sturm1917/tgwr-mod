@@ -1206,37 +1206,42 @@ SPR_religious_policy_category = {
 		complete_effect  = {
 			IF = {
 				limit = { has_idea = SPR_idea_protestant_secular_state }
-				swap_ideas = {
-					remove_idea = SPR_idea_protestant_secular_state
-					add_idea = SPR_idea_weak_protestantism
-				}
+				remove_ideas = SPR_idea_protestant_secular_state
+				add_stability = 0.025
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_freedom_of_protestantism }
 				swap_ideas = {
 					remove_idea = SPR_idea_freedom_of_protestantism
-					add_idea = SPR_idea_weak_protestantism
+					add_idea = SPR_idea_protestant_secular_state
 				}
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_weak_protestantism }
 				swap_ideas = {
 					remove_idea = SPR_idea_weak_protestantism
-					add_idea = SPR_idea_mild_protestantism
+					add_idea = SPR_idea_freedom_of_protestantism
 				}
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_mild_protestantism }
 				swap_ideas = {
 					remove_idea = SPR_idea_mild_protestantism
-					add_idea = SPR_idea_strong_protestantism
+					add_idea = SPR_idea_weak_protestantism
 				}
 			}
 			IF = {
 				limit = { has_idea = SPR_idea_strong_protestantism }
 				swap_ideas = {
 					remove_idea = SPR_idea_strong_protestantism
-					add_idea = SPR_idea_protestant_nation
+					add_idea = SPR_idea_mild_protestantism
+				}
+			}
+			IF = {
+				limit = { has_idea = SPR_idea_protestant_nation }
+				swap_ideas = {
+					remove_idea = SPR_idea_protestant_nation
+					add_idea = SPR_idea_strong_protestantism
 				}
 			}
 		}
