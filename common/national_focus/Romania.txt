@@ -864,9 +864,304 @@ country = {
 		id = ROM_begin_the_crackdown
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_nationalist_democratic_victory }
+		mutually_exclusive = { focus = ROM_begin_the_crackdown }
 		x = -4
 		y = 5
 		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_counter_revolution
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_nationalist_democratic_victory }
+		mutually_exclusive = { focus = ROM_begin_the_crackdown }
+		x = -12
+		y = 5
+		relative_position_id = ROM_lurk_in_the_shadows
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_underground_movements
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_counter_revolution }
+		x = -1
+		y = 1
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_reach_out_to_the_other_parties
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_counter_revolution }
+		x = 1
+		y = 1
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_workers_of_romania_arise
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_underground_movements }
+		prerequisite = { focus =  ROM_reach_out_to_the_other_parties }
+		x = 0
+		y = 2
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_trial_of_the_PDN
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_workers_of_romania_arise }
+		x = 0
+		y = 3
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_establish_the_socialist_council
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_trial_of_the_PDN }
+		x = 0
+		y = 5
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_total_land_reform
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_establish_the_socialist_council }
+		x = 0
+		y = 6
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_ally_the_soviet_union
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_total_land_reform }
+		x = 0
+		y = 8
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_trial_of_the_landlords
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_total_land_reform }
+		prerequisite = { focus =  ROM_revolution_to_the_utmost }
+		x = -2
+		y = 7
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_a_delicate_transition_to_socialism
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_total_land_reform }
+		prerequisite = { focus =  ROM_allow_other_parties }
+		x = 2
+		y = 7
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_allow_some_private_markets
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_a_delicate_transition_to_socialism }
+		x = 2
+		y = 8
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_heavy_industry
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_trial_of_the_landlords }
+		x = -2
+		y = 8
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_allow_other_parties
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_trial_of_the_PDN }
+		mutually_exclusive = { focus = ROM_revolution_to_the_utmost }
+		x = 1
+		y = 4
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_voting_rights_for_all
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_allow_other_parties }
+		x = 2
+		y = 5
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_revolution_to_the_utmost
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_trial_of_the_PDN }
+		mutually_exclusive = { focus = ROM_allow_other_parties }
+		x = -1
+		y = 4
+		relative_position_id = ROM_counter_revolution
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_secret_police
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_revolution_to_the_utmost }
+		x = -2
+		y = 5
+		relative_position_id = ROM_counter_revolution
 		cost = 5
 		available = {
 			
