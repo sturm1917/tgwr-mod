@@ -3617,6 +3617,80 @@ country_event = {
 
 		load_oob = "SPR_civil_war"
 		set_global_flag = SPR_carlist_war_started
+		set_cosmetic_tag = SPR_carlists
+		remove_ideas = SPR_idea_catholic_nation
+		remove_ideas = SPR_idea_strong_catholicism
+		remove_ideas = SPR_idea_mild_catholicism
+		remove_ideas = SPR_idea_weak_catholicism
+		remove_ideas = SPR_idea_secular_state
+		remove_ideas = SPR_idea_freedom_of_religion
+		
+		remove_ideas = SPR_idea_protestant_nation
+		remove_ideas = SPR_idea_strong_protestantism
+		remove_ideas = SPR_idea_mild_protestantism
+		remove_ideas = SPR_idea_weak_protestantism
+		remove_ideas = SPR_idea_freedom_of_protestantism
+		remove_ideas = SPR_idea_protestant_secular_state
+	
+		deactivate_advisor = SPR_maura
+		add_ideas = { SPR_idea_divided_party }
+		add_ideas = { SPR_idea_outdated_allegiances }
+		IF = {
+			limit = {
+				NOT = {
+					has_completed_focus = SPR_reform_the_conscription
+				}
+			}
+			add_ideas = { SPR_idea_terrible_conscription }
+		}
+				
+		IF = {
+			limit = { has_completed_focus = SPR_the_schneider_canon }
+			add_ideas = { SPR_idea_licensing_french_artillery }
+		}
+		IF = {
+			limit = { has_completed_focus = SPR_krupp_manufacturer }
+			add_ideas = { SPR_idea_licensing_artillery }
+		}
+		IF = {
+			limit = { has_completed_focus = SPR_the_vickers }
+			add_ideas = { SPR_idea_licensing_weaponry }
+		}
+		IF = {
+			limit = { has_completed_focus = SPR_the_chauchat }
+			add_ideas = { SPR_idea_licensing_french_weaponry }
+		}
+		IF = {
+			limit = {
+				has_completed_focus = SPR_remain_catholic
+			}
+			add_ideas = SPR_idea_catholic_nation
+		}
+		IF = {
+			limit = {
+				has_completed_focus = SPR_empower_protestant_church
+			}
+			add_ideas = SPR_idea_protestant_nation
+		}
+		IF = {
+			limit = {
+				has_completed_focus = SPR_turn_the_church_into_a_competitive_market
+			}
+			add_ideas = SPR_idea_protestant_nation
+			add_ideas = SPR_idea_catholic_nation
+		}
+		IF = {
+			limit = { has_completed_focus = SPR_the_muslims }
+			add_ideas = SPR_idea_muslims_in_spain
+		}
+		IF = {
+			limit = { has_completed_focus = SPR_fuse_political_and_intellectual_spain }
+			add_ideas = SPR_idea_krausism_and_scientists
+		}
+		IF = {
+			limit = { has_completed_focus = SPR_law_of_sunday_rest }
+			add_ideas = SPR_idea_sunday_off
+		}
 	}
 }
 
