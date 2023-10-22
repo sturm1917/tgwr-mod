@@ -902,7 +902,7 @@ country_event = {
 				limit = {
 					has_completed_focus = TUR_reaffirm_loyalty_of_the_army
 				}
-				complete_national_focus = TUR_savior_officer_coup
+				complete_national_focus = TUR_elections_of_1912
 			}
 			set_country_flag = TUR_savior_officer_coup
 			add_popularity = {
@@ -1356,8 +1356,8 @@ country_event = {
 					# unlock_national_focus = TUR_reshape_the_army
 					# unlock_national_focus = TUR_hurriyet_musavat_uhuvvet
 					# unlock_national_focus = TUR_weaken_the_sultans_power
-					# unlock_national_focus = TUR_coup_of_savior_officers
-					# unlock_national_focus = TUR_raid_on_sublime_porte
+					# unlock_national_focus = TUR_elections_of_1912
+					# unlock_national_focus = TUR_ittihat_ve_terakki_victory
 					# unlock_national_focus = TUR_empower_nazir_i_harbiye
 				}
 				add_ideas = TUR_sultan_mehmed_v
@@ -1468,7 +1468,7 @@ country_event = {
 					unlock_national_focus = TUR_hurriyet_musavat_uhuvvet
 					unlock_national_focus = TUR_weaken_the_sultans_power
 					unlock_national_focus = TUR_coup_of_savior_officers
-					unlock_national_focus = TUR_raid_on_sublime_porte
+					unlock_national_focus = TUR_ittihat_ve_terakki_victory
 					unlock_national_focus = TUR_empower_nazir_i_harbiye
 				}
 				set_country_flag = TUR_revolter_flag
@@ -1990,112 +1990,6 @@ country_event = {
 		name = ww1_ottoman.44.a
 		ai_chance = {
 			factor = 25
-		}
-	}
-}
-
-# Franco-Syrian War
-###############################################
-country_event = {
-	id = ww1_ottoman.45
-	title = ww1_ottoman.45.t
-	desc = ww1_ottoman.45.d
-	picture = GFX_report_event_soldiers_marching
-	trigger = {
-		tag = FRA
-		has_country_flag = great_war_winner
-		has_global_flag = versallies_treaty
-		has_war = no
-		is_neighbor_of = SYR
-		SYR = {
-			exists = yes
-			is_subject = no
-			has_war = no
-		}
-	}
-	mean_time_to_happen = {
-		days = 80
-	}
-	option = {
-		name = ww1_ottoman.45.a
-		ai_chance = {
-			factor = 25
-			modifier = {
-				IRQ = {
-					exists = yes
-				}
-				factor = 0
-			}
-		}
-		SYR = {
-			add_opinion_modifier = {
-				target = PREV
-				modifier = medium_decrease
-			}
-		}
-		#create_wargoal = {
-		#	target = SYR
-		#	type = annex_everything
-		#}
-		# i dont wanna harm interwar armistice
-		annex_country = {
-			target = SYR
-		}
-	}
-	option = {
-		name = ww1_ottoman.45.b
-		ai_chance = {
-			factor = 25
-			modifier = {
-				IRQ = {
-					exists = no
-				}
-				factor = 0
-			}
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					is_core_of = SYR
-					is_claimed_by = SYR
-					is_core_of = LEB
-				}
-				NOT = {
-					state = 829
-					state = 857
-					state = 859
-				}
-			}
-			SYR = {
-				transfer_state = PREV
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 831
-			}
-			if = {
-				limit = {
-					country_exists = JBS
-				}
-				JBS = { transfer_state = 831 }
-				else = {
-					SYR = { transfer_state = 831 }
-				}
-			}
-		}
-		every_state = {
-			limit = {
-				is_owned_by = SYR
-				is_claimed_by = FRA
-			}
-			remove_claim_by = FRA
-		}
-		SYR = {
-			add_opinion_modifier = {
-				target = PREV
-				modifier = medium_increase
-			}
 		}
 	}
 }
@@ -5984,6 +5878,12 @@ country_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				has_idea = TUR_idea_liberal_revenge
+			}
+			remove_ideas = TUR_idea_liberal_revenge
+		}
 		TUR_remove_party_factionalism = yes
 		ai_chance = {
 			factor = 100
@@ -6043,20 +5943,20 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = TUR_avert_the_ittihadist_coup
+				has_completed_focus = TUR_hurriyet_ve_itilaf_victory
 			}
 			uncomplete_national_focus = {
-  				focus = TUR_avert_the_ittihadist_coup
+  				focus = TUR_hurriyet_ve_itilaf_victory
   				uncomplete_children = yes
   				refund_political_power = no
 			}
 		}
 		if = {
 			limit = {
-				has_completed_focus = TUR_raid_on_sublime_porte
+				has_completed_focus = TUR_ittihat_ve_terakki_victory
 			}
 			uncomplete_national_focus = {
-  				focus = TUR_raid_on_sublime_porte
+  				focus = TUR_ittihat_ve_terakki_victory
   				uncomplete_children = yes
   				refund_political_power = no
 			}
@@ -6123,20 +6023,20 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = TUR_raid_on_sublime_porte
+				has_completed_focus = TUR_ittihat_ve_terakki_victory
 			}
 			uncomplete_national_focus = {
-  				focus = TUR_raid_on_sublime_porte
+  				focus = TUR_ittihat_ve_terakki_victory
   				uncomplete_children = yes
   				refund_political_power = no
 			}
 		}
 		if = {
 			limit = {
-				has_completed_focus = TUR_avert_the_ittihadist_coup
+				has_completed_focus = TUR_hurriyet_ve_itilaf_victory
 			}
 			uncomplete_national_focus = {
-  				focus = TUR_avert_the_ittihadist_coup
+  				focus = TUR_hurriyet_ve_itilaf_victory
   				uncomplete_children = yes
   				refund_political_power = no
 			}
@@ -8699,10 +8599,7 @@ country_event = { #liberal party elections
 	is_triggered_only = yes
 	picture = GFX_report_event_liberal_party_elections
 	trigger = {
-		OR = {
-			has_completed_focus = TUR_hurriyet_ve_itilaf_victory
-			has_completed_focus = TUR_avert_the_ittihadist_coup
-		}
+		has_completed_focus = TUR_hurriyet_ve_itilaf_victory
 		if = {
 			limit = {
 				has_power_balance = {
@@ -14362,8 +14259,8 @@ country_event = { #turks revolt
 				unlock_national_focus = TUR_glory_to_the_action_army
 				unlock_national_focus = TUR_harbiyeli_officers
 				unlock_national_focus = TUR_reaffirm_the_loyalty_of_the_army
-				unlock_national_focus = TUR_savior_officer_coup
-				unlock_national_focus = TUR_avert_the_ittihadist_coup
+				unlock_national_focus = TUR_elections_of_1912
+				unlock_national_focus = TUR_hurriyet_ve_itilaf_victory
 				unlock_national_focus = TUR_purge_the_coup_generals
 				unlock_national_focus = TUR_question_of_the_civil_code
 				unlock_national_focus = TUR_expanded_army_service
@@ -15710,10 +15607,10 @@ country_event = { #balkan war event
 		}
 		if = {
 			limit = {
-				has_completed_focus = TUR_savior_officer_coup
+				has_completed_focus = TUR_elections_of_1912
 				NOT = {
-					has_completed_focus = TUR_avert_the_ittihadist_coup
-					has_completed_focus = TUR_raid_on_sublime_porte
+					has_completed_focus = TUR_hurriyet_ve_itilaf_victory
+					has_completed_focus = TUR_ittihat_ve_terakki_victory
 				}
 			}
 			add_timed_idea = {
@@ -15933,6 +15830,12 @@ country_event = {
 	desc = ww1_ottoman.112.d
 	picture = GFX_report_event_tur_upheaval_celebration
 	is_triggered_only = yes
+	trigger = {
+		has_global_flag = brest_litovsk
+		TUR = {
+			is_in_faction_with = GER
+		}
+	}
 	option = {
 		name = ww1_ottoman.112.a
 		set_global_flag = caucasus_collapsed
@@ -16377,6 +16280,12 @@ country_event = {
 			 	every_character = {
 					TUR_remove_party_factionalism = yes
 				}
+			}
+			if = {
+				limit = {
+					has_idea = TUR_idea_liberal_revenge
+				}
+				remove_ideas = TUR_idea_liberal_revenge
 			}
 		}
 		if = {

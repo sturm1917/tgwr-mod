@@ -8569,8 +8569,26 @@ country_event = {
 	id = ww1_france.257
 	title = ww1_france.257.t
 	desc = ww1_france.257.d
+	fire_only_once = yes
 	picture = GFX_report_event_arab_revolt
-	is_triggered_only = yes
+	trigger = {
+		tag = FRA
+		has_country_flag = franco_syrian_war
+		has_war = no
+		SYR = {
+			OR = {
+				is_puppet_of = FRA
+				is_puppet_of = ENG
+				exists = no
+			}
+		}
+		NOT = {
+			has_country_flag = franco_syrian_war_end
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		name = ww1_france.257.a
 		set_country_flag = franco_syrian_war_end
@@ -8579,6 +8597,42 @@ country_event = {
 			threat = -2
 			name = san_remo_conference
 		}
+		if = {
+			limit = {
+				ENG = {
+					exists = yes
+					is_subject = no
+					has_country_flag = great_war_winner
+					NOT = {
+						has_war_with = SYR
+						has_war_with = ROOT
+					}
+				}	
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = FRA
+						is_owned_by = ENG
+					}
+					OR = {
+						state = 454
+						state = 455
+						state = 856
+					}
+				}
+				transfer_state_to = ENG
+			}
+			ROOT = {
+				clr_country_flag = franco_syrian_war
+				831 = {
+					transfer_state_to = ROOT
+				}
+				annex_country = {
+					target = SYR
+				}
+			}
+		}	
 	}
 }
 
@@ -9091,6 +9145,368 @@ country_event = {
 			type = airship_equipment
 			amount = -1
 			producer = GER
+		}
+	}
+}
+
+#France when surrender limit progress to much -> decision unlocked to appoint petain head of state
+country_event = {
+	id = ww1_france.275
+	title = ww1_france.275.t
+	desc = ww1_france.275.d
+	picture = GFX_petain
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		has_war_with = GER
+		NOT = {
+			has_government = communism
+		}
+		17 = {
+			NOT = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+		865 = {
+			NOT = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+		surrender_progress > 0.15
+		NOT = {
+			has_global_flag = great_war_ends
+		}
+	}
+	option = {
+		name = ww1_france.275.a #form a military governement around petains figure
+		set_country_flag = FRA_collapsing_front
+		unlock_decision_tooltip = FRA_petain_head_of_state
+	}
+}
+
+#if France win, democratic regime return
+country_event = {
+	id = ww1_france.276
+	title = ww1_france.276.t
+	desc = ww1_france.276.d
+	picture = GFX_petain
+	fire_only_once = yes
+	trigger = {
+		tag = FRA
+		has_government = neutrality
+		has_country_leader = {
+			character = FRA_philippe_petain
+		}
+		has_country_flag = FRA_collapsing_front
+		has_global_flag = great_war_ends
+		has_country_flag = great_war_winner
+	}
+	mean_time_to_happen = {
+		days = 35
+	}
+	option = {
+		name = ww1_france.276.a
+		FRA_philippe_petain = {
+			remove_country_leader_role = {
+				ideology = oligarchism
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = return_democratic
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.20
+				}
+				set_cosmetic_tag = FRA_classic_blue
+			}
+			if = {
+				limit = {
+					has_country_flag = return_fascism
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.20
+				}
+			}
+		}
+	}
+}
+
+#Raoul villain is acquitted despite murdering jaures
+country_event = {
+	id = ww1_france.277
+	title = ww1_france.277.t
+	desc = ww1_france.277.d
+	picture = GFX_CGT_raoul_villain
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		NOT = {
+			has_country_leader = {
+				character = FRA_jean_jaures
+				ruling_only = no
+			}
+		}
+		NOT = {
+			has_global_flag = Jaures_survived
+		}
+		has_global_flag = kis_jauresassassination
+		date > 1919.3.29
+		NOT = {
+			has_country_flag = raoul_villain_acquited
+		}
+	}
+	option = {
+		name = ww1_france.277.a
+		set_country_flag = raoul_villain_acquited
+		add_stability = -0.05
+	}
+}
+
+#massive strike from metalurgists and diverses branchs
+country_event = {
+	id = ww1_france.278
+	title = ww1_france.278.t
+	desc = ww1_france.278.d
+	picture = GFX_riots_in_france
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		date > 1919.5.5
+		NOT = {
+			has_government = communism
+		}
+		has_global_flag = great_war_winner
+		NOT = {
+			has_country_flag = june_1919_riots
+		}
+	}
+	option = {
+		name = ww1_france.278.a
+		add_stability = -0.1
+		add_war_support = -0.1 	
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		set_country_flag = june_1919_riots
+		16 = {
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+		}
+	}
+}
+
+#deschanel_fall_from_train
+country_event = {
+	id = ww1_france.279
+	title = ww1_france.279.t
+	desc = ww1_france.279.d
+	picture = GFX_deschannel_fall_from_train
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		date > 1920.4.23
+		OR = {
+			has_idea = FRA_paul_deschanel
+		}
+		NOT = {
+			has_country_flag = deschanel_fall_from_train
+		}
+	}
+	option = {
+		name = ww1_france.279.a
+		custom_effect_tooltip = deschannel_fall_troll
+		set_country_flag = deschanel_fall_from_train
+	}
+}
+
+#aristide briand become prime minister
+country_event = {
+	id = ww1_france.280
+	title = ww1_france.280.t
+	desc = ww1_france.280.d
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		date > 1921.01.16
+		has_government = democratic
+		has_elections = yes
+		NOT = {
+			has_country_flag = briand_1921_pm
+		}
+	}
+	option = {
+		name = ww1_france.280.a
+		set_country_flag = briand_1921_pm
+		promote_character = FRA_aristide_briand
+		set_party_name = { 
+			ideology = democratic 
+			long_name = FRA_republican_socialist_party_long
+			name = FRA_republican_socialist_party 
+		}
+	}
+}
+
+#radio diffusion experience in Paris
+country_event = {
+	id = ww1_france.281
+	title = ww1_france.281.t
+	desc = ww1_france.281.d
+	picture = GFX_french_radio
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		date > 1921.12.21
+		has_country_flag = great_war_winner
+	}
+	option = {
+		name = ww1_france.281.a
+		add_tech_bonus = {
+			name = ww1_france.281.t
+			bonus = 0.25
+			uses = 1
+			category = radar_tech
+		}
+	}
+}
+
+#pointcarré replace aristide briand
+country_event = {
+	id = ww1_france.282
+	title = ww1_france.282.t
+	desc = ww1_france.282.d
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		date > 1922.1.12
+		date < 1922.1.20
+		has_government = democratic
+		has_elections = yes
+		has_country_leader = {
+			character = FRA_aristide_briand
+			ruling_only = yes
+		}
+	}
+	option = {
+		name = ww1_france.282.a
+		promote_character = FRA_raymond_poincare
+		set_party_name = { 
+			ideology = democratic 
+			long_name = FRA_democratic_party_long
+			name = FRA_democratic_party 
+		}
+	}
+}
+
+#ENG -> France want faster reparations from germany
+country_event = {
+	id = ww1_france.283
+	title = ww1_france.283.t
+	desc = ww1_france.283.d
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_france.283.a
+		#refuse to increase the reparations 
+		add_stability = 0.05
+		FRA = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = ENG_didnt_supported_paris_conference
+			}
+		}
+		FROM = {
+			country_event = {
+				id = ww1_france.284
+				days = 4
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = ww1_france.283.b
+		#non historical - agreed
+		FROM = {
+			country_event = {
+				id = ww1_france.285
+				days = 2
+			}
+		}
+		add_political_power = -120
+		GER = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = medium_decrease
+			}
+		}
+		effect_tooltip = {
+			FRA = {
+				swap_ideas = {
+					remove_idea = FRA_german_reparations
+					add_idea = FRA_german_reparations2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+#ENG refused
+country_event = {
+	id = ww1_france.284
+	title = ww1_france.284.t
+	desc = ww1_france.284.d
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_france.284.a
+		#refuse to increase the reparations 
+	}
+}
+
+#ENG accepted
+country_event = {
+	id = ww1_france.285
+	title = ww1_france.285.t
+	desc = ww1_france.285.d
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_france.285.a
+		#refuse to increase the reparations 
+		FRA = {
+			swap_ideas = {
+				remove_idea = FRA_german_reparations
+				add_idea = FRA_german_reparations2
+				days = 1440
+			}
 		}
 	}
 }
