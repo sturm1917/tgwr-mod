@@ -861,25 +861,6 @@ country = {
 		}
 	}
 	focus = {
-		id = ROM_nationalist_democratic_victory
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_intimidation_tactics }
-		prerequisite = { focus =  ROM_political_revolution }
-		x = -4
-		y = 3
-		relative_position_id = ROM_lurk_in_the_shadows
-		cost = 5
-		available = {
-			
-		}	
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
 		id = ROM_begin_the_crackdown
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_nationalist_democratic_victory }
