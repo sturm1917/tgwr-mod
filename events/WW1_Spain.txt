@@ -2075,13 +2075,13 @@ country_event = {
 	picture = GFX_report_event_por_salazar_military
 	fire_only_once = yes
 	is_triggered_only = yes
-	option = {
-		name = ww1_spain.87.a # Pacific
-		SPR = {
-			add_state_claim = 737
-		}
-		set_global_flag = spain_negotiated_for_pacific
-	}
+	#option = {
+	#	name = ww1_spain.87.a # Pacific
+	#	SPR = {
+	#		add_state_claim = 737
+	#	}
+	#	set_global_flag = spain_negotiated_for_pacific
+	#}
 	option = {
 		name = ww1_spain.87.b # Africa
 		SPR = {
@@ -4488,6 +4488,9 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
+		RIF = {
+			load_oob = "SPR_rif_war"
+		}
 		name = ww1_spain.150.a
 		ai_chance = { factor = 10 }
 		RIF = {
@@ -4511,7 +4514,7 @@ country_event = {
 				terrain_factor = 0
 			}	
 			defender = {
-				state = 249
+				state = 743
 				num_provinces = 2
 				on_win = ww1_spain.152
 				on_lose = ww1_spain.153
@@ -4542,35 +4545,24 @@ country_event = {
 			defender = 249
 			attacker = 290
 		}
-		declare_war_on = {
-			target = SPR
-			type = topple_government
+		RIF = {
+			declare_war_on = {
+				target = SPR
+				type = topple_government
+			}
 		}
 		hidden_effect = {
 			IF = {
 				limit = {
 					FRA = {
-						NOT = {
-							has_global_flag = great_war_loser
-						}
+						has_country_flag = great_war_winner
 					}
 				}
-				country_event = {
-					id = ww1_spain.155
-					days = 25
-				}
-			}
-			IF = {
-				limit = {
-					GER = {
-						NOT = {
-							has_global_flag = great_war_loser
-						}
+				FRA = {
+					country_event = {
+						id = ww1_spain.155
+						days = 25
 					}
-				}
-				country_event = {
-					id = ww1_spain.161
-					days = 25
 				}
 			}
 		}
@@ -4591,7 +4583,19 @@ country_event = {
 	option = {
 		name = ww1_spain.152.a
 		ai_chance = { factor = 10 }
-
+		add_political_power = 50
+		add_stability = 0.05
+		743 = {
+			transfer_state_to = RIF
+		}
+		IF = {
+			SPR = {
+				has_country_flag = great_war_winner
+			}
+			887 = {
+				transfer_state_to = RIF
+			}
+		}
 	}
 }
 #Loss Rifs Border
@@ -4605,7 +4609,18 @@ country_event = {
 	option = {
 		name = ww1_spain.153.a
 		ai_chance = { factor = 10 }
-
+		add_stability = -0.05
+		743 = {
+			transfer_state_to = RIF
+		}
+		IF = {
+			SPR = {
+				has_country_flag = great_war_winner
+			}
+			887 = {
+				transfer_state_to = RIF
+			}
+		}
 	}
 }
 #Draw Rifs Border
@@ -4619,7 +4634,18 @@ country_event = {
 	option = {
 		name = ww1_spain.154.a
 		ai_chance = { factor = 10 }
-
+		add_political_power = 25
+		743 = {
+			transfer_state_to = RIF
+		}
+		IF = {
+			SPR = {
+				has_country_flag = great_war_winner
+			}
+			887 = {
+				transfer_state_to = RIF
+			}
+		}
 	}
 }
 
@@ -4640,10 +4666,7 @@ country_event = {
 				days = 3
 			}
 		}
-		RIF = {
-			transfer_state = 108
-		}
-		108 = {
+		459 = {
 			add_core_of = RIF
 		}
 		459 = {
@@ -4767,6 +4790,7 @@ country_event = {
 		RIF = {
 			has_capitulated = yes
 		}
+		has_global_flag = SPR_flag_rif_negotiations
 		original_tag = SPR
 	}
 	
@@ -4775,6 +4799,19 @@ country_event = {
 		ai_chance = { factor = 10 }
 		290 = {
 			transfer_state_to = SPR
+		}
+		743 = {
+			transfer_state_to = SPR
+		}
+		IF = {
+			limit = {
+				SPR = {
+					has_country_flag = great_war_winner
+				}
+			}
+			887 = {
+				transfer_state_to = SPR
+			}
 		}
 		108 = {
 			transfer_state_to = FRA
@@ -4812,179 +4849,123 @@ country_event = {
 
 
 #Rifs Surprise Attack Germany
-country_event = {
-	id = ww1_spain.161
-	title = ww1_spain.161.t
-	desc = ww1_spain.161.d
-	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
-	is_triggered_only = yes
-	option = {
-		name = ww1_spain.161.a
-		ai_chance = { factor = 10 }
-		GER = {
-			country_event = {
-				id = ww1_spain.162
-				days = 3
-			}
-		}
-		RIF = {
-			transfer_state = 108
-		}
-		108 = {
-			add_core_of = RIF
-		}
-		459 = {
-			add_manpower = -3250
-		}
-		461 = {
-			add_manpower = -3250
-		}
-	}
-}
+#country_event = {
+#	id = ww1_spain.161
+#	title = ww1_spain.161.t
+#	desc = ww1_spain.161.d
+#	picture = GFX_report_event_british_inspect_troops
+#	fire_only_once = no
+#	is_triggered_only = yes
+#	option = {
+#		name = ww1_spain.161.a
+#		ai_chance = { factor = 10 }
+#		GER = {
+#			country_event = {
+#				id = ww1_spain.162
+#				days = 3
+#			}
+#		}
+#		RIF = {
+#			transfer_state = 108
+#		}
+#		108 = {
+#			add_core_of = RIF
+#		}
+#		459 = {
+#			add_manpower = -3250
+#		}
+#		461 = {
+#			add_manpower = -3250
+#		}
+#	}
+#}
 
 #Rifs Surprise Attack Germany GER
-country_event = {
-	id = ww1_spain.162
-	title = ww1_spain.162.t
-	desc = ww1_spain.162.d
-	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
-	is_triggered_only = yes
-	option = {
-		name = ww1_spain.162.b
-		ai_chance = { factor = 150 }
-		FRA = {
-			declare_war_on = {
-				target = RIF
-				type = topple_government
-			}
-		} 
-		SPR = {
-			country_event = ww1_spain.157
-		}
-		set_global_flag = SPR_flag_germany_joins_the_war
-		459 = {
-			add_manpower = -3250
-		}
-		461 = {
-			add_manpower = -3250
-		}
-	}
-}
+#country_event = {
+#	id = ww1_spain.162
+#	title = ww1_spain.162.t
+#	desc = ww1_spain.162.d
+#	picture = GFX_report_event_british_inspect_troops
+#	fire_only_once = no
+#	is_triggered_only = yes
+#	option = {
+#		name = ww1_spain.162.b
+#		ai_chance = { factor = 150 }
+#		FRA = {
+#			declare_war_on = {
+#				target = RIF
+#				type = topple_government
+#			}
+#		} 
+#		SPR = {
+#			country_event = ww1_spain.157
+#		}
+#		set_global_flag = SPR_flag_germany_joins_the_war
+#		459 = {
+#			add_manpower = -3250
+#		}
+#		461 = {
+#			add_manpower = -3250
+#		}
+#	}
+#}
 
 #SPR Germany Joins the War
-country_event = {
-	id = ww1_spain.163
-	title = ww1_spain.163.t
-	desc = ww1_spain.163.d
-	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
-	is_triggered_only = yes
-	option = {
-		name = ww1_spain.163.a
-		ai_chance = { factor = 2 }
-		add_stability = 0.05
-		complete_national_focus = SPR_hindenburg_and_ludendhorff
-		add_days_mission_timeout = {
-			mission = SPR_defeat_the_rifs
-			days = 2600
-		}
-	}
-}
+#country_event = {
+#	id = ww1_spain.163
+#	title = ww1_spain.163.t
+#	desc = ww1_spain.163.d
+#	picture = GFX_report_event_british_inspect_troops
+#	fire_only_once = no
+#	is_triggered_only = yes
+#	option = {
+#		name = ww1_spain.163.a
+#		ai_chance = { factor = 2 }
+#		add_stability = 0.05
+#		complete_national_focus = SPR_hindenburg_and_ludendhorff
+#		add_days_mission_timeout = {
+#			mission = SPR_defeat_the_rifs
+#			days = 2600
+#		}
+#	}
+#}
 
 #Abd el Krim demands Negotiations
-country_event = {
-	id = ww1_spain.164
-	title = ww1_spain.164.t
-	desc = ww1_spain.164.d
-	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
-	mean_time_to_happen = { days = 7 }
-	trigger = {
-		original_tag = SPR
-		SPR = {
-			controls_province = 7215
-		}
-		GER = {
-			controls_province = 7215
-		}
-	}
-	option = {
-		name = ww1_spain.164.a
-		ai_chance = { factor = 2 }
-		add_stability = 0.05
-		complete_national_focus = SPR_relaunch_the_offensive
-		set_global_flag = SPR_flag_rif_negotiations
-	}
-	option = {
-		name = ww1_spain.164.b
-		ai_chance = { factor = 2 }
-		add_stability = 0.05
-		complete_national_focus = SPR_demand_a_peace_from_the_germans
-		set_global_flag = SPR_flag_rif_negotiations
-		country_event = {
-			id = ww1_spain.166
-			days = 5
-		}
-	}
-}
-
-#Continued War
-country_event = {
-	id = ww1_spain.165
-	title = ww1_spain.165.t
-	desc = ww1_spain.165.d
-	picture = GFX_report_event_liberal_victory
-	fire_only_once = yes
-	hidden = yes
-	mean_time_to_happen = { days = 30 }
-	trigger = {
-		original_tag = SPR
-		RIF = {
-			has_capitulated = yes
-		}
-	}
-	
-	option = {
-		name = ww1_spain.165.a
-		ai_chance = { factor = 10 }
-		290 = {
-			transfer_state_to = SPR
-		}
-		108 = {
-			transfer_state_to = GER
-		}
-		461 = {
-			transfer_state_to = GER
-		}
-	}
-}
-
-#Victory in War
-country_event = {
-	id = ww1_spain.166
-	title = ww1_spain.166.t
-	desc = ww1_spain.166.d
-	picture = GFX_report_event_liberal_victory
-	fire_only_once = yes
-	hidden = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = ww1_spain.166.a
-		ai_chance = { factor = 10 }
-		290 = {
-			transfer_state_to = SPR
-		}
-		108 = {
-			transfer_state_to = GER
-		}
-		461 = {
-			transfer_state_to = GER
-		}
-	}
-}
+#country_event = {
+#	id = ww1_spain.164
+#	title = ww1_spain.164.t
+#	desc = ww1_spain.164.d
+#	picture = GFX_report_event_british_inspect_troops
+#	fire_only_once = no
+#	mean_time_to_happen = { days = 7 }
+#	trigger = {
+#		original_tag = SPR
+#		SPR = {
+#			controls_province = 7215
+#		}
+#		GER = {
+#			controls_province = 7215
+#		}
+#	}
+#	option = {
+#		name = ww1_spain.164.a
+#		ai_chance = { factor = 2 }
+#		add_stability = 0.05
+#		complete_national_focus = SPR_relaunch_the_offensive
+#		set_global_flag = SPR_flag_rif_negotiations
+#	}
+#	option = {
+#		name = ww1_spain.164.b
+#		ai_chance = { factor = 2 }
+#		add_stability = 0.05
+#		complete_national_focus = SPR_demand_a_peace_from_the_germans
+#		set_global_flag = SPR_flag_rif_negotiations
+#		country_event = {
+#			id = ww1_spain.166
+#			days = 5
+#		}
+#	}
+#}
 
 #Hidden Focus Bug Fix
 country_event = {
