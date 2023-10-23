@@ -2255,7 +2255,7 @@ country_event = {
 	
 	option = {
 		name = ww1_spain.94.a
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 4 }
 		SPR = {
 			country_event = { 
 				id = ww1_spain.95
@@ -2293,6 +2293,7 @@ country_event = {
 			add_state_claim = 180
 			set_state_owner = 180
 		}
+		set_global_flag = spain_negotiated_for_porto
 	}
 	
 }

@@ -9600,7 +9600,6 @@ focus_tree = {
 			IF = { 
 				limit = { 
 					has_global_flag = spain_negotiated_for_porto
-					has_completed_focus = SPR_forget_about_our_colonies
 				}
 				SPR = {
 					add_state_core = 180 
@@ -9609,7 +9608,6 @@ focus_tree = {
 			IF = { 
 				limit = { 
 					has_global_flag = spain_negotiated_for_pacific
-					has_completed_focus = SPR_our_colonial_empire
 				}
 				SPR = {
 					737 = {
@@ -9620,12 +9618,33 @@ focus_tree = {
 			IF = { 
 				limit = { 
 					has_global_flag = spain_negotiated_for_kamerun
-					has_completed_focus = SPR_our_colonial_empire
 				}
 				SPR = {
 					539 = {
 						add_compliance = 100
 					}
+				}
+			}
+			IF = {
+				limit = { has_completed_focus = SPR_secure_spanish_claims_in_france }
+				SPR = {
+					539 = {
+						add_compliance = 80
+					}
+					31 = {
+						add_compliance = 35
+					}
+					118 = {
+						add_compliance = 80
+					}
+					add_state_core = 118
+					hidden_effect = {
+						add_state_claim = 807
+					}
+					add_state_claim = 460
+					add_state_claim = 459
+					add_state_core = 887
+					add_state_claim = 887
 				}
 			}
 		}
