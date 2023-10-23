@@ -75,11 +75,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -205,7 +205,7 @@ focus_tree = {
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -335,11 +335,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 15
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 5
 					}
 				}
@@ -509,11 +509,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.130
 						days = 15
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.132
 						days = 5
 					}
 				}
@@ -615,11 +615,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 15
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 5
 					}
 				}
@@ -810,11 +810,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.132
+						id = ww1_spain.133
 						days = 5
 					}
 					country_event = {
-						id = ww1_spain.130
+						id = ww1_spain.131
 						days = 15
 					}
 				}
@@ -1009,11 +1009,11 @@ focus_tree = {
 					}
 				}
 				country_event = {
-					id = ww1_spain.133
+					id = ww1_spain.132
 					days = 13
 				}
 				country_event = {
-					id = ww1_spain.131
+					id = ww1_spain.130
 					days = 3
 				}
 			}
@@ -1574,11 +1574,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 15
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 5
 					}
 				}
@@ -1839,11 +1839,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 15
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 5
 					}
 				}
@@ -2015,11 +2015,11 @@ focus_tree = {
 					}
 				}
 				country_event = {
-					id = ww1_spain.133
+					id = ww1_spain.132
 					days = 13
 				}
 				country_event = {
-					id = ww1_spain.131
+					id = ww1_spain.130
 					days = 3
 				}
 			}
@@ -2197,11 +2197,11 @@ focus_tree = {
 					}
 				}
 				country_event = {
-					id = ww1_spain.133
+					id = ww1_spain.132
 					days = 13
 				}
 				country_event = {
-					id = ww1_spain.131
+					id = ww1_spain.130
 					days = 3
 				}
 			}
@@ -2394,11 +2394,11 @@ focus_tree = {
 					}
 				}
 				country_event = {
-					id = ww1_spain.133
+					id = ww1_spain.132
 					days = 13
 				}
 				country_event = {
-					id = ww1_spain.131
+					id = ww1_spain.130
 					days = 3
 				}
 			}
@@ -2708,11 +2708,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -3150,11 +3150,11 @@ focus_tree = {
 					}
 				}
 				country_event = {
-					id = ww1_spain.133
+					id = ww1_spain.132
 					days = 13
 				}
 				country_event = {
-					id = ww1_spain.131
+					id = ww1_spain.130
 					days = 3
 				}
 			}
@@ -3271,11 +3271,11 @@ focus_tree = {
 					}
 				}
 				country_event = {
-					id = ww1_spain.133
+					id = ww1_spain.132
 					days = 13
 				}
 				country_event = {
-					id = ww1_spain.131
+					id = ww1_spain.130
 					days = 3
 				}
 			}
@@ -3549,7 +3549,7 @@ focus_tree = {
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -3836,11 +3836,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 45
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 35
 					}
 				}
@@ -4067,11 +4067,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -4559,11 +4559,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -4791,7 +4791,7 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
@@ -4861,11 +4861,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -4938,11 +4938,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -5600,7 +5600,7 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
@@ -5776,11 +5776,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -5933,11 +5933,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -6280,11 +6280,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -6759,11 +6759,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -6948,11 +6948,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -7135,11 +7135,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -7405,11 +7405,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -7526,11 +7526,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -7751,11 +7751,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -9061,6 +9061,12 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = new_spanish_prime_minister_in_office
+			NOT = {
+				OR = {
+					has_completed_focus = SPR_change_brings_reform
+					has_completed_focus = SPR_abolish_el_turno
+				}
+			}
 		}
 		allow_branch = {
 			always = yes
@@ -9365,7 +9371,7 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
@@ -9979,11 +9985,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.130
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.132
 						days = 3
 					}
 				}
@@ -10629,11 +10635,11 @@ focus_tree = {
 						}
 					}
 					country_event = {
-						id = ww1_spain.133
+						id = ww1_spain.132
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.130
 						days = 3
 					}
 				}
@@ -10898,7 +10904,7 @@ focus_tree = {
 						days = 13
 					}
 					country_event = {
-						id = ww1_spain.131
+						id = ww1_spain.132
 						days = 3
 					}
 				}
@@ -11246,6 +11252,7 @@ focus_tree = {
 			focus = SPR_side_with_carlos 
 		}
 		completion_reward = {
+			news_event = ww1_spain.180
 			add_stability = -0.05
 			custom_effect_tooltip = spanish_civil_war.tt
 			start_civil_war = {
@@ -11387,6 +11394,7 @@ focus_tree = {
 			add_state_claim = 108
 			add_state_claim = 460
 			add_state_claim = 459
+			add_state_claim = 887
 		}
 	}
 	focus = {

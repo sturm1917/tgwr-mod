@@ -2101,6 +2101,9 @@ country_event = {
 	is_triggered_only = yes
 	option = { #Porto
 		name = ww1_spain.88.a
+		hidden_effect = {
+			add_state_claim = 887
+		}
 		FRA = { 
 			country_event = {
 				id = ww1_spain.89
@@ -2113,9 +2116,10 @@ country_event = {
 		SPR = {
 			add_state_claim = 697
 			add_state_core = 697
-		}
-		SPR = {
 			set_state_owner = 697
+		}
+		hidden_effect = {
+			add_state_claim = 887
 		}
 	}
 }
@@ -3643,7 +3647,6 @@ country_event = {
 	option = {
 		name = ww1_spain.125.a
 		ai_chance = { factor = 10 }
-		news_event = id = ww1_spain.180
 		load_oob = "SPR_civil_war"
 		set_global_flag = SPR_carlist_war_started
 		set_cosmetic_tag = SPR_carlists
@@ -4492,7 +4495,7 @@ country_event = {
 	title = ww1_spain.139.t
 	desc = ww1_spain.139.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.139.a
@@ -4502,8 +4505,30 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
+				id = ww1_spain.181
+				days = 35
+			}
+		}
+	}
+}
+#Abd el-Krim Gain Independece
+country_event = {
+	id = ww1_spain.181
+	title = ww1_spain.181.t
+	desc = ww1_spain.181.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		RIF = {
+			load_oob = "SPR_rif_war"
+		}
+		name = ww1_spain.181.a
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			country_event = {
 				id = ww1_spain.150
-				days = 75
+				days = 20
 			}
 		}
 	}
@@ -4514,12 +4539,9 @@ country_event = {
 	title = ww1_spain.150.t
 	desc = ww1_spain.150.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		RIF = {
-			load_oob = "SPR_rif_war"
-		}
 		name = ww1_spain.150.a
 		ai_chance = { factor = 10 }
 		RIF = {
@@ -4556,6 +4578,7 @@ country_event = {
 				days = 35
 			}
 		}
+		complete_national_focus = SPR_handling_the_rifs
 	}
 }
 #Abd el-Krim Starts the War
@@ -4564,7 +4587,7 @@ country_event = {
 	title = ww1_spain.151.t
 	desc = ww1_spain.151.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.151.a
@@ -4607,7 +4630,7 @@ country_event = {
 	title = ww1_spain.152.t
 	desc = ww1_spain.152.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.152.a
@@ -4633,7 +4656,7 @@ country_event = {
 	title = ww1_spain.153.t
 	desc = ww1_spain.153.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.153.a
@@ -4658,7 +4681,7 @@ country_event = {
 	title = ww1_spain.154.t
 	desc = ww1_spain.154.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.154.a
@@ -4684,7 +4707,7 @@ country_event = {
 	title = ww1_spain.155.t
 	desc = ww1_spain.155.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.155.a
@@ -4713,7 +4736,7 @@ country_event = {
 	title = ww1_spain.156.t
 	desc = ww1_spain.156.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.156.a
@@ -4755,7 +4778,7 @@ country_event = {
 	title = ww1_spain.157.t
 	desc = ww1_spain.157.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_spain.157.a
@@ -4775,15 +4798,27 @@ country_event = {
 	title = ww1_spain.158.t
 	desc = ww1_spain.158.d
 	picture = GFX_report_event_british_inspect_troops
-	fire_only_once = no
-	mean_time_to_happen = { days = 7 }
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
 	trigger = {
 		original_tag = SPR
-		SPR = {
-			controls_province = 7215
-		}
-		FRA = {
-			controls_province = 7215
+		OR = {
+			SPR = {
+				OR = {
+					controls_province = 7215
+					controls_province = 4761
+					controls_province = 12087
+					controls_province = 4199
+				}
+			}
+			FRA = {
+				OR = {
+					controls_province = 7215
+					controls_province = 4761
+					controls_province = 12087
+					controls_province = 4199
+				}
+			}
 		}
 	}
 	option = {
