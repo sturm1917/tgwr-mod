@@ -1464,6 +1464,373 @@ country = {
 		}
 	}
 	focus = {
+		id = ROM_the_long_awaited_war
+		icon = GFX_focus_rom_preserve_romania
+		x = 0
+		y = 18
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_wartime_promises
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_long_awaited_war }
+		x = -1
+		y = 1
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_plan_an_offensive
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_long_awaited_war }
+		x = 1
+		y = 1
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_pentru_romania_o_sa_sangerez!
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_plan_an_offensive }
+		prerequisite = { focus =  ROM_wartime_promises }
+		x = 0
+		y = 2
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_retreat_to_moldova
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_pentru_romania_o_sa_sangerez }
+		mutually_exclusive = { focus = ROM_a_collaboration_government }
+		x = 2
+		y = 3
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_mending_the_political_crisis
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_retreat_to_moldova }
+		x = 2
+		y = 4
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_appoint_a_pro_german_pm
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_mending_the_political_crisis }
+		prerequisite = { focus = ROM_peace_negotiations }
+		x = 1
+		y = 5
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_prevent_a_puppet_government
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_appoint_a_pro_german_pm }
+		x = 1
+		y = 6
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+		focus = {
+		id = ROM_another_opportunity
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_prevent_a_puppet_government }
+		x = 1
+		y = 7
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_peace_negotiations
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_retreat_to_moldova focus = ROM_a_collaboration_government }
+		x = 0
+		y = 4
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_invite_a_german_king
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_a_collaboration_government }
+		prerequisite = { focus =  ROM_peace_negotiations }
+		x = -2
+		y = 5
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_carpist_renaissance
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_a_collaboration_government }
+		x = -3
+		y = 4
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_unite_with_moldova
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_carpist_renaissance }
+		prerequisite = { focus =  ROM_invite_a_german_king }
+		x = -3
+		y = 6
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_primary_schooling_reform
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_unite_with_moldova }
+		x = -3
+		y = 7
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_propaganda_campains
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_unite_with_moldova }
+		x = -5
+		y = 7
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_arrest_averescu 
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_unite_with_moldova }
+		x = -1
+		y = 7
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_plan
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_propaganda_campains }
+		prerequisite = { focus =  ROM_arrest_averescu }
+		x = -2
+		y = 8
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_german_control_of_our_high_command
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_propaganda_campains }
+		prerequisite = { focus =  ROM_primary_schooling_reform }
+		x = -4
+		y = 8
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_a_member_of_the_central_powers
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_plan }
+		prerequisite = { focus =  ROM_german_control_of_our_high_command }
+		x = -3
+		y = 9
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_a_collaboration_government
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_pentru_romania_o_sa_sangerez }
+		mutually_exclusive = { focus = ROM_retreat_to_moldova }
+		x = -2
+		y = 3
+		relative_position_id = ROM_the_long_awaited_war
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
 		id = ROM_ban_the_PNL
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_the_party_of_thiefs }
