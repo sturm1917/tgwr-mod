@@ -184,7 +184,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_request_german_help_mobilizing focus = ROM_staunch_pro_central_powers_politics}
 		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_enter_negotiations_for_moldova }
+		mutually_exclusive = { focus = ROM_enter_negotiations_with_the_entente }
 		x = 4
 		y = 5
 		cost = 5
@@ -361,7 +361,7 @@ country = {
 		prerequisite = { focus =  ROM_take_a_side }
 		relative_position_id = ROM_take_a_side
 		mutually_exclusive = { focus = ROM_staunch_pro_central_powers_politics focus = ROM_reenforce_neutrality }
-		x = -5
+		x = -4
 		y = 1
 		cost = 5
 		available = {
@@ -380,7 +380,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_staunch_pro_entente_politics}
 		relative_position_id = ROM_take_a_side
-		x = -6
+		x = -5
 		y = 2
 		cost = 5
 		available = {
@@ -399,7 +399,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_claim_further_concessions_from_hungary }
 		relative_position_id = ROM_take_a_side
-		x = -7
+		x = -6
 		y = 3
 		cost = 5
 		available = {
@@ -418,7 +418,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_claim_further_concessions_from_hungary }
 		relative_position_id = ROM_take_a_side
-		x = -6
+		x = -5
 		y = 4
 		cost = 5
 		available = {
@@ -437,7 +437,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_staunch_pro_central_powers_politics }
 		relative_position_id = ROM_take_a_side
-		x = 7
+		x = 6
 		y = 2
 		cost = 5
 		available = {
@@ -475,7 +475,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
 		relative_position_id = ROM_take_a_side
-		x = 7
+		x = 6
 		y = 4
 		cost = 5
 		available = {
@@ -495,7 +495,7 @@ country = {
 		prerequisite = { focus =  ROM_take_a_side }
 		relative_position_id = ROM_take_a_side
 		mutually_exclusive = { focus = ROM_staunch_pro_entente_politics focus = ROM_reenforce_neutrality }
-		x = 6
+		x = 5
 		y = 1
 		cost = 5
 		available = {
@@ -533,7 +533,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_the_romanian_army }
 		relative_position_id = ROM_the_romanian_army
-		x = 0
+		x = 2
 		y = 1
 		cost = 5
 		available = {
@@ -552,7 +552,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_the_romanian_army }
 		relative_position_id = ROM_the_romanian_army
-		x = 2
+		x = 0
 		y = 1
 		cost = 5
 		available = {
@@ -571,7 +571,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_the_romanian_army }
 		relative_position_id = ROM_the_romanian_army
-		x = 4
+		x = 5
 		y = 1
 		cost = 5
 		available = {
@@ -588,7 +588,6 @@ country = {
 	focus = {
 		id = ROM_a_riverine_fleet
 		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_romanian_navy }
 		prerequisite = { focus =  ROM_prioritize_naval_expansion }
 		mutually_exclusive = { focus = ROM_destroyer_focus }
 		relative_position_id = ROM_the_romanian_army
@@ -632,7 +631,7 @@ country = {
 		prerequisite = { focus =  ROM_the_air_corps }
 		relative_position_id = ROM_the_romanian_army
 		mutually_exclusive = { focus = ROM_prioritize_naval_expansion }
-		x = 1
+		x = 2
 		y = 2
 		cost = 5
 		available = {
@@ -651,7 +650,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_prioritize_airforce_expansion }
 		relative_position_id = ROM_the_romanian_army
-		x = 1
+		x = 2
 		y = 3
 		cost = 5
 		available = {
@@ -671,7 +670,7 @@ country = {
 		prerequisite = { focus =  ROM_the_romanian_navy }
 		relative_position_id = ROM_the_romanian_army
 		mutually_exclusive = { focus = ROM_prioritize_airforce_expansion }
-		x = 3
+		x = 5
 		y = 2
 		cost = 5
 		available = {
@@ -1174,7 +1173,7 @@ country = {
 		id = ROM_mandatory_insurance
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
-		x = -3
+		x = -5
 		y = 2
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
@@ -1267,7 +1266,7 @@ country = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_tackle_the_defict focus = ROM_limit_landlords_power }
 		x = -7
-		y = 6
+		y = 7
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
 		available = {
@@ -2115,7 +2114,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
 		x = -11
-		y = 1
+		y = 2
 		relative_position_id = ROM_King_Carls_Reign
 		cost = 5
 		available = {
@@ -2134,7 +2133,7 @@ focus = {
 		prerequisite = { focus =  ROM_limited_agrarian_reform }
 		mutually_exclusive = { focus = ROM_bratianus_resign }
 		x = -11
-		y = 2
+		y = 3
 		relative_position_id = ROM_King_Carls_Reign
 		cost = 5
 		available = {
@@ -2668,7 +2667,7 @@ focus = {
 		id = ROM_full_male_sufferage
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_minimum_wage_law }
-		x = 4
+		x = 3
 		y = 2
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
