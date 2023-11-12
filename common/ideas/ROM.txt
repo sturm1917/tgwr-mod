@@ -324,7 +324,7 @@ ROM_romanian_culture = {
 			}
 		}
 ROM_poor_railway_network = {
-			picture = generic_poopshit
+			picture = generic_agrarian
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
