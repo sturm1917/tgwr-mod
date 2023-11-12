@@ -295,6 +295,18 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
+ROM_romanian_culture = {
+			picture = rom_troll
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				equipment_capture_factor = 0.1
+                                industrial_capacity_factory = -0.05
+			}
+		}
 		ROM_industrialization_of_prahova_valley = {
 			picture = chi_hyper_inflation2
 			removal_cost = -1
