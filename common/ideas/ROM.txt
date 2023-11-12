@@ -337,6 +337,17 @@ ROM_poor_railway_network = {
 
 			}
 		}
+ROM_blue_law = {
+			picture = generic_poopshit
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			consumer_goods_factor = 0.1
+			}
+		}
 		ROM_memories_of_1907 = {
 			picture = POL_the_peasants_strike
 			removal_cost = -1
