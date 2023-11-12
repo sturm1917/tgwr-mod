@@ -952,7 +952,7 @@ country = {
 		id = ROM_bratianus_resign
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
-		mutually_exclusive = { focus = ROM_triumph_of_reform }
+		mutually_exclusive = { focus = ROM_limited_agrarian_reform }
 		x = 0
 		y = 2
 		relative_position_id = ROM_King_Carls_Reign
@@ -2113,6 +2113,7 @@ focus = {
 		id = ROM_limited_agrarian_reform
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
+		mutually_exclusive = { focus = ROM_bratianus_resign }
 		x = -11
 		y = 2
 		relative_position_id = ROM_King_Carls_Reign
@@ -2131,7 +2132,6 @@ focus = {
 		id = ROM_triumph_of_reform
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_limited_agrarian_reform }
-		mutually_exclusive = { focus = ROM_bratianus_resign }
 		x = -11
 		y = 3
 		relative_position_id = ROM_King_Carls_Reign
