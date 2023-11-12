@@ -2852,7 +2852,7 @@ focus = {
 		prerequisite = { focus = ROM_reduce_the_influence_of_religion focus = ROM_begin_the_crackdown }
 		mutually_exclusive = { focus = ROM_a_reformed_constitutional_regime }
 		x = -1
-		y = 9
+		y = 8
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
 		available = {
