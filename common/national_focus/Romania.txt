@@ -9,6 +9,162 @@ country = {
 		}
 	}
 	continuous_focus_position = { x = 500000000	y = 100 }
+focus = {
+		id = ROM_invest_in_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -20
+		y = 0
+		cost = 5
+		available = {
+			controls_state = 866
+			controls_state = 81
+			controls_state = 846	
+		}
+		
+		completion_reward = {
+866 = { 
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+81 = { 
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+846 = { 
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_develop_the_north
+		icon = GFX_focus_rom_preserve_romania
+		x = -18
+		y = 0
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_stregthen_the_prahovan_valley
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_develop_the_north focus = ROM_invest_in_infrastructure}
+		mutually_exclusive = { focus = ROM_prioritize_farmers_interests }
+		x = 2
+		y = 1
+		relative_position_id = ROM_invest_in_infrastructure
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_increase_food_exports
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_stregthen_the_prahovan_valley focus = ROM_prioritize_farmers_interests }
+		x = 1
+		y = 2
+		relative_position_id = ROM_invest_in_infrastructure
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_prioritize_farmers_interests
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_develop_the_north focus = ROM_invest_in_infrastructure}
+		mutually_exclusive = { focus = ROM_stregthen_the_prahovan_valley }
+		x = 0
+		y = 1
+		relative_position_id = ROM_invest_in_infrastructure
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_increase_agricultural_subsidies
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_prioritize_farmers_interests }
+		x = 0
+		y = 3
+		relative_position_id = ROM_invest_in_infrastructure
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_expand_metro_areas
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_stregthen_the_prahovan_valley }
+		x = 2
+		y = 3
+		relative_position_id = ROM_invest_in_infrastructure
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_the_romanian_army
 		icon = GFX_focus_rom_preserve_romania
@@ -787,137 +943,6 @@ country = {
 		relative_position_id = ROM_the_romanian_army
 		x = -2
 		y = 6
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_invest_in_infrastructure
-		icon = GFX_focus_rom_preserve_romania
-		x = -20
-		y = 0
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_develop_the_north
-		icon = GFX_focus_rom_preserve_romania
-		x = -18
-		y = 0
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_stregthen_the_prahovan_valley
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_develop_the_north focus = ROM_invest_in_infrastructure}
-		mutually_exclusive = { focus = ROM_prioritize_farmers_interests }
-		x = 2
-		y = 1
-		relative_position_id = ROM_invest_in_infrastructure
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_increase_food_exports
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_stregthen_the_prahovan_valley focus = ROM_prioritize_farmers_interests }
-		x = 1
-		y = 2
-		relative_position_id = ROM_invest_in_infrastructure
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_prioritize_farmers_interests
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_develop_the_north focus = ROM_invest_in_infrastructure}
-		mutually_exclusive = { focus = ROM_stregthen_the_prahovan_valley }
-		x = 0
-		y = 1
-		relative_position_id = ROM_invest_in_infrastructure
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_increase_agricultural_subsidies
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_prioritize_farmers_interests }
-		x = 0
-		y = 3
-		relative_position_id = ROM_invest_in_infrastructure
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_expand_metro_areas
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_stregthen_the_prahovan_valley }
-		x = 2
-		y = 3
-		relative_position_id = ROM_invest_in_infrastructure
 		cost = 5
 		available = {
 			
