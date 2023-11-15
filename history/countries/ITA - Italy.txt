@@ -16,6 +16,7 @@ add_opinion_modifier = {
 	target = AUH
 	modifier = historical_rival
 }
+give_guarantee = ROM
 
 if = {
 	limit = {
