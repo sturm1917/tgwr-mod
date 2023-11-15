@@ -108,9 +108,11 @@ if = {
 		limited_conscription
 		ROM_unionist_zeal
 		ROM_carol_i
-		ROM_industrialization_of_prahova_valley
+		ROM_romanian_culture
 		ROM_agricultural_economy
-		ROM_inexperienced_army_1_hidden
+		ROM_inexperienced_army_1
+                ROM_poor_railway_network
+                ROM_blue_law
 	}
 	add_timed_idea = {
         idea = ROM_memories_of_1907
