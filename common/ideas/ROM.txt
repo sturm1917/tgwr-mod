@@ -144,8 +144,8 @@ ideas = {
 					ruling_only = no
 				}				
 			}
-			traits = {
-				devoted_monarch
+			modifier = {
+			political_power_factor = -0.15
 			}	
 		}
 		ROM_ferdinand_i = {
