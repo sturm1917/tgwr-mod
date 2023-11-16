@@ -309,7 +309,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_a_cabinet_based_on_loyality
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_annex_country_2
 		prerequisite = { focus =  ROM_form_a_new_government }
 		mutually_exclusive = { focus = ROM_a_cabinet_based_on_merit }
 		x = 1
@@ -320,7 +320,7 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+		add_ideas = ROM_loyal_cabinet	
 		}	
 		ai_will_do = {
 			factor = 5
@@ -328,7 +328,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_a_cabinet_based_on_merit
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus =  ROM_form_a_new_government }
 		mutually_exclusive = { focus = ROM_a_cabinet_based_on_loyality }
 		x = 3
