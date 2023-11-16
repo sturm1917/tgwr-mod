@@ -363,6 +363,18 @@ ROM_loyal_cabinet = {
                         consumer_goods_factor = 0.05
 			}
 		}
+ROM_elitist_policies = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+                        production_speed_buildings_factor = 0.05
+                        consumer_goods_factor = 0.05
+			}
+		}
 ROM_cabinet_based_on_merit = {
 			picture = generic_filllater
 			removal_cost = -1
