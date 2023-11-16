@@ -115,6 +115,158 @@ RUS_rasputin_influence_level_up = {
 		set_global_flag = rasputin_influence1
 	}
 }
+ROM_carol_pp_increase = {
+	# level 5 not relevant. Cannot go above.
+	if = {
+		limit = { has_idea = ROM_carol_i_11 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_11
+			add_idea = ROM_carol_i_10
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_10 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_10
+			add_idea = ROM_carol_i_9
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_9 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_9
+			add_idea = ROM_carol_i_8
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_8 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_8
+			add_idea = ROM_carol_i_7
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_7 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_7
+			add_idea = ROM_carol_i_6
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_6 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_6
+			add_idea = ROM_carol_i_5
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_5 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_5
+			add_idea = ROM_carol_i_4
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_4 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_4
+			add_idea = ROM_carol_i_3
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_3}
+		swap_ideas = {
+			remove_idea = ROM_carol_i_3
+			add_idea = ROM_carol_i_2
+}
+	}
+	else_if = {
+		limit = { has_idea = ROM_carol_i_2 }
+		swap_ideas = {
+			remove_idea = ROM_carol_i_2
+			add_idea = ROM_carol_i_1
+		}
+	}
+	
+}
+
+#Important to put LOWEST first
+ROM_carol_pp_decrease = {
+	if = {
+		limit = { has_idea = ROM_carol_i_1 }
+
+	swap_ideas = {
+
+		remove_idea = ROM_carol_i_1
+		add_idea = ROM_carol_i_2
+	}
+	}
+
+else_if = {
+	limit = { has_idea = ROM_carol_i_2 }
+	swap_ideas = {
+		remove_idea = ROM_carol_i_2
+		add_idea = ROM_carol_i_3
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_3 }
+swap_ideas = {
+remove_idea = ROM_carol_i_3
+add_idea = ROM_carol_i_4
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_4 }
+swap_ideas = {
+remove_idea = ROM_carol_i_4
+add_idea = ROM_carol_i_5
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_5 }
+swap_ideas = {
+remove_idea = ROM_carol_i_5
+add_idea = ROM_carol_i_6
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_6 }
+swap_ideas = {
+remove_idea = ROM_carol_i_6
+add_idea = ROM_carol_i_7
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_7 }
+swap_ideas = {
+remove_idea = ROM_carol_i_7
+add_idea =ROM_carol_i_8
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_8 }
+swap_ideas = {
+remove_idea = ROM_carol_i_8
+add_idea = ROM_carol_i_9
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_9 }
+swap_ideas = {
+remove_idea = ROM_carol_i_9
+add_idea = ROM_carol_i_10
+}
+}
+else_if = {
+limit = { has_idea = ROM_carol_i_10 }
+swap_ideas = {
+remove_idea = ROM_carol_i_10
+add_idea = ROM_carol_i_11
+}
+}
+
+	}
 ITA_industrialisation_level_up = {
 	if = {
 		limit = { has_idea = ITA_lackluster_industrialisation }
