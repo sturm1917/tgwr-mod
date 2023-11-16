@@ -517,7 +517,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_tackle_the_defict
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_convention
 		prerequisite = { focus =  ROM_1913_land_reform_bill }
 		x = -5
 		y = 5
@@ -527,7 +527,7 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+                add_ideas = ROM_budget_balancing
 		}	
 		ai_will_do = {
 			factor = 5
