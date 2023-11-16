@@ -366,7 +366,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_ensure_the_kings_support
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_German_Crown
 		prerequisite = { focus =  ROM_half_parliments_size }
 		x = 3
 		y = 6
@@ -376,7 +376,10 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+custom_effect_tooltip =  ROM_carol_pp_increase
+
+hidden_effect = { ROM_carol_pp_increase = yes }
+		}
 		}	
 		ai_will_do = {
 			factor = 5
