@@ -191,7 +191,7 @@ swap_ideas = {
 	
 	focus = {
 		id = ROM_King_Carls_Reign
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 5
 		y = 0
 		cost = 5
@@ -200,7 +200,8 @@ swap_ideas = {
 		}
 		
 		completion_reward = {
-		add_political_power = 150		
+		add_political_power = 20
+                add_stability = 0.05
 		}	
 		ai_will_do = {
 			factor = 5
@@ -217,7 +218,7 @@ swap_ideas = {
 		relative_position_id = ROM_King_Carls_Reign
 		cost = 5
 		available = {
-			
+		has_country_flag = ROM_Carp_II
 		}	
 		completion_reward = {
 		add_political_power = 150		
