@@ -351,6 +351,18 @@ ROM_poor_railway_network = {
 
 			}
 		}
+ROM_loyal_cabinet = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = 0.15
+                        consumer_goods_factor = 0.05
+			}
+		}
 ROM_blue_law = {
 			picture = generic_poopshit
 			removal_cost = -1
