@@ -255,7 +255,7 @@ add_popularity = {
 	focus = {
 		id = ROM_continue_democratization
 		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_law_on_northern_dobruja }
+		prerequisite = { focus =  ROM_mandatory_insurance }
 		mutually_exclusive = { focus = ROM_half_parliments_size }
 		x = -2
 		y = 4
@@ -339,7 +339,7 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+                add_ideas = ROM_cabinet_based_on_merit
 		}	
 		ai_will_do = {
 			factor = 5
@@ -422,8 +422,8 @@ add_popularity = {
 		id = ROM_law_on_northern_dobruja
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
-		x = -2
-		y = 3
+		x = -5
+		y = 2
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
 		available = {
@@ -439,8 +439,8 @@ add_popularity = {
 		id = ROM_mandatory_insurance
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
-		x = -5
-		y = 2
+		x = -2
+		y = 3
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
 		available = {
