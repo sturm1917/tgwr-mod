@@ -107,7 +107,7 @@ if = {
 	add_ideas = {
 		limited_conscription
 		ROM_unionist_zeal
-		ROM_carol_i
+		ROM_carol_i_9
 		ROM_romanian_culture
 		ROM_agricultural_economy
 		ROM_inexperienced_army_1
