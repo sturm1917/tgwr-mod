@@ -323,6 +323,21 @@ ROM_romanian_culture = {
 
 			}
 		}
+ROM_agricultural_economy_2 = {
+			picture = generic_agrarian_society
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				monthly_population = 0.2
+                                consumer_goods_factor = -0.5
+			}
+		}
 ROM_poor_railway_network = {
 			picture = generic_agrarian
 			removal_cost = -1
