@@ -375,6 +375,17 @@ ROM_elitist_policies = {
                         consumer_goods_factor = 0.05
 			}
 		}
+ROM_budget_balancing = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+                        consumer_goods_factor = -0.1
+			}
+		}
 ROM_cabinet_based_on_merit = {
 			picture = generic_filllater
 			removal_cost = -1
