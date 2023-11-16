@@ -120,8 +120,232 @@ ideas = {
 			picture = generic_tank_manufacturer_3
 		}
 	}
+country = {
+		ROM_carol_i_1 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = 0.25
+			}	
+		}
+country = {
+		ROM_carol_i_2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = 0.2
+			}	
+		}
+country = {
+		ROM_carol_i_3 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = 0.15
+			}	
+		}
+country = {
+		ROM_carol_i_4 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = 0.1
+			}	
+		}
+country = {
+		ROM_carol_i_5 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = 0.05
+			}	
+		}
+country = {
+		ROM_carol_i_6 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = 0.0
+			}	
+		}
+country = {
+		ROM_carol_i_7 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = -0.05
+			}	
+		}
+country = {
+		ROM_carol_i_8 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = -0.1
+			}	
+		}
 	country = {
-		ROM_carol_i = {
+		ROM_carol_i_9 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -146,6 +370,62 @@ ideas = {
 			}
 			modifier = {
 			political_power_factor = -0.15
+			}	
+		}
+country = {
+		ROM_carol_i_10 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = -0.2
+			}	
+		}
+country = {
+		ROM_carol_i_11 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { 
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}
+			}
+			available = {
+				NOT = {
+					has_government = communism
+					has_country_leader = {
+						character = ROM_carol_i
+					}	
+				}
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = no
+				}				
+			}
+			modifier = {
+			political_power_factor = -0.25
 			}	
 		}
 		ROM_ferdinand_i = {
