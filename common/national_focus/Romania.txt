@@ -138,7 +138,6 @@ swap_ideas = {
 		}
 		
 		completion_reward = {
-		add_political_power = 150		
 		}	
 		ai_will_do = {
 			factor = 5
@@ -165,813 +164,31 @@ swap_ideas = {
 	}
 	focus = {
 		id = ROM_expand_metro_areas
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus =  ROM_stregthen_the_prahovan_valley }
 		x = 2
 		y = 3
 		relative_position_id = ROM_invest_in_infrastructure
 		cost = 5
 		available = {
-			
+		controls_state = 805	
 		}
 		
 		completion_reward = {
-		add_political_power = 150		
+805 = { 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
 		}	
 		ai_will_do = {
 			factor = 5
 		}
 	}
-	focus = {
-		id = ROM_the_romanian_army
-		icon = GFX_focus_rom_preserve_romania
-		x = 14
-		y = 0
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_take_a_side
-		icon = GFX_focus_rom_preserve_romania
-		x = 30
-		y = 0
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_reenforce_neutrality
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_take_a_side }
-		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_staunch_pro_central_powers_politics focus = ROM_staunch_pro_entente_politics }
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_invite_russo_french_military_advisors
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_reenforce_neutrality focus = ROM_staunch_pro_entente_politics }
-		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_german_military_reorganization }
-		x = -3
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_treaty_of_friendship_with_serbia
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_invite_russo_french_military_advisors focus = ROM_german_military_reorganization }
-		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_german_military_reorganization }
-		x = -3
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_woo_both_sides
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_reenforce_neutrality }
-		relative_position_id = ROM_take_a_side
-		x = 0
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_french_industrial_how_to
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_invite_russo_french_military_advisors focus = ROM_woo_both_sides}
-		relative_position_id = ROM_take_a_side
-		x = -1
-		y = 4
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_german_military_factory
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_german_military_reorganization focus = ROM_woo_both_sides }
-		relative_position_id = ROM_take_a_side
-		x = 1
-		y = 4
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_request_german_help_mobilizing
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_german_military_reorganization focus = ROM_invite_russo_french_military_advisors}
-		relative_position_id = ROM_take_a_side
-		x = 3
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_diplomatic_mission_to_hungary
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_request_german_help_mobilizing focus = ROM_staunch_pro_central_powers_politics}
-		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_enter_negotiations_with_the_entente }
-		x = 4
-		y = 5
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_claim_moldova
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_diplomatic_mission_to_hungary }
-		relative_position_id = ROM_take_a_side
-		x = 3
-		y = 6
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_invite_austrian_troops
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_diplomatic_mission_to_hungary }
-		relative_position_id = ROM_take_a_side
-		x = 4
-		y = 7
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_invade_russia
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_invite_austrian_troops }
-		prerequisite = { focus =  ROM_claim_moldova }
-		relative_position_id = ROM_take_a_side
-		x = 3
-		y = 8
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_enter_negotiations_with_the_entente
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_treaty_of_friendship_with_serbia focus = ROM_staunch_pro_entente_politics}
-		mutually_exclusive = { focus = ROM_diplomatic_mission_to_hungary }
-		relative_position_id = ROM_take_a_side
-		x = -4
-		y = 5
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_secure_our_saftey
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_enter_negotiations_with_the_entente }
-		relative_position_id = ROM_take_a_side
-		x = -4
-		y = 6
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_welcome_anglo_italian_banks
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_enter_negotiations_with_the_entente }
-		relative_position_id = ROM_take_a_side
-		x = -2
-		y = 6
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_invade_austria
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_secure_our_saftey }
-		prerequisite = { focus =  ROM_welcome_anglo_italian_banks }
-		relative_position_id = ROM_take_a_side
-		x = -3
-		y = 7
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_german_military_reorganization
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_reenforce_neutrality focus = ROM_staunch_pro_central_powers_politics }
-		mutually_exclusive = { focus = ROM_invite_russo_french_military_advisors }
-		relative_position_id = ROM_take_a_side
-		x = 3
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_staunch_pro_entente_politics
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_take_a_side }
-		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_staunch_pro_central_powers_politics focus = ROM_reenforce_neutrality }
-		x = -4
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_claim_further_concessions_from_hungary
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_staunch_pro_entente_politics}
-		relative_position_id = ROM_take_a_side
-		x = -5
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_enter_negotiations_for_moldova
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_claim_further_concessions_from_hungary }
-		relative_position_id = ROM_take_a_side
-		x = -6
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_unity_of_the_population
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_claim_further_concessions_from_hungary }
-		relative_position_id = ROM_take_a_side
-		x = -5
-		y = 4
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_request_the_transnistria_governorate
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_staunch_pro_central_powers_politics }
-		relative_position_id = ROM_take_a_side
-		x = 6
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_mobilize_economy
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
-		relative_position_id = ROM_take_a_side
-		x = 8
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_unity_of_the_political_sphere
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
-		relative_position_id = ROM_take_a_side
-		x = 6
-		y = 4
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_staunch_pro_central_powers_politics
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_take_a_side }
-		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_staunch_pro_entente_politics focus = ROM_reenforce_neutrality }
-		x = 5
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_the_armed_forces
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_romanian_army }
-		relative_position_id = ROM_the_romanian_army
-		x = -2
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_the_air_corps
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_romanian_army }
-		relative_position_id = ROM_the_romanian_army
-		x = 2
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_fortify_borders
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_romanian_army }
-		relative_position_id = ROM_the_romanian_army
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_the_romanian_navy
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_romanian_army }
-		relative_position_id = ROM_the_romanian_army
-		x = 5
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_a_riverine_fleet
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_prioritize_naval_expansion }
-		mutually_exclusive = { focus = ROM_destroyer_focus }
-		relative_position_id = ROM_the_romanian_army
-		x = 4
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_destroyer_focus
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_prioritize_naval_expansion }
-		mutually_exclusive = { focus = ROM_a_riverine_fleet }
-		relative_position_id = ROM_the_romanian_army
-		x = 6
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_prioritize_airforce_expansion
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_air_corps }
-		relative_position_id = ROM_the_romanian_army
-		mutually_exclusive = { focus = ROM_prioritize_naval_expansion }
-		x = 2
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_balloon_companies
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_prioritize_airforce_expansion }
-		relative_position_id = ROM_the_romanian_army
-		x = 2
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_prioritize_naval_expansion
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_romanian_navy }
-		relative_position_id = ROM_the_romanian_army
-		mutually_exclusive = { focus = ROM_prioritize_airforce_expansion }
-		x = 5
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_expand_armament_industry
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_armed_forces }
-		relative_position_id = ROM_the_romanian_army
-		x = -3
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_lessons_of_the_balkan_wars
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_armed_forces }
-		relative_position_id = ROM_the_romanian_army
-		x = -2
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_adapt_to_the_new_times
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_lessons_of_the_balkan_wars }
-		relative_position_id = ROM_the_romanian_army
-		x = -2
-		y = 4
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_fix_up_the_rail_network
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_adapt_to_the_new_times }
-		relative_position_id = ROM_the_romanian_army
-		x = -3
-		y = 5
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_lessons_of_the_defense_of_the_carpathian
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_adapt_to_the_new_times }
-		relative_position_id = ROM_the_romanian_army
-		x = -1
-		y = 5
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_army_reconstruction
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_fix_up_the_rail_network }
-		prerequisite = { focus =  ROM_lessons_of_the_defense_of_the_carpathian }
-		relative_position_id = ROM_the_romanian_army
-		x = -2
-		y = 6
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
+	
 	focus = {
 		id = ROM_King_Carls_Reign
 		icon = GFX_focus_rom_preserve_romania
@@ -2944,7 +2161,796 @@ focus = {
 		}
 	}
 	
-	
+	focus = {
+		id = ROM_the_romanian_army
+		icon = GFX_focus_rom_preserve_romania
+		x = 14
+		y = 0
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_take_a_side
+		icon = GFX_focus_rom_preserve_romania
+		x = 30
+		y = 0
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_reenforce_neutrality
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_take_a_side }
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus = ROM_staunch_pro_central_powers_politics focus = ROM_staunch_pro_entente_politics }
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_invite_russo_french_military_advisors
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_reenforce_neutrality focus = ROM_staunch_pro_entente_politics }
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus = ROM_german_military_reorganization }
+		x = -3
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_treaty_of_friendship_with_serbia
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_invite_russo_french_military_advisors focus = ROM_german_military_reorganization }
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus = ROM_german_military_reorganization }
+		x = -3
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_woo_both_sides
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_reenforce_neutrality }
+		relative_position_id = ROM_take_a_side
+		x = 0
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_french_industrial_how_to
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_invite_russo_french_military_advisors focus = ROM_woo_both_sides}
+		relative_position_id = ROM_take_a_side
+		x = -1
+		y = 4
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_german_military_factory
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_german_military_reorganization focus = ROM_woo_both_sides }
+		relative_position_id = ROM_take_a_side
+		x = 1
+		y = 4
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_request_german_help_mobilizing
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_german_military_reorganization focus = ROM_invite_russo_french_military_advisors}
+		relative_position_id = ROM_take_a_side
+		x = 3
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_diplomatic_mission_to_hungary
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_request_german_help_mobilizing focus = ROM_staunch_pro_central_powers_politics}
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus = ROM_enter_negotiations_with_the_entente }
+		x = 4
+		y = 5
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_claim_moldova
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_diplomatic_mission_to_hungary }
+		relative_position_id = ROM_take_a_side
+		x = 3
+		y = 6
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_invite_austrian_troops
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_diplomatic_mission_to_hungary }
+		relative_position_id = ROM_take_a_side
+		x = 4
+		y = 7
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_invade_russia
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_invite_austrian_troops }
+		prerequisite = { focus =  ROM_claim_moldova }
+		relative_position_id = ROM_take_a_side
+		x = 3
+		y = 8
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_enter_negotiations_with_the_entente
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_treaty_of_friendship_with_serbia focus = ROM_staunch_pro_entente_politics}
+		mutually_exclusive = { focus = ROM_diplomatic_mission_to_hungary }
+		relative_position_id = ROM_take_a_side
+		x = -4
+		y = 5
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_secure_our_saftey
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_enter_negotiations_with_the_entente }
+		relative_position_id = ROM_take_a_side
+		x = -4
+		y = 6
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_welcome_anglo_italian_banks
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_enter_negotiations_with_the_entente }
+		relative_position_id = ROM_take_a_side
+		x = -2
+		y = 6
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_invade_austria
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_secure_our_saftey }
+		prerequisite = { focus =  ROM_welcome_anglo_italian_banks }
+		relative_position_id = ROM_take_a_side
+		x = -3
+		y = 7
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_german_military_reorganization
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_reenforce_neutrality focus = ROM_staunch_pro_central_powers_politics }
+		mutually_exclusive = { focus = ROM_invite_russo_french_military_advisors }
+		relative_position_id = ROM_take_a_side
+		x = 3
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_staunch_pro_entente_politics
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_take_a_side }
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus = ROM_staunch_pro_central_powers_politics focus = ROM_reenforce_neutrality }
+		x = -4
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_claim_further_concessions_from_hungary
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_staunch_pro_entente_politics}
+		relative_position_id = ROM_take_a_side
+		x = -5
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_enter_negotiations_for_moldova
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_claim_further_concessions_from_hungary }
+		relative_position_id = ROM_take_a_side
+		x = -6
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_unity_of_the_population
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_claim_further_concessions_from_hungary }
+		relative_position_id = ROM_take_a_side
+		x = -5
+		y = 4
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_request_the_transnistria_governorate
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_staunch_pro_central_powers_politics }
+		relative_position_id = ROM_take_a_side
+		x = 6
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_mobilize_economy
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
+		relative_position_id = ROM_take_a_side
+		x = 8
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_unity_of_the_political_sphere
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
+		relative_position_id = ROM_take_a_side
+		x = 6
+		y = 4
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_staunch_pro_central_powers_politics
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_take_a_side }
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus = ROM_staunch_pro_entente_politics focus = ROM_reenforce_neutrality }
+		x = 5
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_armed_forces
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_romanian_army }
+		relative_position_id = ROM_the_romanian_army
+		x = -2
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_air_corps
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_romanian_army }
+		relative_position_id = ROM_the_romanian_army
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_fortify_borders
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_romanian_army }
+		relative_position_id = ROM_the_romanian_army
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_the_romanian_navy
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_romanian_army }
+		relative_position_id = ROM_the_romanian_army
+		x = 5
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_a_riverine_fleet
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_prioritize_naval_expansion }
+		mutually_exclusive = { focus = ROM_destroyer_focus }
+		relative_position_id = ROM_the_romanian_army
+		x = 4
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_destroyer_focus
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_prioritize_naval_expansion }
+		mutually_exclusive = { focus = ROM_a_riverine_fleet }
+		relative_position_id = ROM_the_romanian_army
+		x = 6
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_prioritize_airforce_expansion
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_air_corps }
+		relative_position_id = ROM_the_romanian_army
+		mutually_exclusive = { focus = ROM_prioritize_naval_expansion }
+		x = 2
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_balloon_companies
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_prioritize_airforce_expansion }
+		relative_position_id = ROM_the_romanian_army
+		x = 2
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_prioritize_naval_expansion
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_romanian_navy }
+		relative_position_id = ROM_the_romanian_army
+		mutually_exclusive = { focus = ROM_prioritize_airforce_expansion }
+		x = 5
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_expand_armament_industry
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_armed_forces }
+		relative_position_id = ROM_the_romanian_army
+		x = -3
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_lessons_of_the_balkan_wars
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_armed_forces }
+		relative_position_id = ROM_the_romanian_army
+		x = -2
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_adapt_to_the_new_times
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_lessons_of_the_balkan_wars }
+		relative_position_id = ROM_the_romanian_army
+		x = -2
+		y = 4
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_fix_up_the_rail_network
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_adapt_to_the_new_times }
+		relative_position_id = ROM_the_romanian_army
+		x = -3
+		y = 5
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_lessons_of_the_defense_of_the_carpathian
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_adapt_to_the_new_times }
+		relative_position_id = ROM_the_romanian_army
+		x = -1
+		y = 5
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_army_reconstruction
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_fix_up_the_rail_network }
+		prerequisite = { focus =  ROM_lessons_of_the_defense_of_the_carpathian }
+		relative_position_id = ROM_the_romanian_army
+		x = -2
+		y = 6
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	
 	
 	}
