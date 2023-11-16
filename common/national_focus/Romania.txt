@@ -104,7 +104,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_increase_food_exports
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_wheat
 		prerequisite = { focus =  ROM_stregthen_the_prahovan_valley focus = ROM_prioritize_farmers_interests }
 		x = 1
 		y = 2
@@ -115,7 +115,10 @@ focus = {
 		}
 		
 		completion_reward = {
-		add_political_power = 150		
+swap_ideas = {
+    remove_idea = ROM_agricultural_economy
+    add_idea =  ROM_agricultural_economy_2
+}
 		}	
 		ai_will_do = {
 			factor = 5
@@ -123,7 +126,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_prioritize_farmers_interests
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_SOV_breadbasket_of_the_union
 		prerequisite = { focus =  ROM_develop_the_north focus = ROM_invest_in_infrastructure}
 		mutually_exclusive = { focus = ROM_stregthen_the_prahovan_valley }
 		x = 0
