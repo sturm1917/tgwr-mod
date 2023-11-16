@@ -121,7 +121,7 @@ ideas = {
 		}
 	}
 country = {
-		ROM_carol_i_1 = {
+		ROM_carol_i1 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -149,7 +149,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_2 = {
+		ROM_carol_i2 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -177,7 +177,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_3 = {
+		ROM_carol_i3 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -205,7 +205,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_4 = {
+		ROM_carol_i4 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -233,7 +233,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_5 = {
+		ROM_carol_i5 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -261,7 +261,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_6 = {
+		ROM_carol_i6 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -289,7 +289,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_7 = {
+		ROM_carol_i7 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -317,7 +317,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_8 = {
+		ROM_carol_i8 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -345,7 +345,7 @@ country = {
 			}	
 		}
 	country = {
-		ROM_carol_i_9 = {
+		ROM_carol_i9 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -373,7 +373,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_10 = {
+		ROM_carol_i10 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
@@ -401,7 +401,7 @@ country = {
 			}	
 		}
 country = {
-		ROM_carol_i_11 = {
+		ROM_carol_i11 = {
 			removal_cost = -1
 			allowed = {
 				original_tag = ROM
