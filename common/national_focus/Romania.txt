@@ -594,7 +594,7 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 		id = ROM_a_coalition_against_carp
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_the_party_of_thiefs }
-		mutually_exclusive = { focus = ROM_ban_the_PNL focus = ROM_a_coalition_against_carp }
+		mutually_exclusive = { focus = ROM_ban_the_PNL focus = ROM_compromise_with_the_PNL }
 		x = 0
 		y = 8
 		relative_position_id = ROM_bratianus_resign
