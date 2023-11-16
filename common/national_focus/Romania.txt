@@ -412,7 +412,7 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+                remove_ideas = ROM_blue_law
 		}	
 		ai_will_do = {
 			factor = 5
@@ -430,7 +430,6 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-                remove_ideas = ROM_blue_law
 		}	
 		ai_will_do = {
 			factor = 5
