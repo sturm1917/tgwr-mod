@@ -307,7 +307,6 @@ ROM_romanian_culture = {
                                 industrial_capacity_factory = -0.05
 			}
 		}
-
 		ROM_agricultural_economy = {
 			picture = generic_agrarian_society
 			removal_cost = -1
