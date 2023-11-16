@@ -363,6 +363,19 @@ ROM_loyal_cabinet = {
                         consumer_goods_factor = 0.05
 			}
 		}
+ROM_cabinet_based_on_merit = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = -0.15
+                        consumer_goods_factor = -0.05
+		        political_advisor_cost_factor = -0.25
+			}
+		}
 ROM_blue_law = {
 			picture = generic_poopshit
 			removal_cost = -1
