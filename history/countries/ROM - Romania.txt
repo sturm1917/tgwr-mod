@@ -113,11 +113,9 @@ if = {
 		ROM_inexperienced_army_1
                 ROM_poor_railway_network
                 ROM_blue_law
+                ROM_memories_of_1907
 	}
-	add_timed_idea = {
-        idea = ROM_memories_of_1907
-        days = 297
-    }
+	
 }
 1914.1.1 = {
 	set_country_flag = ROM_Carp_II
