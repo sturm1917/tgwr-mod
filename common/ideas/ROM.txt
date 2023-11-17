@@ -591,9 +591,4 @@ ROM_blue_law = {
 				guarantee_cost = -0.5
 			}
 		}
-	
-
-
-		
-	
-
+}
