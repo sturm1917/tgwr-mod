@@ -620,6 +620,21 @@ ROM_poor_railway_network = {
 
 			}
 		}
+ROM_anti_government_riots = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			 production_speed_buildings_factor = -0.15
+                         consumer_goods_factor = 0.2
+                         supply_consumption_factor = 0.1
+                         industrial_capacity_factory = -0.3
+                         stability_factor = -0.2
+			}
+		}
 ROM_loyal_cabinet = {
 			picture = generic_filllater
 			removal_cost = -1
