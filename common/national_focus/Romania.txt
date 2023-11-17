@@ -2739,6 +2739,25 @@ focus = {
 			factor = 5
 		}
 	}
+focus = {
+		id = ROM_modernize_equipment
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_the_armed_forces }
+		relative_position_id = ROM_the_romanian_army
+		x = 0
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_the_air_corps
 		icon = GFX_focus_rom_preserve_romania
