@@ -120,23 +120,6 @@ ideas = {
 			picture = generic_tank_manufacturer_3
 		}
 	}		
-		ROM_unionist_zeal = {
-			picture = ROM_preserve_greater_romania
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { always = yes }
-			available = {
-				NOT = {
-					has_country_flag = great_war_loser
-					has_cosmetic_tag = WLC
-				}		
-			}
-			modifier = {
-				war_support_factor = 0.1
-			}
-		}
 ROM_carol_i_1 = {
 			picture = generic_filllater
 			removal_cost = -1
