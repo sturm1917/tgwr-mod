@@ -572,6 +572,44 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 			factor = 5
 		}
 	}
+focus = {
+		id = ROM_supress_left_wing_protesters
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_soldiers_right_to_vote }
+		mutually_exclusive = { focus = ROM_calm_them_down }
+		x = 2
+		y = 6
+		relative_position_id = ROM_bratianus_resign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+focus = {
+		id = ROM_calm_them_down
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_soldiers_right_to_vote }
+		mutually_exclusive = { focus = ROM_supress_left_wing_protesters }
+		x = -2
+		y = 6
+		relative_position_id = ROM_bratianus_resign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_the_party_of_thiefs
 		icon = GFX_focus_rom_preserve_romania
