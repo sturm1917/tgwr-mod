@@ -119,7 +119,8 @@ ideas = {
 			}
 			picture = generic_tank_manufacturer_3
 		}
-	}		
+	}
+	country = {
 ROM_carol_i_1 = {
 			picture = generic_filllater
 			removal_cost = -1
@@ -443,4 +444,5 @@ ROM_blue_law = {
 				guarantee_cost = -0.5
 			}
 		}
+}
 }
