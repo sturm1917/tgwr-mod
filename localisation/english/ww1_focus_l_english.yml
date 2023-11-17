@@ -6536,7 +6536,7 @@ GER_local_investments:0 "Local Investments"
  ROM_cp:0 "Join the Central Powers"
  ROM_greater_romania:0 "Greater Romania"
 
- ROM_carol_pp_increase:0 "King_Carols opinion on us will §GImprove§!, which grants §G+5% Political Power Gain§!"
+ ROM_carol_pp_increase:0 "§YModifies the King Carl national spirit by§!§G+5% Political Power Gain§!"
  ROM_King_Carls_Reign:0 "King Carl's Reign"
  ROM_King_Carls_Reign_desc:0 ""
  ROM_bratianus_resign:0 "Brătianu's Resignation"
