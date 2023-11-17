@@ -589,7 +589,7 @@ political_actions = {
 		}
 
 		available = {
-			has_completed_focus = ROM_Limited_Agrarian_Reform
+			has_completed_focus = ROM_limited_agrarian_reform
 		}
 
 		days_mission_timeout = 210
@@ -601,7 +601,7 @@ political_actions = {
 		}
 
 		timeout_effect = {
-			country_event = { id = ww1_romania.22 }
+			country_event = { id = ww1_romania.20 }
 		}
 
 		complete_effect = {
