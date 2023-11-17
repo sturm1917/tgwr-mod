@@ -2725,7 +2725,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_the_romanian_army }
 		relative_position_id = ROM_the_romanian_army
-		x = -2
+		x = 0
 		y = 1
 		cost = 5
 		available = {
@@ -2758,25 +2758,7 @@ focus = {
 			factor = 5
 		}
 	}
-	focus = {
-		id = ROM_fortify_borders
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_the_romanian_army }
-		relative_position_id = ROM_the_romanian_army
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
+	
 	focus = {
 		id = ROM_the_romanian_navy
 		icon = GFX_focus_rom_preserve_romania
