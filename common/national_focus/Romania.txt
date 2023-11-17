@@ -574,7 +574,7 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 	}
 focus = {
 		id = ROM_supress_left_wing_protesters
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_strike_at_democracy2
 		prerequisite = { focus =  ROM_soldiers_right_to_vote }
 		mutually_exclusive = { focus = ROM_calm_them_down }
 		x = 1
@@ -585,7 +585,9 @@ focus = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+                remove_ideas = ROM_anti_government_riots
+                add_political_power = -20
+                add_stability = -0.05
 		}	
 		ai_will_do = {
 			factor = 5
