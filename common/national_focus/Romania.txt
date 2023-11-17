@@ -2316,6 +2316,46 @@ focus = {
 			factor = 5
 		}
 	}
+focus = {
+		id = ROM_increase_arms_deals_with_the_entente
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_treaty_of_friendship_with_serbia focus = ROM_woo_both_sides }
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus = ROM_increase_arms_deals_with_the_central_powers }
+		x = -3
+		y = 5
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+focus = {
+		id = ROM_increase_arms_deals_with_the_central_powers
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus =  ROM_request_german_help_mobilizing focus = ROM_woo_both_sides }
+		relative_position_id = ROM_take_a_side
+		mutually_exclusive = { focus =  ROM_increase_arms_deals_with_the_entente }
+		x = 3
+		y = 5
+		cost = 5
+		available = {
+			
+		}
+		
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_woo_both_sides
 		icon = GFX_focus_rom_preserve_romania
