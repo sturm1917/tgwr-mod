@@ -577,7 +577,7 @@ peace_deals = {
 
 political_actions = {
 
-	promised_land_reforms = {
+	ROM_promised_land_reforms = {
 		icon = generic_ignite_civil_war
 
 		allowed = {
@@ -598,10 +598,6 @@ visible = {
 		days_mission_timeout = 210
 		fire_only_once = yes
 		is_good = no
-
-		activation = {
-			always = yes
-		}
 
 		timeout_effect = {
 			country_event = { id = ww1_romania.20 }
