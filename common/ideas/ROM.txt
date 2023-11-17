@@ -120,303 +120,6 @@ ideas = {
 			picture = generic_tank_manufacturer_3
 		}
 	}
-		ROM_carol_i_1 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = 0.25
-			}	
-		}
-		ROM_carol_i_2 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = 0.2
-			}	
-		}
-		ROM_carol_i_3 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = 0.15
-			}	
-		}
-		ROM_carol_i_4 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = 0.1
-			}	
-		}
-		ROM_carol_i_5 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = 0.05
-			}	
-		}
-		ROM_carol_i_6 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = 0.0
-			}	
-		}
-		ROM_carol_i_7 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = -0.05
-			}	
-		}
-		ROM_carol_i_8 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = -0.1
-			}	
-		}
-		ROM_carol_i_9 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = -0.15
-			}	
-		}
-		ROM_carol_i_10 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = -0.2
-			}	
-		}
-		ROM_carol_i_11 = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = { 
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}
-			}
-			available = {
-				NOT = {
-					has_government = communism
-					has_country_leader = {
-						character = ROM_carol_i
-					}	
-				}
-				has_country_leader = {
-					character = ROM_carol_i
-					ruling_only = no
-				}				
-			}
-			modifier = {
-			political_power_factor = -0.25
-			}	
-		}
 		ROM_ferdinand_i = {
 			removal_cost = -1
 			allowed = {
@@ -562,6 +265,127 @@ ideas = {
 			}
 			modifier = {
 				war_support_factor = 0.1
+			}
+		}
+ROM_carol_i_1 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = 0.25
+			}
+		}
+ROM_carol_i_2 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = 0.2
+			}
+		}
+ROM_carol_i_3 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = 0.15
+			}
+		}
+ROM_carol_i_4 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = 0.1
+			}
+		}
+ROM_carol_i_5 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = 0.05
+			}
+		}
+ROM_carol_i_6 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = 0.0
+			}
+		}
+ROM_carol_i_7 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = -0.05
+			}
+		}
+ROM_carol_i_8 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = -0.1
+			}
+		}
+ROM_carol_i_9 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = -0.15
+			}
+		}
+ROM_carol_i_10 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = -0.2
+			}
+		}
+ROM_carol_i_11 = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			political_power_factor = -0.25
 			}
 		}
 ROM_romanian_culture = {
@@ -767,4 +591,4 @@ ROM_blue_law = {
 			}
 		}
 	}
-}
+
