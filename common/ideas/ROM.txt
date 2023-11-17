@@ -204,6 +204,7 @@ ideas = {
 				communism_drift = 0.1
 			}
 		}
+
 		ROM_king_carol_ii_hedonist = {
 			removal_cost = -1
 			allowed = {
@@ -590,5 +591,9 @@ ROM_blue_law = {
 				guarantee_cost = -0.5
 			}
 		}
-	}
+	
+
+
+		
+	
 
