@@ -2321,7 +2321,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_treaty_of_friendship_with_serbia focus = ROM_woo_both_sides }
 		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_increase_arms_deals_with_the_central_powers }
+		mutually_exclusive = { focus = ROM_increase_arms_deals_with_central_powers }
 		x = -3
 		y = 5
 		cost = 5
@@ -2341,7 +2341,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_request_german_help_mobilizing focus = ROM_woo_both_sides }
 		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus =  ROM_increase_arms_deals_with_the_entente }
+		mutually_exclusive = { focus =  ROM_increase_arms_deals_with_entente }
 		x = 3
 		y = 5
 		cost = 5
@@ -2416,7 +2416,7 @@ focus = {
 focus = {
 		id = ROM_welcome_anglo_italian_banks
 		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_french_industrial_how_to focus = ROM_woo_both_sides}
+		prerequisite = { focus =  ROM_french_industrial_how_to focus = ROM_german_military_factory}
 		relative_position_id = ROM_take_a_side
 		mutually_exclusive = { focus = ROM_meet_with_german_industrialists }
 		x = -1
@@ -2436,7 +2436,7 @@ focus = {
 focus = {
 		id = ROM_meet_with_german_industrialists
 		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus = ROM_german_military_factory focus = ROM_woo_both_sides}
+		prerequisite = { focus = ROM_german_military_factory focus =  ROM_french_industrial_how_to }
 		relative_position_id = ROM_take_a_side
 		mutually_exclusive = { focus = ROM_welcome_anglo_italian_banks }
 		x = 1
