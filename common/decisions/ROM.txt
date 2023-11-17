@@ -81,7 +81,7 @@ GER_great_war = {
 					add_ai_strategy = {
 						type = alliance
 						id = "ROM"
-						value = 200
+						value = 0
 					}
 				}
 				else_if = {
@@ -95,7 +95,7 @@ GER_great_war = {
 						add_ai_strategy = {
 							type = alliance
 							id = "ROM"
-							value = 200
+							value = 0
 						}
 					}
 					else = {
@@ -181,7 +181,7 @@ GER_great_war = {
 					has_capitulated = no
 				}
 				surrender_progress < 0.2
-				casualties < 2000000
+				casualties < 00000
 			}
 			modifier = {
 				factor = 0
@@ -376,7 +376,7 @@ GER_great_war = {
 		}
 		cancel_if_not_visible = no
 		ai_will_do = {
-			factor = 200
+			factor = 0
 		}
 	}
 }	
@@ -586,6 +586,9 @@ political_actions = {
 
 		priority = {
 			base = 100
+		}
+visible = {
+		original_tag = ROM
 		}
 
 		available = {
