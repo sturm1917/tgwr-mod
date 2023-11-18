@@ -298,6 +298,12 @@
  before_the_leaves_fall_flag:0 "The Great War has ended in just a few months"
  GER_release_TZN:0 "Grant Operational Autonomy to Ostafrika"
 
+ROM_people_request_tax_cuts:0 "People request tax cuts"
+ROM_people_demand_insurance_reform:0 "Workers demand insurance reform"
+ROM_businesses_demand_an_end_to_the_blue_law:0 "Businesses demand an end to the blue law"
+ROM_people_demand_more_rights:0 "Peasants demand more political rights"
+ROM_soldiers_demand_right_to_vote:0 "Soldiers demand the right to vote"
+
  FRA_parliament_dissolved:0 "The parliament has been dissolved"
  FRA_1910_legislative_elections_done:0 "1910 legislative elections are done"
  FRA_1914_legislative_elections_done:0 "1914 legislative elections are done"
