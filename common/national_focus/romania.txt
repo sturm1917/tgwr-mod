@@ -496,7 +496,7 @@ add_days_mission_timeout = {
 	}
 	focus = {
 		id = ROM_tax_cuts_for_the_poor
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_mex_privatisation
 		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
 		mutually_exclusive = { focus = ROM_target_aristocrats }
 		x = -6
@@ -608,7 +608,7 @@ add_days_mission_timeout = {
 	}
 	focus = {
 		id = ROM_soldiers_right_to_vote
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus =  ROM_overturn_the_blue_law }
 		x = 0
 		y = 5
