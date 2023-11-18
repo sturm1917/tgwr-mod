@@ -19,7 +19,6 @@ focus = {
 			controls_state = 866
 			controls_state = 81
 			controls_state = 846	
-country_event = { id =  ww1_romania.22 }
 		}
 		
 		completion_reward = {
@@ -461,7 +460,7 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 	}
 	focus = {
 		id = ROM_mandatory_insurance
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_socialist_worker
 		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
 		x = -2
 		y = 3
@@ -471,7 +470,22 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+add_days_mission_timeout = {
+    mission = ROM_people_request_tax_cuts
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_businesses_demand_an_end_to_the_blue_law 
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_people_demand_more_rights 
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_soldiers_demand_right_to_vote
+    days = 35
+}
 		}	
 		ai_will_do = {
 			factor = 5
@@ -490,7 +504,22 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+add_days_mission_timeout = {
+    mission = ROM_people_demand_insurance_reform
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_businesses_demand_an_end_to_the_blue_law 
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_people_demand_more_rights 
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_soldiers_demand_right_to_vote
+    days = 35
+}
 		}	
 		ai_will_do = {
 			factor = 5
@@ -586,7 +615,22 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+add_days_mission_timeout = {
+    mission = ROM_people_request_tax_cuts
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_people_demand_insurance_reform
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_businesses_demand_an_end_to_the_blue_law 
+    days = 35
+}
+add_days_mission_timeout = {
+    mission = ROM_people_demand_more_rights 
+    days = 35
+}
 		}	
 		ai_will_do = {
 			factor = 5
