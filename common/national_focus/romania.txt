@@ -386,6 +386,25 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 		}
 	}
 	focus = {
+		id = ROM_expand_executive_powers
+		icon = GFX_focus_German_Crown
+		prerequisite = { focus =  ROM_half_parliments_size }
+		x = 2
+		y = 5
+		relative_position_id = ROM_bratianus_resign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+
+		}
+			
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
 		id = ROM_fabricate_evidence
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_ensure_the_kings_support }
