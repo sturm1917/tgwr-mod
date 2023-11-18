@@ -19,6 +19,7 @@ focus = {
 			controls_state = 866
 			controls_state = 81
 			controls_state = 846	
+country_event = { id =  ww1_romania.22 }
 		}
 		
 		completion_reward = {
