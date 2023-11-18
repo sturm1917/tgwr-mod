@@ -254,7 +254,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_continue_democratization
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_support_democracy
 		prerequisite = { focus =  ROM_mandatory_insurance }
 		mutually_exclusive = { focus = ROM_half_parliments_size }
 		x = -2
@@ -265,7 +265,7 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+                add_ideas = ROM_democratic_reforms
 		}	
 		ai_will_do = {
 			factor = 5
@@ -273,7 +273,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_reduce_the_kings_influence
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus =  ROM_continue_democratization focus = ROM_the_new_constitution}
 		x = -3
 		y = 6
@@ -283,7 +283,10 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-		add_political_power = 150		
+custom_effect_tooltip =  ROM_carol_pp_increase
+
+hidden_effect = { ROM_carol_pp_increase = yes }
+		}
 		}	
 		ai_will_do = {
 			factor = 5
@@ -291,7 +294,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_invite_liberal_scholars
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus =  ROM_continue_democratization }
 		x = -2
 		y = 5
@@ -347,7 +350,7 @@ add_popularity = {
 	}
 	focus = {
 		id = ROM_half_parliments_size
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_destroy_meclis
 		prerequisite = { focus =  ROM_a_cabinet_based_on_loyality }
 		mutually_exclusive = { focus = ROM_continue_democratization }
 		x = 2
@@ -387,7 +390,7 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 	}
 	focus = {
 		id = ROM_expand_executive_powers
-		icon = GFX_focus_German_Crown
+		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus =  ROM_half_parliments_size }
 		x = 2
 		y = 5
@@ -406,7 +409,7 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 	}
 	focus = {
 		id = ROM_fabricate_evidence
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus =  ROM_ensure_the_kings_support }
 		x = 4
 		y = 7
@@ -424,7 +427,7 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 	}
 	focus = {
 		id = ROM_overturn_the_blue_law
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_focus_mex_triumph_over_the_cristeros
 		prerequisite = { focus =  ROM_form_a_new_government  }
 		x = 0
 		y = 3
@@ -659,7 +662,7 @@ focus = {
 	}
 focus = {
 		id = ROM_calm_them_down
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus =  ROM_soldiers_right_to_vote }
 		mutually_exclusive = { focus = ROM_supress_left_wing_protesters }
 		x = -1
