@@ -325,6 +325,19 @@ ROM_loyal_cabinet = {
                         consumer_goods_factor = 0.05
 			}
 		}
+ROM_democratic_reforms = {
+			picture = generic_filllater
+			removal_cost = -1
+			allowed = {
+				original_tag = ROM
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+                        political_power_gain = 0.5
+			democratic_drift = 0.2
+                        stability_weekly = 0.2
+			}
+		}
 ROM_elitist_policies = {
 			picture = generic_filllater
 			removal_cost = -1
