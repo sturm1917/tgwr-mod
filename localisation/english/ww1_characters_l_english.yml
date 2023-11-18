@@ -1349,6 +1349,7 @@
  GER_bernhard_kuhnt:0 "Bernhard Kuhnt"
  GER_guido_von_usedom:0 "Guido von Usedom"
  GER_oskar_von_preussen:0 "Oskar von Preußen"
+ GER_wilhelm_ii_von_wurttemberg:0 "Wilhelm II. von Württemberg"
 
  WUR_wilhelm_ii:0 "Wilhelm II."
  
@@ -1909,6 +1910,7 @@
  # KUBAN COSSACK
  KUB_alexander_filimonov:0 "Alexander Filimonov"
  KUB_mykola_riabovil:0 "Mykola Riabovil"
+ KUB_viktor_pokrovsky:0 "Viktor Pokrovsky"
 
  # KUMUL
  KUM_maqsud_shah:0 "Maqsud Shah"
@@ -2685,10 +2687,8 @@
  RUS_aleksandr_dutov:0 "Aleksandr Dutov"
  RUS_mikhail_drozdovsky:0 "Mikhail Drozdovsky"
  RUS_vladimir_kappel:0 "Vladimir Kappel"
- RUS_grigory_semyonov:0 "Grigory Semyonov"
  RUS_aleksandr_kutepov:0 "Aleksandr Kutepov"
  RUS_pavel_shatilov:0 "Pavel Shatilov"
- RUS_alexandr_rodzyanko:0 "Aleksandr Rodzyanko"
  RUS_vladimir_tolstoy:0 "Vladimir Tolstoy"
  RUS_grigori_rasputin:0 "Grigori Rasputin"
  RUS_grigori_rasputin_desc:0 "Mystic advisor of the royal family. The nobility is extremely dissatisfied with Rasputin because of his connections with the sectarians and his influence on tsar."
@@ -2736,7 +2736,7 @@
  RUS_boris_annenkov:0 "Boris Annenkov"
  RUS_roman_ungern_sternberg:0 "Roman Fedorovich fon Ungern-Shternberg"
  RUS_mikhail_diterikhs:0 "Mikhail Diterikhs"
- RUS_matvei_sulkevich:0 "Matvei Sulkevich"
+ RUS_matvei_sulkevich:0 "Matvey Sulkevich"
  RUS_vasily_flug:0 "Vasily Flug"
  RUS_ivan_erdely:0 "Ivan Erdely"
  RUS_vladimir_golitsyn:0 "Vladimir Golitsyn"
@@ -2760,6 +2760,18 @@
  RUS_nikolai_tchaikovsky:0 "Nikolai Tchaikovsky"
  RUS_fyodor_keller:0 "Fyodor Keller"
  RUS_nikolai_baratov:0 "Nikolai Baratov"
+ RUS_vasiliy_maklakov:0 "Vasiliy Maklakov"
+ RUS_andrei_pokrovskiy:0 "Andrei Pokrovskiy"
+ RUS_vladimir_volsky:0 "Vladimir Volsky"
+ 
+ SIB_pyotr_vologodsky:0 "Pyotr Vologodsky"
+ SIB_pyotr_derber:0 "Pyotr Derber"
+ 
+ URA_pavel_ivanov:0 "Pavel Ivanov"
+ 
+ UCH_matvey_martynov:0 "Matvey Martynov"
+ UCH_vladimir_akutin:0 "Vladimir Akutin"
+ UCH_vladimir_volsky:0 "Vladimir Volsky"
 
  # RIO GRANDE DO SUL
  RGS_borges_de_medeiros:0 "Borges de Medeiros"
