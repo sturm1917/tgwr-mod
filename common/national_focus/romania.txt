@@ -2657,11 +2657,11 @@ focus = {
 		}
 	}
 	focus = {
-		id = ROM_mobilize_economy
+		id = ROM_the_bukovina_compromise
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
 		relative_position_id = ROM_take_a_side
-		x = 8
+		x = 7
 		y = 3
 		cost = 5
 		available = {
