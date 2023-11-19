@@ -2292,7 +2292,6 @@ focus = {
 focus = {
 		id = ROM_law_on_northern_dobruja
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
 		x = 30
 		y = 0
 		relative_position_id = ROM_bratianus_resign
