@@ -2328,7 +2328,6 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_take_a_side }
 		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_staunch_pro_central_powers_politics focus = ROM_staunch_pro_entente_politics }
 		x = 0
 		y = 1
 		cost = 5
@@ -2565,7 +2564,6 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_take_a_side }
 		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_staunch_pro_central_powers_politics focus = ROM_reenforce_neutrality }
 		x = -4
 		y = 1
 		cost = 5
@@ -2642,7 +2640,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_staunch_pro_central_powers_politics }
 		relative_position_id = ROM_take_a_side
-		x = 6
+		x = 5
 		y = 2
 		cost = 5
 		available = {
@@ -2661,7 +2659,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
 		relative_position_id = ROM_take_a_side
-		x = 7
+		x = 6
 		y = 3
 		cost = 5
 		available = {
@@ -2699,8 +2697,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_take_a_side }
 		relative_position_id = ROM_take_a_side
-		mutually_exclusive = { focus = ROM_staunch_pro_entente_politics focus = ROM_reenforce_neutrality }
-		x = 5
+		x = 4
 		y = 1
 		cost = 5
 		available = {
