@@ -1,15 +1,17 @@
-	focus_tree = {
+#!gfx:interface/ww1_goals.gfx
+#!gfx:interface/ww1_goals_shine.gfx
+focus_tree = {
 	id = ROM_custom_focus
 	default = no
-country = {
+    country = {
 		factor = 0	
 		modifier = {
 			add = 50
 			tag = ROM
 		}
 	}
-	continuous_focus_position = { x = 500000000	y = 100 }
-focus = {
+	continuous_focus_position = { x = 5000	y = 100 }
+    focus = {
 		id = ROM_invest_in_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
 		x = -20
@@ -22,7 +24,7 @@ focus = {
 		}
 		
 		completion_reward = {
-866 = { 
+                866 = { 
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = infrastructure
@@ -30,7 +32,7 @@ focus = {
 						instant_build = yes
 					}
 				}
-81 = { 
+                81 = { 
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = infrastructure
@@ -38,7 +40,7 @@ focus = {
 						instant_build = yes
 					}
 				}
-846 = { 
+                846 = { 
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = infrastructure
@@ -62,7 +64,7 @@ focus = {
 		}
 		
 		completion_reward = {
-79 = { 
+                    79 = { 
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
@@ -89,7 +91,7 @@ focus = {
 		}
 		
 		completion_reward = {
-46 = { 
+                46 = { 
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
@@ -576,7 +578,7 @@ add_days_mission_timeout = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_tackle_the_defict focus = ROM_limit_landlords_power }
 		x = -7
-		y = 7
+		y = 6
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
 		available = {
@@ -664,7 +666,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_the_party_of_thiefs
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_SER_corruption
 		prerequisite = { focus =  ROM_soldiers_right_to_vote }
 		x = 0
 		y = 7
@@ -682,7 +684,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_a_coalition_against_carp
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_convention
 		prerequisite = { focus =  ROM_the_party_of_thiefs }
 		mutually_exclusive = { focus = ROM_ban_the_PNL focus = ROM_compromise_with_the_PNL }
 		x = 0
@@ -701,7 +703,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_a_man_of_culture_and_literature
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_university_2
 		prerequisite = { focus =  ROM_a_coalition_against_carp }
 		x = -1
 		y = 9
@@ -719,7 +721,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_the_debate_on_mandatory_education
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_education
 		prerequisite = { focus =  ROM_a_man_of_culture_and_literature focus = ROM_compromise_with_the_PNL }
 		x = -3
 		y = 1
@@ -738,7 +740,7 @@ focus = {
 	
 	focus = {
 		id = ROM_unite_the_liberal_opposition
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_stabilize_democracy
 		prerequisite = { focus =  ROM_a_man_of_culture_and_literature }
 		x = -1
 		y = 1
@@ -756,7 +758,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_stir_anti_austrianism
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_attack_austria_hungary
 		prerequisite = { focus =  ROM_unite_the_liberal_opposition }
 		x = -2
 		y = 2
@@ -774,7 +776,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_reach_out_to_the_king
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = { focus =  ROM_unite_the_liberal_opposition }
 		x = 0
 		y = 2
@@ -792,7 +794,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_the_return_of_bratianus
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_AUH_demoratic_action
 		prerequisite = { focus =  ROM_stir_anti_austrianism }
 		prerequisite = { focus =  ROM_reach_out_to_the_king }
 		x = -1
@@ -811,7 +813,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_single_electoral_college
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_hold_elections
 		prerequisite = { focus =  ROM_the_return_of_bratianus }
 		x = -1
 		y = 4
@@ -880,7 +882,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = ROM_pentru_romania_o_sa_sangerez!
+		id = ROM_pentru_romania_o_sa_sangerez
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_plan_an_offensive }
 		prerequisite = { focus =  ROM_wartime_promises }
@@ -1196,7 +1198,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_ban_the_PNL
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_GRE_destroy_german_documents
 		prerequisite = { focus =  ROM_the_party_of_thiefs }
 		prerequisite = { focus =  ROM_fabricate_evidence }
 		mutually_exclusive = { focus = ROM_compromise_with_the_PNL focus = ROM_a_coalition_against_carp }
@@ -1216,7 +1218,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_root_out_left_wing_protesters
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_marx_cracked
 		prerequisite = { focus =  ROM_ban_the_PNL }
 		x = 4
 		y = 9
@@ -1234,7 +1236,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_stand_up_for_macedonian_aromanians
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_macedonian_question
 		prerequisite = { focus =  ROM_ban_the_PNL focus = ROM_a_coalition_against_carp}
 		x = 2
 		y = 9
@@ -1252,7 +1254,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_request_german_support
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_ger_weltpolitik
 		prerequisite = { focus =  ROM_ban_the_PNL }
 		x = 6
 		y = 9
@@ -1270,7 +1272,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_solidy_our_position
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus =  ROM_request_german_support }
 		prerequisite = { focus =  ROM_root_out_left_wing_protesters }
 		x = 5
@@ -1289,7 +1291,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_arrest_disloyal_politicians
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_NOR_arrest_quisling
 		prerequisite = { focus =  ROM_solidy_our_position }
 		x = 4
 		y = 11
@@ -1307,7 +1309,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_no_compromise_on_germanophilia
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_German_Crown
 		prerequisite = { focus =  ROM_request_german_support }
 		x = 7
 		y = 10
@@ -1325,7 +1327,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_coup_the_king
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_rom_handle_king
 		prerequisite = { focus =  ROM_no_compromise_on_germanophilia }
 		prerequisite = { focus =  ROM_solidy_our_position}
 		x = 6
@@ -1344,7 +1346,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_supreme_ruler_of_romania
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_deal_with_romania
 		prerequisite = { focus = ROM_coup_the_king }
 		prerequisite = { focus = ROM_arrest_disloyal_politicians }
 		mutually_exclusive = { focus = ROM_king_carp }
@@ -1364,7 +1366,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_king_carp
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_POL_cossack_king
 		prerequisite = { focus = ROM_coup_the_king }
 		mutually_exclusive = { focus = ROM_supreme_ruler_of_romania }
 		x = 7
@@ -1383,7 +1385,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_compromise_with_the_PNL
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_TUR_liberal_victory
 		prerequisite = { focus =  ROM_the_party_of_thiefs }
 		prerequisite = { focus =  ROM_reduce_the_kings_influence }
 		mutually_exclusive = { focus = ROM_ban_the_PNL focus = ROM_a_coalition_against_carp }
@@ -1403,10 +1405,10 @@ focus = {
 	}
 	focus = {
 		id = ROM_a_reformed_constitutional_regime
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_KOR_constitutional_monarchy
 		prerequisite = { focus =  ROM_compromise_with_the_PNL focus = ROM_reduce_the_influence_of_religion }
 		mutually_exclusive = { focus = ROM_depose_the_king }
-		x = -7
+		x = -8
 		y = 9
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
@@ -1422,10 +1424,10 @@ focus = {
 	}
 	focus = {
 		id = ROM_political_unity
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus =  ROM_a_reformed_constitutional_regime }
-		x = -7
-		y = 11
+		x = -8
+		y = 10
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
 		available = {
@@ -1440,10 +1442,10 @@ focus = {
 	}
 	focus = {
 		id = ROM_accept_some_liberal_demands
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		prerequisite = { focus = ROM_compromise_with_the_PNL  }
 		x = -6
-		y = 10
+		y = 9
 		relative_position_id = ROM_bratianus_resign
 		cost = 5
 		available = {
@@ -1481,7 +1483,7 @@ add_stability = 0.1
 	}
 focus = {
 		id = ROM_limited_agrarian_reform
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_agricultural_subsidies
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
 		mutually_exclusive = { focus = ROM_bratianus_resign }
 		x = -11
@@ -1500,7 +1502,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_triumph_of_reform
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_FRA_goverment_reform
 		prerequisite = { focus =  ROM_limited_agrarian_reform }
 		x = -11
 		y = 3
@@ -1537,7 +1539,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_work_with_PC_liberals
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_support_democracy
 		prerequisite = { focus =  ROM_triumph_of_reform }
 		x = 1
 		y = 1
@@ -1555,7 +1557,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_lurk_in_the_shadows
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_secret_police
 		prerequisite = { focus =  ROM_triumph_of_reform }
 		mutually_exclusive = { focus = ROM_expand_political_rights }
 		x = -3
@@ -1574,7 +1576,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_form_paramilitary_groups
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_FIN_strengthen_military_administration
 		prerequisite = { focus =  ROM_lurk_in_the_shadows }
 		x = -4
 		y = 1
@@ -1592,7 +1594,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_political_revolution
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_focus_fra_revolution_utmost
 		prerequisite = { focus =  ROM_form_paramilitary_groups }
 		x = -5
 		y = 2
@@ -1610,7 +1612,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_intimidation_tactics
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_tur_balkan_war
 		prerequisite = { focus =  ROM_form_paramilitary_groups }
 		x = -3
 		y = 2
@@ -1628,26 +1630,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_nationalist_democratic_victory
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus =  ROM_intimidation_tactics }
-		prerequisite = { focus =  ROM_political_revolution }
-		x = -4
-		y = 3
-		relative_position_id = ROM_lurk_in_the_shadows
-		cost = 5
-		available = {
-			
-		}	
-		completion_reward = {
-		add_political_power = 150		
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = ROM_nationalist_democratic_victory
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_national_syndicalism
 		prerequisite = { focus =  ROM_intimidation_tactics }
 		prerequisite = { focus =  ROM_political_revolution }
 		x = -4
@@ -1666,7 +1649,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_begin_the_crackdown
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus =  ROM_nationalist_democratic_victory }
 		mutually_exclusive = { focus = ROM_begin_the_crackdown }
 		x = -4
@@ -1686,7 +1669,7 @@ focus = {
 	
 	focus = {
 		id = ROM_crush_left_wing_protesters
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_spr_crush_the_revolution
 		prerequisite = { focus =  ROM_begin_the_crackdown }
 		x = -8
 		y = 6
@@ -1704,7 +1687,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_invite_conservatives_to_the_coalition
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus =  ROM_begin_the_crackdown }
 		mutually_exclusive = { focus = ROM_arrest_carp }
 		x = -2
@@ -1723,7 +1706,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_arrest_carp
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_mex_arrest_general_cedillo
 		prerequisite = { focus =  ROM_begin_the_crackdown }
 		mutually_exclusive = { focus = ROM_invite_conservatives_to_the_coalition }
 		x = 0
@@ -1742,7 +1725,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_appoint_right_wing_ministers
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_rus_strengthen_the_right_wing_forces
 		prerequisite = { focus =  ROM_begin_the_crackdown }
 		x = -4
 		y = 6
@@ -1760,7 +1743,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_corporatism
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_ICE_state_corporatism
 		prerequisite = { focus =  ROM_appoint_right_wing_ministers }
 		mutually_exclusive = { focus = ROM_fight_the_elites }
 		x = -4
@@ -1779,7 +1762,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_fight_the_elites
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_rom_parties_end
 		prerequisite = { focus =  ROM_appoint_right_wing_ministers }
 		mutually_exclusive = { focus = ROM_corporatism }
 		x = -6
@@ -1816,7 +1799,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_mobilize_the_economy
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_limited_social_mobilization
 		prerequisite = { focus =  ROM_the_path_to_greater_romania }
 		x = -7
 		y = 10
@@ -1834,7 +1817,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_introduce_a_draft
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_manpower
 		prerequisite = { focus =  ROM_mobilize_the_economy }
 		x = -7
 		y = 11
@@ -1852,7 +1835,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_war_propaganda
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus =  ROM_the_path_to_greater_romania }
 		x = -5
 		y = 10
@@ -1870,7 +1853,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_prepare_to_light_a_fuse
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		prerequisite = { focus =  ROM_war_propaganda }
 		x = -3
 		y = 11
@@ -1888,7 +1871,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_transylvanian_revolution
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_AUH_erase_romanian_nationalism
 		prerequisite = { focus =  ROM_prepare_to_light_a_fuse }
 		mutually_exclusive = { focus = ROM_bessarabian_revolution }
 		x = -3
@@ -1907,7 +1890,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_bessarabian_revolution
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_GER_romanian_pact
 		prerequisite = { focus =  ROM_prepare_to_light_a_fuse }
 		mutually_exclusive = { focus = ROM_transylvanian_revolution }
 		x = -1
@@ -1926,7 +1909,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_demand_bulgarian_alignment
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_befriend_bulgaria
 		prerequisite = { focus =  ROM_war_propaganda }
 		x = -5
 		y = 11
@@ -1944,7 +1927,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_ultimatum_to_greece
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_attack_greece
 		prerequisite = { focus =  ROM_demand_bulgarian_alignment }
 		x = -5
 		y = 13
@@ -1980,7 +1963,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_ban_the_pnl
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_strike_at_democracy2
 		prerequisite = { focus =  ROM_the_tramcar_society }
 		x = -8
 		y = 8
@@ -1998,7 +1981,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_align_agrarian_groups
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_bul_agrarianism
 		prerequisite = { focus =  ROM_expand_political_rights focus = ROM_work_with_PC_liberals }
 		mutually_exclusive = { focus = ROM_reach_out_to_industrialists }
 		x = 2
@@ -2017,7 +2000,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_minimum_wage_law
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_money
 		prerequisite = { focus =  ROM_triumph_of_reform }
 		x = 3
 		y = 1
@@ -2035,7 +2018,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_full_male_sufferage
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_voting
 		prerequisite = { focus =  ROM_minimum_wage_law }
 		x = 3
 		y = 2
@@ -2071,7 +2054,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_agrarian_protectionism
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_agricultural_subsidies
 		prerequisite = { focus =  ROM_align_agrarian_groups }
 		x = 2
 		y = 4
@@ -2089,9 +2072,9 @@ focus = {
 	}
 	focus = {
 		id = ROM_increase_public_spending
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_FIN_socialist_wellfare
 		prerequisite = { focus =  ROM_align_agrarian_groups }
-		x = 3
+		x = 1
 		y = 5
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
@@ -2107,7 +2090,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_reach_out_to_industrialists
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_generic_industrialists
 		prerequisite = { focus =  ROM_expand_political_rights focus = ROM_work_with_PC_liberals }
 		mutually_exclusive = { focus = ROM_align_agrarian_groups }
 		x = -2
@@ -2126,7 +2109,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_the_new_constitution
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_martial_law
 		prerequisite = { focus =  ROM_align_agrarian_groups focus = ROM_reach_out_to_industrialists }
 		x = 0
 		y = 4
@@ -2144,7 +2127,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_liberalize_our_trade_policy
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = ROM_reach_out_to_industrialists }
 		x = -2
 		y = 4
@@ -2162,10 +2145,10 @@ focus = {
 	}
 	focus = {
 		id = ROM_concessions_to_unions
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = { focus = ROM_liberalize_our_trade_policy }
 		mutually_exclusive = { focus = ROM_invite_foreign_capital }
-		x = -4
+		x = -3
 		y = 5
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
@@ -2181,10 +2164,10 @@ focus = {
 	}
 	focus = {
 		id = ROM_invite_foreign_capital 
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_mex_privatisation
 		prerequisite = { focus = ROM_liberalize_our_trade_policy }
 		mutually_exclusive = { focus = ROM_concessions_to_unions }
-		x = -2
+		x = -1
 		y = 5
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
@@ -2200,7 +2183,7 @@ focus = {
 	}
 	focus = {
 		id = ROM_reduce_the_influence_of_religion
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_mex_triumph_over_the_cristeros
 		prerequisite = { focus = ROM_the_new_constitution }
 		x = 0
 		y = 6
@@ -2218,8 +2201,11 @@ focus = {
 	}
 	focus = {
 		id = ROM_depose_the_king
-		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus = ROM_reduce_the_influence_of_religion focus = ROM_begin_the_crackdown }
+		icon = GFX_focus_NOR_send_the_king_back_to_denmark
+		prerequisite = { focus = ROM_begin_the_crackdown }
+		prerequisite = {
+			focus = ROM_reduce_the_influence_of_religion
+		}
 		mutually_exclusive = { focus = ROM_a_reformed_constitutional_regime }
 		x = -1
 		y = 8
@@ -2237,10 +2223,10 @@ focus = {
 	}
 	focus = {
 		id = ROM_root_out_monarchists
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = ROM_depose_the_king }
-		x = -1
-		y = 10
+		x = 0
+		y = 9
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
 		available = {
@@ -2255,10 +2241,10 @@ focus = {
 	}
 	focus = {
 		id = ROM_the_new_romanian_spirit
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_SOV_third_rome
 		prerequisite = { focus = ROM_depose_the_king }
-		x = -3
-		y = 10
+		x = -2
+		y = 9
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
 		available = {
