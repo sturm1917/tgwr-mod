@@ -45,29 +45,13 @@
 	}
 
 	focus = {
-		id = BUL_reapproach_serbia
-		icon = GFX_focus_deal_with_serbia
-		cost = 5
-		relative_position_id = BUL_Vth_grand_national_assembly
-		x = -3
-		y = 1
-		prerequisite = { focus = BUL_Vth_grand_national_assembly }
-		mutually_exclusive = { focus = BUL_alone_against_ottomans }
-		completion_reward = {
-			SER = {
-				country_event = ww1_bulgaria.5
-			}
-		}
-	}
-
-	focus = {
 		id = BUL_the_macedonian_question
 		icon = GFX_focus_macedonian_question
 		cost = 5
-		relative_position_id = BUL_reapproach_serbia
+		relative_position_id = BUL_Vth_grand_national_assembly
 		x = 0
 		y = 1
-		prerequisite = { focus = BUL_reapproach_serbia }
+		prerequisite = { focus = BUL_Vth_grand_national_assembly }
 		available = {
 
 		}
@@ -77,18 +61,42 @@
 	}
 
 	focus = {
+		id = BUL_reapproach_serbia
+		icon = GFX_focus_deal_with_serbia
+		cost = 5
+		relative_position_id = BUL_the_macedonian_question
+		x = -3
+		y = 1
+		prerequisite = { focus = BUL_the_macedonian_question }
+		mutually_exclusive = { focus = BUL_alone_against_ottomans }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BUL_failed_negotiations_bl
+				hidden_trigger = {
+					has_country_flag = BUL_creating_balkan_league
+				}
+			}
+		}
+		completion_reward = {
+			SER = {
+				country_event = ww1_bulgaria.5
+			}
+		}
+	}
+
+	focus = {
 		id = BUL_balkan_league
 		icon = GFX_focus_ser_bul_cooperation
 		cost = 5
-		relative_position_id = BUL_the_macedonian_question
+		relative_position_id = BUL_reapproach_serbia
 		x = 0
 		y = 1
-		prerequisite = { focus = BUL_the_macedonian_question }
+		prerequisite = { focus = BUL_reapproach_serbia }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "BUL_tt_serbia_accepts"
 				BUL = {
-					has_country_flag = join_balkan_league
+					has_global_flag = autonomous_macedonia
 				}
 			}
 		}
@@ -134,13 +142,18 @@
 		id = BUL_alone_against_ottomans
 		icon = GFX_focus_bul_lone_liberator
 		cost = 5
-		relative_position_id = BUL_Vth_grand_national_assembly
+		relative_position_id = BUL_the_macedonian_question
 		x = 3
 		y = 1
-		prerequisite = { focus = BUL_Vth_grand_national_assembly }
+		prerequisite = { focus = BUL_the_macedonian_question }
 		mutually_exclusive = { focus = BUL_reapproach_serbia }
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = BUL_failed_negotiations_bl
+				hidden_trigger = {
+					has_country_flag = BUL_make_balkan_league_sad
+				}
+			}
 		}
 	}
 
@@ -150,9 +163,12 @@
 		icon = GFX_focus_macedonian_front
 		cost = 5
 		relative_position_id = BUL_alone_against_ottomans
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = { focus = BUL_alone_against_ottomans }
+		completion_reward = {
+			
+		}
 	}
 
 	##############
@@ -200,7 +216,7 @@
 	}
 	focus = {
 		id = BUL_prioritize_the_farmers
-		icon = GFX_focus_agrarian_profit
+		icon = GFX_focus_bul_agrarianism
 		cost = 3
 		relative_position_id = BUL_modernize_bulgaria
 		x = -2
@@ -310,7 +326,7 @@
 	}
 	focus = {
 		id = BUL_arm_dobrudja_farmers
-		icon = GFX_focus_agrarian_profit
+		icon = GFX_focus_generic_farmland
 		cost = 4
 		relative_position_id = BUL_industrialize_the_country
 		x = 2
@@ -419,7 +435,7 @@
 	}
 	focus = {
 		id = BUL_expand_in_new_territories
-		icon = GFX_focus_train_railroads
+		icon = GFX_focus_forest_railway
 		cost = 5	
 		relative_position_id = BUL_focus_on_the_bdz
 		x = -1
@@ -431,7 +447,7 @@
 	}
 	focus = {
 		id = BUL_create_more_railways
-		icon = GFX_focus_train_railroads
+		icon = GFX_focus_forest_railway
 		cost = 5	
 		relative_position_id = BUL_focus_on_the_bdz
 		x = 1
@@ -443,7 +459,7 @@
 	}
 	focus = {
 		id = BUL_biggest_railway_on_balkans
-		icon = GFX_focus_train_railroads
+		icon = GFX_focus_generic_train
 		cost = 4
 		relative_position_id = BUL_focus_on_the_bdz
 		x = 0

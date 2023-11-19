@@ -326,6 +326,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_balkan.11.a
+		BUL = {
+			set_country_flag = BUL_macedonian_compromise
+		}
 		every_state = {
 			limit = {
 				OR = {
@@ -421,6 +424,7 @@ country_event = {
 		name = ww1_balkan.13.b
 		add_political_power = -50
 		add_war_support = -0.05
+		set_country_flag = BUL_make_balkan_league_sad
 		SER = {
 			country_event = {
 				id = ww1_balkan.10
