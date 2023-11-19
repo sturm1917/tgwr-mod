@@ -2294,7 +2294,6 @@ focus = {
 		icon = GFX_focus_generic_treaty
 		x = 30
 		y = 0
-		relative_position_id = ROM_bratianus_resign
 		cost = 5
 		available = {
 	        controls_state = 77
