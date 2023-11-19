@@ -2678,7 +2678,7 @@ focus = {
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_request_the_transnistria_governorate }
 		relative_position_id = ROM_take_a_side
-		x = 6
+		x = 5
 		y = 4
 		cost = 5
 		available = {
