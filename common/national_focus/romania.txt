@@ -443,24 +443,7 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 			factor = 5
 		}
 	}
-	focus = {
-		id = ROM_law_on_northern_dobruja
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
-		x = -5
-		y = 2
-		relative_position_id = ROM_bratianus_resign
-		cost = 5
-		available = {
-	        controls_state = 77
-		}	
-		completion_reward = {
-                add_state_core = 77
-		}	
-		ai_will_do = {
-			factor = 5
-		}
-	}
+	
 	focus = {
 		id = ROM_mandatory_insurance
 		icon = GFX_focus_socialist_worker
@@ -2306,11 +2289,30 @@ focus = {
 			factor = 5
 		}
 	}
+focus = {
+		id = ROM_law_on_northern_dobruja
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus =  ROM_form_a_new_government focus = ROM_triumph_of_reform }
+		x = 30
+		y = 0
+		relative_position_id = ROM_bratianus_resign
+		cost = 5
+		available = {
+	        controls_state = 77
+		}	
+		completion_reward = {
+                add_state_core = 77
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	focus = {
 		id = ROM_take_a_side
 		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = ROM_law_on_northern_dobruja }
 		x = 30
-		y = 0
+		y = 1
 		cost = 5
 		available = {
 			
