@@ -39,6 +39,11 @@
 		x = 0
 		y = 1
 		prerequisite = { focus = BUL_failed_ambitions }
+		available = {
+			BUL_ivan_evstratiev_geshov = {
+				is_political_advisor = yes
+			}
+		}
 		completion_reward = {
 			country_event = ww1_bulgaria.4
 		}
@@ -71,7 +76,7 @@
 		mutually_exclusive = { focus = BUL_alone_against_ottomans }
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = BUL_failed_negotiations_bl
+				tooltip = BUL_successful_negotiations_bl
 				hidden_trigger = {
 					has_country_flag = BUL_creating_balkan_league
 				}
@@ -93,12 +98,6 @@
 		y = 1
 		prerequisite = { focus = BUL_reapproach_serbia }
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = "BUL_tt_serbia_accepts"
-				BUL = {
-					has_global_flag = autonomous_macedonia
-				}
-			}
 		}
 		completion_reward = {
 			create_faction = balkan_league
@@ -122,10 +121,24 @@
 		id = BUL_anti_ottoman_crusade
 		icon = GFX_goal_unknown
 		cost = 5
-		relative_position_id = BUL_approach_greece
+		relative_position_id = BUL_the_macedonian_question
+		x = 0
+		y = 5
+		prerequisite = { 
+			focus = BUL_approach_greece
+			focus = BUL_promote_bg_nationalism_in_macedonia
+			focus = BUL_guarantee_macedonian_independence
+		}
+	}
+
+	focus = {
+		id = BUL_lozengradska_operacija
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = BUL_anti_ottoman_crusade
 		x = 0
 		y = 1
-		prerequisite = { focus = BUL_approach_greece }
+		prerequisite = { focus = BUL_anti_ottoman_crusade }
 	}
 
 	focus = {
@@ -159,13 +172,54 @@
 
 	
 	focus = {
-		id = BUL_VMORO
+		id = BUL_support_the_VMORO
 		icon = GFX_focus_macedonian_front
 		cost = 5
 		relative_position_id = BUL_alone_against_ottomans
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = BUL_alone_against_ottomans }
+		mutually_exclusive = { focus = BUL_subjugate_VMORO_to_our_whims }
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = BUL_guarantee_macedonian_independence
+		icon = GFX_focus_macedonian_front
+		cost = 5
+		relative_position_id = BUL_support_the_VMORO
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_support_the_VMORO }
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = BUL_subjugate_VMORO_to_our_whims
+		icon = GFX_focus_macedonian_front
+		cost = 5
+		relative_position_id = BUL_alone_against_ottomans
+		x = -1
+		y = 1
+		prerequisite = { focus = BUL_alone_against_ottomans }
+		mutually_exclusive = { focus = BUL_support_the_VMORO }
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = BUL_promote_bg_nationalism_in_macedonia
+		icon = GFX_focus_BUL_promote_bulgarian_nationalism
+		cost = 5
+		relative_position_id = BUL_subjugate_VMORO_to_our_whims
+		x = 0
+		y = 1
+		prerequisite = { focus = BUL_subjugate_VMORO_to_our_whims }
 		completion_reward = {
 			
 		}
