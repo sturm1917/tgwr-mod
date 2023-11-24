@@ -23,7 +23,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = GER_Dreams_of_a_German_Mittleuropa
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ger_weltpolitik
 		cost = 5
 		x = 10
 		y = 0
@@ -526,7 +526,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_The_matter_of_the_Navy
-		icon = GFX_goal_unknown
+		icon = "GFX_focus_GER_navy"
 		cost = 5
 		relative_position_id = GER_Wilhelmsen_Policy
 		prerequisite = {
@@ -876,7 +876,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Support_the_Austrian_Kaiserreich
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ger_support_austrian_claims
 		cost = 10
 		relative_position_id = GER_Dreams_of_a_German_Mittleuropa
 		prerequisite = {
@@ -1388,7 +1388,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Further_restrict_the_unions
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_suppress_socdems
 		cost = 5
 		relative_position_id = GER_Mimic_British_sewage_systems
 		prerequisite = {
@@ -1484,7 +1484,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Research_and_development
-		icon = GFX_goal_unknown
+		icon = GFX_focus_german_equipment
 		cost = 5
 		relative_position_id = GER_Von_Schlieffens_recommendations
 		prerequisite = {
