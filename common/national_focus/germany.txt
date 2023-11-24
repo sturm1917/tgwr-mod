@@ -2179,7 +2179,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_Surrender?
+		id = GER_Surrender_question
 		icon = GFX_goal_unknown
 		cost = 1
 		relative_position_id = GER_All_men_to_the_front
@@ -2201,9 +2201,9 @@ focus_tree = {
 		id = GER_No_step_back
 		icon = GFX_goal_unknown
 		cost = 5
-		relative_position_id = GER_Surrender?
+		relative_position_id = GER_Surrender_question
 		prerequisite = {
-			focus = GER_Surrender?
+			focus = GER_Surrender_question
 		}
 		x = 0
 		y = 1
