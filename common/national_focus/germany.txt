@@ -592,7 +592,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Further_research_on_dreadnaughts
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_dreadnought_GER
 		cost = 5
 		relative_position_id = GER_Continue_the_expansion_of_the_Navy
 		prerequisite = {
