@@ -34,6 +34,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -114,7 +120,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_The_1911_constitution_for_Alsace-Lorraine
+		id = GER_The_1911_constitution_for_Alsace_Lorraine
 		icon = GFX_goal_unknown
 		cost = 100
 		relative_position_id = GER_Encourage_a_German_identity
@@ -136,9 +142,9 @@ focus_tree = {
 		id = GER_Consequences_of_the_Zabern_affair
 		icon = GFX_goal_unknown
 		cost = 100
-		relative_position_id = GER_The_1911_constitution_for_Alsace-Lorraine
+		relative_position_id = GER_The_1911_constitution_for_Alsace_Lorraine
 		prerequisite = {
-			focus = GER_The_1911_constitution_for_Alsace-Lorraine
+			focus = GER_The_1911_constitution_for_Alsace_Lorraine
 		}
 		x = 0
 		y = 1
@@ -294,7 +300,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_Pardon_the_office_corps
+		id = GER_Pardon_the_officer_corps
 		icon = GFX_goal_unknown
 		cost = 1
 		relative_position_id = GER_The_sensible_choice
@@ -316,9 +322,9 @@ focus_tree = {
 		id = GER_Enter_into_a_coalition
 		icon = GFX_goal_unknown
 		cost = 5
-		relative_position_id = GER_Pardon_the_office_corps
+		relative_position_id = GER_Pardon_the_officer_corps
 		prerequisite = {
-			focus = GER_Pardon_the_office_corps
+			focus = GER_Pardon_the_officer_corps
 		}
 		x = 0
 		y = 1
@@ -1161,7 +1167,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_Conclude_treaty_of_Sofia
+		id = GER_Conclude_the_treaty_of_Sofia
 		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = GER_Support_the_Bulgarian_military
