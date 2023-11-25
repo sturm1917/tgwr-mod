@@ -437,7 +437,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Punish_the_officer_corps
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_court
 		cost = 1
 		relative_position_id = GER_The_liberal_choice
 		prerequisite = {
@@ -494,7 +494,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Befriend_the_unions
-		icon = GFX_goal_unknown
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 5
 		relative_position_id = GER_Review_the_constitution
 		prerequisite = {
@@ -513,7 +513,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Wilhelmsen_Policy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 5
 		relative_position_id = GER_Dreams_of_a_German_Mittleuropa
 		prerequisite = {
@@ -551,14 +551,14 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Continue_the_expansion_of_the_Navy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_refit_civilian_ships
 		cost = 5
 		relative_position_id = GER_The_matter_of_the_Navy
 		prerequisite = {
 			focus = GER_The_matter_of_the_Navy
 		}
 		mutually_exclusive = {
-			focus = GER_Continue_the_expansion_of_the_Navy
+			focus = GER_Continue_the_fleet_in_being_doctrine
 		}
 		x = 2
 		y = 1
@@ -573,7 +573,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Continue_the_fleet_in_being_doctrine
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_navy_battleship
 		cost = 5
 		relative_position_id = GER_Continue_the_expansion_of_the_Navy
 		prerequisite = {
@@ -611,7 +611,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Expand_the_Kiel_Dockyards
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 5
 		relative_position_id = GER_Continue_the_fleet_in_being_doctrine
 		prerequisite = {
@@ -630,7 +630,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Expand_the_Colonial_naval_bases
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_africa_naval
 		cost = 10
 		relative_position_id = GER_Further_research_on_dreadnaughts
 		prerequisite = {
@@ -669,7 +669,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Capitulate_to_the_2_1_ratio
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ger_accept_british_naval_dominance
 		cost = 5
 		relative_position_id = GER_Review_the_status_of_the_German_Navy
 		prerequisite = {
@@ -707,7 +707,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Submarine_Warfare_ideas
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_torpedo_production
 		cost = 10
 		relative_position_id = GER_Transfer_funds_to_the_Army
 		prerequisite = {
@@ -767,7 +767,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Allow_the_foreign_minister_to_approach_Britannia
-		icon = GFX_goal_unknown
+		icon = GFX_focus_eng_the_sun_never_sets
 		cost = 5
 		relative_position_id = GER_Fire_von_Tirpitz
 		prerequisite = {
@@ -901,7 +901,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Setting_a_clear_path_for_German_colonialism
-		icon = GFX_goal_unknown
+		icon = GFX_focus_por_luso_tropicalism
 		cost = 5
 		relative_position_id = GER_Support_the_Austrian_Kaiserreich
 		prerequisite = {
@@ -939,7 +939,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Encourage_agricultural_growth_in_Africa
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_improve_roads
 		cost = 5
 		relative_position_id = GER_Advocate_for_the_Mittleafrika_claims
 		prerequisite = {
@@ -958,7 +958,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Establish_a_ban_on_inter_racial_marriages
-		icon = GFX_goal_unknown
+		icon = GFX_focus_por_concordat
 		cost = 10
 		relative_position_id = GER_Advocate_for_the_Mittleafrika_claims
 		prerequisite = {
@@ -977,7 +977,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Levy_increased_taxes_on_the_colonials
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ETH_adopt_the_lira
 		cost = 10
 		relative_position_id = GER_Encourage_agricultural_growth_in_Africa
 		prerequisite = {
@@ -1092,7 +1092,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Impose_forced_labour
-		icon = GFX_goal_unknown
+		icon = GFX_focus_CZE_german_puppet
 		cost = 5
 		relative_position_id = GER_Unite_the_Pacific_protectorates
 		prerequisite = {
@@ -1130,7 +1130,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Support_Bulgarian_claims
-		icon = GFX_goal_unknown
+		icon = GFX_focus_BUL_promote_bulgarian_nationalism
 		cost = 5
 		relative_position_id = GER_Assess_the_state_of_the_Balkans
 		prerequisite = {
@@ -1149,7 +1149,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Support_the_Bulgarian_military
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_beck_ribbentrop
 		cost = 5
 		relative_position_id = GER_Assess_the_state_of_the_Balkans
 		prerequisite = {
@@ -1261,7 +1261,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Invest_into_military_academies
-		icon = GFX_goal_unknown
+		icon = GFX_focus_mex_privatisation
 		cost = 5
 		relative_position_id = GER_The_Second_Industrial_Revolution
 		prerequisite = {
@@ -1299,7 +1299,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Invest_into_the_Ruhr_steel_works
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_steel
 		cost = 5
 		relative_position_id = GER_Westplan
 		prerequisite = {
@@ -1356,7 +1356,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Found_the_University_of_Frankfurt
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_university_1
 		cost = 10
 		relative_position_id = GER_Invest_into_military_academies
 		prerequisite = {
@@ -1375,7 +1375,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Expand_the_Eastern_railways
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_railroad
 		cost = 5
 		relative_position_id = GER_Ostplan
 		prerequisite = {
@@ -1417,7 +1417,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Emergency_factory_conversion
-		icon = GFX_goal_unknown
+		icon = GFX_focus_DEN_heavy_regulations
 		cost = 5
 		relative_position_id = GER_The_Second_Industrial_Revolution
 		prerequisite = {
@@ -1547,7 +1547,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Consider_the_adoption_of_planes_into_military_doctrine
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SOV_women_in_aviation
 		cost = 5
 		relative_position_id = GER_The_adoption_of_machine_guns_into_the_army
 		prerequisite = {
@@ -1623,7 +1623,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Preparing_for_war_against_France
-		icon = GFX_goal_unknown
+		icon = GFX_focus_usa_focus_on_europe
 		cost = 5
 		relative_position_id = GER_Army_expansion
 		prerequisite = {
@@ -1702,7 +1702,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Establish_the_General_Headquarters
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SOV_mobilization_plan
 		cost = 10
 		relative_position_id = GER_The_outbreak_of_war
 		prerequisite = {
@@ -1817,7 +1817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Convert_the_civillian_economy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_reorient_production
 		cost = 10
 		relative_position_id = GER_The_material_crisis
 		prerequisite = {
@@ -1836,7 +1836,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Institute_rationing_reforms
-		icon = GFX_goal_unknown
+		icon = GFX_focus_hol_abandon_the_gold_standard
 		cost = 10
 		relative_position_id = GER_Temporarily_relax_conscription
 		prerequisite = {
@@ -1856,7 +1856,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_The_Ammunition_Crisis
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_artillery
 		cost = 100
 		relative_position_id = GER_Institute_rationing_reforms
 		prerequisite = {
@@ -1894,7 +1894,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Ensure_the_military_industry_stays_afloat
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		relative_position_id = GER_The_Ammunition_Crisis
 		prerequisite = {
@@ -2008,7 +2008,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Plan_further_advances_east
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ger_strike_at_the_source
 		cost = 5
 		relative_position_id = GER_Faith_in_the_military
 		prerequisite = {
@@ -2049,7 +2049,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Homefront_propoganda_efforts
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		relative_position_id = GER_Plan_further_advances_east
 		prerequisite = {
@@ -2068,7 +2068,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Update_the_German_uniform
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ger_return_of_the_kaiser
 		cost = 10
 		relative_position_id = GER_Plan_further_advances_east
 		prerequisite = {
@@ -2594,7 +2594,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Subsection_IIIB
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_national_security
 		cost = 10
 		relative_position_id = GER_Operation_B
 		prerequisite = {
