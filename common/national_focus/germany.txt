@@ -1680,7 +1680,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_The_outbreak_of_war
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_gas_masks_GER
 		cost = 1
 		relative_position_id = GER_Invest_into_the_officer_corps
 		prerequisite = {
