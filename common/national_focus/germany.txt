@@ -1527,7 +1527,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_The_adoption_machine_guns_into_the_army
+		id = GER_The_adoption_of_machine_guns_into_the_army
 		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = GER_Research_and_development
@@ -1549,9 +1549,9 @@ focus_tree = {
 		id = GER_Consider_the_adoption_of_planes_into_military_doctrine
 		icon = GFX_goal_unknown
 		cost = 5
-		relative_position_id = GER_The_adoption_machine_guns_into_the_army
+		relative_position_id = GER_The_adoption_of_machine_guns_into_the_army
 		prerequisite = {
-			focus = GER_The_adoption_machine_guns_into_the_army
+			focus = GER_The_adoption_of_machine_guns_into_the_army
 		}
 		x = 0
 		y = 1
@@ -2435,7 +2435,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_Allow_expansion_of_the_army
+		id = GER_Allow_the_expansion_of_the_army
 		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = GER_Isolate_the_military_from_governance
