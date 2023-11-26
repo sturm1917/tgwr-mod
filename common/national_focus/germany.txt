@@ -626,6 +626,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			58 = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -703,6 +710,17 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			58 = {
+			    remove_building = {
+				    type = dockyard
+				    level = 1
+			    }
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -722,6 +740,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
+				uses = 2
+				category = trade_interdiction_tree
+			}
 		}
 	}
 	focus = {
@@ -1031,6 +1054,19 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			745 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			    add_compliance = 5
+			}
 		}
 	}
 	focus = {
@@ -1050,6 +1086,18 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			745 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -1088,6 +1136,19 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			798 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_compliance = 5
+			}
 		}
 	}
 	focus = {
@@ -1107,6 +1168,19 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			523 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+				add_compliance = -10
+			}
 		}
 	}
 	focus = {
@@ -1200,6 +1274,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = construction_tech
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 	focus = {
@@ -1276,6 +1356,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -1333,6 +1418,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = -50
+			remove_ideas = {
+				GER_idea_sluggish_administration
+			}
 		}
 	}
 	focus = {
@@ -1371,6 +1460,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 	focus = {
