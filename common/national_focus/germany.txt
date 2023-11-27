@@ -1151,7 +1151,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Development_of_Samoa
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_rubber
 		cost = 5
 		relative_position_id = GER_Unite_the_Pacific_protectorates
 		prerequisite = {
@@ -1272,7 +1272,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Conclude_the_treaty_of_Sofia
-		icon = GFX_goal_unknown
+		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
 		cost = 5
 		relative_position_id = GER_Support_the_Bulgarian_military
 		prerequisite = {
@@ -1556,7 +1556,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Women_in_the_work_force
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_population_growth
 		cost = 5
 		relative_position_id = GER_Emergency_factory_conversion
 		prerequisite = {
@@ -2424,7 +2424,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Protect_moderate_unions
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_full_employment
 		cost = 10
 		relative_position_id = GER_Keep_the_OHL_out_of_civillian_economics
 		prerequisite = {
@@ -2715,7 +2715,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Subsection_IIIB
-		icon = GFX_focus_generic_national_security
+		icon =  GFX_focus_generic_secret_service_agency
 		cost = 10
 		relative_position_id = GER_Operation_B
 		prerequisite = {
@@ -2738,7 +2738,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_The_Fremde_Heer
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_national_security
 		cost = 10
 		relative_position_id = GER_Subsection_IIIB
 		prerequisite = {
