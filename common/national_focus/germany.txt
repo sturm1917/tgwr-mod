@@ -97,6 +97,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -215,6 +221,16 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 10
+			add_stability = 0.05
+			opinion_modifiers = {
+				test_diplomatic_modifier = {
+					value = 15     
+					decay = 0.5
+				}
+			}
+			}
+
 		}
 	}
 	focus = {
@@ -316,6 +332,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+				add_stability = 0.05
+				add_war_support = 0.05
+				add_command_power = 50
+				army_experience = 10
 		}
 	}
 	focus = {
@@ -335,6 +355,16 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = democracy
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.01
+			}
+			add_political_power = -50
+			 # Will remove government in crisis idea - yet to be added, if you see this, please @me on discord so i remember (Shall)
 		}
 	}
 	focus = {
@@ -569,6 +599,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			 #Will increase the effects of the navy national spirit - yet to be added, waiting for my writer to write it
 		}
 	}
 	focus = {
@@ -691,6 +722,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			 # Will remove the navy idea - yet to be added
 		}
 	}
 	focus = {
@@ -1539,6 +1571,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = great_war_loser
 			}
+			 #Add women in the work force idea
 		}
 		completion_reward = {
 		}
