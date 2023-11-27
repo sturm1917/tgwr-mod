@@ -226,7 +226,7 @@ focus_tree = {
 			opinion_modifiers = {
 				test_diplomatic_modifier = {
 					value = 15     
-					decay = 0.5
+					decay = 0.5  #Someone fix this please
 				    }
 			    }
 			}
