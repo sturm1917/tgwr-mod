@@ -4522,6 +4522,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		RIF = {
+			transfer_state = 290
+		}
+		290 = {
+			add_core_of = RIF
+		}
+		RIF = {
 			load_oob = "SPR_rif_war"
 		}
 		name = ww1_spain.181.a
@@ -4545,14 +4551,8 @@ country_event = {
 	option = {
 		name = ww1_spain.150.a
 		ai_chance = { factor = 10 }
-		RIF = {
-			transfer_state = 290
-		}
-		290 = {
-			add_core_of = RIF
-		}
-		set_global_flag = SPR_flag_rifs_rebellion
 		mark_focus_tree_layout_dirty = yes
+		set_global_flag = SPR_flag_rifs_rebellion
 		start_border_war = {
 			change_state_after_war = no
 			attacker = {
@@ -4803,6 +4803,9 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	trigger = {
 		original_tag = SPR
+		SPR = {
+			has_war_with = RIF
+		}
 		OR = {
 			SPR = {
 				OR = {

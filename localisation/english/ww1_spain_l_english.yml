@@ -591,7 +591,8 @@
  SPR_parliament_and_prime_minister.tt:0 "§WThis focus will recomplete itself every §82 years§W when there is a parliamentary election. While the parliament has influence, the real power lies in the hands of the §8Prime Minister and the King§W, with a §8liberal§W prime minister, you can only do §8liberal policies§W, and with a §8conservative§W prime minister, you can only do §8conservative policies§W. Depending on the wing of parliamentary majority you have, will determine the scale of the rewards to be reaped from focuses. For example, doing a conservative policy with a liberal parliament will reap less goods than if you had a conservative parliament§W"
  SPR_religious_policy_category_desc:0 "Spain Religous Policy"
  SPR_massive_strike_plans_category:0 "Massive Strike Coming"
- SPR_massive_strike_plans_category_desc:0 "Massive Strike Coming"
+ SPR_massive_strike_plans_category_desc:0 "Massive Strike Coming    §RThis is Inevitable§W"
+ 
  SPR_failure_to_contain_crisis:0 "The Three Headed Crisis"
  SPR_failure_to_contain_crisis_desc:0 "§RIf Proto-Fascist Popularity goes above 60%, a Civil War will likely begin...§W"
  SPR_liberal_reform_one:0 "Increase the Unity of the Liberal Party"

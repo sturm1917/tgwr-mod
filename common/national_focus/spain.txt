@@ -4744,9 +4744,9 @@ focus_tree = {
 			focus = SPR_catching_up_technologically
 		}
 		available = {
-			always = no
+			#always = yes
 			#
-			#has_global_flag = new_spanish_prime_minister_in_office
+			has_global_flag = new_spanish_prime_minister_in_office
 			#GER = {
 			#	has_war_with = FRA
 			#}
@@ -4823,9 +4823,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-			always = no
-			
+		available = {	
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		completion_reward = {
@@ -8702,7 +8700,7 @@ focus_tree = {
 			has_global_flag = SPR_visible_focuses_rule_THC
 		}
 		available = {
-			has_global_flag = SPR_flag_strikes_success_in_three_in_three #Decisions if Fail
+			has_global_flag = SPR_flag_strikes_success_in_three #Decisions if Fail
 		}
 		prerequisite = {
 			focus = SPR_curbing_the_crisis
@@ -10687,7 +10685,9 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			
+			SPR = {
+				owns_state = 177
+			}
 			has_global_flag = new_spanish_prime_minister_in_office
 		}
 		prerequisite = {
