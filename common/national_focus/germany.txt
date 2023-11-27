@@ -227,12 +227,10 @@ focus_tree = {
 				test_diplomatic_modifier = {
 					value = 15     
 					decay = 0.5
-				}
+				    }
+			    }
 			}
-			}
-
 		}
-	}
 	focus = {
 		id = GER_Put_forward_a_bill_of_extra_ordinary_defence_measures
 		icon = GFX_goal_unknown
