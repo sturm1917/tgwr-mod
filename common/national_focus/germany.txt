@@ -2732,6 +2732,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			create_intelligence_agency = {
+				name = "Subsection IIIB"
+				icon = GFX_intelligence_agency_logo_agency #Feel free to change this icon to something more fitting, i'm busy rn so can't check, just delete this note if you do
+			}
 		}
 	}
 	focus = {
