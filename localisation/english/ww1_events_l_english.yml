@@ -6628,6 +6628,19 @@ BUL_FRA_alliance:0 "Franco-Bulgarian Alliance"
  ww1_germany_rework.4.t:0 "Unhistorical Zabern Event"
  ww1_germany_rework.4.d:0 "To be added, if you see this, tell shall to fucking write"
  ww1_germany_rework.4.oa:0 "Unhistorical option, only option"
+ ww1_germany_rework.5.t:0 "Germany takes action to repair Anglo-German relations"
+ ww1_germany_rework.5.d:0 "Yesterday, at 4:30pm CET, the foreign minister of Germany announced a new foreign policy aimed towards the improvement of Anglo-German relations and the enactment of measures to continue a naval balance of power. This announcement comes soon after the official dismissal of German admiral Alfred von Tirpitz and it is believed that the Kaiser himself aims to repair his family relation with his cousin King George V. 
+
+This event comes as a major change in German foreign policy who up until this point has been unclear and cautious at best towards the United Kingdom. The effects of such a foreign policy could draw the United Kingdom away from its tradition Entente allies towards the German Empire united through their Germanic similarities. France has yet to release an official statement on the matter, but the Tsar of Russia has seemingly condemned this new stance claiming that “the Kaiser seeks to divide Europe's power and pit them against each other to further their own Germanic ambitions”. 
+
+Weather this effort will bear fruit is yet to be known but should Germany and the United Kingdom draw together, the power of Europe will forever be changed, and during such a time of mobilisation and nationalism, perhaps one day the United Kingdom and the German Empire will have to fight side by side. "
+ ww1_germany_rework.5.oa:0 "The balance of power shifts in europe..."
+ ww1_germany_rework.6.t:0 "The Kaiser's Trip"
+ ww1_germany_rework.6.d:0 "The period of hastened Détente between the United Kingdom, under his royal majesty king George V, and Imperial Germany, under Kaiser Wilhelm II, has accumulated to this moment, the pinnacle of the work of German and British foreign ministers. The photograph in the German newspapers on the morning of the Kaiser's return from his stay in London, picture him and his cousin sharing a ceremonial dinner in Buckingham palace - it's been reported that while tense the two did share some sense of a jovial spirit, mimicking the newly formed friendship between the two Germanic nations. 
+
+The state visit from the Kaiser whilst short, symbolises a new European balance of power, reconciliations have been massively encouraged by both British parliament and the Reichstag. Furthermore, the British and German government has released a join-statement announcing a soon to be held conference between government officials to discuss what was described as “the urgent matter of relations between European nations”. France and Russia have both released anti-German statements claiming that is the goal of the German nation to use the UK for their own benefit."
+ ww1_germany_rework.6.oa:0 "Germany and England grow closer"
+
 
  #Undead Unicorn's super duper Germany collapse event chain
  freikorps.1.t:0 "The Spartacist Revolution"
