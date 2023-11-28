@@ -6613,7 +6613,21 @@ BUL_FRA_alliance:0 "Franco-Bulgarian Alliance"
  ww1_germany.166.c:0 "Transfer to [211.Owner.GetName]."
  ww1_germany.166.d:0 "Keep there under our occupation."
  
-
+ #Germany rework
+ ww1_germany_rework.1.t:0 "The Zabern Affair"
+ ww1_germany_rework.1.d:0 "To be added, if you see this, tell shall to fucking write"
+ ww1_germany_rework.1.oa:0 "Historical option, leads to alt-hist"
+ ww1_germany_rework.1.ob:0 "Unhistorical option, locks player into historical outcome"
+ ww1_germany_rework.2.t:0 "Historical Zabern Event"
+ ww1_germany_rework.2.d:0 "To be added, if you see this, tell shall to fucking write"
+ ww1_germany_rework.2.oa:0 "Historical option"
+ ww1_germany_rework.2.ob:0 "Unhistorial option"
+ ww1_germany_rework.3.t:0 "Final Historical Zabern Event"
+ ww1_germany_rework.3.d:0 "To be added, if you see this, tell shall to fucking write"
+ ww1_germany_rework.3.oa:0 "Historical option, only option"
+ ww1_germany_rework.4.t:0 "Unhistorical Zabern Event"
+ ww1_germany_rework.4.d:0 "To be added, if you see this, tell shall to fucking write"
+ ww1_germany_rework.4.oa:0 "Unhistorical option, only option"
 
  #Undead Unicorn's super duper Germany collapse event chain
  freikorps.1.t:0 "The Spartacist Revolution"
