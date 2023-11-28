@@ -155,10 +155,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			has_government = neutrality
-			NOT = {
-				has_country_flag = great_war_loser
-			}
+			always = no
 		}
 		completion_reward = {
 		}
@@ -177,10 +174,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		available = {
-			has_government = neutrality
-			NOT = {
-				has_country_flag = great_war_loser
-			}
+			always = no
 		}
 		completion_reward = {
 		}
@@ -272,7 +266,7 @@ focus_tree = {
 	focus = {
 		id = GER_An_empty_chancellorship
 		icon = GFX_goal_unknown
-		cost = 5
+		cost = 100
 		relative_position_id = GER_Consequences_of_the_Zabern_affair
 		prerequisite = {
 			focus = GER_Consequences_of_the_Zabern_affair
@@ -283,10 +277,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		available = {
-			has_government = neutrality
-			NOT = {
-				has_country_flag = great_war_loser
-			}
+			always = no
 		}
 		completion_reward = {
 		}
@@ -294,7 +285,7 @@ focus_tree = {
 	focus = {
 		id = GER_The_sensible_choice
 		icon = GFX_goal_unknown
-		cost = 100
+		cost = 5
 		relative_position_id = GER_An_empty_chancellorship
 		prerequisite = {
 			focus = GER_An_empty_chancellorship
@@ -444,7 +435,7 @@ focus_tree = {
 	focus = {
 		id = GER_The_liberal_choice
 		icon = GFX_goal_unknown
-		cost = 100
+		cost = 5
 		relative_position_id = GER_An_empty_chancellorship
 		prerequisite = {
 			focus = GER_An_empty_chancellorship
