@@ -6614,6 +6614,12 @@ BUL_FRA_alliance:0 "Franco-Bulgarian Alliance"
  ww1_germany.166.d:0 "Keep there under our occupation."
  
  #Germany rework
+ ww1_germany.204.t:0 "Action to repair Anglo-German relations!"
+ ww1_germany.204.d:0 "Yesterday, at 4:30pm CET, the foreign minister of Germany announced a new foreign policy aimed towards the improvement of Anglo-German relations and the enactment of measures to continue a naval balance of power. This announcement comes soon after the official dismissal of German admiral Alfred von Tirpitz and it is believed that the Kaiser himself aims to repair his family relation with his cousin King George V. \n \n Weather this effort will bear fruit is yet to be known but should Germany and the United Kingdom draw together, the power of Europe will forever be changed, and during such a time of mobilisation and nationalism, perhaps one day the United Kingdom and the German Empire will have to fight side by side."
+ ww1_germany.204.oa:0 "A knock to Europe's balance of power..."
+ ww1_germany.205.t:0 "A jaunt across the channel"
+ ww1_germany.205.d:0 "The period of hastened Détente between the United Kingdom, under his royal majesty king George V, and Germany, under Kaiser Wilhelm II, has accumulated to this moment, the pinnacle of the work of German and British foreign ministers. The photograph in the German newspapers on the morning of the Kaiser's return from his stay in London, picture him and his cousin sharing a ceremonial dinner in Buckingham palace - mimicking the newly formed friendship between the two Germanic nations. \n \n The state visit from the Kaiser symbolises a new European balance of power, reconciliations have been massively encouraged by both British parliament and the Reichstag."
+ ww1_germany.205.oa:0 "A development for the history books"
 
  #Undead Unicorn's super duper Germany collapse event chain
  freikorps.1.t:0 "The Spartacist Revolution"
