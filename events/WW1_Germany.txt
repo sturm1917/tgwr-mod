@@ -9498,12 +9498,13 @@ country_event = {
 
 
 	#German rework
+	#Start ID values at 200
 
 #Zabern Affair
 country_event = { #Please add ai chance, historical outcomes are outlined
-	id = ww1_germany_rework.1
-	title = ww1_germany_rework.1.t
-	desc = ww1_germany_rework.1.d
+	id = ww1_germany.200
+	title = ww1_germany.200.t
+	desc = ww1_germany.200.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9519,15 +9520,15 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		is_owned_by = GER
 		}
 	}
-	option = { country_event = { id = ww1_germany_rework.2 }
-		name = ww1_germany_rework.1.oa #Historical option, will allow alt-hist path in next event
+	option = { country_event = { id = ww1_germany.201 }
+		name = ww1_germany.200.oa #Historical option, will allow alt-hist path in next event
 		ai_chance = { base = 80 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
 	    }
 	}
-	option = { country_event = { id = ww1_germany_rework.3 }
-		name = ww1_germany_rework.1.ob #Option that will only allow hist path
+	option = { country_event = { id = ww1_germany.202 }
+		name = ww1_germany.200.ob #Option that will only allow hist path
 		ai_chance = { base = 20 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
@@ -9535,9 +9536,9 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 }
 country_event = { #Please add ai chance, historical outcomes are outlined
-	id = ww1_germany_rework.2
-	title = ww1_germany_rework.2.t
-	desc = ww1_germany_rework.2.d
+	id = ww1_germany.201
+	title = ww1_germany.201.t
+	desc = ww1_germany.201.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9545,23 +9546,23 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	trigger = {
 		}
-	option = { country_event = { id = ww1_germany_rework.3 }
-		name = ww1_germany_rework.2.oa #Historical option
+	option = { country_event = { id = ww1_germany.202 }
+		name = ww1_germany.201.oa #Historical option
 		ai_chance = { base = 60 }
 		hidden_effect = {
 	    }
 	}
-	option = { country_event = { id = ww1_germany_rework.4 }
-		name = ww1_germany_rework.2.ob #Unhistorical option
+	option = { country_event = { id = ww1_germany.203 }
+		name = ww1_germany.201.ob #Unhistorical option
 		ai_chance = { base = 40 }
 		hidden_effect = {
 	    }
 	}
 }
 country_event = {
-	id = ww1_germany_rework.3
-	title = ww1_germany_rework.3.t
-	desc = ww1_germany_rework.3.d
+	id = ww1_germany.202
+	title = ww1_germany.202.t
+	desc = ww1_germany.202.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9570,7 +9571,7 @@ country_event = {
 	trigger = {
 		}
 	option = {
-		name = ww1_germany_rework.3.oa
+		name = ww1_germany.202.oa
 		ai_chance = { base = 100 }
 		hidden_effect = {
 			complete_national_focus = GER_Continue_the_Von_Hollweg_chancellery
@@ -9578,9 +9579,9 @@ country_event = {
 	}
 }
 country_event = { 
-	id = ww1_germany_rework.4
-	title = ww1_germany_rework.4.t
-	desc = ww1_germany_rework.4.d
+	id = ww1_germany.203
+	title = ww1_germany.203.t
+	desc = ww1_germany.203.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9589,7 +9590,7 @@ country_event = {
 	trigger = {
 		}
 	option = {
-		name = ww1_germany_rework.4.oa
+		name = ww1_germany.203.oa
 		ai_chance = { base = 100 }
 		hidden_effect = {
 			complete_national_focus = GER_An_empty_chancellorship
@@ -9599,9 +9600,9 @@ country_event = {
 #End of Zabern Affair crisis
 #Alt-Hist Navy tree events (not a single event chain)
 news_event = { 
-	id = ww1_germany_rework.5
-	title = ww1_germany_rework.5.t #Allow the foreign Minister to approach Britian
-	desc = ww1_germany_rework.5.d
+	id = ww1_germany.204
+	title = ww1_germany.204.t #Allow the foreign Minister to approach Britian
+	desc = ww1_germany.204.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9610,16 +9611,16 @@ news_event = {
 	trigger = {
 		}
 	option = { 
-		name = ww1_germany_rework.5.oa
+		name = ww1_germany.204.oa
 		ai_chance = { base = 100 }
 		hidden_effect = {
 	    }
 	}
 }
 news_event = { 
-	id = ww1_germany_rework.6
-	title = ww1_germany_rework.6.t #The Kaiser's trip
-	desc = ww1_germany_rework.6.d
+	id = ww1_germany.205
+	title = ww1_germany.205.t #The Kaiser's trip
+	desc = ww1_germany.205.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9628,7 +9629,7 @@ news_event = {
 	trigger = {
 		}
 	option = { 
-		name = ww1_germany_rework.6.oa
+		name = ww1_germany.205.oa
 		ai_chance = { base = 100 }
 		hidden_effect = {
 	    }

@@ -826,7 +826,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			news_event = { id = ww1_germany_rework.5 }
+			news_event = { id = ww1_germany.204 }
 			#Add the rest of effects later
 		}
 	}
@@ -847,7 +847,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			news_event = { id = ww1_germany_rework.6 }
+			news_event = { id = ww1_germany.205 }
 			#Add any other effects later
 		}
 	}
