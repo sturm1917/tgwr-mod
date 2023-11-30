@@ -9514,8 +9514,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		original_tag = GER
 		has_government = neutrality
 		has_idea = GER_idea_wilhelm_ii
-		date < 1913.10.01
-		date > 1913.10.31
+		date > 1913.10.01
         28 = {
 		is_owned_by = GER
 		}
@@ -9547,9 +9546,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	mean_time_to_happen = {
 		days = 3
 	}
-	trigger = {
-		always = = no
-		}
+	trigger = {}
 	option = { country_event = { id = ww1_germany.202 }
 		name = ww1_germany.201.oa #Historical option
 		ai_chance = { base = 60 }
