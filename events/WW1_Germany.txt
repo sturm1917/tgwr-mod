@@ -9525,6 +9525,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		ai_chance = { base = 80 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
+			add_stability = 0.025
 	    }
 	}
 	option = { country_event = { id = ww1_germany.202 }
@@ -9532,6 +9533,8 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		ai_chance = { base = 20 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
+			add_political_power = -25
+			add_stability = -0.025
 	    }
 	}
 }
@@ -9545,6 +9548,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		days = 3
 	}
 	trigger = {
+		always = = no
 		}
 	option = { country_event = { id = ww1_germany.202 }
 		name = ww1_germany.201.oa #Historical option
