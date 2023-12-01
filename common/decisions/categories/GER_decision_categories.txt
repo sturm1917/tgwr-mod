@@ -166,3 +166,15 @@ GER_german_east_asia_cat = {
 	}
 	priority = 83
 }
+#Germany Rework
+#Colonial deciscions
+colonial_category = {              #ID of category
+	priority = 10                  #Determines the order of display
+	icon = GFX_category_icon
+
+	allowed = {
+		always = yes
+	}
+	visible = {                    #Requirements for the decisons to appear
+	}
+}

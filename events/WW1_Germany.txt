@@ -9546,7 +9546,8 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	mean_time_to_happen = {
 		days = 3
 	}
-	trigger = {}
+	trigger = {
+		}
 	option = { country_event = { id = ww1_germany.202 }
 		name = ww1_germany.201.oa #Historical option
 		ai_chance = { base = 60 }
@@ -9610,6 +9611,7 @@ news_event = {
 		days = 2
 	}
 	trigger = {
+		has_completed_focus = GER_Allow_the_foreign_minister_to_approach_Britannia
 		}
 	option = { 
 		name = ww1_germany.204.oa
@@ -9628,6 +9630,7 @@ news_event = {
 		days = 2
 	}
 	trigger = {
+		has_completed_focus = GER_The_Kaisers_trip
 		}
 	option = { 
 		name = ww1_germany.205.oa
