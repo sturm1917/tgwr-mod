@@ -9498,13 +9498,157 @@ country_event = {
 
 
 	#German rework
-	#Start ID values at 200
+	#Start ID values at 194
 
 #Zabern Affair
 country_event = { #Please add ai chance, historical outcomes are outlined
-	id = ww1_germany.200
-	title = ww1_germany.200.t
-	desc = ww1_germany.200.d
+	id = ww1_germany.194
+	title = ww1_germany.194.t
+	desc = ww1_germany.194.d
+	picture = GFX_report_event_german_reichstag_gathering #Placeholder
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		original_tag = GER
+		has_government = neutrality
+		has_idea = GER_idea_wilhelm_ii
+		date > 1913.10.01
+        28 = {
+		is_owned_by = GER
+		}
+	}
+	option = { country_event = { id = ww1_germany.195 }
+		name = ww1_germany.194.oa 
+		ai_chance = { base = 80 }
+		hidden_effect = {
+	    }
+	}
+}
+country_event = { #Please add ai chance, historical outcomes are outlined
+	id = ww1_germany.195
+	title = ww1_germany.195.t
+	desc = ww1_germany.195.d
+	picture = GFX_report_event_german_reichstag_gathering #Placeholder
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 5
+	}
+	trigger = {
+		original_tag = GER
+		has_government = neutrality
+		has_idea = GER_idea_wilhelm_ii
+        28 = {
+		is_owned_by = GER
+		}
+	}
+	option = { country_event = { id = ww1_germany.196 }
+		name = ww1_germany.195.oa #Historical option
+		ai_chance = { base = 80 }
+		hidden_effect = {
+			complete_national_focus = GER_Consequences_of_the_Zabern_affair
+			add_stability = 0.025
+	    }
+	}
+	option = { country_event = { id = ww1_germany.201 } #Fire soldier etc
+		name = ww1_germany.195.ob 
+		ai_chance = { base = 20 }
+		hidden_effect = {
+	    }
+	}
+}
+country_event = { #Please add ai chance, historical outcomes are outlined
+	id = ww1_germany.196
+	title = ww1_germany.196.t
+	desc = ww1_germany.196.d
+	picture = GFX_report_event_german_reichstag_gathering #Placeholder
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 3
+	}
+	trigger = {
+		original_tag = GER
+		has_government = neutrality
+		has_idea = GER_idea_wilhelm_ii
+        28 = {
+		is_owned_by = GER
+		}
+	}
+	option = { country_event = { id = ww1_germany.197 }
+		name = ww1_germany.196.oa #Historical option
+		ai_chance = { base = 80 }
+		hidden_effect = {
+			complete_national_focus = GER_Consequences_of_the_Zabern_affair
+	    }
+	}
+	option = { country_event = { id = ww1_germany.199 }
+		name = ww1_germany.196.ob #Historical option
+		ai_chance = { base = 80 }
+		hidden_effect = {
+			complete_national_focus = GER_Consequences_of_the_Zabern_affair
+	    }
+	}
+}
+country_event = { #Please add ai chance, historical outcomes are outlined
+	id = ww1_germany.197
+	title = ww1_germany.197.t
+	desc = ww1_germany.197.d
+	picture = GFX_report_event_german_reichstag_gathering #Placeholder
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		original_tag = GER
+		has_government = neutrality
+		has_idea = GER_idea_wilhelm_ii
+		date > 1913.10.01
+        28 = {
+		is_owned_by = GER
+		}
+	}
+	option = { country_event = { id = ww1_germany.198 }
+		name = ww1_germany.197.oa #Historical option
+		ai_chance = { base = 80 }
+		hidden_effect = {
+	    }
+	}
+}
+country_event = { #Please add ai chance, historical outcomes are outlined
+	id = ww1_germany.198
+	title = ww1_germany.198.t
+	desc = ww1_germany.198.d
+	picture = GFX_report_event_german_reichstag_gathering #Placeholder
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		original_tag = GER
+		has_government = neutrality
+		has_idea = GER_idea_wilhelm_ii
+        28 = {
+		is_owned_by = GER
+		}
+	}
+	option = { country_event = { id = ww1_germany.199 }
+		name = ww1_germany.198.oa #Historical option
+		ai_chance = { base = 80 }
+		hidden_effect = {
+	    }
+	}
+	option = { country_event = { id = ww1_germany.200 }
+		name = ww1_germany.198.ob
+		ai_chance = { base = 20 }
+		hidden_effect = {
+	    }
+	}
+}
+country_event = { #Please add ai chance, historical outcomes are outlined
+	id = ww1_germany.199
+	title = ww1_germany.199.t
+	desc = ww1_germany.199.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9519,28 +9663,18 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		is_owned_by = GER
 		}
 	}
-	option = { country_event = { id = ww1_germany.201 }
-		name = ww1_germany.200.oa #Historical option, will allow alt-hist path in next event
+	option = {
+		name = ww1_germany.199.oa
 		ai_chance = { base = 80 }
 		hidden_effect = {
-			complete_national_focus = GER_Consequences_of_the_Zabern_affair
-			add_stability = 0.025
-	    }
-	}
-	option = { country_event = { id = ww1_germany.202 }
-		name = ww1_germany.200.ob #Option that will only allow hist path
-		ai_chance = { base = 20 }
-		hidden_effect = {
-			complete_national_focus = GER_Consequences_of_the_Zabern_affair
-			add_political_power = -25
-			add_stability = -0.025
+			complete_national_focus = GER_Continue_the_Von_Hollweg_chancellery
 	    }
 	}
 }
-country_event = { #Please add ai chance, historical outcomes are outlined
-	id = ww1_germany.201
-	title = ww1_germany.201.t
-	desc = ww1_germany.201.d
+country_event = { #Please add ai chance, historical outcomes are outlined #unhist
+	id = ww1_germany.200
+	title = ww1_germany.200.t
+	desc = ww1_germany.200.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -9548,20 +9682,34 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	trigger = {
 		}
-	option = { country_event = { id = ww1_germany.202 }
-		name = ww1_germany.201.oa #Historical option
-		ai_chance = { base = 60 }
+	option = {
+		name = ww1_germany.200.oa
+		ai_chance = { base = 100 }
 		hidden_effect = {
-	    }
-	}
-	option = { country_event = { id = ww1_germany.203 }
-		name = ww1_germany.201.ob #Unhistorical option
-		ai_chance = { base = 40 }
-		hidden_effect = {
+			complete_national_focus = GER_An_empty_chancellorship
 	    }
 	}
 }
 country_event = {
+	id = ww1_germany.201
+	title = ww1_germany.201.t
+	desc = ww1_germany.201.d
+	picture = GFX_report_event_german_reichstag_gathering #Placeholder
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		}
+	option = {
+		name = ww1_germany.201.oa
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			complete_national_focus = GER_Continue_the_Von_Hollweg_chancellery
+	    }
+	}
+}
+country_event = { 
 	id = ww1_germany.202
 	title = ww1_germany.202.t
 	desc = ww1_germany.202.d
@@ -9576,26 +9724,6 @@ country_event = {
 		name = ww1_germany.202.oa
 		ai_chance = { base = 100 }
 		hidden_effect = {
-			complete_national_focus = GER_Continue_the_Von_Hollweg_chancellery
-	    }
-	}
-}
-country_event = { 
-	id = ww1_germany.203
-	title = ww1_germany.203.t
-	desc = ww1_germany.203.d
-	picture = GFX_report_event_german_reichstag_gathering #Placeholder
-	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 2
-	}
-	trigger = {
-		}
-	option = {
-		name = ww1_germany.203.oa
-		ai_chance = { base = 100 }
-		hidden_effect = {
-			complete_national_focus = GER_An_empty_chancellorship
 	    }
 	}
 }
