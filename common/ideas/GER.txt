@@ -2207,7 +2207,7 @@ ideas = {
 	}
 	country = {
 		GER_idea_influence_of_the_unions = {
-			picture = CZE_planning_bonus
+			picture = ger_rebuild_the_nation
 
             allowed = { 
 				original_tag = GER
@@ -2234,7 +2234,7 @@ ideas = {
 	}
 	country = {
 		GER_idea_sluggish_administration  = {
-			picture = CZE_planning_bonus
+			picture = ETH_customs_barrier_ITA
 
             allowed = { 
 				original_tag = GER
