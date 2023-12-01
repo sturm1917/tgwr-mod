@@ -9508,7 +9508,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
 	mean_time_to_happen = {
-		days = 2
+		days = 10
 	}
 	trigger = {
 		original_tag = GER
@@ -9519,7 +9519,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		is_owned_by = GER
 		}
 	}
-	option = { country_event = { id = ww1_germany.195 }
+	option = { country_event = { id = ww1_germany.195 days = 5 }
 		name = ww1_germany.194.oa 
 		ai_chance = { base = 80 }
 		hidden_effect = {
@@ -9543,7 +9543,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		is_owned_by = GER
 		}
 	}
-	option = { country_event = { id = ww1_germany.196 }
+	option = { country_event = { id = ww1_germany.196 days = 5 }
 		name = ww1_germany.195.oa #Historical option
 		ai_chance = { base = 80 }
 		hidden_effect = {
@@ -9551,7 +9551,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 			add_stability = 0.025
 	    }
 	}
-	option = { country_event = { id = ww1_germany.201 } #Fire soldier etc
+	option = { country_event = { id = ww1_germany.201 days = 5 } #Fire soldier etc
 		name = ww1_germany.195.ob 
 		ai_chance = { base = 20 }
 		hidden_effect = {
@@ -9575,14 +9575,14 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		is_owned_by = GER
 		}
 	}
-	option = { country_event = { id = ww1_germany.197 }
+	option = { country_event = { id = ww1_germany.197 days = 5}
 		name = ww1_germany.196.oa #Historical option
 		ai_chance = { base = 80 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
 	    }
 	}
-	option = { country_event = { id = ww1_germany.199 }
+	option = { country_event = { id = ww1_germany.199 days = 5}
 		name = ww1_germany.196.ob #Historical option
 		ai_chance = { base = 80 }
 		hidden_effect = {
@@ -9608,7 +9608,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		is_owned_by = GER
 		}
 	}
-	option = { country_event = { id = ww1_germany.198 }
+	option = { country_event = { id = ww1_germany.198 days = 5 }
 		name = ww1_germany.197.oa #Historical option
 		ai_chance = { base = 80 }
 		hidden_effect = {
@@ -9632,13 +9632,13 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 		is_owned_by = GER
 		}
 	}
-	option = { country_event = { id = ww1_germany.199 }
+	option = { country_event = { id = ww1_germany.199  days = 5 }
 		name = ww1_germany.198.oa #Historical option
 		ai_chance = { base = 80 }
 		hidden_effect = {
 	    }
 	}
-	option = { country_event = { id = ww1_germany.200 }
+	option = { country_event = { id = ww1_germany.200 days = 5 }
 		name = ww1_germany.198.ob
 		ai_chance = { base = 20 }
 		hidden_effect = {
@@ -9709,24 +9709,7 @@ country_event = {
 	    }
 	}
 }
-country_event = { 
-	id = ww1_germany.202
-	title = ww1_germany.202.t
-	desc = ww1_germany.202.d
-	picture = GFX_report_event_german_reichstag_gathering #Placeholder
-	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 2
-	}
-	trigger = {
-		}
-	option = {
-		name = ww1_germany.202.oa
-		ai_chance = { base = 100 }
-		hidden_effect = {
-	    }
-	}
-}
+#Use the ID number 202 and 203 for single events, i can't count lol so we've ended up with some extra events
 #End of Zabern Affair crisis
 #Alt-Hist Navy tree events (not a single event chain)
 news_event = { 
