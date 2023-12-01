@@ -9521,6 +9521,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	option = { country_event = { id = ww1_germany.195 days = 5 }
 		name = ww1_germany.194.oa 
+		add_stability = -0.02
 		ai_chance = { base = 80 }
 		hidden_effect = {
 	    }
@@ -9537,22 +9538,20 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	trigger = {
 		original_tag = GER
-		has_government = neutrality
-		has_idea = GER_idea_wilhelm_ii
-        28 = {
-		is_owned_by = GER
-		}
 	}
 	option = { country_event = { id = ww1_germany.196 days = 5 }
 		name = ww1_germany.195.oa #Historical option
+		add_stability = -0.02
 		ai_chance = { base = 80 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
 			add_stability = 0.025
 	    }
 	}
-	option = { country_event = { id = ww1_germany.201 days = 5 } #Fire soldier etc
-		name = ww1_germany.195.ob 
+	option = { country_event = { id = ww1_germany.201 days = 5 }
+		name = ww1_germany.195.ob
+		add_stability = 0.04
+		add_war_support = -0.02
 		ai_chance = { base = 20 }
 		hidden_effect = {
 	    }
@@ -9569,21 +9568,20 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	trigger = {
 		original_tag = GER
-		has_government = neutrality
-		has_idea = GER_idea_wilhelm_ii
-        28 = {
-		is_owned_by = GER
-		}
 	}
 	option = { country_event = { id = ww1_germany.197 days = 5}
 		name = ww1_germany.196.oa #Historical option
+		add_stability = 0.02
+		add_political_power = -75
 		ai_chance = { base = 80 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
 	    }
 	}
 	option = { country_event = { id = ww1_germany.199 days = 5}
-		name = ww1_germany.196.ob #Historical option
+		name = ww1_germany.196.ob
+		add_stability = -0.05
+		add_political_power = -50
 		ai_chance = { base = 80 }
 		hidden_effect = {
 			complete_national_focus = GER_Consequences_of_the_Zabern_affair
@@ -9601,13 +9599,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	trigger = {
 		original_tag = GER
-		has_government = neutrality
-		has_idea = GER_idea_wilhelm_ii
-		date > 1913.10.01
-        28 = {
-		is_owned_by = GER
 		}
-	}
 	option = { country_event = { id = ww1_germany.198 days = 5 }
 		name = ww1_germany.197.oa #Historical option
 		ai_chance = { base = 80 }
@@ -9626,12 +9618,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	trigger = {
 		original_tag = GER
-		has_government = neutrality
-		has_idea = GER_idea_wilhelm_ii
-        28 = {
-		is_owned_by = GER
 		}
-	}
 	option = { country_event = { id = ww1_germany.199  days = 5 }
 		name = ww1_germany.198.oa #Historical option
 		ai_chance = { base = 80 }
@@ -9656,19 +9643,15 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	}
 	trigger = {
 		original_tag = GER
-		has_government = neutrality
-		has_idea = GER_idea_wilhelm_ii
-		date > 1913.10.01
-        28 = {
-		is_owned_by = GER
 		}
-	}
-	option = {
+	option = { 	
 		name = ww1_germany.199.oa
+		add_ideas = GER_idea_unrest_in_Elsaß_Lothringen
+		add_ideas = GER_idea_disloyal_reichstag
 		ai_chance = { base = 80 }
 		hidden_effect = {
 			complete_national_focus = GER_Continue_the_Von_Hollweg_chancellery
-	    }
+	    }  
 	}
 }
 country_event = { #Please add ai chance, historical outcomes are outlined #unhist
@@ -9681,9 +9664,11 @@ country_event = { #Please add ai chance, historical outcomes are outlined #unhis
 		days = 3
 	}
 	trigger = {
+		original_tag = GER
 		}
 	option = {
 		name = ww1_germany.200.oa
+		add_ideas = GER_idea_unrest_in_alsace_lorraine
 		ai_chance = { base = 100 }
 		hidden_effect = {
 			complete_national_focus = GER_An_empty_chancellorship
@@ -9700,9 +9685,11 @@ country_event = {
 		days = 2
 	}
 	trigger = {
+		original_tag = GER
 		}
 	option = {
 		name = ww1_germany.201.oa
+		add_ideas = GER_idea_dishonored_military
 		ai_chance = { base = 100 }
 		hidden_effect = {
 			complete_national_focus = GER_Continue_the_Von_Hollweg_chancellery

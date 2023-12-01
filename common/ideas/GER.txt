@@ -2254,4 +2254,74 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		GER_idea_dishonored_military = {
+			picture = CZE_planning_bonus
+
+            allowed = { 
+				original_tag = GER
+			}
+
+            available = {}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {}
+
+			modifier = {
+				training_time_factor = 0.2
+				land_doctrine_cost_factor = 0.05
+				industrial_capacity_factory = -0.1
+				war_support_weekly = -0.005
+			}
+		}
+	}
+	country = {
+		GER_idea_disloyal_reichstag = {
+			picture = CZE_planning_bonus
+
+            allowed = { 
+				original_tag = GER
+			}
+
+            available = {}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {}
+
+			modifier = {
+				political_power_cost = 0.1
+				democratic_drift = 0.05
+			}
+		}
+	}
+	country = {
+		GER_idea_unrest_in_alsace_lorraine = {
+			picture = CZE_planning_bonus
+
+            allowed = { 
+				original_tag = GER
+			}
+
+            available = {}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {}
+
+			modifier = {
+				political_power_cost = 0.05
+				stability_weekly = -0.01
+				communism_drift = 0.02
+				democratic_drift = 0.03
+			}
+		}
+	}
 }

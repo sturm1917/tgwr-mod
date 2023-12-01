@@ -1374,6 +1374,12 @@ FRA_german_reparations:0 "German Reparations"
  VIN_dysfunctional_government_desc:0 "The Government of Indochina is incredibly poorly run, with an autonomous military administration and a neglected civilian administration. Corporations run wild and corruption is rife."
 
  #GERMANY
+ GER_idea_dishonored_military:0 "Dishonored Military"
+ GER_idea_dishonored_military_desc:0 "Whilst the Zabern affair is officially over, unfortunately for the Kaiser and his government, the military feels scored after the punishment of the Zabern garrison's command. Whilst it was a necessary action to prevent a crisis in our disputed western territory the military is not going to forget the Kaiser's decisions without some kind of reimbursement."
+ GER_idea_disloyal_reichstag:0 "Disloyal Reichstag"
+ GER_idea_disloyal_reichstag_desc:0 "In the aftermath of the Zabern crisis, the Reichstag are less than pleased that their censure vote was ignored by the chancellor and Kaiser - if the Reichstag is to once again 'support' von Hollweg then some concessions will have to be made. However, whilst the Reichstag is opposed to von Hollweg, at least he has kept his chancellery."
+ GER_idea_unrest_in_alsace_lorraine:0 "Unrest in Elsaß Lothringen"
+ GER_idea_unrest_in_alsace_lorraine_desc:0 "The people of Elsaß Lothringen are still disheartened at their treatment during the Zabern Affair and are clearly far less loyal to the Kaiser, the unrest has given the opportunity to radical socialists and republics to gain traction among the local populace. With some effort to punish radical socialist leaders, banning extreme unions and funding a propaganda drive; the civilian administration assures the government that the local populace will restore their faith in God and Kaiser."
  GER_idea_sluggish_administration:0 "Sluggish Administration"
  GER_idea_sluggish_administration_desc:0 "Whilst our grand economic success under God and Kaiser have proved to be bountiful, with German industry expanding across the nation and its influence reaches the markets of every corner of the world - our second industrialisation has left the countryside massively depopulated creating an excess of infrastructure in the rural areas and a sever deficit of infrastructure in the cities. Furthermore, this needs to expand Germany's infrastructure has put a massive strain on our administrative capacities leaving some area's understaffed."
  GER_idea_influence_of_the_unions:0 "Influence of the Unions"
