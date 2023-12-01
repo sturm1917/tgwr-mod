@@ -9533,12 +9533,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	desc = ww1_germany.195.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 5
-	}
-	trigger = {
-		original_tag = GER
-	}
+	is_triggered_only = yes
 	option = { country_event = { id = ww1_germany.196 days = 5 }
 		name = ww1_germany.195.oa #Historical option
 		add_stability = -0.02
@@ -9563,12 +9558,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	desc = ww1_germany.196.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 3
-	}
-	trigger = {
-		original_tag = GER
-	}
+	is_triggered_only = yes
 	option = { country_event = { id = ww1_germany.197 days = 5}
 		name = ww1_germany.196.oa #Historical option
 		add_stability = 0.02
@@ -9594,12 +9584,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	desc = ww1_germany.197.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 2
-	}
-	trigger = {
-		original_tag = GER
-		}
+	is_triggered_only = yes
 	option = { country_event = { id = ww1_germany.198 days = 5 }
 		name = ww1_germany.197.oa #Historical option
 		ai_chance = { base = 80 }
@@ -9613,12 +9598,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	desc = ww1_germany.198.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 2
-	}
-	trigger = {
-		original_tag = GER
-		}
+	is_triggered_only = yes
 	option = { country_event = { id = ww1_germany.199  days = 5 }
 		name = ww1_germany.198.oa #Historical option
 		ai_chance = { base = 80 }
@@ -9638,15 +9618,10 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	desc = ww1_germany.199.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 5
-	}
-	trigger = {
-		original_tag = GER
-		}
+	is_triggered_only = yes
 	option = { 	
 		name = ww1_germany.199.oa
-		add_ideas = GER_idea_unrest_in_Elsaß_Lothringen
+		add_ideas = GER_idea_unrest_in_Elsaß_Lothringen #fix
 		add_ideas = GER_idea_disloyal_reichstag
 		ai_chance = { base = 80 }
 		hidden_effect = {
@@ -9660,12 +9635,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined #unhis
 	desc = ww1_germany.200.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 3
-	}
-	trigger = {
-		original_tag = GER
-		}
+	is_triggered_only = yes
 	option = {
 		name = ww1_germany.200.oa
 		add_ideas = GER_idea_unrest_in_alsace_lorraine
@@ -9681,12 +9651,7 @@ country_event = {
 	desc = ww1_germany.201.d
 	picture = GFX_report_event_german_reichstag_gathering #Placeholder
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 2
-	}
-	trigger = {
-		original_tag = GER
-		}
+	is_triggered_only = yes
 	option = {
 		name = ww1_germany.201.oa
 		add_ideas = GER_idea_dishonored_military
