@@ -2207,7 +2207,7 @@ ideas = {
 	}
 	country = {
 		GER_idea_influence_of_the_unions = {
-			picture = ger_rebuild_the_nation
+			picture = MEX_revolutionary_army
 
             allowed = { 
 				original_tag = GER
@@ -2256,7 +2256,7 @@ ideas = {
 	}
 	country = {
 		GER_idea_dishonored_military = {
-			picture = CZE_planning_bonus
+			picture = MEX_politicised_army
 
             allowed = { 
 				original_tag = GER
@@ -2280,7 +2280,7 @@ ideas = {
 	}
 	country = {
 		GER_idea_disloyal_reichstag = {
-			picture = CZE_planning_bonus
+			picture = received_attache
 
             allowed = { 
 				original_tag = GER
@@ -2302,7 +2302,7 @@ ideas = {
 	}
 	country = {
 		GER_idea_unrest_in_alsace_lorraine = {
-			picture = CZE_planning_bonus
+			picture = chi_war_of_resistance2
 
             allowed = { 
 				original_tag = GER
