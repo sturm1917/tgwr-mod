@@ -9620,7 +9620,7 @@ country_event = { #Please add ai chance, historical outcomes are outlined
 	is_triggered_only = yes
 	option = { 	
 		name = ww1_germany.199.oa
-		add_ideas = GER_idea_unrest_in_Elsaß_Lothringen #fix
+		add_ideas = GER_idea_unrest_in_alsace_lorraine 
 		add_ideas = GER_idea_disloyal_reichstag
 		ai_chance = { base = 80 }
 		hidden_effect = {
