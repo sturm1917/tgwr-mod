@@ -70,6 +70,8 @@ recruit_character = SPR_emilio_mola
 recruit_character = SPR_don_carlos
 recruit_character = SPR_antonio_aranda
 
+set_variable = { SPR_changing_politics_variable = 0 }
+
 1910.1.1 = {
 	oob = "SPR_1910"
 

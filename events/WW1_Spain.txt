@@ -3869,13 +3869,34 @@ country_event = {
 		}
 	}
 }
-
+#Changing Politics event
+country_event = {
+	id = ww1_spain.200
+	title = ww1_spain.200.t
+	desc = ww1_spain.200.d
+	picture = GFX_report_event_generic_conference
+	fire_only_once = no
+	mean_time_to_happen = {	days = 1 }
+	trigger = {
+		check_variable = {
+			SPR_changing_politics_variable > 4 #5
+		}
+	}
+	
+	option = {
+		name = ww1_spain.200.a
+		add_stability = -0.01
+		ai_chance = { factor = 10 }
+		set_variable = { SPR_changing_politics_variable = 0 }
+	}
+}
 # Conservatives Fracture More
 country_event = {
 	id = ww1_spain.130
 	title = ww1_spain.130.t
 	desc = ww1_spain.130.d
 	picture = GFX_report_event_generic_parliament
+	hidden = yes
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
@@ -3906,6 +3927,10 @@ country_event = {
 				add_idea = SPR_idea_split_conservative_party
 			}
 		}
+		add_to_variable = {
+			var = SPR_changing_politics_variable
+			value = 1
+		}
 	}
 }
 
@@ -3915,6 +3940,7 @@ country_event = {
 	title = ww1_spain.131.t
 	desc = ww1_spain.131.d
 	picture = GFX_report_event_generic_parliament
+	hidden = yes
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
@@ -3945,6 +3971,10 @@ country_event = {
 				add_idea = SPR_idea_several_conservative_party
 			}
 		}
+		add_to_variable = {
+			var = SPR_changing_politics_variable
+			value = 1
+		}
 	}
 }
 
@@ -3954,6 +3984,7 @@ country_event = {
 	title = ww1_spain.132.t
 	desc = ww1_spain.132.d
 	picture = GFX_report_event_generic_parliament
+	hidden = yes
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
@@ -3984,6 +4015,10 @@ country_event = {
 				add_idea = SPR_idea_split_liberal_party
 			}
 		}
+		add_to_variable = {
+			var = SPR_changing_politics_variable
+			value = 1
+		}
 	}
 }
 
@@ -3993,6 +4028,7 @@ country_event = {
 	title = ww1_spain.133.t
 	desc = ww1_spain.133.d
 	picture = GFX_report_event_generic_parliament
+	hidden = yes
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
@@ -4022,6 +4058,10 @@ country_event = {
 				remove_idea = SPR_idea_fractured_liberal_party
 				add_idea = SPR_idea_several_liberal_party
 			}
+		}
+		add_to_variable = {
+			var = SPR_changing_politics_variable
+			value = 1
 		}
 	}
 }
