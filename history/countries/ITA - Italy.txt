@@ -52,10 +52,7 @@ if = {
 	else = {
 		puppet = GLD
 	}
-}	
-
-give_guarantee = GER
-give_guarantee = AUH
+}
 
 recruit_character = ITA_filippo_turati
 recruit_character = ITA_vittorio_emanuele_iii
@@ -302,7 +299,7 @@ recruit_character = ITA_arnaldo_azzi
 		strategic_bomber1 = 1
 		interwar_artillery = 1
 		infantry_weapons2 = 1
-		improved_infantry_weapons = 1
+		improved_infantry_weapons_2 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		motorised_infantry = 1

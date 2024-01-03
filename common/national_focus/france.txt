@@ -3812,7 +3812,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_threat = 5
+			add_named_threat = {
+				threat = 5
+				name = FRA_ww1_restore_the_empire
+			}
 			add_state_claim = 34
 			add_state_claim = 906
 			add_state_claim = 6
@@ -4450,7 +4453,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.1
-			add_threat = 5
+			add_named_threat = {
+				threat = 5
+				name = FRA_ww1_french_superiority
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -4796,7 +4802,10 @@ focus_tree = {
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = {
-			add_threat = 5
+			add_named_threat = {
+				threat = 5
+				name = FRA_strasbourg_or_war
+			}
 			GER = {
 				country_event = {
 					id = ww1_france.91
@@ -5490,7 +5499,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_mechanized_effort
-		icon = GFX_focus_NZL_bob_semple_tank
+		icon = GFX_focus_generic_schneider_medium_tank
 		relative_position_id = FRA_ww1_anti_air_positions
 		prerequisite = {
 			focus = FRA_ww1_anti_air_positions
@@ -5986,7 +5995,10 @@ focus_tree = {
 			focus = FRA_ww1_beyond_fear
 		}
 		available = {
-			NOT = { has_country_flag = great_war_winner }
+			NOT = {
+				has_country_flag = great_war_winner
+				has_idea = FRA_interim_government
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -6025,6 +6037,8 @@ focus_tree = {
 				has_idea = idea_army_restrictions
 				has_idea = FRA_land_army_restrictions
 				has_idea = FRA_naval_army_restrictions
+				has_country_flag = FRA_surrender_alone
+				has_global_flag = FRA_surrender_alone
 			}
 		}
 		completion_reward = {
@@ -6975,7 +6989,6 @@ focus_tree = {
 					fixed_ship_engine_slot = carrier_ship_engine_1
 					fixed_ship_secondaries_slot = empty
 				}
-				obsolete = no
 			}
 			create_ship = {
 				type = ship_hull_carrier_conversion_ca
@@ -8059,7 +8072,104 @@ focus_tree = {
 			factor = 20
 		}
 		cost = 10
-		x = 0
+		x = 1
+		y = 1
+	}
+	focus = {
+		id = FRA_interwar_invest_in_senegal
+		icon = GFX_focus_generic_africa_factory
+		relative_position_id = FRA_interwar_syrian_mandate
+		prerequisite = {
+			focus = FRA_interwar_syrian_mandate
+		}
+		available = {
+			any_owned_state = {
+				is_core_of = SEN
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		bypass_if_unavailable = yes
+		completion_reward = {
+			set_country_flag = FRA_interwar_invest_in_senegal
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					is_core_of = SEN
+				}
+				add_dynamic_modifier = { modifier = GRE_integration_efforts days = 1440 } 
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SEN
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRA_interwar_industrialize_morroco
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		relative_position_id = FRA_interwar_invest_in_senegal
+		prerequisite = {
+			focus = FRA_interwar_invest_in_senegal
+		}
+		prerequisite = {
+			focus = FRA_interwar_jonnard_law
+		}
+		available = {
+			any_owned_state = {
+				is_core_of = MOR
+			}
+		}
+		bypass_if_unavailable = yes
+		completion_reward = {
+			set_country_flag = FRA_interwar_invest_in_senegal
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					is_core_of = MOR
+				}
+				add_dynamic_modifier = { modifier = GRE_integration_efforts days = 1440 } 
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 462
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 7069
+					level = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 1
 		y = 1
 	}
 
@@ -8219,6 +8329,11 @@ focus_tree = {
 				has_war = yes
 				NOT = {
 					has_war_with = FRA
+				}
+				is_subject = no
+				OR = {
+					NOT = { has_government = communism }
+					has_government = ROOT
 				}
 			}
 		}
@@ -8605,8 +8720,6 @@ focus_tree = {
 		relative_position_id = FRA_interwar_raises_taxes
 		prerequisite = {
 			focus = FRA_interwar_raises_taxes	
-		}
-		prerequisite = {
 			focus = FRA_interwar_arrest_monarchist_figures
 		}
 		available = {
@@ -8671,6 +8784,7 @@ focus_tree = {
 			focus = FRA_interwar_socialist_measures	
 		}
 		available = {
+			has_russian_civil_war = no
 			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
@@ -8699,6 +8813,45 @@ focus_tree = {
 		}
 		cost = 10
 		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRA_interwar_locarno_agreements
+		icon = GFX_focus_hol_the_foundations_of_defense
+		relative_position_id = FRA_interwar_socialist_measures
+		prerequisite = {
+			focus = FRA_interwar_socialist_measures	
+		}
+		available = {
+			NOT = {
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+		bypass_if_unavailable = yes
+		completion_reward = {
+			add_stability = 0.15
+			add_named_threat = {
+				threat = -5
+				name = FRA_interwar_locarno_agreements
+			}
+			set_country_flag = FRA_interwar_locarno_agreements
+			news_event = {
+				id = ww1_france.300
+				days = 2
+			}
+		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 250
+			}
+		}
+		cost = 10
+		x = 3
 		y = 1
 	}
 
@@ -9306,6 +9459,7 @@ focus_tree = {
 			NOT = {
 				has_idea = idea_farm_crisis
 			}
+			has_country_flag = great_war_winner
 		}
 		ai_will_do = {
 			factor = 5000
@@ -9728,11 +9882,11 @@ focus_tree = {
 			trigger = {
 				is_debug = yes
 			}
-			x = -20
+			x = -22
 			y = 0
 		}
 		available = {
-			has_global_flag = frankfurt_treaty
+			has_country_flag = great_war_loser
 		}
 		cancelable = no
 		select_effect = {
@@ -9748,7 +9902,7 @@ focus_tree = {
 			factor = 1000
 		}
 		cost = 10
-		x = 18
+		x = 20
 		y = 16
 	}
 
@@ -10220,7 +10374,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 	}
@@ -10398,6 +10552,108 @@ focus_tree = {
 		}
 		cost = 10
 		x = 2
+		y = 1
+	}
+
+	###############################################################
+	# DEFEATED FRANCE 2 the democratic France in Africa
+	###############################################################
+
+	focus = {
+		id = FRA_interwar_french_settlement_in_algeria
+		icon = GFX_goal_FRA_french_interventionism_focus
+		offset = {
+			trigger = {
+				is_debug = yes
+			}
+			x = -0
+			y = 0
+		}
+		allow_branch = {
+			has_global_flag = FRA_capitulation_alone
+			459 = {
+				is_capital = yes
+			}
+		}
+		bypass = {
+		}
+		available = {
+			459 = {
+				is_capital = yes
+			}
+		}
+		bypass = {
+			459 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			460 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			add_stability = 0.15
+			set_country_flag = FRA_algerian_france
+			459 = {
+				add_core_of = ROOT
+			}
+			460 = {
+				add_core_of = ROOT
+			}
+			country_event = {
+				id = ww1_france.321
+				days = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 10
+		x = -10
+		y = 1
+	}
+
+	focus = {
+		id = FRA_interwar_end_interim_governement
+		icon = GFX_focus_FRA_goverment_reform
+		relative_position_id = FRA_interwar_french_settlement_in_algeria
+		prerequisite = {
+			focus = FRA_interwar_french_settlement_in_algeria
+		}
+		bypass = {
+		}
+		available = {
+			459 = {
+				is_capital = yes
+			}
+		}
+		bypass = {
+			459 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			460 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = ww1_france.323
+				days = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 10
+		x = 0
 		y = 1
 	}
 

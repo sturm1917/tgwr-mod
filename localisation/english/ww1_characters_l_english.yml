@@ -32,7 +32,10 @@
  ALB_high_council_of_regency:0 "Këshilli i Naltë i Regjencës"
  ALB_fan_noli:0 "Fan Noli"
  ALB_avni_rrustemi:0 "Avni Rrustemi"
- ALB_umberto_ii:0 "Humberti"
+ ALB_vittorio_emanuele_iii:0 "Viktor Emanueli"
+
+ # AMARAT
+ AMR_fahd_bin_abdul_mohsen_al_hathal:0 "Fahd bin Abdul Mohsen Al Hathal"
  
  # ARGENTINA
  ARG_hipolito_yrigoyen:0 "Hipólito Yrigoyen"
@@ -72,6 +75,7 @@
  ARM_hovhannes_kajaznuni:0 "Hovhannes Kajaznuni"
  ARM_sarkis_kasyan:0 "Sarkis Kasyan"
  ARM_garegin_nzhdeh:0 "Garegin Nzhdeh"
+ ARM_andranik_ozanian:0 "Andranik Ozanian"
  
  #Asir
  ASR_muhammad_ibn_ali_alidrisi:0 "Muhammad ibn Ali al-Idrisi"
@@ -283,6 +287,10 @@
  BHU_raja_ugyen_dorji:0 "Raja Ugyen Dorji"
  BHU_raja_sonam_tobgay_dorji:0 "Raja Sonam Tobgay Dorji"
 
+ # BAIDAH
+ BID_ali_bin_adballah:0 "Ali Bin Adballah"
+ BID_abdallah_bin_alawi_bin_husein:0 "Abdallah bin Alawi bin Husein"
+
  # BELARUS
  BLR_vaclau_lastouski:0 "Vaclaŭ Lastoŭski"
  BLR_zmicier_zylunovic:0 "Źmicier Žyłunovič"
@@ -312,9 +320,13 @@
  BOL_francisco_iraizos:0 "Francisco Iraizos"
  BOL_ricardo_freyre_fernandez:0 "Ricardo Freyre Fernández"
  BOL_abel_iturralde_palacios:0 "Abel Iturralde Palacios"
- 
+
+ # BOSNIA
  BOS_marijan_varesanin:0 "Marijan Varešanin"
  BOS_vladimir_gacinovic:0 "Vladimir Gaćinović"
+
+ # BOTSWANA
+ BOT_khama_iii:0 "Khama III"
 
  # BRAZIL
  BRA_nilo_pecanha:0 "Nilo Peçanha"
@@ -371,7 +383,7 @@
 
  # BRUNEI
  BRN_council_of_regency:0 "Council of Regency"
- BRN_jamalul_alam_ii:0 "Jamalul Alam II"
+ BRN_jamalul_alam_ii:0 "Muhammad Jamalul Alam II"
  BRN_ahmad_tajuddin:0 "Ahmad Tajuddin"
 
  # BUKHARA
@@ -692,6 +704,7 @@
  COL_marco_fidel_suarez:0 "Marco Fidel Suárez"
  COL_guillermo_valencia:0 "Guillermo Valencia"
  COL_jose_vicente_concha:0 "José Vicente Concha"
+ COL_carlos_eugenio_restrepo:0 "Carlos Eugenio Restrepo"
 
  # COSTA RICA
  COS_ricardo_jimenez_oreamuno:0 "Ricardo Jiménez Oreamuno"
@@ -837,6 +850,16 @@
 
  # DON COSSACK
  DON_vladimir_sidorin:0 "Vladimir Sidorin"
+ DON_vasiliy_kharlamov:0 "Vasiliy Kharlamov"
+ DON_afrikan_bogaewsky:0 "Afrikan Bogaewsky"
+ DON_anatoliy_nazarov:0 "Anatoliy Nazarov"
+ DON_pyotr_popov:0 "Pyotr Popov"
+ DON_emmanuel_semiletov:0 "Emmanuel Semiletov"
+ DON_svyatoslav_denisov:0 "Svyatoslav Denisov"
+ DON_isaak_bykadorov:0 "Isaak Bykadorov"
+ DON_fyodor_podtyolkov:0 "Fyodor Podtyolkov"
+ DON_victor_kovalyov:0 "Victor Kovalyov"
+ DON_nikolai_golubov:0 "Nikolai Golubov"
 
  # ECUADOR
  ECU_carlos_m_tobar_borgono:0 "Carlos M. Tobar Borgoño"
@@ -1051,6 +1074,7 @@
  ENG_paul_methuen:0 "Paul Methuen"
  ENG_reginald_wingate:0 "Reginald Wingate"
  ENG_manny_shinwell:0 "Manny Shinwell"
+ ENG_reginald_george_watson:0 "Reginald George Watson"
  
  # ETHIOPIA
  ETH_habte_giyorgis_dinegde:0 "Habte Giyorgis Dinegde"
@@ -1113,6 +1137,7 @@
  FRA_louis_barthou:0 "Louis Barthou"
  FRA_paul_eugene_deschanel:0 "Paul Eugène Deschanel"
  FRA_alexandre_millerand:0 "Alexandre Millerand"
+ FRA_edouard_herriot:0 "Édouard Herriot"
  FRA_georges_valois:0 "Georges Valois"
  FRA_maurice_pujo:0 "Maurice Pujo"
  FRA_gouvernement_provisoire:0 "Gouvernement Provisoire"
@@ -1495,6 +1520,9 @@
  HJZ_faisal_bin_hussein_bin_ali:0 "Faisal bin Hussein bin Ali"
  HJZ_thomas_edward_lawrence:0 "Thomas Edward Lawrence"
  HJZ_ali_galip_pasiner:0 "Ali Galip Pasiner"
+ HJZ_abdul_hamid_al_khatab:0 "Abdul Hamid Al Khatab"
+ HJZ_muhammad_salih_nasif:0 "Muhammad Salih Nasif"
+ HJZ_sharif_sharaf:0 "Sharif Sharaf"
 
  # HANOVER
  HAN_ernest_augustus:0 "Ernest Augustus II"
@@ -1534,31 +1562,36 @@
  HUN_karoly_huszar:0 "Károly Huszár"
  HUN_istvan_tisza:0 "István Tisza"
 
+ # HYDERABAD
+ HYD_mahbub_ali_khan:0 "Mahbub Ali Khan"
+ HYD_osman_ali_khan:0 "Osman Ali Khan"
+
  # ICELAND
- ICL_hermann_jonasson:0 "Hermann Jonasson"
- ICL_olafur_thors:0 "Olafur Thors"
- ICL_einar_thordarsson:0 "Einar Thordarsson"
- ICL_knud_dyby:0 "Knud Dyby"
- ICL_stefan_j_stefansson:0 "Stefan J. Stefansson"
- ICL_thorkil_sonne:0 "Thorkil Sonne"
- ICL_walter_ulrich:0 "Walter Ulrich"
- ICL_ingvar_palmasson:0 "Ingvar Palmasson"
- ICL_jakob_rv_moller:0 "Jakob R.V. Møller"
- ICL_jorgen_ft_lolle:0 "Jørgen F.T. Lolle"
- ICL_august_arendrup:0 "August Arendrup"
- ICL_kai_hammerich:0 "Kai Hammerich"
- ICL_paul_ipsen:0 "Paul Ipsen"
- ICL_asger_ev_grandjean:0 "Asger E.V. Grandjean"
- ICL_vilhjalmur_thor:0 "Vilhjalmur Thor"
- ICL_petur_magnusson:0 "Petur Magnusson"
- ICL_finnur_jonsson:0 "Finnur Jönsson"
- ICL_bjarni_benediktsson:0 "Bjarni Benediktsson"
- ICL_johann_th_josefsson:0 "Johann Th. Josefsson"
- ICL_bjorn_olofsson:0 "Björn Olofsson"
- ICL_steingrimur_steinthorsson:0 "Steingrimur Steinthorsson"
- ICL_eysteinn_jonsson:0 "Eysteinn Jönsson"
- ICL_gudmundur_gudmundsson:0 "Gudmundur Gudmundsson"
- ICL_einar_arnorsson:0 "Einar Arnorsson"
+ ICE_john_magnusson:0 "Jón Magnússon"
+#  ICL_hermann_jonasson:0 "Hermann Jonasson"
+#  ICL_olafur_thors:0 "Olafur Thors"
+#  ICL_einar_thordarsson:0 "Einar Thordarsson"
+#  ICL_knud_dyby:0 "Knud Dyby"
+#  ICL_stefan_j_stefansson:0 "Stefan J. Stefansson"
+#  ICL_thorkil_sonne:0 "Thorkil Sonne"
+#  ICL_walter_ulrich:0 "Walter Ulrich"
+#  ICL_ingvar_palmasson:0 "Ingvar Palmasson"
+#  ICL_jakob_rv_moller:0 "Jakob R.V. Møller"
+#  ICL_jorgen_ft_lolle:0 "Jørgen F.T. Lolle"
+#  ICL_august_arendrup:0 "August Arendrup"
+#  ICL_kai_hammerich:0 "Kai Hammerich"
+#  ICL_paul_ipsen:0 "Paul Ipsen"
+#  ICL_asger_ev_grandjean:0 "Asger E.V. Grandjean"
+#  ICL_vilhjalmur_thor:0 "Vilhjalmur Thor"
+#  ICL_petur_magnusson:0 "Petur Magnusson"
+#  ICL_finnur_jonsson:0 "Finnur Jönsson"
+#  ICL_bjarni_benediktsson:0 "Bjarni Benediktsson"
+#  ICL_johann_th_josefsson:0 "Johann Th. Josefsson"
+#  ICL_bjorn_olofsson:0 "Björn Olofsson"
+#  ICL_steingrimur_steinthorsson:0 "Steingrimur Steinthorsson"
+#  ICL_eysteinn_jonsson:0 "Eysteinn Jönsson"
+#  ICL_gudmundur_gudmundsson:0 "Gudmundur Gudmundsson"
+#  ICL_einar_arnorsson:0 "Einar Arnorsson"
 
 #  INO_tjarda_van_starkenborgh_stachouwer:0 "Tjarda van Starkenborgh-Stachouwer"
 #  INO_hubertus_van_mook:0 "Hubertus Van Mook"
@@ -1836,9 +1869,24 @@
  JBS_abdullah_bin_mutaib_al_rashid:0 "Abdullah bin Mutaib Al Rashid"
  JBS_muhammad_bin_talal_al_rashid:0 "Muhammad bin Talal Al Rashid"
 
+ # JAMMU AND KASHMIR
+ JKS_pratap_singh:0 "Pratap Singh"
+
+ # JOHOR
+ JOH_ibrahim_of_johor:0 "Ibrahim of Johor"
+
+ # KALAT
+ KLT_mir_mahmud_khan_ii_ahmadzai:0 "Mir Mahmud Khan II Ahmadzai"
+
  # KAZAKSTAN
  KAZ_alikhan_bukeikhanov:0 "Alikhan Bukeikhanov"
  KAZ_alibi_dzhangildin:0 "Alibi Dzhangildin"
+
+ # KEDAH
+ KED_abdul_hamid_halim_shah:0 "Abdul Hamid Halim Shah"
+
+ # KELANTAN
+ KEL_muhammad_iv:0 "Muhammad IV"
 
  # KENYA
  KEN_hugh_cholmondeley:0 "Hugh Cholmondeley"
@@ -1851,6 +1899,11 @@
  KHI_boboochun_salimov:0 "Boboochun Salimov"
  KHI_isfandiyar_khan:0 "Isfandiyar Khan"
  KHI_sayid_abdullah:0 "Sayid Abdullah"
+
+ # KONGO
+ KOG_pedro_vi:0 "Pedro VI"
+ KOG_manuel_nkomba:0 "Manuel Nkomba"
+ KOG_manuel_iii:0 "Manuel III"
 
  # KOREA
  KOR_ye_wanyong:0 "Ye Wanyong"
@@ -1911,6 +1964,14 @@
  KUB_alexander_filimonov:0 "Alexander Filimonov"
  KUB_mykola_riabovil:0 "Mykola Riabovil"
  KUB_viktor_pokrovsky:0 "Viktor Pokrovsky"
+ KUB_luka_bych:0 "Luka Bych"
+ KUB_nikolai_bukretov:0 "Nikolai Bukretov"
+ KUB_ivan_gulyga:0 "Ivan Gulyga"
+ KUB_kondrat_bardig:0 "Kondrat Bardig"
+ KUB_nikolai_uspensky:0 "Nikolai Uspensky"
+ KUB_jan_poluyan:0 "Jan Poluyan"
+ KUB_aleksei_avtonomov:0 "Aleksei Avtonomov"
+ KUB_ivan_sorokin:0 "Ivan Sorokin"
 
  # KUMUL
  KUM_maqsud_shah:0 "Maqsud Shah"
@@ -2007,6 +2068,9 @@
  # MADAGASCAR
  MAD_ranavalona_iii:0 "Ranavalona III"
  MAD_marie_louise:0 "Marie-Louise I"
+
+ # MALDIVES
+ MLD_muhammad_shamsuddeen_iii:0 "Muhammad Shamsuddeen Iskander III"
 
  # MENGKUKUO
  MEN_prince_demchugdongrub:0 "Prince Demchugdongrub"
@@ -2184,6 +2248,9 @@
  # MOROCCO
  MOR_sidi_mohamed_bin_mohamed:0 "Sidi Mohamed bin Mohamed"
 
+ # MYSORE
+ MYS_krishnaraja_wadiyar_iv:0 "Krishnaraja Wadiyar IV"
+
  # NEPAL
  NEP_chandra_shumsher:0 "Chandra Shumsher Jung Bahadur Rana"
  NEP_baber_shumsher:0 "Baber Shumsher Jung Bahadur Rana"
@@ -2246,6 +2313,10 @@
  HOL_jacob_roell:0 "Jacob Röell"
  HOL_william_cohen_stuart:0 "William Cohen Stuart"
 
+ # NAJRAN
+ NAJ_ali_i_ibn_hibbat_allah:0 "Ali I ibn Hibbat Allah"
+ NAJ_ali_ii_ibn_muhsin_ibn_husayn:0 "Ali II ibn Muhsin ibn Husayn"
+
  # NAMIBIA
  NMB_samuel_maharero:0 "Samuel Maharero"
 
@@ -2293,11 +2364,12 @@
  NOR_alfred_berglund:0 "Alfred Berglund"
  NOR_christian_sparre:0 "Christian Sparre"
 
- # TRUCIAL STATES
+ # OMAN
  OMA_robert_arthur_edward_benn:0 "Robert Arthur Edward Benn"
  OMA_percy_zachariah_cox:0 "Percy Zachariah Cox"
  OMA_faisal_bin_turki:0 "Faisal bin Turki"
  OMA_taimur_bin_feisal:0 "Taimur bin Feisal"
+ OMA_salim_ibn_rashid_al_kharusi:0 "Salim Ibn Rashid al-Kharusi"
 
  # PAKISTAN
  PAK_aga_khan_iii:0 "Aga Khan III"
@@ -2347,6 +2419,9 @@
  PHI_manuel_luis_quezon:0 "Manuel Luis Quezón"
  PHI_gregorio_aglipay:0 "Gregorio Aglipay"
  PHI_hermenegildo_cruz:0 "Hermenegildo Cruz"
+
+ # PERLIS
+ PLS_syed_alwi_jamalullali:0 "Syed Alwi Jamalullail"
 
  # PONTUS
  PON_matthaios_kofidis:0 "Matthaìos Kofìdis"
@@ -2763,15 +2838,27 @@
  RUS_vasiliy_maklakov:0 "Vasiliy Maklakov"
  RUS_andrei_pokrovskiy:0 "Andrei Pokrovskiy"
  RUS_vladimir_volsky:0 "Vladimir Volsky"
+ RUS_nikolai_avksentiev:0 "Nikolai Avksentiev"
+ RUS_vasily_boldyrev:0 "Vasily Boldyrev"
  
  SIB_pyotr_vologodsky:0 "Pyotr Vologodsky"
  SIB_pyotr_derber:0 "Pyotr Derber"
+ SIB_pavel_ivanov_rinov:0 "Pavel Ivanov-Rinov"
+ SIB_western_siberian_commissariat:0 "Western Siberian Commissariat"
+ SIB_ivan_mikhailov:0 "Ivan Mikhailov"
+ SIB_georgiy_telberg:0 "Georgiy Telberg"
+ SIB_viktor_pepelyayev:0 "Viktor Pepelyayev"
+ SIB_ivan_sukin:0 "Ivan Sukin"
  
  URA_pavel_ivanov:0 "Pavel Ivanov"
+ URA_aleksandr_beloborodov:0 "Aleksandr Beloborodov"
  
  UCH_matvey_martynov:0 "Matvey Martynov"
  UCH_vladimir_akutin:0 "Vladimir Akutin"
  UCH_vladimir_volsky:0 "Vladimir Volsky"
+
+ # RUWALLAH
+ RWL_nuri_bin_hazaa_al_shalaan:0 "Nuri bin Hazaa Al Shalaan"
 
  # RIO GRANDE DO SUL
  RGS_borges_de_medeiros:0 "Borges de Medeiros"
@@ -2957,14 +3044,13 @@
  SOV_georgiy_chicherin:0 "Georgy Chicherin"
  SOV_felix_dzerzhinsky:0 "Felix Dzerzhinsky"
  SOV_valerian_obolensky:0 "Valerian Obolensky"
- SOV_vladimir_ovseenko:0 "Vladimir Ovseenko"
+ SOV_vladimir_ovseenko:0 "Vladimir Antonov-Ovseenko"
  SOV_viktor_nogin:0 "Viktor Nogin"
  SOV_mihail_frunze:0 "Mikhail Frunze"
  SOV_vladimir_lenin:0 "Vladimir Lenin"
  SOV_yakov_sverdlov:0 "Yakov Sverdlov"
  SOV_nikolai_bukharin:0 "Nikolai Bukharin"
  SOV_vladimir_purishkevich:0 "Vladimir Purishkevich"
- SOV_peoples_council:0 "People's Council"
  SOV_alexander_egorov:0 "Aleksandr Egorov"
  SOV_vasiliy_blucher:0 "Vasiliy Blyukher"
  SOV_vasiliy_chapaev:0 "Vasiliy Chapaev"
@@ -2991,6 +3077,7 @@
  SOV_sergo_ordzhonikidze:0 "Sergo Ordzhonikidze"
  SOV_mikhail_borodin:0 "Mikhail Borodin"
  SOV_nikolai_nikiforov:0 "Nikolai Nikiforov"
+ SOV_boris_shumyatsky:0 "Boris Shumyatsky"
 
  # SERBIA
  SER_vojislav_tankosic_silja:0 "Vojislav Tankosić Šilja"
@@ -3223,6 +3310,9 @@
  # TRANSYLVANIA
  TRA_iuliu_maniu:0 "Iuliu Maniu"
 
+ # Terengganu
+ TRG_zainal_abidin_iii:0 "Zainal Abidin III"
+
  # TUNISIA
  TUN_naceur_bey:0 "Naceur Bey"
  
@@ -3271,7 +3361,7 @@
  TUR_niyazi_bey:0 "Niyazi Bey"
  TUR_osman_fuad:0 "Osman Fuad Efendi"
  TUR_sevket_pasha:0 "Sevket Paşa"
- TUR_tevfik_fikret:0 "Tevfik Fikret"
+ TUR_tevfik_fikret:0 "Mehmed Tevfik Bey"
  TUR_esref_kuscu_basi:0 "Eşref Sencer Paşa"
  TUR_gabriel_noradunkyan:0 "Gabriel Efendi Noradunkyan"
  TUR_yusuf_i:0 "Yusuf I"

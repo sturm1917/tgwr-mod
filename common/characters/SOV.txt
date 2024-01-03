@@ -221,6 +221,7 @@ characters={
 			traits  = {
 				army_infantry_2 
 			}
+			cost = 100
 			ai_will_do  = {
 				factor  = 1.000
 			}
@@ -261,9 +262,6 @@ characters={
 		name=SOV_semyon_budyonny
 		advisor={
 			slot = theorist
-			allowed = {
-				tag = SOV
-			}
 			idea_token = semen_budennyi
 			allowed  = {
 				tag = SOV
@@ -376,9 +374,6 @@ characters={
 		}
 		advisor = {
 			slot = political_advisor
-			allowed = {
-				tag = SOV
-			}
 			idea_token = SOV_sergo_ordzhonikidze
 			allowed = {
 				tag = SOV
@@ -394,20 +389,6 @@ characters={
 		}
 		country_leader={
 			ideology=vanguardism
-		}
-	}
-	SOV_peoples_council={
-		name="SOV_peoples_council"
-		portraits={
-			civilian={
-				large="gfx/leaders/RUS/RUS_Anarchy.png"
-			}
-		}
-		country_leader={
-			ideology=authoritarian_democracy
-			traits = {
-				our_right_to_survive
-			}
 		}
 	}
 	SOV_mihail_frunze={
@@ -490,6 +471,7 @@ characters={
 			traits  = {
 				army_chief_maneuver_2 
 			}
+			cost = 100
 			available = {
 				has_government = communism
 			}
@@ -587,6 +569,7 @@ characters={
 			traits  = {
 				navy_chief_reform_2 
 			}
+			cost = 100
 			available = {
 				has_government = communism
 			}
@@ -1039,6 +1022,7 @@ characters={
 				traits  = {
 					air_air_combat_training_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1091,7 +1075,20 @@ characters={
 		name="SOV_vladimir_ovseenko"
 		portraits={
 			army={
+				large="gfx/leaders/SOV/SOV_Vladimir_Antonov_Ovseenko.png"
 				small="GFX_idea_SOV_vladimir_ovseenko"
+			}
+		}
+		field_marshal={
+			traits={ media_personality inspirational_leader trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_country_flag = RUS_soviet_tag
+				has_government = communism
 			}
 		}
 	}
@@ -1106,6 +1103,7 @@ characters={
 				traits  = {
 					air_close_air_support_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1128,6 +1126,7 @@ characters={
 				traits  = {
 					army_regrouping_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1149,6 +1148,7 @@ characters={
 				traits  = {
 					air_chief_ground_support_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1171,6 +1171,7 @@ characters={
 				traits  = {
 					army_concealment_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1263,6 +1264,7 @@ characters={
 				traits  = {
 					navy_chief_decisive_battle_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1284,6 +1286,7 @@ characters={
 				traits  = {
 					navy_chief_reform_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1306,6 +1309,7 @@ characters={
 				traits  = {
 					navy_capital_ship_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1327,6 +1331,7 @@ characters={
 				traits  = {
 					air_chief_safety_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1348,6 +1353,7 @@ characters={
 				traits  = {
 					air_chief_all_weather_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1522,6 +1528,7 @@ characters={
 				traits  = {
 					army_chief_defensive_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 0.500
 				}
@@ -1544,6 +1551,7 @@ characters={
 				traits  = {
 					navy_submarine_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1565,6 +1573,7 @@ characters={
 				traits  = {
 					air_chief_reform_3 
 				}
+				cost = 200
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1587,6 +1596,7 @@ characters={
 				traits  = {
 					navy_amphibious_assault_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -1609,6 +1619,7 @@ characters={
 				traits  = {
 					army_armored_2 
 				}
+				cost = 100
 				ai_will_do  = {
 					factor  = 1.000
 				}

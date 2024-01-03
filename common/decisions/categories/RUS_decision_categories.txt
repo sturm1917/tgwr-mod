@@ -2,11 +2,153 @@ RUS_release_country = {
 	allowed = {
 		original_tag = RUS
 	}
+	visible = {
+		NOT = {
+			tag = SOV
+		}
+	}	
 	priority = 80
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = FIN
+				is_owned_by = ROOT
+			}
+		}
+		name = FIN
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = EST
+				is_owned_by = ROOT
+			}
+		}
+		name = EST
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = LAT
+				is_owned_by = ROOT
+			}
+		}
+		name = LAT
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = LIT
+				is_owned_by = ROOT
+			}
+		}
+		name = LIT
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = POL
+				is_owned_by = ROOT
+			}
+		}
+		name = POL
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = BLR
+				is_owned_by = ROOT
+			}
+		}
+		name = BLR
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = UKR
+				is_owned_by = ROOT
+			}
+		}
+		name = UKR
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = GEO
+				is_owned_by = ROOT
+			}
+		}
+		name = GEO
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = ARM
+				is_owned_by = ROOT
+			}
+		}
+		name = ARM
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = AZR
+				is_owned_by = ROOT
+			}
+		}
+		name = AZR
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = KAZ
+				is_owned_by = ROOT
+			}
+		}
+		name = KAZ
+		zoom = 250
+	}
+	on_map_area = {
+		target_array = global.states
+		target_trigger = {
+			FROM = {
+				is_core_of = TRK
+				is_owned_by = ROOT
+			}
+		}
+		name = TRK
+		zoom = 250
+	}
 }
 RUS_tsar_decision = {
 	allowed = {
 		original_tag = RUS
+	}
+	visible = {
+		NOT = {
+			tag = SOV
+		}
 	}
 	priority = 85
 }
@@ -46,22 +188,24 @@ RUS_fight_for_trade_unions = {
 	visible = {
 		tag = RUS
 		has_completed_focus = RUS_fight_for_trade_unions
-		NOT = { has_country_flag = strikes_end }
+		NOT = { 
+			has_country_flag = strikes_end 
+			tag = SOV
+		}
 	}
 }
 RUS_civil_war = {
 	icon = GFX_decision_category_SOV_civil_war
 	picture = GFX_decision_cat_picture_soviet_civil_war
 	allowed = {
-		OR = {
-			original_tag = RUS
-			original_tag = SRA
-		}
+		original_tag = RUS
 	}
     priority = 200
 	visible = {
+		NOT = {
+			tag = SOV
+		}
 		has_global_flag = russian_civil_war
-		has_war_with = SOV
 	}
 }
 RUS_reunite_white_generals = {
@@ -73,14 +217,16 @@ RUS_reunite_white_generals = {
 	priority = 50
 
 	visible = {
-		has_completed_focus = RUS_reunite_white_generals
+		has_completed_focus = SIB_demand_sibmission_from_generals
 	}
 }
-SRA_red_rebellion = {
-	icon = military_operation
-	picture = GFX_decision_cat_picture_fatherland_front
+RUS_provisional_government = {
+	icon = GFX_decision_category_power_struggle
 	allowed = {
-		original_tag = SRA
+		original_tag = RUS
 	}
-	priority = 50
+    priority = 200
+	visible = {
+		original_tag = RUS
+	}
 }

@@ -4571,7 +4571,7 @@ ideas = {
 			}
 		}
 		TUR_turkish_military_command = {
-			picture = uber_mega_cool_ottoman_soldiers
+			picture = generic_reserve_divisions
 			allowed = {
 				always = yes
 			}
@@ -5080,6 +5080,9 @@ ideas = {
 			available = {
 				NOT = {
 					has_war_with = FRA
+					FRA = {
+						has_idea = idea_army_restrictions
+					}
 				}
 			}
 			modifier = {
@@ -5113,6 +5116,9 @@ ideas = {
 			available = {
 				NOT = {
 					has_war_with = FRA
+					FRA = {
+						has_idea = idea_army_restrictions
+					}
 				}
 			}
 			modifier = {
@@ -5130,6 +5136,9 @@ ideas = {
 			available = {
 				NOT = {
 					has_war_with = FRA
+					FRA = {
+						has_idea = idea_army_restrictions
+					}
 				}
 			}
 			modifier = {
@@ -5223,7 +5232,7 @@ ideas = {
 			}
 		}
 		TUR_idea_mosul_oil = {
-			picture = generic_morale_bonus
+			picture = generic_fuel_reserves
 			allowed = { always = yes }
 			available = {
 				country_exists = TUR
@@ -5241,7 +5250,7 @@ ideas = {
 			}
 		}
 		TUR_idea_san_remo_oil_agreement = {
-			picture = generic_morale_bonus
+			picture = generic_fuel_reserves
 			allowed = { always = yes }
 			available = {
 				country_exists = FRA
@@ -7111,6 +7120,24 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.3
+			}
+		}
+		TUR_war_against_imperialism = {
+			picture = tur_kemalism_with_socialist_characteristics
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				has_government = communism
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.50
+				justify_war_goal_when_in_major_war_time = -0.50
+				war_support_weekly_factor = 0.05
 			}
 		}
 	}
