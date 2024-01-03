@@ -11338,7 +11338,7 @@ focus_tree = {
 			IF = {
 				limit = { 
 					has_completed_focus = SPR_pick_jaime
-				} 
+				}
 				add_country_leader_role = {
 					character = SPR_jaime_iii
 					promote_leader = yes
@@ -11355,7 +11355,7 @@ focus_tree = {
 					character = SPR_alfonso_carlos
 					promote_leader = yes
 					country_leader = {
-						ideology = theocracy_ideology
+						ideology = authoritarian_democracy
 					}
 				}
 			}

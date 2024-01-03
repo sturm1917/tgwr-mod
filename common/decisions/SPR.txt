@@ -14,6 +14,7 @@ SPR_failure_to_contain_crisis = {
 			OR = {
 				has_completed_focus = SPR_the_government_survives
 				has_completed_focus = SPR_ensure_riveras_loyalty
+				has_country_flag = great_war_winner
 			}
         }
 		priority = 100
