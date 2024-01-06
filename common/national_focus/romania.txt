@@ -10,12 +10,12 @@ focus_tree = {
 			tag = ROM
 		}
 	}
-	continuous_focus_position = { x = 5000	y = 100 }
+	continuous_focus_position = { x = 300	y = 2750 }
     focus = {
 		id = ROM_invest_in_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
-		x = -20
-		y = 0
+		x = 20
+		y = 10
 		cost = 5
 		available = {
 			controls_state = 866
@@ -56,8 +56,9 @@ focus_tree = {
 	focus = {
 		id = ROM_develop_the_north
 		icon = GFX_goal_generic_construction
-		x = -18
+		x = 2
 		y = 0
+		relative_position_id = ROM_invest_in_infrastructure
 		cost = 5
 		available = {
 		controls_state = 79
@@ -117,10 +118,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-swap_ideas = {
-    remove_idea = ROM_agricultural_economy
-    add_idea =  ROM_agricultural_economy_2
-}
+		swap_ideas = {
+			remove_idea = ROM_agricultural_economy
+			add_idea =  ROM_agricultural_economy_2
+		}
 		}	
 		ai_will_do = {
 			factor = 5
@@ -215,6 +216,7 @@ swap_ideas = {
 		icon = GFX_focus_generic_concessions
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
 		mutually_exclusive = { focus = ROM_limited_agrarian_reform }
+		mutually_exclusive = { focus = ROM_1910_liberal_government }
 		x = 0
 		y = 2
 		relative_position_id = ROM_King_Carls_Reign
@@ -285,9 +287,8 @@ add_popularity = {
 			
 		}	
 		completion_reward = {
-custom_effect_tooltip =  ROM_carol_pp_increase
-
-hidden_effect = { ROM_carol_pp_increase = yes }
+			custom_effect_tooltip =  ROM_carol_pp_increase
+			hidden_effect = { ROM_carol_pp_increase = yes }
 		}
 			
 		ai_will_do = {
@@ -381,11 +382,9 @@ hidden_effect = { ROM_carol_pp_increase = yes }
 			
 		}	
 		completion_reward = {
-custom_effect_tooltip =  ROM_carol_pp_increase
-
-hidden_effect = { ROM_carol_pp_increase = yes }
-		}
-			
+			custom_effect_tooltip =  ROM_carol_pp_increase
+			hidden_effect = { ROM_carol_pp_increase = yes }
+		}	
 		ai_will_do = {
 			factor = 5
 		}
@@ -1471,22 +1470,23 @@ focus = {
 		}	
 		completion_reward = {
                 add_war_support = 0.1
-add_popularity = {
-    ideology = fascism
-    popularity = 0.05
-}
-add_stability = 0.1
-		}	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = 0.1
+		}
 		ai_will_do = {
 			factor = 5
 		}
 	}
-focus = {
+	focus = {
 		id = ROM_limited_agrarian_reform
 		icon = GFX_focus_generic_agricultural_subsidies
 		prerequisite = { focus =  ROM_King_Carls_Reign  }
 		mutually_exclusive = { focus = ROM_bratianus_resign }
-		x = -11
+		mutually_exclusive = { focus = ROM_1910_liberal_government }
+		x = -9
 		y = 2
 		relative_position_id = ROM_King_Carls_Reign
 		cost = 5
@@ -1501,10 +1501,31 @@ focus = {
 		}
 	}
 	focus = {
+		id = ROM_1910_liberal_government
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus =  ROM_King_Carls_Reign  }
+		mutually_exclusive = { focus = ROM_bratianus_resign }
+		mutually_exclusive = { focus = ROM_limited_agrarian_reform }
+		x = -18
+		y = 2
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 2
+		available = {
+			
+		}	
+		completion_reward = {	
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
 		id = ROM_triumph_of_reform
 		icon = GFX_focus_FRA_goverment_reform
-		prerequisite = { focus =  ROM_limited_agrarian_reform }
-		x = -11
+		prerequisite = { 
+			focus = ROM_limited_agrarian_reform
+		}
+		x = -12
 		y = 3
 		relative_position_id = ROM_King_Carls_Reign
 		cost = 5
@@ -1513,6 +1534,321 @@ focus = {
 		}	
 		completion_reward = {
 		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_intimidate_the_opposition
+		icon = GFX_focus_generic_national_security
+		prerequisite = {
+			focus = ROM_1910_land_reform_bill
+		}
+		x = -17
+		y = 4
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 9
+		available = {
+			
+		}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = ROM_idea_intimidated_opposition
+				days = 30
+			}
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_land_reform_vote
+		icon = GFX_focus_generic_energy
+		prerequisite = {
+			focus = ROM_1910_intimidate_the_opposition
+		}
+		x = -18
+		y = 5
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 
+		available = {
+			
+		}	
+		completion_reward = {	
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_land_reform_bill
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus =  ROM_1910_liberal_government }
+		x = -17
+		y = 3
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+			add_political_power = 50		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_attack_conservatives
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus =  ROM_1910_liberal_government }
+		x = -19
+		y = 3
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {	
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_liberal_ideas
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		prerequisite = { focus =  ROM_1910_attack_conservatives }
+		x = -19
+		y = 4
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {	
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_start_of_land_reform
+		icon = GFX_focus_NOR_approach_kretsen
+		mutually_exclusive = { focus = ROM_1910_failed_land_reform }
+		x = -21
+		y = 2
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 10
+		available = {
+			OR = {
+				has_global_flag = ROM_flag_succesful_land_reform
+				date > 1910.12.1
+			}
+		}	
+		completion_reward = {
+			add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_failed_land_reform
+		icon = GFX_focus_SWE_organize_a_putsch
+		mutually_exclusive = { focus = ROM_1910_start_of_land_reform }
+		x = -25
+		y = 2
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 10
+		available = {
+			OR = {
+				has_global_flag = ROM_flag_failed_land_reform
+				date > 1910.12.1
+			}
+		}
+		completion_reward = {
+			add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_dismissed_government
+		icon = GFX_focus_NOR_the_stumbling_storting
+		prerequisite = { focus =  ROM_1910_failed_land_reform }
+		x = -25
+		y = 4
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 1
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 150		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_conservative_government
+		icon = GFX_focus_generic_university_1
+		prerequisite = { focus =  ROM_1910_dismissed_government }
+		x = -25
+		y = 5
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 50		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_carps_hold_on_power
+		icon = GFX_focus_ICE_thungur_hnifur
+		prerequisite = { 
+			focus =  ROM_1910_conservative_government 
+		}
+		prerequisite = { 
+			focus =  ROM_1910_dismissed_government
+		}
+		x = -25
+		y = 6
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 1
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 50		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_liberals_hold_onto_power
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus =  ROM_1910_start_of_land_reform }
+		prerequisite = { focus =  ROM_1910_attack_conservatives }
+		x = 4
+		y = 2
+		relative_position_id = ROM_1910_failed_land_reform
+		cost = 1
+		available = {
+			
+		}	
+		completion_reward = {		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_liberal_stronghold
+		icon = GFX_focus_ICE_expanding_the_university_of_reykjavik
+		prerequisite = { focus =  ROM_1910_liberals_hold_onto_power }
+		x = 4
+		y = 3
+		relative_position_id = ROM_1910_failed_land_reform
+		cost = 1
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 50		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_align_all_liberals
+		icon = GFX_focus_generic_court
+		prerequisite = { focus =  ROM_1910_liberal_stronghold }
+		x = 4
+		y = 4
+		relative_position_id = ROM_1910_failed_land_reform
+		cost = 1
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 50		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_free_elections
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { 
+			focus = ROM_1910_start_of_land_reform 
+			focus = ROM_1910_failed_land_reform
+		}
+		mutually_exclusive = { focus = ROM_1910_the_kings_election }
+		x = 1
+		y = 1
+		relative_position_id = ROM_1910_failed_land_reform
+		cost = 1
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 50		
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_the_kings_election
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { 
+			focus = ROM_1910_start_of_land_reform 
+			focus = ROM_1910_failed_land_reform
+		}
+		mutually_exclusive = { focus = ROM_1910_free_elections }
+		x = 3
+		y = 1
+		relative_position_id = ROM_1910_failed_land_reform
+		cost = 1
+		available = {
+			
+		}	
+		completion_reward = {	
+		}	
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = ROM_1910_political_stabilization
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { 
+			focus =  ROM_1910_align_all_liberals
+		}
+		prerequisite = { 
+			focus =  ROM_1910_carps_hold_on_power
+		}
+		x = -23
+		y = 7
+		relative_position_id = ROM_King_Carls_Reign
+		cost = 5
+		available = {
+			
+		}	
+		completion_reward = {
+		add_political_power = 100		
 		}	
 		ai_will_do = {
 			factor = 5
@@ -1578,7 +1914,7 @@ focus = {
 		id = ROM_form_paramilitary_groups
 		icon = GFX_focus_FIN_strengthen_military_administration
 		prerequisite = { focus =  ROM_lurk_in_the_shadows }
-		x = -4
+		x = -1
 		y = 1
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1596,7 +1932,7 @@ focus = {
 		id = ROM_political_revolution
 		icon = GFX_focus_focus_fra_revolution_utmost
 		prerequisite = { focus =  ROM_form_paramilitary_groups }
-		x = -5
+		x = -3
 		y = 2
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1614,7 +1950,7 @@ focus = {
 		id = ROM_intimidation_tactics
 		icon = GFX_focus_tur_balkan_war
 		prerequisite = { focus =  ROM_form_paramilitary_groups }
-		x = -3
+		x = -1
 		y = 2
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1633,7 +1969,7 @@ focus = {
 		icon = GFX_focus_generic_national_syndicalism
 		prerequisite = { focus =  ROM_intimidation_tactics }
 		prerequisite = { focus =  ROM_political_revolution }
-		x = -4
+		x = -3
 		y = 3
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1671,7 +2007,7 @@ focus = {
 		id = ROM_crush_left_wing_protesters
 		icon = GFX_focus_spr_crush_the_revolution
 		prerequisite = { focus =  ROM_begin_the_crackdown }
-		x = -8
+		x = -4
 		y = 6
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1690,7 +2026,7 @@ focus = {
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus =  ROM_begin_the_crackdown }
 		mutually_exclusive = { focus = ROM_arrest_carp }
-		x = -2
+		x = 0
 		y = 6
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1709,7 +2045,7 @@ focus = {
 		icon = GFX_focus_mex_arrest_general_cedillo
 		prerequisite = { focus =  ROM_begin_the_crackdown }
 		mutually_exclusive = { focus = ROM_invite_conservatives_to_the_coalition }
-		x = 0
+		x = 2
 		y = 6
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1727,7 +2063,7 @@ focus = {
 		id = ROM_appoint_right_wing_ministers
 		icon = GFX_focus_rus_strengthen_the_right_wing_forces
 		prerequisite = { focus =  ROM_begin_the_crackdown }
-		x = -4
+		x = -2
 		y = 6
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1746,7 +2082,7 @@ focus = {
 		icon = GFX_focus_ICE_state_corporatism
 		prerequisite = { focus =  ROM_appoint_right_wing_ministers }
 		mutually_exclusive = { focus = ROM_fight_the_elites }
-		x = -4
+		x = 0
 		y = 7
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1765,7 +2101,7 @@ focus = {
 		icon = GFX_focus_rom_parties_end
 		prerequisite = { focus =  ROM_appoint_right_wing_ministers }
 		mutually_exclusive = { focus = ROM_corporatism }
-		x = -6
+		x = -2
 		y = 7
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1783,7 +2119,7 @@ focus = {
 		id = ROM_the_path_to_greater_romania
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_corporatism focus = ROM_fight_the_elites }
-		x = -5
+		x = -1
 		y = 9
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1801,7 +2137,7 @@ focus = {
 		id = ROM_mobilize_the_economy
 		icon = GFX_focus_generic_limited_social_mobilization
 		prerequisite = { focus =  ROM_the_path_to_greater_romania }
-		x = -7
+		x = 0
 		y = 10
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1819,7 +2155,7 @@ focus = {
 		id = ROM_introduce_a_draft
 		icon = GFX_focus_generic_manpower
 		prerequisite = { focus =  ROM_mobilize_the_economy }
-		x = -7
+		x = 0
 		y = 11
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1837,7 +2173,7 @@ focus = {
 		id = ROM_war_propaganda
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus =  ROM_the_path_to_greater_romania }
-		x = -5
+		x = 2
 		y = 10
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1855,7 +2191,7 @@ focus = {
 		id = ROM_prepare_to_light_a_fuse
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		prerequisite = { focus =  ROM_war_propaganda }
-		x = -3
+		x = 4
 		y = 11
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1874,7 +2210,7 @@ focus = {
 		icon = GFX_focus_AUH_erase_romanian_nationalism
 		prerequisite = { focus =  ROM_prepare_to_light_a_fuse }
 		mutually_exclusive = { focus = ROM_bessarabian_revolution }
-		x = -3
+		x = 4
 		y = 12
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1893,7 +2229,7 @@ focus = {
 		icon = GFX_focus_GER_romanian_pact
 		prerequisite = { focus =  ROM_prepare_to_light_a_fuse }
 		mutually_exclusive = { focus = ROM_transylvanian_revolution }
-		x = -1
+		x = 6
 		y = 12
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1911,7 +2247,7 @@ focus = {
 		id = ROM_demand_bulgarian_alignment
 		icon = GFX_focus_generic_befriend_bulgaria
 		prerequisite = { focus =  ROM_war_propaganda }
-		x = -5
+		x = 2
 		y = 11
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1929,7 +2265,7 @@ focus = {
 		id = ROM_ultimatum_to_greece
 		icon = GFX_focus_generic_attack_greece
 		prerequisite = { focus =  ROM_demand_bulgarian_alignment }
-		x = -5
+		x = 2
 		y = 13
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1947,7 +2283,7 @@ focus = {
 		id = ROM_the_tramcar_society
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus =  ROM_crush_left_wing_protesters }
-		x = -8
+		x = -4
 		y = 7
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -1965,7 +2301,7 @@ focus = {
 		id = ROM_ban_the_pnl
 		icon = GFX_focus_generic_strike_at_democracy2
 		prerequisite = { focus =  ROM_the_tramcar_society }
-		x = -8
+		x = -3
 		y = 8
 		relative_position_id = ROM_lurk_in_the_shadows
 		cost = 5
@@ -2207,7 +2543,7 @@ focus = {
 			focus = ROM_reduce_the_influence_of_religion
 		}
 		mutually_exclusive = { focus = ROM_a_reformed_constitutional_regime }
-		x = -1
+		x = 0
 		y = 8
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
@@ -2225,7 +2561,7 @@ focus = {
 		id = ROM_root_out_monarchists
 		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = ROM_depose_the_king }
-		x = 0
+		x = 1
 		y = 9
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
@@ -2243,7 +2579,7 @@ focus = {
 		id = ROM_the_new_romanian_spirit
 		icon = GFX_focus_SOV_third_rome
 		prerequisite = { focus = ROM_depose_the_king }
-		x = -2
+		x = -1
 		y = 9
 		relative_position_id = ROM_triumph_of_reform
 		cost = 5
