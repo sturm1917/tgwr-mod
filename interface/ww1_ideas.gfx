@@ -5,6 +5,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/modifiers_strategic_artillery_deployment.png"
 	}
 	#ECONOMY
+	
+	SpriteType = {
+		name = "GFX_idea_roaring_twenties"
+		texturefile = "gfx/interface/ideas/idea_roaring_years.png"
+	}
 	SpriteType = {
 		name = "GFX_idea_interwar_recovery"
 		texturefile = "gfx/interface/ideas/idea_interwar_recovery.png"
@@ -17,6 +22,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_capitalist"
 		texturefile = "gfx/interface/ideas/idea_capitalist.png"
+	}
+	spriteType = {
+		name = "GFX_idea_league_of_nations"
+		texturefile = "gfx/interface/ideas/idea_league_of_nations.png"
 	}
 	#Brazilian ideas
 	spriteType = {
@@ -583,15 +592,11 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_idea_mikhail_frunze"
-		texturefile = "gfx/interface/ideas/SOV/idea_frunze.png"
+		texturefile = "gfx/interface/ideas/SOV/idea_SOV_Mihail_Frunze.png"
 	}
 	spriteType = {
 		name = "GFX_idea_SOV_joseph_stalin"
 		texturefile = "gfx/interface/ideas/SOV/idea_SOV_joseph_stalin.png"
-	}
-	spriteType = {
-		name = "GFX_idea_SOV_leon_trotsky"
-		texturefile = "gfx/interface/ideas/SOV/idea_SOV_leon_trotsky.png"
 	}
 	spriteType = {
 		name = "GFX_idea_SOV_georgiy_chicherin"
@@ -649,6 +654,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_russko_baltiisky"
 		texturefile = "gfx/interface/ideas/RUS/idea_russko_baltiisky.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_outdated_army"
+		texturefile = "gfx/interface/ideas/RUS/RUS_outdated_army.png"
 	}
 	spriteType = {
 		name = "GFX_idea_rubin"
@@ -950,11 +959,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/AUH/idea_AUH_south_slavic_terrorism.png"
 	}
 	SpriteType = {
-		name = "GFX_idea_French_staff"
-		texturefile = "gfx/interface/ideas/FRA/idea_French_staff.png"
+		name = "GFX_idea_french_staff"
+		texturefile = "gfx/interface/ideas/FRA/idea_french_staff.png"
 	}
 	SpriteType = {
-		name = "GFX_idea_French_advisors"
+		name = "GFX_idea_french_advisors"
 		texturefile = "gfx/interface/ideas/FRA/french_advisors.png"
 	}
 
@@ -1735,6 +1744,10 @@ spriteTypes = {
 		name = "GFX_idea_SWE_gustaf_v"
 		texturefile = "gfx/interface/ideas/SWE/idea_SWE_gustaf_v.png"
 	}
+	spriteType = {
+		name = "GFX_idea_swedish_advisors"
+		texturefile = "gfx/interface/ideas/SWE/advisors_sweden.png"
+	}
 	#Denmark
 	spriteType = {
 		name = "GFX_idea_DEN_frederick_viii"
@@ -2145,6 +2158,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_POL_augustyn_domes"
 		texturefile = "gfx/interface/ideas/POL/idea_POL_augustyn_domes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SAU_arab_unification"
+		texturefile = "gfx/interface/ideas/idea_SAU_arab_unification.png"
 	}
 	spriteType = {
 		name = "GFX_idea_POL_jozef_unrug_tgr"
@@ -2587,6 +2604,23 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/KR/MAF_Bel_Influence.png"
 	}
 
+	spriteType = {
+		name = "GFX_idea_KUW_Jabir_bust"
+		texturefile = "gfx/interface/ideas/KUW/KUW_Jabir.png"
+	}
+	spriteType = {
+		name = "GFX_idea_KUW_Salim_bust"
+		texturefile = "gfx/interface/ideas/KUW/KUW_Salim.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BHR_Isa_bust"
+		texturefile = "gfx/interface/ideas/KUW/BHR_Isa.png"
+	}
+	spriteType = {
+		name = "GFX_idea_KUW_Ahmed_bust"
+		texturefile = "gfx/interface/ideas/KUW/KUW_Ahmed.png"
+	}
+
 
 	spriteType = {
 		name = "GFX_decision_venizelist_garrison_control_none"
@@ -2620,5 +2654,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_royalist_garrison_control_high"
 		texturefile = "gfx/interface/decisions/GRE/decision_constantine_garrison_control_high.png"
+	}
+	spriteType = {
+		name = "GFX_idea_DON_Alekseev_Organization"
+		texturefile = "gfx/interface/ideas/DON/DON_idea_Alekseev_Organization.png"
 	}
 }

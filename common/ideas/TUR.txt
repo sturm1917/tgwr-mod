@@ -2413,8 +2413,19 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				surrender_limit = 1
+				max_surrender_limit_offset = 0.05
 				army_core_defence_factor = 0.1
 				army_core_attack_factor = 0.1
+				ai_focus_aggressive_factor = 0.5
+				custom_modifier_tooltip = plus_50_bataillons_limit
+			}
+			targeted_modifier = {
+				tag = OTT
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+			rule = {
+				can_not_declare_war = yes
 			}
 		}
 		TUR_legitimacy_high = {
@@ -5080,6 +5091,9 @@ ideas = {
 			available = {
 				NOT = {
 					has_war_with = FRA
+					FRA = {
+						has_idea = idea_army_restrictions
+					}
 				}
 			}
 			modifier = {
@@ -5113,6 +5127,9 @@ ideas = {
 			available = {
 				NOT = {
 					has_war_with = FRA
+					FRA = {
+						has_idea = idea_army_restrictions
+					}
 				}
 			}
 			modifier = {
@@ -5130,6 +5147,9 @@ ideas = {
 			available = {
 				NOT = {
 					has_war_with = FRA
+					FRA = {
+						has_idea = idea_army_restrictions
+					}
 				}
 			}
 			modifier = {
@@ -5223,7 +5243,7 @@ ideas = {
 			}
 		}
 		TUR_idea_mosul_oil = {
-			picture = generic_morale_bonus
+			picture = generic_fuel_reserves
 			allowed = { always = yes }
 			available = {
 				country_exists = TUR
@@ -5241,7 +5261,7 @@ ideas = {
 			}
 		}
 		TUR_idea_san_remo_oil_agreement = {
-			picture = generic_morale_bonus
+			picture = generic_fuel_reserves
 			allowed = { always = yes }
 			available = {
 				country_exists = FRA
@@ -6280,7 +6300,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				improve_relations_maintain_cost_factor = 0.1
-				custom_modifier_tooltip = plus_250_bataillons_limit
 			}
 			rule = {
 				can_join_factions = no 
@@ -6301,9 +6320,6 @@ ideas = {
 			removal_cost = -1
 			rule = {
 				can_join_factions = no 
-			}
-			modifier = {
-				custom_modifier_tooltip = plus_250_bataillons_limit
 			}
 		}
 		TUR_anti_infidel_diplomacy = {
@@ -7111,6 +7127,24 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.3
+			}
+		}
+		TUR_war_against_imperialism = {
+			picture = tur_kemalism_with_socialist_characteristics
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				has_government = communism
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.50
+				justify_war_goal_when_in_major_war_time = -0.50
+				war_support_weekly_factor = 0.05
 			}
 		}
 	}

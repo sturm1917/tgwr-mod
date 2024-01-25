@@ -21,7 +21,7 @@ debug_decisions = {
 		}
 		fire_only_once = no
 		complete_effect = {
-			load_focus_tree = turkey2_focus_tree
+			load_focus_tree = kostantiniyye_focus_tree
 		}
 		ai_will_do = {
 			base = 0
@@ -227,17 +227,6 @@ GER_great_war = {
 				add_resistance = 15
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						has_war_with = ENG
-						DAR = {
-							is_subject_of = ENG
-						}
-					}
-					DAR = {
-						country_event = ww1_ottoman.70
-					}
-				}
 				set_country_flag = TUR_jihad_declared
 			}
 		}
@@ -284,7 +273,7 @@ GER_great_war = {
 		}
 		timeout_effect = {
 			declare_war_on = {
-				type = take_claimed_state
+				type = take_state
 				target = RUS
 				generator = {
 					137
@@ -383,7 +372,12 @@ GER_great_war = {
 			has_war_with = RUS
 		}
 		visible = {
+			is_in_faction_with = GER
 			has_completed_focus = TUR_schelendorfs_plan
+			NOT = {
+				has_war_with = GER
+				has_global_flag = great_war_ends
+			}
 		}
 		complete_effect = {
 			every_state = {
@@ -401,6 +395,8 @@ GER_great_war = {
 						state = 229
 						state = 565
 						state = 232
+						state = 938
+						state = 939
 					}
 				}
 				add_dynamic_modifier = { modifier = TUR_schelendorfs_plan_modifier scope = TUR }
@@ -422,6 +418,8 @@ GER_great_war = {
 						state = 229
 						state = 565
 						state = 232
+						state = 938
+						state = 939
 					}
 				}
 				remove_dynamic_modifier = { modifier = TUR_schelendorfs_plan_modifier scope = TUR }
@@ -446,6 +444,8 @@ GER_great_war = {
 						state = 229
 						state = 565
 						state = 232
+						state = 938
+						state = 939
 					}
 					any_neighbor_state = {
 						is_controlled_by = RUS
@@ -466,6 +466,8 @@ GER_great_war = {
 							state = 229
 							state = 565
 							state = 232
+							state = 938
+							state = 939
 						}
 					}
 				}
@@ -494,6 +496,8 @@ GER_great_war = {
 						state = 233
 						state = 234
 						state = 137
+						state = 940
+						state = 941
 					}
 				}
 				add_dynamic_modifier = { modifier = TUR_hafiz_hakkis_plan_modifier scope = TUR }
@@ -509,6 +513,8 @@ GER_great_war = {
 						state = 233
 						state = 234
 						state = 137
+						state = 940
+						state = 941
 					}
 				}
 				remove_dynamic_modifier = { modifier = TUR_hafiz_hakkis_plan_modifier scope = TUR }
@@ -528,6 +534,8 @@ GER_great_war = {
 							state = 233
 							state = 234
 							state = 137
+							state = 940
+							state = 941
 						}
 					}
 				}
@@ -1942,6 +1950,8 @@ TUR_minority_decision = {
 			818
 			231
 			233
+			938
+			939
 		}
 		on_map_mode = map_only
 		days_remove = 70
@@ -2032,7 +2042,11 @@ TUR_minority_decision = {
 				}
 				if = {
 					limit = {
-						state = 818
+						OR = {
+							state = 818
+							state = 938
+							state = 939
+						}
 						NOT = {
 							is_core_of = TUR
 						}
@@ -2477,12 +2491,19 @@ TUR_minority_decision = {
 		targets = {
 			831
 			675
+			916
+			917
 			832
 			791
+			914
+			915
 			292
+			918
+			929
 			905
 			678
 			659
+			930
 			294
 			882
 		}
@@ -3045,7 +3066,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3138,6 +3159,8 @@ TUR_minority_decision = {
 			818
 			231
 			233
+			938
+			939
 		}
 		fire_only_once = yes
 		on_map_mode = map_only
@@ -3156,7 +3179,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3259,7 +3282,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3363,7 +3386,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3527,7 +3550,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 			}
 		}
 		available = {
@@ -3626,7 +3649,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3716,7 +3739,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3809,7 +3832,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3908,7 +3931,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_romanian_state
 					has_state_flag = TUR_assyrian_state
 				}
-				has_variable = TUR_ottoman_resistance_target
+				#has_variable = TUR_ottoman_resistance_target
 				has_variable = TUR_ottoman_attrition
 			}
 		}
@@ -3979,6 +4002,8 @@ TUR_minority_decision = {
 			787
 			230
 			818
+			938
+			939
 		}
 		fire_only_once = yes
 		on_map_mode = map_only
@@ -4519,7 +4544,7 @@ TUR_minority_decision = {
 			}
 			if = {
 				limit = {
-					has_focus_tree = turkey2_focus_tree
+					has_focus_tree = kostantiniyye_focus_tree
 					FROM = {
 						state = 676
 					}
@@ -4730,7 +4755,7 @@ TUR_minority_decision = {
 			}
 			if = {
 				limit = {
-					has_focus_tree = turkey2_focus_tree
+					has_focus_tree = kostantiniyye_focus_tree
 					FROM = {
 						OR = {
 							state = 879
@@ -4981,11 +5006,18 @@ TUR_minority_decision = {
 			831
 			832
 			675
+			916
+			917
 			791
+			914
+			915
 			292
+			918
+			929
 			905
 			678
 			659
+			930
 			294
 			882
 		}
@@ -5389,7 +5421,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -5506,6 +5538,8 @@ TUR_minority_decision = {
 			818
 			231
 			233
+			938
+			939
 		}
 		fire_only_once = yes
 		days_remove = 45
@@ -5592,6 +5626,8 @@ TUR_minority_decision = {
 			818
 			231
 			233
+			938
+			939
 		}
 		fire_only_once = yes
 		days_remove = 50
@@ -5609,7 +5645,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -5837,7 +5873,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -6050,7 +6086,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -6253,7 +6289,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -6415,7 +6451,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -6599,7 +6635,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -6781,7 +6817,7 @@ TUR_minority_decision = {
 					has_state_flag = TUR_assyrian_state
 				}
 				OR = {
-					has_variable = TUR_ottoman_resistance_target
+					#has_variable = TUR_ottoman_resistance_target
 
 				}
 			}
@@ -7239,14 +7275,14 @@ TUR_minority_decision = {
 				has_state_flag = TUR_albanian_state
 				has_dynamic_modifier = { modifier = TUR_albanian_minority }
 				has_variable = TUR_ottoman_state_production_speed_buildings_factor
-				has_variable = local_building_slots_factor
+				has_variable = TUR_ottoman_local_building_slots_factor
 			}
 		}
 		remove_effect = {
 			FROM = {
 				custom_effect_tooltip = TUR_ottoman_max_factories_local_construction_speed_tt
 				clear_variable = TUR_ottoman_state_production_speed_buildings_factor
-				clear_variable = local_building_slots_factor
+				clear_variable = TUR_ottoman_local_building_slots_factor
 				if = {
 					limit = {
 						NOT = {
@@ -7965,6 +8001,8 @@ TUR_minority_decision = {
 			818
 			231
 			233
+			938
+			939
 		}
 		on_map_mode = map_only
 		days_remove = 35
@@ -10037,6 +10075,8 @@ TUR_minority_decision = {
 			787
 			230
 			818
+			938
+			939
 		}
 		on_map_mode = map_only
 		days_remove = 35
@@ -10189,6 +10229,8 @@ TUR_minority_decision = {
 			787
 			230
 			818
+			938
+			939
 		}
 		on_map_mode = map_only
 		days_remove = 45
@@ -10241,7 +10283,11 @@ TUR_minority_decision = {
 				}
 				if = {
 					limit = {
-						state = 818
+						OR = {
+							state = 818
+							state = 938
+							state = 939
+						}
 						NOT = {
 							is_core_of = TUR
 						}
@@ -11137,12 +11183,19 @@ TUR_minority_decision = {
 		targets = {
 			831
 			675
+			916
+			917
 			832
 			791
+			914
+			915
 			292
+			918
+			929
 			905
 			678
 			659
+			930
 			294
 			882
 		}
@@ -12010,14 +12063,14 @@ TUR_minority_decision = {
 		}
 		state_target = yes
 		targets = {
-			761
-			760
-			105
-			104
-			107
-			809
-			876
-			821
+			846
+			805
+			81
+			46
+			866
+			79
+			868
+			867
 		}
 		on_map_mode = map_only
 		days_remove = 30
@@ -12172,6 +12225,8 @@ TUR_minority_decision = {
 			787
 			230
 			818
+			938
+			939
 		}
 		on_map_mode = map_only
 		days_remove = 30
@@ -12211,6 +12266,8 @@ TUR_minority_decision = {
 							state = 230
 							state = 818
 							state = 816
+							state = 938
+							state = 939
 						}
 					}
 					ROOT = {
@@ -12266,6 +12323,8 @@ TUR_minority_decision = {
 							state = 806
 							state = 818
 							state = 816
+							state = 938
+							state = 939
 						}
 					}
 					remove_core_of = ARM
@@ -12280,7 +12339,11 @@ TUR_minority_decision = {
 				}
 				if = {
 					limit = {
-						state = 818
+						OR = {
+							state = 818
+							state = 938
+							state = 939
+						}
 						NOT = {
 							is_core_of = TUR
 						}
@@ -12866,14 +12929,21 @@ TUR_minority_decision = {
 			447
 			831
 			675
+			916
+			917
 			832
 			791
+			914
+			915
 			292
+			918
+			929
 			905
 			678
 			294
 			882
 			659
+			930
 			413
 			446
 			457
@@ -12976,14 +13046,21 @@ TUR_minority_decision = {
 						OR = {
 							state = 831
 							state = 675
+							state = 916
+							state = 917
 							state = 832
 							state = 791
+							state = 914
+							state = 915
 							state = 292
+							state = 918
+							state = 929
 							state = 905
 							state = 678
 							state = 294
 							state = 882
 							state = 659
+							state = 930
 						}
 					}
 					ROOT = {
@@ -13853,6 +13930,8 @@ TUR_minority_decision = {
 			818
 			231
 			233
+			938
+			939
 		}
 		days_remove = 70
 		on_map_mode = map_only
@@ -14699,11 +14778,18 @@ TUR_minority_decision = {
 			831
 			832
 			675
+			916
+			917
 			791
+			914
+			915
 			292
+			918
+			929
 			905
 			678
 			659
+			930
 			882
 			294
 		}
@@ -14925,11 +15011,18 @@ TUR_minority_decision = {
 			831
 			832
 			675
+			916
+			917
 			791
+			914
+			915
 			292
+			918
+			929
 			905
 			678
 			659
+			930
 			882
 			294
 		}
@@ -15816,6 +15909,7 @@ TUR_minority_decision = {
 				has_completed_focus = TUR_power_of_the_caliph
 				has_completed_focus = TUR_modern_islamism
 				has_country_flag = TUR_truce_with_asir
+				ASR = { all_core_state = { NOT = { has_dynamic_modifier = { modifier = TUR_arab_minority } } } }
 			}
 		}
 		available = {
@@ -15860,6 +15954,7 @@ TUR_minority_decision = {
 				has_completed_focus = TUR_power_of_the_caliph
 				has_completed_focus = TUR_modern_islamism
 				has_government = democratic
+				ASR = { all_core_state = { NOT = { has_dynamic_modifier = { modifier = TUR_arab_minority } } } }
 			}
 		}
 		cancel_trigger = {
@@ -16200,6 +16295,8 @@ TUR_minority_decision = {
 					state = 787
 					state = 230
 					state = 818
+					state = 938
+					state = 939
 				}
 				has_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
 			}
@@ -16230,6 +16327,8 @@ TUR_minority_decision = {
 						state = 787
 						state = 230
 						state = 818
+						state = 938
+						state = 939
 					}
 					NOT = { has_state_flag = TUR_kurd_state }
 					has_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
@@ -16280,6 +16379,8 @@ TUR_minority_decision = {
 								state = 787
 								state = 230
 								state = 818
+								state = 938
+								state = 939
 							}
 							NOT = { has_state_flag = TUR_kurd_state }
 						}
@@ -16724,6 +16825,7 @@ peace_deals = {
 
 		complete_effect = {
 			set_global_flag = TUR_surrender_1st_balkan_war
+			set_country_flag = BW1_loser
 			add_war_support = -0.05
 			BLL = {
 				country_event = {
@@ -16845,10 +16947,21 @@ operations = {
 			ROM = {
 				has_war_with = FROM
 			}
+			NOT = {
+				has_global_flag = kis_secondbalkanwar_lose
+				has_global_flag = kis_secondbalkanwar_victory
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				has_global_flag = kis_secondbalkanwar_lose
+				has_global_flag = kis_secondbalkanwar_victory
+			}
 		}
 		visible = {
 			NOT = {
 				has_global_flag = kis_secondbalkanwar_lose
+				has_global_flag = kis_secondbalkanwar_victory
 			}
 			FROM = {
 				OR = {
@@ -16912,6 +17025,11 @@ operations = {
 			}
 		}
 		remove_effect = {
+			set_country_flag = {
+				flag = TUR_special_operation_last_less_than_30_days
+				days = 30
+				value = 1
+			}
 			declare_war_on = {
 				target = FROM
 				type = take_claimed_state
@@ -17074,12 +17192,7 @@ operations = {
 		target_trigger = {
 			FROM = {
 				original_tag = ARM
-				controls_state = 818
-				OR = {
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
-					gives_military_access_to = ROOT
-				}
+				owns_state = 938
 			}
 		}
 		visible = {
@@ -17087,45 +17200,167 @@ operations = {
 			NOT = {
 				has_country_flag = great_war_loser
 			}
-			any_country = {
-				OR = {
-					tag = ROOT
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
-				}
-				OR = {
-					AND = {
-						owns_state = 787
-						controls_state = 787
-					}
-					AND = {
-						owns_state = 823
-						controls_state = 823
-					}
-				}
-			}
 			FROM = {
-				NOT = { has_country_flag = andranik_finished }
+				has_country_leader = {
+					character = ARM_andranik_ozanian
+				}
+				is_in_faction = no
+				is_subject = no
+				is_neighbor_of_subject = yes
 			}
 		}
 		available = {
-			818 = {
-				is_demilitarized_zone = yes
+			NOT = {
+				has_idea = idea_army_restrictions
+				has_war_with = FROM
+				has_active_mission = frankfurt_conference
+				has_active_mission = versallies_conference
+				has_active_mission = compiegne_armistice_mission
+				has_active_mission = frankfurt_armistice_mission
 			}
 		}
 		cancel_if_not_visible = yes
-		custom_cost_text = command_power_more_than_10
+		custom_cost_text = command_power_more_than_25
 		custom_cost_trigger = {
-			command_power > 10
+			command_power > 25
 		}
 		complete_effect = {
-			add_command_power = -10
+			add_command_power = -25
 		}
 		fire_only_once = no
-		days_remove = 30
+		days_remove = 45
 		remove_effect = {
-			FROM = { set_country_flag = andranik_finished }
-			818 = { set_demilitarized_zone = no }
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+			if = {
+				limit = { has_subject = AZR }
+				AZR = {
+					add_to_war = {
+						targeted_alliance = ROOT
+						enemy = FROM
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						818 = {
+							OR = {
+								is_demilitarized_zone = yes
+								is_owned_by = ARM
+							}
+						}
+					}
+					FROM = { transfer_state = 818 }
+				}
+			}
+		}
+		war_with_target_on_remove = yes
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				has_war_with_major = yes
+			}
+			modifier = {
+				factor = 0
+				any_other_country = {
+					has_guaranteed = FROM
+					NOT = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+	}
+	TUR_annex_ARM = {
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = {
+			original_tag = TUR
+		}
+		target_trigger = {
+			FROM = {
+				tag = ARM
+			}
+		}
+		visible = {
+			is_subject = no
+			has_country_flag = great_war_winner
+			is_neighbor_of = FROM
+			NOT = {
+				has_war_with = FROM
+				FROM = { owns_state = 938 }
+				is_in_faction_with = FROM
+				has_subject = FROM
+			}
+		}
+		available = {
+			has_global_flag = interbellum
+			has_war = no
+			938 = {
+				is_owned_or_subject_trigger = yes
+			}
+			939 = {
+				is_owned_or_subject_trigger = yes
+			}
+			FROM = {
+				is_in_faction = no
+				is_subject = no
+			}
+		}
+		cancel_if_not_visible = yes
+		custom_cost_text = command_power_more_than_25
+		custom_cost_trigger = {
+			command_power > 25
+		}
+		complete_effect = {
+			add_command_power = -25
+			add_state_claim = 230
+		}
+		war_with_target_on_remove = yes
+		fire_only_once = no
+		days_remove = 45
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = ww1_generic.35
+					hours = 3
+				}
+			}
+			# declare_war_on = {
+			# 	target = FROM
+			# 	type = annex_everything
+			# }
+			# if = {
+			# 	limit = { has_subject = AZR }
+			# 	AZR = {
+			# 		add_to_war = {
+			# 			targeted_alliance = ROOT
+			# 			enemy = FROM
+			# 		}
+			# 	}
+			# }
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_war_support < 10
+			}
+			modifier = {
+				factor = 0
+				any_other_country = {
+					has_guaranteed = FROM
+					NOT = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
 		}
 	}
 }
@@ -17800,8 +18035,8 @@ TUR_army_modernization = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
-				date > 1918.1.1
+				add = 100
+				date > 1912.1.1
 			}
 		}
 	}
@@ -20843,7 +21078,7 @@ TUR_economy_decision = {
 				has_completed_focus = TUR_purge_heretics_from_economy
 			}
 			NOT = {
-				has_focus_tree = turkey2_focus_tree
+				has_focus_tree = kostantiniyye_focus_tree
 			}
 		}
 		available = {
@@ -20904,7 +21139,7 @@ TUR_economy_decision = {
 		available = {
 			if = {
 				limit = {
-					has_focus_tree = turkey2_focus_tree
+					has_focus_tree = kostantiniyye_focus_tree
 				}
 				has_completed_focus = TUR_pay_debts
 			}
@@ -22473,6 +22708,7 @@ TUR_economy_decision = {
 						}
 					}
 				}
+				GER = { has_country_flag = great_war_loser }
 			}
 		}
 		activation = {
@@ -22725,7 +22961,7 @@ TUR_economy_decision = {
 			has_variable = opda_lira
 			if = {
 				limit = {
-					has_focus_tree = turkey2_focus_tree
+					has_focus_tree = kostantiniyye_focus_tree
 				}
 				has_completed_focus = TUR_purchase_guns
 			}
@@ -23017,7 +23253,7 @@ TUR_economy_decision = {
 			}
 			has_variable = opda_lira
 			NOT = {
-				has_focus_tree = turkey2_focus_tree
+				has_focus_tree = kostantiniyye_focus_tree
 				has_focus_tree = turkey_focus_tree
 				has_completed_focus = TUR_domestic_weapon_companies
 			}
@@ -23147,7 +23383,7 @@ TUR_economy_decision = {
 			}
 			has_variable = opda_lira
 			NOT = {
-				has_focus_tree = turkey2_focus_tree
+				has_focus_tree = kostantiniyye_focus_tree
 				has_focus_tree = turkey_focus_tree
 				has_completed_focus = TUR_domestic_weapon_companies
 			}
@@ -23925,12 +24161,12 @@ TUR_economy_decision = {
 	TUR_fra_investments_in_military_industry = {
 		icon = generic_factory
 		visible = {
-			country_exists = FRA
-			FRA = {
+			country_exists = FROM
+			FROM = {
 				has_country_flag = great_war_winner
 			}
 			has_variable = opda_lira
-			has_focus_tree = turkey2_focus_tree
+			has_focus_tree = kostantiniyye_focus_tree
 			has_completed_focus = TUR_purchase_factory_rights
 		}
 		target_trigger = {
@@ -23949,7 +24185,7 @@ TUR_economy_decision = {
 		days_re_enable = 30
 		available = {
 			NOT = {
-				has_war_with = FRA
+				has_war_with = FROM
 			}
 		}
 		complete_effect = {
@@ -23984,7 +24220,7 @@ TUR_economy_decision = {
 		icon = generic_factory
 		visible = {
 			always = no
-			country_exists = FRA
+			country_exists = FROM
 			has_variable = opda_lira
 		}
 		target_trigger = {
@@ -24003,7 +24239,10 @@ TUR_economy_decision = {
 		days_re_enable = 30
 		available = {
 			NOT = {
-				has_war_with = FRA
+				has_war_with = FROM
+				FROM = {
+					has_idea = idea_army_restrictions
+				}
 			}
 		}
 		modifier = {
@@ -26013,6 +26252,8 @@ TUR_panturkism_decision = {
 			controls_state = 231
 			controls_state = 233
 			controls_state = 565
+			controls_state = 938
+			controls_state = 939
 		}
 
 		visible = {
@@ -26025,6 +26266,8 @@ TUR_panturkism_decision = {
 			823 = { add_core_of = TUR }
 			818 = { add_core_of = TUR }
 			565 = { add_core_of = TUR }
+			938 = { add_core_of = TUR }
+			939 = { add_core_of = TUR }
 			787 = { add_dynamic_modifier = { modifier = turanism_support } }
 			230 = { add_dynamic_modifier = { modifier = turanism_support } }
 			748 = { add_dynamic_modifier = { modifier = turanism_support } }
@@ -26090,6 +26333,8 @@ TUR_panturkism_decision = {
 			controls_state = 238
 			controls_state = 229
 			controls_state = 236
+			controls_state = 940
+			controls_state = 941
 		}
 
 		visible = {
@@ -26104,6 +26349,8 @@ TUR_panturkism_decision = {
 			238 = { add_core_of = TUR }
 			229 = { add_core_of = TUR }
 			236 = { add_core_of = TUR }
+			940 = { add_core_of = TUR }
+			941 = { add_core_of = TUR }
 			hidden_effect = {
 				add_to_variable = { TUR_integrated_turan_state_number = 1 }
 			}
@@ -26577,7 +26824,6 @@ TUR_internationalist_decision = {
 		allowed = { 
 			original_tag = TUR
 		}
-		fire_only_once = yes
 		visible = {
 			has_completed_focus = TUR_call_to_the_world
 			FROM = {
@@ -26603,6 +26849,7 @@ TUR_internationalist_decision = {
 				is_capital = yes
 			}
 		}
+		on_map_mode = decision_view_only
 		days_remove = 70
 		target_trigger = {
 			FROM = {
@@ -26611,7 +26858,6 @@ TUR_internationalist_decision = {
 					has_government = communism
 				}
 				any_owned_state = {
-					is_capital = yes
 					is_in_home_area = yes
 					is_core_of = FROM
 					any_neighbor_state = {
@@ -27139,6 +27385,8 @@ TUR_vilayet_integration = {
 				controls_state = 227
 				controls_state = 218
 				controls_state = 234
+				controls_state = 940
+				controls_state = 941
 			}
 		}
 		complete_effect = {
@@ -27150,6 +27398,8 @@ TUR_vilayet_integration = {
 						state = 227
 						state = 218
 						state = 234
+						state = 940
+						state = 941
 					}
 				}
 				transfer_state_to = CRI
@@ -28996,19 +29246,13 @@ TUR_panislamism_decision = {
 		}
 		on_map_mode = map_only
 		state_target = yes
-		targets = {
-			447
-			446
-			452
-			456
-			551
-			549
-			268
-			269
-			559
-			792
-			657
-			827
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_core_of = EGY
+					is_core_of = SUD
+				}
+			}
 		}
 		days_remove = 50
 		days_re_enable = 130
@@ -29052,18 +29296,14 @@ TUR_panislamism_decision = {
 		}
 		on_map_mode = map_only
 		state_target = yes
-		targets = {
-			665
-			458
-			460
-			459
-			108
-			462
-			461
-			807
-			783
-			699
-			557
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_core_of = ALG
+					is_core_of = TUN
+					is_core_of = MOR
+				}
+			}
 		}
 		days_remove = 50
 		days_re_enable = 130
@@ -29107,18 +29347,15 @@ TUR_panislamism_decision = {
 		}
 		on_map_mode = map_only
 		state_target = yes
-		targets = {
-			665
-			458
-			460
-			459
-			108
-			462
-			461
-			807
-			783
-			699
-			557
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_core_of = BUK
+					is_core_of = KHI
+					is_core_of = TRK
+					is_core_of = KAZ
+				}
+			}
 		}
 		days_remove = 50
 		days_re_enable = 130
@@ -29162,16 +29399,18 @@ TUR_panislamism_decision = {
 		}
 		on_map_mode = map_only
 		state_target = yes
-		targets = {
-			336
-			333
-			334
-			672
-			335
-			673
-			667
-			668
-			721
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_core_of = MAL
+					is_core_of = INS
+					is_core_of = JOH
+					is_core_of = KED
+					is_core_of = KEL
+					is_core_of = PLS
+					is_core_of = TRG
+				}
+			}
 		}
 		days_remove = 50
 		days_re_enable = 130
@@ -29221,10 +29460,13 @@ TUR_panislamism_decision = {
 							tag = ASR
 							tag = QAT
 							tag = KUW
+							tag = MSC
 							tag = OMA
 							tag = UAE
 							tag = HJZ
 							tag = YEM
+							tag = NAJ
+							tag = BID
 						}
 					}
 				}
@@ -29310,6 +29552,11 @@ TUR_panislamism_decision = {
 						OR = {
 							tag = MAL
 							tag = INS
+							tag = JOH
+							tag = KED
+							tag = KEL
+							tag = PLS
+							tag = TRG
 						}
 					}
 				}
@@ -29318,55 +29565,9 @@ TUR_panislamism_decision = {
 		}
 		target_trigger = {
 			FROM = {
-				OR = {
-					tag = MRT
-					tag = CHA
-					tag = NGR
-					tag = MLI
-					tag = SEN
-					tag = GAM
-					tag = GNB
-					tag = GNA
-					tag = SIE
-					tag = MOR
-					tag = ALG
-					tag = TUN
-					tag = LBA
-					tag = EGY
-					tag = SUD
-					tag = DAR
-					tag = CHA
-					tag = ETH
-					tag = SOM
-					tag = YEM
-					tag = OMA
-					tag = SAU
-					tag = ASR
-					tag = HJZ
-					tag = JOR
-					tag = PAL
-					tag = SYR
-					tag = IRQ
-					tag = JBS
-					tag = KUW
-					tag = ALB
-					tag = BOS
-					tag = QAT
-					tag = UAE
-					tag = KUR
-					tag = PER
-					tag = AZR
-					tag = MOU
-					tag = AFG
-					tag = TRK
-					tag = BUK
-					tag = KHI
-					tag = KAZ
-					tag = PAK
-					tag = BAN
-					tag = MAL
-					tag = INS
-				}
+				is_islamic_nation = yes
+				is_subject = yes
+				NOT = { is_subject_of = ROOT }
 			}
 		}
 		days_remove = 7
@@ -29405,55 +29606,8 @@ TUR_panislamism_decision = {
 		}
 		target_trigger = {
 			FROM = {
-				OR = {
-					tag = MRT
-					tag = CHA
-					tag = NGR
-					tag = MLI
-					tag = SEN
-					tag = GAM
-					tag = GNB
-					tag = GNA
-					tag = SIE
-					tag = MOR
-					tag = ALG
-					tag = TUN
-					tag = LBA
-					tag = EGY
-					tag = SUD
-					tag = DAR
-					tag = CHA
-					tag = ETH
-					tag = SOM
-					tag = YEM
-					tag = OMA
-					tag = SAU
-					tag = ASR
-					tag = HJZ
-					tag = JOR
-					tag = PAL
-					tag = SYR
-					tag = IRQ
-					tag = JBS
-					tag = KUW
-					tag = ALB
-					tag = BOS
-					tag = QAT
-					tag = UAE
-					tag = KUR
-					tag = PER
-					tag = AZR
-					tag = MOU
-					tag = AFG
-					tag = TRK
-					tag = BUK
-					tag = KHI
-					tag = KAZ
-					tag = PAK
-					tag = BAN
-					tag = MAL
-					tag = INS
-				}
+				is_islamic_nation = yes
+				is_subject_of = ROOT
 			}
 		}
 		cost = 120
@@ -29505,7 +29659,9 @@ TUR_panislamism_decision = {
 			original_tag = TUR
 		}
 		state_target = yes
-		targets = { 877 565 232 514 108 461 462 807 290 783 699 786 557 272 701 556 781 782 515 774 827 549 449 550 269 559 415 267 584 587 407 590 402 583 588 585 586 589 732 742 405 406 749 287 618 444 443 445 440 442 441 430 336 333 334 672 335 667 673 668 627 628 626 625 624 327 623 268 619	604 755 792	657 818 823 229 420 417 266 418 411 416 414 412 410 296 780 700 }
+		target_trigger = {
+			FROM = { is_islamic_core = yes }
+		}
 		visible = {
 			has_completed_focus = TUR_declare_the_caliphate
 			FROM = {
@@ -29520,13 +29676,8 @@ TUR_panislamism_decision = {
 				limit = {
 					FROM = {
 						OR = {
-							state = 827
-							state = 549
-							state = 268
-							state = 269
-							state = 559
-							state = 657
-							state = 792
+							is_core_of = EGY
+							is_core_of = SUD
 						}
 					}
 				}
@@ -29536,25 +29687,9 @@ TUR_panislamism_decision = {
 				limit = {
 					FROM = {
 						OR = {
-							state = 108
-							state = 462
-							state = 461
-							state = 807
-							state = 783
-							state = 699
-							state = 557
-							state = 781
-							state = 774
-							state = 556
-							state = 272
-							state = 701
-							state = 296
-							state = 780
-							state = 700
-							state = 514
-							state = 786
-							state = 782
-							state = 515
+							is_core_of = ALG
+							is_core_of = TUN
+							is_core_of = MOR
 						}
 					}
 				}
@@ -29564,18 +29699,8 @@ TUR_panislamism_decision = {
 				limit = {
 					FROM = {
 						OR = {
-							state = 229
-							state = 823
-							state = 818
-							state = 420
-							state = 417
-							state = 266
-							state = 411
-							state = 418
-							state = 416
-							state = 414
-							state = 412
-							state = 410
+							is_core_of = AZR
+							is_core_of = PER
 						}
 					}
 				}
@@ -29585,15 +29710,8 @@ TUR_panislamism_decision = {
 				limit = {
 					FROM = {
 						OR = {
-							state = 415
-							state = 267
-							state = 442
-							state = 441
-							state = 440
-							state = 445
-							state = 444
-							state = 443
-							state = 430
+							is_core_of = PAK
+							is_core_of = BAN
 						}
 					}
 				}
@@ -29603,23 +29721,10 @@ TUR_panislamism_decision = {
 				limit = {
 					FROM = {
 						OR = {
-							state = 590
-							state = 407
-							state = 587
-							state = 584
-							state = 406
-							state = 405
-							state = 742
-							state = 732
-							state = 586
-							state = 585
-							state = 402
-							state = 583
-							state = 589
-							state = 588
-							state = 618
-							state = 287
-							state = 749
+							is_core_of = BUK
+							is_core_of = KHI
+							is_core_of = TRK
+							is_core_of = KAZ
 						}
 					}
 				}
@@ -29629,14 +29734,13 @@ TUR_panislamism_decision = {
 				limit = {
 					FROM = {
 						OR = {
-							state = 336
-							state = 333
-							state = 672
-							state = 334
-							state = 335
-							state = 673
-							state = 667
-							state = 668
+							is_core_of = MAL
+							is_core_of = INS
+							is_core_of = JOH
+							is_core_of = KED
+							is_core_of = KEL
+							is_core_of = PLS
+							is_core_of = TRG
 						}
 					}
 				}
@@ -30898,20 +31002,18 @@ TUR_inner_party_factionalism_decisions = {
 		}
 		icon = GFX_decision_generic_construction
 		fire_only_once = no
-		cost = 100
+		# cost = 100
 		days_re_enable = 360
 		cost = 50
 		complete_effect = {
 			random_owned_controlled_state = {
 				limit = {
 					NOT = {
-						OR = {
-							has_state_category = large_town
-							has_state_category = city
-							has_state_category = large_city
-							has_state_category = metropolis
-							has_state_category = megalopolis
-						}
+						has_state_category = large_town
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
 					}
 				}
 				add_building_construction = {
@@ -30923,13 +31025,11 @@ TUR_inner_party_factionalism_decisions = {
 			random_owned_controlled_state = {
 				limit = {
 					NOT = {
-						OR = {
-							has_state_category = large_town
-							has_state_category = city
-							has_state_category = large_city
-							has_state_category = metropolis
-							has_state_category = megalopolis
-						}
+						has_state_category = large_town
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
 					}
 				}
 				add_building_construction = {
@@ -30941,13 +31041,11 @@ TUR_inner_party_factionalism_decisions = {
 			random_owned_controlled_state = {
 				limit = {
 					NOT = {
-						OR = {
-							has_state_category = large_town
-							has_state_category = city
-							has_state_category = large_city
-							has_state_category = metropolis
-							has_state_category = megalopolis
-						}
+						has_state_category = large_town
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
 					}
 				}
 				add_building_construction = {
@@ -31141,13 +31239,11 @@ TUR_anti_imperialist_revanchist_struggle_decisions = {
 			random_owned_controlled_state = {
 				limit = {
 					NOT = {
-						OR = {
-							has_state_category = large_town
-							has_state_category = city
-							has_state_category = large_city
-							has_state_category = metropolis
-							has_state_category = megalopolis
-						}
+						has_state_category = large_town
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
 					}
 				}
 				add_building_construction = {
@@ -31159,13 +31255,11 @@ TUR_anti_imperialist_revanchist_struggle_decisions = {
 			random_owned_controlled_state = {
 				limit = {
 					NOT = {
-						OR = {
-							has_state_category = large_town
-							has_state_category = city
-							has_state_category = large_city
-							has_state_category = metropolis
-							has_state_category = megalopolis
-						}
+						has_state_category = large_town
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
 					}
 				}
 				add_building_construction = {
@@ -31177,13 +31271,11 @@ TUR_anti_imperialist_revanchist_struggle_decisions = {
 			random_owned_controlled_state = {
 				limit = {
 					NOT = {
-						OR = {
-							has_state_category = large_town
-							has_state_category = city
-							has_state_category = large_city
-							has_state_category = metropolis
-							has_state_category = megalopolis
-						}
+						has_state_category = large_town
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
 					}
 				}
 				add_building_construction = {
@@ -32097,7 +32189,7 @@ economy_decisions = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
 				}
-				controls_state = 818
+				controls_state = 938
 			}
 		}
 		visible = {
@@ -32114,8 +32206,8 @@ economy_decisions = {
 						is_subject_of = ROOT
 						is_in_faction_with = ROOT
 					}
-					owns_state = 787
-					controls_state = 787
+					owns_state = 939
+					controls_state = 939
 					owns_state = 823
 					controls_state = 823
 				}
@@ -32143,7 +32235,7 @@ economy_decisions = {
 		target_trigger = {
 			FROM = {
 				original_tag = ARM
-				controls_state = 818
+				controls_state = 938
 				OR = {
 					is_subject_of = ROOT
 					is_in_faction_with = ROOT
@@ -32170,17 +32262,14 @@ economy_decisions = {
 					is_subject_of = ROOT
 					is_in_faction_with = ROOT
 				}
-				owns_state = 787
-				controls_state = 787
+				owns_state = 939
+				controls_state = 939
 				owns_state = 823
 				controls_state = 823
 			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
-			818 = {
-				is_demilitarized_zone = no
-			}
 		}
 		fire_only_once = no
 		days_remove = 30
@@ -32191,6 +32280,373 @@ economy_decisions = {
 			build_railway = {
 				path = { 6997 4660 9715 1610 1962 }
 				level = 1
+			}
+		}
+	}
+}
+
+TUR_albanian_independantism = {
+	enforce_martial_law_in_albania = {
+		icon = GFX_decision_border_war
+
+		allowed = {
+			original_tag = TUR
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 120
+		is_good = no
+		available = {
+			army_manpower_in_state = { state = 44 amount > 16000 }
+		}
+		complete_effect = {
+			country_event = {
+				days = 2
+				id = ww1_ottoman.154
+			}
+		}
+		timeout_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ALB
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_resistance = 25
+			}
+			add_political_power = -50
+		}
+	}
+
+	reinforce_the_local_army = {
+		icon = GFX_decision_border_war
+		activation = {	
+			always = no
+		}
+		allowed = {
+			original_tag = TUR
+		}
+		days_mission_timeout = 40
+		is_good = no
+		available = {
+			army_manpower_in_state = { state = 44 amount > 40000 }
+		}
+		complete_effect = {
+			country_event = {
+				days = 10
+				id = ww1_ottoman.155
+			}
+		}
+		timeout_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ALB
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_resistance = 15
+			}
+			add_political_power = -50
+		}
+	}
+}
+
+TUR_albanian_plot = {
+	TUR_bring_ottoman_soldiers_to_vlore = {
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = ALB
+			}
+		}
+		icon = GFX_decision_generic_army_support
+		fire_only_once = yes
+		cost = 25
+		days_remove = 15
+		visible = {
+			NOT = {
+				has_country_flag = TUR_bring_ottoman_soldiers_to_vlore
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = TUR
+							tag = ALB
+						}
+					}
+					set_country_flag = TUR_bring_ottoman_soldiers_to_vlore
+				}
+			}
+		}
+		remove_effect = {
+			ALB = {
+				add_manpower = 2500
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 500
+					producer = TUR
+				}
+			}
+			custom_effect_tooltip = escape_line
+			custom_effect_tooltip = TUR_albanian_plot_plus_25_percents
+			add_to_variable = {
+				ALB_coup_detat = 25
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_game_rule = {
+					rule = fate_of_albania
+					option = FATE_OF_ALBANIA_OTTOMAN_EMIRATE_OPTION
+				}
+				add = 100
+			}
+		}
+	}
+	TUR_obtain_landowners_support = {
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = ALB
+			}
+		}
+		icon = GFX_decision_POL_looming_peasants_strike
+		fire_only_once = yes
+		cost = 25
+		days_remove = 15
+		visible = {
+			NOT = {
+				has_country_flag = TUR_obtain_landowners_support
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = TUR
+							tag = ALB
+						}
+					}
+					set_country_flag = TUR_obtain_landowners_support
+				}
+			}
+		}
+		remove_effect = {
+			ALB = {
+				add_war_support = 0.10
+			}
+			custom_effect_tooltip = escape_line
+			custom_effect_tooltip = TUR_albanian_plot_plus_25_percents
+			add_to_variable = {
+				ALB_coup_detat = 25
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_game_rule = {
+					rule = fate_of_albania
+					option = FATE_OF_ALBANIA_OTTOMAN_EMIRATE_OPTION
+				}
+				add = 100
+			}
+		}
+	}
+	TUR_setup_weapon_caches = {
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = ALB
+			}
+		}
+		icon = GFX_decision_ger_military_buildup
+		fire_only_once = yes
+		cost = 25
+		days_remove = 15
+		visible = {
+			NOT = {
+				has_country_flag = TUR_setup_weapon_caches
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = TUR
+							tag = ALB
+						}
+					}
+					set_country_flag = TUR_setup_weapon_caches
+				}
+			}
+		}
+		remove_effect = {
+			ALB = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1000
+					producer = TUR
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 500
+					producer = TUR
+				}
+			}
+			custom_effect_tooltip = escape_line
+			custom_effect_tooltip = TUR_albanian_plot_plus_25_percents
+			add_to_variable = {
+				ALB_coup_detat = 25
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_game_rule = {
+					rule = fate_of_albania
+					option = FATE_OF_ALBANIA_OTTOMAN_EMIRATE_OPTION
+				}
+				add = 100
+			}
+		}
+	}
+	TUR_pro_ottoman_rallies = {
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = ALB
+			}
+		}
+		icon = GFX_decision_TUR_support_islamists
+		fire_only_once = yes
+		cost = 25
+		days_remove = 15
+		visible = {
+			NOT = {
+				has_country_flag = TUR_pro_ottoman_rallies
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = TUR
+							tag = ALB
+						}
+					}
+					set_country_flag = TUR_pro_ottoman_rallies
+				}
+			}
+		}
+		remove_effect = {
+			ALB = {
+				add_political_power = 75
+			}
+			custom_effect_tooltip = escape_line
+			custom_effect_tooltip = TUR_albanian_plot_plus_25_percents
+			add_to_variable = {
+				ALB_coup_detat = 25
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_game_rule = {
+					rule = fate_of_albania
+					option = FATE_OF_ALBANIA_OTTOMAN_EMIRATE_OPTION
+				}
+				add = 100
+			}
+		}
+	}
+	TUR_ignite_albanian_coup = {
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = ALB
+			}
+		}
+		icon = GFX_decision_TUR_islamic_revolts
+		fire_only_once = yes
+		cost = 0
+		days_remove = 3
+		available = {
+			tag = ALB
+			NOT = {
+				has_decision = TUR_bring_ottoman_soldiers_to_vlore
+				has_decision = TUR_obtain_landowners_support
+				has_decision = TUR_setup_weapon_caches
+				has_decision = TUR_pro_ottoman_rallies
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = TUR_ignite_albanian_coup
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = TUR
+							tag = ALB
+						}
+					}
+					ALB = {
+						set_country_flag = TUR_ignite_albanian_coup
+					}
+					TUR = {
+						set_country_flag = TUR_ignite_albanian_coup
+					}
+				}
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						ALB_coup_detat < 0
+					}
+				}
+				country_event = ww1_albania.33
+				TUR = {
+					country_event = ww1_albania.33
+				}
+				else = {
+					random_list = {
+						ALB_coup_detat = {
+							country_event =  ww1_albania.32
+							TUR = {
+								country_event =  ww1_albania.32
+							}
+						}
+						10 = {
+							country_event = ww1_albania.33
+							TUR = {
+								country_event = ww1_albania.33
+							}
+						}
+					}
+				}
+			}
+
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				date > 1914.1.10
+				add = 1000
 			}
 		}
 	}

@@ -48,9 +48,6 @@ focus_tree = {
 					relation = guarantee
 					active = no
 				}
-				FRA = {
-					add_ideas = ENG_france_on_their_own
-				}
 				add_ai_strategy = {
 					type = alliance
 					id = FRA
@@ -827,6 +824,15 @@ focus_tree = {
 				uses = 1
 				category = support_tech
 				category = infantry_tech
+			}
+			
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = ENG_rsaf_enfield_organization
+				mio:ENG_rsaf_enfield_organization = { add_mio_funds = 400 }
 			}
 		}
 	}
@@ -4056,12 +4062,22 @@ focus_tree = {
 			is_in_faction = yes
 			threat > 0.75
 			USA = {
-				has_government = democratic
+				is_subject = no
+				OR = {
+					has_government = democratic
+					has_government = ROOT
+				}
 				has_war_support > 0.5
+				NOT = {
+					has_war_with = ROOT
+				}
 			}
 			NOT = {
 				has_country_flag = great_war_loser
 			}
+		}
+		bypass = {
+			is_in_faction_with = USA
 		}
 		completion_reward = {
 			USA = {
@@ -4369,7 +4385,7 @@ focus_tree = {
 	focus = {
 		id = ENG_control_under_egypt
 		icon = GFX_goal_generic_defence
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_commonwealth_individuality
 		}
@@ -4765,6 +4781,7 @@ focus_tree = {
 								has_war_with = ROOT
 								347 = { is_claimed_by = RUS }
 							}
+							tag = SOV
 							has_war_with = SOV
 						}
 					}
@@ -5204,20 +5221,38 @@ focus_tree = {
 	focus = {
 		id = ENG_singapore_strategy
 		icon = GFX_goal_generic_navy_cruiser
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_commonwealth_individuality
 		}
 		x = 62
 		y = 2
 		bypass = {
-			MAL = {
-				exists = no
+			336 = { is_owned_or_subject_trigger = no }
+			932 = { is_owned_or_subject_trigger = no }
+		}
+		available = {
+			OR = {
+				336 = { is_owned_or_subject_trigger = yes }
+				932 = { is_owned_or_subject_trigger = yes }
 			}
 		}
 		completion_reward = {
 			336 = {
 				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			932 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 				add_building_construction = {
 					type = coastal_bunker
 					level = 3
@@ -5230,17 +5265,86 @@ focus_tree = {
 	focus = {
 		id = ENG_strenhten_malayan_administration
 		icon = GFX_focus_generic_self_management
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_singapore_strategy
 		}
 		x = 62
 		y = 3
 		available = {
-			has_subject = MAL
+			OR = {
+				has_subject = MAL
+				has_subject = KED
+				has_subject = KEL
+				has_subject = PLS
+				has_subject = TRG
+				has_subject = JOH
+			}
 		}
 		completion_reward = {
-			MAL = {
+			if = {
+				limit = {
+					JOH = {
+						exists = yes
+						is_subject = no
+					}
+					NOT = {
+						has_war_with = JOH
+					}
+				}
+				effect_tooltip = {
+					if = {
+						limit = {
+							has_subject_autonomy_feature = yes
+						}
+						set_autonomy = {
+							target = JOH
+							autonomous_state = autonomy_tgwr_protectorate
+							freedom_level = 1
+						}
+						JOH = { set_country_flag = protectorate }
+						else = {
+							puppet = JOH
+							JOH = { add_ideas = protectorate }
+						}	
+					}
+				}
+				hidden_effect = {
+					JOH = {
+						get_current_government_type = yes
+						ROOT = {
+							if = {
+								limit = {
+									has_subject_autonomy_feature = yes
+								}
+								JOH = { set_country_flag = protectorate }
+								set_autonomy = {
+									target = JOH
+									autonomous_state = autonomy_tgwr_protectorate
+									freedom_level = 1
+								}							
+								else = {
+									puppet = JOH
+									JOH = { add_ideas = protectorate }
+								}	
+							}
+						}
+						restore_previous_government_type = yes
+					}
+				}
+			}		
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					OR = {
+						original_tag = MAL
+						original_tag = KED
+						original_tag = KEL
+						original_tag = PLS
+						original_tag = TRG
+						original_tag = JOH
+					}
+				}
 				add_political_power = 100
 				add_ideas = ENG_british_patronage
 				add_ai_strategy = {
@@ -5254,7 +5358,7 @@ focus_tree = {
 	focus = {
 		id = ENG_nationalise_persian_oil
 		icon = GFX_goal_generic_oil_refinery
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Legacy_Of_Industrial_Revolution
 		}
@@ -5515,7 +5619,15 @@ focus_tree = {
 		y = 4
 		relative_position_id = ENG_balfours_folly
 		completion_reward = {
-			add_ideas = ENG_irish_loyalist_paramilitaries
+			add_ideas = ENG_irish_loyalist_paramilitaries	
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = ENG_rsaf_enfield_organization
+				mio:ENG_rsaf_enfield_organization = { add_mio_funds = 600 }
+			}
 		}
 
 	}
@@ -5591,6 +5703,14 @@ focus_tree = {
 		relative_position_id = ENG_balfours_folly
 		completion_reward = {
 			add_ideas = ENG_croft_budget
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = ENG_rsaf_enfield_organization
+				mio:ENG_rsaf_enfield_organization = { add_mio_funds = 150 }
+			}
 		}
 		ai_will_do = {
 			factor = 100

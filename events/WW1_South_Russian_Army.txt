@@ -12,9 +12,20 @@ country_event = {
 	id = ww1_sra.1
 	picture = GFX_report_event_generic_battle
 	fire_only_once = yes
-	is_triggered_only = yes
+	trigger = {
+		tag = SRA
+		NOT = {
+			any_other_country = {
+				original_tag = UKR
+				has_government = communism
+			}
+			DSR = {
+				controls_province = 9417
+			}
+		}
+	}
 	mean_time_to_happen = {
-		days = 1
+		days = 15
 	}
 	option = { # This will strengthen the volunteer army in the south
 		name = ww1_sra.1.a
@@ -45,6 +56,16 @@ country_event = {
 				set_nationality = SRA
 			}		
 		}
+		hidden_effect = {
+			941 = {
+				create_unit = {
+					division = "name = \"Drozdovsky's Regiment\" division_template = \"Volunteer Army\" start_experience_factor = 2 start_equipment_factor = 0.8"
+					owner = SRA
+					allow_spawning_on_enemy_provs = yes
+					count = 1
+				}
+			}
+		}
 	}
 }
 # Kuban annexation
@@ -68,13 +89,8 @@ country_event = {
 			}
 		}
 		SRA = {
-			country_event = {
-				id = ww1_sra.3
-				days = 7
-			}
-		}
-		SRA = {
-			change_tag_from = ROOT		
+			country_event = ww1_sra.3
+			change_tag_from = ROOT	
 		}
 	}
 }
@@ -159,7 +175,7 @@ country_event = {
 	option = {
 		name = ww1_sra.4.a	
 		RUS_pyotr_wrangel = {
-			set_nationality = RXA
+			set_nationality = RXL
 		}	
 	}
 }
@@ -184,9 +200,10 @@ country_event = {
 			}
 		}	
 		activate_mission = SRA_moscow_directive_phase_1
+		add_ideas = SRA_moscow_directive_1
 	}
 }
-# Ukrainian answer
+# Entente intervention question
 ######################
 country_event = {
 	title = ww1_sra.6.t
@@ -199,7 +216,29 @@ country_event = {
 	
 	option = {
 		name = ww1_sra.6.a
-		
+		if = {
+			limit =  {
+				tag = USA
+			}
+			effect_tooltip = {
+				SRA = {
+					add_ideas = SRA_american_red_cross
+				}
+			}
+		}
+		if = {
+			limit =  {
+				tag = ENG
+			}
+			effect_tooltip = {
+				SRA = {
+					add_ideas = SRA_british_advisors
+				}
+			}
+		}
+		SRA = {
+			country_event = ww1_sra_13
+		}
 	}
 }
 # Denikin overthrown
@@ -209,7 +248,6 @@ country_event = {
 	desc = ww1_sra.7.d
 	picture = ww1_sra_7
 	fire_only_once = yes
-	is_triggered_only = no
 	trigger = {
 		tag = SRA
 		has_capitulated = no
@@ -244,7 +282,6 @@ country_event = {
 	desc = ww1_sra.8.d
 	picture = ww1_sra_8
 	fire_only_once = yes
-	is_triggered_only = no
 	trigger = {
 		tag = SRA
 		date > 1918.10.8
@@ -266,77 +303,45 @@ country_event = {
 	title = ww1_sra.9.t
 	desc = ww1_sra.9.d
 	picture = GFX_report_event_soldiers_in_france
-	is_triggered_only = yes
-	# trigger = {
-	# 	tag = RUS
-	# 	SRA = {
-	# 		OR = {
-	# 			is_subject_of = RUS
-	# 			exists = no
-	# 		}
-	# 	}
-	# 	date > 1918.08.31
-	# 	RUS = {
-	# 		NOT = {
-	# 			OR = {
-	# 				has_war_with = GER
-	# 				has_war_with = AUH
-	# 			}
-	# 		}
-	# 	}
-	# }
-	# mean_time_to_happen = {
-	# 	days = 3
-	# }
+	fire_only_once = yes
+	trigger = {
+		tag = DON 
+		NOT = {
+			controls_province = 3147
+		}
+	}
 	immediate = {
 		hidden_effect = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 565 
-						state =	232 
 						state = 235 
 						state = 579 
 						state = 233 
 						state = 234 
 						state = 137 
-						state = 238 
-						state = 218 
-						state = 245
+						state = 940
+						state = 941
 					}
 				}
 				SRA = { add_state_core = PREV }
 			}
 			SRA = {
-				transfer_state = 234
-		    }
-			every_state = {
-				limit = {
-					OR = {
-						state = 565 
-						state =	232 
-						state = 235 
-						state = 579 
-						state = 233 
-						state = 234 
-					}
-				}
-				add_dynamic_modifier = { modifier = SRA_red_rebels }
+				transfer_state = 941
+				change_tag_from = ROOT
+				activate_mission = SRA_first_kuban_campaign
 			}
-			random_owned_state = {
-				limit = {
-					OR = {
-						state = 234
-						state = 137
-					}
-				}
-				prioritize = {
-					234
-				}
-				SRA = { set_capital = { state = PREV } }
+			DSR = {
+				add_ideas = standing_alone
 			}
-			WML = {
-				add_to_faction = SRA
+			KUB = {
+				add_ideas = standing_alone
+			}
+			SOV = {
+				send_equipment_fraction = {
+					value = 0.2
+					target = SRA
+				}
 			}
 			every_possible_country = {
 				limit = {
@@ -384,6 +389,7 @@ country_event = {
 				}
 				RUS_lavr_kornilov = {
 					set_nationality = SRA
+					promote_leader = yes
 					add_country_leader_role ={
 						promote_leader = yes
 						country_leader = {
@@ -410,7 +416,8 @@ country_event = {
 						country_leader = {
 							ideology=oligarchism
 						}
-					}	
+					}
+					remove_unit_leader_role = yes
 				}	
 			}
 			every_possible_country = {
@@ -553,6 +560,14 @@ country_event = {
 			}
 			every_possible_country = {
 				limit = {
+					has_character = RUS_vladimir_may_mayevsky
+				}
+				RUS_vladimir_may_mayevsky = {
+					set_nationality = SRA
+				}		
+			}
+			every_possible_country = {
+				limit = {
 					has_character = RUS_mikhail_sablin
 				}
 				RUS_mikhail_sablin = {
@@ -560,20 +575,13 @@ country_event = {
 				}		
 			}
 			SRA = {
-				add_ideas = RUS_russian_civil_war
 				load_oob = "SRA_1918"
 				inherit_technology = RUS
+				add_manpower = 15000
+				country_lock_all_division_template = yes
 				declare_war_on = {
 					target = SOV
 					type = civil_war
-				}
-				country_event = {
-					id = ww1_sra.13
-					days = 25
-				}
-				add_timed_idea = {
-					idea = SRA_cornered_army
-					days = 120
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -591,17 +599,27 @@ country_event = {
 					producer = RUS
 				}
 			}
+			DON = {
+				country_event = {
+					id = ww1_don.1
+					days = 3
+				}
+			}
 		}
 	}
 	option = {
 		name = ww1_sra.9.a
+		hidden_effect = {
+			SRA = {
+				activate_mission = SRA_first_kuban_campaign
+			}
+		}
 	}
 	option = {
 		name = ww1_sra.9.b
 		trigger = {
 			is_ai = no
 		}
-		SRA = { change_tag_from = ROOT }
 	}
 }
 
@@ -612,11 +630,11 @@ country_event = {
 	desc = ww1_sra.10.d
 	picture = GFX_report_event_generic_army
 	fire_only_once = yes
-	is_triggered_only = no
 	trigger = {
 		tag = SRA
 		date > 1919.1.1
 		has_war_with = SOV
+		has_character = RUS_mikhail_drozdovsky
 	}
 	mean_time_to_happen = {
 		days = 10
@@ -624,6 +642,9 @@ country_event = {
 	option = {
 		name = ww1_sra.10.a
 		retire_character = RUS_mikhail_drozdovsky
+		RUS_anton_denikin = {
+			remove_unit_leader_role = yes
+		}
 	}
 }
 
@@ -634,18 +655,13 @@ country_event = {
 	desc = ww1_sra.11.d
 	picture = ww1_sra_11
 	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		tag = SRA
-		date > 1918.04.13
-		has_war_with = SOV
-	}
-	mean_time_to_happen = {
-		days = 10
-	}
+	is_triggered_only = yes
 	option = {
 		name = ww1_sra.11.a
 		retire_character = RUS_lavr_kornilov
+		RUS_anton_denikin = {
+			promote_leader = yes
+		}
 	}
 }
 
@@ -656,7 +672,6 @@ country_event = {
 	desc = ww1_sra.12.d
 	picture = ww1_sra_12
 	fire_only_once = yes
-	is_triggered_only = no
 	trigger = {
 		tag = SRA
 		date > 1919.06.1
@@ -674,27 +689,93 @@ country_event = {
 	}
 }
 
-#Kuban cossacks recruited
+#Support event
 country_event = {
 	id = ww1_sra.13
 	title = ww1_sra.13.t
 	desc = ww1_sra.13.d
 	picture = ww1_sra_13
-	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = ww1_sra.13.a
-		hidden_effect = {
-			234 = {
-				create_unit = {
-					division = "division_template = \"Pekhotnaya Diviziya\" start_experience_factor = 0.4 start_equipment_factor = 1"
-					owner = SRA
-					allow_spawning_on_enemy_provs = yes
-					count = 10
-				}
+		if = {
+			limit =  {
+				FROM = USA
 			}
+			add_ideas = SRA_american_red_cross
+		}
+		if = {
+			limit =  {
+				FROM = ENG
+			}
+			add_ideas = SRA_british_advisors
+			set_country_flag = vol_british_accepted
 		}
 	}
 }
 
+#Kuban army joins
+country_event = {
+	id = ww1_sra.14
+	title = ww1_sra.14.t
+	desc = ww1_sra.14.d
+	picture = ww1_sra_14
+	fire_only_once = yes
+	trigger = {
+		tag = SRA
+		KUB = {
+			is_in_faction_with = SOV
+		}
+	}
+	mean_time_to_happen = {
+		days = 45
+	}
+	option = {
+		name = ww1_sra.14.a
+		941 = {
+			create_unit = {
+				division = "division_template = \"Volunteer Army\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				owner = SRA
+				allow_spawning_on_enemy_provs = yes
+				count = 2
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = KUB_viktor_pokrovsky
+			}
+			KUB_viktor_pokrovsky = {
+				set_nationality = SRA
+			}		
+		}
+	}
+}
 
+# lend lease uk
+country_event = {
+	id = ww1_sra.15
+	title = ww1_sra.15.t
+	desc = ww1_sra.15.d
+	picture = ww1_sra_15
+	is_triggered_only = yes
+	option = {
+		name = ww1_sra.15.a
+
+	}
+}
+
+# lend lease sra
+country_event = {
+	id = ww1_sra.16
+	title = ww1_sra.16.t
+	desc = ww1_sra.16.d
+	picture = ww1_sra_16
+	is_triggered_only = yes
+	option = {
+		name = ww1_sra.16.a
+		activate_mission = SRA_lend_lease_1
+		set_variable = {
+			lend_lease_counter = 0
+		} 
+	}
+}
