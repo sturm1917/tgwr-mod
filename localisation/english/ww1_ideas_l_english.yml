@@ -2313,10 +2313,12 @@ socialism_banned:0 "Socialism Banned"
  PER_idea_government_gendarmerie_desc:0 "Swedish officers are helping to modernise our military leading the Government Gendarmerie."
 
  #NETHERLANDS
- HOL_idea_enduring_neutrality:0 "Enduring Neutrality"
- HOL_citizens_centered_economy:0 "Citizens-centered Economy"
- HOL_underground_agitation:0 "Underground Agitation"
- HOL_air_warfare_theorist:0 "Air Warfare Theorist"
+ HOL_expand_trade_spirit:0 "Expanded Trade"
+ HOL_expand_trade_spirit_desc:0 "By increasing our exports and expanding trade, we have become one of the main trading ports in Europe, boosting our economy and trade relations."
+ INS_dutch_investment:0 "Dutch Investments"
+ INS_dutch_investment_desc:0 " "
+ HOL_investment_in_east_indies:0 "Investment in East Indies"
+ HOL_investment_in_east_indies_desc:0 " "
 
  #ISRAEL
  ISR_jewish_colonisation:0 "Jewish Colonisation"
