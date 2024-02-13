@@ -52,7 +52,7 @@ focus_tree = {
 	}	
 	######spad 
 	focus = {
-		id = HOL_the_second_mandate
+		id = HOL_socialist_coalition
 		icon = GFX_focus_hol_oranje_boven
 		prerequisite = {focus = HOL_1913_elections}
 		cost = 5
@@ -63,76 +63,23 @@ focus_tree = {
 	focus = {
 		id = HOL_troelstra_reforminism
 		icon = GFX_focus_hol_oranje_boven
-		mutually_exclusive = {focus = HOL_legacy_of_roode_dinsdag }
-		prerequisite = {focus = HOL_the_second_mandate}
-		cost = 5
-		x = 2
-		y = 1
-		relative_position_id = HOL_the_second_mandate
-	}
-	focus = {
-		id = HOL_legacy_of_roode_dinsdag
-		icon = GFX_focus_hol_oranje_boven
-		mutually_exclusive = {focus = HOL_troelstra_reforminism}
-		prerequisite = {focus = HOL_the_second_mandate}
-		cost = 5
-		x = -2
-		y = 1
-		relative_position_id = HOL_the_second_mandate
-	}
-	focus = {
-		id = HOL_samen_sterk
-		icon = GFX_focus_hol_oranje_boven
-		prerequisite = {focus = HOL_legacy_of_roode_dinsdag focus = HOL_troelstra_reforminism}
+		prerequisite = {focus = HOL_socialist_coalition}
 		cost = 5
 		x = 0
-		y = 2
-		relative_position_id = HOL_the_second_mandate
+		y = 1
+		relative_position_id = HOL_socialist_coalition
 	}
 	
 	focus = {
-	    id = HOL_disarm_the_army
+		id = HOL_samen_sterk
 		icon = GFX_focus_hol_oranje_boven
-		mutually_exclusive = {focus = HOL_form_peoples_army}
-		prerequisite = {focus = HOL_samen_sterk}
-		cost = 5
-		x = -2
-		y = 3
-		relative_position_id = HOL_the_second_mandate
-		}
-		
-	focus = {
-	    id = HOL_form_peoples_army
-		icon = GFX_focus_hol_oranje_boven
-		mutually_exclusive = {focus = HOL_disarm_the_army}
-		prerequisite = {focus = HOL_samen_sterk}
-		cost = 5
-		x = -4
-		y = 3
-		relative_position_id = HOL_the_second_mandate
-		# many SDAP members will be annoyed unless we are at threat
-		}
-		
-	focus = {
-	    id = HOL_reduce_alchoholism
-		icon = GFX_focus_hol_oranje_boven
-		prerequisite = {focus = HOL_samen_sterk}
-		cost = 5
-		x = 2
-		y = 3
-		relative_position_id = HOL_the_second_mandate
-		}
-		
-	focus = {
-	    id = HOL_sdap_universal_suffrage
-		icon = GFX_focus_hol_oranje_boven
-		prerequisite = {focus = HOL_samen_sterk}
+		prerequisite = {focus = HOL_troelstra_reforminism}
 		cost = 5
 		x = 0
-		y = 3
-		relative_position_id = HOL_the_second_mandate
-		}
-		 
+		y = 2
+		relative_position_id = HOL_socialist_coalition
+	}
+	
 	
 	##historical liberal coalition
 	focus = {
@@ -196,20 +143,12 @@ focus_tree = {
 		relative_position_id = HOL_continue_neutrality
 		}
 		
-	focus = {
-	    id = HOL_pass_the_zuiderzeewet
-		icon = GFX_focus_hol_oranje_boven
-		prerequisite = {focus = HOL_the_crisis}
-		cost = 5
-		x = 0
-		y = 3
-		relative_position_id = HOL_continue_neutrality
-		}
 		
 	focus = {
 	    id = HOL_counter_the_food_riots
 		icon = GFX_focus_hol_oranje_boven
 		prerequisite = {focus = HOL_the_crisis}
+		mutually_exclusive = {focus = HOL_socialist_riots_grow}
 		cost = 5
 		x = 2
 		y = 3
@@ -235,6 +174,19 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = HOL_form_a_coalition_of_moderates
+		}
+		
+	### socialist takeover?
+	
+	focus = {
+	    id = HOL_socialist_riots_grow
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = {focus = HOL_the_crisis}
+		mutually_exclusive = {focus = HOL_counter_the_food_riots}
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = HOL_continue_neutrality
 		}
 	
 	###anti revolutionaries
