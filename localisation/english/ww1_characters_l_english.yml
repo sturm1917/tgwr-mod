@@ -33,6 +33,7 @@
  ALB_fan_noli:0 "Fan Noli"
  ALB_avni_rrustemi:0 "Avni Rrustemi"
  ALB_vittorio_emanuele_iii:0 "Viktor Emanueli"
+ ALB_isa_boleteni:0 "Isa Boleteni"
 
  # AMARAT
  AMR_fahd_bin_abdul_mohsen_al_hathal:0 "Fahd bin Abdul Mohsen Al Hathal"
@@ -1265,6 +1266,7 @@
  VIN_albert_jean_george_marie_louis_picquie:0 "Albert Picquié"
  FRA_milan_ratislav_stefanik:0 "Milan Štefánik"
  FRA_regency_council:0 "Conseil de Régence"
+VIN_joost_van_vollenhoven:0 "Joost Van Vollenhoven"
 
  # GALICIA
  GAL_diet:0 "Diet of Galicia and Lodomeria"
