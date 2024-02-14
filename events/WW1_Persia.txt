@@ -254,9 +254,15 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_idea = idea_victors_of_wwi
+					has_idea = idea_victors_of_wwi_entente
 				}
-				remove_ideas = idea_victors_of_wwi
+				remove_ideas = idea_victors_of_wwi_entente
+			}
+			if = {
+				limit = {
+					has_idea = idea_victors_of_wwi_cp
+				}
+				remove_ideas = idea_victors_of_wwi_cp
 			}
 			if = {
 				limit = {
@@ -597,12 +603,11 @@ country_event = {
 			ROOT = {
 				PER_mohammad_taqi_pessian = {
 					set_nationality = PREV.PREV
-				}
-			}
-			PER_mohammad_taqi_pessian = {
-				add_country_leader_role = {
-					country_leader = {
-						ideology = stratocracy
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = stratocracy
+						}
 					}
 				}
 			}

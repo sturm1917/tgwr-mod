@@ -11,15 +11,15 @@ focus_tree = {
 	reset_on_civilwar = no
 
 	initial_show_position = {
-		focus = VOL_assert_office
+		focus = VOL_ice_march
 	}
-
+	
 	#ADMINISTRATIVE BRANCH
 	focus = {
-		id = VOL_assert_office
+		id = VOL_ice_march
 		icon = GFX_focus_RUS_Kaledin_Alekseev_Kornilov_triumvirate
 		x = 14
-		y = 0
+		y = 1
 		cost = 2
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -75,6 +75,7 @@ focus_tree = {
 					}
 				}
 			}
+			transfer_state = 234
 		}
 		ai_will_do = {
 			factor = 100
@@ -85,16 +86,20 @@ focus_tree = {
 		id = VOL_establish_governor_generals
 		icon = GFX_focus_generic_annex_country
 		prerequisite = { 
-			focus = VOL_assert_office 
+			focus = VOL_AFSR
 		}
-		x = -8
+		x = 2
 		y = 1
-		relative_position_id = VOL_assert_office
+		relative_position_id = VOL_AFSR
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
 		}
-		
+		allow_branch = {
+			tag = SRA
+			has_completed_focus = VOL_AFSR
+			has_country_flag = afsr_formed
+		}
 		completion_reward = {
 			unlock_decision_category_tooltip = SRA_core_states
 			set_country_flag = vol_core_states
@@ -105,14 +110,14 @@ focus_tree = {
 		id = VOL_kuban_question
 		icon = GFX_focus_SOV_transcaucasian_republic
 		prerequisite = { 
-			focus = VOL_establish_governor_generals
+			focus = VOL_ice_march
 		}
 		available = {
 			country_exists = KUB
 		}
-		x = 4
+		x = -4
 		y = 1
-		relative_position_id = VOL_establish_governor_generals
+		relative_position_id = VOL_ice_march
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_ANNEXATION
@@ -130,139 +135,137 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = VOL_negotiate_autonomy
-		icon = GFX_focus_SOV_transcaucasian_republic
-		prerequisite = { 
-			focus = VOL_kuban_question
-		}
-		available = {
-			country_exists = KUB
-		}
-		mutually_exclusive = {
-			focus = VOL_clamp_down_the_rada
-		}
-		x = -1
-		y = 1
-		relative_position_id = VOL_kuban_question
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
-		}
+	# focus = {
+	# 	id = VOL_negotiate_autonomy
+	# 	icon = GFX_focus_SOV_transcaucasian_republic
+	# 	prerequisite = { 
+	# 		focus = VOL_kuban_question
+	# 	}
+	# 	available = {
+	# 		country_exists = KUB
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = VOL_clamp_down_the_rada
+	# 	}
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = VOL_kuban_question
+	# 	cost = 5
+	# 	search_filters = {  
+	# 		FOCUS_FILTER_ANNEXATION
+	# 	}
 
-		ai_will_do = {
-			factor = 100
-		}
+	# 	ai_will_do = {
+	# 		factor = 100
+	# 	}
 
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SRA_kuban_rada_2
-				add_idea = SRA_kuban_rada_4
-			}
-		}
-	}
+	# 	completion_reward = {
+	# 		swap_ideas = {
+	# 			remove_idea = SRA_kuban_rada_2
+	# 			add_idea = SRA_kuban_rada_4
+	# 		}
+	# 	}
+	# }
 	
+	# focus = {
+	# 	id = VOL_autonomous_rada
+	# 	icon = GFX_focus_SOV_transcaucasian_republic
+	# 	prerequisite = { 
+	# 		focus = VOL_negotiate_autonomy
+	# 	}
+	# 	available = {
+	# 		country_exists = KUB
+	# 	}
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = VOL_negotiate_autonomy
+	# 	cost = 5
+	# 	search_filters = {  
+	# 		FOCUS_FILTER_ANNEXATION
+	# 	}
+
+	# 	ai_will_do = {
+	# 		factor = 100
+	# 	}
+
+	# 	completion_reward = {
+	# 		swap_ideas = {
+	# 			remove_idea = SRA_kuban_rada_4
+	# 			add_idea = SRA_kuban_rada_5
+	# 		}
+	# 	}
+	# }
+
+	# focus = {
+	# 	id = VOL_clamp_down_the_rada
+	# 	icon = GFX_focus_SOV_transcaucasian_republic
+	# 	prerequisite = { 
+	# 		focus = VOL_kuban_question
+	# 	}
+	# 	available = {
+	# 		country_exists = KUB
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = VOL_negotiate_autonomy
+	# 	}
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = VOL_kuban_question
+	# 	cost = 5
+	# 	search_filters = {  
+	# 		FOCUS_FILTER_ANNEXATION
+	# 	}
+
+	# 	ai_will_do = {
+	# 		factor = 100
+	# 	}
+
+	# 	completion_reward = {
+	# 		swap_ideas = {
+	# 			remove_idea = SRA_kuban_rada_2
+	# 			add_idea = SRA_kuban_rada_3
+	# 		}
+	# 	}
+	# }
+
+	# focus = {
+	# 	id = VOL_disband_the_rada
+	# 	icon = GFX_focus_SOV_transcaucasian_republic
+	# 	prerequisite = { 
+	# 		focus = VOL_clamp_down_the_rada
+	# 	}
+	# 	available = {
+	# 		country_exists = KUB
+	# 	}
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = VOL_clamp_down_the_rada
+	# 	cost = 5
+	# 	search_filters = {  
+	# 		FOCUS_FILTER_ANNEXATION
+	# 	}
+
+	# 	ai_will_do = {
+	# 		factor = 100
+	# 	}
+
+	# 	completion_reward = {
+	# 		remove_ideas = SRA_kuban_rada_3
+	# 	}
+	# }
+
 	focus = {
-		id = VOL_autonomous_rada
-		icon = GFX_focus_SOV_transcaucasian_republic
-		prerequisite = { 
-			focus = VOL_negotiate_autonomy
-		}
-		available = {
-			country_exists = KUB
-		}
-		x = 0
-		y = 1
-		relative_position_id = VOL_negotiate_autonomy
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SRA_kuban_rada_4
-				add_idea = SRA_kuban_rada_5
-			}
-		}
-	}
-
-	focus = {
-		id = VOL_clamp_down_the_rada
-		icon = GFX_focus_SOV_transcaucasian_republic
-		prerequisite = { 
-			focus = VOL_kuban_question
-		}
-		available = {
-			country_exists = KUB
-		}
-		mutually_exclusive = {
-			focus = VOL_negotiate_autonomy
-		}
-		x = 1
-		y = 1
-		relative_position_id = VOL_kuban_question
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SRA_kuban_rada_2
-				add_idea = SRA_kuban_rada_3
-			}
-		}
-	}
-
-	focus = {
-		id = VOL_disband_the_rada
-		icon = GFX_focus_SOV_transcaucasian_republic
-		prerequisite = { 
-			focus = VOL_clamp_down_the_rada
-		}
-		available = {
-			country_exists = KUB
-		}
-		x = 0
-		y = 1
-		relative_position_id = VOL_clamp_down_the_rada
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			remove_ideas = SRA_kuban_rada_3
-		}
-	}
-
-	focus = {
-		id = VOL_domestic_reforms
+		id = VOL_special_meeting
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { 
-			focus = VOL_establish_governor_generals 
+			focus = VOL_ice_march
 		}
 		available = {
-			NOT = {
-				has_idea = VOL_organize_government
-			}
+
 		}
-		x = -6
+		x = -10
 		y = 1
-		relative_position_id = VOL_establish_governor_generals
+		relative_position_id = VOL_ice_march
 		cost = 10
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
@@ -282,14 +285,14 @@ focus_tree = {
 		id = VOL_OSVAG
 		icon = GFX_focus_SOV_transcaucasian_republic
 		prerequisite = { 
-			focus = VOL_domestic_reforms
+			focus = VOL_special_meeting
 		}
 		available = {
 			country_exists = KUB
 		}
 		x = 0
 		y = 1
-		relative_position_id = VOL_domestic_reforms
+		relative_position_id = VOL_special_meeting
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_ANNEXATION
@@ -313,14 +316,14 @@ focus_tree = {
 		id = VOL_agrarian_question
 		icon = GFX_focus_SOV_transcaucasian_republic
 		prerequisite = { 
-			focus = VOL_domestic_reforms
+			focus = VOL_special_meeting
 		}
 		available = {
 			country_exists = KUB
 		}
 		x = 2
 		y = 1
-		relative_position_id = VOL_domestic_reforms
+		relative_position_id = VOL_special_meeting
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_ANNEXATION
@@ -370,18 +373,18 @@ focus_tree = {
 		id = VOL_ask_for_entente_intervention
 		icon = GFX_focus_ger_strike_at_the_source
 		prerequisite = { 
-			focus = VOL_assert_office
+			focus = VOL_ice_march
 		}
 		available = {
 			NOT = {
 				ENG = {
-					is_great_war_looser = yes
+					has_country_flag = great_war_loser
 				}
 			}
 		}
 		x = 0
 		y = 1
-		relative_position_id = VOL_assert_office
+		relative_position_id = VOL_ice_march
 		cost = 2
 		search_filters = {  
 			FOCUS_FILTER_ANNEXATION
@@ -394,9 +397,15 @@ focus_tree = {
 			USA = {
 				country_event = ww1_sra.6
 			}
+			FRA = {
+				country_event = ww1_sra.6
+			}
+			hidden_effect = {
+				country_event = ww1_sra.18
+			}
 		}
 	}
-
+	# permanent british mission
 	focus = {
 		id = VOL_british_military_mission
 		icon = GFX_focus_ger_strike_at_the_source
@@ -405,6 +414,15 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = vol_british_accepted
+			NOT = {
+				ENG = {
+					has_country_flag = great_war_loser
+				}
+			}
+		}
+		allow_branch = {
+			tag = SRA
+			has_completed_focus = VOL_ask_for_entente_intervention
 		}
 		x = 0
 		y = 1
@@ -415,6 +433,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			# will be changed to british decisions with event onwards 
 			ENG = {
 				country_event = {
 					id = ww1_sra.15
@@ -427,11 +446,11 @@ focus_tree = {
 		id = VOL_foreign_relations
 		icon = GFX_goal_generic_intelligence_exchange
 		 prerequisite = { 
-			focus = VOL_establish_governor_generals
+			focus = VOL_kuban_question
 		 }
-		x = 0
+		x = -2
 		y = 1
-		 relative_position_id = VOL_establish_governor_generals
+		 relative_position_id = VOL_kuban_question
 		cost = 10
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
@@ -446,14 +465,14 @@ focus_tree = {
 		id = VOL_ukrainian_question
 		icon = GFX_focus_POL_ukrainian_army
 		prerequisite = { 
-			focus = VOL_foreign_relations
+			focus = VOL_AFSR
 		}
 		available = {
 
 		}
 		x = -2
 		y = 1
-		relative_position_id = VOL_foreign_relations
+		relative_position_id = VOL_AFSR
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
@@ -465,116 +484,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = VOL_don_host_question
-		icon = GFX_focus_POL_ukrainian_army
-		prerequisite = { 
-			focus = VOL_foreign_relations
-		}
-		available = {
-
-		}
-		x = 0
-		y = 1
-		relative_position_id = VOL_foreign_relations
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_POLITICAL 
-		}
-
-		completion_reward = {
-			#tbd
-			#probably jews included 
-		}
-	}
-
-	focus = {
-		id = VOL_dual_reign
-		icon = GFX_focus_POL_ukrainian_army
-		prerequisite = { 
-			focus = VOL_don_host_question
-		}
-		available = {
-
-		}
-		mutually_exclusive = {
-			focus = VOL_political_game
-		}
-		x = -1
-		y = 1
-		relative_position_id = VOL_don_host_question
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_POLITICAL 
-		}
-
-		completion_reward = {
-			add_ideas = {
-				SRA_dual_reign
-			}
-		}
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 100
-				ENG = {
-					is_great_war_looser = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = VOL_political_game
-		icon = GFX_focus_POL_ukrainian_army
-		prerequisite = { 
-			focus = VOL_don_host_question
-		}
-		available = {
-
-		}
-		mutually_exclusive = {
-			focus = VOL_dual_reign
-		}
-		x = 1
-		y = 1
-		relative_position_id = VOL_don_host_question
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_POLITICAL 
-		}
-
-		completion_reward = {
-			add_ideas = {
-				SRA_political_game
-				SRA_cossack_distrust
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				ENG = {
-					is_great_war_looser = yes
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = VOL_AFSR
 		icon = GFX_focus_POL_ukrainian_army
 		prerequisite = { 
-			focus = VOL_dual_reign
-			focus = VOL_political_game
+			focus = VOL_kuban_question
 		}
 		available = {
 
 		}
 		x = 0
-		y = 2
-		relative_position_id = VOL_don_host_question
+		y = 1
+		relative_position_id = VOL_kuban_question
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
@@ -588,6 +508,9 @@ focus_tree = {
 				DON = {
 					country_event = ww1_sra.2
 				}
+				hidden_effect = {
+
+				}
 			}
 			if = {
 				limit = {
@@ -600,14 +523,88 @@ focus_tree = {
 	}
 
 	focus = {
+		id = VOL_moscow_directive
+		icon = GFX_focus_POL_ukrainian_army
+		prerequisite = { 
+			focus = VOL_AFSR
+		}
+		available = {
+
+		}
+		allow_branch = {
+			tag = SRA
+			has_completed_focus = VOL_AFSR
+			has_country_flag = afsr
+			has_country_leader = {
+				character = RUS_anton_denikin
+				ruling_only = yes
+			}	
+		}
+		x = 0
+		y = 1
+		relative_position_id = VOL_AFSR
+		cost = 5
+		search_filters = {  
+			FOCUS_FILTER_POLITICAL 
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = VOL_ufa_directive
+		icon = GFX_focus_POL_ukrainian_army
+		prerequisite = { 
+			focus = VOL_AFSR
+		}
+		available = {
+
+		}
+		allow_branch = {
+			tag = SRA
+			has_completed_focus = VOL_AFSR
+			has_country_flag = afsr
+			NOT = {
+				has_completed_focus = VOL_moscow_directive
+			}
+			has_country_leader = {
+				character = RUS_pyotr_wrangel
+				ruling_only = yes
+			}	
+		}
+		offset = {
+			y = 0
+			trigger = {
+				has_country_leader = {
+					character = RUS_pyotr_wrangel
+					ruling_only = yes
+				}		
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = VOL_AFSR
+		cost = 5
+		search_filters = {  
+			FOCUS_FILTER_POLITICAL 
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
 		id = VOL_open_up_mobilization
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { 
-			focus = VOL_assert_office 
+			focus = VOL_ice_march 
 		}
 		x = 4
 		y = 1
-		relative_position_id = VOL_assert_office
+		relative_position_id = VOL_ice_march
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
@@ -620,7 +617,7 @@ focus_tree = {
 			}
 			234 = {
 				create_unit = {
-					division = "division_template = \"Pekhotnaya Diviziya\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					division = "division_template = \"Pekhotnaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1"
 					owner = SRA
 					allow_spawning_on_enemy_provs = yes
 					count = 10
@@ -639,24 +636,32 @@ focus_tree = {
 		}
 	}
 
-	# focus = {
-	# 	id = VOL_tO-be_determined
-	# 	icon = GFX_focus_convention
-	# 	prerequisite = { 
-	# 		focus = VOL_open_up_mobilization
-	# 	}
-	# 	x = -2
-	# 	y = 1
-	# 	relative_position_id = VOL_open_up_mobilization
-	# 	cost = 10
-	# 	search_filters = {  
-	# 		FOCUS_FILTER_POLITICAL 
-	# 	}
+	focus = {
+		id = VOL_shock_batallions
+		icon = GFX_focus_convention
+		prerequisite = { 
+			focus = VOL_open_up_mobilization
+		}
+		x = 0
+		y = 1
+		relative_position_id = VOL_open_up_mobilization
+		cost = 10
+		search_filters = {  
+			FOCUS_FILTER_POLITICAL 
+		}
 
-	# 	completion_reward = {
-	# 		unlock_decision_category_tooltip = VOL_land_reforms
-	# 	}
-	# }
+		allow_branch = {
+			tag = SRA
+			has_country_leader = {
+				character = RUS_lavr_kornilov
+				ruling_only = yes
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = VOL_shock_batallions_tt
+		}
+	}
 
 	focus = {
 		id = VOL_rehabilitate_officers
@@ -672,6 +677,16 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL 
 		}
 
+		offset = {
+			x = 2
+			trigger = {
+				has_country_leader = {
+					character = RUS_lavr_kornilov
+					ruling_only = yes
+				}		
+			}
+		}
+
 		completion_reward = {
 			add_command_power = 50
 			army_experience = 100
@@ -684,7 +699,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = VOL_open_up_mobilization
 		}
-		x = 2
+		x = -2
 		y = 1
 		relative_position_id = VOL_open_up_mobilization
 		cost = 10
@@ -745,12 +760,32 @@ focus_tree = {
 		prerequisite = { 
 			focus = VOL_open_up_mobilization
 		}
-		x = 4
+		x = 2
 		y = 1
 		relative_position_id = VOL_open_up_mobilization
 		cost = 10
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
+		}
+
+		offset = {
+			x = 2
+			trigger = {
+				has_country_leader = {
+					character = RUS_pyotr_wrangel
+					ruling_only = yes
+				}		
+			}
+		}
+
+		offset = {
+			x = 2
+			trigger = {
+				has_country_leader = {
+					character = RUS_lavr_kornilov
+					ruling_only = yes
+				}		
+			}
 		}
 
 		completion_reward = {
@@ -778,17 +813,30 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = SRA_counter_intelligence
+			upgrade_intelligence_agency = upgrade_passive_defense
+			upgrade_intelligence_agency = upgrade_passive_defense
 		}
 	}
-
+ 
 	focus = {
 		id = VOL_army_reform
 		icon = GFX_focus_convention
 		prerequisite = { 
-			focus = VOL_open_up_mobilization
+			focus = VOL_rehabilitate_officers
 		}
 		prerequisite = { 
 			focus = VOL_british_military_mission
+		}
+		available = {
+			has_idea = x
+			has_idea = x
+			has_idea = x
+			has_idea = x
+		}
+		allow_branch = {
+			tag = SRA
+			has_completed_focus = VOL_rehabilitate_officers
+			has_completed_focus = VOL_british_military_mission
 		}
 		x = -1
 		y = 2
@@ -907,316 +955,41 @@ focus_tree = {
 		}
 	}
 
-	#Will be recycled
-
-	focus = {
-		id = VOL_learn_from_great_war
-		icon = GFX_goal_generic_army_doctrines
-		x = 15
-		y = 0
-		relative_position_id = VOL_assert_office
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
-		}
-		available = {
-			NOT = {
-				has_idea = VOL_marching_army
-			}
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = RUS_reorg_general_staff
-				cost_reduction = 0.5
-				uses = 3
-				category = land_doctrine
-			}
-			#unlock_decision_category_tooltip = VOL_recruit_local_cossacks
-		}
-	}
-
-	focus = {
-		id = VOL_restructure_military
-		icon = GFX_focus_rus_volunteer_army
-		prerequisite = { 
-			focus = VOL_learn_from_great_war
-		}
-		x = -1
-		y = 1
-		relative_position_id = VOL_learn_from_great_war
-		cost = 10
-		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
-		}
-		
-		completion_reward = {
-			remove_ideas = VOL_military_chaos
-			# unlock_decision_category_tooltip = VOL_military_reform
-		}
-	}
-
-	focus = {
-		id = VOL_white_veteran_officers
-		icon = GFX_focus_rus_white_guard
-		prerequisite = { 
-			focus = VOL_restructure_military
-		}
-		x = -2
-		y = 1
-		relative_position_id = VOL_restructure_military
-		cost = 10
-		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
-		}
-		
-		completion_reward = {
-			add_ideas = VOL_idea_volunteer_army
-		}
-	}
-	#will be changed later to decisions
-	focus = {
-		id = VOL_recruit_local_cossacks
-		icon = GFX_focus_rus_yunarmiya
-		prerequisite = { 
-			focus = VOL_restructure_military
-		}
-		x = 0
-		y = 1
-		relative_position_id = VOL_restructure_military
-		cost = 10
-		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
-		}
-		
-		available = {
-			235 = {
-				is_controlled_by = ROOT
-			}
-
-			579 = {
-				is_controlled_by = ROOT
-			}
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = VOL_recruit_local_cossacks_tt
-			hidden_effect = {
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Pervaya kazach'ya kavaleriya\" division_template = \"Gvardeyskaya Kavaleriyskaya Diviziya\" start_experience_factor = 1.0" 
-						owner = VOL
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Vtoraya kazach'ya kavaleriya\" division_template = \"Gvardeyskaya Kavaleriyskaya Diviziya\" start_experience_factor = 1.0" 
-						owner = VOL
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Tretiy kazach'ya kavaleriya\" division_template = \"Gvardeyskaya Kavaleriyskaya Diviziya\" start_experience_factor = 1.0" 
-						owner = VOL
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Chetvertyy kazach'ya kavaleriya\" division_template = \"Gvardeyskaya Kavaleriyskaya Diviziya\" start_experience_factor = 1.0" 
-						owner = VOL
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Pyatyy kazach'ya kavaleriya\" division_template = \"Gvardeyskaya Kavaleriyskaya Diviziya\" start_experience_factor = 1.0" 
-						owner = VOL
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = VOL_request_entente_equipment
-		icon = GFX_TUR_steal_occupier_equipment
-		prerequisite = {
-			focus = VOL_learn_from_great_war focus = VOL_fortify_crimea					 
-		}
-		available = {
-			controls_province = 3686
-		}
-		x = 1
-		y = 2
-		relative_position_id = VOL_learn_from_great_war
-		cost = 5
-		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
-		}
-		
-		completion_reward = {
-			#lend lease event sequence
-			country_event = {
-				id = ww1_sra.1
-			}
-			activate_mission = VOL_lend_lease_1
-		}
-	}
-
-	focus = {
-		id = VOL_entente_trained_troops
-		icon = GFX_focus_generic_military_mission
-		prerequisite = { 
-			focus = VOL_request_entente_equipment
-		}
-		x = -1
-		y = 1
-		relative_position_id = VOL_request_entente_equipment
-		cost = 10
-		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
-		}
-		
-		completion_reward = {
-			hidden_effect = {
-				set_technology = {
-					basic_heavy_tank = 1
-				}
-				add_equipment_to_stockpile = {
-					type = heavy_tank_chassis_1
-					amount = 500
-				}
-				division_template = {
-					name = "Entente Division"
-					priority = 2
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Pervaya Imperskaya Gvardeyskaya Diviziya\" division_template = \"Entente Division\" start_experience_factor = 1.0\"start_equipment_factor = 1.0"
-					owner = VOL
-				}
-			}
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Vtoraya Imperskaya Gvardeyskaya Diviziya\" division_template = \"Entente Division\" start_experience_factor = 1.0\"start_equipment_factor = 1.0" 
-					owner = VOL
-				}
-			}
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Tret'ya Imperskaya Gvardeyskaya Diviziya\" division_template = \"Entente Division\" start_experience_factor = 1.0\"start_equipment_factor = 1.0" 
-					owner = VOL
-				}
-			}
-			add_ideas = VOL_entente_advisors
-		}
-	}
-
-	focus = {
-		id = VOL_tonk_division
-		icon = GFX_focus_generic_mark_IV_tank
-		prerequisite = { 
-			focus = VOL_request_entente_equipment
-		}
-		x = 1
-		y = 1
-		relative_position_id = VOL_request_entente_equipment
-		cost = 10
-		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
-		}
-		available = {
-			ENG = {
-				has_tech = basic_heavy_tank
-			}
-		}
-
-		completion_reward = {
-			hidden_effect = {
-				set_technology = {
-					basic_heavy_tank = 1
-				}
-				add_equipment_to_stockpile = {
-					type = heavy_tank_chassis_1
-					amount = 500
-				}
-				division_template = {
-					name = "Tankovaya diviziya"
-					priority = 2
-					regiments = {
-						heavy_armor = { x = 0 y = 0 }
-						heavy_armor = { x = 0 y = 1 }
-						heavy_armor = { x = 0 y = 2 }
-			
-						heavy_armor = { x = 1 y = 0 }
-						heavy_armor = { x = 1 y = 1 }
-						heavy_armor = { x = 1 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Pervaya tankovaya diviziya\" division_template = \"Tankovaya diviziya\" start_experience_factor = 1.0\"start_equipment_factor = 1.0"
-					owner = VOL
-				}
-			}
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Vtoraya tankovaya diviziya\" division_template = \"Tankovaya diviziya\" start_experience_factor = 1.0\"start_equipment_factor = 1.0" 
-					owner = VOL
-				}
-			}
-		}
-	}
-
 	focus = {
 		id = VOL_wrangels_fleet
 		icon = GFX_focus_generic_cruiser2
-		x = 2.5
-		y = 0
-		relative_position_id = VOL_learn_from_great_war
-		# mutually_exclusive = {
-		# 	focus = VOL_conscript_sailors
-		# }
+		x = 2
+		y = 1
+		relative_position_id = VOL_open_up_mobilization
+		prerequisite = { 
+			focus = VOL_open_up_mobilization
+		}
 		cost = 5
 		search_filters = {  
 			FOCUS_FILTER_NAVY_XP
+		}
+		offset = {
+			x = 2
+			trigger = {
+				has_country_leader = {
+					character = RUS_lavr_kornilov
+					ruling_only = yes
+				}		
+			}
 		}
 		available = {
 			has_country_leader = {
 				character = RUS_pyotr_wrangel
 			}
 			NOT = {
-				has_idea = VOL_marching_army
+				has_idea = SRA_marching_army
+			}
+		}
+		allow_branch = {
+			tag = SRA
+			has_country_leader = {
+				character = RUS_pyotr_wrangel
+				ruling_only = yes
 			}
 		}
 		completion_reward = {
@@ -1232,6 +1005,10 @@ focus_tree = {
 		icon = GFX_focus_otto_naval_train
 		prerequisite = { 
 			focus = VOL_wrangels_fleet 
+		}
+		available = {
+			controls_state = 137
+			controls_state = 955
 		}
 		x = 0
 		y = 1
@@ -1249,6 +1026,8 @@ focus_tree = {
 					province = 3722
 					instant_build = yes
 				}
+			}
+			955 = {
 				add_building_construction = {
 					type = bunker
 					level = 2
@@ -1258,25 +1037,4 @@ focus_tree = {
 			}
 		}
 	}
-
-	# focus = {
-	# 	id = VOL_black_sea_corridor
-	# 	icon = GFX_TUR_claim_caucasian_turan
-	#	 prerequisite = { 
-	#		 focus = VOL_fortify_crimea
-	#	 }
-	# 	x = 0
-	# 	y = 1
-	#	 relative_position_id = VOL_fortify_crimea
-	# 	cost = 10
-	# 	search_filters = {  
-	#		 FOCUS_FILTER_NAVY_XP
-	#	 }
-		
-	
-
-	# 	completion_reward = {
-	# 		#romanian event
-	# 	}
-	# }
 }

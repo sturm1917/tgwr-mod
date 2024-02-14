@@ -118,6 +118,16 @@ RUS_our_friends_can_handle_it_without_russian_help = {
 		id = "SER"
 		value = 10000
 	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "KUW"
+		value = 10000
+	}
+	ai_strategy = {
+		type = ignore
+		id = "KUW"
+		value = 10000
+	}
 }
 RUS_white_guard_ignore_great_power = {
 	allowed = {
@@ -1062,6 +1072,81 @@ SRA_rush_kuban = {
 		ordertype = front
 		execution_type = rush
 		execute_order = yes
+	}
+}
+
+CRI_ignore_VOL = {
+	allowed = {
+		tag = CRI
+	}
+	enable = {
+		has_country_flag = french_intervention
+	}
+	abort = {
+		has_war = no
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SRA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = DON
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = KUB
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = RUS
+		value = 100
+	}
+}
+
+VOL_ignore_CRI = {
+	allowed = {
+		tag = SRA
+	}
+	enable = {
+		CRI = {
+			exists = yes
+		}
+	}
+	abort = {
+		CRI = {
+			exists = no
+		}
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CRI
+		value = 100
+	}
+}
+
+VOL_dont_help_don = {
+	allowed = {
+		tag = SRA
+	}
+	enable = {
+		has_idea = SRA_marching_army
+	}
+	abort = {
+		NOT = {
+			has_idea = SRA_marching_army
+		}
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = DON
+		value = 100
 	}
 }
 
