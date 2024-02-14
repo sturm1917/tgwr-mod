@@ -476,6 +476,7 @@ focus_tree = {
 		icon = GFX_focus_hol_oranje_boven
 		cost = 5
 		prerequisite = {focus = HOL_east_indies_rubber}
+		mutually_exclusive =  {focus = HOL_colonial_exploitation}
 		x = -1
 		y = 2
 		relative_position_id = HOL_east_indies_investment
@@ -485,6 +486,18 @@ focus_tree = {
 		days = 200}}
 		}
 		
+	focus = {
+	    id = HOL_colonial_exploitation
+		icon = GFX_focus_hol_oranje_boven
+		cost = 5
+		prerequisite = {focus = HOL_east_indies_rubber}
+		mutually_exclusive = {focus = HOL_dei_industrialisation}
+		x = 1
+		y = 2
+		relative_position_id = HOL_east_indies_investment
+		}
+		
+		
 		### Military ###
 		
 		### Army ###
@@ -493,7 +506,7 @@ focus_tree = {
 	    id = HOL_army_modernisation
 		icon = GFX_focus_generic_military_mission
 		cost = 5
-		x = 23
+		x = 24
 		y = 0
 		}
 		
@@ -502,8 +515,92 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		cost = 5
 		prerequisite = {focus = HOL_army_modernisation}
-		x = -1 
+		x = -2
 		y = 1
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_invest_into_artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5
+		prerequisite = {focus = HOL_domestic_arms focus = HOL_purchase_equipment}
+		x = 4
+		y = 2
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_army_training
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {focus = HOL_army_modernisation}
+		x = 0
+		y = 1
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_defensive_strategies
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {focus = HOL_army_training}
+		mutually_exclusive = {focus = HOL_increase_firepower}
+		x = -1
+		y = 3
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_increase_firepower
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {focus = HOL_army_training}
+		mutually_exclusive = {focus = HOL_defensive_strategies}
+		x = 1
+		y = 3
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_purchase_equipment
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {focus = HOL_army_modernisation}
+		mutually_exclusive = {focus = HOL_domestic_arms}
+		x = 5
+		y = 1
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_expand_purchases
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {focus = HOL_purchase_equipment}
+		x = 5
+		y = 3
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_domestic_arms
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {focus = HOL_army_modernisation}
+		mutually_exclusive = {focus = HOL_purchase_equipment}
+		x = 3
+		y = 1
+		relative_position_id = HOL_army_modernisation
+		}
+		
+	focus = {
+	    id = HOL_standard_equipment_production
+		icon = GFX_focus_generic_military_mission
+		cost = 5 
+		prerequisite = {focus = HOL_domestic_arms}
+		x = 3
+		y = 3
 		relative_position_id = HOL_army_modernisation
 		}
 		
@@ -513,7 +610,7 @@ focus_tree = {
 	    id = HOL_naval_modernisation
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 5
-		x = 27
+		x = 33
 		y = 0
 		}
 	
@@ -564,7 +661,7 @@ focus_tree = {
 	    id = HOL_army_aviation_group
 		icon = GFX_goal_generic_air_production
 		cost = 5
-		x = 32
+		x = 38
 		y = 0
 		completion_reward = {
 		add_tech_bonus = {
