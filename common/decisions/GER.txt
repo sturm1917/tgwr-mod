@@ -7098,65 +7098,65 @@ zabern_consequences_category = {
 	concilliation_with_the_miltary = {
 		icon = GFX_decision_generic_prepare_civil_war
 		available = {
-		has_completed_focus = GER_Continue_the_Von_Hollweg_chancellery
-		has_idea = GER_idea_dishonored_military
-	}
-	fire_only_once = yes
+			has_completed_focus = GER_Continue_the_Von_Hollweg_chancellery
+			has_idea = GER_idea_dishonored_military
+		}
+		fire_only_once = yes
 	    visible = {
 	    }
-	cost = 65
-	complete_effect = {
-	}
-	days_remove = 100
-	remove_effect = {		
-	remove_ideas = GER_idea_dishonored_military
-    }
-	ai_will_do = {
-		factor = 100
+		cost = 65
+		complete_effect = {
+		}
+		days_remove = 100
+		remove_effect = {		
+		remove_ideas = GER_idea_dishonored_military
+		}
+		ai_will_do = {
+			factor = 100
 	    }
     }
 	build_alliances_in_the_reichstag = {
 		icon = GFX_decision_generic_political_discourse
 		available = {
-		has_completed_focus = GER_Continue_the_Von_Hollweg_chancellery
-		has_idea = GER_idea_disloyal_reichstag
-	}
-	fire_only_once = yes
-	    visible = {
-	    }
-	cost = 100
-	complete_effect = {
-	}
-	days_remove = 60
-	remove_effect = {		
-	remove_ideas = GER_idea_disloyal_reichstag
-    }
-	ai_will_do = {
-		factor = 100
+			has_completed_focus = GER_Continue_the_Von_Hollweg_chancellery
+			has_idea = GER_idea_disloyal_reichstag
+		}
+		fire_only_once = yes
+			visible = {
+			}
+		cost = 100
+		complete_effect = {
+		}
+		days_remove = 60
+		remove_effect = {		
+		remove_ideas = GER_idea_disloyal_reichstag
+		}
+		ai_will_do = {
+			factor = 100
 	    }
     }
 	finance_propoganda_campaigns_in_alsace_lorraine = {
 		icon = GFX_decision_eng_trade_unions_demand
 		available = {
-		has_completed_focus = GER_Continue_the_Von_Hollweg_chancellery
-		has_idea = GER_idea_unrest_in_alsace_lorraine
-		or = {
-		has_completed_focus = GER_An_empty_chancellorship
-		has_idea = GER_idea_unrest_in_alsace_lorraine	
+			has_completed_focus = GER_Continue_the_Von_Hollweg_chancellery
+			has_idea = GER_idea_unrest_in_alsace_lorraine
+			or = {
+				has_completed_focus = GER_An_empty_chancellorship
+				has_idea = GER_idea_unrest_in_alsace_lorraine	
+			}
 		}
-	}
-	fire_only_once = yes
-	    visible = {
-	    }
-	cost = 150
-	complete_effect = {
-	}
-	days_remove = 100
-	remove_effect = {		
-	remove_ideas = GER_idea_unrest_in_alsace_lorraine
-    }
-	ai_will_do = {
-		factor = 100
+		fire_only_once = yes
+			visible = {
+			}
+		cost = 150
+		complete_effect = {
+		}
+		days_remove = 100
+		remove_effect = {		
+		remove_ideas = GER_idea_unrest_in_alsace_lorraine
+		}
+		ai_will_do = {
+			factor = 100
 	    }
     }
 }
