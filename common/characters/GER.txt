@@ -521,11 +521,11 @@ characters={
 		advisor={
 			slot = navy_chief
 			idea_token = GER_alfred_von_tirpitz
+			can_be_fired = no
 			allowed  = {
 				original_tag  = GER 
 			}
 			available  = {
-				has_completed_focus  = GER_naval_supremacy 
 				not  = {
 					has_government  = communism 
 					has_country_flag = great_war_loser
@@ -810,6 +810,23 @@ characters={
 	}
 	GER_friedrich_ebert={
 		name="GER_friedrich_ebert"
+		advisor={
+			slot = political_advisor
+			idea_token = GER_friedrich_ebert
+			can_be_fired = no
+			allowed  = {
+				original_tag  = GER 
+			}
+			traits  = {
+				charismatic
+			}
+			available = {
+				has_completed_focus = GER_the_liberal_choice
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
 		portraits={
 			civilian={
 				large="gfx/leaders/GER/GER_friedrich_ebert.png"
@@ -2573,6 +2590,7 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = GER_theobald_von_bethmann_hollweg
+			can_be_fired = no
 			allowed  = {
 				original_tag  = GER 
 			}

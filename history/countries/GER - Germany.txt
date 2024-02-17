@@ -145,6 +145,9 @@ recruit_character = GER_Felix_von_Bothmer
 recruit_character = GER_adolf_hitler
 recruit_character = GER_heinrich_brunning
 
+activate_advisor = GER_theobald_von_bethmann_hollweg
+activate_advisor = GER_alfred_von_tirpitz
+
 1910.1.1 = {
 	set_air_oob = "GER_1910_air_legacy"
 	set_technology = {
@@ -252,7 +255,8 @@ recruit_character = GER_heinrich_brunning
 		GER_idea_influence_of_the_unions
 		GER_idea_sluggish_administration
 		
-		
+		GER_theobald_von_bethmannhollweg
+		GER_alfred_von_tirpitz
 	}
 	if = {
 		limit = {
@@ -1080,6 +1084,7 @@ recruit_character = GER_heinrich_brunning
 	}
 	add_political_power = 1198
 	add_command_power = 100
+	add_named_threat = {
 		threat = 5
 		name = GER_moroccan_crisis
 	}

@@ -59,6 +59,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			country_event = { id = ww1_germany.203 }
+			add_stability = 0.02
+			custom_effect_tooltip = ger4_tt
 		}
 	}
 	focus = {
@@ -128,7 +131,7 @@ focus_tree = {
 	focus = {
 		id = GER_The_1911_constitution_for_Alsace_Lorraine
 		icon = GFX_goal_unknown
-		cost = 100
+		cost = 0
 		relative_position_id = GER_Encourage_a_German_identity
 		prerequisite = {
 			focus = GER_Encourage_a_German_identity
@@ -136,12 +139,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
+			Always = no
 			has_government = neutrality
 			NOT = {
 				has_country_flag = great_war_loser
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = ger1_tt
 		}
 	}
 	focus = {
@@ -158,6 +163,7 @@ focus_tree = {
 			always = no
 		}
 		completion_reward = {
+			custom_effect_tooltip = ger2_tt
 		}
 	}
 	focus = {
@@ -217,11 +223,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 10
 			add_stability = 0.05
-			opinion_modifiers = {
-				test_diplomatic_modifier = {
-					value = 15     
-					decay = 0.5  #Someone fix this please
-				    }
+			add_opinion_modifiers = {
+				target = ENG
+				modifier = GER_repair_relations
+				decay = 0.5
 			    }
 			}
 		}
@@ -280,6 +285,9 @@ focus_tree = {
 			always = no
 		}
 		completion_reward = {
+			GER_theobald_von_bethmannhollweg = {
+				retire = yes
+			}
 		}
 	}
 	focus = {
@@ -291,7 +299,7 @@ focus_tree = {
 			focus = GER_An_empty_chancellorship
 		}
 		mutually_exclusive = {
-			focus = GER_The_liberal_choice
+			focus = GER_the_liberal_choice
 		}
 		x = -2
 		y = 1
@@ -302,6 +310,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			activate_advisor = GER_friedrich_ebert
 		}
 	}
 	focus = {
@@ -353,7 +362,7 @@ focus_tree = {
 				popularity = 0.01
 			}
 			add_political_power = -50
-			 # Will remove government in crisis idea - yet to be added, if you see this, please @me on discord so i remember (Shall)
+			remove_ideas = GER_idea_country_in_crisis
 		}
 	}
 	focus = {
@@ -433,7 +442,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_The_liberal_choice
+		id = GER_the_liberal_choice
 		icon = GFX_goal_unknown
 		cost = 5
 		relative_position_id = GER_An_empty_chancellorship
@@ -452,15 +461,16 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			activate_advisor = GER_friedrich_ebert
 		}
 	}
 	focus = {
 		id = GER_Punish_the_officer_corps
 		icon = GFX_focus_generic_court
 		cost = 1
-		relative_position_id = GER_The_liberal_choice
+		relative_position_id = GER_the_liberal_choice
 		prerequisite = {
-			focus = GER_The_liberal_choice
+			focus = GER_the_liberal_choice
 		}
 		x = 0
 		y = 1
@@ -471,6 +481,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			remove_ideas = GER_idea_country_in_crisis
+			add_ideas = GER_idea_dishonored_military
+			add_command_power = -20
 		}
 	}
 	focus = {
@@ -547,11 +560,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = ger6_tt
 		}
 	}
 	focus = {
 		id = GER_The_matter_of_the_Navy
-		icon = "GFX_focus_GER_navy"
+		icon = GFX_focus_GER_navy
 		cost = 5
 		relative_position_id = GER_Wilhelmsen_Policy
 		prerequisite = {
@@ -588,7 +602,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			 #Will increase the effects of the navy national spirit - yet to be added, waiting for my writer to write it
+			 remove_ideas = GER_idea_naval_arms_race
+			 add_ideas = GER_idea_naval_arms_race_2
 		}
 	}
 	focus = {
@@ -612,7 +627,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Further_research_on_dreadnaughts
-		icon = GFX_focus_generic_dreadnought_GER
+		icon = GFX_focus_dreadnought_GER
 		cost = 5
 		relative_position_id = GER_Continue_the_expansion_of_the_Navy
 		prerequisite = {
@@ -711,7 +726,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			 # Will remove the navy idea - yet to be added
+			remove_ideas = GER_idea_naval_arms_race_2
+			add_stability = 0.05
+			add_political_power = -0.015
+			add_command_power = -0.005
 		}
 	}
 	focus = {
@@ -807,7 +825,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-		}
+			ger_alfred_von_tirpitz = {
+				retire = yes
+	 }
+			}
 	}
 	focus = {
 		id = GER_Allow_the_foreign_minister_to_approach_Britannia
@@ -945,6 +966,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = ger5_tt
+			add_opinion_modifiers = {
+				target = AUH
+				modifier = GER_austrian_alliance
+				decay = 0.01
+				    }
 		}
 	}
 	focus = {
@@ -983,6 +1010,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 10
+			custom_effect_tooltip = ger3_tt
 		}
 	}
 	focus = {
@@ -1309,7 +1338,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Westplan
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_industry_3
 		cost = 10
 		relative_position_id = GER_The_Second_Industrial_Revolution
 		prerequisite = {
@@ -1390,7 +1419,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Ostplan
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_industry_2
 		cost = 5
 		relative_position_id = GER_The_Second_Industrial_Revolution
 		prerequisite = {
@@ -1564,9 +1593,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = great_war_loser
 			}
-			 #Add women in the work force idea
 		}
 		completion_reward = {
+			add_ideas = GER_idea_women_in_the_work_force
 		}
 	}
 	focus = {
@@ -1796,7 +1825,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_The_outbreak_of_war
-		icon = GFX_focus_generic_gas_masks_GER
+		icon = GFX_focus_gasmask
 		cost = 1
 		relative_position_id = GER_Invest_into_the_officer_corps
 		prerequisite = {
@@ -2628,7 +2657,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Send_military_aid_to_the_Austrians
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		cost = 10
 		relative_position_id = GER_Operation_B
 		prerequisite = {
@@ -2666,7 +2695,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Finance_an_Alpine_front
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_military
 		cost = 5
 		relative_position_id = GER_stabilize_war_in_the_Balkans
 		prerequisite = {

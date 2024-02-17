@@ -1,0 +1,36 @@
+establish_g_amsinck_and_co = { 
+	name = establish_g_amsinck_and_co
+	desc = establish_g_amsinck_and_co_desc
+	outcome = free_operative_free_in_transit_outcome
+	picture = "GFX_phase_free_operative_free_in_transit"
+	icon = "GFX_phase_free_operative_free_in_transit_small"
+	
+	requirements = {  }
+
+	equipment = {
+	}
+}
+money_launder_from_muller_schall_and_company = {
+	name = money_launder_from_muller_schall_and_company
+	desc = money_launder_from_muller_schall_and_company_desc
+	outcome = free_operative_free_in_transit_outcome
+	picture = "GFX_phase_free_operative_free_in_transit"
+	icon = "GFX_phase_free_operative_free_in_transit_small"
+	
+	requirements = {  }
+
+	equipment = {
+	}
+}
+money_launder_from_the_royal_bank_of_canada = {
+	name = money_launder_from_the_royal_bank_of_canada
+	desc = money_launder_from_the_royal_bank_of_canada_desc
+	outcome = free_operative_free_in_transit_outcome
+	picture = "GFX_phase_free_operative_free_in_transit"
+	icon = "GFX_phase_free_operative_free_in_transit_small"
+	
+	requirements = {  }
+
+	equipment = {
+	}
+}

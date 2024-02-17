@@ -1,0 +1,73 @@
+organize_German_sabotage_in_the_us = {
+	icon = GFX_operations_rescue_captured_operative
+	map_icon = GFX_operations_rescue_captured_operative_map
+	name = organize_German_sabotage_in_the_us
+	desc = organize_German_sabotage_in_the_us_desc
+	priority = 0
+	prevent_captured_operative_to_die = yes
+	days = 65
+	network_strength = 60
+	operatives = 2
+	visible = {
+		has_completed_focus = GER_Subsection_IIIB
+		original_tag = GER
+		FROM = {
+			tag = USA
+		}
+	}
+	available = {
+		NOT = {
+			has_war_with = USA
+			is_in_faction_with = USA
+		}
+	}
+	requirements = {
+	}
+	equipment = {
+	}
+	risk_chance = 0.2
+	experience = 2
+	cost_multiplier = 0
+	outcome_execute = {
+	}
+	outcome_potential = {
+	}
+	phases = {
+		#infiltration
+		infiltration_border = {
+			base = 95
+		}
+		infiltration_submarine = {
+			base = 1
+			modifier = {
+				FROM = {
+					has_completed_focus = GER_Submarine_Warfare_ideas
+				}
+				factor = 10
+			}
+		}
+	}
+	phases = {
+		establish_g_amsinck_and_co = {
+			base = 33
+		}
+		money_launder_from_muller_schall_and_company = {
+			base = 33
+		}
+		money_launder_from_the_royal_bank_of_canada = {
+			base = 33
+		}
+	}
+	phases = {
+		#exfiltration
+		exfiltration_border = {
+			base = 33
+		}
+		exfiltration_go_to_ground = {
+			base = 33
+		}
+		exfiltration_submarine_pickup = {
+			base = 33
+		}
+	}
+}
