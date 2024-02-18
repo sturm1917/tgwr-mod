@@ -161,7 +161,7 @@ GER_great_war = {
 				has_country_flag = TUR_abolished_caliph
 			}
 		}
-		cost = 50
+		cost = 25
 		fire_only_once = yes
 		complete_effect = {
 			add_war_support = 0.05
@@ -197,7 +197,7 @@ GER_great_war = {
 						is_core_of = controller
 					}
 				}
-				add_compliance = 10
+				add_compliance = 5
 			}
 			every_state = {
 				limit = {
@@ -18610,7 +18610,7 @@ TUR_ittihadist_coup_decisions = {
 			}
 			add_days_mission_timeout = {
 				mission = TUR_CUP_coup_averted
-				days = 45
+				days = 15
 			}
 		}
 	}
@@ -18962,9 +18962,7 @@ crisis = {
 		fire_only_once = yes
 		is_good = no
 		available = {
-			NOT = {
-				has_idea = TUR_idea_liberal_revenge
-			}
+			NOT = { has_idea = TUR_idea_liberal_revenge }
 		}
 		activation = {
 			has_country_flag = TUR_raid_on_sublime_porte_successful
@@ -19138,68 +19136,42 @@ political_actions = {
 			original_tag = TUR
 		}
 		available = {
-			is_faction_leader = no
-			has_capitulated = no
 			RUS = {
-				has_war_with = TUR
-			}
-			GER = {
-				has_war_with = RUS
+				has_war_with = GER
 			}
 		}
 		visible = {
-			has_completed_focus = TUR_freedom_by_blood
-			is_in_faction = no
-			original_tag = TUR
+			has_completed_focus = TUR_our_traditional_allies
+			is_subject_of = RUS
 			GER = {
 				is_faction_leader = yes
 			}
 		}
 		complete_effect = {
-			GER = {
-				country_event = {
-					id = ottoman.65
-					days = 8
+			RUS = { end_puppet = TUR }
+			leave_faction = yes
+			every_country = {
+				limit = {
+					has_war_with = RUS
+					has_war_with = TUR
 				}
+				white_peace = TUR
 			}
+			declare_war_on = {
+				target = RUS
+				type = independence_wargoal
+			}
+			RUS = { country_event = { id = ottoman.476 days = 8 } }
+			GER = { country_event = { id = ottoman.65 days = 8 } }
 		}
 		ai_will_do = {
-			base = 50
-		}
-	}
-	TUR_switch_to_the_french_side = {
-		icon = GFX_decision_generic_nationalism
-		allowed = {
-			original_tag = TUR
-		}
-		available = {
-			is_faction_leader = no
-			has_capitulated = no
-			RUS = {
-				has_war_with = TUR
-			}
-			FRA = {
-				has_war_with = RUS
-			}
-		}
-		visible = {
-			has_completed_focus = TUR_freedom_by_blood
-			is_in_faction = no
-			original_tag = TUR
-			FRA = {
-				is_faction_leader = yes
-			}
-		}
-		complete_effect = {
-			FRA = {
-				country_event = {
-					id = ottoman.65
-					days = 8
+			base = 0
+			modifier = {
+				add = 50
+				RUS = {
+					surrender_progress < 0.45
 				}
 			}
-		}
-		ai_will_do = {
-			base = 100
 		}
 	}
 	TUR_subjugate_egypt = {
@@ -23031,9 +23003,9 @@ TUR_economy_decision = {
 				}
 			}
 		}
-		cost = 10
+		cost = 5
 		fire_only_once = no
-		days_remove = 45
+		days_remove = 15
 		visible = {
 			FROM = {
 				exists = yes
@@ -23064,7 +23036,7 @@ TUR_economy_decision = {
 		complete_effect = {
 			set_country_flag = {
 				flag = has_active_purchase_contract
-				days = 45
+				days = 15
 				value = 1
 			}
 			if = {
@@ -23074,27 +23046,31 @@ TUR_economy_decision = {
 					}
 					ROOT = { has_completed_focus = TUR_german_ottoman_arms_deal }
 				}
-				TUR_add_debt_0295 = yes
+				TUR_add_debt_0098 = yes
 			}
 			else = {
-				TUR_add_debt_0492 = yes
+				TUR_add_debt_0148 = yes
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			if = {
 				limit = {
 					has_completed_focus = TUR_import_dependency
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 7000
+					amount = 5000
 					producer = FROM
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 5000
+					amount = 3000
 					producer = FROM
 				}
 			}
@@ -23194,9 +23170,9 @@ TUR_economy_decision = {
 				}
 			}
 		}
-		cost = 10
+		cost = 5
 		fire_only_once = no
-		days_remove = 30
+		days_remove = 15
 		visible = {
 			FROM = {
 				NOT = {
@@ -23210,7 +23186,7 @@ TUR_economy_decision = {
 		complete_effect = {
 			set_country_flag = {
 				flag = has_active_purchase_contract
-				days = 30
+				days = 15
 				value = 1
 			}
 			if = {
@@ -23220,13 +23196,17 @@ TUR_economy_decision = {
 					}
 					ROOT = { has_completed_focus = TUR_german_ottoman_arms_deal }
 				}
-				TUR_add_debt_0295 = yes
+				TUR_add_debt_0148 = yes
 			}
 			else = {
-				TUR_add_debt_0492 = yes
+				TUR_add_debt_0295 = yes
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			if = {
 				limit = {
 					has_completed_focus = TUR_import_dependency
@@ -23323,7 +23303,7 @@ TUR_economy_decision = {
 		}
 		cost = 10
 		fire_only_once = no
-		days_remove = 45
+		days_remove = 15
 		visible = {
 			FROM = {
 				NOT = {
@@ -23352,7 +23332,7 @@ TUR_economy_decision = {
 		complete_effect = {
 			set_country_flag = {
 				flag = has_active_purchase_contract
-				days = 45
+				days = 15
 				value = 1
 			}
 			if = {
@@ -23362,13 +23342,17 @@ TUR_economy_decision = {
 					}
 					ROOT = { has_completed_focus = TUR_german_ottoman_arms_deal }
 				}
-				TUR_add_debt_0295 = yes
+				TUR_add_debt_0148 = yes
 			}
 			else = {
-				TUR_add_debt_0492 = yes
+				TUR_add_debt_0295 = yes
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			if = {
 				limit = {
 					has_completed_focus = TUR_import_dependency
@@ -23464,7 +23448,7 @@ TUR_economy_decision = {
 		}
 		cost = 10
 		fire_only_once = no
-		days_remove = 45
+		days_remove = 30
 		visible = {
 			FROM = {
 				NOT = {
@@ -23487,18 +23471,22 @@ TUR_economy_decision = {
 					}
 					ROOT = { has_completed_focus = TUR_german_ottoman_arms_deal }
 				}
-				TUR_add_debt_0295 = yes
+				TUR_add_debt_0148 = yes
 			}
 			else = {
-				TUR_add_debt_0492 = yes
+				TUR_add_debt_0295 = yes
 			}
 			set_country_flag = {
 				flag = has_active_purchase_contract
-				days = 45
+				days = 30
 				value = 1
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			if = {
 				limit = {
 					has_completed_focus = TUR_import_dependency
@@ -23583,7 +23571,7 @@ TUR_economy_decision = {
 		}
 		cost = 10
 		fire_only_once = no
-		days_remove = 45
+		days_remove = 30
 		visible = {
 			FROM = {
 				NOT = {
@@ -23598,7 +23586,7 @@ TUR_economy_decision = {
 		complete_effect = {
 			set_country_flag = {
 				flag = has_active_purchase_contract
-				days = 45
+				days = 30
 				value = 1
 			}
 			if = {
@@ -23615,6 +23603,10 @@ TUR_economy_decision = {
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			if = {
 				limit = {
 					has_completed_focus = TUR_import_dependency
@@ -23727,9 +23719,13 @@ TUR_economy_decision = {
 				days = 30
 				value = 1
 			}
-			TUR_add_debt_0993 = yes
+			TUR_add_debt_0492 = yes
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			if = {
 				limit = {
 					has_completed_focus = TUR_a_deal_with_foreign_aircraft_designers
@@ -23836,6 +23832,10 @@ TUR_economy_decision = {
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			create_ship = {
 				type = ship_hull_pre_dreadnought
 				equipment_variant = "Brandenburg Class"
@@ -23917,6 +23917,10 @@ TUR_economy_decision = {
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			create_ship = {
 				type = ship_hull_pre_dreadnought
 				equipment_variant = "Majestic Class"
@@ -23998,6 +24002,10 @@ TUR_economy_decision = {
 			}
 		}
 		remove_effect = {
+			clr_country_flag = {
+				flag = has_active_purchase_contract
+				value = 1
+			}
 			create_ship = {
 				type = ship_hull_pre_dreadnought
 				equipment_variant = "Ruggiero di Lauria Class"

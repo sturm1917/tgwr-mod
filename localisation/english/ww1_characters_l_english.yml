@@ -33,7 +33,7 @@
  ALB_fan_noli:0 "Fan Noli"
  ALB_avni_rrustemi:0 "Avni Rrustemi"
  ALB_vittorio_emanuele_iii:0 "Viktor Emanueli"
- ALB_isa_boleteni:0 "Isa Boleteni"
+ ALB_isa_boletini:0 "Isa Boletini"
 
  # AMARAT
  AMR_fahd_bin_abdul_mohsen_al_hathal:0 "Fahd bin Abdul Mohsen Al Hathal"
@@ -304,6 +304,7 @@
  BLR_genrikh:0 "Genrikh"
  BLR_uladzimir:0 "Uladzimir"
  BLR_jan_sierada:0 "Jan Sierada"
+ BLR_stanislav_bulak_balakhovich:0 "Stanislav Bulak-Balakhovich"
 
  # BOLIVIA
  BOL_eliodoro_villazon:0 "Eliodoro Villazón"
@@ -1264,6 +1265,7 @@
  FRA_georges_leygues:0 "Georges Leygues"
  FRA_albert_pierre_sarraut:0 "Albert-Pierre Sarraut"
  VIN_albert_jean_george_marie_louis_picquie:0 "Albert Picquié"
+ VIN_ernest_roume:0 "Ernest Roume"
  FRA_milan_ratislav_stefanik:0 "Milan Štefánik"
  FRA_regency_council:0 "Conseil de Régence"
 VIN_joost_van_vollenhoven:0 "Joost Van Vollenhoven"
@@ -1399,6 +1401,8 @@ VIN_joost_van_vollenhoven:0 "Joost Van Vollenhoven"
  GER_guido_von_usedom:0 "Guido von Usedom"
  GER_oskar_von_preussen:0 "Oskar von Preußen"
  GER_wilhelm_ii_von_wurttemberg:0 "Wilhelm II. von Württemberg"
+ GER_mata_hari:0 "Mata Hari"
+ GER_fritz_duquesne:0 "Fritz Duquesne"
 
  WUR_wilhelm_ii:0 "Wilhelm II."
  
@@ -2303,6 +2307,11 @@ VIN_joost_van_vollenhoven:0 "Joost Van Vollenhoven"
  NIR_william_walker:0 "William Walker"
  NIR_william_lorraine_king:0 "William Lorraine King"
 
+# Northwestern Army
+ NWA_Bulak_Balahovich: "Stanisław Bułak-Bałachowicz"
+ NWA_Daniil_Vetrenko: "Daniil Vetrenko"
+ NWA_stepan_lianozov: "Stepan Lianozov"
+
  # NETHERLANDS
  HOL_hendrik_walaardt_sacre:0 "Hendrik Walaardt Sacré"
  HOL_cornelis_snijders:0 "Cornelis Snijders"
@@ -2871,6 +2880,7 @@ VIN_joost_van_vollenhoven:0 "Joost Van Vollenhoven"
  RUS_vladimir_may_mayevsky:0 "Vladimir May-Mayevsky"
  RUS_nikolai_von_esen:0 "Nikolai Ottovich fon Essen"
  RUS_fyodor_makhin:0 "Fyodor Makhin"
+ RUS_vladimir_pilkin:0 "Vladimir Pilkin"
 
  SIB_pyotr_vologodsky:0 "Pyotr Vologodsky"
  SIB_pyotr_derber:0 "Pyotr Derber"
@@ -3332,6 +3342,8 @@ VIN_joost_van_vollenhoven:0 "Joost Van Vollenhoven"
  SWE_fredrik_frolich:0 "Fredrik Frölich"
  SWE_karl_amundson:0 "Karl Amundson"
  SWE_harald_hjalmarson:0 "Harald Hjalmarson"
+ SWE_gustaf_vi:0 "Gustaf VI Adolf"
+ SWE_prins_wilhelm:0 "Prins Wilhelm"
 
  # SWITZERLAND
  SWI_federal_council_leader_desc: "Founded in 1848, the Swiss Federal Council is a seven-member executive council which serves as the collective head of state for Switzerland. Each council member heads one of seven different federal departments, and the position of Federal President moves between the seven Councillors every year, with the current year's Vice President serving as the next year's President."
