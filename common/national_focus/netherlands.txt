@@ -124,6 +124,16 @@ focus_tree = {
 		}
 		
 	focus = {
+	    id = HOL_german_coal_agreement
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = {focus = HOL_outbreak_of_war}
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = HOL_continue_neutrality
+	}
+		
+	focus = {
 	    id = HOL_mobilise_the_army
 		icon = GFX_focus_hol_oranje_boven
 		prerequisite = {focus = HOL_outbreak_of_war}
@@ -138,7 +148,7 @@ focus_tree = {
 		icon = GFX_focus_hol_oranje_boven
 		prerequisite = {focus = HOL_outbreak_of_war}
 		cost = 5
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = HOL_continue_neutrality
 		}
@@ -150,7 +160,7 @@ focus_tree = {
 		prerequisite = {focus = HOL_the_crisis}
 		mutually_exclusive = {focus = HOL_socialist_riots_grow}
 		cost = 5
-		x = 2
+		x = 3
 		y = 3
 		relative_position_id = HOL_continue_neutrality
 		}
@@ -184,7 +194,7 @@ focus_tree = {
 		prerequisite = {focus = HOL_the_crisis}
 		mutually_exclusive = {focus = HOL_counter_the_food_riots}
 		cost = 5
-		x = 0
+		x = 1
 		y = 3
 		relative_position_id = HOL_continue_neutrality
 		}
@@ -531,7 +541,7 @@ focus_tree = {
 		
 	focus = {
 	    id = HOL_joint_exercises
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_generic_position_armies
 		cost = 5
 		prerequisite = {focus = HOL_army_modernisation}
 		x = 0
@@ -541,7 +551,7 @@ focus_tree = {
 		
 	focus = {
 	    id = HOL_defensive_strategies
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_generic_defence
 		cost = 5
 		prerequisite = {focus = HOL_joint_exercises}
 		mutually_exclusive = {focus = HOL_increase_firepower}
@@ -552,7 +562,7 @@ focus_tree = {
 		
 	focus = {
 	    id = HOL_increase_firepower
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_generic_position_armies
 		cost = 5
 		prerequisite = {focus = HOL_joint_exercises}
 		mutually_exclusive = {focus = HOL_defensive_strategies}
@@ -595,7 +605,7 @@ focus_tree = {
 		
 	focus = {
 	    id = HOL_standard_equipment_production
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_generic_small_arms
 		cost = 5 
 		prerequisite = {focus = HOL_domestic_arms}
 		x = 3
@@ -604,8 +614,8 @@ focus_tree = {
 		}
 		
 	focus = {
-	    id = HOL_invest_in_motorised
-		icon = GFX_goal_generic_army_motorized
+	    id = HOL_invest_in_trucks
+		icon = GFX_focus_generic_truck
 		cost = 5
 		prerequisite = {focus = HOL_standard_equipment_production focus = HOL_expand_purchases}
 		x = 4
@@ -655,6 +665,26 @@ focus_tree = {
 		relative_position_id = HOL_army_modernisation
 		}
 		
+	focus = {
+	    id = HOL_study_tanks
+		icon = GFX_focus_early_tank
+		cost = 5
+		prerequisite = {focus = HOL_artillery_focus}
+		prerequisite = {focus = HOL_invest_in_trucks}
+		x = 3
+		y = 5
+		relative_position_id = HOL_army_modernisation
+	}
+	
+	focus = {
+	    id = HOL_trench_warfare_advancements
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		prerequisite = {focus = HOL_fortress_holland_plan}
+		x = -1
+		y = 5
+		relative_position_id = HOL_army_modernisation
+	}
 		
 		### Navy ###
 		
