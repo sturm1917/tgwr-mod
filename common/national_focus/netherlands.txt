@@ -234,12 +234,123 @@ focus_tree = {
     ### Industry ###
 	
 	focus = {
-	    id = HOL_expand_trade
-		icon = GFX_focus_hol_gateway_to_europe
+	    id = HOL_continue_urbanisation
+		icon = GFX_goal_generic_construct_civilian
 		cost = 5
 		x = 10
+		y = 0
+	}
+	
+	focus = {
+	    id = HOL_infrastructure_investments
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = {focus = HOL_continue_urbanisation}
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_expand_ports
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = {focus = HOL_civilian_investments}
+		prerequisite = {focus = HOL_expand_agriculture}
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_civilian_investments
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = {focus = HOL_infrastructure_investments}
+		cost = 5
+		x = 2
+		y = 2
+		relative_position_id = HOL_continue_urbanisation
+	}
+		
+	focus = {
+	    id = HOL_rural_infrastructure
+		icon = GFX_goal_generic_construction2
+		prerequisite = {focus = HOL_continue_urbanisation}
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_expand_agriculture
+		icon = GFX_focus_generic_wheat
+		prerequisite = {focus = HOL_rural_infrastructure}
+		cost = 5
+		x = -2
+		y = 2
+		relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_industrial_expansion
+		icon = GFX_focus_generic_industry_3
+		prerequisite = {focus = HOL_expand_ports}
+		cost = 5
+		x = 0
+		y = 4
+	    relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_expand_electrics
+		icon = GFX_focus_hol_philips
+		prerequisite = {focus = HOL_industrial_expansion}
+		cost = 5
+		x = 0
 		y = 5
-		relative_position_id = HOL_infrastructure_investments
+		relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_minor_rearnament
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = {focus = HOL_industrial_expansion}
+		cost = 5
+		x = 2
+		y = 5
+		relative_position_id = HOL_continue_urbanisation
+	}
+		
+	focus = {
+	    id = HOL_pass_the_zuiderzeewet
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = {focus = HOL_industrial_expansion}
+		cost = 5
+		x = -2
+		y = 5
+		relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_land_reclamation
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = {focus = HOL_pass_the_zuiderzeewet}
+		cost = 5
+		x = -2
+		y = 6
+		relative_position_id = HOL_continue_urbanisation
+	}
+	
+	focus = {
+	    id = HOL_expand_trade
+		icon = GFX_focus_hol_gateway_to_europe
+		prerequisite = {focus = HOL_dei_industrialisation focus = HOL_colonial_exploitation}
+		prerequisite = {focus = HOL_expand_ports}
+		cost = 5
+		x = 3
+		y = 4
+		relative_position_id = HOL_continue_urbanisation
 		completion_reward = {
 		add_ideas = HOL_expand_trade_spirit}
 		}
@@ -250,7 +361,7 @@ focus_tree = {
 	    id = HOL_colonial_holdings
 		icon = GFX_focus_hol_continue_the_war_in_batavia
 		cost = 5
-		x = 16
+		x = 18
 		y = 0
 		completion_reward = {
 		INS = {add_stability = 0.1}}
@@ -363,6 +474,7 @@ focus_tree = {
 		icon = GFX_focus_hol_oranje_boven
 		cost = 5
 		prerequisite = {focus = HOL_east_indies_rubber}
+		prerequisite = {focus = HOL_civilian_investments}
 		mutually_exclusive =  {focus = HOL_colonial_exploitation}
 		x = -1
 		y = 2
@@ -393,7 +505,7 @@ focus_tree = {
 	    id = HOL_army_modernisation
 		icon = GFX_focus_generic_military_mission
 		cost = 5
-		x = 26
+		x = 28
 		y = 0
 		}
 		
@@ -418,7 +530,7 @@ focus_tree = {
 		}
 		
 	focus = {
-	    id = HOL_army_training
+	    id = HOL_joint_exercises
 		icon = GFX_focus_generic_military_mission
 		cost = 5
 		prerequisite = {focus = HOL_army_modernisation}
@@ -431,7 +543,7 @@ focus_tree = {
 	    id = HOL_defensive_strategies
 		icon = GFX_focus_generic_military_mission
 		cost = 5
-		prerequisite = {focus = HOL_army_training}
+		prerequisite = {focus = HOL_joint_exercises}
 		mutually_exclusive = {focus = HOL_increase_firepower}
 		x = -1
 		y = 3
@@ -442,7 +554,7 @@ focus_tree = {
 	    id = HOL_increase_firepower
 		icon = GFX_focus_generic_military_mission
 		cost = 5
-		prerequisite = {focus = HOL_army_training}
+		prerequisite = {focus = HOL_joint_exercises}
 		mutually_exclusive = {focus = HOL_defensive_strategies}
 		x = 1
 		y = 3
@@ -531,16 +643,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = HOL_army_modernisation
 		}
-	
-	focus = {
-	    id = HOL_build_antiair
-		icon =  GFX_focus_marmara_artillery
-		cost = 5
-		prerequisite = {focus = HOL_fortress_holland_plan}
-		x = -3
-		y = 5
-		relative_position_id = HOL_army_modernisation
-		}
 		
 	focus = {
 	    id = HOL_artillery_focus
@@ -560,7 +662,7 @@ focus_tree = {
 	    id = HOL_naval_modernisation
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 5
-		x = 35
+		x = 37
 		y = 0
 		}
 	
@@ -611,7 +713,7 @@ focus_tree = {
 	    id = HOL_army_aviation_group
 		icon = GFX_goal_generic_air_production
 		cost = 5
-		x = 40
+		x = 42
 		y = 0
 		completion_reward = {
 		add_tech_bonus = {
