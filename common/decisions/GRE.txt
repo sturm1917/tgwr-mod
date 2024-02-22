@@ -4150,7 +4150,7 @@ GRE_territorial_allegeance = {
 				every_state = {
 					teleport_armies = {
 						limit = { tag = THE }
-						to_province = 11818
+						to_state = 345
 					}
 				}
 				every_state = {
@@ -5411,7 +5411,10 @@ GRE_road_to_ankara = {
 			}
 		}
 		cancel_trigger = {
-			has_war = no
+			OR = {
+				has_war = no
+				has_active_mission = GRE_capture_ankara
+			}
 		}
 		available = {
 			GRE = {
@@ -5487,8 +5490,10 @@ GRE_road_to_ankara = {
 			
 		}
 		cancel_trigger = {
-			has_war = no
-			has_active_mission = GRE_capture_istanbul
+			OR = {
+				has_war = no
+				has_active_mission = GRE_capture_istanbul
+			}
 		}
 		available = {
 			GRE = {

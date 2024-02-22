@@ -185,10 +185,18 @@ URA = {
 	original_tag = RUS
 	has_country_flag = RUS_ural_tag
 }
+TRC = {
+	original_tag = RUS
+	has_country_flag = RUS_transcaspian_tag
+}
 RSO = {
 	original_tag = RUS
 	has_country_flag = RUS_northern_oblast
 }	
+NWA = {
+	original_tag = RUS
+	has_country_flag = RUS_northwestern_army_tag
+}
 RXL = {
 	original_tag = RUS
 	has_country_flag = RUS_exile_tag
@@ -196,27 +204,17 @@ RXL = {
 ## black sea sr
 BSR = {
 	original_tag = KUB
-	has_country_flag = KUB_black_sea_sr
+	has_country_flag = KUB_black_sea_tag
 }
 ## don sr
 DSR = {
 	original_tag = DON
 	has_country_flag = DON_sr
 }
-## terek sr
-TSR = {
-	original_tag = SOV
-	has_country_flag = SOV_terek_sr
-}
-#stavropol sr
-SSR = {
-	original_tag = SOV
-	has_country_flag = stavropol_sr
-}
-#amur sr
-SAR = {
-	original_tag = SOV
-	has_country_flag = sov_amur_sr
+#Stavropol
+STV = {
+	original_tag = RUS
+	has_country_flag = RUS_stavropol_tag
 }
 ### Ukraine civil war
 UPR = {
@@ -231,11 +229,14 @@ WML = {
 		SIB
 		URA
 		RSO
+		TRC
+		NWA
 		DON
 		KUB
 		ORE
 		UCH
 		CER
+		TBK
 	}	
 	is_faction_leader = yes
 }
@@ -250,19 +251,4 @@ BLL = {
 # set on on_weekly
 MOT = {
 	variable = generic_operation_target
-}
-##serbian ottoman puppet
-TSE = {
-	original_tag = SER
-	has_country_flag = turkish_concession
-}
-##greek ottoman puppet
-TGR = {
-	original_tag = GRE
-	has_country_flag = turkish_concession
-}
-##bulgarian ottoman puppet
-TBU = {
-	original_tag = BUL
-	has_country_flag = turkish_concession
 }

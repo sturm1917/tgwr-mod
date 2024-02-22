@@ -24,6 +24,20 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
+mobilisation_penalty_modifier = {
+	#negative values
+	army_org_factor = mobilisation_penalty_var
+	army_morale_factor = mobilisation_penalty_var
+	industrial_capacity_factory = mobilisation_penalty_var
+	command_power_gain_mult = mobilisation_penalty_var # Penalties for overhead
+	mobilization_speed = mobilisation_penalty_var 
+
+	#positive values
+	training_time_factor = mobilisation_penalty_var_positive
+	supply_consumption_factor = mobilisation_penalty_var_positive
+	
+}
+
 GER_local_investments = {
 	enable = { always = yes  }
 	icon = GFX_modifiers_generic_military_industry
@@ -686,20 +700,6 @@ TUR_ottoman_claimed_state = {
 	custom_modifier_tooltip = TUR_ottoman_claimed_state_tt
 }
 
-TUR_ottoman_turan_claimed_state = {
-	enable = { always = yes  }
-	icon = GFX_modifiers_TUR_ottoman_turan_claimed_state
-	
-	custom_modifier_tooltip = TUR_ottoman_turan_claimed_state_tt
-}
-
-TUR_ottoman_imperial_claimed_state = {
-	enable = { always = yes  }
-	icon = GFX_modifiers_TUR_ottoman_imperial_claimed_state
-	
-	custom_modifier_tooltip = TUR_ottoman_imperial_claimed_state_tt
-}
-
 TUR_schelendorfs_plan_modifier = {
 	enable = { always = yes  }
 	icon = GFX_modifiers_generic_military_plans
@@ -1040,6 +1040,22 @@ ALB_greek_minority = {
 	local_factories = -0.5
 }
 
+unequal_treaties_dm = {
+	enable = { always = yes }
+
+	min_export = var:unequal_treaties_resources_to_market
+	consumer_goods_factor = var:unequal_treaties_consumer_goods
+	research_speed_factor = var:unequal_treaties_research_speed
+	production_speed_industrial_complex_factor = var:unequal_treaties_civilian_factory
+	production_speed_arms_factory_factor = var:unequal_treaties_military_factory
+	production_speed_dockyard_factor = var:unequal_treaties_dockyard
+	production_speed_infrastructure_factor = var:unequal_treaties_infrastructure
+}
+# qing_court_opp_dm = {
+# 	enable = { has_idea = QIN_idea_court_opposition }
+# 	political_power_factor = court_opp_pp_factor
+# }
+
 GRE_integration_efforts = {
 	enable = {
 		controller = {
@@ -1183,4 +1199,116 @@ ALB_rural_chaos = {
 	local_factory_sabotage = 0.40
 	local_manpower = -0.50
 	local_supplies_for_controller = -0.90
+}
+
+FRA_volta_bani_war = {
+	enable = {
+		CONTROLLER = {
+			NOT = {
+				original_tag = MLI
+			}
+		}
+	}
+	remove_trigger = {
+		CONTROLLER = {
+			original_tag = MLI
+		}
+	}
+	icon = GFX_modifiers_TUR_assyrian_minority
+	recruitable_population_factor = -0.75
+	local_supplies_for_controller = -0.75
+	attrition_for_controller = 0.75
+	resistance_target = 0.75
+	compliance_growth = -0.75
+	required_garrison_factor = 2
+}
+
+FRA_volta_insurrection = {
+	enable = {
+		CONTROLLER = {
+			NOT = {
+				original_tag = MLI
+			}
+		}
+	}
+	remove_trigger = {
+		CONTROLLER = {
+			original_tag = MLI
+		}
+	}
+	icon = GFX_modifiers_TUR_assyrian_minority
+	recruitable_population_factor = -1
+	local_supplies_for_controller = -1
+	attrition_for_controller = 1
+	resistance_target = 1
+	compliance_growth = -1
+}
+
+FRA_french_integration = {
+	enable = { 
+		always = yes
+		NOT = {
+			is_core_of = ROOT
+		}
+	}
+	remove_trigger = {
+		OR = {
+			is_core_of = ROOT
+			ROOT = {
+				has_war_with = FRA
+			}
+			ROOT = {
+				NOT = {
+					tag = IND
+					is_subject_of = FRA
+				}
+			}
+		}
+	}
+	icon = GFX_modifiers_generic_construction
+	local_factories = 0.50
+	local_resources = 0.50
+	local_manpower = 0.50
+}
+
+FRA_french_local_investments = {
+	enable = { 
+		always = yes
+	}
+	remove_trigger = {
+		OWNER = {
+			NOT = {
+				tag = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	icon = GFX_modifiers_generic_construction
+	production_speed_buildings_factor = 0.15
+}
+
+FRA_french_local_investments_non_UEII = {
+	enable = { 
+		always = yes
+	}
+	remove_trigger = {
+		NOT = {
+			tag = FRA
+			is_subject_of = FRA
+			is_in_faction_with = FRA
+		}
+	}
+	icon = GFX_modifiers_generic_construction
+	production_speed_buildings_factor = 0.15
+}
+
+aland_dmz_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_demilitarize_zone
+	land_bunker_effectiveness_factor = -1
+	coastal_bunker_effectiveness_factor = -1
+	state_production_speed_bunker_factor = -1
+	state_production_speed_coastal_bunker_factor = -1
 }

@@ -463,6 +463,9 @@ SPR_regional_autonomy_vs_junta = {
 		allowed = {
 			original_tag = SPR
 		}
+		target_trigger = {
+			FROM = { tag = RIF }
+		}
 		available = {
 			always = yes
 		}	
@@ -540,6 +543,7 @@ SPR_el_turno_category = {
 			country_event = ww1_spain.134
 		}
 	}
+}
 	SPR_increase_faith_in_the_system = {
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = {
@@ -576,6 +580,28 @@ SPR_el_turno_category = {
 				NOT = { 
 					has_global_flag = conservative_majority 
 				}
+			FROM = { is_neighbor_of_subject = yes }
+		}
+		visible = {
+			is_subject = no
+			NOT = {
+				has_idea = idea_army_restrictions
+				has_country_flag = great_war_loser
+				is_in_faction_with = FROM
+				has_war_with = FROM
+				has_war_together_with = FROM
+			}
+		}
+		war_with_target_on_remove = yes
+		cost = 75
+		fire_only_once = no
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war_support < 0.2
+				factor = 0
+				FROM = { is_subject = yes }
 			}
 			NOT = { 
 				has_idea = SPR_idea_united_liberal_party 
@@ -585,7 +611,6 @@ SPR_el_turno_category = {
 			}
 			NOT = { 
 				has_completed_focus = SPR_change_brings_reform
-			}
 		}
 		visible = {
 			OR = {
@@ -618,6 +643,21 @@ SPR_el_turno_category = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = no
+					290 = { is_fully_controlled_by = FROM }
+				}
+			}
+		}
+		cancel_if_not_visible = yes
+		days_remove = 12
+		remove_effect = {
+			effect_tooltip = {
+				declare_war_on = {
+					target = FROM
+					type = topple_government
+				}
+			}
+			hidden_effect = {
+				country_event = ww1_rif.4
 			}
 		}
 	}

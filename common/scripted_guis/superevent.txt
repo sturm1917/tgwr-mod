@@ -38,6 +38,7 @@ scripted_gui = {
 				has_country_flag = SE_greeko_turkish_war
 				has_country_flag = SE_balkan_fed
 				has_country_flag = SE_carlist_civil_war
+				has_country_flag = SE_arab_revolt
 			}
 		}
 		triggers = {
@@ -172,6 +173,10 @@ scripted_gui = {
 				has_country_flag = SE_carlist_civil_war
 				#event ww1_spain.125
 			}
+			SE_arab_revolt_visible = {
+				has_country_flag = SE_arab_revolt
+				#event kis_news.107
+			}
 		}
 		effects = {
 			SE_Option_click = {
@@ -208,6 +213,7 @@ scripted_gui = {
 				clr_country_flag = SE_greeko_turkish_war
 				clr_country_flag = SE_balkan_fed
 				clr_country_flag = SE_carlist_civil_war
+				clr_country_flag = SE_arab_revolt
 			}
 		}		
 	}		

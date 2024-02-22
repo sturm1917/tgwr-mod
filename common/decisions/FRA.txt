@@ -196,6 +196,23 @@ parliament_gui_decision_category = {
 		}
 	}
 
+	FRA_reload_gui = {
+		icon = GFX_decision_SOV_place_hq
+		allowed = {
+			original_tag = FRA
+		}	
+		available = {
+			
+		}
+		visible = {
+			original_tag = FRA
+			is_debug = yes
+		}
+		remove_effect = {
+			reload_parliament_gui = yes 
+		}
+	}
+
 	FRA_1914_disposition = {
 		icon = GFX_decision_SOV_place_hq
 		allowed = {
@@ -770,6 +787,42 @@ parliament_gui_decision_category = {
 	# 	fire_only_once = yes
 	# 	cost = 0
 	# }
+
+	FRA_hide_IND_tree = {
+		icon = GFX_decision_generic_speech
+		allowed = {
+			original_tag = FRA
+		}
+		visible = {
+			has_subject = IND
+			NOT = {
+				has_country_flag = hide_indochinese_tree
+			}
+		}
+		complete_effect = {
+			set_country_flag = hide_indochinese_tree
+			mark_focus_tree_layout_dirty = yes
+		}
+		fire_only_once = no
+		cost = 0
+	}
+
+	FRA_show_IND_tree = {
+		icon = GFX_decision_generic_speech
+		allowed = {
+			original_tag = FRA
+		}
+		visible = {
+			has_subject = IND
+			has_country_flag = hide_indochinese_tree
+		}
+		complete_effect = {
+			clr_country_flag = hide_indochinese_tree
+			mark_focus_tree_layout_dirty = yes
+		}
+		fire_only_once = no
+		cost = 0
+	}
 	
 }
 
@@ -862,7 +915,61 @@ FRA_situation_in_morocco = {
 }
 
 GER_great_war = {
-
+	FRA_pull_out_from_mali = {
+		icon = GFX_decision_eng_blackshirt_march
+		allowed = {
+			original_tag = FRA
+		}
+		target_trigger = {
+			FROM = {
+				tag = MLI
+			}
+		}
+		visible = {
+			has_war_with = MLI
+			NOT = {
+				has_global_flag = mali_war_end
+			}
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+					has_war_with = MLI
+				}
+				white_peace = MLI
+			}
+			set_global_flag = mali_war_end
+			MLI = {
+				transfer_state = 779
+				transfer_state = 780
+			}
+			hidden_effect = {
+				MLI = {
+					leave_faction = yes
+				}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 500
+				surrender_progress > 0.5
+			}
+			modifier = {
+				add = 500
+				MLI = {
+					controls_state = 779
+					controls_state = 780
+				}
+			}
+		}
+	}
 	FRA_send_janin_to_russia = {
 		icon = GFX_decision_fra_advisors
 		fire_only_once = no
@@ -1793,12 +1900,16 @@ FRA_defense_of_france = {
 		
 		available = {
 			has_country_flag = FRA_collapsing_front
+			NOT = {
+				has_country_leader = {
+					character = FRA_philippe_petain
+				}
+			}
 		}
 		ai_will_do = {
 			base = 100
 			modifier = {
-				is_historical_focus_on = yes
-				surrender_progress < 0.20
+				surrender_progress < 0.30
 				factor = 0
 			}
 		}
@@ -1832,55 +1943,54 @@ FRA_defense_of_france = {
 				}
 				set_country_flag = return_fascism
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_leader_ideology = semi_constitutional_monarchy
-					}
-					FRA_philippe_petain = {
-						add_country_leader_role = {
-							promote_leader = yes
-							country_leader = {
-								ideology = semi_constitutional_monarchy
-								traits = { verdun_lion generallissimo }
-							}
+
+			if = {
+				limit = {
+					has_country_leader_ideology = semi_constitutional_monarchy
+				}
+				FRA_philippe_petain = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = semi_constitutional_monarchy
+							traits = { verdun_lion generallissimo }
 						}
 					}
 				}
-				else_if = {
-					limit = {
-						has_country_leader_ideology = semi_constitutional_monarchy_reserve
-					}
-					FRA_philippe_petain = {
-						add_country_leader_role = {
-							promote_leader = yes
-							country_leader = {
-								ideology = semi_constitutional_monarchy_reserve
-								traits = { verdun_lion generallissimo }
-							}
+			}
+			else_if = {
+				limit = {
+					has_country_leader_ideology = semi_constitutional_monarchy_reserve
+				}
+				FRA_philippe_petain = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = semi_constitutional_monarchy_reserve
+							traits = { verdun_lion generallissimo }
 						}
 					}
 				}
-				else_if = {
-					limit = { has_government = democratic }
-					FRA_philippe_petain = {
-						add_country_leader_role = {
-							promote_leader = yes
-							country_leader = {
-								ideology = authoritarian_democracy
-								traits = { verdun_lion generallissimo }
-							}
+			}
+			else_if = {
+				limit = { has_government = democratic }
+				FRA_philippe_petain = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = authoritarian_democracy
+							traits = { verdun_lion generallissimo }
 						}
 					}
 				}
-				else = {
-					FRA_philippe_petain = {
-						add_country_leader_role = {
-							promote_leader = yes
-							country_leader = {
-								ideology = oligarchism
-								traits = { verdun_lion generallissimo }
-							}
+			}
+			else = {
+				FRA_philippe_petain = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = oligarchism
+							traits = { verdun_lion generallissimo }
 						}
 					}
 				}
@@ -1898,6 +2008,9 @@ FRA_defense_of_france = {
 						has_cosmetic_tag = FRA_KINGDOM_legitimist
 						has_cosmetic_tag = FRA_THIRD_EMPIRE
 						has_cosmetic_tag = FRA_socialism
+						has_cosmetic_tag = FRA_socialism_not_commune
+						has_cosmetic_tag = FRA_socialism_syndicalist
+						has_cosmetic_tag = FRA_socialism_republic_of
 					}
 				}
 				set_cosmetic_tag = FRA_alt_blue
@@ -2780,6 +2893,68 @@ war_measures = {
 		}
 		ai_will_do = {
 			factor = 200
+		}
+	}
+	fight_phan_xich_long_loyalists_in_indochina = {
+		icon = GFX_decision_border_war
+
+		allowed = {
+			OR = {
+				tag = IND
+				tag = FRA
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 120
+		is_good = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_IND_4k_in_each_states
+				OR = {
+					IND = {
+						army_manpower_in_state = { state = 820 amount > 3999 }
+					}
+					FRA = {
+						army_manpower_in_state = { state = 820 amount > 3999 }
+					}
+				}
+				OR = {
+					IND = {
+						army_manpower_in_state = { state = 286 amount > 3999 }
+					}
+					FRA = {
+						army_manpower_in_state = { state = 286 amount > 3999 }
+					}
+				}
+				OR = {
+					IND = {
+						army_manpower_in_state = { state = 671 amount > 3999 }
+					}
+					FRA = {
+						army_manpower_in_state = { state = 671 amount > 3999 }
+					}
+				}
+			}
+
+		}
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 820 state = 286 state = 671 }
+		}
+		complete_effect = {
+			country_event = {
+				id = ww1_france.357
+				days = 2
+			}
+		}
+		timeout_effect = {
+			add_political_power = -50
+			country_event = {
+				id = ww1_france.358
+				days = 2
+			}
 		}
 	}
 }

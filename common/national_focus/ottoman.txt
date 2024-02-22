@@ -201,11 +201,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		completion_reward = {
@@ -251,11 +247,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		relative_position_id = TUR_domestic_weapon_companies
@@ -331,11 +323,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		relative_position_id = TUR_domestic_weapon_companies
@@ -419,11 +407,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_4425
-				check_variable = {
-					var = opda_lira
-					value = 4.425
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.45 }
 			}
 		}
 		search_filters = {
@@ -611,6 +595,10 @@ focus_tree = {
 		relative_position_id = TUR_invite_foreign_designers
 		completion_reward = {
 			custom_effect_tooltip = TUR_import_dependency_tt
+			if = {
+				limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
+				custom_effect_tooltip = TUR_import_dependency_tt2
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -674,7 +662,7 @@ focus_tree = {
 	focus = {
 		id = TUR_purify_army_from_foreigners
 		icon = GFX_focus_generic_military_academy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = TUR_damascus_maneuvers
 		}
@@ -775,7 +763,7 @@ focus_tree = {
 	focus = {
 		id = TUR_integrate_foreign_command
 		icon = GFX_goal_generic_national_unity
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = TUR_damascus_maneuvers
 		}
@@ -783,7 +771,20 @@ focus_tree = {
 			focus = TUR_purify_army_from_foreigners
 		}
 		available = {
-			is_in_faction = yes
+			OR = {
+				any_country = {
+					is_major = yes
+					is_in_faction_with = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_idea_german_military_command
+					OR = {
+						has_idea = TUR_german_military_command
+						has_idea = TUR_german_military_command2
+					}
+				}
+				has_idea = TUR_french_gendarme_mission
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -1217,6 +1218,10 @@ focus_tree = {
 		relative_position_id = TUR_purchase_foreign_battleships
 		completion_reward = {
 			custom_effect_tooltip = TUR_priority_in_purchases_tt
+			if = {
+				limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
+				custom_effect_tooltip = TUR_priority_in_purchases_tt2
+			}
 		}
 	}
 	focus = {
@@ -1263,11 +1268,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		x = 2
@@ -1310,11 +1311,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		x = -1
@@ -1337,11 +1334,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		x = 1
@@ -1365,11 +1358,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_4425
-				check_variable = {
-					var = opda_lira
-					value = 4.425
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.45 }
 			}
 		}
 		x = 1
@@ -1392,11 +1381,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_4425
-				check_variable = {
-					var = opda_lira
-					value = 4.425
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.45 }
 			}
 		}
 		x = 0
@@ -1910,6 +1895,10 @@ focus_tree = {
 		relative_position_id = TUR_hire_foreign_aircraft_designers
 		completion_reward = {
 			custom_effect_tooltip = TUR_a_deal_with_foreign_aircraft_designers_tt
+			if = {
+				limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
+				custom_effect_tooltip = TUR_a_deal_with_foreign_aircraft_designers_tt2
+			}
 		}
 	}
 	focus = {
@@ -1930,11 +1919,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		x = 2
@@ -2001,11 +1986,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_7375
-				check_variable = {
-					var = opda_lira
-					value = 7.375
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.75 }
 			}
 		}
 		completion_reward = {
@@ -2039,11 +2020,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_4425
-				check_variable = {
-					var = opda_lira
-					value = 4.425
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.45 }
 			}
 		}
 		completion_reward = {
@@ -2224,8 +2201,15 @@ focus_tree = {
 			focus = TUR_ease_trade_tariffs
 		}
 		completion_reward = {
-			add_ideas = statism_economy
-			add_ideas = limited_exports
+			add_ideas = TUR_economic_etatism
+			if = {
+				limit = { NOT = { has_idea = low_economic_mobilisation } }
+				add_ideas = low_economic_mobilisation
+			}
+			if = {
+				limit = { NOT = { has_idea = limited_exports } }
+				add_ideas = limited_exports
+			}
 		}
 		ai_will_do = {
 			base = 35
@@ -2521,21 +2505,24 @@ focus_tree = {
 					3786
 					3951
 				}
-				start_province = 42
-				target_province = 84
+				start_province = 9833
+				target_province = 3951
 			}
-			build_railway = {
-				level = 1
-				fallback = yes
-				start_province = 11747
-				target_province = 11853
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = TUR_orc
+					add_idea = TUR_orc2
+				}
 			}
-			353 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 11853
-					instant_build = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = TUR_orc
+					}
+					swap_ideas = {
+						remove_idea = TUR_orc
+						add_idea = TUR_orc2
+					}
 				}
 			}
 		}
@@ -2858,32 +2845,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_eradicate_illiteracy
-		icon = GFX_focus_research
-		cost = 5
-		x = -1
-		y = 1
-		relative_position_id = TUR_nationalization_of_key_industries
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = {
-			focus = TUR_nationalization_of_key_industries
-		}
-		available = {
-			NOT = {
-				has_completed_focus = TUR_socialist_economics
-				has_completed_focus = TUR_islamic_economics
-			}
-		}
-		completion_reward = {
-			unlock_decision_tooltip = TUR_war_against_illiteracy
-		}
-		ai_will_do = {
-			base = 35
-		}
-	}
-	focus = {
 		id = TUR_anatolian_industrial_revolution
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
@@ -2903,11 +2864,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_4425
-				check_variable = {
-					var = opda_lira
-					value = 4.425
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.45 }
 			}
 			NOT = {
 				has_completed_focus = TUR_socialist_economics
@@ -3068,11 +3025,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_4425
-				check_variable = {
-					var = opda_lira
-					value = 4.425
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.45 }
 			}
 			NOT = {
 				has_completed_focus = TUR_socialist_economics
@@ -3300,7 +3253,7 @@ focus_tree = {
 			}
 		}
 		complete_tooltip = {
-			TUR_add_debt_0590 = yes
+			TUR_add_debt_0492 = yes
 			every_state = {
 				limit = {
 					has_state_flag = TUR_open_up_foreign_factories 
@@ -3314,7 +3267,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			TUR_add_debt_0590 = yes
+			TUR_add_debt_0492 = yes
 			if = {
 				limit = {
 					any_owned_state = {
@@ -3445,7 +3398,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			TUR_remove_debt_0885 = yes
+			debt_983 = yes
 			add_ideas = TUR_sponsored_banking_sector
 		}
 		ai_will_do = {
@@ -3499,7 +3452,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			TUR_remove_debt_0590 = yes
+			TUR_remove_debt_0492 = yes
 			swap_ideas = {
 				remove_idea = TUR_subsidised_lifestock_sector
 				add_idea = TUR_increased_lifestock_exports
@@ -3557,7 +3510,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			TUR_add_debt_0885 = yes
+			TUR_add_debt_0993 = yes
 			add_resource = {
 				type = oil
 				amount = 5
@@ -3735,40 +3688,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_privatize_universities
-		icon = GFX_focus_research2
-		cost = 5
-		x = 1
-		y = 1
-		relative_position_id = TUR_welcome_western_investments
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-			FOCUS_FILTER_OTTOMAN_DEBT
-		}
-		prerequisite = {
-			focus = TUR_welcome_western_investments
-		}
-		available = {
-			NOT = {
-				has_completed_focus = TUR_socialist_economics
-				has_completed_focus = TUR_islamic_economics
-			}
-		}
-		completion_reward = {
-			TUR_remove_debt_0295 = yes
-			custom_effect_tooltip = TUR_privatize_universities_tt
-			hidden_effect = {
-				country_event = {
-					id = ottoman.211
-					days = 365
-				}
-			}
-		}
-		ai_will_do = {
-			base = 35
-		}
-	}
-	focus = {
 		id = TUR_flow_of_the_capital
 		icon = GFX_focus_generic_industry_3
 		cost = 10
@@ -3890,6 +3809,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = TUR_search_for_investments_tt
 			unlock_decision_tooltip = TUR_british_investment_to_iraq
 			unlock_decision_tooltip = TUR_french_investment_to_syria
 			unlock_decision_tooltip = TUR_german_investment_to_anatolia
@@ -3916,6 +3836,7 @@ focus_tree = {
 				}
 				set_state_flag = TUR_search_for_investments
 			}
+			custom_effect_tooltip = TUR_search_for_investments_tt
 			unlock_decision_tooltip = TUR_british_investment_to_iraq
 			unlock_decision_tooltip = TUR_french_investment_to_syria
 			unlock_decision_tooltip = TUR_german_investment_to_anatolia
@@ -4193,7 +4114,14 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TUR_OPDA
+					add_idea = TUR_OPDA2
+				}
+			}
 			custom_effect_tooltip = TUR_financial_responsibility_tt
+			set_variable = { opda_resources_to_market = 0.1 }
 			clear_variable = opda_civilian_intel_to_others
 			clear_variable = opda_political_power_cost
 		}
@@ -4206,6 +4134,11 @@ focus_tree = {
 			focus = TUR_investing_in_entrepreneurship
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = debt_more_than_0
+				has_variable = opda_lira
+				check_variable = { opda_consumer_goods > 0 }
+			}
 			owns_state = 858
 			owns_state = 454
 			NOT = {
@@ -4224,8 +4157,8 @@ focus_tree = {
 				has_completed_focus = TUR_islamic_economics
 			}
 		}
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = TUR_investing_in_entrepreneurship
 		search_filters = {
 			FOCUS_FILTER_OTTOMAN_DEBT
@@ -4271,46 +4204,6 @@ focus_tree = {
 					ideology = communism
 					popularity = -0.1
 				}
-			}
-		}
-	}
-	focus = {
-		id = TUR_sell_off_mesapotamian_oil
-		icon = GFX_goal_generic_oil_refinery
-		cost = 5
-		prerequisite = {
-			focus = TUR_investing_in_entrepreneurship
-		}
-		x = 1
-		y = 2
-		relative_position_id = TUR_investing_in_entrepreneurship
-		search_filters = {
-			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_OTTOMAN_DEBT
-		}
-		available = {
-			OR = {
-				owns_state = 676
-				owns_state = 883
-				owns_state = 291
-				owns_state = 874
-				owns_state = 656
-			}
-			NOT = {
-				has_completed_focus = TUR_socialist_economics
-				has_completed_focus = TUR_islamic_economics
-			}
-		}
-		completion_reward = {
-			unlock_decision_tooltip = TUR_sell_mosul_oil
-			unlock_decision_tooltip = TUR_sell_kirkuk_oil
-			unlock_decision_tooltip = TUR_sell_baghdad_oil
-			unlock_decision_tooltip = TUR_sell_basra_oil
-			if = {
-				limit = {
-					owns_state = 656
-				}
-				unlock_decision_tooltip = TUR_sell_kuwait_oil
 			}
 		}
 	}
@@ -4663,6 +4556,7 @@ focus_tree = {
 					}
 				}
 			}
+			else = { has_civil_war = no }
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -4714,6 +4608,7 @@ focus_tree = {
 					}
 				}
 			}
+			else = { has_civil_war = no }
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -5409,7 +5304,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TUR_continue_the_western_architecture
-		icon = GFX_goal_reichsautobahn
+		icon = GFX_goal_generic_construct_civilian
 		cost = 5
 		prerequisite = {
 			focus = TUR_builder_of_the_empire
@@ -5694,7 +5589,7 @@ focus_tree = {
 			focus = TUR_shadow_of_allah_on_earth
 		}
 		x = -4
-		y = 2
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 			FOCUS_FILTER_STABILITY
@@ -5721,10 +5616,13 @@ focus_tree = {
 			FOCUS_FILTER_OTTOMAN_DEBT
 		}
 		completion_reward = {
-			custom_effect_tooltip = TUR_well_dissolve_opda
+			if = {
+				limit = { has_idea = TUR_OPDA2 }
+				remove_ideas = TUR_OPDA2
+			}
+			else = { remove_ideas = TUR_OPDA }
 			clear_variable = opda_lira
 			clear_variable = opda_consumer_goods
-			clear_variable = opda_resources_to_market
 			hidden_effect = {
 				remove_dynamic_modifier = {
 					modifier = TUR_OPDA
@@ -6068,45 +5966,15 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_ideas = TUR_idea_muslim_schools
-			add_power_balance_value = {
-				id = TUR_seyhulislam_sultan
-				value = -0.1
-			}
-		}
-		ai_will_do = {
-			base = 35
-		}
-	}
-	focus = {
-		id = TUR_imperial_medreses
-		icon = GFX_focus_sharia
-		cost = 10
-		prerequisite = {
-			focus = TUR_islamic_education
-		}
-		x = 0
-		y = 1
-		relative_position_id = TUR_islamic_education
-		search_filters = {
-			FOCUS_FILTER_BALANCE_OF_POWER
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			amount_research_slots < 4
-		}
-		completion_reward = {
-			add_research_slot = 1
-			add_power_balance_value = {
-				id = TUR_seyhulislam_sultan
-				value = -0.3
-			}
-			custom_effect_tooltip = TUR_privatize_universities_tt
-			hidden_effect = {
-				country_event = {
-					id = ottoman.211
-					days = 365
+			if = {
+				limit = {
+					amount_research_slots < 4
 				}
+				add_research_slot = 1
+			}
+			swap_ideas = {
+				remove_idea = TUR_crippling_illiteracy
+				add_idea = TUR_idea_muslim_schools
 			}
 		}
 		ai_will_do = {
@@ -6519,7 +6387,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -6527,7 +6395,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -6620,7 +6488,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -6628,7 +6496,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -6745,7 +6613,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -6753,7 +6621,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -6954,7 +6822,6 @@ focus_tree = {
 						state = 296
 						state = 780
 						state = 700
-						state = 812
 						state = 514
 						state = 515
 						state = 782
@@ -6962,7 +6829,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -6970,7 +6837,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -7040,7 +6907,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -7048,7 +6915,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -7154,7 +7021,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -7162,7 +7029,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -7301,7 +7168,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -7309,7 +7176,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -7429,7 +7296,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -7437,7 +7304,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -7537,7 +7404,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -7545,7 +7412,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -7695,18 +7562,18 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TUR_catching_up_to_the_west
-		available = {
-			amount_research_slots < 4
-		}
 		completion_reward = {
-			add_research_slot = 1
 			if = {
 				limit = {
-					has_any_power_balance = yes
+					amount_research_slots < 4
 				}
-				add_power_balance_value = {
-					id = TUR_parliament_sultan
-					value = -0.15
+				add_research_slot = 1
+			}
+			custom_effect_tooltip = TUR_privatize_universities_tt
+			hidden_effect = {
+				country_event = {
+					id = ottoman.211
+					days = 365
 				}
 			}
 		}
@@ -7741,7 +7608,7 @@ focus_tree = {
 		prerequisite = {
 			focus = TUR_open_the_imperial_bank
 		}
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = TUR_open_the_imperial_bank
 		search_filters = {
@@ -7751,11 +7618,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = debt_less_than_4425
-				check_variable = {
-					var = opda_lira
-					value = 4.425
-					compare = less_than
-				}
+				check_variable = { opda_consumer_goods < 0.45 }
 			}
 			NOT = {
 				has_completed_focus = TUR_socialist_economics
@@ -8357,6 +8220,7 @@ focus_tree = {
 					country_event = ww1_ottoman.24
 				}
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		ai_will_do = {
 			base = 30
@@ -9065,37 +8929,45 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_question_of_the_civil_code
-		icon = GFX_focus_hol_the_foundations_of_defense
+		id = TUR_privatize_universities
+		icon = GFX_focus_research2
 		cost = 5
+		x = 1
+		y = 1
 		prerequisite = {
 			focus = TUR_compromise_with_the_ittihadist_generals
+		}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_RESEARCH
 		}
 		x = -2
 		y = 4
 		relative_position_id = TUR_reaffirm_loyalty_of_the_army
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-			FOCUS_FILTER_STABILITY
-		}
 		available = {
-			if = {
-				limit = {
-					has_country_flag = TUR_said_i_nursi_path
-				}
-				custom_trigger_tooltip = {
-					tooltip = TUR_liberals_in_charge
-					NOT = {
-						has_country_flag = TUR_conservatives_in_charge
-					}
-				}
+			NOT = {
+				has_completed_focus = TUR_socialist_economics
+				has_completed_focus = TUR_islamic_economics
 			}
 		}
 		completion_reward = {
-			country_event = ottoman.46
+			if = {
+				limit = {
+					amount_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			add_stability = 0.02
+			custom_effect_tooltip = TUR_privatize_universities_tt
+			hidden_effect = {
+				country_event = {
+					id = ottoman.211
+					days = 365
+				}
+			}
 		}
 		ai_will_do = {
-			base = 30
+			base = 35
 		}
 	}
 	focus = {
@@ -9103,11 +8975,11 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		cost = 5
 		prerequisite = {
-			focus = TUR_question_of_the_civil_code
+			focus = TUR_privatize_universities
 		}
 		x = 1
 		y = 1
-		relative_position_id = TUR_question_of_the_civil_code
+		relative_position_id = TUR_privatize_universities
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -9145,11 +9017,11 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = TUR_lift_media_restrictions
-			focus = TUR_question_of_the_civil_code
+			focus = TUR_privatize_universities
 		}
 		x = -1
 		y = 1
-		relative_position_id = TUR_question_of_the_civil_code
+		relative_position_id = TUR_privatize_universities
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -9244,7 +9116,7 @@ focus_tree = {
 	focus = {
 		id = TUR_encourage_privatization
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = TUR_status_of_autonomy
 		}
@@ -9279,12 +9151,6 @@ focus_tree = {
 			add_timed_idea = {
 				idea = TUR_encouraged_privatization
 				days = 8095
-			}
-			if = {
-				limit = {
-					amount_research_slots < 4
-				}
-				add_research_slot = 1
 			}
 		}
 		ai_will_do = {
@@ -9473,7 +9339,7 @@ focus_tree = {
 	focus = {
 		id = TUR_continue_westernization
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = TUR_handling_inner_party_factionalism
 		}
@@ -9489,21 +9355,15 @@ focus_tree = {
 				idea = TUR_4_year_plan
 				days = 1460
 			}
-			if = {
-				limit = {
-					amount_research_slots < 4
-				}
-				add_research_slot = 1
-			}
 		}
 		ai_will_do = {
 			base = 30
 		}
 	}
 	focus = {
-		id = TUR_secularism_in_law
+		id = TUR_secular_education
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = TUR_continue_westernization
 		}
@@ -9511,10 +9371,20 @@ focus_tree = {
 		y = 1
 		relative_position_id = TUR_continue_westernization
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_ideas = TUR_secularism_in_law_idea
+			if = {
+				limit = {
+					amount_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			swap_ideas = {
+				remove_idea = TUR_crippling_illiteracy
+				add_idea = TUR_crippling_illiteracy2
+			}
+			unlock_decision_tooltip = TUR_war_against_illiteracy
 		}
 		ai_will_do = {
 			base = 30
@@ -9601,7 +9471,7 @@ focus_tree = {
 				build_only_on_allied = yes
 				fallback = yes
 				start_province = 9830
-				target_province = 11883
+				target_province = 11853
 			}
 		}
 		ai_will_do = {
@@ -9614,7 +9484,7 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = TUR_encourage_privatization
-			focus = TUR_secularism_in_law
+			focus = TUR_secular_education
 		}
 		prerequisite = {
 			focus = TUR_encourage_privatization
@@ -9647,7 +9517,7 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = TUR_encourage_privatization
-			focus = TUR_secularism_in_law
+			focus = TUR_secular_education
 			focus = TUR_develop_the_east
 			focus = TUR_yurtta_sulh_cihanda_sulh
 			focus = TUR_increase_medrese_education
@@ -9682,7 +9552,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		cost = 5
 		prerequisite = {
-			focus = TUR_secularism_in_law
+			focus = TUR_secular_education
 			focus = TUR_develop_the_east
 			focus = TUR_yurtta_sulh_cihanda_sulh
 			focus = TUR_expand_turk_ocaklari
@@ -9754,7 +9624,7 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = TUR_encourage_privatization
-			focus = TUR_secularism_in_law
+			focus = TUR_secular_education
 			focus = TUR_develop_the_east
 			focus = TUR_yurtta_sulh_cihanda_sulh
 			focus = TUR_expand_turk_ocaklari
@@ -10216,7 +10086,7 @@ focus_tree = {
 	focus = {
 		id = TUR_economic_nationalization
 		icon = GFX_focus_generic_industry_2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = TUR_invigorate_turkish_nationalism
 		}
@@ -10417,10 +10287,11 @@ focus_tree = {
 				}
 				add_research_slot = 1
 			}
-			add_war_support = 0.05
-			army_experience = 15
-			air_experience = 15
-			navy_experience = 15
+			swap_ideas = {
+				remove_idea = TUR_crippling_illiteracy
+				add_idea = TUR_crippling_illiteracy_military
+			}
+			unlock_decision_tooltip = TUR_war_against_illiteracy
 		}
 		ai_will_do = {
 			base = 30
@@ -10694,7 +10565,11 @@ focus_tree = {
 				}
 				add_research_slot = 1
 			}
-			add_ideas = TUR_compulsory_education
+			swap_ideas = {
+				remove_idea = TUR_crippling_illiteracy
+				add_idea = TUR_crippling_illiteracy_socialist
+			}
+			unlock_decision_tooltip = TUR_war_against_illiteracy
 		}
 		ai_will_do = {
 			base = 30
@@ -10833,15 +10708,15 @@ focus_tree = {
 				TUR_stability_factor = 0.05
 			}
 			unlock_decision_tooltip = TUR_war_against_illiteracy
-			country_event = ottoman.189
+			if = {
+				limit = { has_dynamic_modifier = { modifier = TUR_OPDA } }
+				country_event = ottoman.189
+			}
 			if = {
 				limit = {
-					has_idea = statism_economy
+					has_idea = TUR_economic_etatism
 				}
-				swap_ideas = {
-					remove_idea = statism_economy
-					add_idea = partial_economic_mobilisation
-				}
+				activate_decision = TUR_ease_economic_restrictions
 			}
 			hidden_effect = {
 				remove_dynamic_modifier = {
@@ -11461,7 +11336,7 @@ focus_tree = {
 			focus = TUR_glory_to_the_action_army
 		}
 		relative_position_id = TUR_aftermath_of_31_march_incident
-		x = 37
+		x = 36
 		y = 2
 		allow_branch = {
 			if = {
@@ -11475,71 +11350,47 @@ focus_tree = {
 			}	
 		}
 		offset = {
-			x = -10
+			x = -14
 			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
+				has_completed_focus = TUR_legacy_of_the_4th_lancers
 			}
 		}
 		offset = {
-			x = 6
+			x = -2
 			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
-				NOT = {
-					has_country_flag = TUR_shadow_of_allah_on_earth
-					has_country_flag = TUR_continue_modernization_efforts
-					has_country_flag = TUR_hurriyet_ve_itilaf_victory
-					has_country_flag = TUR_vatan_ve_hurriyet_cemiyeti
-					has_country_flag = TUR_three_pasha_government
-					has_country_flag = TUR_modern_islamism
-					has_country_flag = TUR_for_the_good_of_the_arabs
-					has_country_flag = TUR_form_a_leftist_parliament
-				}		
+				has_completed_focus = TUR_continue_modernization_efforts
 			}
 		}
 		offset = {
-			x = 2
+			x = -2
 			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
-				has_country_flag = TUR_three_pasha_government		
+				has_completed_focus = TUR_shadow_of_allah_on_earth
 			}
 		}
 		offset = {
-			x = 8
+			x = -2
 			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
-				has_country_flag = TUR_hurriyet_ve_itilaf_victory
+				has_completed_focus = TUR_glory_to_the_action_army
 			}
 		}
 		offset = {
@@ -11550,66 +11401,51 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
-				has_country_flag = TUR_continue_modernization_efforts
+				has_completed_focus = TUR_for_the_good_of_the_arabs
 			}
 		}
 		offset = {
-			x = -7
+			x = 1
 			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
-				has_country_flag = TUR_shadow_of_allah_on_earth
+				has_completed_focus = TUR_hurriyet_ve_itilaf_victory
 			}
 		}
 		offset = {
-			x = 6
+			x = -1
 			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
-				has_country_flag = TUR_vatan_ve_hurriyet_cemiyeti	
+				has_completed_focus = TUR_vatan_ve_hurriyet_cemiyeti
 			}
 		}
 		offset = {
-			x = 2
+			x = -4
 			y = 0
 			trigger = {
-				OR = {
-					has_country_leader = {
-						character = TUR_abdulhamid_ii
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = TUR_abdulmecid_ii
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = TUR_ahmed_nihad
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = TUR_yusuf_izzeddin
-						ruling_only = yes
-					}
-					has_country_flag = allow_turkish_obsolete_focuses
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = TUR_three_pasha_government
+			}
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = TUR_form_a_leftist_parliament
 			}
 		}
 		# available = {
@@ -11780,7 +11616,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_ottoman_russian_subjugation
+		id = TUR_our_traditional_allies
 		icon = GFX_focus_consolidate_entente
 		cost = 5
 		prerequisite = {
@@ -11834,155 +11670,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					RUS = {
-						is_in_faction_with = FRA
-					}
-				}
-				hidden_effect = {
-					set_temp_variable = {
-						var = ottoman_democratic_party_value
-						value = party_popularity@democratic
-					}
-					set_temp_variable = {
-						var = ottoman_neutrality_party_value
-						value = party_popularity@neutrality
-					}
-					set_temp_variable = {
-						var = ottoman_communism_party_value
-						value = party_popularity@communism
-					}
-					set_temp_variable = {
-						var = ottoman_fascism_party_value
-						value = party_popularity@fascism
-					}
-					if = {
-						limit = {
-							has_government = democratic
-						}
-						set_country_flag = ottomans_are_democratic
-					}
-					if = {
-						limit = {
-							has_government = communism
-						}
-						set_country_flag = ottomans_are_communist
-					}
-					if = {
-						limit = {
-							has_government = neutrality
-						}
-						set_country_flag = ottomans_are_neutrality
-					}
-					if = {
-						limit = {
-							has_government = fascism
-						}
-						set_country_flag = ottomans_are_fascism
-					}
-					if = {
-						limit = {
-							has_elections = yes
-						}
-						set_country_flag = ottomans_have_elections
-					}
-				}
-				RUS = {
-					set_autonomy = {
-						target = TUR
-						autonomy_state = autonomy_dominion
-						end_wars = yes
-						end_civil_wars = no
-					}
-					country_event = {
-						id = ottoman.56
-						hours = 8
-					}
-				}
-				hidden_effect = {
-					add_popularity = {
-						ideology = democratic
-						popularity = ottoman_democratic_party_value
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = ottoman_neutrality_party_value
-					}
-					add_popularity = {
-						ideology = communism
-						popularity = ottoman_communism_party_value
-					}
-					add_popularity = {
-						ideology = fascism
-						popularity = ottoman_fascism_party_value
-					}
-					if = {
-						limit = {
-							has_country_flag = ottomans_are_democratic
-						}
-						set_politics = {
-							ruling_party = democratic
-							election_frequency = 48
-							elections_allowed = yes
-						}
-					}
-					if = {
-						limit = {
-							has_country_flag = ottomans_are_communist
-						}
-						set_politics = {
-							ruling_party = communism
-							elections_allowed = no
-						}
-					}
-					if = {
-						limit = {
-							has_country_flag = ottomans_are_neutrality
-							has_country_flag = ottomans_have_elections
-						}
-						set_politics = {
-							ruling_party = neutrality
-							election_frequency = 48
-							elections_allowed = yes
-						}
-					}
-					if = {
-						limit = {
-							has_country_flag = ottomans_are_neutrality
-							NOT = {
-								has_country_flag = ottomans_have_elections
-							}
-						}
-						set_politics = {
-							ruling_party = neutrality
-							elections_allowed = no
-						}
-					}
-					if = {
-						limit = {
-							has_country_flag = ottomans_are_fascism
-						}
-						set_politics = {
-							ruling_party = fascism
-							elections_allowed = no
-						}
-					}
-				}
-				remove_ideas = TUR_diplomatic_isolation_1
-				hidden_effect = {
-					news_event = {
-						id = ottoman.105
-						hours = 8
-					}
-				}
-			}
-			else = {
-				FRA = {
-					country_event = {
-						id = ottoman.47
-						hours = 8
-					}
+			FRA = {
+				country_event = {
+					id = ottoman.47
+					hours = 8
 				}
 			}
 		}
@@ -11995,17 +11686,17 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5
 		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation focus = TUR_german_ottoman_alliance
+			focus = TUR_our_traditional_allies focus = TUR_german_ottoman_alliance
 		}
 		allow_branch = {
 			has_country_flag = TUR_for_the_good_of_the_arabs
 		}
-		x = 0
-		y = 3
+		x = -5
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_MINORITY
 		}
-		relative_position_id = TUR_ottoman_russian_subjugation
+		relative_position_id = TUR_our_traditional_allies
 		available = {
 			is_subject = no
 			NOT = {
@@ -12067,18 +11758,18 @@ focus_tree = {
 	focus = {
 		id = TUR_ratify_anglo_ottoman_convention
 		icon = GFX_focus_convention
-		cost = 10
+		cost = 5
 		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation
+			focus = TUR_negotiations_with_france
 		}
-		x = -3
+		mutually_exclusive = { focus = TUR_berlin_baghdad_railway }
+		x = 1
 		y = 1
-		relative_position_id = TUR_ottoman_russian_subjugation
+		relative_position_id = TUR_negotiations_with_france
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		available = {
-			is_in_faction_with = ENG
 			any_state = {
 				is_core_of = IRQ
 				CONTROLLER = {
@@ -12092,48 +11783,72 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_global_flag = anglo_ottoman_convention_kuwait_and_qatar
-			add_political_power = 100
+			add_political_power = 30
+			ENG = {
+				effect_tooltip = {
+					add_political_power = 70
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = TUR_ratified_anglo_ottoman_convention
+					}
+				}
+				hidden_effect = { country_event = ww1_ottoman.160 }
+			}
 			KUW = {
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 885
-							state = 904
-							state = 905
+				effect_tooltip = {
+					add_autonomy_ratio = { value = -0.25 }
+					if = {
+						limit = {
+							owns_state = 885
+							controls_state = 885
 						}
+						885 = { set_demilitarized_zone = yes }
 					}
-					transfer_state_to = ROOT
-				}
-				every_country = {
-					limit = {
-						owns_state = 292
+					if = {
+						limit = {
+							owns_state = 905
+							controls_state = 905
+						}
+						905 = { set_demilitarized_zone = yes }
 					}
-					transfer_state = 905
-				}
-				add_autonomy_ratio = {
-					value = -0.25
+					if = {
+						limit = {
+							owns_state = 904
+							controls_state = 904
+						}
+						904 = { set_demilitarized_zone = yes }
+					}
+					add_ideas = KUW_ottoman_tax_collection
 				}
 				hidden_effect = {
-					drop_cosmetic_tag = yes
-					ROOT = {
-						diplomatic_relation = {
-							country = KUW
-							relation = guarantee
-							active = no
-						}
-						diplomatic_relation = {
-							country = KUW
-							relation = military_access
-							active = no
-						}
-					}
-					every_other_country = {
-						limit = {
-							has_war_with = PREV
-						}
-						white_peace = PREV
-					}
+#					drop_cosmetic_tag = yes #ig they were still gonna retain the old flag
+#					ROOT = {
+#						diplomatic_relation = {
+#							country = KUW
+#							relation = guarantee
+#							active = no
+#						}
+#						diplomatic_relation = {
+#							country = KUW
+#							relation = military_access
+#							active = no
+#						}
+#					}
+#					every_other_country = {
+#						limit = {
+#							has_war_with = PREV
+#						}
+#						white_peace = PREV
+#					}
+					country_event = ww1_ottoman.160
 				}
+			}
+			if = {
+				limit = {
+					QAT = { is_subject_of = TUR }
+				}
+				effect_tooltip = { end_puppet = QAT }
+				hidden_effect = { QAT = { country_event = ww1_ottoman.160 } }
 			}
 			# it was not found
 			# add_resource = {
@@ -12154,36 +11869,35 @@ focus_tree = {
 			# 	amount = 6
 			# 	state = 874
 			# }
-			ENG = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = TUR_ratified_anglo_ottoman_convention
+			hidden_effect = {
+				news_event = {
+					id = ww1_ottoman.42
+					hours = 3
 				}
-			}
-			news_event = {
-				id = ww1_ottoman.42
-				hours = 3
 			}
 		}
 		ai_will_do = {
-			base = 1
+			base = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 	}
 	focus = {
 		id = TUR_sale_of_cyprus
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = TUR_ratify_anglo_ottoman_convention
 		}
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = TUR_ratify_anglo_ottoman_convention
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
 		}
 		available = {
-			is_in_faction_with = ENG
 			is_subject = no
 			OR = {
 				ENG = {
@@ -12201,15 +11915,15 @@ focus_tree = {
 					hours = 8
 				}
 			}
-			if = {
-				limit = {
-					has_variable = opda_lira
-				}
-				custom_effect_tooltip = TUR_nicosian_agreement_reward
-			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = ww1_ottoman.64.a
 		}
 		ai_will_do = {
 			base = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 	}
 	focus = {
@@ -12279,8 +11993,8 @@ focus_tree = {
 			FOCUS_FILTER_AIR_XP
 			FOCUS_FILTER_HISTORICAL
 		}
-		x = 1
-		y = 1
+		x = -2
+		y = 2
 		relative_position_id = TUR_negotiations_with_france
 		completion_reward = {
 			add_ideas = TUR_french_aviation_squadron
@@ -12331,7 +12045,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				has_completed_focus = TUR_ottoman_russian_subjugation
+				has_completed_focus = TUR_our_traditional_allies
 				has_war_with = GER
 			}
 		}
@@ -12365,7 +12079,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				has_completed_focus = TUR_ottoman_russian_subjugation
+				has_completed_focus = TUR_our_traditional_allies
 				has_war_with = GER
 			}
 		}
@@ -12455,12 +12169,12 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				has_completed_focus = TUR_ottoman_russian_subjugation
+				has_completed_focus = TUR_our_traditional_allies
 				has_war_with = GER
 			}
 			country_exists = GER
 		}
-		x = -2
+		x = 1
 		y = 1
 		relative_position_id = TUR_continue_german_cooperation
 		completion_reward = {
@@ -12484,50 +12198,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_berlin_baghdad_railway
-		icon = GFX_focus_generic_train
-		cost = 5
-		prerequisite = {
-			focus = TUR_continue_german_cooperation
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-			FOCUS_FILTER_HISTORICAL
-		}
-		available = {
-			NOT = {
-				has_completed_focus = TUR_ottoman_russian_subjugation
-				has_war_with = GER
-			}
-			any_state = {
-				is_core_of = IRQ
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		bypass = {
-			NOT = { country_exists = GER }
-		}
-		x = 1
-		y = 1
-		relative_position_id = TUR_continue_german_cooperation
-		completion_reward = {
-			GER = {
-				country_event = {
-					id = ww1_ottoman.52
-					days = 2
-				}
-			}
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
-	focus = {
 		id = TUR_german_bailout
 		icon = GFX_goal_generic_consumer_goods
 		cost = 5
@@ -12536,7 +12206,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				has_completed_focus = TUR_ottoman_russian_subjugation
+				has_completed_focus = TUR_our_traditional_allies
 				has_war_with = GER
 			}
 			NOT = {
@@ -12557,7 +12227,54 @@ focus_tree = {
 		y = 1
 		relative_position_id = TUR_german_ottoman_arms_deal
 		completion_reward = {
-			TUR_remove_debt_1475 = yes
+			TUR_remove_debt_2950 = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+	focus = {
+		id = TUR_berlin_baghdad_railway
+		icon = GFX_focus_generic_train
+		cost = 5
+		prerequisite = {
+			focus = TUR_continue_german_cooperation
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_HISTORICAL
+		}
+		mutually_exclusive = { focus = TUR_ratify_anglo_ottoman_convention }
+		available = {
+			NOT = {
+				has_completed_focus = TUR_our_traditional_allies
+				has_war_with = GER
+			}
+			any_state = {
+				is_core_of = IRQ
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		bypass = {
+			NOT = { country_exists = GER }
+		}
+		x = -1
+		y = 1
+		relative_position_id = TUR_continue_german_cooperation
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = ww1_ottoman.52
+					days = 2
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = ww1_ottoman.53.a
 		}
 		ai_will_do = {
 			base = 30
@@ -12590,7 +12307,7 @@ focus_tree = {
 		bypass = {
 			is_in_faction_with = BUL
 		}
-		x = 2
+		x = -2
 		y = 2
 		relative_position_id = TUR_continue_german_cooperation
 		completion_reward = {
@@ -12669,15 +12386,15 @@ focus_tree = {
 		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 5
 		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation
+			focus = TUR_our_traditional_allies
 		}
 		search_filters = {
 			FOCUS_FILTER_MINORITY
 			FOCUS_FILTER_STABILITY
 		}
-		x = 3
-		y = 2
-		relative_position_id = TUR_ottoman_russian_subjugation
+		x = 0
+		y = 1
+		relative_position_id = TUR_our_traditional_allies
 		available = {
 			owns_state = 881
 			owns_state = 350
@@ -12892,105 +12609,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_konstantiniyye_docking_rights
-		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 5
-		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation
-		}
-		mutually_exclusive = {
-			focus = TUR_freedom_by_blood
-		}
-		available = {
-			is_subject_of = RUS
-		}
-		x = 2
-		y = 1
-		relative_position_id = TUR_ottoman_russian_subjugation
-		search_filters = {
-			FOCUS_FILTER_TFV_AUTONOMY
-		}
-		completion_reward = {
-			RUS = {
-				country_event = {
-					id = ottoman.68
-					hours = 8
-				}
-			}
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
-	focus = {
-		id = TUR_freedom_by_blood
-		icon = GFX_goal_generic_major_war
-		cost = 5
-		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation
-		}
-		mutually_exclusive = {
-			focus = TUR_konstantiniyye_docking_rights
-		}
-		available = {
-			is_subject_of = RUS
-		}
-		x = 4
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_TFV_AUTONOMY
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-		relative_position_id = TUR_ottoman_russian_subjugation
-		will_lead_to_war_with = RUS
-		completion_reward = {
-			RUS = {
-				end_puppet = TUR
-				declare_war_on = {
-					target = TUR
-					type = puppet_wargoal_focus
-				}
-			}
-			every_country = {
-				limit = {
-					has_war_with = RUS
-					has_war_with = TUR
-				}
-				white_peace = TUR
-			}
-			add_war_support = 0.3
-			hidden_effect = {
-				RUS = {
-					country_event = {
-						id = ottoman.64
-						hours = 8
-					}
-					activate_mission = RUS_independence_war_against_russia
-				}
-				activate_mission = TUR_independence_war_against_russia
-				news_event = {
-					id = ottoman.63
-					hours = 8
-				}
-			}
-			unlock_decision_tooltip = TUR_switch_to_the_german_side
-			unlock_decision_tooltip = TUR_switch_to_the_french_side
-			add_ideas = TUR_diplomatic_isolation_1
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
-	focus = {
 		id = TUR_dogu_ekspresi
 		icon = GFX_focus_Generic_Develop_Rail_Network
 		cost = 5
 		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation
+			focus = TUR_expand_the_armenian_reforms
 		}
 		x = 0
 		y = 1
-		relative_position_id = TUR_ottoman_russian_subjugation
+		relative_position_id = TUR_expand_the_armenian_reforms
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -13000,45 +12627,45 @@ focus_tree = {
 				build_only_on_allied = no
 				fallback = yes
 				path = {
-					9833
-					11829
-					2064
-					3851
-					3786
-					3951
-					8848
-					3907
-					11784
 					11747
-					804
-					904
-					11844
-					3807
-					3964
+					11839
+					9900
+					919
 					13276
 					6977
 					9777
-					3950
+				}
+				start_province = 11747
+				target_province = 9777
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = no
+				fallback = yes
+				start_province = 6977
+				target_province = 921
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = no
+				fallback = yes
+				path = {
+					9777
+					9761
 					6965
 					9860
 					11797
-					11883
-					6976
-					10472
-					789
-					12441
-					4902
-					1599
-					1539
-					11674
-					1962
-					4477
-					4614
-					1536
-					7661
+					11853
 				}
-				start_state = 347
-				target_state = 229
+				start_province = 9777
+				target_province = 11853
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = no
+				fallback = yes
+				start_province = 11853
+				target_province = 7661
 			}
 			49 = {
 				add_building_construction = {
@@ -13074,6 +12701,12 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 11853
+					instant_build = yes
+				}
 			}
 			353 = {
 				add_building_construction = {
@@ -13095,400 +12728,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_divide_bulgaria
-		icon = GFX_focus_generic_attack_bulgaria
-		cost = 5
-		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation
-		}
-		x = -1
-		y = 2
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-		}
-		relative_position_id = TUR_ottoman_russian_subjugation
-		bypass_if_unavailable = yes
-		available = {
-			NOT = {
-				is_in_faction_with = BUL
-			}
-			OR = {
-				NOT = {
-					owns_state = 849
-				}
-				NOT = {
-					owns_state = 451
-				}
-				NOT = {
-					owns_state = 757
-				}
-				NOT = {
-					owns_state = 212
-				}
-			}
-		}
-		complete_tooltip = {
-			if = {
-				limit = {
-					212 = { has_state_flag = TUR_divide_bulgaria_modifier }
-				}
-				212 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_divide_bulgaria_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					849 = { has_state_flag = TUR_divide_bulgaria_modifier }
-				}
-				849 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_divide_bulgaria_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					451 = { has_state_flag = TUR_divide_bulgaria_modifier }
-				}
-				451 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_divide_bulgaria_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					757 = { has_state_flag = TUR_divide_bulgaria_modifier }
-				}
-				757 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_divide_bulgaria_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					200 = { has_state_flag = TUR_divide_bulgaria_modifier }
-				}
-				200 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_divide_bulgaria_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					756 = { has_state_flag = TUR_divide_bulgaria_modifier }
-				}
-				756 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_divide_bulgaria_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_global_flag = kis_firstbalkanwar_lose
-					}
-				}
-				212 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_divide_bulgaria_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_divide_bulgaria_claimed
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_global_flag = kis_firstbalkanwar_lose
-				}
-				849 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_divide_bulgaria_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_divide_bulgaria_claimed
-					}
-				}
-				451 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_divide_bulgaria_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_divide_bulgaria_claimed
-					}
-				}
-				757 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_divide_bulgaria_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_divide_bulgaria_claimed
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							owns_state = 200
-						}
-					}
-					200 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_divide_bulgaria_modifier
-						hidden_effect = {
-								if = {
-								limit = {
-									NOT = {
-										is_controlled_by = TUR
-									}
-								}
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-							if = {
-								limit = {
-									is_controlled_by = TUR
-								}
-								effect_tooltip = {
-									add_dynamic_modifier = {
-										modifier = TUR_ottoman_claimed_state
-									}
-								}
-							}
-							set_state_flag = TUR_ottoman_claimed_state
-						}
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_divide_bulgaria_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							owns_state = 756
-						}
-					}
-					756 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_divide_bulgaria_modifier
-						hidden_effect = {
-								if = {
-								limit = {
-									NOT = {
-										is_controlled_by = TUR
-									}
-								}
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-							if = {
-								limit = {
-									is_controlled_by = TUR
-								}
-								effect_tooltip = {
-									add_dynamic_modifier = {
-										modifier = TUR_ottoman_claimed_state
-									}
-								}
-							}
-							set_state_flag = TUR_ottoman_claimed_state
-						}
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_divide_bulgaria_claimed
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
-	focus = {
 		id = TUR_isolate_greece
 		icon = GFX_focus_generic_attack_greece
 		cost = 5
 		prerequisite = {
-			focus = TUR_ottoman_russian_subjugation
+			focus = TUR_our_traditional_allies
 		}
-		x = 1
-		y = 2
-		relative_position_id = TUR_ottoman_russian_subjugation
+		x = -2
+		y = 1
+		relative_position_id = TUR_our_traditional_allies
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
 		available = {
 			NOT = {
 				is_in_faction_with = GRE
@@ -13497,6 +12748,7 @@ focus_tree = {
 		}
 		bypass_if_unavailable = yes
 		completion_reward = {
+			add_stability = 0.05
 			custom_effect_tooltip = TUR_isolate_greece_tt
 			hidden_effect = {
 				every_country = {
@@ -13516,96 +12768,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_claim_bosnia
-		icon = GFX_goal_generic_territory_or_war
-		cost = 5
-		prerequisite = {
-			focus = TUR_divide_bulgaria
-			focus = TUR_isolate_greece
-		}
-		x = -1
-		y = 1
-		relative_position_id = TUR_divide_bulgaria
-		available = {
-			NOT = {
-				owns_state = 104
-			}
-			owns_state = 760
-			owns_state = 761
-		}
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-		}
-		complete_tooltip = {
-			if = {
-				limit = {
-					104 = { has_state_flag = TUR_claim_bosnia_modifier }
-				}
-				104 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_claim_bosnia_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-		}
-		completion_reward = {
-			104 = {
-				custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-				set_state_flag = TUR_claim_bosnia_modifier
-				hidden_effect = {
-					if = {
-						limit = {
-							NOT = {
-								is_controlled_by = TUR
-							}
-						}
-						add_dynamic_modifier = {
-							modifier = TUR_ottoman_claimed_state
-						}
-					}
-					if = {
-						limit = {
-							is_controlled_by = TUR
-						}
-						effect_tooltip = {
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-					}
-					set_state_flag = TUR_ottoman_claimed_state
-				}
-				if = {
-					limit = {
-						NOT = {
-							is_claimed_by = TUR
-							is_core_of = TUR
-						}
-					}
-					add_claim_by = TUR
-					set_state_flag = TUR_claim_bosnia_claimed
-				}
-			}
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
-	focus = {
 		id = TUR_contribution_for_bailout
 		icon = GFX_focus_generic_treaty
 		cost = 5
 		prerequisite = {
 			focus = TUR_dogu_ekspresi
 		}
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = TUR_OPDA_trigger_tooltip_2
@@ -13618,6 +12788,19 @@ focus_tree = {
 			FOCUS_FILTER_OTTOMAN_DEBT
 		}
 		relative_position_id = TUR_dogu_ekspresi
+		complete_tooltip = {
+			every_country = {
+				limit = {
+					has_country_flag = TUR_contribution_for_bailout1
+				}
+				country_event = {
+					id = ottoman.57
+					hours = 8
+				}
+			}
+			custom_effect_tooltip = if_they_accept_for_each_tt
+			event_option_tooltip = ottoman.58.a
+		}
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -13631,6 +12814,7 @@ focus_tree = {
 					id = ottoman.57
 					hours = 8
 				}
+				set_country_flag = TUR_contribution_for_bailout1
 			}
 			if = {
 				limit = {
@@ -13651,7 +12835,10 @@ focus_tree = {
 						hours = 8
 					}
 				}
+				set_country_flag = TUR_contribution_for_bailout1
 			}
+			custom_effect_tooltip = if_they_accept_for_each_tt
+			event_option_tooltip = ottoman.58.a
 		}
 		ai_will_do = {
 			base = 30
@@ -13662,11 +12849,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
 		prerequisite = {
-			focus = TUR_contribution_for_bailout
+			focus = TUR_dogu_ekspresi
 		}
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = TUR_contribution_for_bailout
+		relative_position_id = TUR_dogu_ekspresi
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -13684,6 +12871,33 @@ focus_tree = {
 				limit = { has_state_flag = TUR_continue_entente_investments2 }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = { has_state_flag = TUR_continue_entente_investments3 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = { has_state_flag = TUR_continue_entente_investments4 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = { has_state_flag = TUR_continue_entente_investments5 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
@@ -13721,7 +12935,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = TUR_continue_entente_investments1
+				set_state_flag = TUR_continue_entente_investments2
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -13737,7 +12951,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = TUR_continue_entente_investments1
+				set_state_flag = TUR_continue_entente_investments3
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -13753,7 +12967,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = TUR_continue_entente_investments2
+				set_state_flag = TUR_continue_entente_investments4
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -13769,7 +12983,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = TUR_continue_entente_investments2
+				set_state_flag = TUR_continue_entente_investments5
 			}
 		}
 		ai_will_do = {
@@ -13777,537 +12991,75 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TUR_claiming_the_aegean_dominion
-		icon = GFX_focus_generic_aegean_sea_focus
+		id = TUR_form_cossack_units
+		icon = GFX_focus_SOV_restore_cossack_units
 		cost = 5
 		prerequisite = {
-			focus = TUR_isolate_greece
+			focus = TUR_expand_the_armenian_reforms
 		}
-		x = 1
+		x = -2
 		y = 1
-		relative_position_id = TUR_isolate_greece
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-		}
-		available = {
-			OR = {
-				NOT = {
-					owns_state = 790
-				}
-				NOT = {
-					owns_state = 164
-				}
-				NOT = {
-					owns_state = 899
-				}
-				NOT = {
-					owns_state = 182
-				}
-				NOT = {
-					owns_state = 900
-				}
-			}
-		}
-		complete_tooltip = {
-			if = {
-				limit = {
-					790 = { has_state_flag = TUR_claiming_the_aegean_dominion_modifier }
-				}
-				790 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_claiming_the_aegean_dominion_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					164 = { has_state_flag = TUR_claiming_the_aegean_dominion_modifier }
-				}
-				164 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_claiming_the_aegean_dominion_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					899 = { has_state_flag = TUR_claiming_the_aegean_dominion_modifier }
-				}
-				899 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_claiming_the_aegean_dominion_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					182 = { has_state_flag = TUR_claiming_the_aegean_dominion_modifier }
-				}
-				182 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_claiming_the_aegean_dominion_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					900 = { has_state_flag = TUR_claiming_the_aegean_dominion_modifier }
-				}
-				900 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_claiming_the_aegean_dominion_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-		}
+		relative_position_id = TUR_expand_the_armenian_reforms
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 790
-					}
+			add_ideas = TUR_integrated_cossack_units
+			custom_effect_tooltip = TUR_form_cossack_units_tt
+			division_template = {
+				name = "Rus Kossak Birlikleri"
+				division_names_group = TUR_CAV_01
+				template_counter = 05
+
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					artillery_brigade = { x = 2 y = 0 }
 				}
-				790 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
+				support = {
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
 				}
 			}
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 164
-					}
+			random_owned_controlled_state = {
+				prioritize = {
+					353
 				}
-				164 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
+				create_unit = {
+					division = "name = \"1. Ordu\" division_template = \"Rus Kossak Birlikleri\" start_experience_factor = 0.4"
+					owner = TUR
+				}
+				create_unit = {
+					division = "name = \"2. Ordu\" division_template = \"Rus Kossak Birlikleri\" start_experience_factor = 0.4"
+					owner = TUR
+				}
+				create_unit = {
+					division = "name = \"3. Ordu\" division_template = \"Rus Kossak Birlikleri\" start_experience_factor = 0.4"
+					owner = TUR
+				}
+				create_unit = {
+					division = "name = \"4. Ordu\" division_template = \"Rus Kossak Birlikleri\" start_experience_factor = 0.4"
+					owner = TUR
 				}
 			}
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 899
+			custom_effect_tooltip = TUR_an_alliance_with_the_kurds_tt2
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = TUR_hamidiye_cap
+						}
+					}
+					set_variable = {
+						TUR_hamidiye_cap = 0
 					}
 				}
-				899 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
+				add_to_variable = {
+					TUR_hamidiye_cap = 7
 				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 182
-					}
-				}
-				182 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 900
-					}
-				}
-				900 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
-				}
-			}
-			if = {
-				limit = {
-					owns_state = 790
-					owns_state = 164
-					owns_state = 899
-					owns_state = 182
-					owns_state = 900
-				}
-				790 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
-				}
-				164 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
-				}
-				899 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
-				}
-				182 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
-				}
-				900 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_claiming_the_aegean_dominion_modifier
-					hidden_effect = {
-							if = {
-							limit = {
-								NOT = {
-									is_controlled_by = TUR
-								}
-							}
-							add_dynamic_modifier = {
-								modifier = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								is_controlled_by = TUR
-							}
-							effect_tooltip = {
-								add_dynamic_modifier = {
-									modifier = TUR_ottoman_claimed_state
-								}
-							}
-						}
-						set_state_flag = TUR_ottoman_claimed_state
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_claimed_by = TUR
-								is_core_of = TUR
-							}
-						}
-						add_claim_by = TUR
-						set_state_flag = TUR_claiming_the_aegean_dominion_claimed
-					}
+				set_division_template_cap = {
+					division_template = "Hamidiye Alayı"
+					division_cap = TUR_hamidiye_cap
 				}
 			}
 		}
@@ -14320,12 +13072,10 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		cost = 10
 		prerequisite = {
+			focus = TUR_contribution_for_bailout
 			focus = TUR_continue_entente_investments
 		}
-		prerequisite = {
-			focus = TUR_expand_the_armenian_reforms
-		}
-		x = 3
+		x = -2
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
@@ -14355,6 +13105,8 @@ focus_tree = {
 					hours = 8
 				}
 			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = ottoman.72.a
 		}
 		ai_will_do = {
 			base = 30
@@ -14365,12 +13117,10 @@ focus_tree = {
 		icon = GFX_TUR_protect_british_positions
 		cost = 10
 		prerequisite = {
+			focus = TUR_contribution_for_bailout
 			focus = TUR_continue_entente_investments
 		}
-		prerequisite = {
-			focus = TUR_ratify_anglo_ottoman_convention
-		}
-		x = -3
+		x = 0
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
@@ -14408,6 +13158,8 @@ focus_tree = {
 					hours = 8
 				}
 			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = ottoman.75.a
 		}
 		ai_will_do = {
 			base = 30
@@ -14430,7 +13182,7 @@ focus_tree = {
 			}
 		}
 		mutually_exclusive = {
-			focus = TUR_ottoman_russian_subjugation
+			focus = TUR_our_traditional_allies
 			focus = TUR_internationalism
 		}
 		x = 0
@@ -14483,7 +13235,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = TUR_arrival_of_yildirim_army_group_tt
 			division_template = {
-				name = "Yıldırım Ordu Grubu"
+				name = "Yıldırım Birlikleri"
 				division_names_group = TUR_INF_01
 				template_counter = 4
 				priority = 2
@@ -14549,43 +13301,41 @@ focus_tree = {
 					554
 				}
 				create_unit = {
-					division = "name = \"1. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"1. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 				create_unit = {
-					division = "name = \"2. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"2. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 				create_unit = {
-					division = "name = \"3. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"3. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 				create_unit = {
-					division = "name = \"4. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"4. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 				create_unit = {
-					division = "name = \"5. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"5. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 				create_unit = {
-					division = "name = \"6. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"6. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 				create_unit = {
-					division = "name = \"7. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"7. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 				create_unit = {
-					division = "name = \"8. Ordu\" division_template = \"Yıldırım Ordu Grubu\" start_experience_factor = 0.4"
+					division = "name = \"8. Ordu\" division_template = \"Yıldırım Birlikleri\" start_experience_factor = 0.4"
 					owner = TUR
 				}
 			}
-			hidden_effect = {
-				country_event = {
-					id = ww1_ottoman.36
-					days = 20
-				}
+			country_event = {
+				id = ww1_ottoman.36
+				days = 20
 			}
 		}
 		ai_will_do = {
@@ -14754,12 +13504,12 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_military
 		cost = 2
 		prerequisite = {
-			focus = TUR_german_high_command
-			focus = TUR_turkish_chain_of_command
+			focus = TUR_our_traditional_allies
+			focus = TUR_german_ottoman_alliance
 		}
-		x = -1
+		x = 2
 		y = 1
-		relative_position_id = TUR_german_high_command
+		relative_position_id = TUR_our_traditional_allies
 		completion_reward = {
 			554 = {
 				add_dynamic_modifier = {
@@ -14810,7 +13560,17 @@ focus_tree = {
 			activate_mission = TUR_holding_aleppo
 		}
 		ai_will_do = {
-			base = 30
+			base = 0
+			modifier = {
+				add = 50
+				554 = {
+					any_neighbor_state = {
+						controller = {
+							has_war_with = ROOT
+						}
+					}
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -14821,12 +13581,12 @@ focus_tree = {
 		icon = GFX_focus_generic_coastal_fort
 		cost = 2
 		prerequisite = {
-			focus = TUR_german_high_command
-			focus = TUR_turkish_chain_of_command
+			focus = TUR_our_traditional_allies
+			focus = TUR_german_ottoman_alliance
 		}
-		x = 1
-		y = 1
-		relative_position_id = TUR_german_high_command
+		x = 3
+		y = 2
+		relative_position_id = TUR_our_traditional_allies
 		completion_reward = {
 			860 = {
 				add_dynamic_modifier = {
@@ -14911,7 +13671,36 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			base = 30
+			base = 0
+			modifier = {
+				add = 50
+				OR = {
+					860 = {
+						any_neighbor_state = {
+							controller = {
+								has_war_with = ROOT
+							}
+						}
+					}
+					861 = {
+						any_neighbor_state = {
+							controller = {
+								has_war_with = ROOT
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 10
+				any_country = {
+					has_war_with = ROOT
+					alliance_strength_ratio > 3
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -14922,12 +13711,12 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_military
 		cost = 2
 		prerequisite = {
-			focus = TUR_german_high_command
-			focus = TUR_turkish_chain_of_command
+			focus = TUR_our_traditional_allies
+			focus = TUR_german_ottoman_alliance
 		}
-		x = 3
+		x = 4
 		y = 1
-		relative_position_id = TUR_german_high_command
+		relative_position_id = TUR_our_traditional_allies
 		completion_reward = {
 			291 = {
 				add_dynamic_modifier = {
@@ -14988,10 +13777,44 @@ focus_tree = {
 			activate_mission = TUR_holding_baghdad
 		}
 		ai_will_do = {
-			base = 30
+			base = 0
+			modifier = {
+				add = 50
+				291 = {
+					any_neighbor_state = {
+						controller = {
+							has_war_with = ROOT
+						}
+					}
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
+		}
+	}
+	focus = {
+		id = TUR_negotiating_our_claims
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5
+		prerequisite = {
+			focus = TUR_our_traditional_allies focus = TUR_german_ottoman_alliance
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_HISTORICAL
+		}
+		x = 6
+		y = 1
+		relative_position_id = TUR_our_traditional_allies
+		complete_tooltip = {
+			TUR_negotiating_our_claims_tooltip = yes
+		}
+		completion_reward = {
+			TUR_negotiating_our_claims_effect = yes
+		}
+		ai_will_do = {
+			base = 30
 		}
 	}
 	focus = {
@@ -15001,7 +13824,7 @@ focus_tree = {
 		prerequisite = {
 			focus = TUR_german_ottoman_alliance
 		}
-		x = -2
+		x = 2
 		y = 1
 		relative_position_id = TUR_german_ottoman_alliance
 		search_filters = {
@@ -15014,7 +13837,7 @@ focus_tree = {
 				limit = {
 					has_variable = opda_lira
 				}
-				custom_effect_tooltip = TUR_remove_debt_0885_for_majors_at_war_with
+				custom_effect_tooltip = TUR_remove_debt_0492_for_majors_at_war_with
 				hidden_effect = {
 					every_country = {
 						limit = {
@@ -15068,2763 +13891,42 @@ focus_tree = {
 			base = 30
 		}
 	}
-	focus = {
-		id = TUR_negotiating_our_claims
-		icon = GFX_goal_generic_territory_or_war
-		cost = 5
-		prerequisite = {
-			focus = TUR_german_ottoman_alliance
-		}
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-			FOCUS_FILTER_HISTORICAL
-		}
-		x = 2
-		y = 1
-		relative_position_id = TUR_german_ottoman_alliance
-		complete_tooltip = {
-			if = {
-				limit = {
-					790 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				790 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					900 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				900 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					164 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				164 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					899 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				899 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					182 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				182 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					185 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				185 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					187 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				187 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					656 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				656 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					885 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				885 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					904 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				904 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					804 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				804 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					765 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				765 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					886 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				886 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					658 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				658 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					659 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				659 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					930 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				930 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 806
-					}
-				}
-				806 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_negotiating_our_claims_modifier
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					806 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				806 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					816 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				816 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					855 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				855 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					453 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				453 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					447 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				447 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					183 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				183 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					212 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				212 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					849 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				849 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					451 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				451 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					757 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				757 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					200 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				200 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					756 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				756 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					756 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				756 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					448 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				448 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_negotiating_our_claims_modifier
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					450 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				450 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_negotiating_our_claims_modifier
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					661 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				661 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_negotiating_our_claims_modifier
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					663 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				663 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_negotiating_our_claims_modifier
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					273 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				273 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_negotiating_our_claims_modifier
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					812 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				812 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					set_state_flag = TUR_negotiating_our_claims_modifier
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					77 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				77 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					846 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				846 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-			if = {
-				limit = {
-					805 = { has_state_flag = TUR_negotiating_our_claims_modifier }
-				}
-				805 = {
-					custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-					if = {
-						limit = {
-							has_state_flag = TUR_negotiating_our_claims_claimed
-						}
-						add_claim_by = TUR
-					}
-				}
-			}
-		}
-		completion_reward = {
-			effect_tooltip = {
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 790
-							}
-						}
-					}
-					790 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 900
-							}
-						}
-					}
-					900 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 164
-								owns_state = 899
-							}
-						}
-					}
-					164 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-					899 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 182
-							}
-						}
-					}
-					182 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						owns_state = 758
-					}
-					if = {
-						limit = {
-							NOT = {
-								owns_state = 185
-							}
-						}
-						185 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 187
-								}
-							}
-						}
-						187 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 656
-							}
-						}
-					}
-					656 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 885
-							}
-						}
-					}
-					885 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 904
-							}
-						}
-					}
-					904 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 804
-							}
-						}
-					}
-					804 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 765
-							}
-						}
-					}
-					765 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 886
-							}
-						}
-					}
-					886 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 658
-							}
-						}
-					}
-					658 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						owns_state = 293
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 659
-							}
-						}
-					}
-					659 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						owns_state = 293
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 930
-							}
-						}
-					}
-					930 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 806
-							}
-						}
-					}
-					806 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							owns_state = 816
-						}
-					}
-					816 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 855
-							}
-						}
-					}
-					855 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 453
-							}
-						}
-					}
-					453 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 447
-							}
-						}
-					}
-					447 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 183
-							}
-						}
-					}
-					183 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_completed_focus = TUR_ottoman_bulgarian_alliance
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								has_global_flag = kis_firstbalkanwar_lose
-							}
-						}
-						212 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-					}
-					if = {
-						limit = {
-							has_global_flag = kis_firstbalkanwar_lose
-						}
-						849 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-						451 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-						757 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-						if = {
-							limit = {
-								NOT = {
-									any_country = {
-										OR = {
-											is_subject_of = TUR
-											is_in_faction_with = TUR
-											tag = TUR
-										}
-										owns_state = 200
-									}
-								}
-							}
-							200 = {
-								if = {
-									limit = {
-										NOT = {
-											is_controlled_by = TUR
-										}
-									}
-									add_dynamic_modifier = {
-										modifier = TUR_ottoman_claimed_state
-									}
-								}
-								if = {
-									limit = {
-										is_controlled_by = TUR
-									}
-									effect_tooltip = {
-										add_dynamic_modifier = {
-											modifier = TUR_ottoman_claimed_state
-										}
-									}
-								}
-								set_state_flag = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									any_country = {
-										OR = {
-											is_subject_of = TUR
-											is_in_faction_with = TUR
-											tag = TUR
-										}
-										owns_state = 756
-									}
-								}
-							}
-							756 = {
-								if = {
-									limit = {
-										NOT = {
-											is_controlled_by = TUR
-										}
-									}
-									add_dynamic_modifier = {
-										modifier = TUR_ottoman_claimed_state
-									}
-								}
-								if = {
-									limit = {
-										is_controlled_by = TUR
-									}
-									effect_tooltip = {
-										add_dynamic_modifier = {
-											modifier = TUR_ottoman_claimed_state
-										}
-									}
-								}
-								set_state_flag = TUR_ottoman_claimed_state
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 448
-							}
-						}
-					}
-					448 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 450
-							}
-						}
-					}
-					450 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 661
-							}
-						}
-					}
-					661 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 663
-							}
-						}
-					}
-					663 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 273
-							}
-						}
-					}
-					273 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 812
-							}
-						}
-					}
-					812 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							owns_state = 211
-							owns_state = 77
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 77
-								}
-							}
-						}
-						77 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 846
-								}
-							}
-						}
-						846 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 805
-								}
-							}
-						}
-						805 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 790
-							}
-						}
-					}
-					790 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 900
-							}
-						}
-					}
-					900 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 164
-								owns_state = 899
-							}
-						}
-					}
-					164 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-					899 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 182
-							}
-						}
-					}
-					182 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						owns_state = 758
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 185
-								}
-							}
-						}
-						185 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 187
-								}
-							}
-						}
-						187 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 656
-							}
-						}
-					}
-					656 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 885
-							}
-						}
-					}
-					885 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 904
-							}
-						}
-					}
-					904 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 905
-							}
-						}
-					}
-					905 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 765
-							}
-						}
-					}
-					765 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 886
-							}
-						}
-					}
-					886 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 658
-							}
-						}
-					}
-					658 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						owns_state = 293
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 659
-							}
-						}
-					}
-					659 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						owns_state = 293
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 930
-							}
-						}
-					}
-					930 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 806
-							}
-						}
-					}
-					806 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 816
-							}
-						}
-					}
-					816 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 855
-							}
-						}
-					}
-					855 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 453
-							}
-						}
-					}
-					453 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 447
-							}
-						}
-					}
-					447 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 183
-							}
-						}
-					}
-					183 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_completed_focus = TUR_ottoman_bulgarian_alliance
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								has_global_flag = kis_firstbalkanwar_lose
-							}
-						}
-						212 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-					}
-					if = {
-						limit = {
-							has_global_flag = kis_firstbalkanwar_lose
-						}
-						849 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-						451 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-						757 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-						}
-						if = {
-							limit = {
-								NOT = {
-									any_country = {
-										OR = {
-											is_subject_of = TUR
-											is_in_faction_with = TUR
-											tag = TUR
-										}
-										owns_state = 200
-									}
-								}
-							}
-							200 = {
-								if = {
-									limit = {
-										NOT = {
-											is_controlled_by = TUR
-										}
-									}
-									add_dynamic_modifier = {
-										modifier = TUR_ottoman_claimed_state
-									}
-								}
-								if = {
-									limit = {
-										is_controlled_by = TUR
-									}
-									effect_tooltip = {
-										add_dynamic_modifier = {
-											modifier = TUR_ottoman_claimed_state
-										}
-									}
-								}
-								set_state_flag = TUR_ottoman_claimed_state
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									any_country = {
-										OR = {
-											is_subject_of = TUR
-											is_in_faction_with = TUR
-											tag = TUR
-										}
-										owns_state = 756
-									}
-								}
-							}
-							756 = {
-								if = {
-									limit = {
-										NOT = {
-											is_controlled_by = TUR
-										}
-									}
-									add_dynamic_modifier = {
-										modifier = TUR_ottoman_claimed_state
-									}
-								}
-								if = {
-									limit = {
-										is_controlled_by = TUR
-									}
-									effect_tooltip = {
-										add_dynamic_modifier = {
-											modifier = TUR_ottoman_claimed_state
-										}
-									}
-								}
-								set_state_flag = TUR_ottoman_claimed_state
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 448
-							}
-						}
-					}
-					448 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 450
-							}
-						}
-					}
-					450 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 661
-							}
-						}
-					}
-					661 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 663
-							}
-						}
-					}
-					663 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 273
-							}
-						}
-					}
-					273 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_country = {
-								OR = {
-									is_subject_of = TUR
-									is_in_faction_with = TUR
-									tag = TUR
-								}
-								owns_state = 812
-							}
-						}
-					}
-					812 = {
-						custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-						set_state_flag = TUR_negotiating_our_claims_modifier
-						if = {
-							limit = {
-								NOT = {
-									is_claimed_by = TUR
-									is_core_of = TUR
-								}
-							}
-							add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							owns_state = 211
-							owns_state = 77
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 77
-								}
-							}
-						}
-						77 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 846
-								}
-							}
-						}
-						846 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_country = {
-									OR = {
-										is_subject_of = TUR
-										is_in_faction_with = TUR
-										tag = TUR
-									}
-									owns_state = 805
-								}
-							}
-						}
-						805 = {
-							custom_effect_tooltip = TUR_ottoman_add_claims_tt
-						hidden_effect = { add_dynamic_modifier = { modifier = TUR_ottoman_claimed_state } }
-							set_state_flag = TUR_negotiating_our_claims_modifier
-							if = {
-								limit = {
-									NOT = {
-										OR = {
-											is_claimed_by = TUR
-											is_core_of = TUR
-										}
-									}
-								}
-								add_claim_by = TUR
-							set_state_flag = TUR_negotiating_our_claims_claimed
-							}
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
-	focus = {
-		id = TUR_sarajevo_agreement
-		icon = GFX_focus_deal_with_austria_hungary
-		cost = 10
-		prerequisite = {
-			focus = TUR_negotiating_our_claims
-		}
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-		}
-		relative_position_id = TUR_negotiating_our_claims
-		available = {
-			NOT = {
-				owns_state = 104
-			}
-			owns_state = 760
-			owns_state = 761
-			AUH = {
-				is_in_faction_with = TUR
-				owns_state = 104
-			}
-		}
-		completion_reward = {
-			AUH = {
-				country_event = {
-					id = ottoman.78
-					hours = 8
-				}
-			}
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
-	focus = {
-		id = TUR_german_villages_in_anatolia
-		icon = GFX_focus_generic_industry_1
-		cost = 10
-		prerequisite = {
-			focus = TUR_german_ottoman_alliance
-		}
-		x = -3
-		y = 2
-		relative_position_id = TUR_german_ottoman_alliance
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-			FOCUS_FILTER_HISTORICAL
-		}
-		available = {
-			owns_state = 49
-			owns_state = 830
-			owns_state = 346
-		}
-		completion_reward = {
-			49 = {
-				add_manpower = 150000
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			830 = {
-				add_manpower = 80000
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			346 = {
-				add_manpower = 100000
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			base = 30
-		}
-	}
+#	focus = {
+#		id = TUR_sarajevo_agreement
+#		icon = GFX_focus_deal_with_austria_hungary
+#		cost = 10
+#		prerequisite = {
+#			focus = TUR_negotiating_our_claims
+#		}
+#		x = 1
+#		y = 1
+#		search_filters = {
+#			FOCUS_FILTER_ANNEXATION
+#		}
+#		relative_position_id = TUR_negotiating_our_claims
+#		available = {
+#			NOT = {
+#				owns_state = 104
+#			}
+#			owns_state = 760
+#			owns_state = 761
+#			AUH = {
+#				is_in_faction_with = TUR
+#				owns_state = 104
+#			}
+#		}
+#		completion_reward = {
+#			AUH = {
+#				country_event = {
+#					id = ottoman.78
+#					hours = 8
+#				}
+#			}
+#		}
+#		ai_will_do = {
+#			base = 30
+#		}
+#	}
 	focus = {
 		id = TUR_pan_turkic_diplomacy
 		icon = GFX_focus_turan_road
@@ -18227,7 +14329,7 @@ focus_tree = {
 #						}
 #					}
 #					add_dynamic_modifier = {
-#						modifier = TUR_ottoman_turan_claimed_state
+#						modifier = TUR_ottoman_claimed_state
 #					}
 #					hidden_effect = {
 #						if = {
@@ -18235,7 +14337,7 @@ focus_tree = {
 #								is_controlled_by = TUR
 #							}
 #							remove_dynamic_modifier = {
-#								modifier = TUR_ottoman_turan_claimed_state
+#								modifier = TUR_ottoman_claimed_state
 #							}
 #							add_claim_by = TUR
 #							set_state_flag = TUR_turan_state_has_claimed
@@ -18352,7 +14454,7 @@ focus_tree = {
 #					}
 #				}
 #				add_dynamic_modifier = {
-#					modifier = TUR_ottoman_turan_claimed_state
+#					modifier = TUR_ottoman_claimed_state
 #				}
 #				hidden_effect = {
 #					if = {
@@ -18360,7 +14462,7 @@ focus_tree = {
 #							is_controlled_by = TUR
 #						}
 #						remove_dynamic_modifier = {
-#							modifier = TUR_ottoman_turan_claimed_state
+#							modifier = TUR_ottoman_claimed_state
 #						}
 #						add_claim_by = TUR
 #						set_state_flag = TUR_turan_state_has_claimed
@@ -18443,7 +14545,7 @@ focus_tree = {
 #					}
 #				}
 #				add_dynamic_modifier = {
-#					modifier = TUR_ottoman_turan_claimed_state
+#					modifier = TUR_ottoman_claimed_state
 #				}
 #				hidden_effect = {
 #					if = {
@@ -18451,7 +14553,7 @@ focus_tree = {
 #							is_controlled_by = TUR
 #						}
 #						remove_dynamic_modifier = {
-#							modifier = TUR_ottoman_turan_claimed_state
+#							modifier = TUR_ottoman_claimed_state
 #						}
 #						add_claim_by = TUR
 #						set_state_flag = TUR_turan_state_has_claimed
@@ -18546,7 +14648,7 @@ focus_tree = {
 #					}
 #				}
 #				add_dynamic_modifier = {
-#					modifier = TUR_ottoman_turan_claimed_state
+#					modifier = TUR_ottoman_claimed_state
 #				}
 #				hidden_effect = {
 #					if = {
@@ -18554,7 +14656,7 @@ focus_tree = {
 #							is_controlled_by = TUR
 #						}
 #						remove_dynamic_modifier = {
-#							modifier = TUR_ottoman_turan_claimed_state
+#							modifier = TUR_ottoman_claimed_state
 #						}
 #						add_claim_by = TUR
 #						set_state_flag = TUR_turan_state_has_claimed
@@ -18622,7 +14724,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = TUR_german_ottoman_alliance
-			focus = TUR_ottoman_russian_subjugation
+			focus = TUR_our_traditional_allies
 		}
 		available = {
 			has_completed_focus = TUR_form_a_leftist_parliament
@@ -19263,6 +15365,17 @@ focus_tree = {
 			}
 		}
 		offset = {
+			x = 9
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = TUR_legacy_of_the_4th_lancers
+			}
+		}
+		offset = {
 			x = 21
 			y = 0
 			trigger = {
@@ -19270,10 +15383,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = TUR_legacy_of_the_4th_lancers
-					has_completed_focus = TUR_glory_to_the_action_army
-				}
+				has_completed_focus = TUR_glory_to_the_action_army
 			}
 		}
 		search_filters = {
@@ -21289,7 +17399,6 @@ focus_tree = {
 				controls_state = 661
 				controls_state = 450
 				controls_state = 663
-				controls_state = 812
 				controls_state = 273
 			}
 		}
@@ -21315,7 +17424,6 @@ focus_tree = {
 						state = 661
 						state = 450
 						state = 663
-						state = 812
 						state = 273
 					}
 					TUR_state_has_anyminority_modifier = yes
@@ -22781,7 +18889,6 @@ focus_tree = {
 				controls_state = 661
 				controls_state = 663
 				controls_state = 273
-				controls_state = 812
 				controls_state = 810
 				controls_state = 754
 				controls_state = 817
@@ -22807,7 +18914,6 @@ focus_tree = {
 						state = 661
 						state = 663
 						state = 273
-						state = 812
 						state = 810
 						state = 754
 						state = 817
@@ -24345,7 +20451,6 @@ focus_tree = {
 				controls_state = 663
 				controls_state = 810
 				controls_state = 273
-				controls_state = 812
 				controls_state = 754
 				controls_state = 817
 				controls_state = 567
@@ -24381,7 +20486,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 11
+			x = 7
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -24479,7 +20584,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 11
+			x = 7
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -24571,7 +20676,7 @@ focus_tree = {
 		prerequisite = {
 			focus = TUR_macedonian_muslims_into_administration
 		}
-		x = 1
+		x = 2
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_MINORITY
@@ -24616,7 +20721,7 @@ focus_tree = {
 		prerequisite = {
 			focus = TUR_macedonian_muslims_into_administration
 		}
-		x = -1
+		x = -2
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_MINORITY
@@ -24648,7 +20753,7 @@ focus_tree = {
 			focus = TUR_macedonian_muslims_into_administration
 		}
 		x = 0
-		y = 2
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_MINORITY
 		}
@@ -28508,7 +24613,6 @@ focus_tree = {
 				controls_state = 661
 				controls_state = 663
 				controls_state = 273
-				controls_state = 812
 			}
 		}
 		bypass = {
@@ -28538,7 +24642,6 @@ focus_tree = {
 						state = 661
 						state = 663
 						state = 273
-						state = 812
 					}
 				}
 				custom_effect_tooltip = TUR_ottoman_resistance_target_local_supplies_tt
@@ -28562,7 +24665,6 @@ focus_tree = {
 						state = 661
 						state = 663
 						state = 273
-						state = 812
 					}
 				}
 				custom_effect_tooltip = TUR_ottoman_resistance_target_local_supplies_tt
@@ -32688,6 +28790,19 @@ focus_tree = {
 					add_core_of = TUR
 					set_state_flag = TUR_forced_assimilation_for_eastern_christians2
 				}
+				if = {
+					limit = {
+						OR = {
+							state = 818
+							state = 938
+							state = 939
+						}
+						NOT = {
+							is_core_of = TUR
+						}
+					}
+					add_dynamic_modifier = { modifier = TUR_azerbaijani_cooperation }
+				}
 			}
 			unlock_decision_tooltip = TUR_integrating_the_armenians
 			unlock_decision_tooltip = TUR_integrating_the_assyrians
@@ -33875,7 +29990,6 @@ focus_tree = {
 				controls_state = 450
 				controls_state = 663
 				controls_state = 273
-				controls_state = 812
 			}
 		}
 		relative_position_id = TUR_nationalism_and_centralization
@@ -33895,7 +30009,6 @@ focus_tree = {
 						state = 450
 						state = 663
 						state = 273
-						state = 812
 					}
 					TUR_state_has_anyminority_modifier = yes
 				}
@@ -35848,6 +31961,19 @@ focus_tree = {
 					remove_core_of = GEO
 					set_state_flag = TUR_cleanse_caucasus4
 				}
+				if = {
+					limit = {
+						OR = {
+							state = 818
+							state = 938
+							state = 939
+						}
+						NOT = {
+							is_core_of = TUR
+						}
+					}
+					add_dynamic_modifier = { modifier = TUR_azerbaijani_cooperation }
+				}
 			}
 			add_stability = -0.01
 			custom_effect_tooltip = TUR_cleanse_caucasus_tt
@@ -36632,7 +32758,6 @@ focus_tree = {
 				controls_state = 450
 				controls_state = 663
 				controls_state = 273
-				controls_state = 812
 			}
 		}
 		relative_position_id = TUR_one_language_one_religion_one_nation
@@ -36671,7 +32796,6 @@ focus_tree = {
 						state = 450
 						state = 663
 						state = 273
-						state = 812
 					}
 					TUR_state_has_anyminority_modifier = yes
 				}
@@ -36901,7 +33025,7 @@ focus_tree = {
 			FOCUS_FILTER_MINORITY
 		}
 		offset = {
-			x = 14
+			x = 18
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -39280,7 +35404,7 @@ focus_tree = {
 		completion_reward = {
 			set_cosmetic_tag = TUR_arab_ottoman
 			add_stability = 0.15
-			add_political_power = 150
+			remove_ideas = TUR_sick_man
 			country_event = {
 				id = ottoman.185
 				days = 5
@@ -39315,7 +35439,7 @@ focus_tree = {
 			has_country_flag = TUR_for_the_good_of_the_arabs
 		}
 		offset = {
-			x = 19
+			x = 15
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -39804,6 +35928,7 @@ focus_tree = {
 		}
 		allow_branch = {
 			has_country_flag = TUR_turks_are_a_minority
+			has_completed_focus = TUR_for_the_good_of_the_arabs
 		}
 		available = {
 			OR = {
@@ -39962,7 +36087,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -39970,7 +36095,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -40067,7 +36192,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -40075,7 +36200,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -40153,7 +36278,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -40161,7 +36286,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -40421,7 +36546,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -40429,7 +36554,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -40476,7 +36601,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -40484,7 +36609,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -40595,7 +36720,7 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = TUR_ottoman_imperial_claimed_state
+					modifier = TUR_ottoman_claimed_state
 				}
 				hidden_effect = {
 					if = {
@@ -40603,7 +36728,7 @@ focus_tree = {
 							is_controlled_by = TUR
 						}
 						remove_dynamic_modifier = {
-							modifier = TUR_ottoman_imperial_claimed_state
+							modifier = TUR_ottoman_claimed_state
 						}
 						add_claim_by = TUR
 						set_state_flag = TUR_imperial_state_has_claimed
@@ -40629,13 +36754,15 @@ focus_tree = {
 		y = 1
 		available = {
 			controls_state = 137
+			controls_state = 955
 		}
 		bypass = {
 			has_subject = CRI
 		}
 		relative_position_id = TUR_preemptive_strike_on_caucasia
 		completion_reward = {
-			137 = {
+			every_controlled_state = {
+				limit = { is_core_of = CRI }
 				transfer_state_to = CRI
 			}
 			puppet = CRI

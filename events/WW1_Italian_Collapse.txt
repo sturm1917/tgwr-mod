@@ -1057,19 +1057,11 @@ country_event = {
 						militia = { x = 0 y = 2 }
 					}
 				}
-				if = {
-					limit = {
-						strength_ratio = {
-							tag = ROOT
-							ratio < 0.5
-						}
-					}
-					every_owned_state = {
-						create_unit = {
-							division = "division_template = \"Reggimenti degli Monarchica Italian\" start_experience_factor = 0.3"
-							owner = PREV
-							allow_spawning_on_enemy_provs = yes
-						}
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Reggimenti degli Monarchica Italiana\" start_experience_factor = 0.3"
+						owner = PREV
+						allow_spawning_on_enemy_provs = yes
 					}
 				}
 				if = {
@@ -1081,7 +1073,7 @@ country_event = {
 					}
 					every_owned_state = {
 						create_unit = {
-							division = "division_template = \"Reggimenti degli Monarchica Italian\" start_experience_factor = 0.3"
+							division = "division_template = \"Reggimenti degli Monarchica Italiana\" start_experience_factor = 0.3"
 							owner = PREV
 							allow_spawning_on_enemy_provs = yes
 						}
@@ -2039,21 +2031,36 @@ country_event = {
 			every_character = {
 				set_nationality = SIC
 			}
-			if = {
-				limit = {
-					is_faction_leader = yes
-				}
-				every_other_country = {
-					limit = {
-						is_in_faction_with = ROOT
-					}
-					SIC = {
-						create_faction = italian_federation
-						add_to_faction = PREV
-					}
-				}
-			}
+			# if = {
+			# 	limit = {
+			# 		is_faction_leader = yes
+			# 	}
+			# 	every_other_country = {
+			# 		limit = {
+			# 			is_in_faction_with = ROOT
+			# 		}
+			# 		SIC = {
+			# 			create_faction = italian_federation
+			# 			add_to_faction = PREV
+			# 		}
+			# 	}
+			# }
 			SIC = {
+				if = {
+					limit = {
+						PREV = { is_in_faction_with = ITA }
+					}
+					set_truce = {
+						target = ITA
+						days = 365
+					}
+					diplomatic_relation = {
+						country = PREV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+				take_all_subjects_ROOT = yes
 				inherit_technology = ROOT
 				annex_country = {
 					target = ROOT

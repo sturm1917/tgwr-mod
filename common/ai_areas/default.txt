@@ -31,6 +31,14 @@ areas = {
 		}
 	}
 
+	northern_france_and_benelux = {
+        strategic_regions = {
+            208 # france
+            20
+            5 # benelux
+        }
+    }
+
 	north_america = {
 
 		continents = { 
@@ -121,6 +129,26 @@ areas = {
 			86  # Tasman Sea
 			98  # Great Australian Bight
 			81  # Coral Sea
+		}
+	}
+	
+	south_china = {
+
+		strategic_regions = {
+			164
+			144
+			15
+			165
+		}
+	}
+	north_china = {
+
+		strategic_regions = {
+			146
+			200
+			145
+			152
+			143
 		}
 	}
 

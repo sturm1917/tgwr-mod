@@ -134,6 +134,10 @@ spriteTypes = {
 		name = "GFX_SE_carlist_civil_war"
 		textureFile = "gfx/superevent_pictures/SE_carlist_civil_war.dds"
 	}
+	spriteType = { 
+		name = "GFX_SE_arab_revolt"
+		textureFile = "gfx/superevent_pictures/SE_arab_revolt.dds"
+	}
 	#################
 	
 	spriteType = {

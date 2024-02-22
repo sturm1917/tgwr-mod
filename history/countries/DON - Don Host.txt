@@ -48,7 +48,6 @@ recruit_character = DON_nikolai_golubov
 
 		#air
 		scout_plane = 1
-		airship = 1
 		
 		#engineering
 		electrical_engineering = 1
@@ -76,4 +75,5 @@ set_popularities = {
 add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
+	RUS_cossack_volnitsa
 }

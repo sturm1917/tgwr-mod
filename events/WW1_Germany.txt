@@ -716,19 +716,11 @@ country_event = {
 			add_ideas = standing_alone	
 			division_template = {
 				name = "Freikorps Brigade"
+				division_names_group = GER_GAR_01
 				regiments = {
-					infantry = {
-						x = 0
-						y = 0
-					}
-					infantry = {
-						x = 0
-						y = 1
-					}
-					infantry = {
-						x = 0
-						y = 2
-					}
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
 				}
 			}
 			50 = {
@@ -815,59 +807,51 @@ country_event = {
 					set_nationality = PREV.PREV
 				}
 				division_template = {
-					name = "Spartacus Brigade"
+					name = "Spartakus Brigade"
+					division_names_group = GER_GAR_02
 					regiments = {
-						infantry = {
-							x = 0
-							y = 0
-						}
-						infantry = {
-							x = 0
-							y = 1
-						}
-						infantry = {
-							x = 0
-							y = 2
-						}
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
 					}
 				}
 				64 = {
 					create_unit = {
-						division = "name = \"I Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"I Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"II Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"II Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"III Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"III Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 				}
 				60 = {
 					create_unit = {
-						division = "name = \"IV Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"IV Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"V Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"V Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"VI Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"VI Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"VII Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"VII Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"VIII Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"VIII Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"IX Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+						division = "name = \"IX Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 						owner = PREV
 					}
 				}
@@ -936,59 +920,51 @@ country_event = {
 			}
 			add_ideas = standing_alone	
 			division_template = {
-				name = "Spartacus Brigade"
+				name = "Spartakus Brigade"
+				division_names_group = GER_GAR_02
 				regiments = {
-					infantry = {
-						x = 0
-						y = 0
-					}
-					infantry = {
-						x = 0
-						y = 1
-					}
-					infantry = {
-						x = 0
-						y = 2
-					}
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
 				}
 			}
 			64 = {
 				create_unit = {
-					division = "name = \"I Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"I Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"II Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"II Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"III Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"III Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"IV Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"IV Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 			}
 			60 = {
 				create_unit = {
-					division = "name = \"V Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"V Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"VI Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"VI Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"VII Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"VII Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"VIII Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"VIII Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"IX Brigade\" division_template = \"Spartacus Brigade\" start_experience_factor = 0.2"
+					division = "name = \"IX Brigade\" division_template = \"Spartakus Brigade\" start_experience_factor = 0.2"
 					owner = ROOT
 				}
 			}
@@ -1026,19 +1002,11 @@ country_event = {
 				}
 				division_template = {
 					name = "Freikorps Brigade"
+					division_names_group = GER_GAR_01
 					regiments = {
-						infantry = {
-							x = 0
-							y = 0
-						}
-						infantry = {
-							x = 0
-							y = 1
-						}
-						infantry = {
-							x = 0
-							y = 2
-						}
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
 					}
 				}
 				50 = {
@@ -1585,15 +1553,17 @@ country_event = {
 					}
 				}
 			}
+			hidden_effect = {
+				set_popularities = {
+					fascism = 10
+					communism = 2
+					democratic = 24
+					neutrality = 64
+				}
+			}
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
-			}
-			set_popularities = {
-				fascism = 10
-				communism = 2
-				democratic = 24
-				neutrality = 64
 			}
 			set_cosmetic_tag = AUS_GER
 			set_party_name = {
@@ -1747,10 +1717,6 @@ country_event = {
 					}
 				}
 			}
-		}
-		add_timed_idea = {
-			idea = RUS_idea_operation_faustschlag
-			days = 14
 		}
 		if = {
 			limit = {
@@ -3342,25 +3308,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_germany.57.a
-		ITA = {
-			if = {
-				limit = {
-					NOT = {
-						has_war_with = ROOT
-						is_in_faction = yes
-					}
-				}
-				GER = {
-					add_to_faction = ITA
-				}
-			}
-			if = {
-				limit = {
-					is_in_faction_with = ROOT
-					has_idea = idea_italy_triple_alliance
-				}
-				remove_ideas = idea_italy_triple_alliance
-			}
+		GER = {
+			add_to_faction = ITA
 		}
 		if = {
 			limit = {
@@ -6192,39 +6141,16 @@ country_event = {
 					}
 					division_template = {
 						name = "Brigade der Rote Armee"
+						division_names_group = GER_GAR_02
 						regiments = {
-							infantry = {
-								x = 0
-								y = 0
-							}
-							infantry = {
-								x = 0
-								y = 1
-							}
-							infantry = {
-								x = 0
-								y = 2
-							}
-							infantry = {
-								x = 0
-								y = 3
-							}
-							infantry = {
-								x = 1
-								y = 0
-							}
-							infantry = {
-								x = 1
-								y = 1
-							}
-							infantry = {
-								x = 1
-								y = 2
-							}
-							infantry = {
-								x = 1
-								y = 3
-							}
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
 						}
 					}
 					57 = {
@@ -6869,7 +6795,7 @@ country_event = {
 			keep_political_leader = yes
 			hidden_effect = {
 				set_country_flag = ruhr_uprising
-				set_country_flag = great_war_loser
+				# set_country_flag = great_war_loser
 				set_country_flag = interbellum
 				set_cosmetic_tag = GER_ruhr_revolt
 				set_party_name = {
@@ -6905,39 +6831,16 @@ country_event = {
 				}
 				division_template = {
 					name = "Brigade der Rote Armee"
+					division_names_group = GER_GAR_02
 					regiments = {
-						infantry = {
-							x = 0
-							y = 0
-						}
-						infantry = {
-							x = 0
-							y = 1
-						}
-						infantry = {
-							x = 0
-							y = 2
-						}
-						infantry = {
-							x = 0
-							y = 3
-						}
-						infantry = {
-							x = 1
-							y = 0
-						}
-						infantry = {
-							x = 1
-							y = 1
-						}
-						infantry = {
-							x = 1
-							y = 2
-						}
-						infantry = {
-							x = 1
-							y = 3
-						}
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
 					}
 				}
 				random_owned_state = {
@@ -6989,7 +6892,7 @@ country_event = {
 			keep_political_leader = yes
 			hidden_effect = {
 				set_country_flag = ruhr_uprising
-				set_country_flag = great_war_loser
+				# set_country_flag = great_war_loser
 				set_country_flag = interbellum
 				set_cosmetic_tag = GER_ruhr_revolt
 				set_party_name = {
@@ -7025,39 +6928,16 @@ country_event = {
 				}
 				division_template = {
 					name = "Brigade der Rote Armee"
+					division_names_group = GER_GAR_02
 					regiments = {
-						infantry = {
-							x = 0
-							y = 0
-						}
-						infantry = {
-							x = 0
-							y = 1
-						}
-						infantry = {
-							x = 0
-							y = 2
-						}
-						infantry = {
-							x = 0
-							y = 3
-						}
-						infantry = {
-							x = 1
-							y = 0
-						}
-						infantry = {
-							x = 1
-							y = 1
-						}
-						infantry = {
-							x = 1
-							y = 2
-						}
-						infantry = {
-							x = 1
-							y = 3
-						}
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
 					}
 				}
 				random_owned_state = {
@@ -8347,17 +8227,26 @@ country_event = {
 	picture = GFX_report_event_europe_funeral
 	trigger = {
 		tag = GER
-		has_country_leader = {
-			character = GER_paul_von_hindenburg
-			ruling_only = no
+		OR = {
+			has_country_leader = {
+				character = GER_paul_von_hindenburg
+			}
+			AND = {
+				has_country_leader = {
+					character = GER_paul_von_hindenburg
+					ruling_only = no
+				}
+				has_completed_focus = GER_chancellor_hitler
+			}	
 		}
 		date > 1934.7.1
+		has_country_flag = great_war_loser
 	}
 	fire_only_once = yes
 	mean_time_to_happen = { days = 31 }
 	option = {
 		name = ww1_germany.146.a
-		trigger = { has_completed_focus = GER_chancellor_hitler }
+		trigger = { has_cosmetic_tag = GER_nazi }
 		retire_character = GER_paul_von_hindenburg
 		GER_adolf_hitler = {
 			add_country_leader_trait = dictator
@@ -8382,7 +8271,7 @@ country_event = {
 	}
 	option = { # temporal leader
 		name = ww1_germany.146.b
-		trigger = { NOT = { has_completed_focus = GER_chancellor_hitler } }
+		trigger = { NOT = { has_cosmetic_tag = GER_nazi } }
 		retire_character = GER_paul_von_hindenburg
 		GER_heinrich_brunning = {
 			add_country_leader_role = {
@@ -8612,11 +8501,11 @@ country_event = {
 					limit = {
 						OR = {
 							state = 932
-							state = 745
-							is_core_of = VIN
-							is_core_of = CAM
-							is_core_of = LAO
-							is_core_of = SRW
+							# state = 745
+							# is_core_of = VIN
+							# is_core_of = CAM
+							# is_core_of = LAO
+							# is_core_of = SRW
 						}
 					}
 					OST = {
@@ -8627,6 +8516,38 @@ country_event = {
 								932 = { is_capital = no }
 							}
 							set_capital = { state = 932 }
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_subject = IND
+				}
+				IND = {
+					if = {
+						limit = {
+							has_character = OST_wilhelm_filchner
+						}
+						OST_wilhelm_filchner = { set_nationality = OST }
+					}
+					OST = {
+						annex_country = {
+							target = IND
+							transfer_troops = yes
+						}
+						OST_wilhelm_filchner = {
+							promote_character = oligarchism
+							promote_character = conservatism
+						}
+						if = {
+							limit = {
+								has_character = OST_maximilian_von_spee
+							}
+							OST_maximilian_von_spee = {
+								promote_character = oligarchism
+								promote_character = stratocracy
+							}
 						}
 					}
 				}
@@ -8697,64 +8618,82 @@ country_event = {
 			}
 			annex_country = {
 				target = PREV
-				transfer_troops = yes
+				transfer_troops = no
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = IND
+						OR = {
+							has_war_with = VIN
+							has_war_with = LAO
+							has_war_with = CAM
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_war_with = ROOT
+						OR = {
+							original_tag = VIN
+							original_tag = LAO
+							original_tag = CAM
+						}
+					}
+					OST = {
+						add_to_war = {
+							targeted_alliance = ROOT
+							enemy = PREV
+						}
+					}
+				}
 			}
 			hidden_effect = {
 				if = {
 					limit = {
-						PREV = {
-							OR = {
-								tag = MAL
-								tag = VIN
-								tag = CAM
-								tag = LAO
-							}
-						}
+						owns_state = 932
+						932 = { is_capital = no }
 					}
-					every_owned_state = {
-						limit = {
-							OR = {
-								# is_core_of = MAL
-								state = 932
-								is_core_of = VIN
-								is_core_of = CAM
-								is_core_of = LAO
-							}
-						}
-						add_core_of = PREV
-					}
-					if = {
-						limit = {
-							owns_state = 932
-						}
-						set_capital = { state = 932 }
-					}
+					932 = { add_core_of = PREV }
+					set_capital = { state = 932 }
 				}
 			}
 		}
 		ai_chance = {
 			base = 5
 			modifier = {
+				add = 5
+				OR = {
+					is_neighbor_of = FROM
+					any_other_country = {
+						is_neighbor_of = ROOT
+						is_subject_of = FROM
+					}
+				}
+			}
+			modifier = {
 				add = 10
 				has_civil_war = yes
 			}
 			modifier = {
 				add = 10
-				is_in_faction_with = ROOT
-			}
-			modifier = {
-				add = 10
-				tag = MAL
-				has_global_flag = british_civil_war
+				is_in_faction_with = FROM
 			}
 			modifier = {
 				add = 10
 				OR = {
-					tag = VIN
-					tag = CAM
-					tag = LAO
+					tag = MAL
+					tag = SRW
 				}
-				has_global_flag = french_civil_war
+				has_global_flag = british_civil_war
+			}
+			modifier = {
+				add = 10
+				tag = IND
+				OR = {
+					has_global_flag = french_civil_war
+					surrender_progress > 0.25
+				}
 			}
 			modifier = {
 				factor = 0
@@ -8786,6 +8725,10 @@ country_event = {
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.15
+				}
+				has_opinion = {
+					target = FROM
+					value > 0
 				}
 			}
 		}
@@ -9723,37 +9666,36 @@ country_event = {
 		NOT = {
 			has_war_with = RUS
 			has_war_with = SOV
-			country_exists = BLR
-			owns_state = 209
+			209 = { is_owned_and_controlled_by = ROOT }
+			913 = { is_owned_and_controlled_by = ROOT }
+			925 = { is_owned_and_controlled_by = ROOT }
 		}
 	}
 	mean_time_to_happen = {
 		days = 45
-		modifier = {
-			#pskov first
-			factor = 10
-			OR = {
-				209 = { is_owned_and_controlled_by = ROOT }
-				913 = { is_owned_and_controlled_by = ROOT }
-				925 = { is_owned_and_controlled_by = ROOT }
-			}
-		}
 	}
 	option = {
 		name = ww1_germany.168.b
 		trigger = {
+			913 = { is_owned_or_subject_trigger = no }
 			209 = {
 				owner = {
 					is_russian_tag = yes
 				}
 			}
 		}
-		96 = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 96
+					state = 945
+				}
+			}
 			remove_claim_by = ROOT
-		}
-		209 = {
-			owner = {
-				transfer_state = 96
+			209 = {
+				owner = {
+					transfer_state = PREV.PREV
+				}
 			}
 		}
 		ai_chance = { base = 10 }
@@ -9765,12 +9707,18 @@ country_event = {
 			name = ww1_germany.168.tt
 		}
 		add_stability = -0.05
-		96 = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 96
+					state = 945
+				}
+			}
 			remove_claim_by = ROOT
-		}
-		12 = {
-			owner = {
-				transfer_state = 96
+			950 = {
+				owner = {
+					transfer_state = PREV.PREV
+				}
 			}
 		}
 		ai_chance = { base = 0 }
@@ -9792,22 +9740,20 @@ country_event = {
 			209 = { is_owned_and_controlled_by = ROOT }
 			913 = { is_owned_and_controlled_by = ROOT }
 			925 = { is_owned_and_controlled_by = ROOT }
+			944 = { is_owned_and_controlled_by = ROOT }
+			945 = { is_owned_and_controlled_by = ROOT }
+			947 = { is_owned_and_controlled_by = ROOT }
 		}
 		NOT = {
 			has_war_with = RUS
 			has_war_with = SOV
+			95 = { is_owned_and_controlled_by = ROOT }
+			204 = { is_owned_and_controlled_by = ROOT }
+			206 = { is_owned_and_controlled_by = ROOT }
 		}
 	}
 	mean_time_to_happen = {
 		days = 45
-		modifier = {
-			factor = 10
-			OR = {
-				95 = { is_owned_and_controlled_by = ROOT }
-				204 = { is_owned_and_controlled_by = ROOT }
-				206 = { is_owned_and_controlled_by = ROOT }
-			}
-		}
 	}
 	option = {
 		name = ww1_germany.167.b
@@ -9817,6 +9763,9 @@ country_event = {
 					state = 209
 					state = 913
 					state = 925
+					state = 944
+					state = 945
+					state = 947
 				}
 			}
 			remove_claim_by = ROOT
@@ -9831,7 +9780,7 @@ country_event = {
 	option = {
 		name = ww1_germany.168.a
 		trigger = {
-			191 = {
+			952 = {
 				owner = {
 					is_russian_tag = no
 					is_subject_of = ROOT
@@ -9849,10 +9798,14 @@ country_event = {
 					state = 209
 					state = 913
 					state = 925
+					state = 96
+					state = 944
+					state = 945
+					state = 947
 				}
 			}
 			remove_claim_by = ROOT
-			191 = {
+			952 = {
 				owner = {
 					transfer_state = PREV.PREV
 				}
@@ -9863,7 +9816,7 @@ country_event = {
 	option = {
 		name = ww1_germany.168.c
 		trigger = {
-			191 = {
+			952 = {
 				owner = {
 					is_russian_tag = no
 					is_subject_of = ROOT
@@ -9885,8 +9838,11 @@ country_event = {
 			limit = {
 				OR = {
 					state = 209
-					# state = 913
+					state = 96
 					state = 925
+					state = 944
+					state = 945
+					state = 947
 				}
 			}
 			remove_claim_by = ROOT
@@ -9973,7 +9929,7 @@ country_event = {
 	id = ww1_germany.171
 	title = ww1_germany.171.t
 	desc = ww1_germany.171.d
-	picture = GFX_report_event_france_parade
+	picture = GFX_report_event_generic_military_parade
 	is_triggered_only = yes
 	option = {
 		name = ww1_germany.171.a

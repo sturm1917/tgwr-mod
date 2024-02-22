@@ -114,6 +114,10 @@ music = {
 	chance = { modifier = { factor = 0 } }
 }
 music = {
+	song = "SE_arab_revolt"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
 	song = "SE_carlist_civil_war"
 	chance = { modifier = { factor = 0 } }
 }

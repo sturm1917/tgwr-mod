@@ -8,9 +8,15 @@ music = {
 			factor = 0.5
 		}	
 		modifier = {
-			factor = 3
-			has_war = yes
-			tag = AUH
+			add = 3
+			is_russian_tag = yes
+			OR = {
+				AND = {
+					tag = SOV
+					has_war = yes
+				}
+				has_war_with = SOV
+			}
 		}		
 	}
 }
@@ -437,12 +443,59 @@ music = {
 		}		
 	}
 }
-
 music = {
 	song = "el_abanderado_de_la_tradicion"
 	chance = {
 		modifier = {
 			factor = 0.1
-		}	
+		}
+	}
+}	
+music = {
+	song = "its_a_long_way_to_mukumbura"
+	chance = {
+		base = 0
+	}
+}
+music = {
+	song = "qing_theme"
+	chance = {
+		base = 0
+		modifier = {
+			add = 2
+			is_qing_monarchy = yes
+		}
+	}
+}
+music = {
+	song = "beiyang_fleet_anthem"
+	chance = {
+		base = 0
+		modifier = {
+			add = 2
+			is_china_or_warlord_no_tt = yes
+			is_kuomintang_state = no
+		}
+	}
+}
+music = {
+	song = "pu_tian_yue"
+	chance = {
+		base = 0
+		modifier = {
+			add = 2
+			is_qing_monarchy = yes
+		}
+	}
+}
+music = {
+	song = "tunelihongzhang"
+	chance = {
+		base = 0
+		modifier = {
+			add = 2
+			is_china_or_warlord_no_tt = yes
+			is_kuomintang_state = no
+		}
 	}
 }
