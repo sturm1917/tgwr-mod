@@ -526,10 +526,21 @@ focus_tree = {
 		icon = GFX_focus_hol_oranje_boven
 		cost = 5
 		prerequisite = {focus = HOL_dei_industrialisation}
-		x = -1
-		y = 3
-		relative_position_id = HOL_east_indies_investment
+		x = 0
+		y = 1
+		relative_position_id = HOL_dei_industrialisation
 		}
+		
+	focus = {
+	    id = HOL_java_industrialisation
+		icon = GFX_focus_hol_oranje_boven
+		cost = 5
+		prerequisite = {focus = HOL_develop_java}
+		prerequisite = {focus = HOL_industrial_expansion}
+		x = -1
+		y = 2
+		relative_position_id = HOL_dei_industrialisation
+	}
 		
 	focus = {
 	    id = HOL_colonial_exploitation
@@ -541,6 +552,16 @@ focus_tree = {
 		y = 2
 		relative_position_id = HOL_east_indies_investment
 		}
+		
+	focus = {
+	    id = HOL_agrarian_economy
+		icon = GFX_focus_hol_oranje_boven
+		cost = 5
+		prerequisite = {focus = HOL_colonial_exploitation}
+		x = 0
+		y = 1
+		relative_position_id = HOL_colonial_exploitation
+	}
 		
 		
 		### Military ###
