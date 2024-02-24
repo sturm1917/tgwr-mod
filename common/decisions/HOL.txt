@@ -1,0 +1,52 @@
+HOL_new_category = { #the first should be the category in category file the decision shows up in
+HOL_test_decision = { #https://hoi4.paradoxwikis.com/Decision_modding quite useful
+	icon = generic_prepare_civil_war
+	allowed = {
+		tag = HOL #again checks at start of game, you should pretty much always have it as just original tag = nation u coding
+	}
+	
+	available = { #what you need to be able to take the decision https://hoi4.paradoxwikis.com/Triggers
+		
+	}
+	cost = 75 #how much political power, can be removed to make it free  https://hoi4.paradoxwikis.com/Decision_modding#Decision_cost:~:text=Alternatively%2C%20a%20decision%20can%20also%20take%20a%20custom%20localisation%20string%20as%20the%20cost.%20This%20is%20done%20with%20the%20following%3A to make it cost something other then pp	
+	visible = { #what makes the decision actually show up. https://hoi4.paradoxwikis.com/Triggers 
+	
+	}	
+	complete_effect = { #what you get RIGHT AFTER when you click decision  https://hoi4.paradoxwikis.com/Effect
+
+	}
+	fire_only_once = yes
+	days_remove = 30 #how long the decision stays until being removed and then appearing again if fire only once is not on and the visible triggers are still met. optional and will re appear right after if not used and  fire only once is not on and the visible triggers are still met
+	remove_effect = { #what happens after the days_remove count down is over, optional of course https://hoi4.paradoxwikis.com/Effect
+		
+	}
+	ai_will_do = { #ai modding :horror:
+
+	}
+}
+HOL_no_notes = { 
+	icon = generic_prepare_civil_war
+	allowed = {
+		tag = HOL 
+	}
+	
+	available = {
+		
+	}
+	cost = 75 
+	visible = { 
+	
+	}	
+	complete_effect = { 
+
+	}
+	fire_only_once = yes
+	days_remove = 30  
+	remove_effect = { 
+		
+	}
+	ai_will_do = { 
+
+	}
+}
+}

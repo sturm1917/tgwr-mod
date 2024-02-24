@@ -9,3 +9,13 @@ HOL_unite_benelux = {
 		has_completed_focus = HOL_unite_benelux
 	}
 }
+HOL_new_category = {
+icon = GFX_filler 
+priority = 99 #higher priority means it shows up on top in decisions tab
+allowed = { #checks at start of game, you should pretty much always have it as just original tag = nation u coding
+	original_tag = HOL
+}
+visible = { #what makes the decision category actually show uo. https://hoi4.paradoxwikis.com/Triggers for list of ones to use
+	original_tag = HOL
+}
+}
