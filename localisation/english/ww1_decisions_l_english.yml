@@ -1503,6 +1503,8 @@ AUH_align_ukraine_desc:0 "The Ukranian region is defeated, we are now free to in
  TUR_french_investment_to_syria:0 "French Investments in Syria"
  TUR_german_investment_to_anatolia:0 "German Investments in Anatolia"
  TUR_italian_investment_to_libya:0 "Italian Investments in Trablusgarp"
+ TUR_add_debt_0098:0 "Modify §YOttoman Public Debt Administration§! by\nConsumer Goods Factories factor: §Y1.0%§!" #Increases our debt by §Y0.098 Thousand Liras§!.
+ TUR_add_debt_0148:0 "Modify §YOttoman Public Debt Administration§! by\nConsumer Goods Factories factor: §Y2.0%§!" #Increases our debt by §Y0.148 Thousand Liras§!.
  TUR_add_debt_0295:0 "Modify §YOttoman Public Debt Administration§! by\nConsumer Goods Factories factor: §Y3.0%§!" #Increases our debt by §Y0.295 Thousand Liras§!.
  TUR_add_debt_0492:0 "Modify §YOttoman Public Debt Administration§! by\nConsumer Goods Factories factor: §Y5.0%§!" # Increases our debt by §Y0.590 Thousand Liras§!.
  TUR_add_debt_0993:0 "Modify §YOttoman Public Debt Administration§! by\nConsumer Goods Factories factor: §Y10.0%§!" # Increases our debt by §Y0.885 Thousand Liras§!.
@@ -8130,8 +8132,8 @@ ottoman_minority_tt_desc_edirne_tt:0 "[ottoman_minority_tt_desc_edirne][TUR_otto
 
  GRE_operation_rodi_desc_spec:0 "Operation Rodi is a secret plan organised to invade §YDodecanese Islands§!."
 
- probably_lead_to_war_with_ita_tt:1 "This is likely to lead to §RWar§! with §Y[ITA.GetNameWithFlag]§!"
- probably_lead_to_war_with_rodi_tt:1 "This is likely to lead to §RWar§! with §Y[899.owner.GetNameWithFlag]§!"
+ probably_lead_to_war_with_ita_tt:1 "§RThis is likely to lead to war with [ITA.GetNameDef].§!"
+ probably_lead_to_war_with_rodi_tt:1 "§RThis is likely to lead to war with [899.owner.GetNameDef].§!"
  GRE_operation_rodi:0 "Operation Rodi"
  GRE_marines_deploiement:0 "Deploy §YElite Marines§! unit to §YCrete§!."
  GRE_rodi_operation_plus_20_percents:0 "§GIncrease §Y\"Operation Rodi\"§! success chance by §!§Y20%!§!"
@@ -8274,6 +8276,39 @@ ottoman_minority_tt_desc_edirne_tt:0 "[ottoman_minority_tt_desc_edirne][TUR_otto
  SRA_first_kuban_campaign:0 "First Kuban Campaign"
  SRA_first_kuban_campaign_desc:0 "The retreat through the treacherous, frozen lands of Southern Russia tests our resolve. We must strategically navigate these harsh conditions, seeking alliances and support in our struggle against the Bolsheviks. This daunting campaign is not just a military maneuver; it's a testament to our army's resilience and determination in the face of overwhelming challenges."
 
+ SRA_ufa_directive:0 "Ufa Directive"
+ SRA_moscow_directive_absolute:0 "Moscow Directive"
+ SRA_moscow_directive_phase_1:0 "Moscow Directive Phase 1"
+ SRA_moscow_directive_phase_2:0 "Moscow Directive Phase 2"
+ SRA_moscow_directive_phase_3:0 "Moscow Directive Phase 3"
+ SRA_ufa_directive_tt_desc:0 "Unlock Mission: £decision_icon_small §YUfa Directive§!"
+ SRA_moscow_directive_absolute_tt_desc:0 "Unlock Mission: £decision_icon_small §YMoscow Directive§!"
+ SRA_moscow_directive_phase_1_tt_desc:0 "Unlock Mission: £decision_icon_small §YMoscow Directive Phase 1§!"
+
+ SRA_integrate_white_states:0 "Integrate [FROM.getName]"
+ SRA_asked_integration:0 "Has already asked for integration"
+ SRA_is_asking_integration:0 "Is already asking Integration"
+
+VOL_foreign_relations_tt_desc:0 "Unlock Decisions to §YIntegrate White States§!."
+
+SRA_core_states:0 "Appoint General-Governor in [FROM.getName]"
+SRA_recruit_units:0 "Raise volunteers in [FROM.getName]"
+SRA_3_infantry_unit:0 "Deploy a division with §Y3 Infantry batallions§! with §Yartillery, recon and engineer support§!."
+
+SRA_4_calvary_unit:0 "Deploy a division with §Y4 Cavalry batallions§! with §Yartillery, recon and engineer support§!."
+
+SRA_6_cavalry_unit:0 "Deploy a division with §Y6 Cavalry batallions§!."
+
+SRA_recruit_caucasians:0 "Raise Caucasian Cavalry in [FROM.getName]"
+
+possible_south_army_recruitement:0 "Possible South Army Recruitement"
+possible_cossack_recruitement:0 "Possible Cossack Recruitement"
+possible_caucasian_recruitement:0 "Possible Caucasian Recruitement"
+
+SRA_recruit_cossacks:0 "Raise Cossacks in [FROM.getName]"
+
+SRA_army_recruitement:0 "Army Recruitement"
+
  #Provisional Siberian Government
 
  SIB_czechs_leave_the_front:0 "Czechoslovak legion leaves the frontlines"
@@ -8307,4 +8342,9 @@ MTG_scrap_old_heavy_cruiser:0 "Scrap Old Cruiser"
 MTG_scrap_old_battleship:0 "Scrap Old Battleship"
 MTG_scrap_old_carrier:0 "Scrap Old Carrier"
 
+NWA_march_to_petrograd_mission: "March to Petrograd"
+NWA_brits_demand_government: "Frank G. Marsh's demands"
+
 FRA_IND_shared_tree:0 "§YThis Tree§! is shared between §Y[FRA.getFlag]France§! and §Y[IND.getFlag]Indochina§!."
+
+RUS_remove_aland_dmz: "Remilitarize Åland Islands"
