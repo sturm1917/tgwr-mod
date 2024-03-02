@@ -1269,16 +1269,17 @@
  CHI_seek_british_support:0 "Seek British Support"
  CHI_seek_british_support_desc:0 ""
  CHI_seek_german_support:0 "Seek German Support"
- CHI_seek_german_support_desc:0 ""
+ CHI_seek_german_support_desc:0 "We will probably need German help, even if our relations in this century weren't the best."
  CHI_seek_russian_support:0 "Seek Russian Support"
  CHI_seek_russian_support_desc:0 ""
  CHI_land_reform_warlord:0 "Land Reform"
  CHI_land_reform_warlord_desc:0 "Some of the peasantry continue to use ineffectual and backward techniques in their occupations. On top of this, some landowners do not make enough use out of their property. A comprehensive set of reforms shall fix this."
  CHI_offensive_posture:0 "Offensive Posture"
- CHI_offensive_posture_desc:0 ""
+ CHI_offensive_posture_desc:0 "If we want respect from the nations that exploited us, we may need to adopt an offensive posture."
  CHI_deal_the_opium:0 "Monoply the Opium"
  CHI_deal_the_opium_desc:0 ""
  CHI_train_pilots_warlord:0 "Train Pilots"
+<<<<<<< Updated upstream
  CHI_train_pilots_warlord_desc:0 ""
  CHI_beiyang_meditator:0 "Beiyang Meditator"
  CHI_beiyang_meditator_desc:0 "Li Yuanhong is a more or less neutral Beiyang personnel that can be recognised by both the South and the North. As the vice president he is rightful to succeed the place of the President of the Republic of China."
@@ -1323,6 +1324,9 @@
  CHI_concessions_to_army:0 "Concessions to Army"
  CHI_concessions_to_people:0 "Concessions to People"
  CHI_continue_constitutional_reforms:0 "Continue Constitutional Reforms"
+=======
+ CHI_train_pilots_warlord_desc:0 "With the arrival of these new machines, we may need pilots to fly them."
+>>>>>>> Stashed changes
 
  ANC_focus_beiyang_hegemony:0 "Beiyang Hegemony"
  ANC_focus_beiyang_hegemony_desc:0 ""
@@ -7149,7 +7153,7 @@ FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended t
  JAP_ww1_internationalism_focus_desc:0 ""
 
  JAP_ww1_militarism:0 "Militarism"
- JAP_ww1_militarism_desc:0 ""
+ JAP_ww1_militarism_desc:0 "Militarism is tbe best option for Japan"
 
  JAP_ww1_indoctrination_focus:0 "Indoctrination"
  JAP_ww1_indoctrination_focus_desc:0 ""
@@ -7164,7 +7168,7 @@ FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended t
  JAP_ww1_political_correctness_desc:0 ""
 
  JAP_ww1_military_youth:0 "Military Youth"
- JAP_ww1_military_youth_desc:0 ""
+ JAP_ww1_military_youth_desc:0 "We need young man to serve the emperor"
 
  JAP_ww1_student_movement_focus:0 "Student Movement"
  JAP_ww1_student_movement_focus_desc:0 ""
@@ -7188,10 +7192,10 @@ FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended t
  JAP_ww1_free_Korea_desc:0 "Koreans under our control are constantly resisting us. Allowing them autonomy will reduce their dissatisfaction."
 
  JAP_ww1_limited_rearmament:0 "Limited Rearmament"
- JAP_ww1_limited_rearmament_desc:0 ""
+ JAP_ww1_limited_rearmament_desc:0 "We Need To Rearm But Slowly"
 
  JAP_ww1_full_rearmament:0 "Full Rearmament"
- JAP_ww1_full_rearmament_desc:0 ""
+ JAP_ww1_full_rearmament_desc:0 "The Time Has Come"
 
  JAP_ww1_unitedpeople:0 "Patriotic Fervor"
  JAP_ww1_unitedpeople_desc:0 ""
@@ -7310,10 +7314,10 @@ FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended t
  JAP_Taisho_Democracy_desc:0 ""
 
  JAP_ww1_Invasion_of_Manchuria:0 "Invasion of Manchuria"
- JAP_ww1_Invasion_of_Manchuria_desc:0 ""
+ JAP_ww1_Invasion_of_Manchuria_desc:0 "It's time to finish Manchuria and make them submit to your precious empire."
 
  JAP_ww1_Form_Manchukuo:0 "Form Manchukuo"
- JAP_ww1_Form_Manchukuo_desc:0 ""
+ JAP_ww1_Form_Manchukuo_desc:0 "Now that we hold Manchuria, we can establish Manchukuo."
  JAP_hentai_empire:0 "Establish the Hentai Empire"
  JAP_hentai_empire_desc:0 "Moscow is in our hands, the Russians are defeated! Let's celebrate the beginning of a new Era!"
  JAP_claim_islands:0 "Claim Pacific Islands"
@@ -7324,6 +7328,7 @@ FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended t
  JAP_korea:0 "Annex Korea"
  JAP_rcw:0 "Russian Intervention"
  USA_USVI:0 "Buy Danish Virgin Islands"
+<<<<<<< Updated upstream
  JAP_claim_islands_desc:0 ""
  JAP_cp_desc:0 ""
  JAP_entente_desc:0 ""
@@ -7331,6 +7336,15 @@ FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended t
  JAP_us_agreement_desc:0 ""
  JAP_korea_desc:0 ""
  JAP_rcw_desc:0 ""
+=======
+ JAP_claim_islands_desc:0 "TODO"
+ JAP_cp_desc:0 "The Kaiser is your friend"
+ JAP_entente_desc:0 "Poincaré is your friend"
+ JAP_china_desc:0 "TODO"
+ JAP_us_agreement_desc:0 "TODO"
+ JAP_korea_desc:0 "TODO"
+ JAP_rcw_desc:0 "TODO"
+>>>>>>> Stashed changes
  JAP_korean_revolt:0 "Korean Revolt"
  JAP_korean_revolt_desc:0 "Koreans have started an uprising! Even from Manchuria, an armed group called the Korean Independence Army crossed the border and attacked our colonial troops. In 14 days, our troops will be mobilized.\n\nWar is hell."
  USA_USVI_desc:0 ""
